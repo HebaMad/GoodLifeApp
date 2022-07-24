@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Regular.ttf">
+            <string>Inter-Regular</string>
+        </array>
+        <array key="Inter-SemiBold.ttf">
+            <string>Inter-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OnBoardingFrame5" customModule="GoodLifeApplocation" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="abS-uH-dKI">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to the Good Life!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1c7-W3-Ko2">
+                            <rect key="frame" x="0.0" y="60" width="414" height="86.5"/>
+                            <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="36"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We’re happy to have you! We hope this program helps you bring your community together!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CNg-HY-YAO">
+                            <rect key="frame" x="0.0" y="151.5" width="414" height="38.5"/>
+                            <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="16"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WelcomePic" translatesAutoresizingMaskIntoConstraints="NO" id="bvi-Cq-lHv">
+                            <rect key="frame" x="0.0" y="195" width="414" height="353"/>
+                        </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zde-0X-2z7">
+                            <rect key="frame" x="0.0" y="553" width="414" height="192"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Qp-CI-AZZ" customClass="UIButtonDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="750" width="414" height="60"/>
+                            <color key="backgroundColor" name="ButtonColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="Uve-6h-iCj"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Welcome">
+                                <fontDescription key="titleFontDescription" name="Inter-SemiBold" family="Inter" pointSize="20"/>
+                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                    <color key="value" name="ButtonColor"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="12"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="welcomeBtn:" destination="-1" eventType="touchUpInside" id="LlW-rh-qUV"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <directionalEdgeInsets key="directionalLayoutMargins" top="60" leading="0.0" bottom="8" trailing="0.0"/>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="BgColor"/>
+            <constraints>
+                <constraint firstItem="abS-uH-dKI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="bLy-cx-mBs"/>
+                <constraint firstItem="abS-uH-dKI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="emv-1d-K9S"/>
+                <constraint firstAttribute="bottom" secondItem="abS-uH-dKI" secondAttribute="bottom" constant="34" id="pIw-Of-Kqf"/>
+                <constraint firstAttribute="trailing" secondItem="abS-uH-dKI" secondAttribute="trailing" id="wP4-dc-Pce"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="127"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="2Qp-CI-AZZ">
+            <size key="intrinsicContentSize" width="114" height="38"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="WelcomePic" width="353" height="353"/>
+        <namedColor name="BgColor">
+            <color red="0.59200000762939453" green="0.27799999713897705" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ButtonColor">
+            <color red="0.0" green="0.85100001096725464" blue="0.44299998879432678" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

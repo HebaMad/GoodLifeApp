@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Bold.ttf">
+            <string>Inter-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OnBoardingFrame3" customModule="GoodLifeApplocation" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="GEa-2v-Hoy">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How much do you need to raise?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsr-A2-adZ">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="77"/>
+                            <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="32"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pus-R8-zav">
+                            <rect key="frame" x="0.0" y="93" width="414" height="107.5"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8fy-6g-Hjb" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
+                                    <rect key="frame" x="88" y="12" width="238" height="83.5"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wCw-ac-DiE">
+                                            <rect key="frame" x="0.0" y="0.0" width="238" height="83.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$80k-100k" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1dz-Dw-lwX">
+                                                    <rect key="frame" x="0.0" y="0.0" width="238" height="38.5"/>
+                                                    <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="32"/>
+                                                    <color key="textColor" name="ButtonColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Investment" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2k-a7-zpS">
+                                                    <rect key="frame" x="0.0" y="38.5" width="238" height="45"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="wCw-ac-DiE" firstAttribute="top" secondItem="8fy-6g-Hjb" secondAttribute="top" id="Tfd-pT-ZtD"/>
+                                        <constraint firstItem="wCw-ac-DiE" firstAttribute="leading" secondItem="8fy-6g-Hjb" secondAttribute="leading" id="fxM-Vk-pNB"/>
+                                        <constraint firstAttribute="bottom" secondItem="wCw-ac-DiE" secondAttribute="bottom" id="gxj-3g-yPU"/>
+                                        <constraint firstAttribute="trailing" secondItem="wCw-ac-DiE" secondAttribute="trailing" id="wuY-P2-J9w"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="2"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="8fy-6g-Hjb" firstAttribute="centerX" secondItem="Pus-R8-zav" secondAttribute="centerX" id="RJV-ou-oAf"/>
+                                <constraint firstItem="8fy-6g-Hjb" firstAttribute="centerY" secondItem="Pus-R8-zav" secondAttribute="centerY" id="cGA-jh-Dhi"/>
+                                <constraint firstItem="8fy-6g-Hjb" firstAttribute="leading" secondItem="Pus-R8-zav" secondAttribute="leading" constant="88" id="f4z-15-nJI"/>
+                                <constraint firstAttribute="bottom" secondItem="8fy-6g-Hjb" secondAttribute="bottom" constant="12" id="hS2-uy-q9M"/>
+                                <constraint firstAttribute="trailing" secondItem="8fy-6g-Hjb" secondAttribute="trailing" constant="88" id="kvO-nb-30g"/>
+                                <constraint firstItem="8fy-6g-Hjb" firstAttribute="top" secondItem="Pus-R8-zav" secondAttribute="top" constant="12" id="wLe-p1-Jbn"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ghv-7A-qbb">
+                            <rect key="frame" x="0.0" y="216.5" width="414" height="128"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="neL-L2-KcX">
+                            <rect key="frame" x="0.0" y="360.5" width="414" height="313.5"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2JW-yC-Lnh">
+                            <rect key="frame" x="0.0" y="690" width="414" height="128"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVJ-hb-Vjv" customClass="UIButtonDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                    <color key="backgroundColor" name="ButtonColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="60" id="u5T-UL-MWN"/>
+                                    </constraints>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Continue">
+                                        <fontDescription key="titleFontDescription" name="Inter-SemiBold" family="Inter" pointSize="20"/>
+                                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </buttonConfiguration>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                            <color key="value" name="ButtonColor"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="12"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="continueBtn:" destination="-1" eventType="touchUpInside" id="L1R-Bu-m80"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7H3-5a-qU7">
+                                    <rect key="frame" x="0.0" y="68" width="414" height="60"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Skip">
+                                        <fontDescription key="titleFontDescription" name="Inter-Regular" family="Inter" pointSize="16"/>
+                                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="skipBtn:" destination="-1" eventType="touchUpInside" id="A9I-xa-WvY"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="7H3-5a-qU7" firstAttribute="height" secondItem="LVJ-hb-Vjv" secondAttribute="height" id="9jF-Aa-09B"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="BgColor"/>
+            <constraints>
+                <constraint firstItem="GEa-2v-Hoy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="1W6-gM-Whw"/>
+                <constraint firstAttribute="bottom" secondItem="GEa-2v-Hoy" secondAttribute="bottom" constant="34" id="6V5-kJ-ApO"/>
+                <constraint firstItem="GEa-2v-Hoy" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="7FC-z0-W14"/>
+                <constraint firstItem="Pus-R8-zav" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.12" id="XM8-9N-bxU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="GEa-2v-Hoy" secondAttribute="trailing" id="aWP-bH-ENU"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="127"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="LVJ-hb-Vjv">
+            <size key="intrinsicContentSize" width="112.5" height="38"/>
+        </designable>
+    </designables>
+    <resources>
+        <namedColor name="BgColor">
+            <color red="0.59200000762939453" green="0.27799999713897705" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ButtonColor">
+            <color red="0.0" green="0.85100001096725464" blue="0.44299998879432678" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

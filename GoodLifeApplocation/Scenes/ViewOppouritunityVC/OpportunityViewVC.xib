@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Bold.ttf">
+            <string>Inter-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OpportunityViewVC" customModule="GoodLifeApplocation" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="iFl-7p-itc">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let’s hear from you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iEZ-xH-vMt">
+                            <rect key="frame" x="20" y="16" width="374" height="29"/>
+                            <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="24"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pSj-Vx-m0T">
+                            <rect key="frame" x="20" y="69" width="374" height="340.5"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qW0-iA-G2T" customClass="OpportunityView" customModule="GoodLifeApplocation" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="USK-8L-tgr">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <connections>
+                                                <action selector="PastVenturesTapped:" destination="-1" eventType="touchUpInside" id="zad-4L-XDT"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="USK-8L-tgr" firstAttribute="leading" secondItem="qW0-iA-G2T" secondAttribute="leading" id="FTn-pm-utD"/>
+                                        <constraint firstAttribute="trailing" secondItem="USK-8L-tgr" secondAttribute="trailing" id="fSm-WC-DOC"/>
+                                        <constraint firstAttribute="bottom" secondItem="USK-8L-tgr" secondAttribute="bottom" id="iVt-05-PZM"/>
+                                        <constraint firstItem="USK-8L-tgr" firstAttribute="top" secondItem="qW0-iA-G2T" secondAttribute="top" id="jYe-fe-YnY"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="image" value="Past Ventures"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="text" value="Past Ventures"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="subTitle" value="add data"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zT7-Zc-Twx" customClass="OpportunityView" customModule="GoodLifeApplocation" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="70" width="374" height="60"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c6k-Wr-ShQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <connections>
+                                                <action selector="VolunteerOpportunity:" destination="-1" eventType="touchUpInside" id="U8P-58-y7F"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="c6k-Wr-ShQ" firstAttribute="top" secondItem="zT7-Zc-Twx" secondAttribute="top" id="CW2-wm-5l3"/>
+                                        <constraint firstAttribute="bottom" secondItem="c6k-Wr-ShQ" secondAttribute="bottom" id="Cni-57-A0G"/>
+                                        <constraint firstItem="c6k-Wr-ShQ" firstAttribute="leading" secondItem="zT7-Zc-Twx" secondAttribute="leading" id="iUp-kM-zfu"/>
+                                        <constraint firstAttribute="trailing" secondItem="c6k-Wr-ShQ" secondAttribute="trailing" id="jgu-A4-TGH"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="image" value="Volunteer Opportunity"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="subTitle" value="add data"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="text" value="Volunteer Opportunity"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="584-qi-Exi" customClass="OpportunityView" customModule="GoodLifeApplocation" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="140" width="374" height="60.5"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ipf-qo-auH">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="60.5"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <connections>
+                                                <action selector="AskHelpTapped:" destination="-1" eventType="touchUpInside" id="TtK-y6-b6x"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="ipf-qo-auH" firstAttribute="top" secondItem="584-qi-Exi" secondAttribute="top" id="1AV-EN-hak"/>
+                                        <constraint firstAttribute="trailing" secondItem="ipf-qo-auH" secondAttribute="trailing" id="Ena-MF-UEC"/>
+                                        <constraint firstAttribute="bottom" secondItem="ipf-qo-auH" secondAttribute="bottom" id="FgU-2E-A3R"/>
+                                        <constraint firstItem="ipf-qo-auH" firstAttribute="leading" secondItem="584-qi-Exi" secondAttribute="leading" id="WgC-gd-t4P"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="image" value="Ask for Help"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="text" value="Ask for Help"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="subTitle" value="Get help from volunteers nearby"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D3k-sj-dfH" customClass="OpportunityView" customModule="GoodLifeApplocation" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="210.5" width="374" height="60"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BF8-vk-vuk">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <connections>
+                                                <action selector="AddMinistryIdeaAction:" destination="-1" eventType="touchUpInside" id="GvW-6O-gqQ"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="BF8-vk-vuk" firstAttribute="leading" secondItem="D3k-sj-dfH" secondAttribute="leading" id="7Av-Ap-HVC"/>
+                                        <constraint firstAttribute="trailing" secondItem="BF8-vk-vuk" secondAttribute="trailing" id="FNi-kW-Xo6"/>
+                                        <constraint firstItem="BF8-vk-vuk" firstAttribute="top" secondItem="D3k-sj-dfH" secondAttribute="top" id="deT-3c-CcO"/>
+                                        <constraint firstAttribute="bottom" secondItem="BF8-vk-vuk" secondAttribute="bottom" id="o1M-WN-ecK"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="image" value="Have an idea_"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="text" value="Have an idea"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="subTitle" value="Add ministry idea"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uei-Hc-0k8" customClass="OpportunityView" customModule="GoodLifeApplocation" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="280.5" width="374" height="60"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cEU-5L-5ht">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <connections>
+                                                <action selector="AddFileAction:" destination="-1" eventType="touchUpInside" id="9eF-vw-84H"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="cEU-5L-5ht" secondAttribute="bottom" id="Gip-PN-UaN"/>
+                                        <constraint firstItem="cEU-5L-5ht" firstAttribute="leading" secondItem="Uei-Hc-0k8" secondAttribute="leading" id="MZx-6D-QGy"/>
+                                        <constraint firstItem="cEU-5L-5ht" firstAttribute="top" secondItem="Uei-Hc-0k8" secondAttribute="top" id="ra2-Df-aBK"/>
+                                        <constraint firstAttribute="trailing" secondItem="cEU-5L-5ht" secondAttribute="trailing" id="xwb-Ot-zcT"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="image" value="How was your Expirience_"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="text" value="How was your Experience_"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="subTitle" value="Add a video or picture"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                        </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="59X-Og-FFK">
+                            <rect key="frame" x="20" y="433.5" width="374" height="376.5"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="viewoppourtunity" translatesAutoresizingMaskIntoConstraints="NO" id="5Fh-O0-Zon">
+                                    <rect key="frame" x="40" y="41.5" width="294" height="293.5"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="5Fh-O0-Zon" secondAttribute="trailing" constant="40" id="3k5-mb-982"/>
+                                <constraint firstItem="5Fh-O0-Zon" firstAttribute="centerX" secondItem="59X-Og-FFK" secondAttribute="centerX" id="bMA-1T-m7Y"/>
+                                <constraint firstItem="5Fh-O0-Zon" firstAttribute="height" secondItem="59X-Og-FFK" secondAttribute="height" multiplier="0.78" id="rHx-z7-eWC"/>
+                                <constraint firstItem="5Fh-O0-Zon" firstAttribute="centerY" secondItem="59X-Og-FFK" secondAttribute="centerY" id="zSA-JW-qHL"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <directionalEdgeInsets key="directionalLayoutMargins" top="16" leading="20" bottom="8" trailing="20"/>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="BgColor"/>
+            <constraints>
+                <constraint firstItem="iFl-7p-itc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="GwR-3a-XEd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="iFl-7p-itc" secondAttribute="bottom" id="Lhh-we-4rv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iFl-7p-itc" secondAttribute="trailing" id="bf6-Zg-uB1"/>
+                <constraint firstItem="iFl-7p-itc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="wOE-gD-FQG"/>
+                <constraint firstItem="pSj-Vx-m0T" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.38" id="zk3-XB-7h5"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="127"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Ask for Help" width="33" height="33"/>
+        <image name="Have an idea_" width="33" height="33"/>
+        <image name="How was your Expirience_" width="33" height="33"/>
+        <image name="Past Ventures" width="33" height="33"/>
+        <image name="Volunteer Opportunity" width="35" height="33"/>
+        <image name="viewoppourtunity" width="312" height="312"/>
+        <namedColor name="BgColor">
+            <color red="0.59200000762939453" green="0.27799999713897705" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
