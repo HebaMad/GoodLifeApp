@@ -62,6 +62,12 @@
 		27C9AEAB288DA8E300FA584A /* TaskCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27C9AEA9288DA8E300FA584A /* TaskCollectionViewCell.xib */; };
 		27C9AEAE288DB44600FA584A /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AEAC288DB44600FA584A /* CategoriesCollectionViewCell.swift */; };
 		27C9AEAF288DB44600FA584A /* CategoriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27C9AEAD288DB44600FA584A /* CategoriesCollectionViewCell.xib */; };
+		27C9AEB3288EF14900FA584A /* MealMarkerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AEB1288EF14900FA584A /* MealMarkerTableViewCell.swift */; };
+		27C9AEB4288EF14900FA584A /* MealMarkerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27C9AEB2288EF14900FA584A /* MealMarkerTableViewCell.xib */; };
+		27C9AEB9288EF61200FA584A /* DonationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AEB7288EF61200FA584A /* DonationVC.swift */; };
+		27C9AEBA288EF61200FA584A /* DonationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27C9AEB8288EF61200FA584A /* DonationVC.xib */; };
+		27C9AEBC288EFBA200FA584A /* DonationFrameTwoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AEBB288EFBA200FA584A /* DonationFrameTwoVC.swift */; };
+		27C9AEBE288F104900FA584A /* TableViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AEBD288F104900FA584A /* TableViewHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -122,6 +128,12 @@
 		27C9AEA9288DA8E300FA584A /* TaskCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskCollectionViewCell.xib; sourceTree = "<group>"; };
 		27C9AEAC288DB44600FA584A /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		27C9AEAD288DB44600FA584A /* CategoriesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesCollectionViewCell.xib; sourceTree = "<group>"; };
+		27C9AEB1288EF14900FA584A /* MealMarkerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealMarkerTableViewCell.swift; sourceTree = "<group>"; };
+		27C9AEB2288EF14900FA584A /* MealMarkerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MealMarkerTableViewCell.xib; sourceTree = "<group>"; };
+		27C9AEB7288EF61200FA584A /* DonationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationVC.swift; sourceTree = "<group>"; };
+		27C9AEB8288EF61200FA584A /* DonationVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DonationVC.xib; sourceTree = "<group>"; };
+		27C9AEBB288EFBA200FA584A /* DonationFrameTwoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationFrameTwoVC.swift; sourceTree = "<group>"; };
+		27C9AEBD288F104900FA584A /* TableViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewHelper.swift; path = "../../../Rakwa-ios/Rakwa/Helper/TableViewHelper.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +184,7 @@
 		27C9AE3A288D399400FA584A /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				27C9AEB0288EF0DF00FA584A /* DonationVC */,
 				27C9AEA6288DA88200FA584A /* HomeVC */,
 				27C9AE9B288D8BB100FA584A /* ViewOppouritunityVC */,
 				27C9AE7A288D471300FA584A /* SplashScreen */,
@@ -218,6 +231,7 @@
 		27C9AE67288D425100FA584A /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				27C9AEBD288F104900FA584A /* TableViewHelper.swift */,
 				27C9AE97288D899E00FA584A /* OpportunityView.swift */,
 				27C9AE98288D899E00FA584A /* OpportunityView.xib */,
 				27C9AE64288D3F2700FA584A /* Designable */,
@@ -292,6 +306,34 @@
 				27C9AEAD288DB44600FA584A /* CategoriesCollectionViewCell.xib */,
 			);
 			path = XIB;
+			sourceTree = "<group>";
+		};
+		27C9AEB0288EF0DF00FA584A /* DonationVC */ = {
+			isa = PBXGroup;
+			children = (
+				27C9AEB6288EF5B900FA584A /* Scenes */,
+				27C9AEB5288EF15300FA584A /* XIB */,
+			);
+			path = DonationVC;
+			sourceTree = "<group>";
+		};
+		27C9AEB5288EF15300FA584A /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+				27C9AEB1288EF14900FA584A /* MealMarkerTableViewCell.swift */,
+				27C9AEB2288EF14900FA584A /* MealMarkerTableViewCell.xib */,
+			);
+			path = XIB;
+			sourceTree = "<group>";
+		};
+		27C9AEB6288EF5B900FA584A /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				27C9AEB7288EF61200FA584A /* DonationVC.swift */,
+				27C9AEB8288EF61200FA584A /* DonationVC.xib */,
+				27C9AEBB288EFBA200FA584A /* DonationFrameTwoVC.swift */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -372,6 +414,7 @@
 				27C9AE33288D38EA00FA584A /* LaunchScreen.storyboard in Resources */,
 				27C9AE5D288D3CB500FA584A /* Inter-ExtraLight-BETA.ttf in Resources */,
 				27C9AE90288D54AA00FA584A /* OnBoardingFrame5.xib in Resources */,
+				27C9AEB4288EF14900FA584A /* MealMarkerTableViewCell.xib in Resources */,
 				27C9AEAF288DB44600FA584A /* CategoriesCollectionViewCell.xib in Resources */,
 				27C9AE84288D4F0600FA584A /* OnBoardingFrame3.xib in Resources */,
 				27C9AE9F288D8BEC00FA584A /* OpportunityViewVC.xib in Resources */,
@@ -379,6 +422,7 @@
 				27C9AE6A288D427600FA584A /* ProgressView.xib in Resources */,
 				27C9AE55288D3CB500FA584A /* Inter-ExtraLightItalic-BETA.ttf in Resources */,
 				27C9AE30288D38EA00FA584A /* Assets.xcassets in Resources */,
+				27C9AEBA288EF61200FA584A /* DonationVC.xib in Resources */,
 				27C9AE8A288D51FD00FA584A /* OnBoardingFrame4.xib in Resources */,
 				27C9AE2E288D38E900FA584A /* Main.storyboard in Resources */,
 				27C9AE5A288D3CB500FA584A /* Inter-ThinItalic-BETA.ttf in Resources */,
@@ -398,9 +442,12 @@
 				27C9AE89288D51FD00FA584A /* OnBoardingFrame4.swift in Sources */,
 				27C9AE3D288D39B300FA584A /* SplashScreen.swift in Sources */,
 				27C9AE2B288D38E900FA584A /* ViewController.swift in Sources */,
+				27C9AEBE288F104900FA584A /* TableViewHelper.swift in Sources */,
 				27C9AE86288D50A800FA584A /* UIViewDesignable.swift in Sources */,
 				27C9AEA5288DA1A600FA584A /* UIImageViewDesignable.swift in Sources */,
+				27C9AEBC288EFBA200FA584A /* DonationFrameTwoVC.swift in Sources */,
 				27C9AE99288D899E00FA584A /* OpportunityView.swift in Sources */,
+				27C9AEB3288EF14900FA584A /* MealMarkerTableViewCell.swift in Sources */,
 				27C9AE8F288D54AA00FA584A /* OnBoardingFrame5.swift in Sources */,
 				27C9AEA2288D971700FA584A /* VolunteerOpportunityVC.swift in Sources */,
 				27C9AEAE288DB44600FA584A /* CategoriesCollectionViewCell.swift in Sources */,
@@ -410,6 +457,7 @@
 				27C9AE7F288D4C1E00FA584A /* OnBoardingFrame2.swift in Sources */,
 				27C9AEAA288DA8E300FA584A /* TaskCollectionViewCell.swift in Sources */,
 				27C9AE7C288D4B4400FA584A /* UIButtonDesignable.swift in Sources */,
+				27C9AEB9288EF61200FA584A /* DonationVC.swift in Sources */,
 				27C9AE27288D38E900FA584A /* AppDelegate.swift in Sources */,
 				27C9AE74288D44F300FA584A /* UIViewFromNIB.swift in Sources */,
 				27C9AE29288D38E900FA584A /* SceneDelegate.swift in Sources */,

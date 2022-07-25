@@ -21,8 +21,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let _delegate = UIApplication.shared.delegate as? AppDelegate {
             _delegate.window = window
         }
-        let vc = VolunteerOpportunityVC()
-        setRootVC(vc: vc)
+        let vc = DonationVC()
+//        setRootVC(vc: vc)
     }
     func setRootVC(vc:UIViewController){
         
