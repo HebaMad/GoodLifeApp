@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24983235073DC38B89F7802A /* Pods_GoodLifeApplocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0E5AE3CF2C1C421B86FEF65 /* Pods_GoodLifeApplocation.framework */; };
+		2767A271288F3CD600DF34D1 /* DonationThirdFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2767A26F288F3CD600DF34D1 /* DonationThirdFrame.swift */; };
+		2767A272288F3CD600DF34D1 /* DonationThirdFrame.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2767A270288F3CD600DF34D1 /* DonationThirdFrame.xib */; };
+		2767A275288F504A00DF34D1 /* DonationFourthFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2767A273288F504A00DF34D1 /* DonationFourthFrame.swift */; };
+		2767A276288F504A00DF34D1 /* DonationFourthFrame.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2767A274288F504A00DF34D1 /* DonationFourthFrame.xib */; };
+		2767A279288F53C100DF34D1 /* DonationFifthFrameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2767A277288F53C100DF34D1 /* DonationFifthFrameVC.swift */; };
+		2767A27A288F53C100DF34D1 /* DonationFifthFrameVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2767A278288F53C100DF34D1 /* DonationFifthFrameVC.xib */; };
 		27C9AE27288D38E900FA584A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AE26288D38E900FA584A /* AppDelegate.swift */; };
 		27C9AE29288D38E900FA584A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AE28288D38E900FA584A /* SceneDelegate.swift */; };
 		27C9AE2B288D38E900FA584A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AE2A288D38E900FA584A /* ViewController.swift */; };
@@ -71,6 +78,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2767A26F288F3CD600DF34D1 /* DonationThirdFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationThirdFrame.swift; sourceTree = "<group>"; };
+		2767A270288F3CD600DF34D1 /* DonationThirdFrame.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DonationThirdFrame.xib; sourceTree = "<group>"; };
+		2767A273288F504A00DF34D1 /* DonationFourthFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationFourthFrame.swift; sourceTree = "<group>"; };
+		2767A274288F504A00DF34D1 /* DonationFourthFrame.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DonationFourthFrame.xib; sourceTree = "<group>"; };
+		2767A277288F53C100DF34D1 /* DonationFifthFrameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationFifthFrameVC.swift; sourceTree = "<group>"; };
+		2767A278288F53C100DF34D1 /* DonationFifthFrameVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DonationFifthFrameVC.xib; sourceTree = "<group>"; };
 		27C9AE23288D38E900FA584A /* GoodLifeApplocation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodLifeApplocation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27C9AE26288D38E900FA584A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27C9AE28288D38E900FA584A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +147,9 @@
 		27C9AEB8288EF61200FA584A /* DonationVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DonationVC.xib; sourceTree = "<group>"; };
 		27C9AEBB288EFBA200FA584A /* DonationFrameTwoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationFrameTwoVC.swift; sourceTree = "<group>"; };
 		27C9AEBD288F104900FA584A /* TableViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewHelper.swift; path = "../../../Rakwa-ios/Rakwa/Helper/TableViewHelper.swift"; sourceTree = "<group>"; };
+		46608627E894627402509900 /* Pods-GoodLifeApplocation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodLifeApplocation.release.xcconfig"; path = "Target Support Files/Pods-GoodLifeApplocation/Pods-GoodLifeApplocation.release.xcconfig"; sourceTree = "<group>"; };
+		D1DB83CD4E289D2153C7D862 /* Pods-GoodLifeApplocation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodLifeApplocation.debug.xcconfig"; path = "Target Support Files/Pods-GoodLifeApplocation/Pods-GoodLifeApplocation.debug.xcconfig"; sourceTree = "<group>"; };
+		F0E5AE3CF2C1C421B86FEF65 /* Pods_GoodLifeApplocation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoodLifeApplocation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,17 +157,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24983235073DC38B89F7802A /* Pods_GoodLifeApplocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		061866EC378619EBC1A5B14C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D1DB83CD4E289D2153C7D862 /* Pods-GoodLifeApplocation.debug.xcconfig */,
+				46608627E894627402509900 /* Pods-GoodLifeApplocation.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		27C9AE1A288D38E900FA584A = {
 			isa = PBXGroup;
 			children = (
 				27C9AE25288D38E900FA584A /* GoodLifeApplocation */,
 				27C9AE24288D38E900FA584A /* Products */,
+				061866EC378619EBC1A5B14C /* Pods */,
+				CE579E479D56B849348B0B26 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -332,8 +360,22 @@
 				27C9AEB7288EF61200FA584A /* DonationVC.swift */,
 				27C9AEB8288EF61200FA584A /* DonationVC.xib */,
 				27C9AEBB288EFBA200FA584A /* DonationFrameTwoVC.swift */,
+				2767A26F288F3CD600DF34D1 /* DonationThirdFrame.swift */,
+				2767A270288F3CD600DF34D1 /* DonationThirdFrame.xib */,
+				2767A273288F504A00DF34D1 /* DonationFourthFrame.swift */,
+				2767A274288F504A00DF34D1 /* DonationFourthFrame.xib */,
+				2767A277288F53C100DF34D1 /* DonationFifthFrameVC.swift */,
+				2767A278288F53C100DF34D1 /* DonationFifthFrameVC.xib */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		CE579E479D56B849348B0B26 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F0E5AE3CF2C1C421B86FEF65 /* Pods_GoodLifeApplocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,9 +385,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27C9AE37288D38EA00FA584A /* Build configuration list for PBXNativeTarget "GoodLifeApplocation" */;
 			buildPhases = (
+				BABDA1275312FBF17FBA3297 /* [CP] Check Pods Manifest.lock */,
 				27C9AE1F288D38E900FA584A /* Sources */,
 				27C9AE20288D38E900FA584A /* Frameworks */,
 				27C9AE21288D38E900FA584A /* Resources */,
+				D256DC5222DCCA1E34C67345 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -403,11 +447,13 @@
 				27C9AE57288D3CB500FA584A /* Inter-LightItalic-BETA.ttf in Resources */,
 				27C9AE63288D3CB500FA584A /* Inter-MediumItalic.ttf in Resources */,
 				27C9AE61288D3CB500FA584A /* Inter-SemiBoldItalic.ttf in Resources */,
+				2767A272288F3CD600DF34D1 /* DonationThirdFrame.xib in Resources */,
 				27C9AE53288D3CA300FA584A /* Inter-Bold.ttf in Resources */,
 				27C9AE5B288D3CB500FA584A /* Inter-ExtraBold.ttf in Resources */,
 				27C9AE54288D3CB500FA584A /* Inter-BoldItalic.ttf in Resources */,
 				27C9AE9A288D899E00FA584A /* OpportunityView.xib in Resources */,
 				27C9AE3E288D39B300FA584A /* SplashScreen.xib in Resources */,
+				2767A276288F504A00DF34D1 /* DonationFourthFrame.xib in Resources */,
 				27C9AE5F288D3CB500FA584A /* Inter-Italic.ttf in Resources */,
 				27C9AE5E288D3CB500FA584A /* Inter-ExtraBoldItalic.ttf in Resources */,
 				27C9AE58288D3CB500FA584A /* Inter-Thin-BETA.ttf in Resources */,
@@ -420,6 +466,7 @@
 				27C9AE9F288D8BEC00FA584A /* OpportunityViewVC.xib in Resources */,
 				27C9AE52288D3CA000FA584A /* Inter-Black.ttf in Resources */,
 				27C9AE6A288D427600FA584A /* ProgressView.xib in Resources */,
+				2767A27A288F53C100DF34D1 /* DonationFifthFrameVC.xib in Resources */,
 				27C9AE55288D3CB500FA584A /* Inter-ExtraLightItalic-BETA.ttf in Resources */,
 				27C9AE30288D38EA00FA584A /* Assets.xcassets in Resources */,
 				27C9AEBA288EF61200FA584A /* DonationVC.xib in Resources */,
@@ -433,6 +480,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BABDA1275312FBF17FBA3297 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GoodLifeApplocation-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D256DC5222DCCA1E34C67345 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoodLifeApplocation/Pods-GoodLifeApplocation-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoodLifeApplocation/Pods-GoodLifeApplocation-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GoodLifeApplocation/Pods-GoodLifeApplocation-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		27C9AE1F288D38E900FA584A /* Sources */ = {
@@ -448,12 +537,14 @@
 				27C9AEBC288EFBA200FA584A /* DonationFrameTwoVC.swift in Sources */,
 				27C9AE99288D899E00FA584A /* OpportunityView.swift in Sources */,
 				27C9AEB3288EF14900FA584A /* MealMarkerTableViewCell.swift in Sources */,
+				2767A279288F53C100DF34D1 /* DonationFifthFrameVC.swift in Sources */,
 				27C9AE8F288D54AA00FA584A /* OnBoardingFrame5.swift in Sources */,
 				27C9AEA2288D971700FA584A /* VolunteerOpportunityVC.swift in Sources */,
 				27C9AEAE288DB44600FA584A /* CategoriesCollectionViewCell.swift in Sources */,
 				27C9AE6F288D445E00FA584A /* NibLoadableView.swift in Sources */,
 				27C9AE70288D445E00FA584A /* ReusableView.swift in Sources */,
 				27C9AE72288D449800FA584A /* ProgressBar.swift in Sources */,
+				2767A271288F3CD600DF34D1 /* DonationThirdFrame.swift in Sources */,
 				27C9AE7F288D4C1E00FA584A /* OnBoardingFrame2.swift in Sources */,
 				27C9AEAA288DA8E300FA584A /* TaskCollectionViewCell.swift in Sources */,
 				27C9AE7C288D4B4400FA584A /* UIButtonDesignable.swift in Sources */,
@@ -461,6 +552,7 @@
 				27C9AE27288D38E900FA584A /* AppDelegate.swift in Sources */,
 				27C9AE74288D44F300FA584A /* UIViewFromNIB.swift in Sources */,
 				27C9AE29288D38E900FA584A /* SceneDelegate.swift in Sources */,
+				2767A275288F504A00DF34D1 /* DonationFourthFrame.swift in Sources */,
 				27C9AE83288D4F0600FA584A /* OnBoardingFrame3.swift in Sources */,
 				27C9AE9E288D8BEC00FA584A /* OpportunityViewVC.swift in Sources */,
 				27C9AE78288D470600FA584A /* OnBoardingVC.swift in Sources */,
@@ -606,6 +698,7 @@
 		};
 		27C9AE38288D38EA00FA584A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1DB83CD4E289D2153C7D862 /* Pods-GoodLifeApplocation.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -634,6 +727,7 @@
 		};
 		27C9AE39288D38EA00FA584A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46608627E894627402509900 /* Pods-GoodLifeApplocation.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
