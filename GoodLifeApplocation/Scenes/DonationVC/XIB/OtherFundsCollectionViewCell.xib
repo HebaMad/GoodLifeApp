@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="OtherFundsCollectionViewCell" customModule="GoodLifeApplocation" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="142" height="148"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="142" height="148"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pVc-Ly-smm">
+                        <rect key="frame" x="8" y="8" width="126" height="132"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9zE-Rf-1pd">
+                                <rect key="frame" x="0.0" y="0.0" width="126" height="132"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="488-RK-soh">
+                                        <rect key="frame" x="8" y="8" width="110" height="80"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.3.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="WXf-4R-Y3p">
+                                                <rect key="frame" x="32.5" y="19" width="45" height="42"/>
+                                                <color key="backgroundColor" name="progressView"/>
+                                                <color key="tintColor" name="backgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="WXf-4R-Y3p" secondAttribute="height" multiplier="1:1" id="XM6-3w-pMU"/>
+                                                    <constraint firstAttribute="width" constant="45" id="mjD-Jy-Mov"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="WXf-4R-Y3p" firstAttribute="centerX" secondItem="488-RK-soh" secondAttribute="centerX" id="GMp-FA-XdN"/>
+                                            <constraint firstItem="WXf-4R-Y3p" firstAttribute="centerY" secondItem="488-RK-soh" secondAttribute="centerY" id="Jov-BT-6bS"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Cl-Dz-ElP">
+                                        <rect key="frame" x="8" y="88" width="110" height="36"/>
+                                        <string key="text">Orphan
+Outlet</string>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <color key="textColor" name="button"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9zE-Rf-1pd" firstAttribute="leading" secondItem="pVc-Ly-smm" secondAttribute="leading" id="95f-8g-7ma"/>
+                            <constraint firstItem="9zE-Rf-1pd" firstAttribute="top" secondItem="pVc-Ly-smm" secondAttribute="top" id="Zwk-3M-ebd"/>
+                            <constraint firstAttribute="trailing" secondItem="9zE-Rf-1pd" secondAttribute="trailing" id="hUV-qE-uA5"/>
+                            <constraint firstAttribute="bottom" secondItem="9zE-Rf-1pd" secondAttribute="bottom" id="nq0-as-8pp"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="pVc-Ly-smm" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="K1U-vF-ZMG"/>
+                <constraint firstAttribute="trailing" secondItem="pVc-Ly-smm" secondAttribute="trailing" constant="8" id="Wqr-Sp-TGC"/>
+                <constraint firstItem="pVc-Ly-smm" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="ZR7-OC-uM6"/>
+                <constraint firstAttribute="bottom" secondItem="pVc-Ly-smm" secondAttribute="bottom" constant="8" id="tjE-ge-ueN"/>
+            </constraints>
+            <size key="customSize" width="142" height="148"/>
+            <connections>
+                <outlet property="cellImageView" destination="WXf-4R-Y3p" id="7DQ-Ir-ClA"/>
+                <outlet property="cellTitleLbl" destination="9Cl-Dz-ElP" id="7xK-1w-CA8"/>
+            </connections>
+            <point key="canvasLocation" x="204.34782608695653" y="78.348214285714278"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="person.3.fill" catalog="system" width="128" height="61"/>
+        <namedColor name="backgroundColor">
+            <color red="0.63099998235702515" green="0.34900000691413879" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="button">
+            <color red="0.2669999897480011" green="0.050999999046325684" blue="0.55699998140335083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="progressView">
+            <color red="0.79600000381469727" green="0.63899999856948853" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

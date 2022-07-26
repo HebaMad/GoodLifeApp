@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let _delegate = UIApplication.shared.delegate as? AppDelegate {
             _delegate.window = window
         }
-        let vc = DonationFifthFrameVC()
+        let vc = FilterVC()
         setRootVC(vc: vc)
     }
     func setRootVC(vc:UIViewController){

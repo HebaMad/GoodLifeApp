@@ -14,6 +14,20 @@
 		2767A276288F504A00DF34D1 /* DonationFourthFrame.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2767A274288F504A00DF34D1 /* DonationFourthFrame.xib */; };
 		2767A279288F53C100DF34D1 /* DonationFifthFrameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2767A277288F53C100DF34D1 /* DonationFifthFrameVC.swift */; };
 		2767A27A288F53C100DF34D1 /* DonationFifthFrameVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2767A278288F53C100DF34D1 /* DonationFifthFrameVC.xib */; };
+		2767A27F2890478200DF34D1 /* FeaturedFundsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2767A27D2890478200DF34D1 /* FeaturedFundsCollectionViewCell.swift */; };
+		2767A2802890478200DF34D1 /* FeaturedFundsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2767A27E2890478200DF34D1 /* FeaturedFundsCollectionViewCell.xib */; };
+		2767A28328904A3800DF34D1 /* OtherFundsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2767A28128904A3800DF34D1 /* OtherFundsCollectionViewCell.swift */; };
+		2767A28428904A3800DF34D1 /* OtherFundsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2767A28228904A3800DF34D1 /* OtherFundsCollectionViewCell.xib */; };
+		2767A28728904DF800DF34D1 /* DonationFirstFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2767A28528904DF800DF34D1 /* DonationFirstFrame.swift */; };
+		2767A28828904DF800DF34D1 /* DonationFirstFrame.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2767A28628904DF800DF34D1 /* DonationFirstFrame.xib */; };
+		2767A28A28904ECA00DF34D1 /* CollectionViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2767A28928904ECA00DF34D1 /* CollectionViewHelper.swift */; };
+		2767A28E28906FA100DF34D1 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2767A28B28906FA100DF34D1 /* MockData.swift */; };
+		2767A28F28906FA100DF34D1 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2767A28C28906FA100DF34D1 /* ListItem.swift */; };
+		2767A29028906FA100DF34D1 /* ListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2767A28D28906FA100DF34D1 /* ListSection.swift */; };
+		2767A293289087DF00DF34D1 /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2767A291289087DF00DF34D1 /* HeaderCollectionReusableView.swift */; };
+		2767A294289087DF00DF34D1 /* HeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2767A292289087DF00DF34D1 /* HeaderCollectionReusableView.xib */; };
+		2767A2982890A48600DF34D1 /* FilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2767A2962890A48600DF34D1 /* FilterVC.swift */; };
+		2767A2992890A48600DF34D1 /* FilterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2767A2972890A48600DF34D1 /* FilterVC.xib */; };
 		27C9AE27288D38E900FA584A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AE26288D38E900FA584A /* AppDelegate.swift */; };
 		27C9AE29288D38E900FA584A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AE28288D38E900FA584A /* SceneDelegate.swift */; };
 		27C9AE2B288D38E900FA584A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AE2A288D38E900FA584A /* ViewController.swift */; };
@@ -84,6 +98,20 @@
 		2767A274288F504A00DF34D1 /* DonationFourthFrame.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DonationFourthFrame.xib; sourceTree = "<group>"; };
 		2767A277288F53C100DF34D1 /* DonationFifthFrameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationFifthFrameVC.swift; sourceTree = "<group>"; };
 		2767A278288F53C100DF34D1 /* DonationFifthFrameVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DonationFifthFrameVC.xib; sourceTree = "<group>"; };
+		2767A27D2890478200DF34D1 /* FeaturedFundsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedFundsCollectionViewCell.swift; sourceTree = "<group>"; };
+		2767A27E2890478200DF34D1 /* FeaturedFundsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturedFundsCollectionViewCell.xib; sourceTree = "<group>"; };
+		2767A28128904A3800DF34D1 /* OtherFundsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherFundsCollectionViewCell.swift; sourceTree = "<group>"; };
+		2767A28228904A3800DF34D1 /* OtherFundsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtherFundsCollectionViewCell.xib; sourceTree = "<group>"; };
+		2767A28528904DF800DF34D1 /* DonationFirstFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationFirstFrame.swift; sourceTree = "<group>"; };
+		2767A28628904DF800DF34D1 /* DonationFirstFrame.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DonationFirstFrame.xib; sourceTree = "<group>"; };
+		2767A28928904ECA00DF34D1 /* CollectionViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectionViewHelper.swift; path = ../../../DigitalSapphire/DigitalSapphire/Helper/CollectionViewHelper.swift; sourceTree = "<group>"; };
+		2767A28B28906FA100DF34D1 /* MockData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockData.swift; path = "../../../../../../Downloads/ios-tutorials-multi-section-collectionview-finished/MultiSectionCompositionalLayout/MockData.swift"; sourceTree = "<group>"; };
+		2767A28C28906FA100DF34D1 /* ListItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListItem.swift; path = "../../../../../../Downloads/ios-tutorials-multi-section-collectionview-finished/MultiSectionCompositionalLayout/ListItem.swift"; sourceTree = "<group>"; };
+		2767A28D28906FA100DF34D1 /* ListSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListSection.swift; path = "../../../../../../Downloads/ios-tutorials-multi-section-collectionview-finished/MultiSectionCompositionalLayout/ListSection.swift"; sourceTree = "<group>"; };
+		2767A291289087DF00DF34D1 /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		2767A292289087DF00DF34D1 /* HeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCollectionReusableView.xib; sourceTree = "<group>"; };
+		2767A2962890A48600DF34D1 /* FilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterVC.swift; sourceTree = "<group>"; };
+		2767A2972890A48600DF34D1 /* FilterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterVC.xib; sourceTree = "<group>"; };
 		27C9AE23288D38E900FA584A /* GoodLifeApplocation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodLifeApplocation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27C9AE26288D38E900FA584A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27C9AE28288D38E900FA584A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -173,6 +201,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		2767A2952890A45400DF34D1 /* Filterscreen */ = {
+			isa = PBXGroup;
+			children = (
+				2767A2962890A48600DF34D1 /* FilterVC.swift */,
+				2767A2972890A48600DF34D1 /* FilterVC.xib */,
+			);
+			path = Filterscreen;
+			sourceTree = "<group>";
+		};
 		27C9AE1A288D38E900FA584A = {
 			isa = PBXGroup;
 			children = (
@@ -212,6 +249,7 @@
 		27C9AE3A288D399400FA584A /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				2767A2952890A45400DF34D1 /* Filterscreen */,
 				27C9AEB0288EF0DF00FA584A /* DonationVC */,
 				27C9AEA6288DA88200FA584A /* HomeVC */,
 				27C9AE9B288D8BB100FA584A /* ViewOppouritunityVC */,
@@ -259,6 +297,7 @@
 		27C9AE67288D425100FA584A /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				2767A28928904ECA00DF34D1 /* CollectionViewHelper.swift */,
 				27C9AEBD288F104900FA584A /* TableViewHelper.swift */,
 				27C9AE97288D899E00FA584A /* OpportunityView.swift */,
 				27C9AE98288D899E00FA584A /* OpportunityView.xib */,
@@ -350,6 +389,12 @@
 			children = (
 				27C9AEB1288EF14900FA584A /* MealMarkerTableViewCell.swift */,
 				27C9AEB2288EF14900FA584A /* MealMarkerTableViewCell.xib */,
+				2767A27D2890478200DF34D1 /* FeaturedFundsCollectionViewCell.swift */,
+				2767A27E2890478200DF34D1 /* FeaturedFundsCollectionViewCell.xib */,
+				2767A28128904A3800DF34D1 /* OtherFundsCollectionViewCell.swift */,
+				2767A28228904A3800DF34D1 /* OtherFundsCollectionViewCell.xib */,
+				2767A291289087DF00DF34D1 /* HeaderCollectionReusableView.swift */,
+				2767A292289087DF00DF34D1 /* HeaderCollectionReusableView.xib */,
 			);
 			path = XIB;
 			sourceTree = "<group>";
@@ -357,6 +402,9 @@
 		27C9AEB6288EF5B900FA584A /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				2767A28C28906FA100DF34D1 /* ListItem.swift */,
+				2767A28D28906FA100DF34D1 /* ListSection.swift */,
+				2767A28B28906FA100DF34D1 /* MockData.swift */,
 				27C9AEB7288EF61200FA584A /* DonationVC.swift */,
 				27C9AEB8288EF61200FA584A /* DonationVC.xib */,
 				27C9AEBB288EFBA200FA584A /* DonationFrameTwoVC.swift */,
@@ -366,6 +414,8 @@
 				2767A274288F504A00DF34D1 /* DonationFourthFrame.xib */,
 				2767A277288F53C100DF34D1 /* DonationFifthFrameVC.swift */,
 				2767A278288F53C100DF34D1 /* DonationFifthFrameVC.xib */,
+				2767A28528904DF800DF34D1 /* DonationFirstFrame.swift */,
+				2767A28628904DF800DF34D1 /* DonationFirstFrame.xib */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -452,12 +502,14 @@
 				27C9AE5B288D3CB500FA584A /* Inter-ExtraBold.ttf in Resources */,
 				27C9AE54288D3CB500FA584A /* Inter-BoldItalic.ttf in Resources */,
 				27C9AE9A288D899E00FA584A /* OpportunityView.xib in Resources */,
+				2767A294289087DF00DF34D1 /* HeaderCollectionReusableView.xib in Resources */,
 				27C9AE3E288D39B300FA584A /* SplashScreen.xib in Resources */,
 				2767A276288F504A00DF34D1 /* DonationFourthFrame.xib in Resources */,
 				27C9AE5F288D3CB500FA584A /* Inter-Italic.ttf in Resources */,
 				27C9AE5E288D3CB500FA584A /* Inter-ExtraBoldItalic.ttf in Resources */,
 				27C9AE58288D3CB500FA584A /* Inter-Thin-BETA.ttf in Resources */,
 				27C9AE33288D38EA00FA584A /* LaunchScreen.storyboard in Resources */,
+				2767A28428904A3800DF34D1 /* OtherFundsCollectionViewCell.xib in Resources */,
 				27C9AE5D288D3CB500FA584A /* Inter-ExtraLight-BETA.ttf in Resources */,
 				27C9AE90288D54AA00FA584A /* OnBoardingFrame5.xib in Resources */,
 				27C9AEB4288EF14900FA584A /* MealMarkerTableViewCell.xib in Resources */,
@@ -465,15 +517,18 @@
 				27C9AE84288D4F0600FA584A /* OnBoardingFrame3.xib in Resources */,
 				27C9AE9F288D8BEC00FA584A /* OpportunityViewVC.xib in Resources */,
 				27C9AE52288D3CA000FA584A /* Inter-Black.ttf in Resources */,
+				2767A2802890478200DF34D1 /* FeaturedFundsCollectionViewCell.xib in Resources */,
 				27C9AE6A288D427600FA584A /* ProgressView.xib in Resources */,
 				2767A27A288F53C100DF34D1 /* DonationFifthFrameVC.xib in Resources */,
 				27C9AE55288D3CB500FA584A /* Inter-ExtraLightItalic-BETA.ttf in Resources */,
 				27C9AE30288D38EA00FA584A /* Assets.xcassets in Resources */,
 				27C9AEBA288EF61200FA584A /* DonationVC.xib in Resources */,
 				27C9AE8A288D51FD00FA584A /* OnBoardingFrame4.xib in Resources */,
+				2767A28828904DF800DF34D1 /* DonationFirstFrame.xib in Resources */,
 				27C9AE2E288D38E900FA584A /* Main.storyboard in Resources */,
 				27C9AE5A288D3CB500FA584A /* Inter-ThinItalic-BETA.ttf in Resources */,
 				27C9AE79288D470600FA584A /* OnBoardingVC.xib in Resources */,
+				2767A2992890A48600DF34D1 /* FilterVC.xib in Resources */,
 				27C9AE62288D3CB500FA584A /* Inter-Light-BETA.ttf in Resources */,
 				27C9AE56288D3CB500FA584A /* Inter-Medium.ttf in Resources */,
 			);
@@ -530,6 +585,8 @@
 			files = (
 				27C9AE89288D51FD00FA584A /* OnBoardingFrame4.swift in Sources */,
 				27C9AE3D288D39B300FA584A /* SplashScreen.swift in Sources */,
+				2767A28728904DF800DF34D1 /* DonationFirstFrame.swift in Sources */,
+				2767A28E28906FA100DF34D1 /* MockData.swift in Sources */,
 				27C9AE2B288D38E900FA584A /* ViewController.swift in Sources */,
 				27C9AEBE288F104900FA584A /* TableViewHelper.swift in Sources */,
 				27C9AE86288D50A800FA584A /* UIViewDesignable.swift in Sources */,
@@ -538,21 +595,28 @@
 				27C9AE99288D899E00FA584A /* OpportunityView.swift in Sources */,
 				27C9AEB3288EF14900FA584A /* MealMarkerTableViewCell.swift in Sources */,
 				2767A279288F53C100DF34D1 /* DonationFifthFrameVC.swift in Sources */,
+				2767A2982890A48600DF34D1 /* FilterVC.swift in Sources */,
 				27C9AE8F288D54AA00FA584A /* OnBoardingFrame5.swift in Sources */,
+				2767A293289087DF00DF34D1 /* HeaderCollectionReusableView.swift in Sources */,
 				27C9AEA2288D971700FA584A /* VolunteerOpportunityVC.swift in Sources */,
 				27C9AEAE288DB44600FA584A /* CategoriesCollectionViewCell.swift in Sources */,
+				2767A28F28906FA100DF34D1 /* ListItem.swift in Sources */,
 				27C9AE6F288D445E00FA584A /* NibLoadableView.swift in Sources */,
+				2767A29028906FA100DF34D1 /* ListSection.swift in Sources */,
 				27C9AE70288D445E00FA584A /* ReusableView.swift in Sources */,
 				27C9AE72288D449800FA584A /* ProgressBar.swift in Sources */,
+				2767A28A28904ECA00DF34D1 /* CollectionViewHelper.swift in Sources */,
 				2767A271288F3CD600DF34D1 /* DonationThirdFrame.swift in Sources */,
 				27C9AE7F288D4C1E00FA584A /* OnBoardingFrame2.swift in Sources */,
 				27C9AEAA288DA8E300FA584A /* TaskCollectionViewCell.swift in Sources */,
+				2767A27F2890478200DF34D1 /* FeaturedFundsCollectionViewCell.swift in Sources */,
 				27C9AE7C288D4B4400FA584A /* UIButtonDesignable.swift in Sources */,
 				27C9AEB9288EF61200FA584A /* DonationVC.swift in Sources */,
 				27C9AE27288D38E900FA584A /* AppDelegate.swift in Sources */,
 				27C9AE74288D44F300FA584A /* UIViewFromNIB.swift in Sources */,
 				27C9AE29288D38E900FA584A /* SceneDelegate.swift in Sources */,
 				2767A275288F504A00DF34D1 /* DonationFourthFrame.swift in Sources */,
+				2767A28328904A3800DF34D1 /* OtherFundsCollectionViewCell.swift in Sources */,
 				27C9AE83288D4F0600FA584A /* OnBoardingFrame3.swift in Sources */,
 				27C9AE9E288D8BEC00FA584A /* OpportunityViewVC.swift in Sources */,
 				27C9AE78288D470600FA584A /* OnBoardingVC.swift in Sources */,
