@@ -16,6 +16,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DonationFourthFrame" customModule="GoodLifeApplocation" customModuleProvider="target">
             <connections>
+                <outlet property="orderImage" destination="jHs-1b-tba" id="bbv-bC-cok"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -93,6 +94,9 @@
                                     <color key="value" name="backgroundColor"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="claimOrderBtn:" destination="-1" eventType="touchUpInside" id="Xln-AJ-1hI"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x3g-i0-kjf">
                             <rect key="frame" x="0.0" y="54" width="350" height="28.5"/>
@@ -101,6 +105,9 @@
                                 <fontDescription key="titleFontDescription" name="Inter-Medium" family="Inter" pointSize="12"/>
                                 <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </buttonConfiguration>
+                            <connections>
+                                <action selector="mealTrackerBtn:" destination="-1" eventType="touchUpInside" id="bVF-Ct-fSw"/>
+                            </connections>
                         </button>
                     </subviews>
                 </stackView>
@@ -123,6 +130,9 @@
     <designables>
         <designable name="eLL-B8-Aa3">
             <size key="intrinsicContentSize" width="114.5" height="36"/>
+        </designable>
+        <designable name="jHs-1b-tba">
+            <size key="intrinsicContentSize" width="40" height="40"/>
         </designable>
     </designables>
     <resources>

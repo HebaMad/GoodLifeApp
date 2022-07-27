@@ -8,22 +8,28 @@
 import UIKit
 
 class DonationThirdFrame: UIViewController {
-
+    
+    //MARK: - Outlet
+    
+    @IBOutlet weak var SubscribeTypeTitle: UILabel!
+    @IBOutlet weak var subscribeDescription: UILabel!
+    @IBOutlet weak var amount: UILabel!
+    @IBOutlet weak var processDescription: UILabel!
+    @IBOutlet weak var firstStageDesc: UILabel!
+    @IBOutlet weak var lastStageDesc: UILabel!
+    
+    //MARK: - Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    //MARK: - Private Handler
+    
+    @IBAction func DonateNowAction(_ sender: Any) {
     }
-    */
-
+    
+    
+    
 }
