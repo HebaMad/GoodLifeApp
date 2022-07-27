@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		24983235073DC38B89F7802A /* Pods_GoodLifeApplocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0E5AE3CF2C1C421B86FEF65 /* Pods_GoodLifeApplocation.framework */; };
+		2706D21328913D4500546425 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2706D21228913D4500546425 /* ProgressBar.swift */; };
+		2734CD8528913E3A00E6964F /* GoodLifeApplocation.xcworkspace in Resources */ = {isa = PBXBuildFile; fileRef = 27C9AE68288D427600FA584A /* GoodLifeApplocation.xcworkspace */; };
 		2767A271288F3CD600DF34D1 /* DonationThirdFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2767A26F288F3CD600DF34D1 /* DonationThirdFrame.swift */; };
 		2767A272288F3CD600DF34D1 /* DonationThirdFrame.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2767A270288F3CD600DF34D1 /* DonationThirdFrame.xib */; };
 		2767A275288F504A00DF34D1 /* DonationFourthFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2767A273288F504A00DF34D1 /* DonationFourthFrame.swift */; };
@@ -28,6 +30,7 @@
 		2767A294289087DF00DF34D1 /* HeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2767A292289087DF00DF34D1 /* HeaderCollectionReusableView.xib */; };
 		2767A2982890A48600DF34D1 /* FilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2767A2962890A48600DF34D1 /* FilterVC.swift */; };
 		2767A2992890A48600DF34D1 /* FilterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2767A2972890A48600DF34D1 /* FilterVC.xib */; };
+		27A7375E28913F0500FD8AD9 /* ProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27A7375D28913F0500FD8AD9 /* ProgressView.xib */; };
 		27C9AE27288D38E900FA584A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AE26288D38E900FA584A /* AppDelegate.swift */; };
 		27C9AE29288D38E900FA584A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AE28288D38E900FA584A /* SceneDelegate.swift */; };
 		27C9AE2B288D38E900FA584A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AE2A288D38E900FA584A /* ViewController.swift */; };
@@ -54,11 +57,9 @@
 		27C9AE61288D3CB500FA584A /* Inter-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 27C9AE50288D3B9A00FA584A /* Inter-SemiBoldItalic.ttf */; };
 		27C9AE62288D3CB500FA584A /* Inter-Light-BETA.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 27C9AE45288D3B9A00FA584A /* Inter-Light-BETA.ttf */; };
 		27C9AE63288D3CB500FA584A /* Inter-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 27C9AE49288D3B9A00FA584A /* Inter-MediumItalic.ttf */; };
-		27C9AE6A288D427600FA584A /* ProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27C9AE68288D427600FA584A /* ProgressView.xib */; };
 		27C9AE6B288D427600FA584A /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AE69288D427600FA584A /* ProgressView.swift */; };
 		27C9AE6F288D445E00FA584A /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AE6D288D445E00FA584A /* NibLoadableView.swift */; };
 		27C9AE70288D445E00FA584A /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AE6E288D445E00FA584A /* ReusableView.swift */; };
-		27C9AE72288D449800FA584A /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AE71288D449800FA584A /* ProgressBar.swift */; };
 		27C9AE74288D44F300FA584A /* UIViewFromNIB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AE73288D44F300FA584A /* UIViewFromNIB.swift */; };
 		27C9AE78288D470600FA584A /* OnBoardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AE76288D470600FA584A /* OnBoardingVC.swift */; };
 		27C9AE79288D470600FA584A /* OnBoardingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27C9AE77288D470600FA584A /* OnBoardingVC.xib */; };
@@ -92,6 +93,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2706D21228913D4500546425 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		2767A26F288F3CD600DF34D1 /* DonationThirdFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationThirdFrame.swift; sourceTree = "<group>"; };
 		2767A270288F3CD600DF34D1 /* DonationThirdFrame.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DonationThirdFrame.xib; sourceTree = "<group>"; };
 		2767A273288F504A00DF34D1 /* DonationFourthFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationFourthFrame.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 		2767A292289087DF00DF34D1 /* HeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCollectionReusableView.xib; sourceTree = "<group>"; };
 		2767A2962890A48600DF34D1 /* FilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterVC.swift; sourceTree = "<group>"; };
 		2767A2972890A48600DF34D1 /* FilterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterVC.xib; sourceTree = "<group>"; };
+		27A7375D28913F0500FD8AD9 /* ProgressView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgressView.xib; sourceTree = "<group>"; };
 		27C9AE23288D38E900FA584A /* GoodLifeApplocation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodLifeApplocation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27C9AE26288D38E900FA584A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27C9AE28288D38E900FA584A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,11 +143,10 @@
 		27C9AE4F288D3B9A00FA584A /* Inter-ExtraLightItalic-BETA.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-ExtraLightItalic-BETA.ttf"; path = "../../../../Downloads/inter/Inter-ExtraLightItalic-BETA.ttf"; sourceTree = "<group>"; };
 		27C9AE50288D3B9A00FA584A /* Inter-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-SemiBoldItalic.ttf"; path = "../../../../Downloads/inter/Inter-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		27C9AE51288D3B9A00FA584A /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-Medium.ttf"; path = "../../../../Downloads/inter/Inter-Medium.ttf"; sourceTree = "<group>"; };
-		27C9AE68288D427600FA584A /* ProgressView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProgressView.xib; path = "../../../Rakwa-ios/Rakwa/Components/ProgressView.xib"; sourceTree = "<group>"; };
+		27C9AE68288D427600FA584A /* GoodLifeApplocation.xcworkspace */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.workspace; path = GoodLifeApplocation.xcworkspace; sourceTree = SOURCE_ROOT; };
 		27C9AE69288D427600FA584A /* ProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProgressView.swift; path = "../../../Rakwa-ios/Rakwa/Components/ProgressView.swift"; sourceTree = "<group>"; };
 		27C9AE6D288D445E00FA584A /* NibLoadableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NibLoadableView.swift; path = "../../../Rakwa-ios/Rakwa/Protocols/NibLoadableView.swift"; sourceTree = "<group>"; };
 		27C9AE6E288D445E00FA584A /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReusableView.swift; path = "../../../Rakwa-ios/Rakwa/Protocols/ReusableView.swift"; sourceTree = "<group>"; };
-		27C9AE71288D449800FA584A /* ProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProgressBar.swift; path = "../../../Rakwa-ios/Rakwa/Components/ProgressBar.swift"; sourceTree = "<group>"; };
 		27C9AE73288D44F300FA584A /* UIViewFromNIB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewFromNIB.swift; path = "../../../Rakwa-ios/Rakwa/Helper/UIViewFromNIB.swift"; sourceTree = "<group>"; };
 		27C9AE76288D470600FA584A /* OnBoardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingVC.swift; sourceTree = "<group>"; };
 		27C9AE77288D470600FA584A /* OnBoardingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingVC.xib; sourceTree = "<group>"; };
@@ -159,7 +161,7 @@
 		27C9AE8D288D54AA00FA584A /* OnBoardingFrame5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingFrame5.swift; sourceTree = "<group>"; };
 		27C9AE8E288D54AA00FA584A /* OnBoardingFrame5.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingFrame5.xib; sourceTree = "<group>"; };
 		27C9AE97288D899E00FA584A /* OpportunityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OpportunityView.swift; path = "../../../Rakwa-ios/Rakwa/Components/OpportunityView.swift"; sourceTree = "<group>"; };
-		27C9AE98288D899E00FA584A /* OpportunityView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OpportunityView.xib; path = "../../../Rakwa-ios/Rakwa/Components/OpportunityView.xib"; sourceTree = "<group>"; };
+		27C9AE98288D899E00FA584A /* OpportunityView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OpportunityView.xib; path = "../Rakwa-ios/Rakwa/Components/OpportunityView.xib"; sourceTree = SOURCE_ROOT; };
 		27C9AE9C288D8BEC00FA584A /* OpportunityViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpportunityViewVC.swift; sourceTree = "<group>"; };
 		27C9AE9D288D8BEC00FA584A /* OpportunityViewVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpportunityViewVC.xib; sourceTree = "<group>"; };
 		27C9AEA0288D971700FA584A /* VolunteerOpportunityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerOpportunityVC.swift; sourceTree = "<group>"; };
@@ -297,15 +299,16 @@
 		27C9AE67288D425100FA584A /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				27A7375D28913F0500FD8AD9 /* ProgressView.xib */,
 				2767A28928904ECA00DF34D1 /* CollectionViewHelper.swift */,
 				27C9AEBD288F104900FA584A /* TableViewHelper.swift */,
 				27C9AE97288D899E00FA584A /* OpportunityView.swift */,
 				27C9AE98288D899E00FA584A /* OpportunityView.xib */,
 				27C9AE64288D3F2700FA584A /* Designable */,
 				27C9AE73288D44F300FA584A /* UIViewFromNIB.swift */,
-				27C9AE71288D449800FA584A /* ProgressBar.swift */,
 				27C9AE69288D427600FA584A /* ProgressView.swift */,
-				27C9AE68288D427600FA584A /* ProgressView.xib */,
+				27C9AE68288D427600FA584A /* GoodLifeApplocation.xcworkspace */,
+				2706D21228913D4500546425 /* ProgressBar.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -439,7 +442,6 @@
 				27C9AE1F288D38E900FA584A /* Sources */,
 				27C9AE20288D38E900FA584A /* Frameworks */,
 				27C9AE21288D38E900FA584A /* Resources */,
-				D256DC5222DCCA1E34C67345 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -501,6 +503,7 @@
 				27C9AE53288D3CA300FA584A /* Inter-Bold.ttf in Resources */,
 				27C9AE5B288D3CB500FA584A /* Inter-ExtraBold.ttf in Resources */,
 				27C9AE54288D3CB500FA584A /* Inter-BoldItalic.ttf in Resources */,
+				2734CD8528913E3A00E6964F /* GoodLifeApplocation.xcworkspace in Resources */,
 				27C9AE9A288D899E00FA584A /* OpportunityView.xib in Resources */,
 				2767A294289087DF00DF34D1 /* HeaderCollectionReusableView.xib in Resources */,
 				27C9AE3E288D39B300FA584A /* SplashScreen.xib in Resources */,
@@ -508,6 +511,7 @@
 				27C9AE5F288D3CB500FA584A /* Inter-Italic.ttf in Resources */,
 				27C9AE5E288D3CB500FA584A /* Inter-ExtraBoldItalic.ttf in Resources */,
 				27C9AE58288D3CB500FA584A /* Inter-Thin-BETA.ttf in Resources */,
+				27A7375E28913F0500FD8AD9 /* ProgressView.xib in Resources */,
 				27C9AE33288D38EA00FA584A /* LaunchScreen.storyboard in Resources */,
 				2767A28428904A3800DF34D1 /* OtherFundsCollectionViewCell.xib in Resources */,
 				27C9AE5D288D3CB500FA584A /* Inter-ExtraLight-BETA.ttf in Resources */,
@@ -518,7 +522,6 @@
 				27C9AE9F288D8BEC00FA584A /* OpportunityViewVC.xib in Resources */,
 				27C9AE52288D3CA000FA584A /* Inter-Black.ttf in Resources */,
 				2767A2802890478200DF34D1 /* FeaturedFundsCollectionViewCell.xib in Resources */,
-				27C9AE6A288D427600FA584A /* ProgressView.xib in Resources */,
 				2767A27A288F53C100DF34D1 /* DonationFifthFrameVC.xib in Resources */,
 				27C9AE55288D3CB500FA584A /* Inter-ExtraLightItalic-BETA.ttf in Resources */,
 				27C9AE30288D38EA00FA584A /* Assets.xcassets in Resources */,
@@ -559,23 +562,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D256DC5222DCCA1E34C67345 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GoodLifeApplocation/Pods-GoodLifeApplocation-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GoodLifeApplocation/Pods-GoodLifeApplocation-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GoodLifeApplocation/Pods-GoodLifeApplocation-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -603,8 +589,8 @@
 				2767A28F28906FA100DF34D1 /* ListItem.swift in Sources */,
 				27C9AE6F288D445E00FA584A /* NibLoadableView.swift in Sources */,
 				2767A29028906FA100DF34D1 /* ListSection.swift in Sources */,
+				2706D21328913D4500546425 /* ProgressBar.swift in Sources */,
 				27C9AE70288D445E00FA584A /* ReusableView.swift in Sources */,
-				27C9AE72288D449800FA584A /* ProgressBar.swift in Sources */,
 				2767A28A28904ECA00DF34D1 /* CollectionViewHelper.swift in Sources */,
 				2767A271288F3CD600DF34D1 /* DonationThirdFrame.swift in Sources */,
 				27C9AE7F288D4C1E00FA584A /* OnBoardingFrame2.swift in Sources */,
