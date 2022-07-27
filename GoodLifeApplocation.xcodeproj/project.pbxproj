@@ -34,6 +34,11 @@
 		27A737622891403000FD8AD9 /* UIViewFromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A737612891403000FD8AD9 /* UIViewFromNib.swift */; };
 		27A737642891405200FD8AD9 /* CollectionViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A737632891405200FD8AD9 /* CollectionViewHelper.swift */; };
 		27A737662891407200FD8AD9 /* TableViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A737652891407200FD8AD9 /* TableViewHelper.swift */; };
+		27A737692891431000FD8AD9 /* OpportunityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A737672891431000FD8AD9 /* OpportunityView.swift */; };
+		27A7376A2891431000FD8AD9 /* OpportunityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27A737682891431000FD8AD9 /* OpportunityView.xib */; };
+		27A7376E2891435C00FD8AD9 /* UIImageViewDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A7376B2891435C00FD8AD9 /* UIImageViewDesignable.swift */; };
+		27A7376F2891435C00FD8AD9 /* UIViewDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A7376C2891435C00FD8AD9 /* UIViewDesignable.swift */; };
+		27A737702891435C00FD8AD9 /* UIButtonDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A7376D2891435C00FD8AD9 /* UIButtonDesignable.swift */; };
 		27C9AE27288D38E900FA584A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AE26288D38E900FA584A /* AppDelegate.swift */; };
 		27C9AE29288D38E900FA584A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AE28288D38E900FA584A /* SceneDelegate.swift */; };
 		27C9AE2B288D38E900FA584A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AE2A288D38E900FA584A /* ViewController.swift */; };
@@ -64,23 +69,18 @@
 		27C9AE70288D445E00FA584A /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AE6E288D445E00FA584A /* ReusableView.swift */; };
 		27C9AE78288D470600FA584A /* OnBoardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AE76288D470600FA584A /* OnBoardingVC.swift */; };
 		27C9AE79288D470600FA584A /* OnBoardingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27C9AE77288D470600FA584A /* OnBoardingVC.xib */; };
-		27C9AE7C288D4B4400FA584A /* UIButtonDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AE7B288D4B4400FA584A /* UIButtonDesignable.swift */; };
 		27C9AE7F288D4C1E00FA584A /* OnBoardingFrame2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AE7D288D4C1E00FA584A /* OnBoardingFrame2.swift */; };
 		27C9AE80288D4C1E00FA584A /* OnBoardingFrame2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27C9AE7E288D4C1E00FA584A /* OnBoardingFrame2.xib */; };
 		27C9AE83288D4F0600FA584A /* OnBoardingFrame3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AE81288D4F0600FA584A /* OnBoardingFrame3.swift */; };
 		27C9AE84288D4F0600FA584A /* OnBoardingFrame3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27C9AE82288D4F0600FA584A /* OnBoardingFrame3.xib */; };
-		27C9AE86288D50A800FA584A /* UIViewDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AE85288D50A800FA584A /* UIViewDesignable.swift */; };
 		27C9AE89288D51FD00FA584A /* OnBoardingFrame4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AE87288D51FD00FA584A /* OnBoardingFrame4.swift */; };
 		27C9AE8A288D51FD00FA584A /* OnBoardingFrame4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27C9AE88288D51FD00FA584A /* OnBoardingFrame4.xib */; };
 		27C9AE8F288D54AA00FA584A /* OnBoardingFrame5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AE8D288D54AA00FA584A /* OnBoardingFrame5.swift */; };
 		27C9AE90288D54AA00FA584A /* OnBoardingFrame5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27C9AE8E288D54AA00FA584A /* OnBoardingFrame5.xib */; };
-		27C9AE99288D899E00FA584A /* OpportunityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AE97288D899E00FA584A /* OpportunityView.swift */; };
-		27C9AE9A288D899E00FA584A /* OpportunityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27C9AE98288D899E00FA584A /* OpportunityView.xib */; };
 		27C9AE9E288D8BEC00FA584A /* OpportunityViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AE9C288D8BEC00FA584A /* OpportunityViewVC.swift */; };
 		27C9AE9F288D8BEC00FA584A /* OpportunityViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27C9AE9D288D8BEC00FA584A /* OpportunityViewVC.xib */; };
 		27C9AEA2288D971700FA584A /* VolunteerOpportunityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AEA0288D971700FA584A /* VolunteerOpportunityVC.swift */; };
 		27C9AEA3288D971700FA584A /* VolunteerOpportunityVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27C9AEA1288D971700FA584A /* VolunteerOpportunityVC.xib */; };
-		27C9AEA5288DA1A600FA584A /* UIImageViewDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AEA4288DA1A600FA584A /* UIImageViewDesignable.swift */; };
 		27C9AEAA288DA8E300FA584A /* TaskCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AEA8288DA8E300FA584A /* TaskCollectionViewCell.swift */; };
 		27C9AEAB288DA8E300FA584A /* TaskCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27C9AEA9288DA8E300FA584A /* TaskCollectionViewCell.xib */; };
 		27C9AEAE288DB44600FA584A /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AEAC288DB44600FA584A /* CategoriesCollectionViewCell.swift */; };
@@ -118,6 +118,11 @@
 		27A737612891403000FD8AD9 /* UIViewFromNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewFromNib.swift; sourceTree = "<group>"; };
 		27A737632891405200FD8AD9 /* CollectionViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewHelper.swift; sourceTree = "<group>"; };
 		27A737652891407200FD8AD9 /* TableViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHelper.swift; sourceTree = "<group>"; };
+		27A737672891431000FD8AD9 /* OpportunityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpportunityView.swift; sourceTree = "<group>"; };
+		27A737682891431000FD8AD9 /* OpportunityView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OpportunityView.xib; sourceTree = "<group>"; };
+		27A7376B2891435C00FD8AD9 /* UIImageViewDesignable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewDesignable.swift; sourceTree = "<group>"; };
+		27A7376C2891435C00FD8AD9 /* UIViewDesignable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewDesignable.swift; sourceTree = "<group>"; };
+		27A7376D2891435C00FD8AD9 /* UIButtonDesignable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonDesignable.swift; sourceTree = "<group>"; };
 		27C9AE23288D38E900FA584A /* GoodLifeApplocation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodLifeApplocation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27C9AE26288D38E900FA584A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27C9AE28288D38E900FA584A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -151,23 +156,18 @@
 		27C9AE6E288D445E00FA584A /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReusableView.swift; path = "../../../Rakwa-ios/Rakwa/Protocols/ReusableView.swift"; sourceTree = "<group>"; };
 		27C9AE76288D470600FA584A /* OnBoardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingVC.swift; sourceTree = "<group>"; };
 		27C9AE77288D470600FA584A /* OnBoardingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingVC.xib; sourceTree = "<group>"; };
-		27C9AE7B288D4B4400FA584A /* UIButtonDesignable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIButtonDesignable.swift; path = ../../../../DigitalSapphire/DigitalSapphire/Helper/UIButtonDesignable.swift; sourceTree = "<group>"; };
 		27C9AE7D288D4C1E00FA584A /* OnBoardingFrame2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingFrame2.swift; sourceTree = "<group>"; };
 		27C9AE7E288D4C1E00FA584A /* OnBoardingFrame2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingFrame2.xib; sourceTree = "<group>"; };
 		27C9AE81288D4F0600FA584A /* OnBoardingFrame3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingFrame3.swift; sourceTree = "<group>"; };
 		27C9AE82288D4F0600FA584A /* OnBoardingFrame3.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingFrame3.xib; sourceTree = "<group>"; };
-		27C9AE85288D50A800FA584A /* UIViewDesignable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewDesignable.swift; path = ../../../../DigitalSapphire/DigitalSapphire/Helper/UIViewDesignable.swift; sourceTree = "<group>"; };
 		27C9AE87288D51FD00FA584A /* OnBoardingFrame4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingFrame4.swift; sourceTree = "<group>"; };
 		27C9AE88288D51FD00FA584A /* OnBoardingFrame4.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingFrame4.xib; sourceTree = "<group>"; };
 		27C9AE8D288D54AA00FA584A /* OnBoardingFrame5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingFrame5.swift; sourceTree = "<group>"; };
 		27C9AE8E288D54AA00FA584A /* OnBoardingFrame5.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingFrame5.xib; sourceTree = "<group>"; };
-		27C9AE97288D899E00FA584A /* OpportunityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OpportunityView.swift; path = "../../../Rakwa-ios/Rakwa/Components/OpportunityView.swift"; sourceTree = "<group>"; };
-		27C9AE98288D899E00FA584A /* OpportunityView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OpportunityView.xib; path = "../Rakwa-ios/Rakwa/Components/OpportunityView.xib"; sourceTree = SOURCE_ROOT; };
 		27C9AE9C288D8BEC00FA584A /* OpportunityViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpportunityViewVC.swift; sourceTree = "<group>"; };
 		27C9AE9D288D8BEC00FA584A /* OpportunityViewVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpportunityViewVC.xib; sourceTree = "<group>"; };
 		27C9AEA0288D971700FA584A /* VolunteerOpportunityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerOpportunityVC.swift; sourceTree = "<group>"; };
 		27C9AEA1288D971700FA584A /* VolunteerOpportunityVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VolunteerOpportunityVC.xib; sourceTree = "<group>"; };
-		27C9AEA4288DA1A600FA584A /* UIImageViewDesignable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIImageViewDesignable.swift; path = ../../../../DigitalSapphire/DigitalSapphire/Helper/UIImageViewDesignable.swift; sourceTree = "<group>"; };
 		27C9AEA8288DA8E300FA584A /* TaskCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCollectionViewCell.swift; sourceTree = "<group>"; };
 		27C9AEA9288DA8E300FA584A /* TaskCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskCollectionViewCell.xib; sourceTree = "<group>"; };
 		27C9AEAC288DB44600FA584A /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -289,9 +289,9 @@
 		27C9AE64288D3F2700FA584A /* Designable */ = {
 			isa = PBXGroup;
 			children = (
-				27C9AEA4288DA1A600FA584A /* UIImageViewDesignable.swift */,
-				27C9AE85288D50A800FA584A /* UIViewDesignable.swift */,
-				27C9AE7B288D4B4400FA584A /* UIButtonDesignable.swift */,
+				27A7376D2891435C00FD8AD9 /* UIButtonDesignable.swift */,
+				27A7376B2891435C00FD8AD9 /* UIImageViewDesignable.swift */,
+				27A7376C2891435C00FD8AD9 /* UIViewDesignable.swift */,
 			);
 			path = Designable;
 			sourceTree = "<group>";
@@ -299,10 +299,10 @@
 		27C9AE67288D425100FA584A /* Component */ = {
 			isa = PBXGroup;
 			children = (
-				27A7375D28913F0500FD8AD9 /* ProgressView.xib */,
-				27C9AE97288D899E00FA584A /* OpportunityView.swift */,
-				27C9AE98288D899E00FA584A /* OpportunityView.xib */,
 				27C9AE64288D3F2700FA584A /* Designable */,
+				27A737672891431000FD8AD9 /* OpportunityView.swift */,
+				27A737682891431000FD8AD9 /* OpportunityView.xib */,
+				27A7375D28913F0500FD8AD9 /* ProgressView.xib */,
 				27C9AE68288D427600FA584A /* GoodLifeApplocation.xcworkspace */,
 				2706D21228913D4500546425 /* ProgressBar.swift */,
 				27A7375F28913FFF00FD8AD9 /* ProgressView.swift */,
@@ -504,7 +504,6 @@
 				27C9AE5B288D3CB500FA584A /* Inter-ExtraBold.ttf in Resources */,
 				27C9AE54288D3CB500FA584A /* Inter-BoldItalic.ttf in Resources */,
 				2734CD8528913E3A00E6964F /* GoodLifeApplocation.xcworkspace in Resources */,
-				27C9AE9A288D899E00FA584A /* OpportunityView.xib in Resources */,
 				2767A294289087DF00DF34D1 /* HeaderCollectionReusableView.xib in Resources */,
 				27C9AE3E288D39B300FA584A /* SplashScreen.xib in Resources */,
 				2767A276288F504A00DF34D1 /* DonationFourthFrame.xib in Resources */,
@@ -519,6 +518,7 @@
 				27C9AEB4288EF14900FA584A /* MealMarkerTableViewCell.xib in Resources */,
 				27C9AEAF288DB44600FA584A /* CategoriesCollectionViewCell.xib in Resources */,
 				27C9AE84288D4F0600FA584A /* OnBoardingFrame3.xib in Resources */,
+				27A7376A2891431000FD8AD9 /* OpportunityView.xib in Resources */,
 				27C9AE9F288D8BEC00FA584A /* OpportunityViewVC.xib in Resources */,
 				27C9AE52288D3CA000FA584A /* Inter-Black.ttf in Resources */,
 				2767A2802890478200DF34D1 /* FeaturedFundsCollectionViewCell.xib in Resources */,
@@ -571,15 +571,14 @@
 			files = (
 				27C9AE89288D51FD00FA584A /* OnBoardingFrame4.swift in Sources */,
 				27C9AE3D288D39B300FA584A /* SplashScreen.swift in Sources */,
+				27A737692891431000FD8AD9 /* OpportunityView.swift in Sources */,
 				2767A28728904DF800DF34D1 /* DonationFirstFrame.swift in Sources */,
 				2767A28E28906FA100DF34D1 /* MockData.swift in Sources */,
 				27C9AE2B288D38E900FA584A /* ViewController.swift in Sources */,
-				27C9AE86288D50A800FA584A /* UIViewDesignable.swift in Sources */,
-				27C9AEA5288DA1A600FA584A /* UIImageViewDesignable.swift in Sources */,
 				27C9AEBC288EFBA200FA584A /* DonationFrameTwoVC.swift in Sources */,
-				27C9AE99288D899E00FA584A /* OpportunityView.swift in Sources */,
 				27A737662891407200FD8AD9 /* TableViewHelper.swift in Sources */,
 				27C9AEB3288EF14900FA584A /* MealMarkerTableViewCell.swift in Sources */,
+				27A737702891435C00FD8AD9 /* UIButtonDesignable.swift in Sources */,
 				2767A279288F53C100DF34D1 /* DonationFifthFrameVC.swift in Sources */,
 				2767A2982890A48600DF34D1 /* FilterVC.swift in Sources */,
 				27C9AE8F288D54AA00FA584A /* OnBoardingFrame5.swift in Sources */,
@@ -589,6 +588,7 @@
 				27C9AEAE288DB44600FA584A /* CategoriesCollectionViewCell.swift in Sources */,
 				2767A28F28906FA100DF34D1 /* ListItem.swift in Sources */,
 				27C9AE6F288D445E00FA584A /* NibLoadableView.swift in Sources */,
+				27A7376F2891435C00FD8AD9 /* UIViewDesignable.swift in Sources */,
 				2767A29028906FA100DF34D1 /* ListSection.swift in Sources */,
 				2706D21328913D4500546425 /* ProgressBar.swift in Sources */,
 				27C9AE70288D445E00FA584A /* ReusableView.swift in Sources */,
@@ -597,9 +597,9 @@
 				27C9AE7F288D4C1E00FA584A /* OnBoardingFrame2.swift in Sources */,
 				27C9AEAA288DA8E300FA584A /* TaskCollectionViewCell.swift in Sources */,
 				2767A27F2890478200DF34D1 /* FeaturedFundsCollectionViewCell.swift in Sources */,
-				27C9AE7C288D4B4400FA584A /* UIButtonDesignable.swift in Sources */,
 				27C9AEB9288EF61200FA584A /* DonationVC.swift in Sources */,
 				27C9AE27288D38E900FA584A /* AppDelegate.swift in Sources */,
+				27A7376E2891435C00FD8AD9 /* UIImageViewDesignable.swift in Sources */,
 				27C9AE29288D38E900FA584A /* SceneDelegate.swift in Sources */,
 				2767A275288F504A00DF34D1 /* DonationFourthFrame.swift in Sources */,
 				2767A28328904A3800DF34D1 /* OtherFundsCollectionViewCell.swift in Sources */,
