@@ -1,0 +1,6 @@
+framework module Pods_GoodLifeApplocation {
+  umbrella header "Pods-GoodLifeApplocation-umbrella.h"
+
+  export *
+  module * { export * }
+}
