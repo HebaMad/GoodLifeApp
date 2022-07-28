@@ -25,6 +25,8 @@ class DonationFrameTwoVC: UIViewController {
     }
     
 
+    
+
 }
  extension DonationFrameTwoVC :UITableViewDelegate , UITableViewDataSource{
     
@@ -36,6 +38,9 @@ class DonationFrameTwoVC: UIViewController {
         let cartCell:MealMarkerTableViewCell=tableView.dequeueReusableCell(for: indexPath)
         return cartCell
     }
+     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+         NotificationCenter.default.post(name: .init(rawValue: "GoodLife"), object: 1)
+     }
     
     
 }

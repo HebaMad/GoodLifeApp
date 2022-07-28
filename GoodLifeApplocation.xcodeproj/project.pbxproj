@@ -39,6 +39,10 @@
 		27A7376E2891435C00FD8AD9 /* UIImageViewDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A7376B2891435C00FD8AD9 /* UIImageViewDesignable.swift */; };
 		27A7376F2891435C00FD8AD9 /* UIViewDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A7376C2891435C00FD8AD9 /* UIViewDesignable.swift */; };
 		27A737702891435C00FD8AD9 /* UIButtonDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A7376D2891435C00FD8AD9 /* UIButtonDesignable.swift */; };
+		27A737742891CCE300FD8AD9 /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A737722891CCE300FD8AD9 /* ActivityTableViewCell.swift */; };
+		27A737752891CCE300FD8AD9 /* ActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27A737732891CCE300FD8AD9 /* ActivityTableViewCell.xib */; };
+		27A7377B2891D16100FD8AD9 /* SubscriptionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A737792891D16100FD8AD9 /* SubscriptionCollectionViewCell.swift */; };
+		27A7377C2891D16100FD8AD9 /* SubscriptionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27A7377A2891D16100FD8AD9 /* SubscriptionCollectionViewCell.xib */; };
 		27C9AE27288D38E900FA584A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AE26288D38E900FA584A /* AppDelegate.swift */; };
 		27C9AE29288D38E900FA584A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AE28288D38E900FA584A /* SceneDelegate.swift */; };
 		27C9AE2B288D38E900FA584A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AE2A288D38E900FA584A /* ViewController.swift */; };
@@ -123,6 +127,10 @@
 		27A7376B2891435C00FD8AD9 /* UIImageViewDesignable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewDesignable.swift; sourceTree = "<group>"; };
 		27A7376C2891435C00FD8AD9 /* UIViewDesignable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewDesignable.swift; sourceTree = "<group>"; };
 		27A7376D2891435C00FD8AD9 /* UIButtonDesignable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonDesignable.swift; sourceTree = "<group>"; };
+		27A737722891CCE300FD8AD9 /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
+		27A737732891CCE300FD8AD9 /* ActivityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityTableViewCell.xib; sourceTree = "<group>"; };
+		27A737792891D16100FD8AD9 /* SubscriptionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionCollectionViewCell.swift; sourceTree = "<group>"; };
+		27A7377A2891D16100FD8AD9 /* SubscriptionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubscriptionCollectionViewCell.xib; sourceTree = "<group>"; };
 		27C9AE23288D38E900FA584A /* GoodLifeApplocation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodLifeApplocation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27C9AE26288D38E900FA584A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27C9AE28288D38E900FA584A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -212,6 +220,25 @@
 			path = Filterscreen;
 			sourceTree = "<group>";
 		};
+		27A737712891CAA500FD8AD9 /* MapScreen */ = {
+			isa = PBXGroup;
+			children = (
+				27A737762891CCF500FD8AD9 /* XIB */,
+			);
+			path = MapScreen;
+			sourceTree = "<group>";
+		};
+		27A737762891CCF500FD8AD9 /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+				27A737722891CCE300FD8AD9 /* ActivityTableViewCell.swift */,
+				27A737732891CCE300FD8AD9 /* ActivityTableViewCell.xib */,
+				27A737792891D16100FD8AD9 /* SubscriptionCollectionViewCell.swift */,
+				27A7377A2891D16100FD8AD9 /* SubscriptionCollectionViewCell.xib */,
+			);
+			path = XIB;
+			sourceTree = "<group>";
+		};
 		27C9AE1A288D38E900FA584A = {
 			isa = PBXGroup;
 			children = (
@@ -251,6 +278,7 @@
 		27C9AE3A288D399400FA584A /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				27A737712891CAA500FD8AD9 /* MapScreen */,
 				2767A2952890A45400DF34D1 /* Filterscreen */,
 				27C9AEB0288EF0DF00FA584A /* DonationVC */,
 				27C9AEA6288DA88200FA584A /* HomeVC */,
@@ -442,6 +470,7 @@
 				27C9AE1F288D38E900FA584A /* Sources */,
 				27C9AE20288D38E900FA584A /* Frameworks */,
 				27C9AE21288D38E900FA584A /* Resources */,
+				37062CBD80447D9716DFAD37 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -527,7 +556,9 @@
 				27C9AE30288D38EA00FA584A /* Assets.xcassets in Resources */,
 				27C9AEBA288EF61200FA584A /* DonationVC.xib in Resources */,
 				27C9AE8A288D51FD00FA584A /* OnBoardingFrame4.xib in Resources */,
+				27A737752891CCE300FD8AD9 /* ActivityTableViewCell.xib in Resources */,
 				2767A28828904DF800DF34D1 /* DonationFirstFrame.xib in Resources */,
+				27A7377C2891D16100FD8AD9 /* SubscriptionCollectionViewCell.xib in Resources */,
 				27C9AE2E288D38E900FA584A /* Main.storyboard in Resources */,
 				27C9AE5A288D3CB500FA584A /* Inter-ThinItalic-BETA.ttf in Resources */,
 				27C9AE79288D470600FA584A /* OnBoardingVC.xib in Resources */,
@@ -540,6 +571,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		37062CBD80447D9716DFAD37 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoodLifeApplocation/Pods-GoodLifeApplocation-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoodLifeApplocation/Pods-GoodLifeApplocation-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GoodLifeApplocation/Pods-GoodLifeApplocation-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		BABDA1275312FBF17FBA3297 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -596,6 +644,7 @@
 				2767A271288F3CD600DF34D1 /* DonationThirdFrame.swift in Sources */,
 				27C9AE7F288D4C1E00FA584A /* OnBoardingFrame2.swift in Sources */,
 				27C9AEAA288DA8E300FA584A /* TaskCollectionViewCell.swift in Sources */,
+				27A7377B2891D16100FD8AD9 /* SubscriptionCollectionViewCell.swift in Sources */,
 				2767A27F2890478200DF34D1 /* FeaturedFundsCollectionViewCell.swift in Sources */,
 				27C9AEB9288EF61200FA584A /* DonationVC.swift in Sources */,
 				27C9AE27288D38E900FA584A /* AppDelegate.swift in Sources */,
@@ -607,6 +656,7 @@
 				27A7376028913FFF00FD8AD9 /* ProgressView.swift in Sources */,
 				27C9AE9E288D8BEC00FA584A /* OpportunityViewVC.swift in Sources */,
 				27C9AE78288D470600FA584A /* OnBoardingVC.swift in Sources */,
+				27A737742891CCE300FD8AD9 /* ActivityTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

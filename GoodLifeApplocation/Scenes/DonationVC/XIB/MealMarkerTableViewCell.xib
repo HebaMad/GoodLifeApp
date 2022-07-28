@@ -132,6 +132,11 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="avatarImage" destination="jki-uG-6Jt" id="Erd-fv-t5h"/>
+                <outlet property="descriptionTxt" destination="b5z-pA-DcH" id="hVf-sr-0hx"/>
+                <outlet property="titleTxt" destination="jnk-rP-Yth" id="LiS-kC-5EW"/>
+            </connections>
             <point key="canvasLocation" x="168.11594202898553" y="120.53571428571428"/>
         </tableViewCell>
     </objects>

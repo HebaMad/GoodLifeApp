@@ -18,6 +18,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DonationVC" customModule="GoodLifeApplocation" customModuleProvider="target">
             <connections>
+                <outlet property="containerView" destination="YB2-xK-5RH" id="l4C-3H-tHM"/>
+                <outlet property="stepsIndicator" destination="4Hw-Ct-XvI" id="l54-vy-tBL"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
