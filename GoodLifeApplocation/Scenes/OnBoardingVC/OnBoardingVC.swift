@@ -35,6 +35,8 @@ class OnBoardingVC: UIViewController {
             self.addChild(vc)
             self.contsinerView.addSubview(vc.view)
             self.onBoardingScreen=1
+            vc.didMove(toParent: self)
+            vc.view.frame = contsinerView.bounds
         case 1:
             stepsIndicator.currentStep = 1
 
@@ -42,6 +44,8 @@ class OnBoardingVC: UIViewController {
             self.addChild(vc)
             self.contsinerView.addSubview(vc.view)
             self.onBoardingScreen=2
+            vc.didMove(toParent: self)
+            vc.view.frame = contsinerView.bounds
         case 2:
             stepsIndicator.currentStep = 2
 
@@ -49,14 +53,15 @@ class OnBoardingVC: UIViewController {
             self.addChild(vc)
             self.contsinerView.addSubview(vc.view)
             self.onBoardingScreen=3
+            vc.didMove(toParent: self)
+            vc.view.frame = contsinerView.bounds
         case 3:
             stepsIndicator.currentStep = 3
 
             let vc=OnBoardingFrame5()
             self.addChild(vc)
-//            skipAction.isEnabled = false
-//            skipAction.setTitleColor(.clear, for: .normal)
-            skipAction.setTitleColor(.clear, for: .normal)
+            skipAction.isEnabled = false
+            skipAction.titleLabel?.textColor = .clear
             continueAction.setTitle("Welcome!", for: .normal)
             self.contsinerView.addSubview(vc.view)
             self.onBoardingScreen=4
