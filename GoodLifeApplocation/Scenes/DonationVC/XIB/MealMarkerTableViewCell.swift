@@ -23,4 +23,10 @@ class MealMarkerTableViewCell: UITableViewCell,ReusableView,NibLoadableView {
         // Configure the view for the selected state
     }
     
+    func configureCell(image:UIImage,title:String,description:String){
+        avatarImage.image = image
+        descriptionTxt.text = description
+        titleTxt.text = title
+    }
+    
 }

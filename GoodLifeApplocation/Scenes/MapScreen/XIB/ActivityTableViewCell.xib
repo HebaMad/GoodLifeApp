@@ -69,6 +69,9 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="communityLabel" destination="dU9-OT-Wt3" id="5nk-fQ-z2W"/>
+            </connections>
             <point key="canvasLocation" x="39.130434782608695" y="128.90625"/>
         </tableViewCell>
     </objects>

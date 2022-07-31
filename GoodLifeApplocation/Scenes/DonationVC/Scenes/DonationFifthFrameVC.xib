@@ -51,7 +51,7 @@
                                     <rect key="frame" x="0.0" y="16" width="414" height="224"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qje-V3-jkh">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="109"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="87.5"/>
                                             <string key="text">Donate to Worthy
 Causes</string>
                                             <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="20"/>
@@ -59,13 +59,13 @@ Causes</string>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Over 18,000 Donations" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHB-7v-E0h">
-                                            <rect key="frame" x="0.0" y="129" width="414" height="19"/>
+                                            <rect key="frame" x="0.0" y="107.5" width="414" height="19.5"/>
                                             <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="16"/>
                                             <color key="textColor" red="1" green="0.78039215689999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGY-ML-sEo">
-                                            <rect key="frame" x="0.0" y="168" width="414" height="56"/>
+                                            <rect key="frame" x="0.0" y="147" width="414" height="77"/>
                                             <string key="text">Giving a meal or an expirience to those in need has never been easier. With the use of Blockchains technology, you see where your money goes, and who uses it!</string>
                                             <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="16"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -151,7 +151,7 @@ Causes</string>
                                                                             <rect key="frame" x="88" y="8" width="258" height="109.5"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rsi-bP-9x9">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="258" height="42"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="258" height="43.5"/>
                                                                                     <string key="text">My Feed the People
 Tracker</string>
                                                                                     <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="18"/>
@@ -159,7 +159,7 @@ Tracker</string>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Impacting lives, one meal at a time!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fyf-2O-dgv">
-                                                                                    <rect key="frame" x="0.0" y="42" width="258" height="67.5"/>
+                                                                                    <rect key="frame" x="0.0" y="43.5" width="258" height="66"/>
                                                                                     <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="12"/>
                                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                     <nil key="highlightedColor"/>
@@ -353,13 +353,13 @@ Tracker</string>
                                                                                             <rect key="frame" x="0.0" y="0.0" width="114" height="110"/>
                                                                                             <subviews>
                                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="340" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TnV-bd-zKw">
-                                                                                                    <rect key="frame" x="4" y="10" width="106" height="64.5"/>
+                                                                                                    <rect key="frame" x="4" y="10" width="106" height="64"/>
                                                                                                     <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="20"/>
                                                                                                     <color key="textColor" name="backgroundColor"/>
                                                                                                     <nil key="highlightedColor"/>
                                                                                                 </label>
                                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meals Fed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Xrn-L3-UtV">
-                                                                                                    <rect key="frame" x="4" y="77.5" width="106" height="16.5"/>
+                                                                                                    <rect key="frame" x="4" y="77" width="106" height="17"/>
                                                                                                     <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="14"/>
                                                                                                     <color key="textColor" name="button"/>
                                                                                                     <nil key="highlightedColor"/>
@@ -400,13 +400,13 @@ Tracker</string>
                                                                                             <rect key="frame" x="0.0" y="0.0" width="114" height="110"/>
                                                                                             <subviews>
                                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="210" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="67a-Qr-2PY">
-                                                                                                    <rect key="frame" x="4" y="10" width="106" height="64.5"/>
+                                                                                                    <rect key="frame" x="4" y="10" width="106" height="64"/>
                                                                                                     <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="20"/>
                                                                                                     <color key="textColor" name="backgroundColor"/>
                                                                                                     <nil key="highlightedColor"/>
                                                                                                 </label>
                                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lives Touched" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="noe-ls-sqD">
-                                                                                                    <rect key="frame" x="4" y="77.5" width="106" height="16.5"/>
+                                                                                                    <rect key="frame" x="4" y="77" width="106" height="17"/>
                                                                                                     <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="14"/>
                                                                                                     <color key="textColor" name="button"/>
                                                                                                     <nil key="highlightedColor"/>
@@ -447,13 +447,13 @@ Tracker</string>
                                                                                             <rect key="frame" x="0.0" y="0.0" width="114" height="110"/>
                                                                                             <subviews>
                                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="62$" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t10-oa-NNQ">
-                                                                                                    <rect key="frame" x="4" y="10" width="106" height="64.5"/>
+                                                                                                    <rect key="frame" x="4" y="10" width="106" height="64"/>
                                                                                                     <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="20"/>
                                                                                                     <color key="textColor" name="backgroundColor"/>
                                                                                                     <nil key="highlightedColor"/>
                                                                                                 </label>
                                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Money Spent" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="s6D-yq-ljz">
-                                                                                                    <rect key="frame" x="4" y="77.5" width="106" height="16.5"/>
+                                                                                                    <rect key="frame" x="4" y="77" width="106" height="17"/>
                                                                                                     <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="14"/>
                                                                                                     <color key="textColor" name="button"/>
                                                                                                     <nil key="highlightedColor"/>
@@ -598,19 +598,19 @@ Tracker</string>
             <size key="intrinsicContentSize" width="30" height="29"/>
         </designable>
         <designable name="Ns6-LX-JRq">
-            <size key="intrinsicContentSize" width="47.5" height="30.5"/>
+            <size key="intrinsicContentSize" width="49.5" height="31"/>
         </designable>
         <designable name="aRb-yD-48V">
             <size key="intrinsicContentSize" width="30" height="29"/>
         </designable>
         <designable name="kAe-QY-9MV">
-            <size key="intrinsicContentSize" width="47.5" height="30.5"/>
+            <size key="intrinsicContentSize" width="52" height="31"/>
         </designable>
         <designable name="mG4-hc-vLb">
-            <size key="intrinsicContentSize" width="47.5" height="30.5"/>
+            <size key="intrinsicContentSize" width="51.5" height="31"/>
         </designable>
         <designable name="pMC-vL-dAo">
-            <size key="intrinsicContentSize" width="47.5" height="30.5"/>
+            <size key="intrinsicContentSize" width="52" height="31"/>
         </designable>
         <designable name="wf1-KX-480">
             <size key="intrinsicContentSize" width="40" height="40"/>

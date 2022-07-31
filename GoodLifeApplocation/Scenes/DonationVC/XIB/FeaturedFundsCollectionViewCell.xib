@@ -23,7 +23,7 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QIZ-X8-sWR" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                        <rect key="frame" x="4" y="60" width="262" height="110"/>
+                        <rect key="frame" x="4" y="50" width="262" height="120"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bFN-JR-eQB" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
                                 <rect key="frame" x="101" y="-38" width="60" height="60"/>
@@ -79,16 +79,16 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ejR-KF-MbU">
-                                <rect key="frame" x="8" y="30" width="246" height="64"/>
+                                <rect key="frame" x="8" y="30" width="246" height="74"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Faith Focus" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="48K-nK-U6Q">
-                                        <rect key="frame" x="0.0" y="0.0" width="246" height="46"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="246" height="56"/>
                                         <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="18"/>
                                         <color key="textColor" name="button"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Donate a ticket to a ministry event" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XK8-Bb-VHg">
-                                        <rect key="frame" x="0.0" y="46" width="246" height="18"/>
+                                        <rect key="frame" x="0.0" y="56" width="246" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -133,7 +133,7 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="QIZ-X8-sWR" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="60" id="Cm0-24-htK"/>
+                <constraint firstItem="QIZ-X8-sWR" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="50" id="Cm0-24-htK"/>
                 <constraint firstAttribute="bottom" secondItem="QIZ-X8-sWR" secondAttribute="bottom" constant="20" id="Hob-H0-754"/>
                 <constraint firstItem="QIZ-X8-sWR" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="WBp-bJ-duj"/>
                 <constraint firstAttribute="trailing" secondItem="QIZ-X8-sWR" secondAttribute="trailing" constant="4" id="Yil-FK-H9m"/>

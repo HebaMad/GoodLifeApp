@@ -70,6 +70,7 @@ class OnBoardingVC: UIViewController {
             self.addChild(vc)
             skipAction.isEnabled = false
             skipAction.titleLabel?.textColor = .clear
+//            skipAction.setTitleColor(.clear, for: .normal)
             continueAction.setTitle("Welcome!", for: .normal)
             self.contsinerView.addSubview(vc.view)
             self.onBoardingScreen=4

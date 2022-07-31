@@ -9,6 +9,7 @@ import UIKit
 
 class ActivityTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var communityLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
