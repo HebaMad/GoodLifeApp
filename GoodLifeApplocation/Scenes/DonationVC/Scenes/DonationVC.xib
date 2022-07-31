@@ -64,11 +64,11 @@ Causes</string>
                             <rect key="frame" x="0.0" y="0.0" width="414" height="609.5"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Hw-Ct-XvI" customClass="StepIndicatorView" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                    <rect key="frame" x="28" y="10" width="358" height="80"/>
+                                    <rect key="frame" x="16" y="10" width="382" height="60"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="tintColor" name="progressView"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="80" id="7m1-uA-u0H"/>
+                                        <constraint firstAttribute="height" constant="60" id="7m1-uA-u0H"/>
                                     </constraints>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="currentStep">
@@ -92,10 +92,10 @@ Causes</string>
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YB2-xK-5RH">
-                                    <rect key="frame" x="28" y="98" width="358" height="503.5"/>
+                                    <rect key="frame" x="16" y="78" width="382" height="523.5"/>
                                 </containerView>
                             </subviews>
-                            <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="28" bottom="8" trailing="28"/>
+                            <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="16" bottom="8" trailing="16"/>
                         </stackView>
                     </subviews>
                     <color key="backgroundColor" red="0.97254901959999995" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -39,7 +39,7 @@ class DonationFrameTwoVC: UIViewController {
         return cartCell
     }
      func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-         NotificationCenter.default.post(name: .init(rawValue: "GoodLife"), object: 1)
+         NotificationCenter.default.post(name: .init(rawValue: "GoodLife"), object: 2)
      }
     
     

@@ -121,7 +121,7 @@
     </objects>
     <designables>
         <designable name="SqR-rz-58q">
-            <size key="intrinsicContentSize" width="112.5" height="38"/>
+            <size key="intrinsicContentSize" width="105" height="37.5"/>
         </designable>
     </designables>
     <resources>

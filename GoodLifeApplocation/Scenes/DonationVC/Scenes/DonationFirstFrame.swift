@@ -13,18 +13,13 @@ class DonationFirstFrame: UIViewController {
     @IBOutlet var FundCollectionView: UICollectionView!
     private let sections = MockData.shared.pageData
 
-//    let headerId = "headerId"
-//    let arrImages = ["image1", "image2", "image3", "image4", "image5", "image6"]
-    let categoryHeaderId = "categoryHeaderId"
-//
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        self.navigationItem.title = "My Albums"
         
         FundCollectionView.register(FeaturedFundsCollectionViewCell.self)
         FundCollectionView.register(OtherFundsCollectionViewCell.self)
-        FundCollectionView.register(HeaderCollectionReusableView.self, forSupplementaryViewOfKind: "Header", withReuseIdentifier: HeaderCollectionReusableView.headerIdentifier)
+        FundCollectionView.register(UINib(nibName:"HeaderCollectionReusableView", bundle: nil), forSupplementaryViewOfKind:UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.headerIdentifier)
         FundCollectionView.collectionViewLayout = createCompositionalLayout()
         FundCollectionView.dataSource=self
         FundCollectionView.delegate=self
@@ -34,59 +29,54 @@ class DonationFirstFrame: UIViewController {
 
     //MARK: - Helper Method
     private func createCompositionalLayout() -> UICollectionViewCompositionalLayout {
-
-        return UICollectionViewCompositionalLayout { (sectionNumber, env) -> NSCollectionLayoutSection? in
-
-            switch sectionNumber {
-            
-            case 0: return self.thirdLayoutSection()
-            default: return self.secondLayoutSection()
-
+        UICollectionViewCompositionalLayout { [weak self] sectionIndex, layoutEnviroment in
+            guard let self = self  else { return nil }
+            let section = self.sections[sectionIndex]
+            switch section {
+            case .otherFund:
+                
+                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.33), heightDimension: .absolute(140))
+                
+                let item = NSCollectionLayoutItem(layoutSize: itemSize)
+//                item.contentInsets = .init(top: 0, leading: 0, bottom: 0, trailing: 4)
+                
+                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.99), heightDimension: .estimated(0.5))
+                
+                
+                let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+                group.contentInsets = .init(top: 0, leading: 0, bottom: 0, trailing: 0)
+                let section = NSCollectionLayoutSection(group: group)
+                
+//                section.orthogonalScrollingBehavior = .continuous
+                section.contentInsets = .init(top: 0, leading: 4, bottom: 0, trailing: 4)
+                section.boundarySupplementaryItems = [self.supplementaryHeaderItem()]
+                section.supplementariesFollowContentInsets = false
+                return section
+            case .FeaturedFund:
+                
+                
+                
+                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
+                let item = NSCollectionLayoutItem(layoutSize: itemSize)
+                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.6), heightDimension: .fractionalWidth(0.6))
+                
+                let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+               
+                let section = NSCollectionLayoutSection(group: group)
+                section.orthogonalScrollingBehavior = .continuous
+                section.contentInsets = .init(top: 0, leading: 10, bottom: 0, trailing: 10)
+                section.boundarySupplementaryItems = [self.supplementaryHeaderItem()]
+                section.supplementariesFollowContentInsets = false
+                return section
+                
             }
+            
         }
     }
-    
-
-    private func secondLayoutSection() -> NSCollectionLayoutSection {
-        
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.33), heightDimension: .absolute(140))
-        
-        let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        item.contentInsets = .init(top: 0, leading: 0, bottom: 0, trailing: 15)
-        
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.99), heightDimension: .estimated(0.5))
-        
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-       
-        let section = NSCollectionLayoutSection(group: group)
-        section.contentInsets.leading = 15
-        
-        section.boundarySupplementaryItems = [
-            NSCollectionLayoutBoundarySupplementaryItem(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .estimated(70)), elementKind: categoryHeaderId, alignment: .top)
-        ]
-        
-        return section
-    }
-    
-    private func thirdLayoutSection() -> NSCollectionLayoutSection {
-        
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
-        
-        let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        item.contentInsets.bottom = 8
-        
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.6), heightDimension: .fractionalWidth(0.5))
-        
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-        group.contentInsets = .init(top: 0, leading: 0, bottom: 0, trailing: 2)
-       
-        let section = NSCollectionLayoutSection(group: group)
-        
-        section.orthogonalScrollingBehavior = .continuous
-        
-        return section
-    }
-    
+        private func supplementaryHeaderItem() -> NSCollectionLayoutBoundarySupplementaryItem {
+            .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .estimated(50)), elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
+        }
+ 
 
 }
 
@@ -126,6 +116,17 @@ extension DonationFirstFrame: UICollectionViewDataSource,UICollectionViewDelegat
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    }
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.headerIdentifier, for: indexPath) as! HeaderCollectionReusableView
+        header.setup(sections[indexPath.section].title)
+        return header
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        NotificationCenter.default.post(name: .init(rawValue: "GoodLife"), object: 1)
+
     }
 
 }

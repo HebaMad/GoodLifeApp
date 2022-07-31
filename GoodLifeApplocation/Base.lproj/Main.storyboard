@@ -21,15 +21,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" estimatedRowHeight="100" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="KcB-Jr-7Gm">
-                                <rect key="frame" x="16" y="44" width="382" height="818"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="120" estimatedRowHeight="120" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="KcB-Jr-7Gm">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" red="0.97254901960784312" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="xMe-83-WCR">
-                                    <rect key="frame" x="0.0" y="0.0" width="382" height="54"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Maker NFTs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXj-vS-9mu">
-                                            <rect key="frame" x="0.0" y="0.0" width="382" height="54"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="16"/>
                                             <color key="textColor" name="Color"/>
@@ -46,10 +46,10 @@
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="90" id="VNQ-PM-zbt">
-                                        <rect key="frame" x="0.0" y="98.5" width="382" height="90"/>
+                                        <rect key="frame" x="0.0" y="87.5" width="414" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VNQ-PM-zbt" id="ZNM-ie-8qO">
-                                            <rect key="frame" x="0.0" y="0.0" width="382" height="90"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -59,10 +59,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.97254901960784312" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KcB-Jr-7Gm" secondAttribute="trailing" constant="16" id="MH2-dO-SCA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KcB-Jr-7Gm" secondAttribute="trailing" id="MH2-dO-SCA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KcB-Jr-7Gm" secondAttribute="bottom" id="Yf0-dN-quX"/>
                             <constraint firstItem="KcB-Jr-7Gm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gHa-7a-e50"/>
-                            <constraint firstItem="KcB-Jr-7Gm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="mG9-km-pAz"/>
+                            <constraint firstItem="KcB-Jr-7Gm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mG9-km-pAz"/>
                         </constraints>
                     </view>
                     <connections>

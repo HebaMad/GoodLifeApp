@@ -30,7 +30,7 @@
                     <rect key="frame" x="10" y="44" width="355" height="734"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jiv-0E-bHV">
-                            <rect key="frame" x="0.0" y="8" width="355" height="76.666666666666671"/>
+                            <rect key="frame" x="0.0" y="8" width="355" height="74.666666666666671"/>
                             <string key="text">  Where are you
    Located?</string>
                             <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="32"/>
@@ -38,11 +38,11 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mappin.and.ellipse" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="zbs-Gs-9Kd">
-                            <rect key="frame" x="0.0" y="104.66666666666666" width="355" height="73"/>
+                            <rect key="frame" x="0.0" y="102.66666666666666" width="355" height="73"/>
                             <color key="tintColor" name="ButtonColor"/>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aol-88-2Ab">
-                            <rect key="frame" x="0.0" y="197.66666666666666" width="355" height="43.333333333333343"/>
+                            <rect key="frame" x="0.0" y="195.66666666666666" width="355" height="42"/>
                             <string key="text">Quickly find your current  location
  with one click?</string>
                             <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="18"/>
@@ -50,10 +50,10 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XL6-oV-rGp">
-                            <rect key="frame" x="0.0" y="261" width="355" height="38"/>
+                            <rect key="frame" x="0.0" y="257.66666666666669" width="355" height="40"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eoA-dU-SBg" customClass="UIButtonDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                    <rect key="frame" x="70" y="0.0" width="215" height="38"/>
+                                    <rect key="frame" x="70" y="0.0" width="215" height="40"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" title="FIND CITY">
                                         <fontDescription key="titleFontDescription" name="Inter-SemiBold" family="Inter" pointSize="20"/>
@@ -89,17 +89,18 @@
                                 <constraint firstItem="eoA-dU-SBg" firstAttribute="centerX" secondItem="XL6-oV-rGp" secondAttribute="centerX" id="VWZ-GL-FDb"/>
                                 <constraint firstItem="eoA-dU-SBg" firstAttribute="leading" secondItem="XL6-oV-rGp" secondAttribute="leading" constant="70" id="fgY-CF-dFs"/>
                                 <constraint firstAttribute="trailing" secondItem="eoA-dU-SBg" secondAttribute="trailing" constant="70" id="fya-0i-l50"/>
+                                <constraint firstAttribute="height" constant="40" id="h5b-Pl-q2m"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fjg-IO-Qbn">
-                            <rect key="frame" x="0.0" y="319" width="355" height="20"/>
+                            <rect key="frame" x="0.0" y="317.66666666666669" width="355" height="20"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="20" id="Vw3-6A-4IC"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1dv-5v-wFa">
-                            <rect key="frame" x="0.0" y="359" width="355" height="367"/>
+                            <rect key="frame" x="0.0" y="357.66666666666674" width="355" height="368.33333333333326"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                     </subviews>
@@ -120,7 +121,7 @@
     </objects>
     <designables>
         <designable name="eoA-dU-SBg">
-            <size key="intrinsicContentSize" width="123.33333333333333" height="38"/>
+            <size key="intrinsicContentSize" width="119" height="37.333333333333336"/>
         </designable>
     </designables>
     <resources>

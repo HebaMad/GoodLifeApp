@@ -76,6 +76,12 @@
                                         <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                             <real key="value" value="2"/>
                                         </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
                             </subviews>
@@ -85,6 +91,7 @@
                                 <constraint firstItem="8fy-6g-Hjb" firstAttribute="centerY" secondItem="Pus-R8-zav" secondAttribute="centerY" id="cGA-jh-Dhi"/>
                                 <constraint firstItem="8fy-6g-Hjb" firstAttribute="leading" secondItem="Pus-R8-zav" secondAttribute="leading" constant="60" id="f4z-15-nJI"/>
                                 <constraint firstAttribute="bottom" secondItem="8fy-6g-Hjb" secondAttribute="bottom" constant="12" id="hS2-uy-q9M"/>
+                                <constraint firstAttribute="height" constant="107.5" id="hUK-fT-9hg"/>
                                 <constraint firstAttribute="trailing" secondItem="8fy-6g-Hjb" secondAttribute="trailing" constant="60" id="kvO-nb-30g"/>
                                 <constraint firstItem="8fy-6g-Hjb" firstAttribute="top" secondItem="Pus-R8-zav" secondAttribute="top" constant="12" id="wLe-p1-Jbn"/>
                             </constraints>
@@ -103,7 +110,6 @@
                 <constraint firstItem="GEa-2v-Hoy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="1W6-gM-Whw"/>
                 <constraint firstAttribute="bottom" secondItem="GEa-2v-Hoy" secondAttribute="bottom" constant="34" id="6V5-kJ-ApO"/>
                 <constraint firstItem="GEa-2v-Hoy" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="7FC-z0-W14"/>
-                <constraint firstItem="Pus-R8-zav" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.12" id="XM8-9N-bxU"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="GEa-2v-Hoy" secondAttribute="trailing" constant="10" id="aWP-bH-ENU"/>
             </constraints>
             <point key="canvasLocation" x="139" y="127"/>

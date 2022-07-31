@@ -41,7 +41,7 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WelcomePic" translatesAutoresizingMaskIntoConstraints="NO" id="bvi-Cq-lHv">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WelcomePic" translatesAutoresizingMaskIntoConstraints="NO" id="bvi-Cq-lHv">
                             <rect key="frame" x="0.0" y="133.5" width="394" height="353"/>
                         </imageView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zde-0X-2z7">
@@ -55,6 +55,7 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="BgColor"/>
             <constraints>
+                <constraint firstItem="bvi-Cq-lHv" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.393973" id="4kz-dQ-cp4"/>
                 <constraint firstItem="abS-uH-dKI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="bLy-cx-mBs"/>
                 <constraint firstItem="abS-uH-dKI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="emv-1d-K9S"/>
                 <constraint firstAttribute="bottom" secondItem="abS-uH-dKI" secondAttribute="bottom" constant="34" id="pIw-Of-Kqf"/>

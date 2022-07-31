@@ -30,6 +30,8 @@ class OnBoardingVC: UIViewController {
         switch self.onBoardingScreen{
 
         case 0:
+            self.contsinerView.subviews.first?.removeFromSuperview()
+
             stepsIndicator.currentStep = 0
             let vc=OnBoardingFrame2()
             self.addChild(vc)
@@ -38,6 +40,8 @@ class OnBoardingVC: UIViewController {
             vc.didMove(toParent: self)
             vc.view.frame = contsinerView.bounds
         case 1:
+            self.contsinerView.subviews.first?.removeFromSuperview()
+
             stepsIndicator.currentStep = 1
 
             let vc=OnBoardingFrame3()
@@ -47,6 +51,8 @@ class OnBoardingVC: UIViewController {
             vc.didMove(toParent: self)
             vc.view.frame = contsinerView.bounds
         case 2:
+            self.contsinerView.subviews.first?.removeFromSuperview()
+
             stepsIndicator.currentStep = 2
 
             let vc=OnBoardingFrame4()
@@ -56,6 +62,8 @@ class OnBoardingVC: UIViewController {
             vc.didMove(toParent: self)
             vc.view.frame = contsinerView.bounds
         case 3:
+            self.contsinerView.subviews.first?.removeFromSuperview()
+
             stepsIndicator.currentStep = 3
 
             let vc=OnBoardingFrame5()

@@ -13,9 +13,11 @@ class DonationVC: UIViewController {
         super.viewDidLoad()
 
         self.stepsIndicator.currentStep = 0
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DonationFrameTwoVC") as! DonationFrameTwoVC
+        let vc = DonationFirstFrame()
         self.addChild(vc)
         self.containerView.addSubview(vc.view)
+        vc.didMove(toParent: self)
+        vc.view.frame = self.containerView.bounds
         notificationcenterSetup()
     }
     
@@ -25,34 +27,32 @@ class DonationVC: UIViewController {
             guard let myString = notify.object as? Int else { return }
             switch myString{
             case 1:
+                self.containerView.subviews.first?.removeFromSuperview()
                 self.stepsIndicator.currentStep = 1
-                let vc=DonationThirdFrame()
+                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DonationFrameTwoVC") as! DonationFrameTwoVC
                 self.addChild(vc)
                 self.containerView.addSubview(vc.view)
-//                self.containerView.leadingAnchor.constraint(equalTo: vc.view.leadingAnchor, constant: 0).isActive = true
-//                self.containerView.trailingAnchor.constraint(equalTo: vc.view.trailingAnchor, constant: 0).isActive = true
-//                self.containerView.topAnchor.constraint(equalTo: vc.view.topAnchor, constant: 0).isActive = true
-//                self.containerView.bottomAnchor.constraint(equalTo: vc.view.bottomAnchor, constant: 0).isActive = true
+                vc.didMove(toParent: self)
+                vc.view.frame = self.containerView.bounds
             case 2:
+                self.containerView.subviews.first?.removeFromSuperview()
+
                 self.stepsIndicator.currentStep = 2
+                let vc=DonationThirdFrame()
+
+                self.addChild(vc)
+                self.containerView.addSubview(vc.view)
+                vc.didMove(toParent: self)
+                vc.view.frame = self.containerView.bounds
+
+            case 3:
+                self.containerView.subviews.first?.removeFromSuperview()
+                self.stepsIndicator.currentStep = 3
                 let vc=DonationFourthFrame()
                 self.addChild(vc)
                 self.containerView.addSubview(vc.view)
-//                self.containerView.leadingAnchor.constraint(equalTo: vc.view.leadingAnchor, constant: 0).isActive = true
-//                self.containerView.trailingAnchor.constraint(equalTo: vc.view.trailingAnchor, constant: 0).isActive = true
-//                self.containerView.topAnchor.constraint(equalTo: vc.view.topAnchor, constant: 0).isActive = true
-//                self.containerView.bottomAnchor.constraint(equalTo: vc.view.bottomAnchor, constant: 0).isActive = true
-
-            case 3:
-                self.stepsIndicator.currentStep = 3
-                let vc=DonationFifthFrameVC()
-                self.addChild(vc)
-                self.containerView.addSubview(vc.view)
-//                self.containerView.leadingAnchor.constraint(equalTo: vc.view.leadingAnchor, constant: 0).isActive = true
-//                self.containerView.trailingAnchor.constraint(equalTo: vc.view.trailingAnchor, constant: 0).isActive = true
-//                self.containerView.topAnchor.constraint(equalTo: vc.view.topAnchor, constant: 0).isActive = true
-//                self.containerView.bottomAnchor.constraint(equalTo: vc.view.bottomAnchor, constant: 0).isActive = true
-
+                vc.didMove(toParent: self)
+                vc.view.frame = self.containerView.bounds
             default:
                 print("error click")
             }

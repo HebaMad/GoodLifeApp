@@ -28,6 +28,8 @@ class DonationThirdFrame: UIViewController {
     //MARK: - Private Handler
     
     @IBAction func DonateNowAction(_ sender: Any) {
+        NotificationCenter.default.post(name: .init(rawValue: "GoodLife"), object: 3)
+
     }
     
     
