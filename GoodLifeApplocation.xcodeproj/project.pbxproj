@@ -12,6 +12,14 @@
 		2710A28228971D94009BCE60 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710A28128971D94009BCE60 /* MockData.swift */; };
 		2710A28828971E1F009BCE60 /* ListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710A28728971E1F009BCE60 /* ListSection.swift */; };
 		2710A28A28971E3B009BCE60 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710A28928971E3B009BCE60 /* ListItem.swift */; };
+		2710A28D289A5C3C009BCE60 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710A28B289A5C3C009BCE60 /* TaskCell.swift */; };
+		2710A28E289A5C3C009BCE60 /* TaskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2710A28C289A5C3C009BCE60 /* TaskCell.xib */; };
+		2710A290289A6677009BCE60 /* TaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710A28F289A6677009BCE60 /* TaskVC.swift */; };
+		2710A293289A7150009BCE60 /* GoalAndBenchmarkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710A291289A7150009BCE60 /* GoalAndBenchmarkCell.swift */; };
+		2710A294289A7150009BCE60 /* GoalAndBenchmarkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2710A292289A7150009BCE60 /* GoalAndBenchmarkCell.xib */; };
+		2710A296289ADA9E009BCE60 /* GoalAndBenchmarkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710A295289ADA9E009BCE60 /* GoalAndBenchmarkVC.swift */; };
+		2710A299289AF485009BCE60 /* PastVentures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710A297289AF485009BCE60 /* PastVentures.swift */; };
+		2710A29A289AF485009BCE60 /* PastVentures.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2710A298289AF485009BCE60 /* PastVentures.xib */; };
 		2734CD8528913E3A00E6964F /* GoodLifeApplocation.xcworkspace in Resources */ = {isa = PBXBuildFile; fileRef = 27C9AE68288D427600FA584A /* GoodLifeApplocation.xcworkspace */; };
 		2767A271288F3CD600DF34D1 /* DonationThirdFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2767A26F288F3CD600DF34D1 /* DonationThirdFrame.swift */; };
 		2767A272288F3CD600DF34D1 /* DonationThirdFrame.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2767A270288F3CD600DF34D1 /* DonationThirdFrame.xib */; };
@@ -94,6 +102,11 @@
 		27C9AEB9288EF61200FA584A /* DonationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AEB7288EF61200FA584A /* DonationVC.swift */; };
 		27C9AEBA288EF61200FA584A /* DonationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27C9AEB8288EF61200FA584A /* DonationVC.xib */; };
 		27C9AEBC288EFBA200FA584A /* DonationFrameTwoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AEBB288EFBA200FA584A /* DonationFrameTwoVC.swift */; };
+		27CB204D289AFDE800E63694 /* HaveAnIdeaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CB204B289AFDE800E63694 /* HaveAnIdeaVC.swift */; };
+		27CB204E289AFDE800E63694 /* HaveAnIdeaVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27CB204C289AFDE800E63694 /* HaveAnIdeaVC.xib */; };
+		27CB2051289B006100E63694 /* ReviewExperienceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CB204F289B006100E63694 /* ReviewExperienceVC.swift */; };
+		27CB2052289B006100E63694 /* ReviewExperienceVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27CB2050289B006100E63694 /* ReviewExperienceVC.xib */; };
+		27CB2054289B038800E63694 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CB2053289B038800E63694 /* RatingControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +114,14 @@
 		2710A28128971D94009BCE60 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		2710A28728971E1F009BCE60 /* ListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSection.swift; sourceTree = "<group>"; };
 		2710A28928971E3B009BCE60 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
+		2710A28B289A5C3C009BCE60 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
+		2710A28C289A5C3C009BCE60 /* TaskCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskCell.xib; sourceTree = "<group>"; };
+		2710A28F289A6677009BCE60 /* TaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskVC.swift; sourceTree = "<group>"; };
+		2710A291289A7150009BCE60 /* GoalAndBenchmarkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalAndBenchmarkCell.swift; sourceTree = "<group>"; };
+		2710A292289A7150009BCE60 /* GoalAndBenchmarkCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoalAndBenchmarkCell.xib; sourceTree = "<group>"; };
+		2710A295289ADA9E009BCE60 /* GoalAndBenchmarkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalAndBenchmarkVC.swift; sourceTree = "<group>"; };
+		2710A297289AF485009BCE60 /* PastVentures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastVentures.swift; sourceTree = "<group>"; };
+		2710A298289AF485009BCE60 /* PastVentures.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PastVentures.xib; sourceTree = "<group>"; };
 		2767A26F288F3CD600DF34D1 /* DonationThirdFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationThirdFrame.swift; sourceTree = "<group>"; };
 		2767A270288F3CD600DF34D1 /* DonationThirdFrame.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DonationThirdFrame.xib; sourceTree = "<group>"; };
 		2767A273288F504A00DF34D1 /* DonationFourthFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationFourthFrame.swift; sourceTree = "<group>"; };
@@ -185,6 +206,11 @@
 		27C9AEB7288EF61200FA584A /* DonationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationVC.swift; sourceTree = "<group>"; };
 		27C9AEB8288EF61200FA584A /* DonationVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DonationVC.xib; sourceTree = "<group>"; };
 		27C9AEBB288EFBA200FA584A /* DonationFrameTwoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationFrameTwoVC.swift; sourceTree = "<group>"; };
+		27CB204B289AFDE800E63694 /* HaveAnIdeaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaveAnIdeaVC.swift; sourceTree = "<group>"; };
+		27CB204C289AFDE800E63694 /* HaveAnIdeaVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HaveAnIdeaVC.xib; sourceTree = "<group>"; };
+		27CB204F289B006100E63694 /* ReviewExperienceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewExperienceVC.swift; sourceTree = "<group>"; };
+		27CB2050289B006100E63694 /* ReviewExperienceVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewExperienceVC.xib; sourceTree = "<group>"; };
+		27CB2053289B038800E63694 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		46608627E894627402509900 /* Pods-GoodLifeApplocation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodLifeApplocation.release.xcconfig"; path = "Target Support Files/Pods-GoodLifeApplocation/Pods-GoodLifeApplocation.release.xcconfig"; sourceTree = "<group>"; };
 		D1DB83CD4E289D2153C7D862 /* Pods-GoodLifeApplocation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodLifeApplocation.debug.xcconfig"; path = "Target Support Files/Pods-GoodLifeApplocation/Pods-GoodLifeApplocation.debug.xcconfig"; sourceTree = "<group>"; };
 		F0E5AE3CF2C1C421B86FEF65 /* Pods_GoodLifeApplocation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoodLifeApplocation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -337,6 +363,7 @@
 				27A737612891403000FD8AD9 /* UIViewFromNib.swift */,
 				27A737632891405200FD8AD9 /* CollectionViewHelper.swift */,
 				27A737652891407200FD8AD9 /* TableViewHelper.swift */,
+				27CB2053289B038800E63694 /* RatingControl.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -383,6 +410,12 @@
 				27C9AEA1288D971700FA584A /* VolunteerOpportunityVC.xib */,
 				27C9AE9C288D8BEC00FA584A /* OpportunityViewVC.swift */,
 				27C9AE9D288D8BEC00FA584A /* OpportunityViewVC.xib */,
+				2710A297289AF485009BCE60 /* PastVentures.swift */,
+				2710A298289AF485009BCE60 /* PastVentures.xib */,
+				27CB204B289AFDE800E63694 /* HaveAnIdeaVC.swift */,
+				27CB204C289AFDE800E63694 /* HaveAnIdeaVC.xib */,
+				27CB204F289B006100E63694 /* ReviewExperienceVC.swift */,
+				27CB2050289B006100E63694 /* ReviewExperienceVC.xib */,
 			);
 			path = ViewOppouritunityVC;
 			sourceTree = "<group>";
@@ -391,6 +424,8 @@
 			isa = PBXGroup;
 			children = (
 				27C9AEA7288DA88F00FA584A /* XIB */,
+				2710A28F289A6677009BCE60 /* TaskVC.swift */,
+				2710A295289ADA9E009BCE60 /* GoalAndBenchmarkVC.swift */,
 			);
 			path = HomeVC;
 			sourceTree = "<group>";
@@ -402,6 +437,10 @@
 				27C9AEA9288DA8E300FA584A /* TaskCollectionViewCell.xib */,
 				27C9AEAC288DB44600FA584A /* CategoriesCollectionViewCell.swift */,
 				27C9AEAD288DB44600FA584A /* CategoriesCollectionViewCell.xib */,
+				2710A28B289A5C3C009BCE60 /* TaskCell.swift */,
+				2710A28C289A5C3C009BCE60 /* TaskCell.xib */,
+				2710A291289A7150009BCE60 /* GoalAndBenchmarkCell.swift */,
+				2710A292289A7150009BCE60 /* GoalAndBenchmarkCell.xib */,
 			);
 			path = XIB;
 			sourceTree = "<group>";
@@ -526,9 +565,12 @@
 				27C9AE60288D3CB500FA584A /* Inter-UI-BlackItalic.ttf in Resources */,
 				27C9AEAB288DA8E300FA584A /* TaskCollectionViewCell.xib in Resources */,
 				27C9AE57288D3CB500FA584A /* Inter-LightItalic-BETA.ttf in Resources */,
+				2710A28E289A5C3C009BCE60 /* TaskCell.xib in Resources */,
 				27C9AE63288D3CB500FA584A /* Inter-MediumItalic.ttf in Resources */,
 				27C9AE61288D3CB500FA584A /* Inter-SemiBoldItalic.ttf in Resources */,
+				2710A294289A7150009BCE60 /* GoalAndBenchmarkCell.xib in Resources */,
 				2767A272288F3CD600DF34D1 /* DonationThirdFrame.xib in Resources */,
+				27CB2052289B006100E63694 /* ReviewExperienceVC.xib in Resources */,
 				27C9AE53288D3CA300FA584A /* Inter-Bold.ttf in Resources */,
 				27C9AE5B288D3CB500FA584A /* Inter-ExtraBold.ttf in Resources */,
 				27C9AE54288D3CB500FA584A /* Inter-BoldItalic.ttf in Resources */,
@@ -540,6 +582,7 @@
 				27C9AE5E288D3CB500FA584A /* Inter-ExtraBoldItalic.ttf in Resources */,
 				27C9AE58288D3CB500FA584A /* Inter-Thin-BETA.ttf in Resources */,
 				27A7375E28913F0500FD8AD9 /* ProgressView.xib in Resources */,
+				2710A29A289AF485009BCE60 /* PastVentures.xib in Resources */,
 				27C9AE33288D38EA00FA584A /* LaunchScreen.storyboard in Resources */,
 				2767A28428904A3800DF34D1 /* OtherFundsCollectionViewCell.xib in Resources */,
 				27C9AE5D288D3CB500FA584A /* Inter-ExtraLight-BETA.ttf in Resources */,
@@ -552,6 +595,7 @@
 				27C9AE52288D3CA000FA584A /* Inter-Black.ttf in Resources */,
 				2767A2802890478200DF34D1 /* FeaturedFundsCollectionViewCell.xib in Resources */,
 				2767A27A288F53C100DF34D1 /* DonationFifthFrameVC.xib in Resources */,
+				27CB204E289AFDE800E63694 /* HaveAnIdeaVC.xib in Resources */,
 				27C9AE55288D3CB500FA584A /* Inter-ExtraLightItalic-BETA.ttf in Resources */,
 				27C9AE30288D38EA00FA584A /* Assets.xcassets in Resources */,
 				27C9AEBA288EF61200FA584A /* DonationVC.xib in Resources */,
@@ -619,13 +663,17 @@
 			files = (
 				27C9AE89288D51FD00FA584A /* OnBoardingFrame4.swift in Sources */,
 				27C9AE3D288D39B300FA584A /* SplashScreen.swift in Sources */,
+				2710A299289AF485009BCE60 /* PastVentures.swift in Sources */,
 				27A737692891431000FD8AD9 /* OpportunityView.swift in Sources */,
+				27CB2054289B038800E63694 /* RatingControl.swift in Sources */,
+				2710A290289A6677009BCE60 /* TaskVC.swift in Sources */,
 				2767A28728904DF800DF34D1 /* DonationFirstFrame.swift in Sources */,
 				27C9AE2B288D38E900FA584A /* ViewController.swift in Sources */,
 				27C9AEBC288EFBA200FA584A /* DonationFrameTwoVC.swift in Sources */,
 				27A737662891407200FD8AD9 /* TableViewHelper.swift in Sources */,
 				27C9AEB3288EF14900FA584A /* MealMarkerTableViewCell.swift in Sources */,
 				27A737702891435C00FD8AD9 /* UIButtonDesignable.swift in Sources */,
+				2710A293289A7150009BCE60 /* GoalAndBenchmarkCell.swift in Sources */,
 				2767A279288F53C100DF34D1 /* DonationFifthFrameVC.swift in Sources */,
 				2767A2982890A48600DF34D1 /* FilterVC.swift in Sources */,
 				27C9AE8F288D54AA00FA584A /* OnBoardingFrame5.swift in Sources */,
@@ -638,6 +686,7 @@
 				2706D21328913D4500546425 /* ProgressBar.swift in Sources */,
 				27C9AE70288D445E00FA584A /* ReusableView.swift in Sources */,
 				2710A28A28971E3B009BCE60 /* ListItem.swift in Sources */,
+				2710A28D289A5C3C009BCE60 /* TaskCell.swift in Sources */,
 				27A737622891403000FD8AD9 /* UIViewFromNib.swift in Sources */,
 				2767A271288F3CD600DF34D1 /* DonationThirdFrame.swift in Sources */,
 				27C9AE7F288D4C1E00FA584A /* OnBoardingFrame2.swift in Sources */,
@@ -650,12 +699,15 @@
 				27C9AE27288D38E900FA584A /* AppDelegate.swift in Sources */,
 				27A7376E2891435C00FD8AD9 /* UIImageViewDesignable.swift in Sources */,
 				27C9AE29288D38E900FA584A /* SceneDelegate.swift in Sources */,
+				27CB2051289B006100E63694 /* ReviewExperienceVC.swift in Sources */,
 				2767A275288F504A00DF34D1 /* DonationFourthFrame.swift in Sources */,
 				2767A28328904A3800DF34D1 /* OtherFundsCollectionViewCell.swift in Sources */,
+				2710A296289ADA9E009BCE60 /* GoalAndBenchmarkVC.swift in Sources */,
 				27C9AE83288D4F0600FA584A /* OnBoardingFrame3.swift in Sources */,
 				27A7376028913FFF00FD8AD9 /* ProgressView.swift in Sources */,
 				27C9AE9E288D8BEC00FA584A /* OpportunityViewVC.swift in Sources */,
 				27C9AE78288D470600FA584A /* OnBoardingVC.swift in Sources */,
+				27CB204D289AFDE800E63694 /* HaveAnIdeaVC.swift in Sources */,
 				27A737742891CCE300FD8AD9 /* ActivityTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
