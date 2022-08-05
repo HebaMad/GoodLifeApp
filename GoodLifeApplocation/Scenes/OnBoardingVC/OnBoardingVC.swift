@@ -33,7 +33,7 @@ class OnBoardingVC: UIViewController {
             self.contsinerView.subviews.first?.removeFromSuperview()
 
             stepsIndicator.currentStep = 0
-            let vc=OnBoardingFrame2()
+            let vc=OnBoardingFrame1()
             self.addChild(vc)
             self.contsinerView.addSubview(vc.view)
             self.onBoardingScreen=1
@@ -43,8 +43,7 @@ class OnBoardingVC: UIViewController {
             self.contsinerView.subviews.first?.removeFromSuperview()
 
             stepsIndicator.currentStep = 1
-
-            let vc=OnBoardingFrame3()
+            let vc=VerificationVC()
             self.addChild(vc)
             self.contsinerView.addSubview(vc.view)
             self.onBoardingScreen=2
@@ -55,7 +54,7 @@ class OnBoardingVC: UIViewController {
 
             stepsIndicator.currentStep = 2
 
-            let vc=OnBoardingFrame4()
+            let vc=OnBoardingFrame2()
             self.addChild(vc)
             self.contsinerView.addSubview(vc.view)
             self.onBoardingScreen=3
@@ -66,6 +65,29 @@ class OnBoardingVC: UIViewController {
 
             stepsIndicator.currentStep = 3
 
+            let vc=OnBoardingFrame3()
+            self.addChild(vc)
+            self.contsinerView.addSubview(vc.view)
+            self.onBoardingScreen=4
+            vc.didMove(toParent: self)
+            vc.view.frame = contsinerView.bounds
+            
+        case 4:
+            self.contsinerView.subviews.first?.removeFromSuperview()
+
+            stepsIndicator.currentStep = 4
+
+            let vc=OnBoardingFrame4()
+            self.addChild(vc)
+            self.contsinerView.addSubview(vc.view)
+            self.onBoardingScreen=5
+            vc.didMove(toParent: self)
+            vc.view.frame = contsinerView.bounds
+        case 5:
+            self.contsinerView.subviews.first?.removeFromSuperview()
+
+            stepsIndicator.currentStep = 5
+
             let vc=OnBoardingFrame5()
             self.addChild(vc)
             skipAction.isEnabled = false
@@ -73,7 +95,7 @@ class OnBoardingVC: UIViewController {
 //            skipAction.setTitleColor(.clear, for: .normal)
             continueAction.setTitle("Welcome!", for: .normal)
             self.contsinerView.addSubview(vc.view)
-            self.onBoardingScreen=4
+            self.onBoardingScreen=6
 
         default:
   print("test")

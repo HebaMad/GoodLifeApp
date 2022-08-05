@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Light-BETA.ttf">
+            <string>Inter-LightBETA</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="129" id="KGk-i7-Jjw" customClass="AllCategoriesCell" customModule="GoodLifeApplocation" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="299" height="129"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="299" height="129"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xZV-7T-N7T" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
+                        <rect key="frame" x="4" y="4" width="291" height="121"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="yqW-U1-NUn">
+                                <rect key="frame" x="0.0" y="0.0" width="291" height="121"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goals &amp; Benchmarks" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYI-Uj-cEz">
+                                        <rect key="frame" x="8" y="8" width="275" height="19"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8 Goals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9E3-wF-NRR">
+                                        <rect key="frame" x="8" y="42" width="275" height="16.5"/>
+                                        <fontDescription key="fontDescription" name="Inter-LightBETA" family="Inter" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gzL-3i-i1v" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="73.5" width="275" height="39.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="qpa-jq-44f">
+                                                <rect key="frame" x="0.0" y="0.0" width="275" height="39.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfe-Da-zKw">
+                                                        <rect key="frame" x="8" y="8" width="259" height="12"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="12" id="GmO-lh-Hg3"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Inter-LightBETA" family="Inter" pointSize="13"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="UTn-TA-LJP">
+                                                        <rect key="frame" x="8" y="24" width="259" height="7.5"/>
+                                                        <color key="tintColor" name="ButtonColor"/>
+                                                    </progressView>
+                                                </subviews>
+                                                <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.2274509804" green="0.1019607843" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="qpa-jq-44f" firstAttribute="leading" secondItem="gzL-3i-i1v" secondAttribute="leading" id="MMw-gb-ok1"/>
+                                            <constraint firstAttribute="bottom" secondItem="qpa-jq-44f" secondAttribute="bottom" id="uph-Kf-Cfu"/>
+                                            <constraint firstItem="qpa-jq-44f" firstAttribute="top" secondItem="gzL-3i-i1v" secondAttribute="top" id="yKJ-0s-zDi"/>
+                                            <constraint firstAttribute="trailing" secondItem="qpa-jq-44f" secondAttribute="trailing" id="zrE-Nn-e62"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="button"/>
+                        <constraints>
+                            <constraint firstItem="yqW-U1-NUn" firstAttribute="leading" secondItem="xZV-7T-N7T" secondAttribute="leading" id="2pe-nH-7M6"/>
+                            <constraint firstAttribute="trailing" secondItem="yqW-U1-NUn" secondAttribute="trailing" id="8TW-ia-UX9"/>
+                            <constraint firstItem="9E3-wF-NRR" firstAttribute="height" secondItem="xZV-7T-N7T" secondAttribute="height" multiplier="0.137097" id="9SM-GC-zkW"/>
+                            <constraint firstItem="gzL-3i-i1v" firstAttribute="height" secondItem="xZV-7T-N7T" secondAttribute="height" multiplier="0.326613" id="PO8-02-rRJ"/>
+                            <constraint firstItem="yqW-U1-NUn" firstAttribute="top" secondItem="xZV-7T-N7T" secondAttribute="top" id="eCO-3l-xZa"/>
+                            <constraint firstAttribute="bottom" secondItem="yqW-U1-NUn" secondAttribute="bottom" id="noZ-FN-G5r"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                <color key="value" red="0.63137254899999995" green="0.34901960780000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                <color key="value" red="0.2666666667" green="0.050980392159999999" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="diagonalMode" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="startLocation">
+                                <real key="value" value="0.01"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="endLocation">
+                                <real key="value" value="0.55000000000000004"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="horizontalMode" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="xZV-7T-N7T" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="FkF-F8-MIz"/>
+                    <constraint firstAttribute="trailing" secondItem="xZV-7T-N7T" secondAttribute="trailing" constant="4" id="GPF-PT-ywr"/>
+                    <constraint firstAttribute="bottom" secondItem="xZV-7T-N7T" secondAttribute="bottom" constant="4" id="mTk-9w-byQ"/>
+                    <constraint firstItem="xZV-7T-N7T" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="rOe-ZE-mXH"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <point key="canvasLocation" x="122.46376811594205" y="122.20982142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="ButtonColor">
+            <color red="0.0" green="0.85100001096725464" blue="0.44299998879432678" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="button">
+            <color red="0.2669999897480011" green="0.050999999046325684" blue="0.55699998140335083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

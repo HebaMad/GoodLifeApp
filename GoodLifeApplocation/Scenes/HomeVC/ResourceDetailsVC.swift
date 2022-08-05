@@ -8,22 +8,56 @@
 import UIKit
 
 class ResourceDetailsVC: UIViewController {
+    private var selectedIndex = -1
 
+    @IBOutlet weak var FAQuestionTable: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+    setupTableView()
+}
+
+func setupTableView(){
+    FAQuestionTable.register(ResourceDetailsCell.self)
+    FAQuestionTable.delegate = self
+    FAQuestionTable.dataSource = self
+    FAQuestionTable.rowHeight = 60
+}
+
+}
+extension ResourceDetailsVC:UITableViewDelegate, UITableViewDataSource{
+func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    5
+}
+
+func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell:ResourceDetailsCell = tableView.dequeueReusableCell(for: indexPath)
+    return cell
+}
+
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! ResourceDetailsCell
+        cell.detailsLabel.isHidden = !cell.detailsLabel.isHidden
+        
+        selectedIndex = indexPath.row
+        tableView.beginUpdates()
+        tableView.endUpdates()
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if selectedIndex != -1{
+            let cell = tableView.cellForRow(at: indexPath) as? ResourceDetailsCell
+            if indexPath.row == selectedIndex {
+                
+                cell?.showHideButton.transform = .init(rotationAngle: .pi)
+                return 180
+            }
+            cell?.showHideButton.transform = .init(rotationAngle:0)
+            return 60
+        }
+        return  60
     }
-    */
+    
 
 }

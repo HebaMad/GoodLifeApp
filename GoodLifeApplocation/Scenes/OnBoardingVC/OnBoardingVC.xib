@@ -43,7 +43,7 @@
                                             <color key="value" name="ButtonColor"/>
                                         </userDefinedRuntimeAttribute>
                                         <userDefinedRuntimeAttribute type="number" keyPath="numberOfSteps">
-                                            <integer key="value" value="4"/>
+                                            <integer key="value" value="6"/>
                                         </userDefinedRuntimeAttribute>
                                         <userDefinedRuntimeAttribute type="color" keyPath="lineTintColor">
                                             <color key="value" name="ButtonColor"/>

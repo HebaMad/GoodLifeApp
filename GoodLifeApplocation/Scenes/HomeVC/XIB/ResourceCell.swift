@@ -1,16 +1,14 @@
 //
-//  ResourceDetailsCell.swift
+//  ResourceCell.swift
 //  GoodLifeApplocation
 //
-//  Created by heba isaa on 03/08/2022.
+//  Created by heba isaa on 04/08/2022.
 //
 
 import UIKit
 
-class ResourceDetailsCell: UITableViewCell ,ReusableView, NibLoadableView{
+class ResourceCell: UITableViewCell,ReusableView, NibLoadableView {
 
-    @IBOutlet weak var showHideButton: UIButton!
-    @IBOutlet weak var detailsLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,7 +17,7 @@ class ResourceDetailsCell: UITableViewCell ,ReusableView, NibLoadableView{
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        detailsLabel.isHidden = true
+        // Configure the view for the selected state
     }
     
 }

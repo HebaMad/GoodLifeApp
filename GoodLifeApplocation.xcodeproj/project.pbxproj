@@ -112,6 +112,22 @@
 		27CB205B289B0C6B00E63694 /* ResourceDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CB2059289B0C6B00E63694 /* ResourceDetailsVC.swift */; };
 		27CB205F289B0FDC00E63694 /* ResourceDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CB205D289B0FDC00E63694 /* ResourceDetailsCell.swift */; };
 		27CB2060289B0FDC00E63694 /* ResourceDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27CB205E289B0FDC00E63694 /* ResourceDetailsCell.xib */; };
+		27CB2063289BBA1E00E63694 /* PastGoalsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CB2061289BBA1E00E63694 /* PastGoalsCell.swift */; };
+		27CB2064289BBA1E00E63694 /* PastGoalsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27CB2062289BBA1E00E63694 /* PastGoalsCell.xib */; };
+		27CB2067289BBEA600E63694 /* BenchmarksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CB2065289BBEA600E63694 /* BenchmarksCell.swift */; };
+		27CB2068289BBEA600E63694 /* BenchmarksCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27CB2066289BBEA600E63694 /* BenchmarksCell.xib */; };
+		27CB206A289BC15C00E63694 /* SegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CB2069289BC15C00E63694 /* SegmentControl.swift */; };
+		27CB206D289C1AA000E63694 /* AllCategoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CB206B289C1AA000E63694 /* AllCategoriesCell.swift */; };
+		27CB206E289C1AA000E63694 /* AllCategoriesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27CB206C289C1AA000E63694 /* AllCategoriesCell.xib */; };
+		27CB2071289C1B3F00E63694 /* ResourceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CB206F289C1B3F00E63694 /* ResourceCell.swift */; };
+		27CB2072289C1B3F00E63694 /* ResourceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27CB2070289C1B3F00E63694 /* ResourceCell.xib */; };
+		27CB2075289C1CEF00E63694 /* AllResourceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CB2073289C1CEF00E63694 /* AllResourceVC.swift */; };
+		27CB2076289C1CEF00E63694 /* AllResourceVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27CB2074289C1CEF00E63694 /* AllResourceVC.xib */; };
+		27CB207A289CFC0400E63694 /* OnBoardingFrame1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CB2078289CFC0400E63694 /* OnBoardingFrame1.swift */; };
+		27CB207B289CFC0400E63694 /* OnBoardingFrame1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27CB2079289CFC0400E63694 /* OnBoardingFrame1.xib */; };
+		27CB207D289CFDFE00E63694 /* BottomBorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CB207C289CFDFE00E63694 /* BottomBorderTextField.swift */; };
+		27CB2080289D017D00E63694 /* VerificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CB207E289D017D00E63694 /* VerificationVC.swift */; };
+		27CB2081289D017D00E63694 /* VerificationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27CB207F289D017D00E63694 /* VerificationVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -221,6 +237,22 @@
 		27CB2059289B0C6B00E63694 /* ResourceDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceDetailsVC.swift; sourceTree = "<group>"; };
 		27CB205D289B0FDC00E63694 /* ResourceDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceDetailsCell.swift; sourceTree = "<group>"; };
 		27CB205E289B0FDC00E63694 /* ResourceDetailsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResourceDetailsCell.xib; sourceTree = "<group>"; };
+		27CB2061289BBA1E00E63694 /* PastGoalsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastGoalsCell.swift; sourceTree = "<group>"; };
+		27CB2062289BBA1E00E63694 /* PastGoalsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PastGoalsCell.xib; sourceTree = "<group>"; };
+		27CB2065289BBEA600E63694 /* BenchmarksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenchmarksCell.swift; sourceTree = "<group>"; };
+		27CB2066289BBEA600E63694 /* BenchmarksCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BenchmarksCell.xib; sourceTree = "<group>"; };
+		27CB2069289BC15C00E63694 /* SegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentControl.swift; sourceTree = "<group>"; };
+		27CB206B289C1AA000E63694 /* AllCategoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCategoriesCell.swift; sourceTree = "<group>"; };
+		27CB206C289C1AA000E63694 /* AllCategoriesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllCategoriesCell.xib; sourceTree = "<group>"; };
+		27CB206F289C1B3F00E63694 /* ResourceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceCell.swift; sourceTree = "<group>"; };
+		27CB2070289C1B3F00E63694 /* ResourceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResourceCell.xib; sourceTree = "<group>"; };
+		27CB2073289C1CEF00E63694 /* AllResourceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllResourceVC.swift; sourceTree = "<group>"; };
+		27CB2074289C1CEF00E63694 /* AllResourceVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllResourceVC.xib; sourceTree = "<group>"; };
+		27CB2078289CFC0400E63694 /* OnBoardingFrame1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingFrame1.swift; sourceTree = "<group>"; };
+		27CB2079289CFC0400E63694 /* OnBoardingFrame1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingFrame1.xib; sourceTree = "<group>"; };
+		27CB207C289CFDFE00E63694 /* BottomBorderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBorderTextField.swift; sourceTree = "<group>"; };
+		27CB207E289D017D00E63694 /* VerificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationVC.swift; sourceTree = "<group>"; };
+		27CB207F289D017D00E63694 /* VerificationVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VerificationVC.xib; sourceTree = "<group>"; };
 		46608627E894627402509900 /* Pods-GoodLifeApplocation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodLifeApplocation.release.xcconfig"; path = "Target Support Files/Pods-GoodLifeApplocation/Pods-GoodLifeApplocation.release.xcconfig"; sourceTree = "<group>"; };
 		D1DB83CD4E289D2153C7D862 /* Pods-GoodLifeApplocation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodLifeApplocation.debug.xcconfig"; path = "Target Support Files/Pods-GoodLifeApplocation/Pods-GoodLifeApplocation.debug.xcconfig"; sourceTree = "<group>"; };
 		F0E5AE3CF2C1C421B86FEF65 /* Pods_GoodLifeApplocation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoodLifeApplocation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -356,6 +388,7 @@
 				27A7376D2891435C00FD8AD9 /* UIButtonDesignable.swift */,
 				27A7376B2891435C00FD8AD9 /* UIImageViewDesignable.swift */,
 				27A7376C2891435C00FD8AD9 /* UIViewDesignable.swift */,
+				27CB207C289CFDFE00E63694 /* BottomBorderTextField.swift */,
 			);
 			path = Designable;
 			sourceTree = "<group>";
@@ -374,6 +407,7 @@
 				27A737632891405200FD8AD9 /* CollectionViewHelper.swift */,
 				27A737652891407200FD8AD9 /* TableViewHelper.swift */,
 				27CB2053289B038800E63694 /* RatingControl.swift */,
+				27CB2069289BC15C00E63694 /* SegmentControl.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -400,6 +434,10 @@
 				27C9AE88288D51FD00FA584A /* OnBoardingFrame4.xib */,
 				27C9AE8D288D54AA00FA584A /* OnBoardingFrame5.swift */,
 				27C9AE8E288D54AA00FA584A /* OnBoardingFrame5.xib */,
+				27CB2078289CFC0400E63694 /* OnBoardingFrame1.swift */,
+				27CB2079289CFC0400E63694 /* OnBoardingFrame1.xib */,
+				27CB207E289D017D00E63694 /* VerificationVC.swift */,
+				27CB207F289D017D00E63694 /* VerificationVC.xib */,
 			);
 			path = OnBoardingVC;
 			sourceTree = "<group>";
@@ -433,6 +471,7 @@
 		27C9AEA6288DA88200FA584A /* HomeVC */ = {
 			isa = PBXGroup;
 			children = (
+				27CB2077289C2B8C00E63694 /* Scene */,
 				27C9AEA7288DA88F00FA584A /* XIB */,
 				2710A28F289A6677009BCE60 /* TaskVC.swift */,
 				2710A295289ADA9E009BCE60 /* GoalAndBenchmarkVC.swift */,
@@ -456,6 +495,14 @@
 				27CB2056289B08B900E63694 /* ResourceCollectionViewCell.xib */,
 				27CB205D289B0FDC00E63694 /* ResourceDetailsCell.swift */,
 				27CB205E289B0FDC00E63694 /* ResourceDetailsCell.xib */,
+				27CB2061289BBA1E00E63694 /* PastGoalsCell.swift */,
+				27CB2062289BBA1E00E63694 /* PastGoalsCell.xib */,
+				27CB2065289BBEA600E63694 /* BenchmarksCell.swift */,
+				27CB2066289BBEA600E63694 /* BenchmarksCell.xib */,
+				27CB206B289C1AA000E63694 /* AllCategoriesCell.swift */,
+				27CB206C289C1AA000E63694 /* AllCategoriesCell.xib */,
+				27CB206F289C1B3F00E63694 /* ResourceCell.swift */,
+				27CB2070289C1B3F00E63694 /* ResourceCell.xib */,
 			);
 			path = XIB;
 			sourceTree = "<group>";
@@ -503,6 +550,15 @@
 				2710A28928971E3B009BCE60 /* ListItem.swift */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		27CB2077289C2B8C00E63694 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				27CB2073289C1CEF00E63694 /* AllResourceVC.swift */,
+				27CB2074289C1CEF00E63694 /* AllResourceVC.xib */,
+			);
+			path = Scene;
 			sourceTree = "<group>";
 		};
 		CE579E479D56B849348B0B26 /* Frameworks */ = {
@@ -578,11 +634,13 @@
 				27C9AE59288D3CB500FA584A /* Inter-SemiBold.ttf in Resources */,
 				27C9AE5C288D3CB500FA584A /* Inter-Regular.ttf in Resources */,
 				27C9AE60288D3CB500FA584A /* Inter-UI-BlackItalic.ttf in Resources */,
+				27CB207B289CFC0400E63694 /* OnBoardingFrame1.xib in Resources */,
 				27C9AEAB288DA8E300FA584A /* TaskCollectionViewCell.xib in Resources */,
 				27C9AE57288D3CB500FA584A /* Inter-LightItalic-BETA.ttf in Resources */,
 				2710A28E289A5C3C009BCE60 /* TaskCell.xib in Resources */,
 				27C9AE63288D3CB500FA584A /* Inter-MediumItalic.ttf in Resources */,
 				27C9AE61288D3CB500FA584A /* Inter-SemiBoldItalic.ttf in Resources */,
+				27CB2072289C1B3F00E63694 /* ResourceCell.xib in Resources */,
 				2710A294289A7150009BCE60 /* GoalAndBenchmarkCell.xib in Resources */,
 				2767A272288F3CD600DF34D1 /* DonationThirdFrame.xib in Resources */,
 				27CB2052289B006100E63694 /* ReviewExperienceVC.xib in Resources */,
@@ -597,17 +655,21 @@
 				27C9AE5F288D3CB500FA584A /* Inter-Italic.ttf in Resources */,
 				27C9AE5E288D3CB500FA584A /* Inter-ExtraBoldItalic.ttf in Resources */,
 				27C9AE58288D3CB500FA584A /* Inter-Thin-BETA.ttf in Resources */,
+				27CB2068289BBEA600E63694 /* BenchmarksCell.xib in Resources */,
+				27CB2076289C1CEF00E63694 /* AllResourceVC.xib in Resources */,
 				27A7375E28913F0500FD8AD9 /* ProgressView.xib in Resources */,
 				2710A29A289AF485009BCE60 /* PastVentures.xib in Resources */,
 				27C9AE33288D38EA00FA584A /* LaunchScreen.storyboard in Resources */,
 				2767A28428904A3800DF34D1 /* OtherFundsCollectionViewCell.xib in Resources */,
 				27C9AE5D288D3CB500FA584A /* Inter-ExtraLight-BETA.ttf in Resources */,
 				27C9AE90288D54AA00FA584A /* OnBoardingFrame5.xib in Resources */,
+				27CB2064289BBA1E00E63694 /* PastGoalsCell.xib in Resources */,
 				27C9AEB4288EF14900FA584A /* MealMarkerTableViewCell.xib in Resources */,
 				27CB2060289B0FDC00E63694 /* ResourceDetailsCell.xib in Resources */,
 				27C9AEAF288DB44600FA584A /* CategoriesCollectionViewCell.xib in Resources */,
 				27C9AE84288D4F0600FA584A /* OnBoardingFrame3.xib in Resources */,
 				27A7376A2891431000FD8AD9 /* OpportunityView.xib in Resources */,
+				27CB206E289C1AA000E63694 /* AllCategoriesCell.xib in Resources */,
 				27C9AE9F288D8BEC00FA584A /* OpportunityViewVC.xib in Resources */,
 				27C9AE52288D3CA000FA584A /* Inter-Black.ttf in Resources */,
 				2767A2802890478200DF34D1 /* FeaturedFundsCollectionViewCell.xib in Resources */,
@@ -626,6 +688,7 @@
 				2767A2992890A48600DF34D1 /* FilterVC.xib in Resources */,
 				27C9AE62288D3CB500FA584A /* Inter-Light-BETA.ttf in Resources */,
 				27C9AE56288D3CB500FA584A /* Inter-Medium.ttf in Resources */,
+				27CB2081289D017D00E63694 /* VerificationVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -678,11 +741,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27CB206D289C1AA000E63694 /* AllCategoriesCell.swift in Sources */,
 				27C9AE89288D51FD00FA584A /* OnBoardingFrame4.swift in Sources */,
 				27C9AE3D288D39B300FA584A /* SplashScreen.swift in Sources */,
 				2710A299289AF485009BCE60 /* PastVentures.swift in Sources */,
 				27CB205F289B0FDC00E63694 /* ResourceDetailsCell.swift in Sources */,
 				27A737692891431000FD8AD9 /* OpportunityView.swift in Sources */,
+				27CB207D289CFDFE00E63694 /* BottomBorderTextField.swift in Sources */,
 				27CB2054289B038800E63694 /* RatingControl.swift in Sources */,
 				2710A290289A6677009BCE60 /* TaskVC.swift in Sources */,
 				2767A28728904DF800DF34D1 /* DonationFirstFrame.swift in Sources */,
@@ -690,6 +755,8 @@
 				27C9AE2B288D38E900FA584A /* ViewController.swift in Sources */,
 				27C9AEBC288EFBA200FA584A /* DonationFrameTwoVC.swift in Sources */,
 				27A737662891407200FD8AD9 /* TableViewHelper.swift in Sources */,
+				27CB2075289C1CEF00E63694 /* AllResourceVC.swift in Sources */,
+				27CB2063289BBA1E00E63694 /* PastGoalsCell.swift in Sources */,
 				27C9AEB3288EF14900FA584A /* MealMarkerTableViewCell.swift in Sources */,
 				27A737702891435C00FD8AD9 /* UIButtonDesignable.swift in Sources */,
 				2710A293289A7150009BCE60 /* GoalAndBenchmarkCell.swift in Sources */,
@@ -701,6 +768,7 @@
 				27C9AEA2288D971700FA584A /* VolunteerOpportunityVC.swift in Sources */,
 				27C9AEAE288DB44600FA584A /* CategoriesCollectionViewCell.swift in Sources */,
 				27C9AE6F288D445E00FA584A /* NibLoadableView.swift in Sources */,
+				27CB207A289CFC0400E63694 /* OnBoardingFrame1.swift in Sources */,
 				27A7376F2891435C00FD8AD9 /* UIViewDesignable.swift in Sources */,
 				2706D21328913D4500546425 /* ProgressBar.swift in Sources */,
 				27C9AE70288D445E00FA584A /* ReusableView.swift in Sources */,
@@ -712,6 +780,7 @@
 				27C9AEAA288DA8E300FA584A /* TaskCollectionViewCell.swift in Sources */,
 				27A7377B2891D16100FD8AD9 /* SubscriptionCollectionViewCell.swift in Sources */,
 				2767A27F2890478200DF34D1 /* FeaturedFundsCollectionViewCell.swift in Sources */,
+				27CB206A289BC15C00E63694 /* SegmentControl.swift in Sources */,
 				27C9AEB9288EF61200FA584A /* DonationVC.swift in Sources */,
 				2710A28228971D94009BCE60 /* MockData.swift in Sources */,
 				2710A28828971E1F009BCE60 /* ListSection.swift in Sources */,
@@ -720,14 +789,17 @@
 				27C9AE29288D38E900FA584A /* SceneDelegate.swift in Sources */,
 				27CB2051289B006100E63694 /* ReviewExperienceVC.swift in Sources */,
 				2767A275288F504A00DF34D1 /* DonationFourthFrame.swift in Sources */,
+				27CB2071289C1B3F00E63694 /* ResourceCell.swift in Sources */,
 				2767A28328904A3800DF34D1 /* OtherFundsCollectionViewCell.swift in Sources */,
 				27CB205B289B0C6B00E63694 /* ResourceDetailsVC.swift in Sources */,
+				27CB2080289D017D00E63694 /* VerificationVC.swift in Sources */,
 				2710A296289ADA9E009BCE60 /* GoalAndBenchmarkVC.swift in Sources */,
 				27C9AE83288D4F0600FA584A /* OnBoardingFrame3.swift in Sources */,
 				27A7376028913FFF00FD8AD9 /* ProgressView.swift in Sources */,
 				27C9AE9E288D8BEC00FA584A /* OpportunityViewVC.swift in Sources */,
 				27C9AE78288D470600FA584A /* OnBoardingVC.swift in Sources */,
 				27CB204D289AFDE800E63694 /* HaveAnIdeaVC.swift in Sources */,
+				27CB2067289BBEA600E63694 /* BenchmarksCell.swift in Sources */,
 				27A737742891CCE300FD8AD9 /* ActivityTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

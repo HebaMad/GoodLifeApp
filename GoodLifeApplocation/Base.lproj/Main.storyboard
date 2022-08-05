@@ -216,7 +216,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="100" estimatedRowHeight="100" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="VkX-6y-ZDX">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="110" estimatedRowHeight="110" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="VkX-6y-ZDX">
                                 <rect key="frame" x="12" y="104" width="390" height="758"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="EIc-zC-GgQ">
@@ -226,15 +226,15 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="UwX-65-kTC">
                                             <rect key="frame" x="5" y="5" width="380" height="88"/>
                                             <subviews>
-                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" momentary="YES" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TcN-vd-Q6d">
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TcN-vd-Q6d">
                                                     <rect key="frame" x="0.0" y="8" width="380" height="50"/>
-                                                    <color key="backgroundColor" name="bg7"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <segments>
                                                         <segment title="Active Goals"/>
                                                         <segment title="Past Goals"/>
                                                         <segment title="Benchmarks"/>
                                                     </segments>
-                                                    <color key="tintColor" name="button"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="selectedSegmentTintColor" name="Color"/>
                                                 </segmentedControl>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fqc-2g-1cc">
@@ -290,14 +290,18 @@
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="gHv-al-XX0">
-                                        <rect key="frame" x="0.0" y="142.5" width="390" height="100"/>
+                                        <rect key="frame" x="0.0" y="142.5" width="390" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gHv-al-XX0" id="wHg-gP-KPQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="110"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="DcM-aD-On7" id="XeU-Ca-AXO"/>
+                                    <outlet property="delegate" destination="DcM-aD-On7" id="7IJ-eT-RT3"/>
+                                </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LLQ-TY-IO3">
                                 <rect key="frame" x="0.0" y="44" width="414" height="50"/>
@@ -377,7 +381,8 @@ Benchmarks</string>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="goalTableview" destination="VkX-6y-ZDX" id="RVG-Ny-UU3"/>
+                        <outlet property="GoalSegmentControl" destination="TcN-vd-Q6d" id="lzt-Aa-7sh"/>
+                        <outlet property="goalAndBenchmarkTableView" destination="VkX-6y-ZDX" id="8c2-Md-m0b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PbA-yu-KOa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -392,21 +397,21 @@ Benchmarks</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="100" estimatedRowHeight="100" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="AOP-wM-wR1">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" estimatedRowHeight="100" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="AOP-wM-wR1">
                                 <rect key="frame" x="12" y="104" width="390" height="758"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="FPg-tJ-VaQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="390" height="119"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="149"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="T4b-vI-aT1">
-                                            <rect key="frame" x="5" y="5" width="380" height="109"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="T4b-vI-aT1">
+                                            <rect key="frame" x="5" y="5" width="380" height="139"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d9K-o5-PrZ">
-                                                    <rect key="frame" x="0.0" y="8" width="187" height="101"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d9K-o5-PrZ" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="12" width="182.5" height="115"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="657-ae-DoU">
-                                                            <rect key="frame" x="17" y="30" width="153.5" height="41"/>
+                                                            <rect key="frame" x="14.5" y="37" width="153.5" height="41"/>
                                                             <string key="text">Open Facebook Ads
 Manager</string>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -419,12 +424,23 @@ Manager</string>
                                                         <constraint firstItem="657-ae-DoU" firstAttribute="centerX" secondItem="d9K-o5-PrZ" secondAttribute="centerX" id="T8d-dd-aJx"/>
                                                         <constraint firstItem="657-ae-DoU" firstAttribute="centerY" secondItem="d9K-o5-PrZ" secondAttribute="centerY" id="uEE-1d-zTS"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="12"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SeD-6u-kGM">
-                                                    <rect key="frame" x="193" y="8" width="187" height="101"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SeD-6u-kGM" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
+                                                    <rect key="frame" x="197.5" y="12" width="182.5" height="115"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKJ-Bl-8oS">
-                                                            <rect key="frame" x="25" y="30" width="137" height="41"/>
+                                                            <rect key="frame" x="23" y="37" width="137" height="41"/>
                                                             <string key="text">Free Facebook Ad
 Lessons</string>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -437,9 +453,20 @@ Lessons</string>
                                                         <constraint firstItem="fKJ-Bl-8oS" firstAttribute="centerX" secondItem="SeD-6u-kGM" secondAttribute="centerX" id="c6c-v8-JCU"/>
                                                         <constraint firstItem="fKJ-Bl-8oS" firstAttribute="centerY" secondItem="SeD-6u-kGM" secondAttribute="centerY" id="ibc-LE-8Br"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="12"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
-                                            <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="0.0" bottom="0.0" trailing="0.0"/>
+                                            <directionalEdgeInsets key="directionalLayoutMargins" top="12" leading="0.0" bottom="12" trailing="0.0"/>
                                         </stackView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -452,7 +479,7 @@ Lessons</string>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="4dP-RU-82p">
-                                        <rect key="frame" x="0.0" y="163.5" width="390" height="100"/>
+                                        <rect key="frame" x="0.0" y="193.5" width="390" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4dP-RU-82p" id="zgf-Wb-91k">
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="100"/>
@@ -539,7 +566,7 @@ Manager</string>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="goalTableview" destination="AOP-wM-wR1" id="Ojc-vc-JbA"/>
+                        <outlet property="FAQuestionTable" destination="AOP-wM-wR1" id="peD-It-KRh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ea5-aL-ic3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -558,9 +585,6 @@ Manager</string>
         <image name="plus" catalog="system" width="128" height="113"/>
         <namedColor name="Color">
             <color red="0.22699999809265137" green="0.10199999809265137" blue="0.39599999785423279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="bg7">
-            <color red="1" green="0.99599999189376831" blue="0.94499999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="button">
             <color red="0.2669999897480011" green="0.050999999046325684" blue="0.55699998140335083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
