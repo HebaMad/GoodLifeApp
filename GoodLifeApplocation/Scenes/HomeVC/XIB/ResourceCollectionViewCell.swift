@@ -9,9 +9,12 @@ import UIKit
 
 class ResourceCollectionViewCell: UICollectionViewCell,ReusableView,NibLoadableView  {
 
+    @IBOutlet weak var categoriesTitle: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
+    func setup(_ item: listData) {
+        categoriesTitle.text = item.title
+    }
 }

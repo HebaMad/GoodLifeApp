@@ -32,3 +32,4 @@ struct MockData {
         [FeaturedFund, otherFund]
     }
 }
+

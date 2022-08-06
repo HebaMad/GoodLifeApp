@@ -20,5 +20,7 @@ class TaskCollectionViewCell: UICollectionViewCell,ReusableView,NibLoadableView 
         super.awakeFromNib()
         // Initialization code
     }
-
+    func setup(_ item: listData) {
+        titleTxt.text = item.title
+    }
 }

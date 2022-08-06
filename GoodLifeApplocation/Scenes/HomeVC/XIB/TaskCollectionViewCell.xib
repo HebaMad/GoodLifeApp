@@ -32,16 +32,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="411" height="114"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="MaF-G7-pBf">
-                                        <rect key="frame" x="8" y="8" width="395" height="38"/>
+                                        <rect key="frame" x="8" y="8" width="395" height="39"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video Guided Lesson" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="na9-Cf-p9e">
-                                                <rect key="frame" x="0.0" y="0.0" width="395" height="19.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Video Guided Lesson" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="na9-Cf-p9e">
+                                                <rect key="frame" x="0.0" y="0.0" width="395" height="20.5"/>
                                                 <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For Facebook Ads Manager" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZcP-mw-myU">
-                                                <rect key="frame" x="0.0" y="23.5" width="395" height="14.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="For Facebook Ads Manager" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZcP-mw-myU">
+                                                <rect key="frame" x="0.0" y="24.5" width="395" height="14.5"/>
                                                 <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -49,27 +49,27 @@
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3di-4u-5WO">
-                                        <rect key="frame" x="8" y="61" width="395" height="1"/>
+                                        <rect key="frame" x="8" y="62" width="395" height="1"/>
                                         <color key="backgroundColor" name="Color"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="wL7-Vu-gox"/>
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="115" translatesAutoresizingMaskIntoConstraints="NO" id="lha-Bx-hhH">
-                                        <rect key="frame" x="8" y="77" width="395" height="29"/>
+                                        <rect key="frame" x="8" y="78" width="395" height="28"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Iyf-B4-Tb4">
-                                                <rect key="frame" x="0.0" y="0.0" width="156.5" height="29"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="156.5" height="28"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="XC1-ng-L2m">
-                                                        <rect key="frame" x="0.0" y="0.5" width="20" height="28"/>
+                                                        <rect key="frame" x="0.0" y="0.5" width="20" height="27"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="20" id="xcD-vK-BP2"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:00 AM - 11:25 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4U-G1-qtL">
-                                                        <rect key="frame" x="35" y="0.0" width="121.5" height="29"/>
+                                                        <rect key="frame" x="35" y="0.0" width="121.5" height="28"/>
                                                         <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="12"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -77,18 +77,19 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NNZ-0p-ML0" customClass="UIButtonDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                                <rect key="frame" x="271.5" y="0.0" width="123.5" height="29"/>
-                                                <color key="backgroundColor" name="AccentColor"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Start Now!">
-                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </buttonConfiguration>
+                                                <rect key="frame" x="271.5" y="0.0" width="123.5" height="28"/>
+                                                <color key="backgroundColor" name="button"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Start Now!">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
                                                         <color key="value" name="BgColor"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="12"/>
+                                                        <real key="value" value="8"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="startColor">
                                                         <color key="value" red="0.27058823529411763" green="0.054901960784313725" blue="0.5607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -160,19 +161,19 @@
     </objects>
     <designables>
         <designable name="NNZ-0p-ML0">
-            <size key="intrinsicContentSize" width="92.5" height="31"/>
+            <size key="intrinsicContentSize" width="65" height="28"/>
         </designable>
     </designables>
     <resources>
         <image name="clock.fill" catalog="system" width="128" height="121"/>
-        <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="BgColor">
             <color red="0.59200000762939453" green="0.27799999713897705" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Color">
             <color red="0.22699999809265137" green="0.10199999809265137" blue="0.39599999785423279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="button">
+            <color red="0.2669999897480011" green="0.050999999046325684" blue="0.55699998140335083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

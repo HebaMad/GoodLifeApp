@@ -74,6 +74,9 @@ Manager</string>
                 <constraint firstAttribute="bottom" secondItem="3CH-yU-5VB" secondAttribute="bottom" constant="8" id="gAc-52-dSa"/>
             </constraints>
             <size key="customSize" width="235" height="158"/>
+            <connections>
+                <outlet property="categoriesTitle" destination="w6x-Qo-KqK" id="tPW-a6-kSe"/>
+            </connections>
             <point key="canvasLocation" x="270.28985507246381" y="144.64285714285714"/>
         </collectionViewCell>
     </objects>

@@ -19,8 +19,8 @@
             <rect key="frame" x="0.0" y="0.0" width="277" height="63"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEST" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLb-JW-eI1">
-                    <rect key="frame" x="0.0" y="0.0" width="277" height="63"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEST" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLb-JW-eI1">
+                    <rect key="frame" x="16" y="0.0" width="261" height="63"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="19"/>
                     <color key="textColor" name="Color"/>
@@ -32,7 +32,7 @@
                 <constraint firstItem="aLb-JW-eI1" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="Elq-od-TSO"/>
                 <constraint firstAttribute="trailing" secondItem="aLb-JW-eI1" secondAttribute="trailing" id="Rxg-fv-RRk"/>
                 <constraint firstItem="VXr-Tz-HHm" firstAttribute="bottom" secondItem="aLb-JW-eI1" secondAttribute="bottom" id="asK-Yw-Scc"/>
-                <constraint firstItem="aLb-JW-eI1" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="p6D-HA-aP0"/>
+                <constraint firstItem="aLb-JW-eI1" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" constant="16" id="zOF-ae-KK6"/>
             </constraints>
             <connections>
                 <outlet property="headerTitleLabel" destination="aLb-JW-eI1" id="1bs-ke-pr9"/>

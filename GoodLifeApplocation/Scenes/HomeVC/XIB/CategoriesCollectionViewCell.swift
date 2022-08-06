@@ -19,5 +19,7 @@ class CategoriesCollectionViewCell: UICollectionViewCell,ReusableView,NibLoadabl
         super.awakeFromNib()
         // Initialization code
     }
-
+    func setup(_ item: listData) {
+        CategoryTitle.text = item.title
+    }
 }

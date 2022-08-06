@@ -10,3 +10,7 @@ struct ListItem {
     let title: String
     let image: String
 }
+struct listData{
+    let title: String
+
+}
