@@ -27,19 +27,19 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W71-9g-NUu" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="442" height="89"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="39E-cz-goD">
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="39E-cz-goD">
                             <rect key="frame" x="0.0" y="10" width="442" height="69"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Ll-Yp-kyK">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="69"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="42" height="69"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BbU-q4-kIS">
-                                            <rect key="frame" x="5" y="14.5" width="40" height="40"/>
+                                            <rect key="frame" x="2" y="15.5" width="38" height="38"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="40" id="w9f-dC-nwx"/>
-                                                <constraint firstAttribute="width" constant="40" id="wzo-Jv-fOf"/>
+                                                <constraint firstAttribute="height" constant="38" id="w9f-dC-nwx"/>
+                                                <constraint firstAttribute="width" constant="38" id="wzo-Jv-fOf"/>
                                             </constraints>
                                         </imageView>
                                     </subviews>
@@ -47,23 +47,23 @@
                                     <constraints>
                                         <constraint firstItem="BbU-q4-kIS" firstAttribute="centerX" secondItem="4Ll-Yp-kyK" secondAttribute="centerX" id="gjA-Nk-YJE"/>
                                         <constraint firstItem="BbU-q4-kIS" firstAttribute="centerY" secondItem="4Ll-Yp-kyK" secondAttribute="centerY" id="jPT-Hc-7md"/>
-                                        <constraint firstAttribute="width" constant="50" id="vMv-oo-AwR"/>
+                                        <constraint firstAttribute="width" constant="42" id="vMv-oo-AwR"/>
                                     </constraints>
                                 </view>
                                 <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hcY-V2-ubL">
-                                    <rect key="frame" x="62" y="0.0" width="328" height="69"/>
+                                    <rect key="frame" x="48" y="0.0" width="348" height="69"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Past Ventures" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAG-kM-SFf">
-                                            <rect key="frame" x="0.0" y="6" width="328" height="28.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Past Ventures" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="BAG-kM-SFf">
+                                            <rect key="frame" x="0.0" y="6" width="348" height="28.5"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="add data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nNV-PE-Tzw">
-                                            <rect key="frame" x="0.0" y="34.5" width="328" height="28.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="add data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nNV-PE-Tzw">
+                                            <rect key="frame" x="0.0" y="34.5" width="348" height="28.5"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="13"/>
+                                            <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="11"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -75,12 +75,12 @@
                                     <rect key="frame" x="402" y="0.0" width="40" height="69"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="y9R-xh-0Bx">
-                                            <rect key="frame" x="10" y="24.5" width="20" height="20"/>
+                                            <rect key="frame" x="14" y="28.5" width="12" height="12"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="20" id="40O-mO-dfI"/>
-                                                <constraint firstAttribute="height" constant="20" id="oPW-eM-jTu"/>
+                                                <constraint firstAttribute="width" constant="12" id="40O-mO-dfI"/>
+                                                <constraint firstAttribute="height" constant="12" id="oPW-eM-jTu"/>
                                             </constraints>
                                         </imageView>
                                     </subviews>

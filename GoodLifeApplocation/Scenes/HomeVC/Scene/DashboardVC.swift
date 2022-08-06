@@ -6,18 +6,56 @@
 //
 
 import UIKit
-
+import SideMenu
 class DashboardVC: UIViewController {
 
     @IBOutlet weak var elementCollectionView: UICollectionView!
     private let sections = HomeCategories.shared.AllCategories
+    @IBOutlet weak var menuBtn: UIButton!
+    
+    
+    //MARK: - properties
+    private var menu :SideMenuNavigationController?
 
+    //MARK: - Life cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setUpSideMenu()
         setupCollectionview()
+        menuBtnBinding()
+        
     }
     
-    func setupCollectionview(){
+    override func viewWillAppear(_ animated: Bool) {
+        changeSideMenuSide()
+    }
+    
+    
+    private func changeSideMenuSide(){
+       
+               menu?.leftSide = true
+               SideMenuManager.default.rightMenuNavigationController = nil
+               SideMenuManager.default.leftMenuNavigationController = menu
+        
+    }
+    
+    private func setUpSideMenu() {
+            let vc = OpportunityViewVC()
+            menu = SideMenuNavigationController(rootViewController: vc)
+            menu?.setNavigationBarHidden(true, animated: false)
+            menu?.presentationStyle = .menuSlideIn
+            menu?.presentationStyle.onTopShadowColor = .black
+            menu?.presentationStyle.onTopShadowRadius = 0
+            menu?.presentationStyle.onTopShadowOffset = .zero
+            menu?.presentationStyle.onTopShadowOpacity = 0
+        menu?.presentationStyle.presentingScaleFactor = 0.99
+        menu?.menuWidth = 280
+
+            SideMenuManager.default.addPanGestureToPresent(toView: self.view)
+        }
+    private func setupCollectionview(){
         
         elementCollectionView.register(CategoriesCollectionViewCell.self)
         elementCollectionView.register(TaskCollectionViewCell.self)
@@ -31,6 +69,8 @@ class DashboardVC: UIViewController {
         elementCollectionView.reloadData()
     }
 
+    
+    
     private func createCompositionalLayout() -> UICollectionViewCompositionalLayout {
         UICollectionViewCompositionalLayout { [weak self] sectionIndex, layoutEnviroment in
             guard let self = self  else { return nil }
@@ -98,9 +138,26 @@ class DashboardVC: UIViewController {
         private func supplementaryHeaderItem() -> NSCollectionLayoutBoundarySupplementaryItem {
             .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .estimated(50)), elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
         }
- 
-
 }
+//MARK: - Binding
+
+private extension DashboardVC{
+    
+    func menuBtnBinding(){
+        menuBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
+    }
+    
+}
+
+//MARK: - Action
+private extension DashboardVC{
+    @objc func buttonWasTapped(){
+        present(menu!, animated: true, completion: nil)
+
+    }
+}
+
+
 //MARK: - Delegate & Datasource
 
 extension DashboardVC: UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {

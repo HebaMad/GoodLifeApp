@@ -694,6 +694,7 @@ Night</string>
                     </view>
                     <connections>
                         <outlet property="elementCollectionView" destination="X87-TY-IrI" id="gQb-V5-SGj"/>
+                        <outlet property="menuBtn" destination="0Nl-j8-qOo" id="o2r-7M-Z7v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xkO-qj-a2V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
