@@ -133,6 +133,14 @@
 		27CB2087289D467500E63694 /* DashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CB2086289D467500E63694 /* DashboardVC.swift */; };
 		27CB2089289D48BD00E63694 /* CategoriesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CB2088289D48BD00E63694 /* CategoriesList.swift */; };
 		27CB208B289D4A9300E63694 /* HomeCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CB208A289D4A9300E63694 /* HomeCategories.swift */; };
+		27CB208F289FB1E100E63694 /* PackageDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CB208D289FB1E100E63694 /* PackageDetailsVC.swift */; };
+		27CB2090289FB1E100E63694 /* PackageDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27CB208E289FB1E100E63694 /* PackageDetailsVC.xib */; };
+		27CB2094289FC6CC00E63694 /* GeneralPagerViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CB2092289FC6CC00E63694 /* GeneralPagerViewVC.swift */; };
+		27CB2095289FC6CC00E63694 /* GeneralPagerViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27CB2093289FC6CC00E63694 /* GeneralPagerViewVC.xib */; };
+		27CB2098289FC79700E63694 /* SpecificPagerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CB2096289FC79700E63694 /* SpecificPagerVC.swift */; };
+		27CB2099289FC79700E63694 /* SpecificPagerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27CB2097289FC79700E63694 /* SpecificPagerVC.xib */; };
+		27CB209C289FFE9800E63694 /* GeneralFinicialPagerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CB209A289FFE9800E63694 /* GeneralFinicialPagerVC.swift */; };
+		27CB209D289FFE9800E63694 /* GeneralFinicialPagerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27CB209B289FFE9800E63694 /* GeneralFinicialPagerVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -263,6 +271,14 @@
 		27CB2086289D467500E63694 /* DashboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardVC.swift; sourceTree = "<group>"; };
 		27CB2088289D48BD00E63694 /* CategoriesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesList.swift; sourceTree = "<group>"; };
 		27CB208A289D4A9300E63694 /* HomeCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCategories.swift; sourceTree = "<group>"; };
+		27CB208D289FB1E100E63694 /* PackageDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageDetailsVC.swift; sourceTree = "<group>"; };
+		27CB208E289FB1E100E63694 /* PackageDetailsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PackageDetailsVC.xib; sourceTree = "<group>"; };
+		27CB2092289FC6CC00E63694 /* GeneralPagerViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPagerViewVC.swift; sourceTree = "<group>"; };
+		27CB2093289FC6CC00E63694 /* GeneralPagerViewVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeneralPagerViewVC.xib; sourceTree = "<group>"; };
+		27CB2096289FC79700E63694 /* SpecificPagerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificPagerVC.swift; sourceTree = "<group>"; };
+		27CB2097289FC79700E63694 /* SpecificPagerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpecificPagerVC.xib; sourceTree = "<group>"; };
+		27CB209A289FFE9800E63694 /* GeneralFinicialPagerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralFinicialPagerVC.swift; sourceTree = "<group>"; };
+		27CB209B289FFE9800E63694 /* GeneralFinicialPagerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeneralFinicialPagerVC.xib; sourceTree = "<group>"; };
 		46608627E894627402509900 /* Pods-GoodLifeApplocation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodLifeApplocation.release.xcconfig"; path = "Target Support Files/Pods-GoodLifeApplocation/Pods-GoodLifeApplocation.release.xcconfig"; sourceTree = "<group>"; };
 		D1DB83CD4E289D2153C7D862 /* Pods-GoodLifeApplocation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodLifeApplocation.debug.xcconfig"; path = "Target Support Files/Pods-GoodLifeApplocation/Pods-GoodLifeApplocation.debug.xcconfig"; sourceTree = "<group>"; };
 		F0E5AE3CF2C1C421B86FEF65 /* Pods_GoodLifeApplocation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoodLifeApplocation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -356,6 +372,7 @@
 		27C9AE3A288D399400FA584A /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				27CB208C289FB1B700E63694 /* PackagesDetails */,
 				27A737712891CAA500FD8AD9 /* MapScreen */,
 				2767A2952890A45400DF34D1 /* Filterscreen */,
 				27C9AEB0288EF0DF00FA584A /* DonationVC */,
@@ -576,6 +593,29 @@
 			path = Scene;
 			sourceTree = "<group>";
 		};
+		27CB208C289FB1B700E63694 /* PackagesDetails */ = {
+			isa = PBXGroup;
+			children = (
+				27CB2091289FC6AD00E63694 /* Scenes */,
+			);
+			path = PackagesDetails;
+			sourceTree = "<group>";
+		};
+		27CB2091289FC6AD00E63694 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				27CB208D289FB1E100E63694 /* PackageDetailsVC.swift */,
+				27CB208E289FB1E100E63694 /* PackageDetailsVC.xib */,
+				27CB2092289FC6CC00E63694 /* GeneralPagerViewVC.swift */,
+				27CB2093289FC6CC00E63694 /* GeneralPagerViewVC.xib */,
+				27CB2096289FC79700E63694 /* SpecificPagerVC.swift */,
+				27CB2097289FC79700E63694 /* SpecificPagerVC.xib */,
+				27CB209A289FFE9800E63694 /* GeneralFinicialPagerVC.swift */,
+				27CB209B289FFE9800E63694 /* GeneralFinicialPagerVC.xib */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
 		CE579E479D56B849348B0B26 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -664,6 +704,7 @@
 				27C9AE5B288D3CB500FA584A /* Inter-ExtraBold.ttf in Resources */,
 				27C9AE54288D3CB500FA584A /* Inter-BoldItalic.ttf in Resources */,
 				2734CD8528913E3A00E6964F /* GoodLifeApplocation.xcworkspace in Resources */,
+				27CB2090289FB1E100E63694 /* PackageDetailsVC.xib in Resources */,
 				2767A294289087DF00DF34D1 /* HeaderCollectionReusableView.xib in Resources */,
 				27C9AE3E288D39B300FA584A /* SplashScreen.xib in Resources */,
 				2767A276288F504A00DF34D1 /* DonationFourthFrame.xib in Resources */,
@@ -693,10 +734,13 @@
 				27CB204E289AFDE800E63694 /* HaveAnIdeaVC.xib in Resources */,
 				27C9AE55288D3CB500FA584A /* Inter-ExtraLightItalic-BETA.ttf in Resources */,
 				27C9AE30288D38EA00FA584A /* Assets.xcassets in Resources */,
+				27CB209D289FFE9800E63694 /* GeneralFinicialPagerVC.xib in Resources */,
+				27CB2099289FC79700E63694 /* SpecificPagerVC.xib in Resources */,
 				27C9AEBA288EF61200FA584A /* DonationVC.xib in Resources */,
 				27C9AE8A288D51FD00FA584A /* OnBoardingFrame4.xib in Resources */,
 				27A737752891CCE300FD8AD9 /* ActivityTableViewCell.xib in Resources */,
 				2767A28828904DF800DF34D1 /* DonationFirstFrame.xib in Resources */,
+				27CB2095289FC6CC00E63694 /* GeneralPagerViewVC.xib in Resources */,
 				27A7377C2891D16100FD8AD9 /* SubscriptionCollectionViewCell.xib in Resources */,
 				27C9AE2E288D38E900FA584A /* Main.storyboard in Resources */,
 				27C9AE5A288D3CB500FA584A /* Inter-ThinItalic-BETA.ttf in Resources */,
@@ -761,6 +805,7 @@
 				27C9AE89288D51FD00FA584A /* OnBoardingFrame4.swift in Sources */,
 				27C9AE3D288D39B300FA584A /* SplashScreen.swift in Sources */,
 				2710A299289AF485009BCE60 /* PastVentures.swift in Sources */,
+				27CB209C289FFE9800E63694 /* GeneralFinicialPagerVC.swift in Sources */,
 				27CB205F289B0FDC00E63694 /* ResourceDetailsCell.swift in Sources */,
 				27A737692891431000FD8AD9 /* OpportunityView.swift in Sources */,
 				27CB207D289CFDFE00E63694 /* BottomBorderTextField.swift in Sources */,
@@ -769,6 +814,7 @@
 				2767A28728904DF800DF34D1 /* DonationFirstFrame.swift in Sources */,
 				27CB2057289B08B900E63694 /* ResourceCollectionViewCell.swift in Sources */,
 				27C9AE2B288D38E900FA584A /* ViewController.swift in Sources */,
+				27CB2098289FC79700E63694 /* SpecificPagerVC.swift in Sources */,
 				27C9AEBC288EFBA200FA584A /* DonationFrameTwoVC.swift in Sources */,
 				27A737662891407200FD8AD9 /* TableViewHelper.swift in Sources */,
 				27CB2075289C1CEF00E63694 /* AllResourceVC.swift in Sources */,
@@ -804,6 +850,7 @@
 				2710A28228971D94009BCE60 /* MockData.swift in Sources */,
 				2710A28828971E1F009BCE60 /* ListSection.swift in Sources */,
 				27C9AE27288D38E900FA584A /* AppDelegate.swift in Sources */,
+				27CB2094289FC6CC00E63694 /* GeneralPagerViewVC.swift in Sources */,
 				27A7376E2891435C00FD8AD9 /* UIImageViewDesignable.swift in Sources */,
 				27C9AE29288D38E900FA584A /* SceneDelegate.swift in Sources */,
 				27CB2051289B006100E63694 /* ReviewExperienceVC.swift in Sources */,
@@ -812,6 +859,7 @@
 				2767A28328904A3800DF34D1 /* OtherFundsCollectionViewCell.swift in Sources */,
 				27CB205B289B0C6B00E63694 /* ResourceDetailsVC.swift in Sources */,
 				27CB2080289D017D00E63694 /* VerificationVC.swift in Sources */,
+				27CB208F289FB1E100E63694 /* PackageDetailsVC.swift in Sources */,
 				2710A296289ADA9E009BCE60 /* GoalAndBenchmarkVC.swift in Sources */,
 				27C9AE83288D4F0600FA584A /* OnBoardingFrame3.swift in Sources */,
 				27A7376028913FFF00FD8AD9 /* ProgressView.swift in Sources */,

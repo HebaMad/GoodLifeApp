@@ -1,20 +1,24 @@
 PODS:
   - IQKeyboardManagerSwift (6.3.0)
   - SideMenu (6.5.0)
+  - XLPagerTabStrip (9.0.0)
 
 DEPENDENCIES:
   - IQKeyboardManagerSwift (= 6.3.0)
   - SideMenu
+  - XLPagerTabStrip (~> 9.0)
 
 SPEC REPOS:
   trunk:
     - IQKeyboardManagerSwift
     - SideMenu
+    - XLPagerTabStrip
 
 SPEC CHECKSUMS:
   IQKeyboardManagerSwift: a8228c257614af98743b4cd8584637025f36358f
   SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
+  XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: 630376d416f874efa5e74ecf753ebe4de1862bba
+PODFILE CHECKSUM: 665479c916aede451dd0340af0acc928a5069e68
 
 COCOAPODS: 1.11.2
