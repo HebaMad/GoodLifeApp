@@ -39,6 +39,7 @@ public enum ButtonBarItemSpec<CellType: UICollectionViewCell> {
     }
 }
 
+@available(iOS 11.0, *)
 public struct ButtonBarPagerTabStripSettings {
 
     public struct Style {
@@ -48,11 +49,11 @@ public struct ButtonBarPagerTabStripSettings {
         public var buttonBarLeftContentInset: CGFloat?
         public var buttonBarRightContentInset: CGFloat?
 
-        public var selectedBarBackgroundColor = UIColor.black
+        public var selectedBarBackgroundColor = UIColor.init(named: "BgColor")
         public var selectedBarHeight: CGFloat = 5
         public var selectedBarVerticalAlignment: SelectedBarVerticalAlignment = .bottom
 
-        public var buttonBarItemBackgroundColor: UIColor?
+        public var buttonBarItemBackgroundColor = UIColor.init(named: "hex")
         public var buttonBarItemFont = UIFont.systemFont(ofSize: 18)
         public var buttonBarItemLeftRightMargin: CGFloat = 8
         public var buttonBarItemTitleColor: UIColor?
@@ -64,6 +65,7 @@ public struct ButtonBarPagerTabStripSettings {
     public var style = Style()
 }
 
+@available(iOS 11.0, *)
 open class ButtonBarPagerTabStripViewController: PagerTabStripViewController, PagerTabStripDataSource, PagerTabStripIsProgressiveDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
 
     public var settings = ButtonBarPagerTabStripSettings()
@@ -115,8 +117,8 @@ open class ButtonBarPagerTabStripViewController: PagerTabStripViewController, Pa
                 flowLayout.scrollDirection = .horizontal
                 let buttonBarHeight = settings.style.buttonBarHeight ?? 44
                 let buttonBar = ButtonBarView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: buttonBarHeight), collectionViewLayout: flowLayout)
-                buttonBar.backgroundColor = .orange
-                buttonBar.selectedBar.backgroundColor = .black
+                buttonBar.backgroundColor = .clear
+                buttonBar.selectedBar.backgroundColor = UIColor(named: "button")
                 buttonBar.autoresizingMask = .flexibleWidth
                 var newContainerViewFrame = containerView.frame
                 newContainerViewFrame.origin.y = buttonBarHeight

@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -19,6 +18,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PackageDetailsVC" customModule="GoodLifeApplocation" customModuleProvider="target">
             <connections>
+                <outlet property="containerHeight" destination="Pke-wa-X64" id="gEN-fh-84I"/>
+                <outlet property="containerView" destination="hyV-Qc-AvS" id="ebv-rO-mbH"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -28,10 +29,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="financial" translatesAutoresizingMaskIntoConstraints="NO" id="icZ-ea-yHQ">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="900"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="900" id="LQy-eX-ikd"/>
-                    </constraints>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="782"/>
                 </imageView>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="31P-SQ-HIk">
                     <rect key="frame" x="0.0" y="44" width="414" height="852"/>
@@ -43,7 +41,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="380"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wrp-xd-f1u">
-                                            <rect key="frame" x="16" y="0.0" width="382" height="64"/>
+                                            <rect key="frame" x="16" y="0.0" width="382" height="64.5"/>
                                             <string key="text">Community
 Movie Night</string>
                                             <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="24"/>
@@ -51,7 +49,7 @@ Movie Night</string>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Community   Social   Neighbor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVk-rU-GaA">
-                                            <rect key="frame" x="16" y="76" width="382" height="17"/>
+                                            <rect key="frame" x="16" y="76.5" width="382" height="16.5"/>
                                             <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="14"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -140,10 +138,29 @@ Movie Night</string>
                                 </stackView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VR1-A9-luB" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="380" width="414" height="471"/>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <subviews>
+                                        <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hyV-Qc-AvS">
+                                            <rect key="frame" x="12" y="4" width="390" height="467"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </containerView>
+                                    </subviews>
+                                    <color key="backgroundColor" name="bg3"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="471" id="Pke-wa-X64"/>
+                                        <constraint firstAttribute="trailing" secondItem="hyV-Qc-AvS" secondAttribute="trailing" constant="12" id="Ttb-Az-Rqh"/>
+                                        <constraint firstItem="hyV-Qc-AvS" firstAttribute="leading" secondItem="VR1-A9-luB" secondAttribute="leading" constant="12" id="d7T-wb-cLg"/>
+                                        <constraint firstItem="hyV-Qc-AvS" firstAttribute="top" secondItem="VR1-A9-luB" secondAttribute="top" constant="4" id="nmJ-1T-zYL"/>
+                                        <constraint firstAttribute="bottom" secondItem="hyV-Qc-AvS" secondAttribute="bottom" id="tMy-ys-nfy"/>
+                                    </constraints>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                             <real key="value" value="12"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
@@ -162,7 +179,7 @@ Movie Night</string>
                 </scrollView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" name="backgroundColor"/>
+            <color key="backgroundColor" name="bg3"/>
             <constraints>
                 <constraint firstItem="icZ-ea-yHQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="05h-Xa-yeh"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="31P-SQ-HIk" secondAttribute="trailing" id="9tg-h1-RE0"/>
@@ -171,6 +188,7 @@ Movie Night</string>
                 <constraint firstAttribute="bottom" secondItem="31P-SQ-HIk" secondAttribute="bottom" id="INk-pF-1GS"/>
                 <constraint firstItem="icZ-ea-yHQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="dvL-Hg-zIz"/>
                 <constraint firstItem="icZ-ea-yHQ" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="g5d-i4-ezE"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="icZ-ea-yHQ" secondAttribute="bottom" constant="80" id="m4n-Kn-y5N"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="107.8125"/>
         </view>
@@ -187,11 +205,11 @@ Movie Night</string>
         <namedColor name="backgroundColor">
             <color red="0.63099998235702515" green="0.34900000691413879" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="bg3">
+            <color red="0.97299998998641968" green="0.9649999737739563" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="review star">
             <color red="1" green="0.77999997138977051" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

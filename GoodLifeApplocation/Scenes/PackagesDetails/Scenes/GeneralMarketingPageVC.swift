@@ -1,5 +1,5 @@
 //
-//  GeneralFinicialPagerVC.swift
+//  GeneralMarketingPageVC.swift
 //  GoodLifeApplocation
 //
 //  Created by heba isaa on 07/08/2022.
@@ -7,16 +7,16 @@
 
 import UIKit
 import XLPagerTabStrip
-class GeneralFinicialPagerVC: UIViewController, IndicatorInfoProvider {
+class GeneralMarketingPageVC: UIViewController, IndicatorInfoProvider {
     
     //MARK: - Properties
     
-    var itemInfo: IndicatorInfo = "Finicial"
-
+    var itemInfo: IndicatorInfo = "Marketing"
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Do any additional setup after loading the view.
     }
 
     //MARK: - configuration
@@ -24,5 +24,4 @@ class GeneralFinicialPagerVC: UIViewController, IndicatorInfoProvider {
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return itemInfo
     }
-
 }

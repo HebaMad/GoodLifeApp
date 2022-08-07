@@ -6,24 +6,58 @@
 //
 
 import UIKit
+import XLPagerTabStrip
 
-class GeneralPagerViewVC: UIViewController {
+class GeneralPagerViewVC: ButtonBarPagerTabStripViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupPagerTab()
+        
     }
+    
+//MARK: - SetupPagerTab
+    
+    private func setupPagerTab(){
+        settings.style.buttonBarBackgroundColor = .blue
+        settings.style.buttonBarItemBackgroundColor = .clear
+        settings.style.selectedBarBackgroundColor = .white
+        settings.style.buttonBarItemFont = .boldSystemFont(ofSize: 14)
+        settings.style.selectedBarHeight = 2.0
+        settings.style.buttonBarMinimumLineSpacing = 0
+        settings.style.buttonBarItemTitleColor = .white
+        settings.style.buttonBarItemsShouldFillAvailableWidth = true
+        settings.style.buttonBarLeftContentInset = 0
+        settings.style.buttonBarRightContentInset = 0
+    
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        changeCurrentIndexProgressive = { [weak self] (oldCell: ButtonBarViewCell?, newCell: ButtonBarViewCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in
+            guard changeCurrentIndex == true else { return }
+            oldCell?.label.textColor = UIColor.init(named: "hex")
+            newCell?.label.textColor = UIColor.init(named: "BgColor")
+        }
     }
-    */
+    
+    
+    
+    
+    override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
+   
+        
+        let first = GeneralFinicialPagerVC()
+        first.itemInfo = "Finicial"
+        
+        
+        let second = GeneralMarketingPageVC()
+    second.itemInfo = "Marketing"
+        
+        let third = GeneralLiturgicalPageVC()
+           
+     third.itemInfo = "Liturgical"
+
+       
+         return [first, second,third]
+     }
 
 }

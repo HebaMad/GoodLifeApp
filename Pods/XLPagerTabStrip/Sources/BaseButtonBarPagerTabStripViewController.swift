@@ -24,6 +24,7 @@
 
 import Foundation
 
+@available(iOS 11.0, *)
 open class BaseButtonBarPagerTabStripViewController<ButtonBarCellType: UICollectionViewCell>: PagerTabStripViewController, PagerTabStripDataSource, PagerTabStripIsProgressiveDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
 
     public var settings = ButtonBarPagerTabStripSettings()
@@ -309,6 +310,7 @@ open class BaseButtonBarPagerTabStripViewController<ButtonBarCellType: UICollect
     private var shouldUpdateButtonBarView = true
 }
 
+@available(iOS 11.0, *)
 open class ExampleBaseButtonBarPagerTabStripViewController: BaseButtonBarPagerTabStripViewController<ButtonBarViewCell> {
 
     public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {

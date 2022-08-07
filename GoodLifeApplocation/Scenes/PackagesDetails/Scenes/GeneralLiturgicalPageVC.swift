@@ -1,5 +1,5 @@
 //
-//  GeneralFinicialPagerVC.swift
+//  GeneralLiturgicalPageVC.swift
 //  GoodLifeApplocation
 //
 //  Created by heba isaa on 07/08/2022.
@@ -7,20 +7,17 @@
 
 import UIKit
 import XLPagerTabStrip
-class GeneralFinicialPagerVC: UIViewController, IndicatorInfoProvider {
-    
-    //MARK: - Properties
-    
-    var itemInfo: IndicatorInfo = "Finicial"
+class GeneralLiturgicalPageVC: UIViewController, IndicatorInfoProvider{
+    var itemInfo: IndicatorInfo = "Liturgical"
 
-
+  
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Do any additional setup after loading the view.
     }
 
-    //MARK: - configuration
-
+//MARK: - configuration
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return itemInfo
     }

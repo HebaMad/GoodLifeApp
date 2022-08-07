@@ -21,6 +21,10 @@
 		2710A299289AF485009BCE60 /* PastVentures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710A297289AF485009BCE60 /* PastVentures.swift */; };
 		2710A29A289AF485009BCE60 /* PastVentures.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2710A298289AF485009BCE60 /* PastVentures.xib */; };
 		2734CD8528913E3A00E6964F /* GoodLifeApplocation.xcworkspace in Resources */ = {isa = PBXBuildFile; fileRef = 27C9AE68288D427600FA584A /* GoodLifeApplocation.xcworkspace */; };
+		27594D1E28A010CE00F4DDC3 /* GeneralMarketingPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27594D1C28A010CE00F4DDC3 /* GeneralMarketingPageVC.swift */; };
+		27594D1F28A010CE00F4DDC3 /* GeneralMarketingPageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27594D1D28A010CE00F4DDC3 /* GeneralMarketingPageVC.xib */; };
+		27594D2228A017D600F4DDC3 /* GeneralLiturgicalPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27594D2028A017D600F4DDC3 /* GeneralLiturgicalPageVC.swift */; };
+		27594D2328A017D600F4DDC3 /* GeneralLiturgicalPageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27594D2128A017D600F4DDC3 /* GeneralLiturgicalPageVC.xib */; };
 		2767A271288F3CD600DF34D1 /* DonationThirdFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2767A26F288F3CD600DF34D1 /* DonationThirdFrame.swift */; };
 		2767A272288F3CD600DF34D1 /* DonationThirdFrame.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2767A270288F3CD600DF34D1 /* DonationThirdFrame.xib */; };
 		2767A275288F504A00DF34D1 /* DonationFourthFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2767A273288F504A00DF34D1 /* DonationFourthFrame.swift */; };
@@ -156,6 +160,10 @@
 		2710A295289ADA9E009BCE60 /* GoalAndBenchmarkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalAndBenchmarkVC.swift; sourceTree = "<group>"; };
 		2710A297289AF485009BCE60 /* PastVentures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastVentures.swift; sourceTree = "<group>"; };
 		2710A298289AF485009BCE60 /* PastVentures.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PastVentures.xib; sourceTree = "<group>"; };
+		27594D1C28A010CE00F4DDC3 /* GeneralMarketingPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralMarketingPageVC.swift; sourceTree = "<group>"; };
+		27594D1D28A010CE00F4DDC3 /* GeneralMarketingPageVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeneralMarketingPageVC.xib; sourceTree = "<group>"; };
+		27594D2028A017D600F4DDC3 /* GeneralLiturgicalPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralLiturgicalPageVC.swift; sourceTree = "<group>"; };
+		27594D2128A017D600F4DDC3 /* GeneralLiturgicalPageVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeneralLiturgicalPageVC.xib; sourceTree = "<group>"; };
 		2767A26F288F3CD600DF34D1 /* DonationThirdFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationThirdFrame.swift; sourceTree = "<group>"; };
 		2767A270288F3CD600DF34D1 /* DonationThirdFrame.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DonationThirdFrame.xib; sourceTree = "<group>"; };
 		2767A273288F504A00DF34D1 /* DonationFourthFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationFourthFrame.swift; sourceTree = "<group>"; };
@@ -612,6 +620,10 @@
 				27CB2097289FC79700E63694 /* SpecificPagerVC.xib */,
 				27CB209A289FFE9800E63694 /* GeneralFinicialPagerVC.swift */,
 				27CB209B289FFE9800E63694 /* GeneralFinicialPagerVC.xib */,
+				27594D1C28A010CE00F4DDC3 /* GeneralMarketingPageVC.swift */,
+				27594D1D28A010CE00F4DDC3 /* GeneralMarketingPageVC.xib */,
+				27594D2028A017D600F4DDC3 /* GeneralLiturgicalPageVC.swift */,
+				27594D2128A017D600F4DDC3 /* GeneralLiturgicalPageVC.xib */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -697,6 +709,7 @@
 				27C9AE61288D3CB500FA584A /* Inter-SemiBoldItalic.ttf in Resources */,
 				27CB2072289C1B3F00E63694 /* ResourceCell.xib in Resources */,
 				2710A294289A7150009BCE60 /* GoalAndBenchmarkCell.xib in Resources */,
+				27594D1F28A010CE00F4DDC3 /* GeneralMarketingPageVC.xib in Resources */,
 				2767A272288F3CD600DF34D1 /* DonationThirdFrame.xib in Resources */,
 				27CB2052289B006100E63694 /* ReviewExperienceVC.xib in Resources */,
 				27C9AE53288D3CA300FA584A /* Inter-Bold.ttf in Resources */,
@@ -705,6 +718,7 @@
 				27C9AE54288D3CB500FA584A /* Inter-BoldItalic.ttf in Resources */,
 				2734CD8528913E3A00E6964F /* GoodLifeApplocation.xcworkspace in Resources */,
 				27CB2090289FB1E100E63694 /* PackageDetailsVC.xib in Resources */,
+				27594D2328A017D600F4DDC3 /* GeneralLiturgicalPageVC.xib in Resources */,
 				2767A294289087DF00DF34D1 /* HeaderCollectionReusableView.xib in Resources */,
 				27C9AE3E288D39B300FA584A /* SplashScreen.xib in Resources */,
 				2767A276288F504A00DF34D1 /* DonationFourthFrame.xib in Resources */,
@@ -803,6 +817,7 @@
 			files = (
 				27CB206D289C1AA000E63694 /* AllCategoriesCell.swift in Sources */,
 				27C9AE89288D51FD00FA584A /* OnBoardingFrame4.swift in Sources */,
+				27594D2228A017D600F4DDC3 /* GeneralLiturgicalPageVC.swift in Sources */,
 				27C9AE3D288D39B300FA584A /* SplashScreen.swift in Sources */,
 				2710A299289AF485009BCE60 /* PastVentures.swift in Sources */,
 				27CB209C289FFE9800E63694 /* GeneralFinicialPagerVC.swift in Sources */,
@@ -813,6 +828,7 @@
 				2710A290289A6677009BCE60 /* TaskVC.swift in Sources */,
 				2767A28728904DF800DF34D1 /* DonationFirstFrame.swift in Sources */,
 				27CB2057289B08B900E63694 /* ResourceCollectionViewCell.swift in Sources */,
+				27594D1E28A010CE00F4DDC3 /* GeneralMarketingPageVC.swift in Sources */,
 				27C9AE2B288D38E900FA584A /* ViewController.swift in Sources */,
 				27CB2098289FC79700E63694 /* SpecificPagerVC.swift in Sources */,
 				27C9AEBC288EFBA200FA584A /* DonationFrameTwoVC.swift in Sources */,
