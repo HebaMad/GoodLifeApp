@@ -67,6 +67,8 @@
 		27B8C8F628A16B5A0011B039 /* FilterHeaderReusableview.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27B8C8F428A16B5A0011B039 /* FilterHeaderReusableview.xib */; };
 		27B8C8F928A1825D0011B039 /* ActivityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B8C8F728A1825D0011B039 /* ActivityCell.swift */; };
 		27B8C8FA28A1825D0011B039 /* ActivityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27B8C8F828A1825D0011B039 /* ActivityCell.xib */; };
+		27B8C8FE28A198880011B039 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B8C8FD28A198880011B039 /* ReusableView.swift */; };
+		27B8C90028A198BB0011B039 /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B8C8FF28A198BB0011B039 /* NibLoadableView.swift */; };
 		27C9AE27288D38E900FA584A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AE26288D38E900FA584A /* AppDelegate.swift */; };
 		27C9AE29288D38E900FA584A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AE28288D38E900FA584A /* SceneDelegate.swift */; };
 		27C9AE2B288D38E900FA584A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AE2A288D38E900FA584A /* ViewController.swift */; };
@@ -93,8 +95,6 @@
 		27C9AE61288D3CB500FA584A /* Inter-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 27C9AE50288D3B9A00FA584A /* Inter-SemiBoldItalic.ttf */; };
 		27C9AE62288D3CB500FA584A /* Inter-Light-BETA.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 27C9AE45288D3B9A00FA584A /* Inter-Light-BETA.ttf */; };
 		27C9AE63288D3CB500FA584A /* Inter-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 27C9AE49288D3B9A00FA584A /* Inter-MediumItalic.ttf */; };
-		27C9AE6F288D445E00FA584A /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AE6D288D445E00FA584A /* NibLoadableView.swift */; };
-		27C9AE70288D445E00FA584A /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AE6E288D445E00FA584A /* ReusableView.swift */; };
 		27C9AE78288D470600FA584A /* OnBoardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AE76288D470600FA584A /* OnBoardingVC.swift */; };
 		27C9AE79288D470600FA584A /* OnBoardingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27C9AE77288D470600FA584A /* OnBoardingVC.xib */; };
 		27C9AE7F288D4C1E00FA584A /* OnBoardingFrame2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AE7D288D4C1E00FA584A /* OnBoardingFrame2.swift */; };
@@ -218,6 +218,8 @@
 		27B8C8F428A16B5A0011B039 /* FilterHeaderReusableview.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterHeaderReusableview.xib; sourceTree = "<group>"; };
 		27B8C8F728A1825D0011B039 /* ActivityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCell.swift; sourceTree = "<group>"; };
 		27B8C8F828A1825D0011B039 /* ActivityCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityCell.xib; sourceTree = "<group>"; };
+		27B8C8FD28A198880011B039 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		27B8C8FF28A198BB0011B039 /* NibLoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
 		27C9AE23288D38E900FA584A /* GoodLifeApplocation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodLifeApplocation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27C9AE26288D38E900FA584A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27C9AE28288D38E900FA584A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -247,8 +249,6 @@
 		27C9AE50288D3B9A00FA584A /* Inter-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-SemiBoldItalic.ttf"; path = "../../../../Downloads/inter/Inter-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		27C9AE51288D3B9A00FA584A /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-Medium.ttf"; path = "../../../../Downloads/inter/Inter-Medium.ttf"; sourceTree = "<group>"; };
 		27C9AE68288D427600FA584A /* GoodLifeApplocation.xcworkspace */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.workspace; path = GoodLifeApplocation.xcworkspace; sourceTree = SOURCE_ROOT; };
-		27C9AE6D288D445E00FA584A /* NibLoadableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NibLoadableView.swift; path = "../../../Rakwa-ios/Rakwa/Protocols/NibLoadableView.swift"; sourceTree = "<group>"; };
-		27C9AE6E288D445E00FA584A /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReusableView.swift; path = "../../../Rakwa-ios/Rakwa/Protocols/ReusableView.swift"; sourceTree = "<group>"; };
 		27C9AE76288D470600FA584A /* OnBoardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingVC.swift; sourceTree = "<group>"; };
 		27C9AE77288D470600FA584A /* OnBoardingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingVC.xib; sourceTree = "<group>"; };
 		27C9AE7D288D4C1E00FA584A /* OnBoardingFrame2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingFrame2.swift; sourceTree = "<group>"; };
@@ -496,8 +496,8 @@
 		27C9AE6C288D444B00FA584A /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				27C9AE6D288D445E00FA584A /* NibLoadableView.swift */,
-				27C9AE6E288D445E00FA584A /* ReusableView.swift */,
+				27B8C8FD28A198880011B039 /* ReusableView.swift */,
+				27B8C8FF28A198BB0011B039 /* NibLoadableView.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -880,6 +880,7 @@
 				27CB2057289B08B900E63694 /* ResourceCollectionViewCell.swift in Sources */,
 				27594D1E28A010CE00F4DDC3 /* GeneralMarketingPageVC.swift in Sources */,
 				27C9AE2B288D38E900FA584A /* ViewController.swift in Sources */,
+				27B8C90028A198BB0011B039 /* NibLoadableView.swift in Sources */,
 				27CB2098289FC79700E63694 /* SpecificPagerVC.swift in Sources */,
 				27C9AEBC288EFBA200FA584A /* DonationFrameTwoVC.swift in Sources */,
 				27A737662891407200FD8AD9 /* TableViewHelper.swift in Sources */,
@@ -890,6 +891,7 @@
 				27CB2085289D450000E63694 /* SearchView.swift in Sources */,
 				27A737702891435C00FD8AD9 /* UIButtonDesignable.swift in Sources */,
 				2710A293289A7150009BCE60 /* GoalAndBenchmarkCell.swift in Sources */,
+				27B8C8FE28A198880011B039 /* ReusableView.swift in Sources */,
 				27B8C8E528A1067F0011B039 /* FilterCell.swift in Sources */,
 				27B8C8F028A167E00011B039 /* FilterList.swift in Sources */,
 				2767A279288F53C100DF34D1 /* DonationFifthFrameVC.swift in Sources */,
@@ -901,11 +903,9 @@
 				27C9AEA2288D971700FA584A /* VolunteerOpportunityVC.swift in Sources */,
 				27B8C8F228A1687F0011B039 /* MapFilterList.swift in Sources */,
 				27C9AEAE288DB44600FA584A /* CategoriesCollectionViewCell.swift in Sources */,
-				27C9AE6F288D445E00FA584A /* NibLoadableView.swift in Sources */,
 				27CB207A289CFC0400E63694 /* OnBoardingFrame1.swift in Sources */,
 				27A7376F2891435C00FD8AD9 /* UIViewDesignable.swift in Sources */,
 				2706D21328913D4500546425 /* ProgressBar.swift in Sources */,
-				27C9AE70288D445E00FA584A /* ReusableView.swift in Sources */,
 				2710A28A28971E3B009BCE60 /* ListItem.swift in Sources */,
 				2710A28D289A5C3C009BCE60 /* TaskCell.swift in Sources */,
 				27B8C8ED28A14C320011B039 /* MapVC.swift in Sources */,
