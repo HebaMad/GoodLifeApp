@@ -51,8 +51,6 @@
 		27A7376E2891435C00FD8AD9 /* UIImageViewDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A7376B2891435C00FD8AD9 /* UIImageViewDesignable.swift */; };
 		27A7376F2891435C00FD8AD9 /* UIViewDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A7376C2891435C00FD8AD9 /* UIViewDesignable.swift */; };
 		27A737702891435C00FD8AD9 /* UIButtonDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A7376D2891435C00FD8AD9 /* UIButtonDesignable.swift */; };
-		27A737742891CCE300FD8AD9 /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A737722891CCE300FD8AD9 /* ActivityTableViewCell.swift */; };
-		27A737752891CCE300FD8AD9 /* ActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27A737732891CCE300FD8AD9 /* ActivityTableViewCell.xib */; };
 		27A7377B2891D16100FD8AD9 /* SubscriptionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A737792891D16100FD8AD9 /* SubscriptionCollectionViewCell.swift */; };
 		27A7377C2891D16100FD8AD9 /* SubscriptionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27A7377A2891D16100FD8AD9 /* SubscriptionCollectionViewCell.xib */; };
 		27B8C8E128A105810011B039 /* MapFilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B8C8DF28A105810011B039 /* MapFilterVC.swift */; };
@@ -61,6 +59,14 @@
 		27B8C8E628A1067F0011B039 /* FilterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27B8C8E428A1067F0011B039 /* FilterCell.xib */; };
 		27B8C8E928A1106C0011B039 /* SpecificFilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B8C8E728A1106C0011B039 /* SpecificFilterCell.swift */; };
 		27B8C8EA28A1106C0011B039 /* SpecificFilterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27B8C8E828A1106C0011B039 /* SpecificFilterCell.xib */; };
+		27B8C8ED28A14C320011B039 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B8C8EB28A14C320011B039 /* MapVC.swift */; };
+		27B8C8EE28A14C320011B039 /* MapVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27B8C8EC28A14C320011B039 /* MapVC.xib */; };
+		27B8C8F028A167E00011B039 /* FilterList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B8C8EF28A167E00011B039 /* FilterList.swift */; };
+		27B8C8F228A1687F0011B039 /* MapFilterList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B8C8F128A1687F0011B039 /* MapFilterList.swift */; };
+		27B8C8F528A16B5A0011B039 /* FilterHeaderReusableview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B8C8F328A16B5A0011B039 /* FilterHeaderReusableview.swift */; };
+		27B8C8F628A16B5A0011B039 /* FilterHeaderReusableview.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27B8C8F428A16B5A0011B039 /* FilterHeaderReusableview.xib */; };
+		27B8C8F928A1825D0011B039 /* ActivityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B8C8F728A1825D0011B039 /* ActivityCell.swift */; };
+		27B8C8FA28A1825D0011B039 /* ActivityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27B8C8F828A1825D0011B039 /* ActivityCell.xib */; };
 		27C9AE27288D38E900FA584A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AE26288D38E900FA584A /* AppDelegate.swift */; };
 		27C9AE29288D38E900FA584A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AE28288D38E900FA584A /* SceneDelegate.swift */; };
 		27C9AE2B288D38E900FA584A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AE2A288D38E900FA584A /* ViewController.swift */; };
@@ -196,8 +202,6 @@
 		27A7376B2891435C00FD8AD9 /* UIImageViewDesignable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewDesignable.swift; sourceTree = "<group>"; };
 		27A7376C2891435C00FD8AD9 /* UIViewDesignable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewDesignable.swift; sourceTree = "<group>"; };
 		27A7376D2891435C00FD8AD9 /* UIButtonDesignable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonDesignable.swift; sourceTree = "<group>"; };
-		27A737722891CCE300FD8AD9 /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
-		27A737732891CCE300FD8AD9 /* ActivityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityTableViewCell.xib; sourceTree = "<group>"; };
 		27A737792891D16100FD8AD9 /* SubscriptionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionCollectionViewCell.swift; sourceTree = "<group>"; };
 		27A7377A2891D16100FD8AD9 /* SubscriptionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubscriptionCollectionViewCell.xib; sourceTree = "<group>"; };
 		27B8C8DF28A105810011B039 /* MapFilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapFilterVC.swift; sourceTree = "<group>"; };
@@ -206,6 +210,14 @@
 		27B8C8E428A1067F0011B039 /* FilterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterCell.xib; sourceTree = "<group>"; };
 		27B8C8E728A1106C0011B039 /* SpecificFilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificFilterCell.swift; sourceTree = "<group>"; };
 		27B8C8E828A1106C0011B039 /* SpecificFilterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpecificFilterCell.xib; sourceTree = "<group>"; };
+		27B8C8EB28A14C320011B039 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		27B8C8EC28A14C320011B039 /* MapVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapVC.xib; sourceTree = "<group>"; };
+		27B8C8EF28A167E00011B039 /* FilterList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterList.swift; sourceTree = "<group>"; };
+		27B8C8F128A1687F0011B039 /* MapFilterList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapFilterList.swift; sourceTree = "<group>"; };
+		27B8C8F328A16B5A0011B039 /* FilterHeaderReusableview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterHeaderReusableview.swift; sourceTree = "<group>"; };
+		27B8C8F428A16B5A0011B039 /* FilterHeaderReusableview.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterHeaderReusableview.xib; sourceTree = "<group>"; };
+		27B8C8F728A1825D0011B039 /* ActivityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCell.swift; sourceTree = "<group>"; };
+		27B8C8F828A1825D0011B039 /* ActivityCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityCell.xib; sourceTree = "<group>"; };
 		27C9AE23288D38E900FA584A /* GoodLifeApplocation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodLifeApplocation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27C9AE26288D38E900FA584A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27C9AE28288D38E900FA584A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -346,14 +358,16 @@
 		27A737762891CCF500FD8AD9 /* XIB */ = {
 			isa = PBXGroup;
 			children = (
-				27A737722891CCE300FD8AD9 /* ActivityTableViewCell.swift */,
-				27A737732891CCE300FD8AD9 /* ActivityTableViewCell.xib */,
 				27A737792891D16100FD8AD9 /* SubscriptionCollectionViewCell.swift */,
 				27A7377A2891D16100FD8AD9 /* SubscriptionCollectionViewCell.xib */,
 				27B8C8E328A1067F0011B039 /* FilterCell.swift */,
 				27B8C8E428A1067F0011B039 /* FilterCell.xib */,
 				27B8C8E728A1106C0011B039 /* SpecificFilterCell.swift */,
 				27B8C8E828A1106C0011B039 /* SpecificFilterCell.xib */,
+				27B8C8F328A16B5A0011B039 /* FilterHeaderReusableview.swift */,
+				27B8C8F428A16B5A0011B039 /* FilterHeaderReusableview.xib */,
+				27B8C8F728A1825D0011B039 /* ActivityCell.swift */,
+				27B8C8F828A1825D0011B039 /* ActivityCell.xib */,
 			);
 			path = XIB;
 			sourceTree = "<group>";
@@ -363,6 +377,10 @@
 			children = (
 				27B8C8DF28A105810011B039 /* MapFilterVC.swift */,
 				27B8C8E028A105810011B039 /* MapFilterVC.xib */,
+				27B8C8EB28A14C320011B039 /* MapVC.swift */,
+				27B8C8EC28A14C320011B039 /* MapVC.xib */,
+				27B8C8EF28A167E00011B039 /* FilterList.swift */,
+				27B8C8F128A1687F0011B039 /* MapFilterList.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -760,6 +778,7 @@
 				27C9AE33288D38EA00FA584A /* LaunchScreen.storyboard in Resources */,
 				2767A28428904A3800DF34D1 /* OtherFundsCollectionViewCell.xib in Resources */,
 				27B8C8EA28A1106C0011B039 /* SpecificFilterCell.xib in Resources */,
+				27B8C8EE28A14C320011B039 /* MapVC.xib in Resources */,
 				27C9AE5D288D3CB500FA584A /* Inter-ExtraLight-BETA.ttf in Resources */,
 				27C9AE90288D54AA00FA584A /* OnBoardingFrame5.xib in Resources */,
 				27CB2064289BBA1E00E63694 /* PastGoalsCell.xib in Resources */,
@@ -771,6 +790,7 @@
 				27B8C8E628A1067F0011B039 /* FilterCell.xib in Resources */,
 				27CB206E289C1AA000E63694 /* AllCategoriesCell.xib in Resources */,
 				27C9AE9F288D8BEC00FA584A /* OpportunityViewVC.xib in Resources */,
+				27B8C8F628A16B5A0011B039 /* FilterHeaderReusableview.xib in Resources */,
 				27C9AE52288D3CA000FA584A /* Inter-Black.ttf in Resources */,
 				2767A2802890478200DF34D1 /* FeaturedFundsCollectionViewCell.xib in Resources */,
 				2767A27A288F53C100DF34D1 /* DonationFifthFrameVC.xib in Resources */,
@@ -781,7 +801,6 @@
 				27CB2099289FC79700E63694 /* SpecificPagerVC.xib in Resources */,
 				27C9AEBA288EF61200FA584A /* DonationVC.xib in Resources */,
 				27C9AE8A288D51FD00FA584A /* OnBoardingFrame4.xib in Resources */,
-				27A737752891CCE300FD8AD9 /* ActivityTableViewCell.xib in Resources */,
 				2767A28828904DF800DF34D1 /* DonationFirstFrame.xib in Resources */,
 				27CB2095289FC6CC00E63694 /* GeneralPagerViewVC.xib in Resources */,
 				27A7377C2891D16100FD8AD9 /* SubscriptionCollectionViewCell.xib in Resources */,
@@ -791,6 +810,7 @@
 				2767A2992890A48600DF34D1 /* FilterVC.xib in Resources */,
 				27C9AE62288D3CB500FA584A /* Inter-Light-BETA.ttf in Resources */,
 				27C9AE56288D3CB500FA584A /* Inter-Medium.ttf in Resources */,
+				27B8C8FA28A1825D0011B039 /* ActivityCell.xib in Resources */,
 				27CB2081289D017D00E63694 /* VerificationVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -851,6 +871,7 @@
 				2710A299289AF485009BCE60 /* PastVentures.swift in Sources */,
 				27CB209C289FFE9800E63694 /* GeneralFinicialPagerVC.swift in Sources */,
 				27CB205F289B0FDC00E63694 /* ResourceDetailsCell.swift in Sources */,
+				27B8C8F528A16B5A0011B039 /* FilterHeaderReusableview.swift in Sources */,
 				27A737692891431000FD8AD9 /* OpportunityView.swift in Sources */,
 				27CB207D289CFDFE00E63694 /* BottomBorderTextField.swift in Sources */,
 				27CB2054289B038800E63694 /* RatingControl.swift in Sources */,
@@ -870,6 +891,7 @@
 				27A737702891435C00FD8AD9 /* UIButtonDesignable.swift in Sources */,
 				2710A293289A7150009BCE60 /* GoalAndBenchmarkCell.swift in Sources */,
 				27B8C8E528A1067F0011B039 /* FilterCell.swift in Sources */,
+				27B8C8F028A167E00011B039 /* FilterList.swift in Sources */,
 				2767A279288F53C100DF34D1 /* DonationFifthFrameVC.swift in Sources */,
 				2767A2982890A48600DF34D1 /* FilterVC.swift in Sources */,
 				27C9AE8F288D54AA00FA584A /* OnBoardingFrame5.swift in Sources */,
@@ -877,6 +899,7 @@
 				27CB2089289D48BD00E63694 /* CategoriesList.swift in Sources */,
 				2767A293289087DF00DF34D1 /* HeaderCollectionReusableView.swift in Sources */,
 				27C9AEA2288D971700FA584A /* VolunteerOpportunityVC.swift in Sources */,
+				27B8C8F228A1687F0011B039 /* MapFilterList.swift in Sources */,
 				27C9AEAE288DB44600FA584A /* CategoriesCollectionViewCell.swift in Sources */,
 				27C9AE6F288D445E00FA584A /* NibLoadableView.swift in Sources */,
 				27CB207A289CFC0400E63694 /* OnBoardingFrame1.swift in Sources */,
@@ -885,7 +908,9 @@
 				27C9AE70288D445E00FA584A /* ReusableView.swift in Sources */,
 				2710A28A28971E3B009BCE60 /* ListItem.swift in Sources */,
 				2710A28D289A5C3C009BCE60 /* TaskCell.swift in Sources */,
+				27B8C8ED28A14C320011B039 /* MapVC.swift in Sources */,
 				27A737622891403000FD8AD9 /* UIViewFromNib.swift in Sources */,
+				27B8C8F928A1825D0011B039 /* ActivityCell.swift in Sources */,
 				2767A271288F3CD600DF34D1 /* DonationThirdFrame.swift in Sources */,
 				27C9AE7F288D4C1E00FA584A /* OnBoardingFrame2.swift in Sources */,
 				27C9AEAA288DA8E300FA584A /* TaskCollectionViewCell.swift in Sources */,
@@ -916,7 +941,6 @@
 				27CB204D289AFDE800E63694 /* HaveAnIdeaVC.swift in Sources */,
 				27CB2067289BBEA600E63694 /* BenchmarksCell.swift in Sources */,
 				27CB208B289D4A9300E63694 /* HomeCategories.swift in Sources */,
-				27A737742891CCE300FD8AD9 /* ActivityTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

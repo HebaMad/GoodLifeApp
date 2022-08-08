@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SubscriptionCollectionViewCell: UICollectionViewCell {
+class SubscriptionCollectionViewCell: UICollectionViewCell,ReusableView,NibLoadableView   {
 
     override func awakeFromNib() {
         super.awakeFromNib()

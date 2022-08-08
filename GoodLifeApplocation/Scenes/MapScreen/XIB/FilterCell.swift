@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FilterCell: UICollectionViewCell {
+class FilterCell: UICollectionViewCell,ReusableView,NibLoadableView   {
 
     override func awakeFromNib() {
         super.awakeFromNib()
