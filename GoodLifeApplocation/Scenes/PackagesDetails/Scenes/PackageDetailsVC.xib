@@ -41,7 +41,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="380"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wrp-xd-f1u">
-                                            <rect key="frame" x="16" y="0.0" width="382" height="64.5"/>
+                                            <rect key="frame" x="16" y="0.0" width="382" height="64"/>
                                             <string key="text">Community
 Movie Night</string>
                                             <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="24"/>
@@ -49,7 +49,7 @@ Movie Night</string>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Community   Social   Neighbor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVk-rU-GaA">
-                                            <rect key="frame" x="16" y="76.5" width="382" height="16.5"/>
+                                            <rect key="frame" x="16" y="76" width="382" height="17"/>
                                             <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="14"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>

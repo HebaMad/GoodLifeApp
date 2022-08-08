@@ -55,6 +55,12 @@
 		27A737752891CCE300FD8AD9 /* ActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27A737732891CCE300FD8AD9 /* ActivityTableViewCell.xib */; };
 		27A7377B2891D16100FD8AD9 /* SubscriptionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A737792891D16100FD8AD9 /* SubscriptionCollectionViewCell.swift */; };
 		27A7377C2891D16100FD8AD9 /* SubscriptionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27A7377A2891D16100FD8AD9 /* SubscriptionCollectionViewCell.xib */; };
+		27B8C8E128A105810011B039 /* MapFilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B8C8DF28A105810011B039 /* MapFilterVC.swift */; };
+		27B8C8E228A105810011B039 /* MapFilterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27B8C8E028A105810011B039 /* MapFilterVC.xib */; };
+		27B8C8E528A1067F0011B039 /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B8C8E328A1067F0011B039 /* FilterCell.swift */; };
+		27B8C8E628A1067F0011B039 /* FilterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27B8C8E428A1067F0011B039 /* FilterCell.xib */; };
+		27B8C8E928A1106C0011B039 /* SpecificFilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B8C8E728A1106C0011B039 /* SpecificFilterCell.swift */; };
+		27B8C8EA28A1106C0011B039 /* SpecificFilterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27B8C8E828A1106C0011B039 /* SpecificFilterCell.xib */; };
 		27C9AE27288D38E900FA584A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AE26288D38E900FA584A /* AppDelegate.swift */; };
 		27C9AE29288D38E900FA584A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AE28288D38E900FA584A /* SceneDelegate.swift */; };
 		27C9AE2B288D38E900FA584A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AE2A288D38E900FA584A /* ViewController.swift */; };
@@ -194,6 +200,12 @@
 		27A737732891CCE300FD8AD9 /* ActivityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityTableViewCell.xib; sourceTree = "<group>"; };
 		27A737792891D16100FD8AD9 /* SubscriptionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionCollectionViewCell.swift; sourceTree = "<group>"; };
 		27A7377A2891D16100FD8AD9 /* SubscriptionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubscriptionCollectionViewCell.xib; sourceTree = "<group>"; };
+		27B8C8DF28A105810011B039 /* MapFilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapFilterVC.swift; sourceTree = "<group>"; };
+		27B8C8E028A105810011B039 /* MapFilterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapFilterVC.xib; sourceTree = "<group>"; };
+		27B8C8E328A1067F0011B039 /* FilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
+		27B8C8E428A1067F0011B039 /* FilterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterCell.xib; sourceTree = "<group>"; };
+		27B8C8E728A1106C0011B039 /* SpecificFilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificFilterCell.swift; sourceTree = "<group>"; };
+		27B8C8E828A1106C0011B039 /* SpecificFilterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpecificFilterCell.xib; sourceTree = "<group>"; };
 		27C9AE23288D38E900FA584A /* GoodLifeApplocation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodLifeApplocation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27C9AE26288D38E900FA584A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27C9AE28288D38E900FA584A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -325,6 +337,7 @@
 		27A737712891CAA500FD8AD9 /* MapScreen */ = {
 			isa = PBXGroup;
 			children = (
+				27B8C8DE28A103430011B039 /* Scenes */,
 				27A737762891CCF500FD8AD9 /* XIB */,
 			);
 			path = MapScreen;
@@ -337,8 +350,21 @@
 				27A737732891CCE300FD8AD9 /* ActivityTableViewCell.xib */,
 				27A737792891D16100FD8AD9 /* SubscriptionCollectionViewCell.swift */,
 				27A7377A2891D16100FD8AD9 /* SubscriptionCollectionViewCell.xib */,
+				27B8C8E328A1067F0011B039 /* FilterCell.swift */,
+				27B8C8E428A1067F0011B039 /* FilterCell.xib */,
+				27B8C8E728A1106C0011B039 /* SpecificFilterCell.swift */,
+				27B8C8E828A1106C0011B039 /* SpecificFilterCell.xib */,
 			);
 			path = XIB;
+			sourceTree = "<group>";
+		};
+		27B8C8DE28A103430011B039 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				27B8C8DF28A105810011B039 /* MapFilterVC.swift */,
+				27B8C8E028A105810011B039 /* MapFilterVC.xib */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		27C9AE1A288D38E900FA584A = {
@@ -729,9 +755,11 @@
 				27CB2068289BBEA600E63694 /* BenchmarksCell.xib in Resources */,
 				27CB2076289C1CEF00E63694 /* AllResourceVC.xib in Resources */,
 				27A7375E28913F0500FD8AD9 /* ProgressView.xib in Resources */,
+				27B8C8E228A105810011B039 /* MapFilterVC.xib in Resources */,
 				2710A29A289AF485009BCE60 /* PastVentures.xib in Resources */,
 				27C9AE33288D38EA00FA584A /* LaunchScreen.storyboard in Resources */,
 				2767A28428904A3800DF34D1 /* OtherFundsCollectionViewCell.xib in Resources */,
+				27B8C8EA28A1106C0011B039 /* SpecificFilterCell.xib in Resources */,
 				27C9AE5D288D3CB500FA584A /* Inter-ExtraLight-BETA.ttf in Resources */,
 				27C9AE90288D54AA00FA584A /* OnBoardingFrame5.xib in Resources */,
 				27CB2064289BBA1E00E63694 /* PastGoalsCell.xib in Resources */,
@@ -740,6 +768,7 @@
 				27C9AEAF288DB44600FA584A /* CategoriesCollectionViewCell.xib in Resources */,
 				27C9AE84288D4F0600FA584A /* OnBoardingFrame3.xib in Resources */,
 				27A7376A2891431000FD8AD9 /* OpportunityView.xib in Resources */,
+				27B8C8E628A1067F0011B039 /* FilterCell.xib in Resources */,
 				27CB206E289C1AA000E63694 /* AllCategoriesCell.xib in Resources */,
 				27C9AE9F288D8BEC00FA584A /* OpportunityViewVC.xib in Resources */,
 				27C9AE52288D3CA000FA584A /* Inter-Black.ttf in Resources */,
@@ -833,12 +862,14 @@
 				27CB2098289FC79700E63694 /* SpecificPagerVC.swift in Sources */,
 				27C9AEBC288EFBA200FA584A /* DonationFrameTwoVC.swift in Sources */,
 				27A737662891407200FD8AD9 /* TableViewHelper.swift in Sources */,
+				27B8C8E128A105810011B039 /* MapFilterVC.swift in Sources */,
 				27CB2075289C1CEF00E63694 /* AllResourceVC.swift in Sources */,
 				27CB2063289BBA1E00E63694 /* PastGoalsCell.swift in Sources */,
 				27C9AEB3288EF14900FA584A /* MealMarkerTableViewCell.swift in Sources */,
 				27CB2085289D450000E63694 /* SearchView.swift in Sources */,
 				27A737702891435C00FD8AD9 /* UIButtonDesignable.swift in Sources */,
 				2710A293289A7150009BCE60 /* GoalAndBenchmarkCell.swift in Sources */,
+				27B8C8E528A1067F0011B039 /* FilterCell.swift in Sources */,
 				2767A279288F53C100DF34D1 /* DonationFifthFrameVC.swift in Sources */,
 				2767A2982890A48600DF34D1 /* FilterVC.swift in Sources */,
 				27C9AE8F288D54AA00FA584A /* OnBoardingFrame5.swift in Sources */,
@@ -863,6 +894,7 @@
 				27CB206A289BC15C00E63694 /* SegmentControl.swift in Sources */,
 				27CB2087289D467500E63694 /* DashboardVC.swift in Sources */,
 				27C9AEB9288EF61200FA584A /* DonationVC.swift in Sources */,
+				27B8C8E928A1106C0011B039 /* SpecificFilterCell.swift in Sources */,
 				2710A28228971D94009BCE60 /* MockData.swift in Sources */,
 				2710A28828971E1F009BCE60 /* ListSection.swift in Sources */,
 				27C9AE27288D38E900FA584A /* AppDelegate.swift in Sources */,
