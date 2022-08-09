@@ -53,8 +53,6 @@
 		27A737702891435C00FD8AD9 /* UIButtonDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A7376D2891435C00FD8AD9 /* UIButtonDesignable.swift */; };
 		27A7377B2891D16100FD8AD9 /* SubscriptionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A737792891D16100FD8AD9 /* SubscriptionCollectionViewCell.swift */; };
 		27A7377C2891D16100FD8AD9 /* SubscriptionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27A7377A2891D16100FD8AD9 /* SubscriptionCollectionViewCell.xib */; };
-		27B8C8E128A105810011B039 /* MapFilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B8C8DF28A105810011B039 /* MapFilterVC.swift */; };
-		27B8C8E228A105810011B039 /* MapFilterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27B8C8E028A105810011B039 /* MapFilterVC.xib */; };
 		27B8C8E528A1067F0011B039 /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B8C8E328A1067F0011B039 /* FilterCell.swift */; };
 		27B8C8E628A1067F0011B039 /* FilterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27B8C8E428A1067F0011B039 /* FilterCell.xib */; };
 		27B8C8E928A1106C0011B039 /* SpecificFilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B8C8E728A1106C0011B039 /* SpecificFilterCell.swift */; };
@@ -204,8 +202,6 @@
 		27A7376D2891435C00FD8AD9 /* UIButtonDesignable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonDesignable.swift; sourceTree = "<group>"; };
 		27A737792891D16100FD8AD9 /* SubscriptionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionCollectionViewCell.swift; sourceTree = "<group>"; };
 		27A7377A2891D16100FD8AD9 /* SubscriptionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubscriptionCollectionViewCell.xib; sourceTree = "<group>"; };
-		27B8C8DF28A105810011B039 /* MapFilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapFilterVC.swift; sourceTree = "<group>"; };
-		27B8C8E028A105810011B039 /* MapFilterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapFilterVC.xib; sourceTree = "<group>"; };
 		27B8C8E328A1067F0011B039 /* FilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
 		27B8C8E428A1067F0011B039 /* FilterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterCell.xib; sourceTree = "<group>"; };
 		27B8C8E728A1106C0011B039 /* SpecificFilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificFilterCell.swift; sourceTree = "<group>"; };
@@ -375,8 +371,6 @@
 		27B8C8DE28A103430011B039 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				27B8C8DF28A105810011B039 /* MapFilterVC.swift */,
-				27B8C8E028A105810011B039 /* MapFilterVC.xib */,
 				27B8C8EB28A14C320011B039 /* MapVC.swift */,
 				27B8C8EC28A14C320011B039 /* MapVC.xib */,
 				27B8C8EF28A167E00011B039 /* FilterList.swift */,
@@ -773,7 +767,6 @@
 				27CB2068289BBEA600E63694 /* BenchmarksCell.xib in Resources */,
 				27CB2076289C1CEF00E63694 /* AllResourceVC.xib in Resources */,
 				27A7375E28913F0500FD8AD9 /* ProgressView.xib in Resources */,
-				27B8C8E228A105810011B039 /* MapFilterVC.xib in Resources */,
 				2710A29A289AF485009BCE60 /* PastVentures.xib in Resources */,
 				27C9AE33288D38EA00FA584A /* LaunchScreen.storyboard in Resources */,
 				2767A28428904A3800DF34D1 /* OtherFundsCollectionViewCell.xib in Resources */,
@@ -884,7 +877,6 @@
 				27CB2098289FC79700E63694 /* SpecificPagerVC.swift in Sources */,
 				27C9AEBC288EFBA200FA584A /* DonationFrameTwoVC.swift in Sources */,
 				27A737662891407200FD8AD9 /* TableViewHelper.swift in Sources */,
-				27B8C8E128A105810011B039 /* MapFilterVC.swift in Sources */,
 				27CB2075289C1CEF00E63694 /* AllResourceVC.swift in Sources */,
 				27CB2063289BBA1E00E63694 /* PastGoalsCell.swift in Sources */,
 				27C9AEB3288EF14900FA584A /* MealMarkerTableViewCell.swift in Sources */,

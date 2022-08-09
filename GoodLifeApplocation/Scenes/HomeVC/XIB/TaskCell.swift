@@ -23,4 +23,10 @@ class TaskCell: UITableViewCell ,ReusableView,NibLoadableView {
         // Configure the view for the selected state
     }
     
+    func configureCell(iconSystem:UIImage,tint:UIColor){
+        MarkBtn.setBackgroundImage(iconSystem, for: .normal)
+        MarkBtn.tintColor = tint
+        
+    }
+    
 }

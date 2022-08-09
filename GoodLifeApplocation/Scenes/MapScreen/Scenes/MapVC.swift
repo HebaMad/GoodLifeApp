@@ -6,24 +6,63 @@
 //
 
 import UIKit
-
+import SideMenu
 class MapVC: UIViewController {
+    
+    //MARK: - Outlet
 
     @IBOutlet weak var communityCollectionview: UICollectionView!
     @IBOutlet weak var generalFilterCollectionview: UICollectionView!
     @IBOutlet weak var specificFilterCollectionview: UICollectionView!
+    @IBOutlet weak var menuBtn: UIButton!
     
     
+    
+    //MARK: - properties
     private let sections = MapFilterList.shared.AllCategories
 
+    private var menu :SideMenuNavigationController?
+
+    //MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setUpSideMenu()
         setupCollectionview()
+        menuBtnBinding()
+
     }
+    override func viewWillAppear(_ animated: Bool) {
+        changeSideMenuSide()
 
-
+    }
     
+    //MARK: - SETUP side menu
+
+    private func changeSideMenuSide(){
+       
+               menu?.leftSide = true
+               SideMenuManager.default.rightMenuNavigationController = nil
+               SideMenuManager.default.leftMenuNavigationController = menu
+        
+    }
+    
+    private func setUpSideMenu() {
+            let vc = OpportunityViewVC()
+            menu = SideMenuNavigationController(rootViewController: vc)
+            menu?.setNavigationBarHidden(true, animated: false)
+            menu?.presentationStyle = .menuSlideIn
+            menu?.presentationStyle.onTopShadowColor = .black
+            menu?.presentationStyle.onTopShadowRadius = 0
+            menu?.presentationStyle.onTopShadowOffset = .zero
+            menu?.presentationStyle.onTopShadowOpacity = 0
+        menu?.presentationStyle.presentingScaleFactor = 0.99
+        menu?.menuWidth = 280
+
+            SideMenuManager.default.addPanGestureToPresent(toView: self.view)
+        }
+
+    //MARK: - SETUP Collection
     private func setupCollectionview(){
         generalFilterCollectionview.register(FilterCell.self)
         generalFilterCollectionview.delegate = self
@@ -42,7 +81,8 @@ class MapVC: UIViewController {
         communityCollectionview.reloadData()
 
     }
-    
+    //MARK: - compositional layout creation
+
     private func createCompositionalLayout() -> UICollectionViewCompositionalLayout{
         UICollectionViewCompositionalLayout { [weak self] sectionIndex, layoutEnviroment in
             guard let self = self  else { return nil }
@@ -94,6 +134,27 @@ class MapVC: UIViewController {
     }
 
 }
+
+
+//MARK: - Binding
+
+private extension MapVC{
+    
+    func menuBtnBinding(){
+        menuBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
+    }
+    
+}
+
+//MARK: - Action
+private extension MapVC{
+    @objc func buttonWasTapped(){
+        present(menu!, animated: true, completion: nil)
+
+    }
+}
+//MARK: - delegate & datasource confirmation
+
 extension MapVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
