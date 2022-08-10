@@ -41,8 +41,10 @@
 		2767A294289087DF00DF34D1 /* HeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2767A292289087DF00DF34D1 /* HeaderCollectionReusableView.xib */; };
 		2767A2982890A48600DF34D1 /* FilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2767A2962890A48600DF34D1 /* FilterVC.swift */; };
 		2767A2992890A48600DF34D1 /* FilterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2767A2972890A48600DF34D1 /* FilterVC.xib */; };
-		2768DED728A3F473004C6A5B /* AddTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2768DED528A3F473004C6A5B /* AddTask.swift */; };
-		2768DED828A3F473004C6A5B /* AddTask.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2768DED628A3F473004C6A5B /* AddTask.xib */; };
+		2768DED728A3F473004C6A5B /* AddTaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2768DED528A3F473004C6A5B /* AddTaskVC.swift */; };
+		2768DED828A3F473004C6A5B /* AddTaskVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2768DED628A3F473004C6A5B /* AddTaskVC.xib */; };
+		2768DEDB28A3FE0A004C6A5B /* AddGoalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2768DED928A3FE0A004C6A5B /* AddGoalVC.swift */; };
+		2768DEDC28A3FE0A004C6A5B /* AddGoalVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2768DEDA28A3FE0A004C6A5B /* AddGoalVC.xib */; };
 		27A7375E28913F0500FD8AD9 /* ProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27A7375D28913F0500FD8AD9 /* ProgressView.xib */; };
 		27A7376028913FFF00FD8AD9 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A7375F28913FFF00FD8AD9 /* ProgressView.swift */; };
 		27A737622891403000FD8AD9 /* UIViewFromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A737612891403000FD8AD9 /* UIViewFromNib.swift */; };
@@ -192,8 +194,10 @@
 		2767A292289087DF00DF34D1 /* HeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCollectionReusableView.xib; sourceTree = "<group>"; };
 		2767A2962890A48600DF34D1 /* FilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterVC.swift; sourceTree = "<group>"; };
 		2767A2972890A48600DF34D1 /* FilterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterVC.xib; sourceTree = "<group>"; };
-		2768DED528A3F473004C6A5B /* AddTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTask.swift; sourceTree = "<group>"; };
-		2768DED628A3F473004C6A5B /* AddTask.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddTask.xib; sourceTree = "<group>"; };
+		2768DED528A3F473004C6A5B /* AddTaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskVC.swift; sourceTree = "<group>"; };
+		2768DED628A3F473004C6A5B /* AddTaskVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddTaskVC.xib; sourceTree = "<group>"; };
+		2768DED928A3FE0A004C6A5B /* AddGoalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalVC.swift; sourceTree = "<group>"; };
+		2768DEDA28A3FE0A004C6A5B /* AddGoalVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddGoalVC.xib; sourceTree = "<group>"; };
 		27A7375D28913F0500FD8AD9 /* ProgressView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgressView.xib; sourceTree = "<group>"; };
 		27A7375F28913FFF00FD8AD9 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		27A737612891403000FD8AD9 /* UIViewFromNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewFromNib.swift; sourceTree = "<group>"; };
@@ -639,8 +643,10 @@
 				27CB2073289C1CEF00E63694 /* AllResourceVC.swift */,
 				27CB2074289C1CEF00E63694 /* AllResourceVC.xib */,
 				27CB2086289D467500E63694 /* DashboardVC.swift */,
-				2768DED528A3F473004C6A5B /* AddTask.swift */,
-				2768DED628A3F473004C6A5B /* AddTask.xib */,
+				2768DED528A3F473004C6A5B /* AddTaskVC.swift */,
+				2768DED628A3F473004C6A5B /* AddTaskVC.xib */,
+				2768DED928A3FE0A004C6A5B /* AddGoalVC.swift */,
+				2768DEDA28A3FE0A004C6A5B /* AddGoalVC.xib */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -772,7 +778,7 @@
 				27C9AE58288D3CB500FA584A /* Inter-Thin-BETA.ttf in Resources */,
 				27CB2068289BBEA600E63694 /* BenchmarksCell.xib in Resources */,
 				27CB2076289C1CEF00E63694 /* AllResourceVC.xib in Resources */,
-				2768DED828A3F473004C6A5B /* AddTask.xib in Resources */,
+				2768DED828A3F473004C6A5B /* AddTaskVC.xib in Resources */,
 				27A7375E28913F0500FD8AD9 /* ProgressView.xib in Resources */,
 				2710A29A289AF485009BCE60 /* PastVentures.xib in Resources */,
 				27C9AE33288D38EA00FA584A /* LaunchScreen.storyboard in Resources */,
@@ -812,6 +818,7 @@
 				27C9AE56288D3CB500FA584A /* Inter-Medium.ttf in Resources */,
 				27B8C8FA28A1825D0011B039 /* ActivityCell.xib in Resources */,
 				27CB2081289D017D00E63694 /* VerificationVC.xib in Resources */,
+				2768DEDC28A3FE0A004C6A5B /* AddGoalVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -903,8 +910,9 @@
 				27B8C8F228A1687F0011B039 /* MapFilterList.swift in Sources */,
 				27C9AEAE288DB44600FA584A /* CategoriesCollectionViewCell.swift in Sources */,
 				27CB207A289CFC0400E63694 /* OnBoardingFrame1.swift in Sources */,
+				2768DEDB28A3FE0A004C6A5B /* AddGoalVC.swift in Sources */,
 				27A7376F2891435C00FD8AD9 /* UIViewDesignable.swift in Sources */,
-				2768DED728A3F473004C6A5B /* AddTask.swift in Sources */,
+				2768DED728A3F473004C6A5B /* AddTaskVC.swift in Sources */,
 				2706D21328913D4500546425 /* ProgressBar.swift in Sources */,
 				2710A28A28971E3B009BCE60 /* ListItem.swift in Sources */,
 				2710A28D289A5C3C009BCE60 /* TaskCell.swift in Sources */,
