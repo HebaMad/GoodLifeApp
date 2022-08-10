@@ -8,6 +8,9 @@ import UIKit
 class DonationVC: UIViewController {
     //MARK: - Outlet
 
+    @IBOutlet weak var titleTxt: UILabel!
+    @IBOutlet weak var noOfDonation: UILabel!
+    @IBOutlet weak var donationDescription: UILabel!
     @IBOutlet weak var stepsIndicator: StepIndicatorView!
     @IBOutlet weak var containerView: UIView!
     

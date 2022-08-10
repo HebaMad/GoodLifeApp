@@ -13,7 +13,7 @@ class ResourceCollectionViewCell: UICollectionViewCell,ReusableView,NibLoadableV
     @IBOutlet weak var resourceIcon: UIImageView!
     @IBOutlet weak var categoriesTitle: UILabel!
     
-    //MARK: - Life cycle
+    //MARK: - Initializer
 
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -11,6 +11,7 @@ class OnBoardingFrame2: UIViewController {
 
     //MARK: - Outlet
 
+    @IBOutlet weak var findCityBtn: UIButtonDesignable!
     
     //MARK: - Life cycle
 

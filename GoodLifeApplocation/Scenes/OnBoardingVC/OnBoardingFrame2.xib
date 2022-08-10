@@ -18,6 +18,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OnBoardingFrame2" customModule="GoodLifeApplocation" customModuleProvider="target">
             <connections>
+                <outlet property="findCityBtn" destination="eoA-dU-SBg" id="Ca9-gb-GVb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

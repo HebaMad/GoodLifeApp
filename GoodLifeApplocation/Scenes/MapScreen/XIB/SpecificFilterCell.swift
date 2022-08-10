@@ -14,8 +14,8 @@ class SpecificFilterCell: UICollectionViewCell,ReusableView,NibLoadableView   {
     @IBOutlet weak var categoriesIcon: UIImageView!
     @IBOutlet weak var categoriesTitle: UILabel!
     
-    //MARK: - Life cycle
-    
+    //MARK: - Initializer
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

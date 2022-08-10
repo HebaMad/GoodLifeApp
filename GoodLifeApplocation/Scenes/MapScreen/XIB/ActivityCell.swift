@@ -13,7 +13,7 @@ class ActivityCell: UICollectionViewCell,ReusableView,NibLoadableView {
 
     @IBOutlet weak var communityLabel: UILabel!
     
-    //MARK: - Life cycle
+    //MARK: - Initializer
 
     override func awakeFromNib() {
         super.awakeFromNib()

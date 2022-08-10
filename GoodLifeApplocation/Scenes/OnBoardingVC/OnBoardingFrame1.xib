@@ -15,6 +15,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OnBoardingFrame1" customModule="GoodLifeApplocation" customModuleProvider="target">
             <connections>
+                <outlet property="phoneNumberTxtField" destination="hPl-nd-vxK" id="qz8-Ds-B3S"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -27,25 +28,25 @@
                     <rect key="frame" x="10" y="44" width="394" height="200"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="My phone number" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M8w-oE-7ov">
-                            <rect key="frame" x="0.0" y="0.0" width="394" height="97.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="394" height="79"/>
                             <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="32"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bYg-2c-qzU">
-                            <rect key="frame" x="0.0" y="117.5" width="394" height="21.5"/>
+                            <rect key="frame" x="0.0" y="99" width="394" height="40"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Dyk-1D-YKv">
-                                    <rect key="frame" x="0.0" y="0.0" width="60" height="21.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="60" height="40"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="US +1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kjf-Ri-dDI">
-                                            <rect key="frame" x="0.0" y="0.0" width="60" height="20.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="60" height="39"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NvP-pN-Bqu">
-                                            <rect key="frame" x="0.0" y="20.5" width="60" height="1"/>
+                                            <rect key="frame" x="0.0" y="39" width="60" height="1"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="1" id="pg1-yz-RER"/>
@@ -57,7 +58,7 @@
                                     </constraints>
                                 </stackView>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hPl-nd-vxK" customClass="BottomBorderTextField" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                    <rect key="frame" x="70" y="0.0" width="324" height="21.5"/>
+                                    <rect key="frame" x="70" y="0.0" width="324" height="40"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
@@ -77,6 +78,9 @@
                                     </userDefinedRuntimeAttributes>
                                 </textField>
                             </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="oe1-Ic-rxY"/>
+                            </constraints>
                         </stackView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uCv-X0-Bqm">
                             <rect key="frame" x="0.0" y="159" width="394" height="41"/>

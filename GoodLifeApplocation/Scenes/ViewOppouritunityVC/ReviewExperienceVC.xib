@@ -16,6 +16,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReviewExperienceVC" customModule="GoodLifeApplocation" customModuleProvider="target">
             <connections>
+                <outlet property="Description" destination="uZD-st-neS" id="fuV-Av-lQS"/>
+                <outlet property="addDocumentBtn" destination="TFc-1X-HUd" id="KKe-qj-uW8"/>
+                <outlet property="coverImage" destination="5e2-82-xG1" id="tEX-TU-1Cb"/>
+                <outlet property="nextBtn" destination="Zvb-sP-y1F" id="eCd-27-eUT"/>
+                <outlet property="projectReview" destination="T99-p0-Rch" id="YuD-z9-0NL"/>
+                <outlet property="reviewRate" destination="ors-jE-gvQ" id="JSK-rq-yyw"/>
+                <outlet property="titleProjectText" destination="Gho-wA-NQy" id="b0U-pN-jAf"/>
+                <outlet property="titleTxt" destination="WiC-qg-XrO" id="V0D-wf-qD7"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -394,7 +402,7 @@ feedback!</string>
             <color red="0.2669999897480011" green="0.050999999046325684" blue="0.55699998140335083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="review star">
-            <color red="1" green="0.7803921568627451" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.77999997138977051" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

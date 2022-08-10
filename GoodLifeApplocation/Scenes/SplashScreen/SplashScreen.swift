@@ -8,6 +8,12 @@
 import UIKit
 
 class SplashScreen: UIViewController {
+    
+    //MARK: - Outlet
+
+    @IBOutlet weak var getStartedBtn: UIButtonDesignable!
+    @IBOutlet weak var loginBtn: UIButton!
+    
     //MARK: - Life cycle
 
     override func viewDidLoad() {

@@ -18,6 +18,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SplashScreen" customModule="GoodLifeApplocation" customModuleProvider="target">
             <connections>
+                <outlet property="getStartedBtn" destination="KBp-0B-aSO" id="GrH-o2-EK2"/>
+                <outlet property="loginBtn" destination="D51-2z-9Fc" id="Ruc-Rr-6Gy"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

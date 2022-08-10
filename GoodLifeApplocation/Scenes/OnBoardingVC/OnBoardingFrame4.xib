@@ -15,7 +15,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OnBoardingFrame4" customModule="GoodLifeApplocation" customModuleProvider="target">
             <connections>
+                <outlet property="biWeekelyBtn" destination="iYH-dg-dc0" id="UaL-JU-rRD"/>
+                <outlet property="dailyBtn" destination="yX9-wg-oBo" id="qjS-vo-3u9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="weekelyBtn" destination="M4U-pl-PXy" id="P9V-sY-WH8"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

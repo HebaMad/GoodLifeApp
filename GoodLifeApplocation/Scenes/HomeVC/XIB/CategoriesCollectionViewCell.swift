@@ -15,7 +15,7 @@ class CategoriesCollectionViewCell: UICollectionViewCell,ReusableView,NibLoadabl
     @IBOutlet weak var noOfCategory: UILabel!
     @IBOutlet weak var percentageOfAccomplish: UILabel!
     
-    //MARK: - Life cycle
+    //MARK: - Initializer
 
     override func awakeFromNib() {
         super.awakeFromNib()

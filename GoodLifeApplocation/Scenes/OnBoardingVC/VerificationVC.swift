@@ -8,7 +8,10 @@
 import UIKit
 
 class VerificationVC: UIViewController {
+    
+    //MARK: - Outlet
 
+    @IBOutlet weak var codeTxtField: BottomBorderTextField!
     
     //MARK: - Life cycle
 

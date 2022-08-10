@@ -19,7 +19,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DonationVC" customModule="GoodLifeApplocation" customModuleProvider="target">
             <connections>
                 <outlet property="containerView" destination="YB2-xK-5RH" id="l4C-3H-tHM"/>
+                <outlet property="donationDescription" destination="Jw4-sJ-9S5" id="4gW-Jt-g7Y"/>
+                <outlet property="noOfDonation" destination="v6k-I8-s1U" id="Rxf-RJ-Yyv"/>
                 <outlet property="stepsIndicator" destination="4Hw-Ct-XvI" id="l54-vy-tBL"/>
+                <outlet property="titleTxt" destination="dMl-cK-AFL" id="L8F-9R-Ecd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

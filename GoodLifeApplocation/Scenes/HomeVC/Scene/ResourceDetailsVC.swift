@@ -13,13 +13,10 @@ class ResourceDetailsVC: UIViewController {
     
     @IBOutlet weak var FAQuestionTable: UITableView!
     
-    
     //MARK: - Properties
     
     private var selectedIndex = -1
 
-    
-    
     //MARK: - Life cycle
     
     override func viewDidLoad() {
@@ -30,15 +27,12 @@ class ResourceDetailsVC: UIViewController {
     
     //MARK: - setup tableview
     
-    
     func setupTableView(){
         FAQuestionTable.register(ResourceDetailsCell.self)
         FAQuestionTable.delegate = self
         FAQuestionTable.dataSource = self
         FAQuestionTable.rowHeight = 60
     }
-    
-    
 }
 
 //MARK: - UITableViewDelegate,UITableViewDataSource configuration

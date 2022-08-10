@@ -15,7 +15,7 @@ class AllCategoriesCell: UITableViewCell,ReusableView, NibLoadableView {
     @IBOutlet weak var goalProgressview: UIProgressView!
     @IBOutlet weak var progressPercent: UILabel!
     
-    //MARK: - Life cycle
+    //MARK: - Initializer
 
     override func awakeFromNib() {
         super.awakeFromNib()

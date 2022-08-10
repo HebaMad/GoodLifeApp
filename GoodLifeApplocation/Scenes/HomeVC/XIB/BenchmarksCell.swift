@@ -12,7 +12,7 @@ class BenchmarksCell: UITableViewCell ,ReusableView, NibLoadableView{
 
     @IBOutlet weak var YouprogressView: UIProgressView!
     
-    //MARK: - Life cycle
+    //MARK: - Initializer
 
     override func awakeFromNib() {
         super.awakeFromNib()

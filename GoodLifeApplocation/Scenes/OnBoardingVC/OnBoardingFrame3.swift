@@ -12,6 +12,7 @@ class OnBoardingFrame3: UIViewController {
     //MARK: - Outlet
 
     
+    @IBOutlet weak var investmentAmountLabel: UILabel!
     //MARK: - Life cycle
 
     override func viewDidLoad() {

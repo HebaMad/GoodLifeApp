@@ -18,6 +18,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OnBoardingFrame3" customModule="GoodLifeApplocation" customModuleProvider="target">
             <connections>
+                <outlet property="investmentAmountLabel" destination="1dz-Dw-lwX" id="Hp8-9E-H77"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

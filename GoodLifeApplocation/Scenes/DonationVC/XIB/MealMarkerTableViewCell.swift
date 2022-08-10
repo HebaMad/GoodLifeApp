@@ -14,7 +14,7 @@ class MealMarkerTableViewCell: UITableViewCell,ReusableView,NibLoadableView {
     @IBOutlet weak var descriptionTxt: UILabel!
     @IBOutlet weak var titleTxt: UILabel!
     
-    //MARK: - Life cycle
+    //MARK: - Initializer
 
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -9,7 +9,11 @@ import UIKit
 
 class OnBoardingFrame4: UIViewController {
 
-    
+    //MARK: - Outlet
+
+    @IBOutlet weak var biWeekelyBtn: UIButtonDesignable!
+    @IBOutlet weak var weekelyBtn: UIButtonDesignable!
+    @IBOutlet weak var dailyBtn: UIButtonDesignable!
     //MARK: - Life cycle
 
     override func viewDidLoad() {

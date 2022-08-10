@@ -8,6 +8,8 @@
 import UIKit
 
 class SubscriptionCollectionViewCell: UICollectionViewCell,ReusableView,NibLoadableView   {
+    
+    //MARK: - Initializer
 
     override func awakeFromNib() {
         super.awakeFromNib()

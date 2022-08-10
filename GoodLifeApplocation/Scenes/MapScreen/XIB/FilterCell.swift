@@ -13,7 +13,7 @@ class FilterCell: UICollectionViewCell,ReusableView,NibLoadableView   {
     
     @IBOutlet weak var categoriesFilterBtn: UIButtonDesignable!
     
-    //MARK: - Life cycle
+    //MARK: - Initializer
 
     override func awakeFromNib() {
         super.awakeFromNib()

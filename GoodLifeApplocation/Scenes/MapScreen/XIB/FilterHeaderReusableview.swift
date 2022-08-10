@@ -17,7 +17,7 @@ class FilterHeaderReusableview: UICollectionReusableView,ReusableView,NibLoadabl
 
     static let headerIdentifier = "titleCollectionview"
     
-    //MARK: - Life cycle
+    //MARK: - Initializer
 
     override func awakeFromNib() {
         super.awakeFromNib()

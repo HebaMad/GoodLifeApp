@@ -12,10 +12,8 @@ class GoalAndBenchmarkCell: UITableViewCell,ReusableView,NibLoadableView  {
     @IBOutlet weak var goalTitle: UILabel!
     @IBOutlet weak var goalDescription: UILabel!
     @IBOutlet weak var noOfDate: UILabel!
-    
-    
-    
-    //MARK: - Life cycle
+        
+    //MARK: - Initializer
 
     override func awakeFromNib() {
         super.awakeFromNib()

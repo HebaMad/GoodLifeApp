@@ -16,7 +16,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PastVentures" customModule="GoodLifeApplocation" customModuleProvider="target">
             <connections>
+                <outlet property="Description" destination="1C1-Dl-hFJ" id="7H2-iH-XeW"/>
+                <outlet property="coverImage" destination="neD-0I-tRV" id="MMt-H0-tUu"/>
+                <outlet property="descriptionText" destination="DSU-R4-SA4" id="pRh-F6-Vgj"/>
+                <outlet property="monthlyRevenuTxt" destination="8SK-uA-sNv" id="Hn3-Ts-eqC"/>
+                <outlet property="titleProjectText" destination="rEj-CB-rG8" id="Tkf-A4-oAq"/>
+                <outlet property="titleTxt" destination="kh3-EJ-1Re" id="T28-PM-953"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="weeklyTimeSelection" destination="bp4-2m-2hR" id="tDS-Vr-pXq"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

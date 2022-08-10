@@ -14,7 +14,7 @@ class ResourceCell: UITableViewCell,ReusableView, NibLoadableView {
     @IBOutlet weak var resourceDetails: UILabel!
     
     
-    //MARK: - Life cycle
+    //MARK: - Initializer
 
     override func awakeFromNib() {
         super.awakeFromNib()

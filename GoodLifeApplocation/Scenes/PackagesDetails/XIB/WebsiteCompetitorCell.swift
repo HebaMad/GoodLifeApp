@@ -1,17 +1,19 @@
 //
-//  PastGoalsCell.swift
+//  WebsiteCompetitorCell.swift
 //  GoodLifeApplocation
 //
-//  Created by heba isaa on 04/08/2022.
+//  Created by heba isaa on 10/08/2022.
 //
 
 import UIKit
 
-class PastGoalsCell: UITableViewCell ,ReusableView, NibLoadableView{
+class WebsiteCompetitorCell: UITableViewCell, ReusableView, NibLoadableView {
+    
     //MARK: - Outlet
-
-    @IBOutlet weak var goalDetailsText: UILabel!
-    @IBOutlet weak var goalTitle: UILabel!
+    
+    @IBOutlet weak var websiteNameText: UILabel!
+    @IBOutlet weak var modelNumber: UILabel!
+    @IBOutlet weak var websiteInfo: UILabel!
     
     //MARK: - Initializer
 
@@ -19,14 +21,11 @@ class PastGoalsCell: UITableViewCell ,ReusableView, NibLoadableView{
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
-    
-    //MARK: - configuration cell
-
     
 }

@@ -16,7 +16,8 @@ class HeaderCollectionReusableView: UICollectionReusableView {
     //MARK: - Outlet
 
     @IBOutlet weak var headerTitleLabel: UILabel!
-    //MARK: - Life cycle
+    
+    //MARK: - Initializer
 
     override func awakeFromNib() {
         super.awakeFromNib()

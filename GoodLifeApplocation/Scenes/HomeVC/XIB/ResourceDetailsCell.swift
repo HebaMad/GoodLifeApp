@@ -13,7 +13,7 @@ class ResourceDetailsCell: UITableViewCell ,ReusableView, NibLoadableView{
     @IBOutlet weak var showHideButton: UIButton!
     @IBOutlet weak var detailsLabel: UILabel!
     
-    //MARK: - Life cycle
+    //MARK: - Initializer
 
     override func awakeFromNib() {
         super.awakeFromNib()

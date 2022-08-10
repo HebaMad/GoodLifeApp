@@ -20,9 +20,7 @@ class AllResourceVC: UIViewController {
 
     setupTableView()
 }
-    
     //MARK: - Setup table view
-
 
 func setupTableView(){
     AllresourceTable.register(ResourceCell.self)
