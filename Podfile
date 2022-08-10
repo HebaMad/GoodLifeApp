@@ -9,5 +9,5 @@ target 'GoodLifeApplocation' do
   pod 'IQKeyboardManagerSwift', '6.3.0'
   pod 'SideMenu'
   pod 'XLPagerTabStrip', '~> 9.0'
-
+  pod 'Charts'
 end
