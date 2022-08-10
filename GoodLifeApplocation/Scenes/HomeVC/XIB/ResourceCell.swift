@@ -10,6 +10,8 @@ import UIKit
 class ResourceCell: UITableViewCell,ReusableView, NibLoadableView {
     //MARK: - Outlet
 
+    @IBOutlet weak var resourceTitleText: UILabel!
+    @IBOutlet weak var resourceDetails: UILabel!
     
     
     //MARK: - Life cycle

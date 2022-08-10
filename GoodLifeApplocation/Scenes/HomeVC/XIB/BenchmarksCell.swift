@@ -10,6 +10,7 @@ import UIKit
 class BenchmarksCell: UITableViewCell ,ReusableView, NibLoadableView{
     //MARK: - Outlet
 
+    @IBOutlet weak var YouprogressView: UIProgressView!
     
     //MARK: - Life cycle
 

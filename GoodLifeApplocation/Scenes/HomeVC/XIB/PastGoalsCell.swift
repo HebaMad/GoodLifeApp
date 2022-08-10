@@ -10,6 +10,8 @@ import UIKit
 class PastGoalsCell: UITableViewCell ,ReusableView, NibLoadableView{
     //MARK: - Outlet
 
+    @IBOutlet weak var goalDetailsText: UILabel!
+    @IBOutlet weak var goalTitle: UILabel!
     
     //MARK: - Life cycle
 

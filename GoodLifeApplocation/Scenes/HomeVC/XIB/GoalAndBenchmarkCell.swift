@@ -9,7 +9,10 @@ import UIKit
 
 class GoalAndBenchmarkCell: UITableViewCell,ReusableView,NibLoadableView  {
     //MARK: - Outlet
-
+    @IBOutlet weak var goalTitle: UILabel!
+    @IBOutlet weak var goalDescription: UILabel!
+    @IBOutlet weak var noOfDate: UILabel!
+    
     
     
     //MARK: - Life cycle

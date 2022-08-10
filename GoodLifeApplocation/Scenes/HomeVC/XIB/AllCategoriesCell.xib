@@ -126,6 +126,12 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="categoryTitleText" destination="9E3-wF-NRR" id="cus-2K-SMo"/>
+                <outlet property="goalProgressview" destination="UTn-TA-LJP" id="9UD-2T-tdZ"/>
+                <outlet property="noOfGoal" destination="9E3-wF-NRR" id="7xD-ii-Qrx"/>
+                <outlet property="progressPercent" destination="bfe-Da-zKw" id="F68-z3-z3x"/>
+            </connections>
             <point key="canvasLocation" x="122.46376811594205" y="122.20982142857142"/>
         </tableViewCell>
     </objects>

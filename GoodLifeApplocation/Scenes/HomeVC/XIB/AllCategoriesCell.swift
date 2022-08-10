@@ -10,6 +10,10 @@ import UIKit
 class AllCategoriesCell: UITableViewCell,ReusableView, NibLoadableView {
     //MARK: - Outlet
 
+    @IBOutlet weak var categoryTitleText: UILabel!
+    @IBOutlet weak var noOfGoal: UILabel!
+    @IBOutlet weak var goalProgressview: UIProgressView!
+    @IBOutlet weak var progressPercent: UILabel!
     
     //MARK: - Life cycle
 

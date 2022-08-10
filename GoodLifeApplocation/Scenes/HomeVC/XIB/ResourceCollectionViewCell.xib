@@ -76,6 +76,7 @@ Manager</string>
             <size key="customSize" width="235" height="158"/>
             <connections>
                 <outlet property="categoriesTitle" destination="w6x-Qo-KqK" id="tPW-a6-kSe"/>
+                <outlet property="resourceIcon" destination="0VX-VE-eME" id="bPX-r1-3R6"/>
             </connections>
             <point key="canvasLocation" x="270.28985507246381" y="144.64285714285714"/>
         </collectionViewCell>

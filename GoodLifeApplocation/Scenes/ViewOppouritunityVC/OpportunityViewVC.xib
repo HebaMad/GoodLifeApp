@@ -15,7 +15,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OpportunityViewVC" customModule="GoodLifeApplocation" customModuleProvider="target">
             <connections>
+                <outlet property="AskHelpingBtn" destination="ipf-qo-auH" id="ein-qz-egI"/>
+                <outlet property="AskingExperienceBtn" destination="cEU-5L-5ht" id="Pj8-Bv-vrX"/>
+                <outlet property="haveIdeaBtn" destination="BF8-vk-vuk" id="Zk7-nJ-yxF"/>
+                <outlet property="pastVenturesBtn" destination="USK-8L-tgr" id="AHr-7o-1jG"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="volunteerOpportunityBtn" destination="c6k-Wr-ShQ" id="0tB-M7-KSC"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

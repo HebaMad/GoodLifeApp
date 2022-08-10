@@ -147,6 +147,9 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="YouprogressView" destination="E9z-Bf-k3S" id="ajX-Pw-BZ6"/>
+            </connections>
             <point key="canvasLocation" x="170.28985507246378" y="154.35267857142856"/>
         </tableViewCell>
     </objects>

@@ -185,6 +185,11 @@ lessons</string>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="goalDescription" destination="5Hu-pQ-292" id="dX0-3R-Ghg"/>
+                <outlet property="goalTitle" destination="ihT-eB-wh0" id="9OU-Ef-STC"/>
+                <outlet property="noOfDate" destination="GTd-h6-k2J" id="Okc-gE-a9p"/>
+            </connections>
             <point key="canvasLocation" x="166.66666666666669" y="143.97321428571428"/>
         </tableViewCell>
     </objects>

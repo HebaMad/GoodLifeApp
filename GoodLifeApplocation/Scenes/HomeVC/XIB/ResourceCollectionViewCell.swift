@@ -10,6 +10,7 @@ import UIKit
 class ResourceCollectionViewCell: UICollectionViewCell,ReusableView,NibLoadableView  {
     //MARK: - Outlet
 
+    @IBOutlet weak var resourceIcon: UIImageView!
     @IBOutlet weak var categoriesTitle: UILabel!
     
     //MARK: - Life cycle
