@@ -8,26 +8,18 @@
 import UIKit
 
 class OpportunityViewVC: UIViewController {
+    
+    //MARK: - Outlet
+
+    
+    
+    //MARK: - Life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
 
-    @IBAction func PastVenturesTapped(_ sender: Any) {
-    }
-    
-    @IBAction func VolunteerOpportunity(_ sender: Any) {
-    }
-    
-    @IBAction func AskHelpTapped(_ sender: Any) {
-    }
-    
-    @IBAction func AddMinistryIdeaAction(_ sender: Any) {
-    }
-    
-    @IBAction func AddFileAction(_ sender: Any) {
-    }
-    
+
     
 }

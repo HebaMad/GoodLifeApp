@@ -20,6 +20,7 @@ class FilterVC: UIViewController {
     @IBOutlet weak var AmountOfTechnologyBtn: UIButton!
     
     @IBOutlet weak var investmentAmountTxt: UILabel!
+    
     //MARK: - Life CYCLE
 
     override func viewDidLoad() {
@@ -28,9 +29,6 @@ class FilterVC: UIViewController {
     }
     //MARK: - Private Handler
 
-
-    @IBAction func filterBtn(_ sender: Any) {
-    }
 
 
 }

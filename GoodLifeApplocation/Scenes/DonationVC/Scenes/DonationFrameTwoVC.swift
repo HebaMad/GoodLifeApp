@@ -8,8 +8,13 @@
 import UIKit
 
 class DonationFrameTwoVC: UIViewController {
+    
+    //MARK: - Outlet
+
     @IBOutlet weak var mealMakerTableView: UITableView!
     
+    //MARK: - Life cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

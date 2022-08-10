@@ -13,6 +13,7 @@ class GeneralFinicialPagerVC: UIViewController, IndicatorInfoProvider {
     
     var itemInfo: IndicatorInfo = "Finicial"
 
+    //MARK: - Life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()

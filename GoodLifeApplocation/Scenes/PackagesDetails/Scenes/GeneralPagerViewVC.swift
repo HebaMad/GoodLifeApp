@@ -9,15 +9,16 @@ import UIKit
 import XLPagerTabStrip
 
 class GeneralPagerViewVC: ButtonBarPagerTabStripViewController {
-
+    //MARK: - Life cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupPagerTab()
         
     }
     
-//MARK: - SetupPagerTab
+    //MARK: - SetupPagerTab
     
     private func setupPagerTab(){
         settings.style.buttonBarBackgroundColor = .blue
@@ -30,8 +31,8 @@ class GeneralPagerViewVC: ButtonBarPagerTabStripViewController {
         settings.style.buttonBarItemsShouldFillAvailableWidth = true
         settings.style.buttonBarLeftContentInset = 0
         settings.style.buttonBarRightContentInset = 0
-    
-
+        
+        
         changeCurrentIndexProgressive = { [weak self] (oldCell: ButtonBarViewCell?, newCell: ButtonBarViewCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in
             guard changeCurrentIndex == true else { return }
             oldCell?.label.textColor = UIColor.init(named: "hex")
@@ -43,21 +44,21 @@ class GeneralPagerViewVC: ButtonBarPagerTabStripViewController {
     
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-   
+        
         
         let first = GeneralFinicialPagerVC()
         first.itemInfo = "Finicial"
         
         
         let second = GeneralMarketingPageVC()
-    second.itemInfo = "Marketing"
+        second.itemInfo = "Marketing"
         
         let third = GeneralLiturgicalPageVC()
-           
-     third.itemInfo = "Liturgical"
-
-       
-         return [first, second,third]
-     }
-
+        
+        third.itemInfo = "Liturgical"
+        
+        
+        return [first, second,third]
+    }
+    
 }

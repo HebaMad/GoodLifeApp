@@ -10,6 +10,8 @@ import UIKit
 
 struct HomeCategories{
     
+    //MARK: - Properties
+
     var AllCategories:[categoriesList]{
         [categories, task,resource]
 

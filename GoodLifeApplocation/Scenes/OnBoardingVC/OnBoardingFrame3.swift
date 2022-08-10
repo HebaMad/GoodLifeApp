@@ -9,16 +9,17 @@ import UIKit
 
 class OnBoardingFrame3: UIViewController {
 
+    //MARK: - Outlet
+
+    
+    //MARK: - Life cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func continueBtn(_ sender: Any) {
-    }
-    
-    @IBAction func skipBtn(_ sender: Any) {
-    }
+
 
 }

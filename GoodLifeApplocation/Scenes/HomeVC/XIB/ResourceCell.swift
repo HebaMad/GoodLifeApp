@@ -8,6 +8,11 @@
 import UIKit
 
 class ResourceCell: UITableViewCell,ReusableView, NibLoadableView {
+    //MARK: - Outlet
+
+    
+    
+    //MARK: - Life cycle
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,5 +24,8 @@ class ResourceCell: UITableViewCell,ReusableView, NibLoadableView {
 
         // Configure the view for the selected state
     }
+    
+    //MARK: - configuration cell
+
     
 }

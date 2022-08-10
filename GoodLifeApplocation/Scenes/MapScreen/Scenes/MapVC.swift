@@ -22,6 +22,7 @@ class MapVC: UIViewController {
     private let sections = MapFilterList.shared.AllCategories
 
     private var menu :SideMenuNavigationController?
+    private var categories=["Poverty","Orphans","Widows","Neighbor"]
 
     //MARK: - Life cycle
     override func viewDidLoad() {
@@ -197,6 +198,7 @@ extension MapVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollection
             }
         }else {
             let cell :SpecificFilterCell = collectionView.dequeueReusableCell(for: indexPath)
+            cell.setupCell(icon: categories[indexPath.row])
             return cell
         }
     }

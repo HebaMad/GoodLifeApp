@@ -21,7 +21,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="118" height="74"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rcM-eN-8ml">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rcM-eN-8ml" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
                         <rect key="frame" x="4" y="4" width="110" height="66"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ob4-8R-sk7">
@@ -62,6 +62,17 @@
                             <constraint firstAttribute="bottom" secondItem="Ob4-8R-sk7" secondAttribute="bottom" id="Zme-bu-AVq"/>
                             <constraint firstItem="Ob4-8R-sk7" firstAttribute="top" secondItem="rcM-eN-8ml" secondAttribute="top" id="wAk-kR-Lwl"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
             </view>
@@ -73,6 +84,10 @@
                 <constraint firstAttribute="bottom" secondItem="rcM-eN-8ml" secondAttribute="bottom" constant="4" id="jyL-hn-idY"/>
             </constraints>
             <size key="customSize" width="118" height="74"/>
+            <connections>
+                <outlet property="categoriesIcon" destination="kVx-98-1Qf" id="tGi-fA-FZV"/>
+                <outlet property="categoriesTitle" destination="6vN-tK-LFO" id="5ZT-On-hGu"/>
+            </connections>
             <point key="canvasLocation" x="186.95652173913044" y="131.25"/>
         </collectionViewCell>
     </objects>

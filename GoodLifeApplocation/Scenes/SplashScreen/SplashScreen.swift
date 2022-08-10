@@ -8,6 +8,7 @@
 import UIKit
 
 class SplashScreen: UIViewController {
+    //MARK: - Life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,9 +16,4 @@ class SplashScreen: UIViewController {
     }
 
 
-    @IBAction func getStartedBtn(_ sender: Any) {
-    }
-    
-    @IBAction func loginBtn(_ sender: Any) {
-    }
 }

@@ -8,12 +8,18 @@
 import UIKit
 
 class TaskVC: UIViewController {
+    //MARK: - Outlet
 
     @IBOutlet weak var TaskTableView: UITableView!
     @IBOutlet weak var taskSegmentControl: UISegmentedControl!
     
+    
+    //MARK: - Properties
+
     var segmentIndex = 0
     
+    //MARK: - Life cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,11 +27,17 @@ class TaskVC: UIViewController {
         taskSegmentControl.addTarget(self, action: #selector(segmentControlSetup), for: .valueChanged)
     }
     
+    
+    //MARK: - setup tableview
+
     func setupTableView(){
         TaskTableView.register(TaskCell.self)
         TaskTableView.delegate = self
         TaskTableView.dataSource = self
     }
+    
+    //MARK: - segment control configration
+
     @objc func segmentControlSetup(){
         switch taskSegmentControl.selectedSegmentIndex{
         case 0 :
@@ -44,6 +56,9 @@ class TaskVC: UIViewController {
         }
     }
 }
+
+//MARK: - UITableViewDelegate,UITableViewDataSource
+
 extension TaskVC:UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         5

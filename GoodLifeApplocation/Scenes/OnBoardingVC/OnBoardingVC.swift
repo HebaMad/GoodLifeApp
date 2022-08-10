@@ -8,30 +8,41 @@
 import UIKit
 
 class OnBoardingVC: UIViewController {
+    //MARK: - Outlet
     
     @IBOutlet weak var stepsIndicator: StepIndicatorView!
-    
     @IBOutlet weak var continueAction: UIButtonDesignable!
     @IBOutlet weak var contsinerView: UIView!
     @IBOutlet weak var skipAction: UIButton!
+    
+    //MARK: - Properties
+    
     var onBoardingScreen = 0
+    
+    //MARK: - Life cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         checkStatus()
-
+        
     }
-
-
+    
+    //MARK: - Private Handler
+    
     @IBAction func continueBtn(_ sender: Any) {
         checkStatus()
     }
+    
+    
+    //MARK: - Containerview configuration
+    
     func checkStatus(){
         switch self.onBoardingScreen{
-
+            
         case 0:
             self.contsinerView.subviews.first?.removeFromSuperview()
-
+            
             stepsIndicator.currentStep = 0
             let vc=OnBoardingFrame1()
             self.addChild(vc)
@@ -41,7 +52,7 @@ class OnBoardingVC: UIViewController {
             vc.view.frame = contsinerView.bounds
         case 1:
             self.contsinerView.subviews.first?.removeFromSuperview()
-
+            
             stepsIndicator.currentStep = 1
             let vc=VerificationVC()
             self.addChild(vc)
@@ -51,9 +62,9 @@ class OnBoardingVC: UIViewController {
             vc.view.frame = contsinerView.bounds
         case 2:
             self.contsinerView.subviews.first?.removeFromSuperview()
-
+            
             stepsIndicator.currentStep = 2
-
+            
             let vc=OnBoardingFrame2()
             self.addChild(vc)
             self.contsinerView.addSubview(vc.view)
@@ -62,9 +73,9 @@ class OnBoardingVC: UIViewController {
             vc.view.frame = contsinerView.bounds
         case 3:
             self.contsinerView.subviews.first?.removeFromSuperview()
-
+            
             stepsIndicator.currentStep = 3
-
+            
             let vc=OnBoardingFrame3()
             self.addChild(vc)
             self.contsinerView.addSubview(vc.view)
@@ -74,9 +85,9 @@ class OnBoardingVC: UIViewController {
             
         case 4:
             self.contsinerView.subviews.first?.removeFromSuperview()
-
+            
             stepsIndicator.currentStep = 4
-
+            
             let vc=OnBoardingFrame4()
             self.addChild(vc)
             self.contsinerView.addSubview(vc.view)
@@ -85,21 +96,21 @@ class OnBoardingVC: UIViewController {
             vc.view.frame = contsinerView.bounds
         case 5:
             self.contsinerView.subviews.first?.removeFromSuperview()
-
+            
             stepsIndicator.currentStep = 5
-
+            
             let vc=OnBoardingFrame5()
             self.addChild(vc)
             skipAction.isEnabled = false
             skipAction.titleLabel?.textColor = .clear
-//            skipAction.setTitleColor(.clear, for: .normal)
+            //            skipAction.setTitleColor(.clear, for: .normal)
             continueAction.setTitle("Welcome!", for: .normal)
             self.contsinerView.addSubview(vc.view)
             self.onBoardingScreen=6
-
+            
         default:
-  print("test")
+            print("test")
         }
     }
-
+    
 }

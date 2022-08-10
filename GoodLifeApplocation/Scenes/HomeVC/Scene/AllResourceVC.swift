@@ -9,14 +9,20 @@ import UIKit
 
 class AllResourceVC: UIViewController {
 
+    //MARK: - Outlet
+
     @IBOutlet weak var AllresourceTable: UITableView!
     
-    
+    //MARK: - Life cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
     setupTableView()
 }
+    
+    //MARK: - Setup table view
+
 
 func setupTableView(){
     AllresourceTable.register(ResourceCell.self)
@@ -25,6 +31,9 @@ func setupTableView(){
 }
 
 }
+
+//MARK: - UITableViewDelegate,UITableViewDataSource configuration
+
 extension AllResourceVC:UITableViewDelegate, UITableViewDataSource{
 func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     5

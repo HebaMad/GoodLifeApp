@@ -8,16 +8,23 @@
 import UIKit
 
 class HeaderCollectionReusableView: UICollectionReusableView {
+    
+    //MARK: - Properties
+
     static let headerIdentifier = "titleCollectionview"
     
+    //MARK: - Outlet
 
     @IBOutlet weak var headerTitleLabel: UILabel!
-    
+    //MARK: - Life cycle
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
+    //MARK: - Configuration cell
+
     func setup(_ title: String) {
         headerTitleLabel.text = title
     }

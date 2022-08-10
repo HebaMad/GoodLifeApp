@@ -8,14 +8,16 @@
 import UIKit
 import SideMenu
 class DashboardVC: UIViewController {
+    //MARK: - Outlet
 
     @IBOutlet weak var elementCollectionView: UICollectionView!
-    private let sections = HomeCategories.shared.AllCategories
     @IBOutlet weak var menuBtn: UIButton!
     
     
     //MARK: - properties
     private var menu :SideMenuNavigationController?
+    private let sections = HomeCategories.shared.AllCategories
+
 
     //MARK: - Life cycle
     
@@ -32,7 +34,8 @@ class DashboardVC: UIViewController {
         changeSideMenuSide()
     }
     
-    
+    //MARK: - Side menu setup
+
     private func changeSideMenuSide(){
        
                menu?.leftSide = true
@@ -70,7 +73,8 @@ class DashboardVC: UIViewController {
     }
 
     
-    
+    //MARK: - CompositionalLayout setup
+
     private func createCompositionalLayout() -> UICollectionViewCompositionalLayout {
         UICollectionViewCompositionalLayout { [weak self] sectionIndex, layoutEnviroment in
             guard let self = self  else { return nil }
@@ -158,7 +162,7 @@ private extension DashboardVC{
 }
 
 
-//MARK: - Delegate & Datasource
+//MARK: - UICollectionViewDelegate,DataSource & DelegateFlowLayout configuration
 
 extension DashboardVC: UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
     

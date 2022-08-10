@@ -9,6 +9,9 @@ import UIKit
 
 class OnBoardingFrame4: UIViewController {
 
+    
+    //MARK: - Life cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -16,10 +19,5 @@ class OnBoardingFrame4: UIViewController {
     }
 
 
-    @IBAction func continueBtn(_ sender: Any) {
-    }
-    
-    @IBAction func skipBtn(_ sender: Any) {
-    }
 
 }

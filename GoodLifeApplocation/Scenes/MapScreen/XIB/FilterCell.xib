@@ -55,6 +55,9 @@
                 <constraint firstItem="SqH-zQ-aKd" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="szz-pt-uNL"/>
             </constraints>
             <size key="customSize" width="74" height="70"/>
+            <connections>
+                <outlet property="categoriesFilterBtn" destination="SqH-zQ-aKd" id="fVu-go-gec"/>
+            </connections>
             <point key="canvasLocation" x="153.62318840579712" y="130.58035714285714"/>
         </collectionViewCell>
     </objects>

@@ -9,8 +9,10 @@ import UIKit
 
 class DonationFourthFrame: UIViewController {
     
+    
+    //MARK: - Outlet
+
     @IBOutlet weak var orderImage: UIImageViewDesignable!
-    //MARK: - OUTLET
     
     
     

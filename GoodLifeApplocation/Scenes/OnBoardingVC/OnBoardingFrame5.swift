@@ -9,6 +9,8 @@ import UIKit
 
 class OnBoardingFrame5: UIViewController {
 
+    //MARK: - Life cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -16,8 +18,6 @@ class OnBoardingFrame5: UIViewController {
     }
 
 
-    @IBAction func welcomeBtn(_ sender: Any) {
-    }
     
  
 }

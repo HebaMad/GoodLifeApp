@@ -8,15 +8,20 @@
 import UIKit
 
 class GoalAndBenchmarkVC: UIViewController {
-var selectedSegment = 0
         
-    
+    //MARK: - Outlet
+
     @IBOutlet weak var GoalSegmentControl: UISegmentedControl!
     
     @IBOutlet weak var goalAndBenchmarkTableView: UITableView!
     
+    //MARK: - Properties
+    
+    var selectedSegment = 0
     var selectedCell:UITableViewCell = UITableViewCell()
     
+    //MARK: - Life cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,7 +31,8 @@ var selectedSegment = 0
         GoalSegmentControl.addTarget(self, action: #selector(segmentControlSetup), for: .valueChanged)
  
     }
-    
+    //MARK: - segment control configration
+
     
    @objc func segmentControlSetup(){
        switch GoalSegmentControl.selectedSegmentIndex{
@@ -51,6 +57,9 @@ var selectedSegment = 0
         }
     }
     
+    
+    //MARK: - setup tableview
+
     func setupTable(){
         goalAndBenchmarkTableView.delegate = self
         goalAndBenchmarkTableView.dataSource = self
@@ -59,6 +68,9 @@ var selectedSegment = 0
 
 
 }
+
+//MARK: - UITableViewDelegate,UITableViewDataSource configuration
+
 extension GoalAndBenchmarkVC:UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         5

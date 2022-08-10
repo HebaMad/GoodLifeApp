@@ -6,9 +6,13 @@
 import UIKit
 
 class DonationVC: UIViewController {
+    //MARK: - Outlet
 
     @IBOutlet weak var stepsIndicator: StepIndicatorView!
     @IBOutlet weak var containerView: UIView!
+    
+    //MARK: - Life cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +25,8 @@ class DonationVC: UIViewController {
         notificationcenterSetup()
     }
     
-    
+    //MARK: - Notification center setup
+
     func notificationcenterSetup(){
         NotificationCenter.default.addObserver(forName: .init(rawValue: "GoodLife"), object: nil, queue: .main) { notify in
             guard let myString = notify.object as? Int else { return }

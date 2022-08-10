@@ -8,33 +8,53 @@
 import UIKit
 
 class ResourceDetailsVC: UIViewController {
+    
+    //MARK: - Outlet
+    
+    @IBOutlet weak var FAQuestionTable: UITableView!
+    
+    
+    //MARK: - Properties
+    
     private var selectedIndex = -1
 
-    @IBOutlet weak var FAQuestionTable: UITableView!
+    
+    
+    //MARK: - Life cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-    setupTableView()
+        
+        setupTableView()
+    }
+    
+    //MARK: - setup tableview
+    
+    
+    func setupTableView(){
+        FAQuestionTable.register(ResourceDetailsCell.self)
+        FAQuestionTable.delegate = self
+        FAQuestionTable.dataSource = self
+        FAQuestionTable.rowHeight = 60
+    }
+    
+    
 }
 
-func setupTableView(){
-    FAQuestionTable.register(ResourceDetailsCell.self)
-    FAQuestionTable.delegate = self
-    FAQuestionTable.dataSource = self
-    FAQuestionTable.rowHeight = 60
-}
+//MARK: - UITableViewDelegate,UITableViewDataSource configuration
 
-}
 extension ResourceDetailsVC:UITableViewDelegate, UITableViewDataSource{
-func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    5
-}
-
-func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell:ResourceDetailsCell = tableView.dequeueReusableCell(for: indexPath)
-    return cell
-}
-
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        5
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell:ResourceDetailsCell = tableView.dequeueReusableCell(for: indexPath)
+        return cell
+    }
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! ResourceDetailsCell
@@ -59,5 +79,5 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
         return  60
     }
     
-
+    
 }

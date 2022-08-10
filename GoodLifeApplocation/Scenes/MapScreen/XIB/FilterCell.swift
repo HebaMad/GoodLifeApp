@@ -8,10 +8,16 @@
 import UIKit
 
 class FilterCell: UICollectionViewCell,ReusableView,NibLoadableView   {
+    
+    //MARK: - Outlet
+    
+    @IBOutlet weak var categoriesFilterBtn: UIButtonDesignable!
+    
+    //MARK: - Life cycle
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
     }
 
 }

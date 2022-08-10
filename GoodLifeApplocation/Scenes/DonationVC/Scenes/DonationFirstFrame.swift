@@ -12,6 +12,8 @@ class DonationFirstFrame: UIViewController {
     //MARK: - Outlets
     @IBOutlet var FundCollectionView: UICollectionView!
     private let sections = MockData.shared.pageData
+    
+    //MARK: - Life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +29,7 @@ class DonationFirstFrame: UIViewController {
         FundCollectionView.reloadData()
     }
 
-    //MARK: - Helper Method
+    //MARK: -  setup UICollectionViewCompositionalLayout
     private func createCompositionalLayout() -> UICollectionViewCompositionalLayout {
         UICollectionViewCompositionalLayout { [weak self] sectionIndex, layoutEnviroment in
             guard let self = self  else { return nil }
@@ -80,7 +82,7 @@ class DonationFirstFrame: UIViewController {
 
 }
 
-//MARK: - UICollectionViewDataSource Methods
+//MARK: - UICollectionViewDataSource ,Delegate ,DelegateFlowLayout confirmation
 extension DonationFirstFrame: UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {

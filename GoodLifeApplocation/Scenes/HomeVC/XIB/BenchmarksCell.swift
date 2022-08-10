@@ -8,6 +8,10 @@
 import UIKit
 
 class BenchmarksCell: UITableViewCell ,ReusableView, NibLoadableView{
+    //MARK: - Outlet
+
+    
+    //MARK: - Life cycle
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,4 +22,6 @@ class BenchmarksCell: UITableViewCell ,ReusableView, NibLoadableView{
 
     }
     
+    //MARK: - configuration cell
+
 }

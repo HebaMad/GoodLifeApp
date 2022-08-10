@@ -8,10 +8,14 @@
 import UIKit
 
 class TaskCell: UITableViewCell ,ReusableView,NibLoadableView {
+    //MARK: - Outlet
 
     @IBOutlet weak var timeLimit: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var MarkBtn: UIButton!
+    
+    //MARK: - Life cycle
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,6 +27,8 @@ class TaskCell: UITableViewCell ,ReusableView,NibLoadableView {
         // Configure the view for the selected state
     }
     
+    //MARK: - configuration cell
+
     func configureCell(iconSystem:UIImage,tint:UIColor){
         MarkBtn.setBackgroundImage(iconSystem, for: .normal)
         MarkBtn.tintColor = tint

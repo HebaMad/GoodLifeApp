@@ -16,10 +16,15 @@ class TaskCollectionViewCell: UICollectionViewCell,ReusableView,NibLoadableView 
     @IBOutlet weak var time: UILabel!
     @IBOutlet weak var startBtn: UIButtonDesignable!
     
+    //MARK: - Life cycle
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
+    
+    //MARK: - configuration cell
+
     func setup(_ item: listData) {
         titleTxt.text = item.title
     }

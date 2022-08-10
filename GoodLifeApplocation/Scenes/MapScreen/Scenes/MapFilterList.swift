@@ -10,6 +10,8 @@ import UIKit
 
 struct MapFilterList{
     
+    //MARK: - Properties
+    
     var AllCategories:[FilterList]{
         [recentlyViewed,recommendedMinistries ]
 

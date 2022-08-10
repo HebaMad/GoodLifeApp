@@ -8,13 +8,24 @@
 import UIKit
 
 class FilterHeaderReusableview: UICollectionReusableView,ReusableView,NibLoadableView {
+    
+    //MARK: - Outlet
+
     @IBOutlet weak var headerTitleLabel: UILabel!
+    
+    //MARK: - Properties
+
     static let headerIdentifier = "titleCollectionview"
+    
+    //MARK: - Life cycle
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
+    
+    //MARK: - configuration
+
     func setup(_ title: String) {
         headerTitleLabel.text = title
     }

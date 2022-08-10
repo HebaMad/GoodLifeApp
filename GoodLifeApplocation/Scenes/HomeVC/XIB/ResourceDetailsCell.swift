@@ -8,9 +8,13 @@
 import UIKit
 
 class ResourceDetailsCell: UITableViewCell ,ReusableView, NibLoadableView{
+    //MARK: - Outlet
 
     @IBOutlet weak var showHideButton: UIButton!
     @IBOutlet weak var detailsLabel: UILabel!
+    
+    //MARK: - Life cycle
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,5 +25,7 @@ class ResourceDetailsCell: UITableViewCell ,ReusableView, NibLoadableView{
 
         detailsLabel.isHidden = true
     }
+    //MARK: - configuration cell
+
     
 }

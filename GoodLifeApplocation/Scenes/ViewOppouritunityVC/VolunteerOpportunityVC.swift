@@ -8,6 +8,7 @@
 import UIKit
 
 class VolunteerOpportunityVC: UIViewController {
+    //MARK: - Outlet
 
     @IBOutlet weak var eventTimeTxt: UITextField!
     @IBOutlet weak var eventDayTxt: UITextField!
@@ -15,6 +16,8 @@ class VolunteerOpportunityVC: UIViewController {
     @IBOutlet weak var locationOfEvent: UITextField!
     @IBOutlet weak var eventTitleText: UITextField!
     
+    //MARK: - Life cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,16 +25,6 @@ class VolunteerOpportunityVC: UIViewController {
     }
 
 
-    @IBAction func dayOfEventTapped(_ sender: Any) {
-    }
-    
-    @IBAction func timeOfEventTapped(_ sender: Any) {
-    }
-    
-    @IBAction func nextBtnTapped(_ sender: Any) {
-    }
-    
-    
     
     
 

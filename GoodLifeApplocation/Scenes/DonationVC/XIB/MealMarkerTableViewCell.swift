@@ -8,10 +8,14 @@
 import UIKit
 
 class MealMarkerTableViewCell: UITableViewCell,ReusableView,NibLoadableView {
+    //MARK: - Outlet
 
     @IBOutlet weak var avatarImage: UIImageViewDesignable!
     @IBOutlet weak var descriptionTxt: UILabel!
     @IBOutlet weak var titleTxt: UILabel!
+    
+    //MARK: - Life cycle
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

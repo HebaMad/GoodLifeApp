@@ -9,6 +9,11 @@ import UIKit
 
 class OnBoardingFrame2: UIViewController {
 
+    //MARK: - Outlet
+
+    
+    //MARK: - Life cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -16,10 +21,4 @@ class OnBoardingFrame2: UIViewController {
     }
 
 
-
-    @IBAction func continueBtn(_ sender: Any) {
-    }
-    
-    @IBAction func skipBtn(_ sender: Any) {
-    }
 }

@@ -8,15 +8,22 @@
 import UIKit
 
 class PackageDetailsVC: UIViewController {
+    
+    //MARK: - Outlet
 
     @IBOutlet weak var containerHeight: NSLayoutConstraint!
     @IBOutlet weak var containerView: UIView!
+    
+    
+    //MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         containerHeight.constant = CGFloat(660)
         setupPageview()
         
     }
+    //MARK: - setup container view
 
     private func setupPageview(){
         let vc = GeneralPagerViewVC()

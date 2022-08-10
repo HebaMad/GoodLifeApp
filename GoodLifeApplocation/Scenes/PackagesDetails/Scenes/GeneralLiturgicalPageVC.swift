@@ -8,9 +8,12 @@
 import UIKit
 import XLPagerTabStrip
 class GeneralLiturgicalPageVC: UIViewController, IndicatorInfoProvider{
+    //MARK: - Properties
+
     var itemInfo: IndicatorInfo = "Liturgical"
 
-  
+    //MARK: - Life cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
