@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             _delegate.window = window
         }
         let vc = PackageDetailsVC()
-//        setRootVC(vc: vc)
+        setRootVC(vc: vc)
     }
     func setRootVC(vc:UIViewController){
         

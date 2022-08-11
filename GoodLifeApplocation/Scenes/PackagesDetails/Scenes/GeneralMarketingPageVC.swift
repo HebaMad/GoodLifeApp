@@ -19,7 +19,8 @@ class GeneralMarketingPageVC: UIViewController, IndicatorInfoProvider {
     
     var itemInfo: IndicatorInfo = "Marketing"
     let targetMarkets = ["Families", "Orphans", "Infants"]
-    let unitsSold = [50.0, 25.0, 25.0]
+    let unitsSold = [67.0, 25.0, 8.0]
+    var dataEntries: [ChartDataEntry] = []
 
 
     
@@ -28,40 +29,50 @@ class GeneralMarketingPageVC: UIViewController, IndicatorInfoProvider {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setChart(dataPoints: targetMarkets, values: unitsSold)
+        setupPieChart(dataPoints: targetMarkets, values: unitsSold)
 
     }
 
-    func setChart(dataPoints: [String], values: [Double]) {
-            
-            var dataEntries: [ChartDataEntry] = []
-            
-            for i in 0..<dataPoints.count {
-                let dataEntry = ChartDataEntry(x: values[i], y: Double(i))
-                dataEntries.append(dataEntry)
-            }
-            
-        let pieChartDataSet = PieChartDataSet(entries: dataEntries, label: "Units Sold")
-            let pieChartData = PieChartData(dataSet: pieChartDataSet)
-            pieChartView.data = pieChartData
-//        pieChartView.bounds = CGRect(x: .zero, y: .zero, width: 150.0, height: 150.0)
-            var colors: [UIColor] = []
-
-            for i in 0..<dataPoints.count {
-                let red = Double(arc4random_uniform(256))
-                let green = Double(arc4random_uniform(256))
-                let blue = Double(arc4random_uniform(256))
-
-                let color = UIColor(red: CGFloat(red/255), green: CGFloat(green/255), blue: CGFloat(blue/255), alpha: 1)
-                colors.append(color)
-            }
-        pieChartDataSet.colors = colors
-//        pieChartDataSet.colors = [UIColor(named: "ColorChart")!,UIColor(named: "color2Chart")!,UIColor(named: "button")!]
-            
-   
-            
-        }
     
+    func setupPieChart(dataPoints: [String], values: [Double]){
+        pieChartView.chartDescription.enabled = false
+        pieChartView.drawHoleEnabled = false
+        pieChartView.rotationAngle = 0
+        pieChartView.rotationEnabled = false
+        pieChartView.isUserInteractionEnabled = false
+//        pieChartView.legend.enabled = false
+        let l = pieChartView.legend
+        l.horizontalAlignment = .left
+        l.verticalAlignment = .center
+        l.orientation = .vertical
+        l.xEntrySpace = 10
+        l.yEntrySpace = 18
+        l.yOffset = 30
+        l.formSize = 20
+
+        l.font = .systemFont(ofSize: 16, weight: .medium)
+
+        pieChartView.drawEntryLabelsEnabled=false
+        
+     let pieDataEntries = setPieData(dataPoints: dataPoints, values: values)
+        
+        let pieChartDataSet = PieChartDataSet(entries: pieDataEntries, label: "")
+        pieChartDataSet.colors = [NSUIColor(hex: 0x00B4D8),NSUIColor(hex: 0xF72585),NSUIColor(hex: 0x7209B7)]
+        pieChartDataSet.drawValuesEnabled = false
+        pieChartView.data = PieChartData(dataSet: pieChartDataSet)
+        pieChartView.bounds = CGRect(x: -20, y:0, width: 150, height: 150)
+//        pieChartView.
+    }
+    
+    private func setPieData(dataPoints: [String], values: [Double]) -> [ChartDataEntry] {
+        for i in 0..<dataPoints.count {
+            
+            let dataEntry = PieChartDataEntry(value: values[i], label: dataPoints[i])
+            dataEntries.append(dataEntry)
+        }
+        return dataEntries
+    }
+
     //MARK: - configuration
 
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {

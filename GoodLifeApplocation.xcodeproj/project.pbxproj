@@ -48,6 +48,7 @@
 		27876AB828A440ED003A012A /* WebsiteCompetitorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27876AB628A440ED003A012A /* WebsiteCompetitorCell.swift */; };
 		27876AB928A440ED003A012A /* WebsiteCompetitorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27876AB728A440ED003A012A /* WebsiteCompetitorCell.xib */; };
 		27876ABB28A4484B003A012A /* SpecificWebsiteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27876ABA28A4484B003A012A /* SpecificWebsiteVC.swift */; };
+		27876ABD28A4DB64003A012A /* NSUIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27876ABC28A4DB64003A012A /* NSUIColor+Hex.swift */; };
 		27A7375E28913F0500FD8AD9 /* ProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27A7375D28913F0500FD8AD9 /* ProgressView.xib */; };
 		27A7376028913FFF00FD8AD9 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A7375F28913FFF00FD8AD9 /* ProgressView.swift */; };
 		27A737622891403000FD8AD9 /* UIViewFromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A737612891403000FD8AD9 /* UIViewFromNib.swift */; };
@@ -204,6 +205,7 @@
 		27876AB628A440ED003A012A /* WebsiteCompetitorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsiteCompetitorCell.swift; sourceTree = "<group>"; };
 		27876AB728A440ED003A012A /* WebsiteCompetitorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebsiteCompetitorCell.xib; sourceTree = "<group>"; };
 		27876ABA28A4484B003A012A /* SpecificWebsiteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificWebsiteVC.swift; sourceTree = "<group>"; };
+		27876ABC28A4DB64003A012A /* NSUIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSUIColor+Hex.swift"; sourceTree = "<group>"; };
 		27A7375D28913F0500FD8AD9 /* ProgressView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgressView.xib; sourceTree = "<group>"; };
 		27A7375F28913FFF00FD8AD9 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		27A737612891403000FD8AD9 /* UIViewFromNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewFromNib.swift; sourceTree = "<group>"; };
@@ -506,6 +508,7 @@
 				27A737652891407200FD8AD9 /* TableViewHelper.swift */,
 				27CB2053289B038800E63694 /* RatingControl.swift */,
 				27CB2069289BC15C00E63694 /* SegmentControl.swift */,
+				27876ABC28A4DB64003A012A /* NSUIColor+Hex.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -939,6 +942,7 @@
 				27B8C8F928A1825D0011B039 /* ActivityCell.swift in Sources */,
 				2767A271288F3CD600DF34D1 /* DonationThirdFrame.swift in Sources */,
 				27C9AE7F288D4C1E00FA584A /* OnBoardingFrame2.swift in Sources */,
+				27876ABD28A4DB64003A012A /* NSUIColor+Hex.swift in Sources */,
 				27C9AEAA288DA8E300FA584A /* TaskCollectionViewCell.swift in Sources */,
 				27A7377B2891D16100FD8AD9 /* SubscriptionCollectionViewCell.swift in Sources */,
 				2767A27F2890478200DF34D1 /* FeaturedFundsCollectionViewCell.swift in Sources */,
