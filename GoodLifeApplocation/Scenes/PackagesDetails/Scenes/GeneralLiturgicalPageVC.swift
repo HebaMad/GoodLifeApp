@@ -30,27 +30,18 @@ class GeneralLiturgicalPageVC: UIViewController, IndicatorInfoProvider{
         
     }
 
-    
-    
+    //MARK: - setup pie Chart
+
     func setupPieChart(dataPoints: [String], values: [Double]){
+        
+        //pie chart properties
+        
         pieChartview.chartDescription.enabled = false
         pieChartview.drawHoleEnabled = false
         pieChartview.rotationAngle = 0
         pieChartview.rotationEnabled = false
         pieChartview.isUserInteractionEnabled = false
-//        pieChartView.legend.enabled = false
         
-        let l = pieChartview.legend
-        l.horizontalAlignment = .left
-        l.verticalAlignment = .center
-        l.orientation = .vertical
-        l.xEntrySpace = 10
-        l.yEntrySpace = 16
-        l.yOffset = 30
-        l.formSize = 20
-
-        l.font = .systemFont(ofSize: 16, weight: .medium)
-
         pieChartview.drawEntryLabelsEnabled=false
         
      let pieDataEntries = setPieData(dataPoints: dataPoints, values: values)
@@ -60,8 +51,23 @@ class GeneralLiturgicalPageVC: UIViewController, IndicatorInfoProvider{
         pieChartDataSet.drawValuesEnabled = false
         pieChartview.data = PieChartData(dataSet: pieChartDataSet)
         pieChartview.bounds = CGRect(x: -20, y:0, width: 150, height: 150)
+        
+        // add chart legend
+         
+         let legendChart = pieChartview.legend
+         legendChart.horizontalAlignment = .left
+         legendChart.verticalAlignment = .center
+         legendChart.orientation = .vertical
+         legendChart.xEntrySpace = 10
+         legendChart.yEntrySpace = 18
+         legendChart.yOffset = 30
+         legendChart.formSize = 20
+         legendChart.font = .systemFont(ofSize: 16, weight: .medium)
+
     }
     
+        // add chart legend
+
     private func setPieData(dataPoints: [String], values: [Double]) -> [ChartDataEntry] {
         for i in 0..<dataPoints.count {
             
@@ -72,14 +78,10 @@ class GeneralLiturgicalPageVC: UIViewController, IndicatorInfoProvider{
     }
 
 //MARK: - configuration
+    
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return itemInfo
     }
 
 }
-extension GeneralLiturgicalPageVC: ChartViewDelegate{
-    
-    func chartValueSelected(chartView: ChartViewBase, entry: ChartDataEntry, dataSetIndex: Int, highlight: Highlight) {
-        
-    }
-}
+

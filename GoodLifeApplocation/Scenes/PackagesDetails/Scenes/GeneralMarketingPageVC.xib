@@ -29,20 +29,50 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5nH-jx-WJC">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="700"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="620"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tJi-qR-Qt4" customClass="PieChartView" customModule="Charts">
-                            <rect key="frame" x="8" y="40" width="398" height="300"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1V6-rk-YrR" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
+                            <rect key="frame" x="8" y="40" width="398" height="200"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tJi-qR-Qt4" customClass="PieChartView" customModule="Charts">
+                                    <rect key="frame" x="0.0" y="0.0" width="398" height="200"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="200" id="Avg-AY-AZ1"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="200" id="Avg-AY-AZ1"/>
+                                <constraint firstAttribute="height" constant="200" id="4HG-v8-wLI"/>
+                                <constraint firstItem="tJi-qR-Qt4" firstAttribute="leading" secondItem="1V6-rk-YrR" secondAttribute="leading" id="Abf-4F-GT7"/>
+                                <constraint firstAttribute="bottom" secondItem="tJi-qR-Qt4" secondAttribute="bottom" id="R3g-rD-Blf"/>
+                                <constraint firstAttribute="trailing" secondItem="tJi-qR-Qt4" secondAttribute="trailing" id="eEA-Z4-1eu"/>
+                                <constraint firstItem="tJi-qR-Qt4" firstAttribute="top" secondItem="1V6-rk-YrR" secondAttribute="top" id="fY5-fb-ShD"/>
                             </constraints>
                             <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                    <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                    <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                    <real key="value" value="10"/>
+                                    <real key="value" value="12"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                    <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                     <real key="value" value="1"/>
@@ -50,25 +80,25 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sco-d1-tt9" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                            <rect key="frame" x="8" y="348" width="398" height="344"/>
+                            <rect key="frame" x="8" y="248" width="398" height="364"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PSr-uC-Ivs">
-                                    <rect key="frame" x="0.0" y="0.0" width="398" height="344"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="398" height="364"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6J3-AC-fGR">
-                                            <rect key="frame" x="12" y="12" width="374" height="324"/>
+                                            <rect key="frame" x="12" y="12" width="374" height="344"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Q6T-OW-fGe">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="324"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="344"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Marketing Breakdown" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nBW-rT-iZ5">
-                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="54"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="74"/>
                                                             <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="20"/>
                                                             <color key="textColor" name="backgroundColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="azN-IS-YC9">
-                                                            <rect key="frame" x="0.0" y="54" width="374" height="270"/>
+                                                            <rect key="frame" x="0.0" y="74" width="374" height="270"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dhV-NW-pkf">
                                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="90"/>

@@ -33,24 +33,17 @@ class GeneralMarketingPageVC: UIViewController, IndicatorInfoProvider {
 
     }
 
-    
+    //MARK: - setup pie Chart
+
     func setupPieChart(dataPoints: [String], values: [Double]){
+        //pie chart properties
+
         pieChartView.chartDescription.enabled = false
         pieChartView.drawHoleEnabled = false
         pieChartView.rotationAngle = 0
         pieChartView.rotationEnabled = false
         pieChartView.isUserInteractionEnabled = false
-//        pieChartView.legend.enabled = false
-        let l = pieChartView.legend
-        l.horizontalAlignment = .left
-        l.verticalAlignment = .center
-        l.orientation = .vertical
-        l.xEntrySpace = 10
-        l.yEntrySpace = 18
-        l.yOffset = 30
-        l.formSize = 20
 
-        l.font = .systemFont(ofSize: 16, weight: .medium)
 
         pieChartView.drawEntryLabelsEnabled=false
         
@@ -61,9 +54,23 @@ class GeneralMarketingPageVC: UIViewController, IndicatorInfoProvider {
         pieChartDataSet.drawValuesEnabled = false
         pieChartView.data = PieChartData(dataSet: pieChartDataSet)
         pieChartView.bounds = CGRect(x: -20, y:0, width: 150, height: 150)
-//        pieChartView.
+        
+        // add legend
+         
+         let legendChart = pieChartView.legend
+         legendChart.horizontalAlignment = .left
+         legendChart.verticalAlignment = .center
+         legendChart.orientation = .vertical
+         legendChart.xEntrySpace = 10
+         legendChart.yEntrySpace = 18
+         legendChart.yOffset = 30
+         legendChart.formSize = 20
+         legendChart.font = .systemFont(ofSize: 16, weight: .medium)
+
+
     }
-    
+    // set pie data
+
     private func setPieData(dataPoints: [String], values: [Double]) -> [ChartDataEntry] {
         for i in 0..<dataPoints.count {
             
@@ -79,10 +86,5 @@ class GeneralMarketingPageVC: UIViewController, IndicatorInfoProvider {
         return itemInfo
     }
 }
-extension GeneralMarketingPageVC: ChartViewDelegate{
-    
-  
-    func chartValueSelected(chartView: ChartViewBase, entry: ChartDataEntry, dataSetIndex: Int, highlight: Highlight) {
-        
-    }
-}
+
+

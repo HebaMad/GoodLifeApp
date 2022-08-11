@@ -31,29 +31,59 @@
                 <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jD3-I2-jvL">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="450"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WXz-fc-iDd" customClass="PieChartView" customModule="Charts">
-                            <rect key="frame" x="8" y="40" width="398" height="220"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="co3-m3-5cv" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
+                            <rect key="frame" x="8" y="40" width="398" height="200"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WXz-fc-iDd" customClass="PieChartView" customModule="Charts">
+                                    <rect key="frame" x="0.0" y="0.0" width="398" height="200"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="200" id="4kw-EC-S4P"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="220" id="4kw-EC-S4P"/>
+                                <constraint firstItem="WXz-fc-iDd" firstAttribute="leading" secondItem="co3-m3-5cv" secondAttribute="leading" id="9ka-qd-Pnr"/>
+                                <constraint firstAttribute="trailing" secondItem="WXz-fc-iDd" secondAttribute="trailing" id="Es3-E8-2Rj"/>
+                                <constraint firstAttribute="bottom" secondItem="WXz-fc-iDd" secondAttribute="bottom" id="XZd-0Q-QJN"/>
+                                <constraint firstItem="WXz-fc-iDd" firstAttribute="top" secondItem="co3-m3-5cv" secondAttribute="top" id="wab-oG-Y8o"/>
+                                <constraint firstAttribute="height" constant="200" id="zdx-5w-ygm"/>
                             </constraints>
                             <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                    <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                    <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                    <real key="value" value="10"/>
+                                    <real key="value" value="12"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kQh-3M-P0w" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                            <rect key="frame" x="8" y="268" width="398" height="174"/>
+                            <rect key="frame" x="8" y="248" width="398" height="194"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="z4j-w4-54c">
-                                    <rect key="frame" x="0.0" y="0.0" width="398" height="174"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="398" height="194"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RlP-aJ-mlB">
-                                            <rect key="frame" x="12" y="12" width="374" height="154"/>
+                                            <rect key="frame" x="12" y="12" width="374" height="174"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="TY8-qd-GAf">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="154"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="174"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Liturgical Breakdown" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slg-h3-uYa">
                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="24"/>
@@ -62,19 +92,19 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="FZE-7p-F2G">
-                                                            <rect key="frame" x="0.0" y="24" width="374" height="130"/>
+                                                            <rect key="frame" x="0.0" y="24" width="374" height="150"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="x5g-Ls-u9W">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="130"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="150"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Common ways to worship" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H2J-Ie-dcj">
-                                                                            <rect key="frame" x="8" y="8" width="358" height="43"/>
+                                                                            <rect key="frame" x="8" y="8" width="358" height="63"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vBJ-5R-6zJ">
-                                                                            <rect key="frame" x="8" y="51" width="358" height="71"/>
+                                                                            <rect key="frame" x="8" y="71" width="358" height="71"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTN-uk-Xms">
                                                                                     <rect key="frame" x="16" y="2" width="334" height="67"/>
