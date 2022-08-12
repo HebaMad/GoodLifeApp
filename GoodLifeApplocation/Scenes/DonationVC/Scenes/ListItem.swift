@@ -14,3 +14,9 @@ struct listData{
     let title: String
 
 }
+struct BusinessPlanData{
+    
+    let title: String
+    let information: String
+
+}

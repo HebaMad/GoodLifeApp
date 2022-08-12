@@ -29,6 +29,9 @@ class SpecificWebsiteVC: UIViewController {
         competitorWebsiteTableview.register(WebsiteCompetitorCell.self)
         competitorWebsiteTableview.delegate = self
         competitorWebsiteTableview.dataSource = self
+        self.competitorWebsiteTableview.layer.cornerRadius = 12.0
+        self.competitorWebsiteTableview.layer.borderColor =  CGColor(red: 219/255, green: 219/255, blue: 219/255, alpha: 1)
+        self.competitorWebsiteTableview.layer.borderWidth = 1
         tableHeight.constant = (5*138) + 74
 
     }

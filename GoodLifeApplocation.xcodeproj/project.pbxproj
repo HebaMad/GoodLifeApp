@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		24983235073DC38B89F7802A /* Pods_GoodLifeApplocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0E5AE3CF2C1C421B86FEF65 /* Pods_GoodLifeApplocation.framework */; };
+		2704243D28A6C828002EF7B5 /* BusinessPlanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2704243B28A6C828002EF7B5 /* BusinessPlanCell.swift */; };
+		2704243E28A6C828002EF7B5 /* BusinessPlanCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2704243C28A6C828002EF7B5 /* BusinessPlanCell.xib */; };
+		2704244128A6CA13002EF7B5 /* SpeificBusinessPlanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2704243F28A6CA13002EF7B5 /* SpeificBusinessPlanVC.swift */; };
+		2704244228A6CA13002EF7B5 /* SpeificBusinessPlanVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2704244028A6CA13002EF7B5 /* SpeificBusinessPlanVC.xib */; };
+		2704244428A6DF16002EF7B5 /* SpecificList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2704244328A6DF16002EF7B5 /* SpecificList.swift */; };
+		2704244628A6E014002EF7B5 /* BusinessPlanList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2704244528A6E014002EF7B5 /* BusinessPlanList.swift */; };
+		2704244928A6ED08002EF7B5 /* SpecificFinancialModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2704244728A6ED08002EF7B5 /* SpecificFinancialModel.swift */; };
+		2704244A28A6ED08002EF7B5 /* SpecificFinancialModel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2704244828A6ED08002EF7B5 /* SpecificFinancialModel.xib */; };
 		2706D21328913D4500546425 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2706D21228913D4500546425 /* ProgressBar.swift */; };
 		2710A28228971D94009BCE60 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710A28128971D94009BCE60 /* MockData.swift */; };
 		2710A28828971E1F009BCE60 /* ListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710A28728971E1F009BCE60 /* ListSection.swift */; };
@@ -166,6 +174,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2704243B28A6C828002EF7B5 /* BusinessPlanCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessPlanCell.swift; sourceTree = "<group>"; };
+		2704243C28A6C828002EF7B5 /* BusinessPlanCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusinessPlanCell.xib; sourceTree = "<group>"; };
+		2704243F28A6CA13002EF7B5 /* SpeificBusinessPlanVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeificBusinessPlanVC.swift; sourceTree = "<group>"; };
+		2704244028A6CA13002EF7B5 /* SpeificBusinessPlanVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpeificBusinessPlanVC.xib; sourceTree = "<group>"; };
+		2704244328A6DF16002EF7B5 /* SpecificList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificList.swift; sourceTree = "<group>"; };
+		2704244528A6E014002EF7B5 /* BusinessPlanList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessPlanList.swift; sourceTree = "<group>"; };
+		2704244728A6ED08002EF7B5 /* SpecificFinancialModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificFinancialModel.swift; sourceTree = "<group>"; };
+		2704244828A6ED08002EF7B5 /* SpecificFinancialModel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpecificFinancialModel.xib; sourceTree = "<group>"; };
 		2706D21228913D4500546425 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		2710A28128971D94009BCE60 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		2710A28728971E1F009BCE60 /* ListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSection.swift; sourceTree = "<group>"; };
@@ -363,6 +379,8 @@
 			children = (
 				27876AB628A440ED003A012A /* WebsiteCompetitorCell.swift */,
 				27876AB728A440ED003A012A /* WebsiteCompetitorCell.xib */,
+				2704243B28A6C828002EF7B5 /* BusinessPlanCell.swift */,
+				2704243C28A6C828002EF7B5 /* BusinessPlanCell.xib */,
 			);
 			path = XIB;
 			sourceTree = "<group>";
@@ -694,6 +712,12 @@
 				27594D2028A017D600F4DDC3 /* GeneralLiturgicalPageVC.swift */,
 				27594D2128A017D600F4DDC3 /* GeneralLiturgicalPageVC.xib */,
 				27876ABA28A4484B003A012A /* SpecificWebsiteVC.swift */,
+				2704243F28A6CA13002EF7B5 /* SpeificBusinessPlanVC.swift */,
+				2704244028A6CA13002EF7B5 /* SpeificBusinessPlanVC.xib */,
+				2704244328A6DF16002EF7B5 /* SpecificList.swift */,
+				2704244528A6E014002EF7B5 /* BusinessPlanList.swift */,
+				2704244728A6ED08002EF7B5 /* SpecificFinancialModel.swift */,
+				2704244828A6ED08002EF7B5 /* SpecificFinancialModel.xib */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -767,6 +791,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27C9AE80288D4C1E00FA584A /* OnBoardingFrame2.xib in Resources */,
+				2704244228A6CA13002EF7B5 /* SpeificBusinessPlanVC.xib in Resources */,
 				27C9AEA3288D971700FA584A /* VolunteerOpportunityVC.xib in Resources */,
 				27C9AE59288D3CB500FA584A /* Inter-SemiBold.ttf in Resources */,
 				27C9AE5C288D3CB500FA584A /* Inter-Regular.ttf in Resources */,
@@ -805,9 +830,11 @@
 				2767A28428904A3800DF34D1 /* OtherFundsCollectionViewCell.xib in Resources */,
 				27B8C8EA28A1106C0011B039 /* SpecificFilterCell.xib in Resources */,
 				27B8C8EE28A14C320011B039 /* MapVC.xib in Resources */,
+				2704244A28A6ED08002EF7B5 /* SpecificFinancialModel.xib in Resources */,
 				27C9AE5D288D3CB500FA584A /* Inter-ExtraLight-BETA.ttf in Resources */,
 				27C9AE90288D54AA00FA584A /* OnBoardingFrame5.xib in Resources */,
 				27CB2064289BBA1E00E63694 /* PastGoalsCell.xib in Resources */,
+				2704243E28A6C828002EF7B5 /* BusinessPlanCell.xib in Resources */,
 				27C9AEB4288EF14900FA584A /* MealMarkerTableViewCell.xib in Resources */,
 				27CB2060289B0FDC00E63694 /* ResourceDetailsCell.xib in Resources */,
 				27C9AEAF288DB44600FA584A /* CategoriesCollectionViewCell.xib in Resources */,
@@ -907,6 +934,7 @@
 				2767A28728904DF800DF34D1 /* DonationFirstFrame.swift in Sources */,
 				27CB2057289B08B900E63694 /* ResourceCollectionViewCell.swift in Sources */,
 				27594D1E28A010CE00F4DDC3 /* GeneralMarketingPageVC.swift in Sources */,
+				2704244428A6DF16002EF7B5 /* SpecificList.swift in Sources */,
 				27C9AE2B288D38E900FA584A /* ViewController.swift in Sources */,
 				27B8C90028A198BB0011B039 /* NibLoadableView.swift in Sources */,
 				27CB2098289FC79700E63694 /* SpecificPagerVC.swift in Sources */,
@@ -926,6 +954,7 @@
 				27C9AE8F288D54AA00FA584A /* OnBoardingFrame5.swift in Sources */,
 				27A737642891405200FD8AD9 /* CollectionViewHelper.swift in Sources */,
 				27CB2089289D48BD00E63694 /* CategoriesList.swift in Sources */,
+				2704244928A6ED08002EF7B5 /* SpecificFinancialModel.swift in Sources */,
 				2767A293289087DF00DF34D1 /* HeaderCollectionReusableView.swift in Sources */,
 				27C9AEA2288D971700FA584A /* VolunteerOpportunityVC.swift in Sources */,
 				27B8C8F228A1687F0011B039 /* MapFilterList.swift in Sources */,
@@ -946,6 +975,7 @@
 				27C9AEAA288DA8E300FA584A /* TaskCollectionViewCell.swift in Sources */,
 				27A7377B2891D16100FD8AD9 /* SubscriptionCollectionViewCell.swift in Sources */,
 				2767A27F2890478200DF34D1 /* FeaturedFundsCollectionViewCell.swift in Sources */,
+				2704244628A6E014002EF7B5 /* BusinessPlanList.swift in Sources */,
 				27CB206A289BC15C00E63694 /* SegmentControl.swift in Sources */,
 				27CB2087289D467500E63694 /* DashboardVC.swift in Sources */,
 				27C9AEB9288EF61200FA584A /* DonationVC.swift in Sources */,
@@ -963,6 +993,7 @@
 				27CB205B289B0C6B00E63694 /* ResourceDetailsVC.swift in Sources */,
 				27876ABB28A4484B003A012A /* SpecificWebsiteVC.swift in Sources */,
 				27CB2080289D017D00E63694 /* VerificationVC.swift in Sources */,
+				2704244128A6CA13002EF7B5 /* SpeificBusinessPlanVC.swift in Sources */,
 				27CB208F289FB1E100E63694 /* PackageDetailsVC.swift in Sources */,
 				2710A296289ADA9E009BCE60 /* GoalAndBenchmarkVC.swift in Sources */,
 				27C9AE83288D4F0600FA584A /* OnBoardingFrame3.swift in Sources */,
@@ -972,6 +1003,7 @@
 				27CB204D289AFDE800E63694 /* HaveAnIdeaVC.swift in Sources */,
 				27CB2067289BBEA600E63694 /* BenchmarksCell.swift in Sources */,
 				27CB208B289D4A9300E63694 /* HomeCategories.swift in Sources */,
+				2704243D28A6C828002EF7B5 /* BusinessPlanCell.swift in Sources */,
 				27876AB828A440ED003A012A /* WebsiteCompetitorCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
