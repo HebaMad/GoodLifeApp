@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import XLPagerTabStrip
 class SpecificWebsiteVC: UIViewController {
     
     //MARK: - Outlet
@@ -14,8 +14,15 @@ class SpecificWebsiteVC: UIViewController {
     @IBOutlet weak var competitorWebsiteTableview: UITableView!
     @IBOutlet weak var topCompetitorText: UILabel!
     @IBOutlet weak var tableHeight: NSLayoutConstraint!
+    @IBOutlet weak var scrollviewHeight: UIScrollView!
+
     
-    //MARK: - Outlet
+    //MARK: - Properties
+    
+    var itemInfo: IndicatorInfo = "Website"
+
+    
+    //MARK: - Life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +40,8 @@ class SpecificWebsiteVC: UIViewController {
         self.competitorWebsiteTableview.layer.borderColor =  CGColor(red: 219/255, green: 219/255, blue: 219/255, alpha: 1)
         self.competitorWebsiteTableview.layer.borderWidth = 1
         tableHeight.constant = (5*138) + 74
+        NotificationCenter.default.post(name: .init(rawValue: "containerHeight"), object:  scrollviewHeight.bounds.height+40)
+
 
     }
 }
@@ -48,6 +57,15 @@ extension SpecificWebsiteVC:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: WebsiteCompetitorCell = tableView.dequeueReusableCell(for: indexPath)
         return cell
+    }
+    
+    
+}
+
+
+extension SpecificWebsiteVC:IndicatorInfoProvider {
+    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+        return itemInfo
     }
     
     

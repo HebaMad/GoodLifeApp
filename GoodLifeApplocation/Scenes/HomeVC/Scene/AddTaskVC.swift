@@ -32,10 +32,23 @@ class AddTaskVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        bindBackButton()
     }
 
+}
+private extension AddTaskVC{
+    
+    func bindBackButton(){
+        closeBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
+    }
+    
+    
+}
+//MARK: - private Handler
+private extension AddTaskVC{
 
-
-
+   @objc func buttonWasTapped(){
+       navigationController?.popViewController(animated: true)
+    
+  }
 }

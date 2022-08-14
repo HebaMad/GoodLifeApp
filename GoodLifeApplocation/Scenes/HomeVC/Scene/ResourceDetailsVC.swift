@@ -12,7 +12,8 @@ class ResourceDetailsVC: UIViewController {
     //MARK: - Outlet
     
     @IBOutlet weak var FAQuestionTable: UITableView!
-    
+    @IBOutlet weak var backBtn: UIButton!
+
     //MARK: - Properties
     
     private var selectedIndex = -1
@@ -23,6 +24,7 @@ class ResourceDetailsVC: UIViewController {
         super.viewDidLoad()
         
         setupTableView()
+        bindBackButton()
     }
     
     //MARK: - setup tableview
@@ -35,6 +37,22 @@ class ResourceDetailsVC: UIViewController {
     }
 }
 
+private extension ResourceDetailsVC{
+    
+    func bindBackButton(){
+        backBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
+    }
+    
+    
+}
+//MARK: - private Handler
+private extension ResourceDetailsVC{
+
+   @objc func buttonWasTapped(){
+       navigationController?.popViewController(animated: true)
+    
+  }
+}
 //MARK: - UITableViewDelegate,UITableViewDataSource configuration
 
 extension ResourceDetailsVC:UITableViewDelegate, UITableViewDataSource{
@@ -74,4 +92,8 @@ extension ResourceDetailsVC:UITableViewDelegate, UITableViewDataSource{
     }
     
     
+}
+extension ResourceDetailsVC:Storyboarded{
+    static var storyboardName: StoryboardName = .main
+
 }

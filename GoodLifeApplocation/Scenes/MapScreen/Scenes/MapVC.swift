@@ -15,19 +15,18 @@ class MapVC: UIViewController {
     @IBOutlet weak var generalFilterCollectionview: UICollectionView!
     @IBOutlet weak var specificFilterCollectionview: UICollectionView!
     @IBOutlet weak var menuBtn: UIButton!
-    
-    
-    
+        
     //MARK: - properties
+    
     private let sections = MapFilterList.shared.AllCategories
-
     private var menu :SideMenuNavigationController?
     private var categories=["Poverty","Orphans","Widows","Neighbor"]
 
     //MARK: - Life cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        specificFilterCollectionview.isHidden = true
         setUpSideMenu()
         setupCollectionview()
         menuBtnBinding()
@@ -45,8 +44,7 @@ class MapVC: UIViewController {
                menu?.leftSide = true
                SideMenuManager.default.rightMenuNavigationController = nil
                SideMenuManager.default.leftMenuNavigationController = menu
-        
-    }
+            }
     
     private func setUpSideMenu() {
             let vc = OpportunityViewVC()
@@ -57,8 +55,8 @@ class MapVC: UIViewController {
             menu?.presentationStyle.onTopShadowRadius = 0
             menu?.presentationStyle.onTopShadowOffset = .zero
             menu?.presentationStyle.onTopShadowOpacity = 0
-        menu?.presentationStyle.presentingScaleFactor = 0.99
-        menu?.menuWidth = 280
+            menu?.presentationStyle.presentingScaleFactor = 0.99
+            menu?.menuWidth = 280
 
             SideMenuManager.default.addPanGestureToPresent(toView: self.view)
         }
@@ -215,6 +213,16 @@ extension MapVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollection
             return  CGSize(width:(self.view.frame.width), height:30)
         }
 
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == generalFilterCollectionview{
+            specificFilterCollectionview.isHidden = false
+        }else if collectionView == specificFilterCollectionview{
+            
+        }else{
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

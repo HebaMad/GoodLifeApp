@@ -7,14 +7,17 @@
 
 import UIKit
 import Charts
+import XLPagerTabStrip
+
 class SpecificFinancialModel: UIViewController {
 
-    
     //MARK: - Outlet
 
     @IBOutlet weak var FinancialModelCollectionview: UICollectionView!
     @IBOutlet weak var pieChartview: PieChartView!
     @IBOutlet weak var collectionviewHeight: NSLayoutConstraint!
+    @IBOutlet weak var scrollviewHeight: UIScrollView!
+    @IBOutlet weak var stackHeight: NSLayoutConstraint!
     
     
     //MARK: - Properties
@@ -23,7 +26,11 @@ class SpecificFinancialModel: UIViewController {
     let unitsSold = [57.0, 25.0, 18.0]
     var dataEntries: [ChartDataEntry] = []
     var itemNumber = 0
+    var itemInfo: IndicatorInfo = "FinancialModel"
     
+    
+    //MARK: - Life cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupPieChart(dataPoints: targetMarkets, values: unitsSold)
@@ -101,6 +108,10 @@ class SpecificFinancialModel: UIViewController {
             itemNumber+=sections[index].count
         }
         collectionviewHeight.constant = CGFloat((itemNumber * 120) + (sections.count * 60))
+     
+
+        NotificationCenter.default.post(name: .init(rawValue: "containerHeight"), object: scrollviewHeight.bounds.height+40)
+
         
     }
     
@@ -197,6 +208,13 @@ extension SpecificFinancialModel:UICollectionViewDelegate, UICollectionViewDataS
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.headerIdentifier, for: indexPath) as! HeaderCollectionReusableView
         header.setup(sections[indexPath.section].title)
         return header
+    }
+    
+    
+}
+extension SpecificFinancialModel: IndicatorInfoProvider {
+    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+        return itemInfo
     }
     
     

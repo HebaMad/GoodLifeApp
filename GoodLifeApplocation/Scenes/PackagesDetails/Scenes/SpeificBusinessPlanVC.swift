@@ -7,15 +7,19 @@
 
 import UIKit
 import Charts
+import XLPagerTabStrip
 
 class SpeificBusinessPlanVC: UIViewController {
+    
+  
     
     //MARK: - Outlet
 
     @IBOutlet weak var businessPlanCollectionview: UICollectionView!
     @IBOutlet weak var pieChartview: PieChartView!
     @IBOutlet weak var collectionviewHeight: NSLayoutConstraint!
-    
+    @IBOutlet weak var scrollviewHeight: UIScrollView!
+
     
     //MARK: - Properties
     private var sections = BusinessPlanList.shared.AllCategories
@@ -23,7 +27,10 @@ class SpeificBusinessPlanVC: UIViewController {
     let unitsSold = [57.0, 25.0, 18.0]
     var dataEntries: [ChartDataEntry] = []
     var itemNumber = 0
+    var itemInfo: IndicatorInfo = "BusinessPlan"
     
+    //MARK: - Life cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupPieChart(dataPoints: targetMarkets, values: unitsSold)
@@ -101,6 +108,8 @@ class SpeificBusinessPlanVC: UIViewController {
             itemNumber+=sections[index].count
         }
         collectionviewHeight.constant = CGFloat((itemNumber * 120) + (sections.count * 60))
+        NotificationCenter.default.post(name: .init(rawValue: "containerHeight"), object: scrollviewHeight.bounds.height+40)
+
         
     }
     
@@ -197,6 +206,15 @@ extension SpeificBusinessPlanVC:UICollectionViewDelegate, UICollectionViewDataSo
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.headerIdentifier, for: indexPath) as! HeaderCollectionReusableView
         header.setup(sections[indexPath.section].title)
         return header
+    }
+    
+    
+}
+
+
+extension SpeificBusinessPlanVC: IndicatorInfoProvider {
+    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+        return itemInfo
     }
     
     

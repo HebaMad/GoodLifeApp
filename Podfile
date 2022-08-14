@@ -10,4 +10,5 @@ target 'GoodLifeApplocation' do
   pod 'SideMenu'
   pod 'XLPagerTabStrip', '~> 9.0'
   pod 'Charts'
+  pod 'RangeSeekSlider'
 end

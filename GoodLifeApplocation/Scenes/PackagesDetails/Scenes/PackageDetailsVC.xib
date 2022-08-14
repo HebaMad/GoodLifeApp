@@ -18,8 +18,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PackageDetailsVC" customModule="GoodLifeApplocation" customModuleProvider="target">
             <connections>
+                <outlet property="backBtn" destination="edz-Zl-OiQ" id="ZJa-Yx-l8k"/>
                 <outlet property="containerHeight" destination="Pke-wa-X64" id="gEN-fh-84I"/>
                 <outlet property="containerView" destination="hyV-Qc-AvS" id="ebv-rO-mbH"/>
+                <outlet property="nextBtn" destination="KDR-Z2-oBA" id="mFq-K1-OpG"/>
+                <outlet property="packageDetailsSegmentControl" destination="cML-wf-9XA" id="YYo-PU-Z2J"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -40,8 +43,29 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="w4B-v1-GNg">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="380"/>
                                     <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5eO-Kg-IKg">
+                                            <rect key="frame" x="16" y="0.0" width="382" height="40"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edz-Zl-OiQ">
+                                                    <rect key="frame" x="8" y="0.0" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="zQt-Xl-6TI"/>
+                                                    </constraints>
+                                                    <color key="tintColor" red="0.78039215689999997" green="0.78039215689999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" image="chevron.backward" catalog="system"/>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="edz-Zl-OiQ" secondAttribute="bottom" id="86V-zP-wHn"/>
+                                                <constraint firstItem="edz-Zl-OiQ" firstAttribute="leading" secondItem="5eO-Kg-IKg" secondAttribute="leading" constant="8" id="LBq-mO-2ET"/>
+                                                <constraint firstItem="edz-Zl-OiQ" firstAttribute="top" secondItem="5eO-Kg-IKg" secondAttribute="top" id="Rbq-Re-Mxz"/>
+                                                <constraint firstAttribute="height" constant="40" id="iEQ-Eq-hHX"/>
+                                            </constraints>
+                                        </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wrp-xd-f1u">
-                                            <rect key="frame" x="16" y="0.0" width="382" height="64"/>
+                                            <rect key="frame" x="16" y="52" width="382" height="57.5"/>
                                             <string key="text">Community
 Movie Night</string>
                                             <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="24"/>
@@ -49,26 +73,26 @@ Movie Night</string>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Community   Social   Neighbor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVk-rU-GaA">
-                                            <rect key="frame" x="16" y="76" width="382" height="17"/>
+                                            <rect key="frame" x="16" y="121.5" width="382" height="17"/>
                                             <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="14"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" distribution="fillEqually" spacing="-15" translatesAutoresizingMaskIntoConstraints="NO" id="VPm-Dp-tUI">
-                                            <rect key="frame" x="16" y="105" width="382" height="20"/>
+                                            <rect key="frame" x="16" y="150.5" width="382" height="15.5"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" spacing="-10" translatesAutoresizingMaskIntoConstraints="NO" id="xxj-TO-Hit">
-                                                    <rect key="frame" x="20" y="0.0" width="161" height="20"/>
+                                                    <rect key="frame" x="20" y="0.0" width="161" height="15.5"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="HFz-FR-2yG">
-                                                            <rect key="frame" x="70" y="-0.5" width="30" height="20"/>
+                                                            <rect key="frame" x="70" y="-0.5" width="30" height="15.5"/>
                                                             <color key="tintColor" name="review star"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="30" id="Slg-z6-tOc"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.25" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOP-mn-53C">
-                                                            <rect key="frame" x="90" y="0.0" width="63" height="20"/>
+                                                            <rect key="frame" x="90" y="0.0" width="63" height="15.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -77,7 +101,7 @@ Movie Night</string>
                                                     <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="70" bottom="0.0" trailing="8"/>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(196) from community" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cgy-CI-kuu">
-                                                    <rect key="frame" x="166" y="0.0" width="161" height="20"/>
+                                                    <rect key="frame" x="166" y="0.0" width="161" height="15.5"/>
                                                     <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="12"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -86,7 +110,7 @@ Movie Night</string>
                                             <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="20" bottom="0.0" trailing="55"/>
                                         </stackView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cgy-pV-Gro">
-                                            <rect key="frame" x="16" y="137" width="382" height="130"/>
+                                            <rect key="frame" x="16" y="178" width="382" height="130"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="venture" translatesAutoresizingMaskIntoConstraints="NO" id="sMx-EO-V7Y" customClass="UIImageViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
                                                     <rect key="frame" x="30" y="0.0" width="322" height="130"/>
@@ -112,8 +136,8 @@ Movie Night</string>
                                                 <constraint firstItem="sMx-EO-V7Y" firstAttribute="leading" secondItem="Cgy-pV-Gro" secondAttribute="leading" constant="30" id="zq1-H7-3Ib"/>
                                             </constraints>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Building communities through their spiritual needs helps advance Christianity. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PH0-2z-yjD">
-                                            <rect key="frame" x="16" y="279" width="382" height="41"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Building communities through their spiritual needs helps advance Christianity. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PH0-2z-yjD">
+                                            <rect key="frame" x="16" y="320" width="382" height="0.0"/>
                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -177,12 +201,39 @@ Movie Night</string>
                         <constraint firstItem="sLS-Ht-196" firstAttribute="width" secondItem="31P-SQ-HIk" secondAttribute="width" id="z9B-MA-DDF"/>
                     </constraints>
                 </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KDR-Z2-oBA" customClass="UIButtonDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
+                    <rect key="frame" x="326" y="786" width="56" height="56"/>
+                    <color key="backgroundColor" name="ButtonColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="56" id="kRD-TG-Kea"/>
+                        <constraint firstAttribute="height" constant="56" id="qLo-wS-YCy"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="chevron.right" catalog="system"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="28"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                            <color key="value" name="ButtonColor"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="bg3"/>
             <constraints>
                 <constraint firstItem="icZ-ea-yHQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="05h-Xa-yeh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="KDR-Z2-oBA" secondAttribute="bottom" constant="20" id="27Q-uS-uAv"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="31P-SQ-HIk" secondAttribute="trailing" id="9tg-h1-RE0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KDR-Z2-oBA" secondAttribute="trailing" constant="32" id="DQf-Wa-IUW"/>
                 <constraint firstItem="31P-SQ-HIk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="DmH-Zh-JbH"/>
                 <constraint firstItem="31P-SQ-HIk" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Efk-W7-7TU"/>
                 <constraint firstAttribute="bottom" secondItem="31P-SQ-HIk" secondAttribute="bottom" id="INk-pF-1GS"/>
@@ -194,14 +245,22 @@ Movie Night</string>
         </view>
     </objects>
     <designables>
+        <designable name="KDR-Z2-oBA">
+            <size key="intrinsicContentSize" width="12.5" height="22"/>
+        </designable>
         <designable name="sMx-EO-V7Y">
             <size key="intrinsicContentSize" width="242" height="128"/>
         </designable>
     </designables>
     <resources>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="financial" width="780" height="1688"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <image name="venture" width="242" height="128"/>
+        <namedColor name="ButtonColor">
+            <color red="0.0" green="0.85100001096725464" blue="0.44299998879432678" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="backgroundColor">
             <color red="0.63099998235702515" green="0.34900000691413879" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

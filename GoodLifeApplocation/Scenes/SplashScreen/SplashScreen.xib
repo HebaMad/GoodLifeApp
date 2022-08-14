@@ -18,7 +18,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SplashScreen" customModule="GoodLifeApplocation" customModuleProvider="target">
             <connections>
-                <outlet property="getStartedBtn" destination="KBp-0B-aSO" id="GrH-o2-EK2"/>
+                <outlet property="getStartedBtn" destination="KBp-0B-aSO" id="pSC-of-TKe"/>
                 <outlet property="loginBtn" destination="D51-2z-9Fc" id="Ruc-Rr-6Gy"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -76,9 +76,6 @@ through thoughtful ministries</string>
                                             <real key="value" value="12"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
-                                    <connections>
-                                        <action selector="getStartedBtn:" destination="-1" eventType="touchUpInside" id="mwQ-QV-DLq"/>
-                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D51-2z-9Fc">
                                     <rect key="frame" x="0.0" y="68" width="358" height="60"/>
@@ -87,9 +84,6 @@ through thoughtful ministries</string>
                                         <fontDescription key="titleFontDescription" name="Inter-Regular" family="Inter" pointSize="16"/>
                                         <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </buttonConfiguration>
-                                    <connections>
-                                        <action selector="loginBtn:" destination="-1" eventType="touchUpInside" id="OIK-o0-id1"/>
-                                    </connections>
                                 </button>
                             </subviews>
                             <constraints>

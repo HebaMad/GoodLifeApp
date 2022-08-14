@@ -16,31 +16,51 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="titleCollectionview" id="U6b-Vx-4bR" customClass="HeaderCollectionReusableView" customModule="GoodLifeApplocation" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="277" height="83"/>
+            <rect key="frame" x="0.0" y="0.0" width="359" height="64"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEST" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLb-JW-eI1">
-                    <rect key="frame" x="16" y="8" width="261" height="75"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="19"/>
-                    <color key="textColor" name="Color"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u56-iz-ZVL">
+                    <rect key="frame" x="12" y="4" width="335" height="56"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEST" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLb-JW-eI1">
+                            <rect key="frame" x="0.0" y="0.0" width="255" height="56"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="19"/>
+                            <color key="textColor" name="Color"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rlJ-6z-dxI">
+                            <rect key="frame" x="255" y="0.0" width="80" height="56"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="80" id="lB1-57-fEQ"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="View All">
+                                <fontDescription key="titleFontDescription" name="Inter-Regular" family="Inter" pointSize="10"/>
+                                <color key="baseForegroundColor" name="BgColor"/>
+                            </buttonConfiguration>
+                        </button>
+                    </subviews>
+                </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
             <constraints>
-                <constraint firstItem="aLb-JW-eI1" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="8" id="Elq-od-TSO"/>
-                <constraint firstAttribute="trailing" secondItem="aLb-JW-eI1" secondAttribute="trailing" id="Rxg-fv-RRk"/>
-                <constraint firstItem="VXr-Tz-HHm" firstAttribute="bottom" secondItem="aLb-JW-eI1" secondAttribute="bottom" id="asK-Yw-Scc"/>
-                <constraint firstItem="aLb-JW-eI1" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" constant="16" id="zOF-ae-KK6"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="bottom" secondItem="u56-iz-ZVL" secondAttribute="bottom" constant="4" id="O08-jf-pYd"/>
+                <constraint firstItem="u56-iz-ZVL" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="4" id="RMl-R4-sed"/>
+                <constraint firstItem="u56-iz-ZVL" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="12" id="aZe-N9-rcY"/>
+                <constraint firstAttribute="trailing" secondItem="u56-iz-ZVL" secondAttribute="trailing" constant="12" id="uKC-4K-qRc"/>
             </constraints>
             <connections>
                 <outlet property="headerTitleLabel" destination="aLb-JW-eI1" id="1bs-ke-pr9"/>
+                <outlet property="viewAllButton" destination="rlJ-6z-dxI" id="hRS-6J-xB7"/>
             </connections>
-            <point key="canvasLocation" x="106.5217391304348" y="134.93303571428569"/>
+            <point key="canvasLocation" x="165.94202898550725" y="127.90178571428571"/>
         </collectionReusableView>
     </objects>
     <resources>
+        <namedColor name="BgColor">
+            <color red="0.59200000762939453" green="0.27799999713897705" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Color">
             <color red="0.22699999809265137" green="0.10199999809265137" blue="0.39599999785423279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -12,13 +12,15 @@ class AllResourceVC: UIViewController {
     //MARK: - Outlet
 
     @IBOutlet weak var AllresourceTable: UITableView!
-    
+    @IBOutlet weak var backBtn: UIButton!
+
     //MARK: - Life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
     setupTableView()
+        bindBackButton()
 }
     //MARK: - Setup table view
 
@@ -29,7 +31,24 @@ func setupTableView(){
 }
 
 }
+//MARK: - Binding
 
+private extension AllResourceVC{
+    
+    func bindBackButton(){
+        backBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
+    }
+    
+    
+}
+//MARK: - private Handler
+private extension AllResourceVC{
+
+   @objc func buttonWasTapped(){
+       navigationController?.popViewController(animated: true)
+    
+  }
+}
 //MARK: - UITableViewDelegate,UITableViewDataSource configuration
 
 extension AllResourceVC:UITableViewDelegate, UITableViewDataSource{
@@ -41,6 +60,14 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
     let cell:ResourceCell = tableView.dequeueReusableCell(for: indexPath)
     return cell
 }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = ResourceDetailsVC.instantiate()
+        navigationController?.pushViewController(vc, animated: true)
+    }
 
+
+}
+extension AllResourceVC:Storyboarded{
+    static var storyboardName: StoryboardName = .main
 
 }

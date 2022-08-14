@@ -14,6 +14,8 @@
                 <outlet property="FinancialModelCollectionview" destination="QTb-zd-ubM" id="c4K-73-WsK"/>
                 <outlet property="collectionviewHeight" destination="PhO-Wq-3DI" id="YqW-Ww-HuF"/>
                 <outlet property="pieChartview" destination="BeU-3F-3uw" id="Ofi-XU-0xo"/>
+                <outlet property="scrollviewHeight" destination="Epk-hh-maw" id="HPP-CI-8e6"/>
+                <outlet property="stackHeight" destination="f97-v0-CWg" id="dGj-iJ-uRt"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,8 +24,8 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Epk-hh-maw">
-                    <rect key="frame" x="0.0" y="72" width="414" height="790"/>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Epk-hh-maw">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="vsx-Yc-OJB">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="830"/>
@@ -68,7 +70,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Epk-hh-maw" secondAttribute="trailing" id="EsO-xA-Bsz"/>
                 <constraint firstItem="Epk-hh-maw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Via-rp-va3"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Epk-hh-maw" secondAttribute="bottom" id="XZD-bw-BNL"/>
-                <constraint firstItem="Epk-hh-maw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="28" id="lJX-bN-liX"/>
+                <constraint firstItem="Epk-hh-maw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="lJX-bN-liX"/>
             </constraints>
             <point key="canvasLocation" x="139" y="124"/>
         </view>

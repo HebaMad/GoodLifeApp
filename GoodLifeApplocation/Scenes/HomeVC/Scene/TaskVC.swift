@@ -12,6 +12,8 @@ class TaskVC: UIViewController {
 
     @IBOutlet weak var TaskTableView: UITableView!
     @IBOutlet weak var taskSegmentControl: UISegmentedControl!
+    @IBOutlet weak var backBtn: UIButton!
+    @IBOutlet weak var AddTaskBtn: UIButtonDesignable!
     
     
     //MARK: - Properties
@@ -25,6 +27,7 @@ class TaskVC: UIViewController {
 
         setupTableView()
         taskSegmentControl.addTarget(self, action: #selector(segmentControlSetup), for: .valueChanged)
+        bindButton()
     }
     
     
@@ -57,6 +60,34 @@ class TaskVC: UIViewController {
     }
 }
 
+//MARK: - Binding
+
+private extension TaskVC{
+    
+    func bindButton(){
+        backBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
+        AddTaskBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
+    }
+    
+}
+
+
+//MARK: - private Handler
+private extension TaskVC{
+
+    @objc func buttonWasTapped(_ sender:UIButton){
+       switch sender {
+       case AddTaskBtn:
+           let vc = AddTaskVC()
+           navigationController?.pushViewController(vc, animated: true)
+       case backBtn:
+       navigationController?.popViewController(animated: true)
+    
+       default:
+           print("")
+       }
+}
+}
 //MARK: - UITableViewDelegate,UITableViewDataSource
 
 extension TaskVC:UITableViewDelegate, UITableViewDataSource{
@@ -80,4 +111,9 @@ extension TaskVC:UITableViewDelegate, UITableViewDataSource{
     }
     
     
+}
+
+extension TaskVC:Storyboarded{
+    static var storyboardName: StoryboardName = .main
+
 }

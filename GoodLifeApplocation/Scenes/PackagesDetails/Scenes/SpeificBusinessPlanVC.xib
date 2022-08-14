@@ -14,6 +14,7 @@
                 <outlet property="businessPlanCollectionview" destination="4AN-on-PNB" id="dYf-Ud-KRC"/>
                 <outlet property="collectionviewHeight" destination="EZC-PX-WK1" id="iq8-9w-qNg"/>
                 <outlet property="pieChartview" destination="jfd-er-eGa" id="pYH-K0-AAs"/>
+                <outlet property="scrollviewHeight" destination="rpM-Qm-vSJ" id="WLA-8y-mEh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,7 +23,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rpM-Qm-vSJ">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rpM-Qm-vSJ">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="8gw-Xh-cdK">

@@ -50,3 +50,7 @@ class DonationFrameTwoVC: UIViewController {
     
 }
 
+extension DonationFrameTwoVC:Storyboarded{
+    static var storyboardName: StoryboardName = .main
+
+}

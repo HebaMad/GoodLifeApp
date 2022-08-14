@@ -15,6 +15,7 @@ class HeaderCollectionReusableView: UICollectionReusableView {
     
     //MARK: - Outlet
 
+    @IBOutlet weak var viewAllButton: UIButton!
     @IBOutlet weak var headerTitleLabel: UILabel!
     
     //MARK: - Initializer

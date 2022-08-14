@@ -16,6 +16,12 @@
 		2704244628A6E014002EF7B5 /* BusinessPlanList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2704244528A6E014002EF7B5 /* BusinessPlanList.swift */; };
 		2704244928A6ED08002EF7B5 /* SpecificFinancialModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2704244728A6ED08002EF7B5 /* SpecificFinancialModel.swift */; };
 		2704244A28A6ED08002EF7B5 /* SpecificFinancialModel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2704244828A6ED08002EF7B5 /* SpecificFinancialModel.xib */; };
+		2704244C28A84BF3002EF7B5 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2704244B28A84BF3002EF7B5 /* Extension.swift */; };
+		2704245028A8CED1002EF7B5 /* LoginProgressViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2704244E28A8CED1002EF7B5 /* LoginProgressViews.swift */; };
+		2704245128A8CED1002EF7B5 /* LoginProgressViews.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2704244F28A8CED1002EF7B5 /* LoginProgressViews.xib */; };
+		2704245328A95AAE002EF7B5 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2704245228A95AAE002EF7B5 /* Storyboarded.swift */; };
+		2704245528A95EAD002EF7B5 /* AllCategoriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2704245428A95EAD002EF7B5 /* AllCategoriesVC.swift */; };
+		2704245728A96034002EF7B5 /* AllTasksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2704245628A96034002EF7B5 /* AllTasksVC.swift */; };
 		2706D21328913D4500546425 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2706D21228913D4500546425 /* ProgressBar.swift */; };
 		2710A28228971D94009BCE60 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710A28128971D94009BCE60 /* MockData.swift */; };
 		2710A28828971E1F009BCE60 /* ListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710A28728971E1F009BCE60 /* ListSection.swift */; };
@@ -152,7 +158,6 @@
 		27CB2071289C1B3F00E63694 /* ResourceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CB206F289C1B3F00E63694 /* ResourceCell.swift */; };
 		27CB2072289C1B3F00E63694 /* ResourceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27CB2070289C1B3F00E63694 /* ResourceCell.xib */; };
 		27CB2075289C1CEF00E63694 /* AllResourceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CB2073289C1CEF00E63694 /* AllResourceVC.swift */; };
-		27CB2076289C1CEF00E63694 /* AllResourceVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27CB2074289C1CEF00E63694 /* AllResourceVC.xib */; };
 		27CB207A289CFC0400E63694 /* OnBoardingFrame1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CB2078289CFC0400E63694 /* OnBoardingFrame1.swift */; };
 		27CB207B289CFC0400E63694 /* OnBoardingFrame1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27CB2079289CFC0400E63694 /* OnBoardingFrame1.xib */; };
 		27CB207D289CFDFE00E63694 /* BottomBorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CB207C289CFDFE00E63694 /* BottomBorderTextField.swift */; };
@@ -182,6 +187,12 @@
 		2704244528A6E014002EF7B5 /* BusinessPlanList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessPlanList.swift; sourceTree = "<group>"; };
 		2704244728A6ED08002EF7B5 /* SpecificFinancialModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificFinancialModel.swift; sourceTree = "<group>"; };
 		2704244828A6ED08002EF7B5 /* SpecificFinancialModel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpecificFinancialModel.xib; sourceTree = "<group>"; };
+		2704244B28A84BF3002EF7B5 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		2704244E28A8CED1002EF7B5 /* LoginProgressViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProgressViews.swift; sourceTree = "<group>"; };
+		2704244F28A8CED1002EF7B5 /* LoginProgressViews.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginProgressViews.xib; sourceTree = "<group>"; };
+		2704245228A95AAE002EF7B5 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		2704245428A95EAD002EF7B5 /* AllCategoriesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCategoriesVC.swift; sourceTree = "<group>"; };
+		2704245628A96034002EF7B5 /* AllTasksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTasksVC.swift; sourceTree = "<group>"; };
 		2706D21228913D4500546425 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		2710A28128971D94009BCE60 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		2710A28728971E1F009BCE60 /* ListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSection.swift; sourceTree = "<group>"; };
@@ -320,7 +331,6 @@
 		27CB206F289C1B3F00E63694 /* ResourceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceCell.swift; sourceTree = "<group>"; };
 		27CB2070289C1B3F00E63694 /* ResourceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResourceCell.xib; sourceTree = "<group>"; };
 		27CB2073289C1CEF00E63694 /* AllResourceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllResourceVC.swift; sourceTree = "<group>"; };
-		27CB2074289C1CEF00E63694 /* AllResourceVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllResourceVC.xib; sourceTree = "<group>"; };
 		27CB2078289CFC0400E63694 /* OnBoardingFrame1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingFrame1.swift; sourceTree = "<group>"; };
 		27CB2079289CFC0400E63694 /* OnBoardingFrame1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingFrame1.xib; sourceTree = "<group>"; };
 		27CB207C289CFDFE00E63694 /* BottomBorderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBorderTextField.swift; sourceTree = "<group>"; };
@@ -363,6 +373,15 @@
 				46608627E894627402509900 /* Pods-GoodLifeApplocation.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		2704244D28A8CE6F002EF7B5 /* LoginVC */ = {
+			isa = PBXGroup;
+			children = (
+				2704244E28A8CED1002EF7B5 /* LoginProgressViews.swift */,
+				2704244F28A8CED1002EF7B5 /* LoginProgressViews.xib */,
+			);
+			path = LoginVC;
 			sourceTree = "<group>";
 		};
 		2767A2952890A45400DF34D1 /* Filterscreen */ = {
@@ -461,6 +480,7 @@
 		27C9AE3A288D399400FA584A /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				2704244D28A8CE6F002EF7B5 /* LoginVC */,
 				27CB208C289FB1B700E63694 /* PackagesDetails */,
 				27A737712891CAA500FD8AD9 /* MapScreen */,
 				2767A2952890A45400DF34D1 /* Filterscreen */,
@@ -527,6 +547,7 @@
 				27CB2053289B038800E63694 /* RatingControl.swift */,
 				27CB2069289BC15C00E63694 /* SegmentControl.swift */,
 				27876ABC28A4DB64003A012A /* NSUIColor+Hex.swift */,
+				2704244B28A84BF3002EF7B5 /* Extension.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -536,6 +557,7 @@
 			children = (
 				27B8C8FD28A198880011B039 /* ReusableView.swift */,
 				27B8C8FF28A198BB0011B039 /* NibLoadableView.swift */,
+				2704245228A95AAE002EF7B5 /* Storyboarded.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -677,12 +699,13 @@
 				2710A295289ADA9E009BCE60 /* GoalAndBenchmarkVC.swift */,
 				27CB2059289B0C6B00E63694 /* ResourceDetailsVC.swift */,
 				27CB2073289C1CEF00E63694 /* AllResourceVC.swift */,
-				27CB2074289C1CEF00E63694 /* AllResourceVC.xib */,
 				27CB2086289D467500E63694 /* DashboardVC.swift */,
 				2768DED528A3F473004C6A5B /* AddTaskVC.swift */,
 				2768DED628A3F473004C6A5B /* AddTaskVC.xib */,
 				2768DED928A3FE0A004C6A5B /* AddGoalVC.swift */,
 				2768DEDA28A3FE0A004C6A5B /* AddGoalVC.xib */,
+				2704245428A95EAD002EF7B5 /* AllCategoriesVC.swift */,
+				2704245628A96034002EF7B5 /* AllTasksVC.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -703,14 +726,14 @@
 				27CB208E289FB1E100E63694 /* PackageDetailsVC.xib */,
 				27CB2092289FC6CC00E63694 /* GeneralPagerViewVC.swift */,
 				27CB2093289FC6CC00E63694 /* GeneralPagerViewVC.xib */,
-				27CB2096289FC79700E63694 /* SpecificPagerVC.swift */,
-				27CB2097289FC79700E63694 /* SpecificPagerVC.xib */,
 				27CB209A289FFE9800E63694 /* GeneralFinicialPagerVC.swift */,
 				27CB209B289FFE9800E63694 /* GeneralFinicialPagerVC.xib */,
 				27594D1C28A010CE00F4DDC3 /* GeneralMarketingPageVC.swift */,
 				27594D1D28A010CE00F4DDC3 /* GeneralMarketingPageVC.xib */,
 				27594D2028A017D600F4DDC3 /* GeneralLiturgicalPageVC.swift */,
 				27594D2128A017D600F4DDC3 /* GeneralLiturgicalPageVC.xib */,
+				27CB2096289FC79700E63694 /* SpecificPagerVC.swift */,
+				27CB2097289FC79700E63694 /* SpecificPagerVC.xib */,
 				27876ABA28A4484B003A012A /* SpecificWebsiteVC.swift */,
 				2704243F28A6CA13002EF7B5 /* SpeificBusinessPlanVC.swift */,
 				2704244028A6CA13002EF7B5 /* SpeificBusinessPlanVC.xib */,
@@ -805,6 +828,7 @@
 				27CB2072289C1B3F00E63694 /* ResourceCell.xib in Resources */,
 				2710A294289A7150009BCE60 /* GoalAndBenchmarkCell.xib in Resources */,
 				27594D1F28A010CE00F4DDC3 /* GeneralMarketingPageVC.xib in Resources */,
+				2704245128A8CED1002EF7B5 /* LoginProgressViews.xib in Resources */,
 				2767A272288F3CD600DF34D1 /* DonationThirdFrame.xib in Resources */,
 				27CB2052289B006100E63694 /* ReviewExperienceVC.xib in Resources */,
 				27C9AE53288D3CA300FA584A /* Inter-Bold.ttf in Resources */,
@@ -822,7 +846,6 @@
 				27CB2083289D44C500E63694 /* SearchView.xib in Resources */,
 				27C9AE58288D3CB500FA584A /* Inter-Thin-BETA.ttf in Resources */,
 				27CB2068289BBEA600E63694 /* BenchmarksCell.xib in Resources */,
-				27CB2076289C1CEF00E63694 /* AllResourceVC.xib in Resources */,
 				2768DED828A3F473004C6A5B /* AddTaskVC.xib in Resources */,
 				27A7375E28913F0500FD8AD9 /* ProgressView.xib in Resources */,
 				2710A29A289AF485009BCE60 /* PastVentures.xib in Resources */,
@@ -946,6 +969,7 @@
 				27CB2085289D450000E63694 /* SearchView.swift in Sources */,
 				27A737702891435C00FD8AD9 /* UIButtonDesignable.swift in Sources */,
 				2710A293289A7150009BCE60 /* GoalAndBenchmarkCell.swift in Sources */,
+				2704244C28A84BF3002EF7B5 /* Extension.swift in Sources */,
 				27B8C8FE28A198880011B039 /* ReusableView.swift in Sources */,
 				27B8C8E528A1067F0011B039 /* FilterCell.swift in Sources */,
 				27B8C8F028A167E00011B039 /* FilterList.swift in Sources */,
@@ -960,14 +984,17 @@
 				27B8C8F228A1687F0011B039 /* MapFilterList.swift in Sources */,
 				27C9AEAE288DB44600FA584A /* CategoriesCollectionViewCell.swift in Sources */,
 				27CB207A289CFC0400E63694 /* OnBoardingFrame1.swift in Sources */,
+				2704245328A95AAE002EF7B5 /* Storyboarded.swift in Sources */,
 				2768DEDB28A3FE0A004C6A5B /* AddGoalVC.swift in Sources */,
 				27A7376F2891435C00FD8AD9 /* UIViewDesignable.swift in Sources */,
 				2768DED728A3F473004C6A5B /* AddTaskVC.swift in Sources */,
 				2706D21328913D4500546425 /* ProgressBar.swift in Sources */,
 				2710A28A28971E3B009BCE60 /* ListItem.swift in Sources */,
+				2704245028A8CED1002EF7B5 /* LoginProgressViews.swift in Sources */,
 				2710A28D289A5C3C009BCE60 /* TaskCell.swift in Sources */,
 				27B8C8ED28A14C320011B039 /* MapVC.swift in Sources */,
 				27A737622891403000FD8AD9 /* UIViewFromNib.swift in Sources */,
+				2704245528A95EAD002EF7B5 /* AllCategoriesVC.swift in Sources */,
 				27B8C8F928A1825D0011B039 /* ActivityCell.swift in Sources */,
 				2767A271288F3CD600DF34D1 /* DonationThirdFrame.swift in Sources */,
 				27C9AE7F288D4C1E00FA584A /* OnBoardingFrame2.swift in Sources */,
@@ -1001,6 +1028,7 @@
 				27C9AE9E288D8BEC00FA584A /* OpportunityViewVC.swift in Sources */,
 				27C9AE78288D470600FA584A /* OnBoardingVC.swift in Sources */,
 				27CB204D289AFDE800E63694 /* HaveAnIdeaVC.swift in Sources */,
+				2704245728A96034002EF7B5 /* AllTasksVC.swift in Sources */,
 				27CB2067289BBEA600E63694 /* BenchmarksCell.swift in Sources */,
 				27CB208B289D4A9300E63694 /* HomeCategories.swift in Sources */,
 				2704243D28A6C828002EF7B5 /* BusinessPlanCell.swift in Sources */,

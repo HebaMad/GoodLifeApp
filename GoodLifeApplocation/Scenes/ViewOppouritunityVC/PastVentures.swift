@@ -11,6 +11,7 @@ class PastVentures: UIViewController {
     
     
     //MARK: - Outlet
+    
     @IBOutlet weak var coverImage: UIImageViewDesignable!
     @IBOutlet weak var titleTxt: UILabel!
     @IBOutlet weak var Description: UILabel!
@@ -25,9 +26,12 @@ class PastVentures: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        navigationController?.navigationBar.isHidden = false
+        
     }
 
-
+    
+    
 
 
 }

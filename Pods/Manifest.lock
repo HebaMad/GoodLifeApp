@@ -4,6 +4,7 @@ PODS:
   - Charts/Core (4.0.3):
     - SwiftAlgorithms (~> 1.0)
   - IQKeyboardManagerSwift (6.3.0)
+  - RangeSeekSlider (1.8.0)
   - SideMenu (6.5.0)
   - SwiftAlgorithms (1.0.0)
   - XLPagerTabStrip (9.0.0)
@@ -11,6 +12,7 @@ PODS:
 DEPENDENCIES:
   - Charts
   - IQKeyboardManagerSwift (= 6.3.0)
+  - RangeSeekSlider
   - SideMenu
   - XLPagerTabStrip (~> 9.0)
 
@@ -18,6 +20,7 @@ SPEC REPOS:
   trunk:
     - Charts
     - IQKeyboardManagerSwift
+    - RangeSeekSlider
     - SideMenu
     - SwiftAlgorithms
     - XLPagerTabStrip
@@ -25,10 +28,11 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Charts: d959d6723c8eedfdd0735dfc28cb0a71762ac4d9
   IQKeyboardManagerSwift: a8228c257614af98743b4cd8584637025f36358f
+  RangeSeekSlider: 650b11fa1edcb92e1e0ede797669d98622570fb5
   SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
   SwiftAlgorithms: 38dda4731d19027fdeee1125f973111bf3386b53
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: f387ff56da2419655c1fa3a2801b1a8b8389b68c
+PODFILE CHECKSUM: 1b29e885c37754edabc27597f099d9e3acc52902
 
 COCOAPODS: 1.11.2

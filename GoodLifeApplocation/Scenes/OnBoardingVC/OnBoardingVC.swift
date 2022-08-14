@@ -18,7 +18,6 @@ class OnBoardingVC: UIViewController {
     //MARK: - Properties
     
     var onBoardingScreen = 0
-    
     //MARK: - Life cycle
     
     override func viewDidLoad() {
@@ -107,7 +106,9 @@ class OnBoardingVC: UIViewController {
             continueAction.setTitle("Welcome!", for: .normal)
             self.contsinerView.addSubview(vc.view)
             self.onBoardingScreen=6
-            
+        case 6:
+            let vc = MapVC()
+            self.sceneDelegate.setRootVC(vc: vc)
         default:
             print("test")
         }

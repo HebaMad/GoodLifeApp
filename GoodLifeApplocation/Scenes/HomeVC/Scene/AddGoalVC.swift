@@ -16,7 +16,6 @@ class AddGoalVC: UIViewController {
     @IBOutlet private(set) weak var closeBtn: UIButton!
     @IBOutlet private(set) weak var categorySelectionBtn: UIButton!
     @IBOutlet private(set) weak var DeadlineBtn: UIButton!
-    
     @IBOutlet private(set) weak var titleTxtfield: UITextField!
 
     
@@ -25,9 +24,24 @@ class AddGoalVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        bindBackButton()
     }
 
+}
 
+private extension AddGoalVC{
+    
+    func bindBackButton(){
+        closeBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
+    }
+    
+}
 
+//MARK: - private Handler
+private extension AddGoalVC{
 
+   @objc func buttonWasTapped(){
+       navigationController?.popViewController(animated: true)
+    
+  }
 }

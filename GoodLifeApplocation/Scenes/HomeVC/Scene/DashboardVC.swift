@@ -142,6 +142,26 @@ class DashboardVC: UIViewController {
         private func supplementaryHeaderItem() -> NSCollectionLayoutBoundarySupplementaryItem {
             .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .estimated(50)), elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
         }
+    
+    
+     @objc func viewAllButton(_ sender:UIButton){
+         
+         switch sections[sender.tag]{
+             
+         case .categories:
+             let vc = AllCategoriesVC.instantiate()
+
+             navigationController?.pushViewController(vc, animated: true)
+         case .Task:
+             let vc = AllTasksVC.instantiate()
+
+             navigationController?.pushViewController(vc, animated: true)
+         case .Resource:
+             let vc = AllResourceVC.instantiate()
+
+             navigationController?.pushViewController(vc, animated: true)
+         }
+    }
 }
 //MARK: - Binding
 
@@ -202,13 +222,37 @@ extension DashboardVC: UICollectionViewDataSource,UICollectionViewDelegate,UICol
         }
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        switch sections[indexPath.section] {
+
+        
+        case .categories:
+            let vc = ResourceDetailsVC.instantiate()
+            navigationController?.pushViewController(vc, animated: true)
+        case .Task:
+            let vc = ResourceDetailsVC.instantiate()
+            navigationController?.pushViewController(vc, animated: true)
+        case .Resource:
+            let vc = ResourceDetailsVC.instantiate()
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.headerIdentifier, for: indexPath) as! HeaderCollectionReusableView
+        header.viewAllButton.addTarget(self, action: #selector(viewAllButton), for: .touchUpInside)
+        header.viewAllButton.tag = indexPath.section
+
         header.setup(sections[indexPath.section].title)
         return header
     }
+}
+extension DashboardVC:Storyboarded{
+    static var storyboardName: StoryboardName = .main
+
 }
