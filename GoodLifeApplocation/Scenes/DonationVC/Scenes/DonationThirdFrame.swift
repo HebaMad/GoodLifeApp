@@ -11,6 +11,7 @@ class DonationThirdFrame: UIViewController {
     
     //MARK: - Outlet
     
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var SubscribeTypeTitle: UILabel!
     @IBOutlet weak var subscribeDescription: UILabel!
     @IBOutlet weak var amount: UILabel!
@@ -28,7 +29,7 @@ class DonationThirdFrame: UIViewController {
     //MARK: - Private Handler
     
     @IBAction func DonateNowAction(_ sender: Any) {
-        NotificationCenter.default.post(name: .init(rawValue: "GoodLife"), object: 3)
+        NotificationCenter.default.post(name: .init(rawValue: "GoodLife"), object: [3,scrollView.bounds.height+30])
 
     }
     

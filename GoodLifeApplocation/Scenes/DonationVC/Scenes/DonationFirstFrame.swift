@@ -33,6 +33,7 @@ class DonationFirstFrame: UIViewController {
     private func createCompositionalLayout() -> UICollectionViewCompositionalLayout {
         UICollectionViewCompositionalLayout { [weak self] sectionIndex, layoutEnviroment in
             guard let self = self  else { return nil }
+            
             let section = self.sections[sectionIndex]
             switch section {
             case .otherFund:
@@ -58,12 +59,13 @@ class DonationFirstFrame: UIViewController {
                 
                 
                 
-                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
+                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(200))
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
                 let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.6), heightDimension: .fractionalWidth(0.6))
                 
                 let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-               
+                group.contentInsets = .init(top: 0, leading: 0, bottom: 0, trailing: 0)
+
                 let section = NSCollectionLayoutSection(group: group)
                 section.orthogonalScrollingBehavior = .continuous
                 section.contentInsets = .init(top: 0, leading: 10, bottom: 0, trailing: 10)
@@ -123,11 +125,14 @@ extension DonationFirstFrame: UICollectionViewDataSource,UICollectionViewDelegat
         
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.headerIdentifier, for: indexPath) as! HeaderCollectionReusableView
         header.setup(sections[indexPath.section].title)
+        header.viewAllButton.isHidden = true
+        header.headerTitleLabel.textAlignment = .center
         return header
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        NotificationCenter.default.post(name: .init(rawValue: "GoodLife"), object: 1)
+        print(FundCollectionView.bounds.height)
+        NotificationCenter.default.post(name: .init(rawValue: "GoodLife"), object: [1,FundCollectionView.bounds.height])
 
     }
 

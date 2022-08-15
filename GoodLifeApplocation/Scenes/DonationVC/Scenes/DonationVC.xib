@@ -18,7 +18,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DonationVC" customModule="GoodLifeApplocation" customModuleProvider="target">
             <connections>
-                <outlet property="containerView" destination="YB2-xK-5RH" id="l4C-3H-tHM"/>
+                <outlet property="containerHeight" destination="lJ3-6Q-gPv" id="oBs-VV-uSU"/>
+                <outlet property="containerView" destination="YB2-xK-5RH" id="Mda-73-OM7"/>
                 <outlet property="donationDescription" destination="Jw4-sJ-9S5" id="4gW-Jt-g7Y"/>
                 <outlet property="noOfDonation" destination="v6k-I8-s1U" id="Rxf-RJ-Yyv"/>
                 <outlet property="stepsIndicator" destination="4Hw-Ct-XvI" id="l54-vy-tBL"/>
@@ -31,106 +32,123 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg2" translatesAutoresizingMaskIntoConstraints="NO" id="bpP-2V-5Ne">
-                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg2" translatesAutoresizingMaskIntoConstraints="NO" id="bpP-2V-5Ne">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="662"/>
                 </imageView>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="cF8-uo-F0u">
-                    <rect key="frame" x="24" y="64" width="366" height="202.5"/>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cCD-oB-1bT">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMl-cK-AFL">
-                            <rect key="frame" x="0.0" y="0.0" width="366" height="76"/>
-                            <string key="text">Donate to Worthy
-Causes</string>
-                            <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="24"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Over 18,000 Donations" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v6k-I8-s1U">
-                            <rect key="frame" x="0.0" y="96" width="366" height="19.5"/>
-                            <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="16"/>
-                            <color key="textColor" red="1" green="0.78039215689999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jw4-sJ-9S5">
-                            <rect key="frame" x="0.0" y="135.5" width="366" height="67"/>
-                            <string key="text">Giving a meal or an expirience to those in need has never been easier. With the use of Blockchains technology, you see where your money goes, and who uses it!</string>
-                            <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="14"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
-                </stackView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vh0-SS-d78" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="286.5" width="414" height="609.5"/>
-                    <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eRj-4u-1Sc">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="609.5"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="NGA-GJ-jrN">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Hw-Ct-XvI" customClass="StepIndicatorView" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                    <rect key="frame" x="16" y="10" width="382" height="60"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="tintColor" name="progressView"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="cF8-uo-F0u">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="222"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMl-cK-AFL">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="112"/>
+                                            <string key="text">Donate to Worthy
+Causes</string>
+                                            <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="24"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Over 18,000 Donations" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v6k-I8-s1U">
+                                            <rect key="frame" x="0.0" y="132" width="414" height="19.5"/>
+                                            <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="16"/>
+                                            <color key="textColor" red="1" green="0.78039215689999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jw4-sJ-9S5">
+                                            <rect key="frame" x="0.0" y="171.5" width="414" height="50.5"/>
+                                            <string key="text">Giving a meal or an expirience to those in need has never been easier. With the use of Blockchains technology, you see where your money goes, and who uses it!</string>
+                                            <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="14"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vh0-SS-d78" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="238" width="414" height="580"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eRj-4u-1Sc">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="580"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Hw-Ct-XvI" customClass="StepIndicatorView" customModule="GoodLifeApplocation" customModuleProvider="target">
+                                                    <rect key="frame" x="16" y="10" width="382" height="60"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" name="progressView"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="7m1-uA-u0H"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="currentStep">
+                                                            <integer key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
+                                                            <color key="value" name="progressView"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="circleTintColor">
+                                                            <color key="value" name="ButtonColor"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="numberOfSteps">
+                                                            <integer key="value" value="4"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="lineTintColor">
+                                                            <color key="value" name="ButtonColor"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="circleStrokeWidth">
+                                                            <real key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                                <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YB2-xK-5RH">
+                                                    <rect key="frame" x="16" y="78" width="382" height="494"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="494" id="lJ3-6Q-gPv"/>
+                                                    </constraints>
+                                                </containerView>
+                                            </subviews>
+                                            <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="16" bottom="8" trailing="16"/>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.97254901959999995" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="60" id="7m1-uA-u0H"/>
+                                        <constraint firstItem="eRj-4u-1Sc" firstAttribute="leading" secondItem="vh0-SS-d78" secondAttribute="leading" id="2kE-Dq-yRz"/>
+                                        <constraint firstAttribute="trailing" secondItem="eRj-4u-1Sc" secondAttribute="trailing" id="T6t-eE-7E7"/>
+                                        <constraint firstAttribute="bottom" secondItem="eRj-4u-1Sc" secondAttribute="bottom" id="jub-iQ-5pP"/>
+                                        <constraint firstItem="eRj-4u-1Sc" firstAttribute="top" secondItem="vh0-SS-d78" secondAttribute="top" id="v88-0x-67C"/>
                                     </constraints>
                                     <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="currentStep">
-                                            <integer key="value" value="1"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
-                                            <color key="value" name="progressView"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="circleTintColor">
-                                            <color key="value" name="ButtonColor"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="numberOfSteps">
-                                            <integer key="value" value="4"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="lineTintColor">
-                                            <color key="value" name="ButtonColor"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="circleStrokeWidth">
-                                            <real key="value" value="10"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="20"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
-                                <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YB2-xK-5RH">
-                                    <rect key="frame" x="16" y="78" width="382" height="523.5"/>
-                                </containerView>
                             </subviews>
-                            <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="16" bottom="8" trailing="16"/>
                         </stackView>
                     </subviews>
-                    <color key="backgroundColor" red="0.97254901959999995" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstItem="eRj-4u-1Sc" firstAttribute="leading" secondItem="vh0-SS-d78" secondAttribute="leading" id="2kE-Dq-yRz"/>
-                        <constraint firstAttribute="trailing" secondItem="eRj-4u-1Sc" secondAttribute="trailing" id="T6t-eE-7E7"/>
-                        <constraint firstAttribute="bottom" secondItem="eRj-4u-1Sc" secondAttribute="bottom" id="jub-iQ-5pP"/>
-                        <constraint firstItem="eRj-4u-1Sc" firstAttribute="top" secondItem="vh0-SS-d78" secondAttribute="top" id="v88-0x-67C"/>
+                        <constraint firstItem="NGA-GJ-jrN" firstAttribute="height" secondItem="cCD-oB-1bT" secondAttribute="height" priority="250" id="CAm-g0-2ST"/>
+                        <constraint firstAttribute="trailing" secondItem="NGA-GJ-jrN" secondAttribute="trailing" id="OxL-nP-iQS"/>
+                        <constraint firstItem="NGA-GJ-jrN" firstAttribute="top" secondItem="cCD-oB-1bT" secondAttribute="top" id="REH-Oa-n8O"/>
+                        <constraint firstAttribute="bottom" secondItem="NGA-GJ-jrN" secondAttribute="bottom" id="gPo-Fx-fhz"/>
+                        <constraint firstItem="NGA-GJ-jrN" firstAttribute="leading" secondItem="cCD-oB-1bT" secondAttribute="leading" id="imd-7S-SeK"/>
+                        <constraint firstItem="NGA-GJ-jrN" firstAttribute="width" secondItem="cCD-oB-1bT" secondAttribute="width" id="tVO-aJ-Vnm"/>
                     </constraints>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                            <real key="value" value="20"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                </view>
+                </scrollView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" name="backgroundColor"/>
+            <color key="backgroundColor" name="bg3"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cF8-uo-F0u" secondAttribute="trailing" constant="24" id="2RQ-D0-5Wh"/>
-                <constraint firstItem="bpP-2V-5Ne" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="CCa-PV-2TK"/>
-                <constraint firstItem="vh0-SS-d78" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="FXh-0e-pJg"/>
-                <constraint firstAttribute="bottom" secondItem="bpP-2V-5Ne" secondAttribute="bottom" id="Gal-Co-uxN"/>
+                <constraint firstItem="cCD-oB-1bT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="1HA-Hv-wY4"/>
+                <constraint firstItem="cF8-uo-F0u" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.247768" id="ASz-mf-8jQ"/>
                 <constraint firstItem="bpP-2V-5Ne" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Pb3-en-wfP"/>
-                <constraint firstItem="cF8-uo-F0u" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="Rs9-UK-GPp"/>
-                <constraint firstAttribute="bottom" secondItem="vh0-SS-d78" secondAttribute="bottom" id="SNL-m0-Xu0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="bpP-2V-5Ne" secondAttribute="bottom" constant="200" id="Pxy-ny-nEZ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cCD-oB-1bT" secondAttribute="trailing" id="VSA-CC-wPg"/>
                 <constraint firstItem="bpP-2V-5Ne" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="XZ1-ek-vjP"/>
-                <constraint firstItem="cF8-uo-F0u" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="fE8-lQ-DwE"/>
-                <constraint firstItem="vh0-SS-d78" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.68" id="mjp-z0-pgs"/>
-                <constraint firstItem="vh0-SS-d78" firstAttribute="top" secondItem="cF8-uo-F0u" secondAttribute="bottom" constant="20" id="n4g-HS-9zm"/>
-                <constraint firstItem="cF8-uo-F0u" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="n8S-Zb-75F"/>
-                <constraint firstItem="vh0-SS-d78" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="uhZ-uz-7TE"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="cCD-oB-1bT" secondAttribute="bottom" id="auX-d5-ROM"/>
+                <constraint firstItem="bpP-2V-5Ne" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="lEu-1m-hsH"/>
+                <constraint firstItem="cCD-oB-1bT" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="lfU-IK-AWE"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="123.88392857142857"/>
         </view>
@@ -140,8 +158,8 @@ Causes</string>
         <namedColor name="ButtonColor">
             <color red="0.0" green="0.85100001096725464" blue="0.44299998879432678" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="backgroundColor">
-            <color red="0.63099998235702515" green="0.34900000691413879" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="bg3">
+            <color red="0.97299998998641968" green="0.9649999737739563" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="progressView">
             <color red="0.79600000381469727" green="0.63899999856948853" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -44,7 +44,7 @@ class DonationFrameTwoVC: UIViewController {
         return cartCell
     }
      func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-         NotificationCenter.default.post(name: .init(rawValue: "GoodLife"), object: 2)
+         NotificationCenter.default.post(name: .init(rawValue: "GoodLife"), object: [2,mealMakerTableView.bounds.height])
      }
     
     

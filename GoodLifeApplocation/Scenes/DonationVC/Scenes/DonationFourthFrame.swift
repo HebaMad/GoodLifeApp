@@ -9,30 +9,50 @@ import UIKit
 
 class DonationFourthFrame: UIViewController {
     
-    
     //MARK: - Outlet
-
+    
     @IBOutlet weak var orderImage: UIImageViewDesignable!
     
+    @IBOutlet weak var mealMarkerBtn: UIButton!
+    @IBOutlet weak var claimNftBtn: UIButtonDesignable!
     
     
-//MARK: - Life CYCLE
+    //MARK: - Life CYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        bindButton()
     }
+}
 
-    
-    
 //MARK: - Binding
-    
-    
-    
+private extension DonationFourthFrame{
+    func bindButton(){
+        claimNftBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
+        mealMarkerBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
+        
+    }
+}
 
 //MARK: - Private Handler
 
-    
-}
+extension DonationFourthFrame{
+    @objc func buttonWasTapped( sender: UIButton){
+        
+        switch sender{
+        case claimNftBtn:
+            let vc = DashboardVC.instantiate()
+            self.sceneDelegate.setRootVC(vc: vc)
+            
+        case mealMarkerBtn:
+            let vc = DonationFifthFrameVC()
+            self.sceneDelegate.setRootVC(vc: vc)
 
+        
+            
+        default:
+            print("")
+        }
+    }
+}
 

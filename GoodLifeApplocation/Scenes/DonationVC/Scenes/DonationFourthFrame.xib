@@ -15,6 +15,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DonationFourthFrame" customModule="GoodLifeApplocation" customModuleProvider="target">
             <connections>
+                <outlet property="claimNftBtn" destination="eLL-B8-Aa3" id="9xK-eO-TsB"/>
+                <outlet property="mealMarkerBtn" destination="x3g-i0-kjf" id="XBx-Ee-nIv"/>
                 <outlet property="orderImage" destination="jHs-1b-tba" id="bbv-bC-cok"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
