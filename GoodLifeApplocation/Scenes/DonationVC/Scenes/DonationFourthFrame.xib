@@ -99,9 +99,6 @@
                                     <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
-                            <connections>
-                                <action selector="claimOrderBtn:" destination="-1" eventType="touchUpInside" id="Xln-AJ-1hI"/>
-                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x3g-i0-kjf">
                             <rect key="frame" x="0.0" y="54" width="350" height="28.5"/>
@@ -110,9 +107,6 @@
                                 <fontDescription key="titleFontDescription" name="Inter-Medium" family="Inter" pointSize="12"/>
                                 <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </buttonConfiguration>
-                            <connections>
-                                <action selector="mealTrackerBtn:" destination="-1" eventType="touchUpInside" id="bVF-Ct-fSw"/>
-                            </connections>
                         </button>
                     </subviews>
                 </stackView>

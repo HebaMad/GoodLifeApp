@@ -23,11 +23,16 @@ class DonationFourthFrame: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-//MARK: - Private Handler
-    @IBAction func claimOrderBtn(_ sender: Any) {
-    }
     
-    @IBAction func mealTrackerBtn(_ sender: Any) {
-    }
+    
+//MARK: - Binding
+    
+    
+    
+
+//MARK: - Private Handler
+
     
 }
+
+

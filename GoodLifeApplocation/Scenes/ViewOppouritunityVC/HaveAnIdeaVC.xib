@@ -17,6 +17,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HaveAnIdeaVC" customModule="GoodLifeApplocation" customModuleProvider="target">
             <connections>
                 <outlet property="Description" destination="XRU-lA-6KV" id="kvi-Sl-A6n"/>
+                <outlet property="backBtn" destination="gcE-CT-R6c" id="08h-nV-T71"/>
                 <outlet property="coverImage" destination="lNS-eJ-Vrf" id="dvc-At-tHB"/>
                 <outlet property="descriptionText" destination="HdB-3z-HJ7" id="C34-pp-APl"/>
                 <outlet property="monthlyRevenuTxt" destination="uuq-ax-vAY" id="cJG-I9-P9U"/>
@@ -41,14 +42,14 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcE-CT-R6c">
-                                            <rect key="frame" x="18" y="47" width="30" height="20.5"/>
+                                            <rect key="frame" x="18" y="52" width="15" height="18.5"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="30" id="S7x-5f-1ot"/>
-                                                <constraint firstAttribute="width" constant="30" id="kLD-yr-sqo"/>
+                                                <constraint firstAttribute="height" constant="22" id="S7x-5f-1ot"/>
+                                                <constraint firstAttribute="width" constant="15" id="kLD-yr-sqo"/>
                                             </constraints>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                            <state key="normal" backgroundImage="line.horizontal.3" catalog="system"/>
+                                            <state key="normal" backgroundImage="chevron.backward" catalog="system"/>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" name="BgColor"/>
@@ -326,9 +327,9 @@ ministry idea??</string>
         </designable>
     </designables>
     <resources>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="image3" width="244" height="131"/>
-        <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
         <image name="pastbg" width="390" height="492"/>
         <namedColor name="BgColor">
             <color red="0.59200000762939453" green="0.27799999713897705" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

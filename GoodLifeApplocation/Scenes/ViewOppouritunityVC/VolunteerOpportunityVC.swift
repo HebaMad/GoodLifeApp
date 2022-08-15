@@ -15,17 +15,29 @@ class VolunteerOpportunityVC: UIViewController {
     @IBOutlet weak var eventDescriptionTxt: UITextView!
     @IBOutlet weak var locationOfEvent: UITextField!
     @IBOutlet weak var eventTitleText: UITextField!
+    @IBOutlet weak var backBtn: UIButton!
+
     
     //MARK: - Life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        navigationController?.navigationBar.isHidden = false
+        bindBackButton()
     }
+}
+//MARK: - Binding
 
-
+private extension VolunteerOpportunityVC{
     
-    
+    func bindBackButton(){
+        backBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
+    }
+}
+//MARK: - private Handler
+private extension VolunteerOpportunityVC{
 
+   @objc func buttonWasTapped(){
+       navigationController?.popViewController(animated: true)
+    
+  }
 }

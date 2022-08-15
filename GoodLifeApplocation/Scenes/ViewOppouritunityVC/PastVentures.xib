@@ -17,6 +17,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PastVentures" customModule="GoodLifeApplocation" customModuleProvider="target">
             <connections>
                 <outlet property="Description" destination="1C1-Dl-hFJ" id="7H2-iH-XeW"/>
+                <outlet property="backBtn" destination="zOK-s4-6cM" id="E85-tJ-kgb"/>
                 <outlet property="coverImage" destination="neD-0I-tRV" id="MMt-H0-tUu"/>
                 <outlet property="descriptionText" destination="DSU-R4-SA4" id="pRh-F6-Vgj"/>
                 <outlet property="monthlyRevenuTxt" destination="8SK-uA-sNv" id="Hn3-Ts-eqC"/>
@@ -41,14 +42,14 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOK-s4-6cM">
-                                            <rect key="frame" x="18" y="47" width="30" height="20.5"/>
+                                            <rect key="frame" x="18" y="52" width="15" height="18.5"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="30" id="dUf-rM-3zR"/>
-                                                <constraint firstAttribute="height" constant="30" id="jug-c7-v0M"/>
+                                                <constraint firstAttribute="width" constant="15" id="dUf-rM-3zR"/>
+                                                <constraint firstAttribute="height" constant="22" id="jug-c7-v0M"/>
                                             </constraints>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                            <state key="normal" backgroundImage="line.horizontal.3" catalog="system"/>
+                                            <state key="normal" backgroundImage="chevron.backward" catalog="system"/>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" name="BgColor"/>
@@ -325,8 +326,8 @@ side projects?</string>
         </designable>
     </designables>
     <resources>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
-        <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
         <image name="pastbg" width="390" height="492"/>
         <image name="venture" width="242" height="128"/>
         <namedColor name="BgColor">

@@ -11,76 +11,69 @@ class OpportunityViewVC: UIViewController {
     
     //MARK: - Outlet
     
-    @IBOutlet weak var pastVenturesButton: UIButton!
-    
-    @IBOutlet weak var volunteerOpportunityButton: UIButton!
-    
-    @IBOutlet weak var AskHelpingButton: UIButton!
-
-    @IBOutlet weak var haveIdeaButton: UIButton!
-    
-    
-    @IBOutlet weak var AskingExperienceButton: UIButton!
-    
+    @IBOutlet weak var yourVenturesView: OpportunityView!
+    @IBOutlet weak var pastVentureView: OpportunityView!
+    @IBOutlet weak var VolunteerOpportunityView: OpportunityView!
+    @IBOutlet weak var HaveIdeaView: OpportunityView!
+    @IBOutlet weak var experienceView: OpportunityView!
+    @IBOutlet weak var DonationView: OpportunityView!
     
     
     //MARK: - Life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         bindButton()
     }
-
-    @IBAction func pastVenAction(_ sender: UIButton) {
-        let vc = PastVentures()
-           navigationController?.pushViewController(vc, animated: true)
-    }
     
-    @IBAction func testAction(_ sender: Any) {
-        let vc = PastVentures()
-           navigationController?.pushViewController(vc, animated: true)
+    func bindButton(){
+        yourVenturesView.ViewBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
+        pastVentureView.ViewBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
+        VolunteerOpportunityView.ViewBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
+        HaveIdeaView.ViewBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
+        experienceView.ViewBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
+        DonationView.ViewBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
     }
-    
-}
 
-//MARK: - Binding
-private extension OpportunityViewVC{
     
-    private func bindButton(){
-        pastVenturesButton.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
-        volunteerOpportunityButton.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
-        AskHelpingButton.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
-        haveIdeaButton.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
-        AskingExperienceButton.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
-
-    }
 }
 
 //MARK: - Private Handler
 
  extension OpportunityViewVC{
-    @objc func buttonWasTapped(sender: UIButton){
-        switch sender{
-        case pastVenturesButton:
-            
-         let vc = PastVentures()
-            navigationController?.pushViewController(vc, animated: true)
-            
-        case volunteerOpportunityButton:
-            let vc = VolunteerOpportunityVC()
-               navigationController?.pushViewController(vc, animated: true)
-            
-        case haveIdeaButton:
-            let vc = HaveAnIdeaVC()
-               navigationController?.pushViewController(vc, animated: true)
-            
-        case AskingExperienceButton:
-            let vc = ReviewExperienceVC()
-               navigationController?.pushViewController(vc, animated: true)
-        default:
-            print("")
-        }
+     @objc func buttonWasTapped( sender: UIButton){
+         
+         switch sender{
+             
+             case yourVenturesView.ViewBtn:
+             let vc = PastVentures()
+             navigationController?.pushViewController(vc, animated: true)
 
-    }
+             case pastVentureView.ViewBtn:
+             let vc = PastVentures()
+             navigationController?.pushViewController(vc, animated: true)
+             
+             case VolunteerOpportunityView.ViewBtn:
+             let vc = VolunteerOpportunityVC()
+             navigationController?.pushViewController(vc, animated: true)
+             
+             case HaveIdeaView.ViewBtn:
+        
+             let vc = HaveAnIdeaVC()
+             navigationController?.pushViewController(vc, animated: true)
+             
+             case experienceView.ViewBtn:
+             let vc = ReviewExperienceVC()
+             navigationController?.pushViewController(vc, animated: true)
+             
+             case DonationView.ViewBtn:
+             let vc = DonationVC()
+             navigationController?.pushViewController(vc, animated: true)
+             
+         default:
+             print("")
+         }
+      
+     }
 }

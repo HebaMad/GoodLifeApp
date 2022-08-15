@@ -19,6 +19,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VolunteerOpportunityVC" customModule="GoodLifeApplocation" customModuleProvider="target">
             <connections>
+                <outlet property="backBtn" destination="KRD-pz-FDc" id="NtW-pb-k8z"/>
                 <outlet property="eventDayTxt" destination="GUG-bZ-JHG" id="fxb-lm-Tqy"/>
                 <outlet property="eventDescriptionTxt" destination="T3X-Dl-taf" id="pgI-9T-uDK"/>
                 <outlet property="eventTimeTxt" destination="Vgb-WA-4Zv" id="jeu-t0-FDb"/>
@@ -35,11 +36,11 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImageBG" translatesAutoresizingMaskIntoConstraints="NO" id="AFr-p0-rS5">
                     <rect key="frame" x="0.0" y="44" width="414" height="520"/>
                 </imageView>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5gH-pj-oPy">
-                    <rect key="frame" x="40" y="64" width="334" height="257"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="5gH-pj-oPy">
+                    <rect key="frame" x="40" y="97.5" width="334" height="249"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9zs-i3-7Tr">
-                            <rect key="frame" x="0.0" y="0.0" width="334" height="72"/>
+                            <rect key="frame" x="0.0" y="0.0" width="334" height="70"/>
                             <string key="text">Need some 
 extra hands?</string>
                             <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="24"/>
@@ -47,7 +48,7 @@ extra hands?</string>
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Untitled design - 2022-07-13T122056 1" translatesAutoresizingMaskIntoConstraints="NO" id="PqJ-BU-Lir" customClass="UIImageViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="80" width="334" height="128"/>
+                            <rect key="frame" x="0.0" y="75" width="334" height="128"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                     <real key="value" value="15"/>
@@ -61,70 +62,97 @@ extra hands?</string>
                             </userDefinedRuntimeAttributes>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Once you complete the form, we will notify potenital volunteers in your area!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GNb-hb-pkX">
-                            <rect key="frame" x="0.0" y="216" width="334" height="41"/>
+                            <rect key="frame" x="0.0" y="208" width="334" height="41"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                 </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hzQ-kL-Apf">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KRD-pz-FDc">
+                            <rect key="frame" x="18" y="60" width="15" height="18.5"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="15" id="Egh-cS-Lr6"/>
+                                <constraint firstAttribute="height" constant="22" id="JS5-50-oCm"/>
+                            </constraints>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" backgroundImage="chevron.backward" catalog="system"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" name="BgColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="90" id="QRN-eu-1XN"/>
+                        <constraint firstItem="KRD-pz-FDc" firstAttribute="leading" secondItem="hzQ-kL-Apf" secondAttribute="leading" constant="18" id="YuP-aX-afm"/>
+                        <constraint firstAttribute="bottom" secondItem="KRD-pz-FDc" secondAttribute="bottom" constant="10" id="xaf-ZW-Eef"/>
+                    </constraints>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fGU-Op-ZGo" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="346" width="414" height="550"/>
+                    <rect key="frame" x="0.0" y="358.5" width="414" height="537.5"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="G7Y-db-F1J">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="550"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="537.5"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2kc-0V-JwL">
-                                    <rect key="frame" x="20" y="20" width="374" height="61"/>
+                                    <rect key="frame" x="20" y="20" width="374" height="58"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title of event?*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NAc-e9-74T">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="17"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="8"/>
                                             <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HBA-mA-3ga">
-                                            <rect key="frame" x="0.0" y="27" width="374" height="34"/>
+                                            <rect key="frame" x="0.0" y="18" width="374" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="Ecu-iA-b0G"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="z7n-c6-7Q0">
-                                    <rect key="frame" x="20" y="93" width="374" height="61"/>
+                                    <rect key="frame" x="20" y="90" width="374" height="57.5"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location of event?*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDs-Rk-cK5">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="17"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="7.5"/>
                                             <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OzS-ku-hkE">
-                                            <rect key="frame" x="0.0" y="27" width="374" height="34"/>
+                                            <rect key="frame" x="0.0" y="17.5" width="374" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="xou-Zj-p6O"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Fbp-DT-5iC">
-                                    <rect key="frame" x="20" y="166" width="374" height="61"/>
+                                    <rect key="frame" x="20" y="159.5" width="374" height="58"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day of event?*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RyB-jT-KJG">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="17"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="8"/>
                                             <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TbG-Dk-nbv">
-                                            <rect key="frame" x="0.0" y="27" width="374" height="34"/>
+                                            <rect key="frame" x="0.0" y="18" width="374" height="40"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GUG-bZ-JHG">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="u0v-32-CCK">
-                                                    <rect key="frame" x="334" y="12" width="20" height="10.5"/>
+                                                    <rect key="frame" x="334" y="15" width="20" height="10.5"/>
                                                     <color key="tintColor" systemColor="opaqueSeparatorColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="2uv-7t-4uD"/>
@@ -132,15 +160,13 @@ extra hands?</string>
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vKS-t0-BWa">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                    <connections>
-                                                        <action selector="dayOfEventTapped:" destination="-1" eventType="touchUpInside" id="HKm-z7-rnv"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="JRh-5j-Eb1"/>
                                                 <constraint firstAttribute="bottom" secondItem="GUG-bZ-JHG" secondAttribute="bottom" id="Jup-RS-1Jx"/>
                                                 <constraint firstItem="vKS-t0-BWa" firstAttribute="leading" secondItem="TbG-Dk-nbv" secondAttribute="leading" id="OoB-gB-Rgy"/>
                                                 <constraint firstAttribute="trailing" secondItem="u0v-32-CCK" secondAttribute="trailing" constant="20" id="R07-hz-SWE"/>
@@ -156,24 +182,24 @@ extra hands?</string>
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JvT-oE-Hec">
-                                    <rect key="frame" x="20" y="239" width="374" height="61"/>
+                                    <rect key="frame" x="20" y="229.5" width="374" height="58"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time of the event?*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BdM-hz-93j">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="17"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="8"/>
                                             <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1eo-Lg-WKE">
-                                            <rect key="frame" x="0.0" y="27" width="374" height="34"/>
+                                            <rect key="frame" x="0.0" y="18" width="374" height="40"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vgb-WA-4Zv">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gZF-eC-RDv">
-                                                    <rect key="frame" x="334" y="12" width="20" height="10.5"/>
+                                                    <rect key="frame" x="334" y="15" width="20" height="10.5"/>
                                                     <color key="tintColor" systemColor="opaqueSeparatorColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="WMb-ae-HBq"/>
@@ -181,11 +207,8 @@ extra hands?</string>
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H7z-nP-Nep">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                    <connections>
-                                                        <action selector="timeOfEventTapped:" destination="-1" eventType="touchUpInside" id="MXA-Ea-TpF"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -199,13 +222,14 @@ extra hands?</string>
                                                 <constraint firstItem="Vgb-WA-4Zv" firstAttribute="top" secondItem="1eo-Lg-WKE" secondAttribute="top" id="dfD-6q-b8y"/>
                                                 <constraint firstItem="H7z-nP-Nep" firstAttribute="top" secondItem="1eo-Lg-WKE" secondAttribute="top" id="enq-Fn-9DQ"/>
                                                 <constraint firstAttribute="trailing" secondItem="Vgb-WA-4Zv" secondAttribute="trailing" id="kc1-ti-ATx"/>
+                                                <constraint firstAttribute="height" constant="40" id="tKP-Y1-fJb"/>
                                                 <constraint firstItem="H7z-nP-Nep" firstAttribute="leading" secondItem="1eo-Lg-WKE" secondAttribute="leading" id="y2X-co-sID"/>
                                             </constraints>
                                         </view>
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sTn-nD-EZg">
-                                    <rect key="frame" x="20" y="312" width="374" height="107"/>
+                                    <rect key="frame" x="20" y="299.5" width="374" height="107"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description of event?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bgr-vj-K0v">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="17"/>
@@ -226,7 +250,7 @@ extra hands?</string>
                                     </subviews>
                                 </stackView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EFj-uc-iE0">
-                                    <rect key="frame" x="20" y="431" width="374" height="111"/>
+                                    <rect key="frame" x="20" y="418.5" width="374" height="111"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BXu-0h-ZMQ" customClass="UIButtonDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
                                             <rect key="frame" x="309" y="4" width="50" height="50"/>
@@ -252,9 +276,6 @@ extra hands?</string>
                                                     <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
-                                            <connections>
-                                                <action selector="nextBtnTapped:" destination="-1" eventType="touchUpInside" id="FzE-Ho-oN3"/>
-                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -278,7 +299,6 @@ extra hands?</string>
                         <constraint firstItem="G7Y-db-F1J" firstAttribute="top" secondItem="fGU-Op-ZGo" secondAttribute="top" id="3xh-AE-9q4"/>
                         <constraint firstAttribute="bottom" secondItem="G7Y-db-F1J" secondAttribute="bottom" id="DRE-yO-HWF"/>
                         <constraint firstItem="G7Y-db-F1J" firstAttribute="leading" secondItem="fGU-Op-ZGo" secondAttribute="leading" id="Hwv-oG-E0v"/>
-                        <constraint firstItem="2kc-0V-JwL" firstAttribute="height" secondItem="fGU-Op-ZGo" secondAttribute="height" multiplier="0.110909" id="Jei-F4-zX3"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -297,6 +317,7 @@ extra hands?</string>
             <color key="backgroundColor" name="BgColor"/>
             <constraints>
                 <constraint firstItem="5gH-pj-oPy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="0Ix-Po-3bk"/>
+                <constraint firstItem="5gH-pj-oPy" firstAttribute="top" secondItem="hzQ-kL-Apf" secondAttribute="bottom" constant="7.5" id="20x-kQ-9Np"/>
                 <constraint firstItem="AFr-p0-rS5" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="48P-gA-KIJ"/>
                 <constraint firstItem="AFr-p0-rS5" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="9rT-F6-0yW"/>
                 <constraint firstItem="AFr-p0-rS5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="CqT-iv-v6o"/>
@@ -306,15 +327,17 @@ extra hands?</string>
                 <constraint firstItem="AFr-p0-rS5" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="HWa-ds-GJO"/>
                 <constraint firstAttribute="bottom" secondItem="fGU-Op-ZGo" secondAttribute="bottom" id="K7y-21-JGt"/>
                 <constraint firstItem="AFr-p0-rS5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="44" id="KT9-IB-faD"/>
-                <constraint firstItem="fGU-Op-ZGo" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.613839" id="My0-DD-eHV"/>
+                <constraint firstItem="fGU-Op-ZGo" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.6" id="My0-DD-eHV"/>
                 <constraint firstItem="AFr-p0-rS5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Q5E-XR-vPW"/>
                 <constraint firstItem="AFr-p0-rS5" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="VwZ-Da-8St"/>
+                <constraint firstItem="hzQ-kL-Apf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="XMq-hS-f8q"/>
                 <constraint firstItem="AFr-p0-rS5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Zc2-aX-UDA"/>
                 <constraint firstItem="AFr-p0-rS5" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="frG-Aj-AVh"/>
-                <constraint firstItem="5gH-pj-oPy" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="i7e-pQ-uUD"/>
                 <constraint firstItem="AFr-p0-rS5" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.580357" id="jcP-g4-GE5"/>
                 <constraint firstItem="PqJ-BU-Lir" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.142857" id="ke8-4P-NvH"/>
-                <constraint firstItem="fGU-Op-ZGo" firstAttribute="top" secondItem="5gH-pj-oPy" secondAttribute="bottom" constant="25" id="rwP-O5-SHY"/>
+                <constraint firstItem="fGU-Op-ZGo" firstAttribute="top" secondItem="5gH-pj-oPy" secondAttribute="bottom" constant="12" id="rwP-O5-SHY"/>
+                <constraint firstItem="hzQ-kL-Apf" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="u3U-Zl-rWg"/>
+                <constraint firstItem="hzQ-kL-Apf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="vTs-f3-tgq"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
         </view>
@@ -330,6 +353,7 @@ extra hands?</string>
     <resources>
         <image name="ImageBG" width="780" height="1278"/>
         <image name="Untitled design - 2022-07-13T122056 1" width="246" height="128"/>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="chevron.down" catalog="system" width="128" height="72"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
         <namedColor name="BgColor">

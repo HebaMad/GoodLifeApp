@@ -20,16 +20,29 @@ class ReviewExperienceVC: UIViewController {
     
     @IBOutlet weak var nextBtn: UIButton!
     @IBOutlet weak var addDocumentBtn: UIButton!
-    
+    @IBOutlet weak var backBtn: UIButton!
+
     //MARK: - Life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationController?.navigationBar.isHidden = false
-
+        bindBackButton()
     }
+}
+//MARK: - Binding
 
+private extension ReviewExperienceVC{
+    
+    func bindBackButton(){
+        backBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
+    }
+}
+//MARK: - private Handler
+private extension ReviewExperienceVC{
 
-
+   @objc func buttonWasTapped(){
+       navigationController?.popViewController(animated: true)
+    
+  }
 }

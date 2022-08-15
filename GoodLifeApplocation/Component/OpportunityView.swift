@@ -9,16 +9,11 @@ import UIKit
      
     @IBOutlet  weak var titleTxt: UILabel!
      @IBOutlet weak var subTitleText: UILabel!
-     @IBOutlet  weak var img: UIImageView!
-    
+     @IBOutlet weak var ViewBtn: UIButton!
+     
      //MARK: - Properties
      
-    @IBInspectable var image: UIImage? {
-         didSet {
-             updateView()
-         }
-     }
-    
+
     @IBInspectable var text:String?{
         didSet {
             titleTextEdit()
@@ -33,20 +28,14 @@ import UIKit
      //MARK: - private Handler
 
      
-    func updateView() {
-         img.image = self.image
-             
-         
-     }
+
     func titleTextEdit() {
         titleTxt.text = self.text
-             
          
      }
      
      func subTitleTextEdit() {
          subTitleText.text = self.subTitle
-              
           
       }
 }

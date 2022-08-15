@@ -18,14 +18,29 @@ class HaveAnIdeaVC: UIViewController {
     @IBOutlet weak var descriptionText: UITextView!
     @IBOutlet weak var weeklyTimeSelection: UITextField!
     @IBOutlet weak var monthlyRevenuTxt: UITextField!
-    
+    @IBOutlet weak var backBtn: UIButton!
+
     //MARK: - Life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationController?.navigationBar.isHidden = false
+        bindBackButton()
     }
+}
+//MARK: - Binding
 
+private extension HaveAnIdeaVC{
+    
+    func bindBackButton(){
+        backBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
+    }
+}
+//MARK: - private Handler
+private extension HaveAnIdeaVC{
 
+   @objc func buttonWasTapped(){
+       navigationController?.popViewController(animated: true)
+    
+  }
 }

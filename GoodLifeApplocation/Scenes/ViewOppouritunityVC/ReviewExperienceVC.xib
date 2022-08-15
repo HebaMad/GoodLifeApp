@@ -18,6 +18,7 @@
             <connections>
                 <outlet property="Description" destination="uZD-st-neS" id="fuV-Av-lQS"/>
                 <outlet property="addDocumentBtn" destination="TFc-1X-HUd" id="KKe-qj-uW8"/>
+                <outlet property="backBtn" destination="r2Y-nG-92E" id="1CP-Xf-3Ci"/>
                 <outlet property="coverImage" destination="5e2-82-xG1" id="tEX-TU-1Cb"/>
                 <outlet property="nextBtn" destination="Zvb-sP-y1F" id="eCd-27-eUT"/>
                 <outlet property="projectReview" destination="T99-p0-Rch" id="YuD-z9-0NL"/>
@@ -42,14 +43,14 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r2Y-nG-92E">
-                                            <rect key="frame" x="18" y="47" width="30" height="20.5"/>
+                                            <rect key="frame" x="18" y="52" width="15" height="18.5"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="30" id="HLO-oG-zzu"/>
-                                                <constraint firstAttribute="height" constant="30" id="deH-Im-UQI"/>
+                                                <constraint firstAttribute="width" constant="15" id="HLO-oG-zzu"/>
+                                                <constraint firstAttribute="height" constant="22" id="deH-Im-UQI"/>
                                             </constraints>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                            <state key="normal" backgroundImage="line.horizontal.3" catalog="system"/>
+                                            <state key="normal" backgroundImage="chevron.backward" catalog="system"/>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" name="BgColor"/>
@@ -382,9 +383,9 @@ feedback!</string>
     </designables>
     <resources>
         <image name="camera.fill" catalog="system" width="128" height="94"/>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="image3" width="244" height="131"/>
-        <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
         <image name="pastbg" width="390" height="492"/>
         <namedColor name="BgColor">
             <color red="0.59200000762939453" green="0.27799999713897705" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

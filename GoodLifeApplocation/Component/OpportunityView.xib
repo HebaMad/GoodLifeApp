@@ -14,7 +14,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OpportunityView" customModule="GoodLifeApplocation" customModuleProvider="target">
             <connections>
-                <outlet property="img" destination="BbU-q4-kIS" id="mv2-eu-lHa"/>
+                <outlet property="ViewBtn" destination="Kbr-jh-pNI" id="mfy-SP-yYW"/>
                 <outlet property="subTitleText" destination="nNV-PE-Tzw" id="vB3-Cb-nGt"/>
                 <outlet property="titleTxt" destination="BAG-kM-SFf" id="BXU-s0-AS3"/>
             </connections>
@@ -30,38 +30,18 @@
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="39E-cz-goD">
                             <rect key="frame" x="0.0" y="10" width="442" height="69"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Ll-Yp-kyK">
-                                    <rect key="frame" x="0.0" y="0.0" width="42" height="69"/>
-                                    <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BbU-q4-kIS">
-                                            <rect key="frame" x="2" y="15.5" width="38" height="38"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="38" id="w9f-dC-nwx"/>
-                                                <constraint firstAttribute="width" constant="38" id="wzo-Jv-fOf"/>
-                                            </constraints>
-                                        </imageView>
-                                    </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <constraints>
-                                        <constraint firstItem="BbU-q4-kIS" firstAttribute="centerX" secondItem="4Ll-Yp-kyK" secondAttribute="centerX" id="gjA-Nk-YJE"/>
-                                        <constraint firstItem="BbU-q4-kIS" firstAttribute="centerY" secondItem="4Ll-Yp-kyK" secondAttribute="centerY" id="jPT-Hc-7md"/>
-                                        <constraint firstAttribute="width" constant="42" id="vMv-oo-AwR"/>
-                                    </constraints>
-                                </view>
                                 <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hcY-V2-ubL">
-                                    <rect key="frame" x="48" y="0.0" width="348" height="69"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="396" height="69"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Past Ventures" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="BAG-kM-SFf">
-                                            <rect key="frame" x="0.0" y="6" width="348" height="28.5"/>
+                                            <rect key="frame" x="8" y="6" width="388" height="28.5"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="add data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nNV-PE-Tzw">
-                                            <rect key="frame" x="0.0" y="34.5" width="348" height="28.5"/>
+                                            <rect key="frame" x="8" y="34.5" width="388" height="28.5"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="11"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -69,7 +49,7 @@
                                         </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <directionalEdgeInsets key="directionalLayoutMargins" top="6" leading="0.0" bottom="6" trailing="0.0"/>
+                                    <directionalEdgeInsets key="directionalLayoutMargins" top="6" leading="8" bottom="6" trailing="0.0"/>
                                 </stackView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2HG-rk-3ds">
                                     <rect key="frame" x="402" y="0.0" width="40" height="69"/>
@@ -94,13 +74,22 @@
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kbr-jh-pNI">
+                            <rect key="frame" x="0.0" y="0.0" width="442" height="89"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title=""/>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="39E-cz-goD" firstAttribute="top" secondItem="W71-9g-NUu" secondAttribute="top" constant="10" id="BC6-z2-Aau"/>
                         <constraint firstAttribute="bottom" secondItem="39E-cz-goD" secondAttribute="bottom" constant="10" id="Shg-Rd-KUC"/>
+                        <constraint firstAttribute="trailing" secondItem="Kbr-jh-pNI" secondAttribute="trailing" id="XJc-f1-xrI"/>
+                        <constraint firstAttribute="bottom" secondItem="Kbr-jh-pNI" secondAttribute="bottom" id="b7y-GJ-LZK"/>
                         <constraint firstItem="39E-cz-goD" firstAttribute="leading" secondItem="W71-9g-NUu" secondAttribute="leading" id="ewx-Wo-lIF"/>
                         <constraint firstAttribute="trailing" secondItem="39E-cz-goD" secondAttribute="trailing" id="hB4-nk-RYC"/>
+                        <constraint firstItem="Kbr-jh-pNI" firstAttribute="top" secondItem="W71-9g-NUu" secondAttribute="top" id="lnp-BY-ViM"/>
+                        <constraint firstItem="Kbr-jh-pNI" firstAttribute="leading" secondItem="W71-9g-NUu" secondAttribute="leading" id="py7-2B-XuL"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
