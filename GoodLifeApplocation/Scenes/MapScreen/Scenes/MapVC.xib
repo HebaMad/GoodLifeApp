@@ -31,7 +31,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0dA-Nd-tTj">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                             <subviews>
-                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="3wB-T6-IOB">
+                                <collectionView clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="3wB-T6-IOB">
                                     <rect key="frame" x="24" y="0.0" width="386" height="50"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
@@ -117,6 +117,40 @@
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" image="line.3.horizontal" catalog="system"/>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tC1-df-y2O" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
+                    <rect key="frame" x="349" y="30" width="45" height="45"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDP-zQ-1Y6">
+                            <rect key="frame" x="10.5" y="10.5" width="24" height="24"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="DDP-zQ-1Y6" secondAttribute="height" multiplier="1:1" id="2bU-Tx-o4h"/>
+                                <constraint firstAttribute="height" constant="24" id="kBi-5g-5TU"/>
+                            </constraints>
+                            <color key="tintColor" name="button"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="Image-1"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="45" id="UFJ-GL-Sv6"/>
+                        <constraint firstItem="DDP-zQ-1Y6" firstAttribute="centerY" secondItem="tC1-df-y2O" secondAttribute="centerY" id="a4R-JY-WWh"/>
+                        <constraint firstAttribute="height" constant="45" id="g8W-6M-22B"/>
+                        <constraint firstItem="DDP-zQ-1Y6" firstAttribute="centerX" secondItem="tC1-df-y2O" secondAttribute="centerX" id="ywG-eN-mPR"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="bg3"/>
@@ -125,8 +159,10 @@
                 <constraint firstItem="rey-PC-ONn" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="8U6-MI-fHd"/>
                 <constraint firstItem="W4p-ag-nqa" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="BXA-sA-2Rm"/>
                 <constraint firstItem="Y8b-85-sXm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Xg9-OK-vRn"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tC1-df-y2O" secondAttribute="trailing" constant="20" id="coa-PV-24z"/>
                 <constraint firstAttribute="bottom" secondItem="W4p-ag-nqa" secondAttribute="bottom" id="dEo-nU-tyY"/>
                 <constraint firstAttribute="trailing" secondItem="Y8b-85-sXm" secondAttribute="trailing" id="eXd-VY-Jmg"/>
+                <constraint firstItem="tC1-df-y2O" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="gF4-px-iI0"/>
                 <constraint firstItem="W4p-ag-nqa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="hs0-9N-E44"/>
                 <constraint firstItem="Y8b-85-sXm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="qsY-VD-T3p"/>
                 <constraint firstItem="rey-PC-ONn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="wyu-Mu-cJX"/>
@@ -135,6 +171,7 @@
         </view>
     </objects>
     <resources>
+        <image name="Image-1" width="68" height="54"/>
         <image name="line.3.horizontal" catalog="system" width="128" height="64"/>
         <namedColor name="bg3">
             <color red="0.97299998998641968" green="0.9649999737739563" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

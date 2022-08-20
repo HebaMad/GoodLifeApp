@@ -35,6 +35,8 @@
 		2710A299289AF485009BCE60 /* PastVentures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710A297289AF485009BCE60 /* PastVentures.swift */; };
 		2710A29A289AF485009BCE60 /* PastVentures.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2710A298289AF485009BCE60 /* PastVentures.xib */; };
 		2734CD8528913E3A00E6964F /* GoodLifeApplocation.xcworkspace in Resources */ = {isa = PBXBuildFile; fileRef = 27C9AE68288D427600FA584A /* GoodLifeApplocation.xcworkspace */; };
+		273D3A9E28B0CED000860702 /* choosingMinistryNeedsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273D3A9C28B0CED000860702 /* choosingMinistryNeedsVC.swift */; };
+		273D3A9F28B0CED000860702 /* choosingMinistryNeedsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 273D3A9D28B0CED000860702 /* choosingMinistryNeedsVC.xib */; };
 		27594D1E28A010CE00F4DDC3 /* GeneralMarketingPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27594D1C28A010CE00F4DDC3 /* GeneralMarketingPageVC.swift */; };
 		27594D1F28A010CE00F4DDC3 /* GeneralMarketingPageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27594D1D28A010CE00F4DDC3 /* GeneralMarketingPageVC.xib */; };
 		27594D2228A017D600F4DDC3 /* GeneralLiturgicalPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27594D2028A017D600F4DDC3 /* GeneralLiturgicalPageVC.swift */; };
@@ -205,6 +207,8 @@
 		2710A295289ADA9E009BCE60 /* GoalAndBenchmarkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalAndBenchmarkVC.swift; sourceTree = "<group>"; };
 		2710A297289AF485009BCE60 /* PastVentures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastVentures.swift; sourceTree = "<group>"; };
 		2710A298289AF485009BCE60 /* PastVentures.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PastVentures.xib; sourceTree = "<group>"; };
+		273D3A9C28B0CED000860702 /* choosingMinistryNeedsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = choosingMinistryNeedsVC.swift; sourceTree = "<group>"; };
+		273D3A9D28B0CED000860702 /* choosingMinistryNeedsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = choosingMinistryNeedsVC.xib; sourceTree = "<group>"; };
 		27594D1C28A010CE00F4DDC3 /* GeneralMarketingPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralMarketingPageVC.swift; sourceTree = "<group>"; };
 		27594D1D28A010CE00F4DDC3 /* GeneralMarketingPageVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeneralMarketingPageVC.xib; sourceTree = "<group>"; };
 		27594D2028A017D600F4DDC3 /* GeneralLiturgicalPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralLiturgicalPageVC.swift; sourceTree = "<group>"; };
@@ -437,6 +441,8 @@
 				27B8C8EC28A14C320011B039 /* MapVC.xib */,
 				27B8C8EF28A167E00011B039 /* FilterList.swift */,
 				27B8C8F128A1687F0011B039 /* MapFilterList.swift */,
+				273D3A9C28B0CED000860702 /* choosingMinistryNeedsVC.swift */,
+				273D3A9D28B0CED000860702 /* choosingMinistryNeedsVC.xib */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -852,6 +858,7 @@
 				27C9AE33288D38EA00FA584A /* LaunchScreen.storyboard in Resources */,
 				2767A28428904A3800DF34D1 /* OtherFundsCollectionViewCell.xib in Resources */,
 				27B8C8EA28A1106C0011B039 /* SpecificFilterCell.xib in Resources */,
+				273D3A9F28B0CED000860702 /* choosingMinistryNeedsVC.xib in Resources */,
 				27B8C8EE28A14C320011B039 /* MapVC.xib in Resources */,
 				2704244A28A6ED08002EF7B5 /* SpecificFinancialModel.xib in Resources */,
 				27C9AE5D288D3CB500FA584A /* Inter-ExtraLight-BETA.ttf in Resources */,
@@ -971,6 +978,7 @@
 				2710A293289A7150009BCE60 /* GoalAndBenchmarkCell.swift in Sources */,
 				2704244C28A84BF3002EF7B5 /* Extension.swift in Sources */,
 				27B8C8FE28A198880011B039 /* ReusableView.swift in Sources */,
+				273D3A9E28B0CED000860702 /* choosingMinistryNeedsVC.swift in Sources */,
 				27B8C8E528A1067F0011B039 /* FilterCell.swift in Sources */,
 				27B8C8F028A167E00011B039 /* FilterList.swift in Sources */,
 				2767A279288F53C100DF34D1 /* DonationFifthFrameVC.swift in Sources */,

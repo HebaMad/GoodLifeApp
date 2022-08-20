@@ -9,11 +9,17 @@ import UIKit
 
 class SubscriptionCollectionViewCell: UICollectionViewCell,ReusableView,NibLoadableView   {
     
+    @IBOutlet weak var nextBtn: UIButtonDesignable!
+    
+    
     //MARK: - Initializer
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
+    
+    
+    
 
 }

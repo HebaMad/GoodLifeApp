@@ -1,5 +1,6 @@
 ${PODS_ROOT}/Target Support Files/Pods-GoodLifeApplocation/Pods-GoodLifeApplocation-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Charts/Charts.framework
+${BUILT_PRODUCTS_DIR}/FittedSheets/FittedSheets.framework
 ${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework
 ${BUILT_PRODUCTS_DIR}/RangeSeekSlider/RangeSeekSlider.framework
 ${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework

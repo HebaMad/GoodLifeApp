@@ -11,4 +11,5 @@ target 'GoodLifeApplocation' do
   pod 'XLPagerTabStrip', '~> 9.0'
   pod 'Charts'
   pod 'RangeSeekSlider'
+  pod 'FittedSheets'
 end
