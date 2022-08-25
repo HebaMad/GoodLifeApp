@@ -178,6 +178,8 @@
 		27CB2099289FC79700E63694 /* SpecificPagerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27CB2097289FC79700E63694 /* SpecificPagerVC.xib */; };
 		27CB209C289FFE9800E63694 /* GeneralFinicialPagerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CB209A289FFE9800E63694 /* GeneralFinicialPagerVC.swift */; };
 		27CB209D289FFE9800E63694 /* GeneralFinicialPagerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27CB209B289FFE9800E63694 /* GeneralFinicialPagerVC.xib */; };
+		27F4B14228B7F504003365A6 /* ContactUsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F4B14028B7F504003365A6 /* ContactUsVC.swift */; };
+		27F4B14328B7F504003365A6 /* ContactUsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27F4B14128B7F504003365A6 /* ContactUsVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -353,6 +355,8 @@
 		27CB2097289FC79700E63694 /* SpecificPagerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpecificPagerVC.xib; sourceTree = "<group>"; };
 		27CB209A289FFE9800E63694 /* GeneralFinicialPagerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralFinicialPagerVC.swift; sourceTree = "<group>"; };
 		27CB209B289FFE9800E63694 /* GeneralFinicialPagerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeneralFinicialPagerVC.xib; sourceTree = "<group>"; };
+		27F4B14028B7F504003365A6 /* ContactUsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsVC.swift; sourceTree = "<group>"; };
+		27F4B14128B7F504003365A6 /* ContactUsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactUsVC.xib; sourceTree = "<group>"; };
 		46608627E894627402509900 /* Pods-GoodLifeApplocation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodLifeApplocation.release.xcconfig"; path = "Target Support Files/Pods-GoodLifeApplocation/Pods-GoodLifeApplocation.release.xcconfig"; sourceTree = "<group>"; };
 		D1DB83CD4E289D2153C7D862 /* Pods-GoodLifeApplocation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodLifeApplocation.debug.xcconfig"; path = "Target Support Files/Pods-GoodLifeApplocation/Pods-GoodLifeApplocation.debug.xcconfig"; sourceTree = "<group>"; };
 		F0E5AE3CF2C1C421B86FEF65 /* Pods_GoodLifeApplocation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoodLifeApplocation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -486,6 +490,7 @@
 		27C9AE3A288D399400FA584A /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				27F4B13E28B7F4B0003365A6 /* ProfileSetting */,
 				2704244D28A8CE6F002EF7B5 /* LoginVC */,
 				27CB208C289FB1B700E63694 /* PackagesDetails */,
 				27A737712891CAA500FD8AD9 /* MapScreen */,
@@ -751,6 +756,23 @@
 			path = Scenes;
 			sourceTree = "<group>";
 		};
+		27F4B13E28B7F4B0003365A6 /* ProfileSetting */ = {
+			isa = PBXGroup;
+			children = (
+				27F4B13F28B7F4E2003365A6 /* Scenes */,
+			);
+			path = ProfileSetting;
+			sourceTree = "<group>";
+		};
+		27F4B13F28B7F4E2003365A6 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				27F4B14028B7F504003365A6 /* ContactUsVC.swift */,
+				27F4B14128B7F504003365A6 /* ContactUsVC.xib */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
 		CE579E479D56B849348B0B26 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -848,6 +870,7 @@
 				27C9AE3E288D39B300FA584A /* SplashScreen.xib in Resources */,
 				2767A276288F504A00DF34D1 /* DonationFourthFrame.xib in Resources */,
 				27C9AE5F288D3CB500FA584A /* Inter-Italic.ttf in Resources */,
+				27F4B14328B7F504003365A6 /* ContactUsVC.xib in Resources */,
 				27C9AE5E288D3CB500FA584A /* Inter-ExtraBoldItalic.ttf in Resources */,
 				27CB2083289D44C500E63694 /* SearchView.xib in Resources */,
 				27C9AE58288D3CB500FA584A /* Inter-Thin-BETA.ttf in Resources */,
@@ -981,6 +1004,7 @@
 				273D3A9E28B0CED000860702 /* choosingMinistryNeedsVC.swift in Sources */,
 				27B8C8E528A1067F0011B039 /* FilterCell.swift in Sources */,
 				27B8C8F028A167E00011B039 /* FilterList.swift in Sources */,
+				27F4B14228B7F504003365A6 /* ContactUsVC.swift in Sources */,
 				2767A279288F53C100DF34D1 /* DonationFifthFrameVC.swift in Sources */,
 				2767A2982890A48600DF34D1 /* FilterVC.swift in Sources */,
 				27C9AE8F288D54AA00FA584A /* OnBoardingFrame5.swift in Sources */,
