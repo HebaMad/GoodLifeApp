@@ -11,8 +11,7 @@ class OpportunityViewVC: UIViewController {
     
     //MARK: - Outlet
     
-    @IBOutlet weak var yourVenturesView: OpportunityView!
-    @IBOutlet weak var pastVentureView: OpportunityView!
+    @IBOutlet weak var Profile: OpportunityView!
     @IBOutlet weak var VolunteerOpportunityView: OpportunityView!
     @IBOutlet weak var HaveIdeaView: OpportunityView!
     @IBOutlet weak var experienceView: OpportunityView!
@@ -28,15 +27,12 @@ class OpportunityViewVC: UIViewController {
     }
     
     func bindButton(){
-        yourVenturesView.ViewBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
-        pastVentureView.ViewBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
+        Profile.ViewBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
         VolunteerOpportunityView.ViewBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
         HaveIdeaView.ViewBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
         experienceView.ViewBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
         DonationView.ViewBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
     }
-
-    
 }
 
 //MARK: - Private Handler
@@ -46,14 +42,10 @@ class OpportunityViewVC: UIViewController {
          
          switch sender{
              
-             case yourVenturesView.ViewBtn:
-             let vc = PastVentures()
+             case Profile.ViewBtn:
+             let vc = ProfileVC.instantiate()
              navigationController?.pushViewController(vc, animated: true)
 
-             case pastVentureView.ViewBtn:
-             let vc = PastVentures()
-             navigationController?.pushViewController(vc, animated: true)
-             
              case VolunteerOpportunityView.ViewBtn:
              let vc = VolunteerOpportunityVC()
              navigationController?.pushViewController(vc, animated: true)

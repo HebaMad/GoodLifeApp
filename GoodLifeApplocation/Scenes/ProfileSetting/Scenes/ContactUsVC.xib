@@ -120,6 +120,11 @@
             <point key="canvasLocation" x="139" y="124"/>
         </view>
     </objects>
+    <designables>
+        <designable name="iEN-xE-E24">
+            <size key="intrinsicContentSize" width="58.5" height="31"/>
+        </designable>
+    </designables>
     <resources>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <namedColor name="Color">
