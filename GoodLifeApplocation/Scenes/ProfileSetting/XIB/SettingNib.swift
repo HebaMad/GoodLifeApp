@@ -7,19 +7,19 @@
 
 import UIKit
 
-class HelpCenterSettingNib: UIView {
-
+class SettingNib: UIViewFromNib {
+    
     @IBOutlet  weak var titleTxt: UILabel!
-     @IBOutlet weak var ViewBtn: UIButton!
-
+    @IBOutlet weak var ViewBtn: UIButton!
+    
     
     @IBInspectable var titletext:String?{
         didSet {
             titleTextEdit()
-      }
+        }
     }
     
     func titleTextEdit(){
-        titleTxt.text = self.titletext
+        titleTxt.text = titletext
     }
 }

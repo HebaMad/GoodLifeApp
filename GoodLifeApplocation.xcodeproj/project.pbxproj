@@ -77,6 +77,8 @@
 		27A737702891435C00FD8AD9 /* UIButtonDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A7376D2891435C00FD8AD9 /* UIButtonDesignable.swift */; };
 		27A7377B2891D16100FD8AD9 /* SubscriptionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A737792891D16100FD8AD9 /* SubscriptionCollectionViewCell.swift */; };
 		27A7377C2891D16100FD8AD9 /* SubscriptionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27A7377A2891D16100FD8AD9 /* SubscriptionCollectionViewCell.xib */; };
+		27B54D7C28BA03C60074A6A1 /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B54D7A28BA03C60074A6A1 /* EditProfileVC.swift */; };
+		27B54D7D28BA03C60074A6A1 /* EditProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27B54D7B28BA03C60074A6A1 /* EditProfileVC.xib */; };
 		27B8C8E528A1067F0011B039 /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B8C8E328A1067F0011B039 /* FilterCell.swift */; };
 		27B8C8E628A1067F0011B039 /* FilterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27B8C8E428A1067F0011B039 /* FilterCell.xib */; };
 		27B8C8E928A1106C0011B039 /* SpecificFilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B8C8E728A1106C0011B039 /* SpecificFilterCell.swift */; };
@@ -184,7 +186,7 @@
 		27F4B14B28B8AD4F003365A6 /* VenturesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F4B14928B8AD4F003365A6 /* VenturesCell.swift */; };
 		27F4B14C28B8AD4F003365A6 /* VenturesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27F4B14A28B8AD4F003365A6 /* VenturesCell.xib */; };
 		27F4B14E28B8B94E003365A6 /* SettingNib.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27F4B14D28B8B94E003365A6 /* SettingNib.xib */; };
-		27F4B15028B8BAB4003365A6 /* HelpCenterSettingNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F4B14F28B8BAB4003365A6 /* HelpCenterSettingNib.swift */; };
+		27F4B15028B8BAB4003365A6 /* SettingNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F4B14F28B8BAB4003365A6 /* SettingNib.swift */; };
 		27F4B15328B8BD90003365A6 /* ProfileSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F4B15128B8BD90003365A6 /* ProfileSettingVC.swift */; };
 		27F4B15428B8BD90003365A6 /* ProfileSettingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27F4B15228B8BD90003365A6 /* ProfileSettingVC.xib */; };
 /* End PBXBuildFile section */
@@ -258,6 +260,8 @@
 		27A7376D2891435C00FD8AD9 /* UIButtonDesignable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonDesignable.swift; sourceTree = "<group>"; };
 		27A737792891D16100FD8AD9 /* SubscriptionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionCollectionViewCell.swift; sourceTree = "<group>"; };
 		27A7377A2891D16100FD8AD9 /* SubscriptionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubscriptionCollectionViewCell.xib; sourceTree = "<group>"; };
+		27B54D7A28BA03C60074A6A1 /* EditProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
+		27B54D7B28BA03C60074A6A1 /* EditProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileVC.xib; sourceTree = "<group>"; };
 		27B8C8E328A1067F0011B039 /* FilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
 		27B8C8E428A1067F0011B039 /* FilterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterCell.xib; sourceTree = "<group>"; };
 		27B8C8E728A1106C0011B039 /* SpecificFilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificFilterCell.swift; sourceTree = "<group>"; };
@@ -368,7 +372,7 @@
 		27F4B14928B8AD4F003365A6 /* VenturesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenturesCell.swift; sourceTree = "<group>"; };
 		27F4B14A28B8AD4F003365A6 /* VenturesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VenturesCell.xib; sourceTree = "<group>"; };
 		27F4B14D28B8B94E003365A6 /* SettingNib.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingNib.xib; sourceTree = "<group>"; };
-		27F4B14F28B8BAB4003365A6 /* HelpCenterSettingNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterSettingNib.swift; sourceTree = "<group>"; };
+		27F4B14F28B8BAB4003365A6 /* SettingNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingNib.swift; sourceTree = "<group>"; };
 		27F4B15128B8BD90003365A6 /* ProfileSettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingVC.swift; sourceTree = "<group>"; };
 		27F4B15228B8BD90003365A6 /* ProfileSettingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileSettingVC.xib; sourceTree = "<group>"; };
 		46608627E894627402509900 /* Pods-GoodLifeApplocation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodLifeApplocation.release.xcconfig"; path = "Target Support Files/Pods-GoodLifeApplocation/Pods-GoodLifeApplocation.release.xcconfig"; sourceTree = "<group>"; };
@@ -787,6 +791,8 @@
 				27F4B14028B7F504003365A6 /* ContactUsVC.swift */,
 				27F4B14128B7F504003365A6 /* ContactUsVC.xib */,
 				27F4B14428B8A663003365A6 /* ProfileVC.swift */,
+				27B54D7A28BA03C60074A6A1 /* EditProfileVC.swift */,
+				27B54D7B28BA03C60074A6A1 /* EditProfileVC.xib */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -797,7 +803,7 @@
 				27F4B14928B8AD4F003365A6 /* VenturesCell.swift */,
 				27F4B14A28B8AD4F003365A6 /* VenturesCell.xib */,
 				27F4B14D28B8B94E003365A6 /* SettingNib.xib */,
-				27F4B14F28B8BAB4003365A6 /* HelpCenterSettingNib.swift */,
+				27F4B14F28B8BAB4003365A6 /* SettingNib.swift */,
 			);
 			path = XIB;
 			sourceTree = "<group>";
@@ -921,6 +927,7 @@
 				27CB2064289BBA1E00E63694 /* PastGoalsCell.xib in Resources */,
 				2704243E28A6C828002EF7B5 /* BusinessPlanCell.xib in Resources */,
 				27C9AEB4288EF14900FA584A /* MealMarkerTableViewCell.xib in Resources */,
+				27B54D7D28BA03C60074A6A1 /* EditProfileVC.xib in Resources */,
 				27CB2060289B0FDC00E63694 /* ResourceDetailsCell.xib in Resources */,
 				27C9AEAF288DB44600FA584A /* CategoriesCollectionViewCell.xib in Resources */,
 				27C9AE84288D4F0600FA584A /* OnBoardingFrame3.xib in Resources */,
@@ -1027,7 +1034,7 @@
 				27B8C90028A198BB0011B039 /* NibLoadableView.swift in Sources */,
 				27CB2098289FC79700E63694 /* SpecificPagerVC.swift in Sources */,
 				27C9AEBC288EFBA200FA584A /* DonationFrameTwoVC.swift in Sources */,
-				27F4B15028B8BAB4003365A6 /* HelpCenterSettingNib.swift in Sources */,
+				27F4B15028B8BAB4003365A6 /* SettingNib.swift in Sources */,
 				27A737662891407200FD8AD9 /* TableViewHelper.swift in Sources */,
 				27CB2075289C1CEF00E63694 /* AllResourceVC.swift in Sources */,
 				27CB2063289BBA1E00E63694 /* PastGoalsCell.swift in Sources */,
@@ -1036,6 +1043,7 @@
 				27A737702891435C00FD8AD9 /* UIButtonDesignable.swift in Sources */,
 				2710A293289A7150009BCE60 /* GoalAndBenchmarkCell.swift in Sources */,
 				2704244C28A84BF3002EF7B5 /* Extension.swift in Sources */,
+				27B54D7C28BA03C60074A6A1 /* EditProfileVC.swift in Sources */,
 				27B8C8FE28A198880011B039 /* ReusableView.swift in Sources */,
 				273D3A9E28B0CED000860702 /* choosingMinistryNeedsVC.swift in Sources */,
 				27B8C8E528A1067F0011B039 /* FilterCell.swift in Sources */,

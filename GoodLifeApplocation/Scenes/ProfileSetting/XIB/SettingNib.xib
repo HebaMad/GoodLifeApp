@@ -14,10 +14,10 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HelpCenterSettingNib" customModule="GoodLifeApplocation" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingNib" customModule="GoodLifeApplocation" customModuleProvider="target">
             <connections>
-                <outlet property="ViewBtn" destination="UZU-y2-Qdl" id="5ki-x7-GwN"/>
-                <outlet property="titleTxt" destination="uGn-QA-fHj" id="fe3-lK-U7O"/>
+                <outlet property="ViewBtn" destination="UZU-y2-Qdl" id="4TH-37-Kmm"/>
+                <outlet property="titleTxt" destination="uGn-QA-fHj" id="LRj-tR-xWs"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -25,7 +25,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="66"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Fe-hP-Lw9">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Fe-hP-Lw9" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
                     <rect key="frame" x="4" y="4" width="406" height="58"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uHC-gX-VId">
@@ -65,6 +65,17 @@
                         <constraint firstAttribute="trailing" secondItem="UZU-y2-Qdl" secondAttribute="trailing" id="nbN-NB-gQO"/>
                         <constraint firstAttribute="bottom" secondItem="UZU-y2-Qdl" secondAttribute="bottom" id="vzA-5z-Eji"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="12"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

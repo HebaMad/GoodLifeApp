@@ -16,7 +16,7 @@ class ProfileVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        bindButtons()
         setupTableView()
     }
 
@@ -29,6 +29,23 @@ class ProfileVC: UIViewController {
 
 
 }
+//MARK: - Binding
+private extension ProfileVC{
+    func bindButtons(){
+        accountDetails.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
+    }
+}
+//MARK: - Handler
+
+private extension ProfileVC{
+    @objc func buttonWasTapped(){
+        
+        let vc = ProfileSettingVC()
+        navigationController?.pushViewController(vc, animated: true)
+        
+    }
+}
+
 extension ProfileVC:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
      5
