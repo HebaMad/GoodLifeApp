@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FilterHeaderReusableview: UICollectionReusableView,ReusableView,NibLoadableView {
+class FilterHeaderReusableview: UICollectionReusableView,NibLoadableView {
     
     //MARK: - Outlet
 

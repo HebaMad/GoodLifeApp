@@ -33,18 +33,29 @@ class ProfileVC: UIViewController {
 private extension ProfileVC{
     func bindButtons(){
         accountDetails.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
+        backBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
+
+    }
+}
+//MARK: - Private Handler
+
+private extension ProfileVC{
+    @objc func buttonWasTapped( sender :UIButton){
+        switch sender{
+        case accountDetails:
+            let vc = ProfileSettingVC()
+            navigationController?.pushViewController(vc, animated: true)
+        case backBtn:
+            navigationController?.popViewController(animated: true)
+
+        default:
+            print("error click")
+        }
+
+        
     }
 }
 //MARK: - Handler
-
-private extension ProfileVC{
-    @objc func buttonWasTapped(){
-        
-        let vc = ProfileSettingVC()
-        navigationController?.pushViewController(vc, animated: true)
-        
-    }
-}
 
 extension ProfileVC:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

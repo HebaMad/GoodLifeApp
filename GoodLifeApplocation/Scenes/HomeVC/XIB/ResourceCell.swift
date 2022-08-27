@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ResourceCell: UITableViewCell,ReusableView, NibLoadableView {
+class ResourceCell: UITableViewCell, NibLoadableView {
     //MARK: - Outlet
 
     @IBOutlet weak var resourceTitleText: UILabel!

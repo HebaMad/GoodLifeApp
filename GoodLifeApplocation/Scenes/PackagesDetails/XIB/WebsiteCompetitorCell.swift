@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WebsiteCompetitorCell: UITableViewCell, ReusableView, NibLoadableView {
+class WebsiteCompetitorCell: UITableViewCell, NibLoadableView {
     
     //MARK: - Outlet
     

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PastGoalsCell: UITableViewCell ,ReusableView, NibLoadableView{
+class PastGoalsCell: UITableViewCell, NibLoadableView{
     //MARK: - Outlet
 
     @IBOutlet weak var goalDetailsText: UILabel!

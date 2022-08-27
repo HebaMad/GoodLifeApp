@@ -7,7 +7,7 @@
 
 import UIKit
 
-class VenturesCell: UITableViewCell,ReusableView,NibLoadableView {
+class VenturesCell: UITableViewCell,NibLoadableView {
 
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AllCategoriesCell: UITableViewCell,ReusableView, NibLoadableView {
+class AllCategoriesCell: UITableViewCell, NibLoadableView {
     //MARK: - Outlet
 
     @IBOutlet weak var categoryTitleText: UILabel!

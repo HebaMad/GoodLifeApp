@@ -15,6 +15,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditProfileVC" customModule="GoodLifeApplocation" customModuleProvider="target">
             <connections>
+                <outlet property="backBtn" destination="cyF-L5-TGV" id="mKn-h4-UQ1"/>
+                <outlet property="locationTxt" destination="4hO-mt-7pf" id="BsG-pd-lQV"/>
+                <outlet property="phoneNumberTxt" destination="LeK-gJ-zuG" id="oMt-aX-ORd"/>
+                <outlet property="userImage" destination="mpn-Oe-9Ze" id="nx3-a6-Mlh"/>
+                <outlet property="userNameTxt" destination="TgE-ZX-BjE" id="x8v-Jb-CcB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

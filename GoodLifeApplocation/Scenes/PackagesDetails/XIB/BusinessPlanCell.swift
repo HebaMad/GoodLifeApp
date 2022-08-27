@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BusinessPlanCell: UICollectionViewCell, ReusableView, NibLoadableView {
+class BusinessPlanCell: UICollectionViewCell, NibLoadableView {
 
     @IBOutlet weak var titleTxt: UILabel!
     @IBOutlet weak var informationTxt: UILabel!

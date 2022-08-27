@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FeaturedFundsCollectionViewCell: UICollectionViewCell,ReusableView,NibLoadableView  {
+class FeaturedFundsCollectionViewCell: UICollectionViewCell,NibLoadableView  {
     //MARK: - Outlet
 
     @IBOutlet weak var cellImageView: UIImageView!

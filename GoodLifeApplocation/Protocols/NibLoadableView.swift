@@ -8,12 +8,12 @@
 import Foundation
 import UIKit
 
- protocol NibLoadableView: class {
-    static var nibName: String { get }
+public protocol NibLoadableView: AnyObject {
+    static var reuseIdentifier: String { get }
 }
 
-extension NibLoadableView where Self: UIView {
-    static var nibName: String {
+public extension NibLoadableView where Self: UIView {
+    static var reuseIdentifier: String {
         return String(describing: self)
     }
 }

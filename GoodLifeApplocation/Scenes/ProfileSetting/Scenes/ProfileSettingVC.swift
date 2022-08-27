@@ -8,22 +8,60 @@
 import UIKit
 
 class ProfileSettingVC: UIViewController {
-
+    
+    
+    //MARK: - Outlet
+    @IBOutlet weak var backBtn: UIButton!
+    @IBOutlet weak var profileEditView: SettingNib!
+    @IBOutlet weak var contactusView: SettingNib!
+    @IBOutlet weak var privacyPolicy: SettingNib!
+    @IBOutlet weak var termAndConditionView: SettingNib!
+    
+    //MARK: - Life cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        bindButtons()
     }
+   
+}
+//MARK: - Binding
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension ProfileSettingVC{
+    private func bindButtons(){
+        profileEditView.ViewBtn.addTarget(self, action: #selector(ButtonWasTapped), for: .touchUpInside)
+        contactusView.ViewBtn.addTarget(self, action: #selector(ButtonWasTapped), for: .touchUpInside)
+        privacyPolicy.ViewBtn.addTarget(self, action: #selector(ButtonWasTapped), for: .touchUpInside)
+        termAndConditionView.ViewBtn.addTarget(self, action: #selector(ButtonWasTapped), for: .touchUpInside)
     }
-    */
+}
+//MARK: - Private Handler
 
+extension ProfileSettingVC{
+    @objc func ButtonWasTapped( sender:UIButton){
+        switch sender{
+            
+        case profileEditView.ViewBtn:
+            let vc = EditProfileVC()
+            navigationController?.pushViewController(vc, animated: true)
+            
+        case contactusView.ViewBtn:
+            let vc = ContactUsVC()
+            navigationController?.pushViewController(vc, animated: true)
+            
+        case privacyPolicy.ViewBtn:
+            
+            let vc = HaveAnIdeaVC()
+            
+            
+        case termAndConditionView.ViewBtn:
+            let vc = ReviewExperienceVC()
+            
+        case backBtn:
+            navigationController?.popViewController(animated: true)
+        default:
+            print("")
+        }
+    }
 }

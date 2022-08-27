@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TaskCell: UITableViewCell ,ReusableView,NibLoadableView {
+class TaskCell: UITableViewCell ,NibLoadableView {
     //MARK: - Outlet
 
     @IBOutlet weak var timeLimit: UILabel!

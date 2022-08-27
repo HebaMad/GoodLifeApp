@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MealMarkerTableViewCell: UITableViewCell,ReusableView,NibLoadableView {
+class MealMarkerTableViewCell: UITableViewCell,NibLoadableView {
     //MARK: - Outlet
 
     @IBOutlet weak var avatarImage: UIImageViewDesignable!

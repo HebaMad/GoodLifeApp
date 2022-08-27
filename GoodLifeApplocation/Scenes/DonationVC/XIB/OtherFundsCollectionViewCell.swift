@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OtherFundsCollectionViewCell: UICollectionViewCell,ReusableView,NibLoadableView  {
+class OtherFundsCollectionViewCell: UICollectionViewCell,NibLoadableView  {
     //MARK: - Outlet
 
     @IBOutlet weak var cellImageView: UIImageView!

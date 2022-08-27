@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BenchmarksCell: UITableViewCell ,ReusableView, NibLoadableView{
+class BenchmarksCell: UITableViewCell , NibLoadableView{
     //MARK: - Outlet
 
     @IBOutlet weak var YouprogressView: UIProgressView!

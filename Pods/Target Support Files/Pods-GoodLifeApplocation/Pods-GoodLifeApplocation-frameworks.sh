@@ -176,18 +176,22 @@ code_sign_if_enabled() {
 }
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Charts/Charts.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FittedSheets/FittedSheets.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Moya/Moya.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RangeSeekSlider/RangeSeekSlider.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftAlgorithms/Algorithms.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Charts/Charts.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FittedSheets/FittedSheets.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Moya/Moya.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RangeSeekSlider/RangeSeekSlider.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftAlgorithms/Algorithms.framework"

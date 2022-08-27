@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CategoriesCollectionViewCell: UICollectionViewCell,ReusableView,NibLoadableView  {
+class CategoriesCollectionViewCell: UICollectionViewCell,NibLoadableView  {
     
 //MARK: - Outlet
     

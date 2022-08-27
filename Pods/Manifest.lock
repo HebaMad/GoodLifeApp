@@ -1,10 +1,15 @@
 PODS:
+  - Alamofire (5.4.4)
   - Charts (4.0.3):
     - Charts/Core (= 4.0.3)
   - Charts/Core (4.0.3):
     - SwiftAlgorithms (~> 1.0)
   - FittedSheets (2.4.2)
   - IQKeyboardManagerSwift (6.3.0)
+  - Moya (15.0.0):
+    - Moya/Core (= 15.0.0)
+  - Moya/Core (15.0.0):
+    - Alamofire (~> 5.0)
   - RangeSeekSlider (1.8.0)
   - SideMenu (6.5.0)
   - SwiftAlgorithms (1.0.0)
@@ -14,29 +19,34 @@ DEPENDENCIES:
   - Charts
   - FittedSheets
   - IQKeyboardManagerSwift (= 6.3.0)
+  - Moya
   - RangeSeekSlider
   - SideMenu
   - XLPagerTabStrip (~> 9.0)
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - Charts
     - FittedSheets
     - IQKeyboardManagerSwift
+    - Moya
     - RangeSeekSlider
     - SideMenu
     - SwiftAlgorithms
     - XLPagerTabStrip
 
 SPEC CHECKSUMS:
+  Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
   Charts: d959d6723c8eedfdd0735dfc28cb0a71762ac4d9
   FittedSheets: 661408776eb4ff514a31da75b3600bd7222b2b3d
   IQKeyboardManagerSwift: a8228c257614af98743b4cd8584637025f36358f
+  Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
   RangeSeekSlider: 650b11fa1edcb92e1e0ede797669d98622570fb5
   SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
   SwiftAlgorithms: 38dda4731d19027fdeee1125f973111bf3386b53
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: b2ac8b76988813b900b0a80bd579400947571a50
+PODFILE CHECKSUM: f97ad92b7e5b58db94a4e4334861936f0296c2b5
 
 COCOAPODS: 1.11.2

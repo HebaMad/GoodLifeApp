@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ResourceDetailsCell: UITableViewCell ,ReusableView, NibLoadableView{
+class ResourceDetailsCell: UITableViewCell, NibLoadableView{
     //MARK: - Outlet
 
     @IBOutlet weak var showHideButton: UIButton!

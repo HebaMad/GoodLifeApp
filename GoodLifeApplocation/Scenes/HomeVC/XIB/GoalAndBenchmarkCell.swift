@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GoalAndBenchmarkCell: UITableViewCell,ReusableView,NibLoadableView  {
+class GoalAndBenchmarkCell: UITableViewCell,NibLoadableView  {
     //MARK: - Outlet
     @IBOutlet weak var goalTitle: UILabel!
     @IBOutlet weak var goalDescription: UILabel!

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ResourceCollectionViewCell: UICollectionViewCell,ReusableView,NibLoadableView  {
+class ResourceCollectionViewCell: UICollectionViewCell,NibLoadableView  {
     //MARK: - Outlet
 
     @IBOutlet weak var resourceIcon: UIImageView!

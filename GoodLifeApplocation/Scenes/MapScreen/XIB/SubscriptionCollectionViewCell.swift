@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SubscriptionCollectionViewCell: UICollectionViewCell,ReusableView,NibLoadableView   {
+class SubscriptionCollectionViewCell: UICollectionViewCell,NibLoadableView   {
     
     @IBOutlet weak var nextBtn: UIButtonDesignable!
     

@@ -16,6 +16,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileSettingVC" customModule="GoodLifeApplocation" customModuleProvider="target">
             <connections>
+                <outlet property="backBtn" destination="tB8-Bj-Pyy" id="Vwq-l8-oc8"/>
+                <outlet property="contactusView" destination="2Xi-OK-sIl" id="oh8-7m-w6f"/>
+                <outlet property="privacyPolicy" destination="uiy-kp-hu3" id="oPh-C9-jur"/>
+                <outlet property="profileEditView" destination="MOd-Id-1TA" id="Cm2-2b-Dhq"/>
+                <outlet property="termAndConditionView" destination="ico-TO-mlt" id="t1p-eP-PdN"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -141,6 +146,11 @@
             <point key="canvasLocation" x="144.92753623188406" y="151.33928571428569"/>
         </view>
     </objects>
+    <designables>
+        <designable name="Ahl-GI-EDi">
+            <size key="intrinsicContentSize" width="70" height="31"/>
+        </designable>
+    </designables>
     <resources>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <namedColor name="Color">

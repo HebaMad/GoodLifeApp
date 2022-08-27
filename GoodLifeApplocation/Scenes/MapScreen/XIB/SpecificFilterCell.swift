@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SpecificFilterCell: UICollectionViewCell,ReusableView,NibLoadableView   {
+class SpecificFilterCell: UICollectionViewCell,NibLoadableView   {
     
     //MARK: - outlet
     

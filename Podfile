@@ -12,4 +12,6 @@ target 'GoodLifeApplocation' do
   pod 'Charts'
   pod 'RangeSeekSlider'
   pod 'FittedSheets'
+  pod 'Moya'
+
 end
