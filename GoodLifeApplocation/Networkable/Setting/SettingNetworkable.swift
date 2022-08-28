@@ -10,11 +10,11 @@ import Moya
 
 protocol SettingNetworkable:Networkable  {
 
-    func getUserProfile(completion: @escaping (Result<BaseResponse<Empty>, Error>)-> ())
-    func sendContactMsg(msg:String,completion: @escaping (Result<BaseResponse<Empty>, Error>)-> ())
-    func termsAndCondition(completion: @escaping (Result<BaseResponse<Empty>, Error>)-> ())
-    func privacyPolicy(completion: @escaping (Result<BaseResponse<Empty>, Error>)-> ())
-    func editProfile(name:String,mobile:String,completion: @escaping (Result<BaseResponse<Empty>, Error>)-> ())
+    func getUserProfile(completion: @escaping (Result<BaseResponse<userProfile>, Error>)-> ())
+    func sendContactMsg(msg:String,completion: @escaping (Result<BaseResponse<contactUS>, Error>)-> ())
+    func termsAndCondition(completion: @escaping (Result<BaseResponse<termsAndConditions>, Error>)-> ())
+    func privacyPolicy(completion: @escaping (Result<BaseResponse<termsAndConditions>, Error>)-> ())
+    func editProfile(name:String,mobile:String,completion: @escaping (Result<BaseResponse<userProfile>, Error>)-> ())
 }
 class SettingManager:SettingNetworkable{
   
@@ -26,21 +26,21 @@ class SettingManager:SettingNetworkable{
     
    typealias targetType = SettingApiTarget
 
-    func getUserProfile(completion: @escaping (Result<BaseResponse<Empty>, Error>) -> ()) {
+    func getUserProfile(completion: @escaping (Result<BaseResponse<userProfile>, Error>) -> ()) {
         request(target: .userProfile, completion: completion)
     }
 
-    func sendContactMsg(msg: String, completion: @escaping (Result<BaseResponse<Empty>, Error>) -> ()) {
+    func sendContactMsg(msg: String, completion: @escaping (Result<BaseResponse<contactUS>, Error>) -> ()) {
         request(target: .sendContactMsg(message: msg), completion: completion)
     }
     
-    func termsAndCondition(completion: @escaping (Result<BaseResponse<Empty>, Error>) -> ()) {
+    func termsAndCondition(completion: @escaping (Result<BaseResponse<termsAndConditions>, Error>) -> ()) {
         request(target: .termsAndConditions, completion: completion)
     }
-    func privacyPolicy(completion: @escaping (Result<BaseResponse<Empty>, Error>) -> ()) {
+    func privacyPolicy(completion: @escaping (Result<BaseResponse<termsAndConditions>, Error>) -> ()) {
         request(target: .privacyPolicy, completion: completion)
     }
-    func editProfile(name: String, mobile: String, completion: @escaping (Result<BaseResponse<Empty>, Error>) -> ()) {
+    func editProfile(name: String, mobile: String, completion: @escaping (Result<BaseResponse<userProfile>, Error>) -> ()) {
         request(target: .editProfile(name: name, mobileNumber: mobile, location: mobile), completion: completion)
     }
     
