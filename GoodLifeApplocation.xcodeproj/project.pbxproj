@@ -61,6 +61,9 @@
 		2768DED828A3F473004C6A5B /* AddTaskVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2768DED628A3F473004C6A5B /* AddTaskVC.xib */; };
 		2768DEDB28A3FE0A004C6A5B /* AddGoalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2768DED928A3FE0A004C6A5B /* AddGoalVC.swift */; };
 		2768DEDC28A3FE0A004C6A5B /* AddGoalVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2768DEDA28A3FE0A004C6A5B /* AddGoalVC.xib */; };
+		277CF36628BD52A900F2874F /* AuthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277CF36528BD52A900F2874F /* AuthPresenter.swift */; };
+		277CF36828BD5AD700F2874F /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277CF36728BD5AD700F2874F /* MenuPresenter.swift */; };
+		277CF36A28BD5DAF00F2874F /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277CF36928BD5DAF00F2874F /* ProfilePresenter.swift */; };
 		27876AB828A440ED003A012A /* WebsiteCompetitorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27876AB628A440ED003A012A /* WebsiteCompetitorCell.swift */; };
 		27876AB928A440ED003A012A /* WebsiteCompetitorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27876AB728A440ED003A012A /* WebsiteCompetitorCell.xib */; };
 		27876ABB28A4484B003A012A /* SpecificWebsiteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27876ABA28A4484B003A012A /* SpecificWebsiteVC.swift */; };
@@ -260,6 +263,9 @@
 		2768DED628A3F473004C6A5B /* AddTaskVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddTaskVC.xib; sourceTree = "<group>"; };
 		2768DED928A3FE0A004C6A5B /* AddGoalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalVC.swift; sourceTree = "<group>"; };
 		2768DEDA28A3FE0A004C6A5B /* AddGoalVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddGoalVC.xib; sourceTree = "<group>"; };
+		277CF36528BD52A900F2874F /* AuthPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPresenter.swift; sourceTree = "<group>"; };
+		277CF36728BD5AD700F2874F /* MenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
+		277CF36928BD5DAF00F2874F /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		27876AB628A440ED003A012A /* WebsiteCompetitorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsiteCompetitorCell.swift; sourceTree = "<group>"; };
 		27876AB728A440ED003A012A /* WebsiteCompetitorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebsiteCompetitorCell.xib; sourceTree = "<group>"; };
 		27876ABA28A4484B003A012A /* SpecificWebsiteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificWebsiteVC.swift; sourceTree = "<group>"; };
@@ -465,6 +471,9 @@
 		27A32FCC28BCA1C600EF4AA2 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				277CF36528BD52A900F2874F /* AuthPresenter.swift */,
+				277CF36728BD5AD700F2874F /* MenuPresenter.swift */,
+				277CF36928BD5DAF00F2874F /* ProfilePresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -1162,6 +1171,7 @@
 				27B54D9D28BAC3060074A6A1 /* SignUserNetworkable.swift in Sources */,
 				27F4B14228B7F504003365A6 /* ContactUsVC.swift in Sources */,
 				27B54D8F28BA6D8B0074A6A1 /* KeychainWrapper.swift in Sources */,
+				277CF36828BD5AD700F2874F /* MenuPresenter.swift in Sources */,
 				2767A279288F53C100DF34D1 /* DonationFifthFrameVC.swift in Sources */,
 				27B54D9828BAA4320074A6A1 /* MenuNetworkable.swift in Sources */,
 				2767A2982890A48600DF34D1 /* FilterVC.swift in Sources */,
@@ -1183,6 +1193,7 @@
 				2706D21328913D4500546425 /* ProgressBar.swift in Sources */,
 				2710A28A28971E3B009BCE60 /* ListItem.swift in Sources */,
 				2704245028A8CED1002EF7B5 /* LoginProgressViews.swift in Sources */,
+				277CF36628BD52A900F2874F /* AuthPresenter.swift in Sources */,
 				2710A28D289A5C3C009BCE60 /* TaskCell.swift in Sources */,
 				27B54D9B28BAC0F10074A6A1 /* SignUserTarget.swift in Sources */,
 				27B8C8ED28A14C320011B039 /* MapVC.swift in Sources */,
@@ -1198,6 +1209,7 @@
 				27A7377B2891D16100FD8AD9 /* SubscriptionCollectionViewCell.swift in Sources */,
 				27B54D8D28BA6CA20074A6A1 /* AppConfig.swift in Sources */,
 				2767A27F2890478200DF34D1 /* FeaturedFundsCollectionViewCell.swift in Sources */,
+				277CF36A28BD5DAF00F2874F /* ProfilePresenter.swift in Sources */,
 				2704244628A6E014002EF7B5 /* BusinessPlanList.swift in Sources */,
 				27CB206A289BC15C00E63694 /* SegmentControl.swift in Sources */,
 				27A32FD028BCA34400EF4AA2 /* SignUpApiController.swift in Sources */,
