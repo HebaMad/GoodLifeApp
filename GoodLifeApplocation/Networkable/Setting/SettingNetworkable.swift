@@ -15,8 +15,10 @@ protocol SettingNetworkable:Networkable  {
     func termsAndCondition(completion: @escaping (Result<BaseResponse<termsAndConditions>, Error>)-> ())
     func privacyPolicy(completion: @escaping (Result<BaseResponse<termsAndConditions>, Error>)-> ())
     func editProfile(name:String,mobile:String,completion: @escaping (Result<BaseResponse<userProfile>, Error>)-> ())
+    func logout(completion: @escaping (Result<BaseResponse<userProfile>, Error>)-> ())
 }
 class SettingManager:SettingNetworkable{
+
   
    var provider: MoyaProvider<SettingApiTarget> = MoyaProvider<SettingApiTarget>(plugins: [NetworkLoggerPlugin()])
    public static var shared: SettingManager = {
@@ -43,5 +45,9 @@ class SettingManager:SettingNetworkable{
     func editProfile(name: String, mobile: String, completion: @escaping (Result<BaseResponse<userProfile>, Error>) -> ()) {
         request(target: .editProfile(name: name, mobileNumber: mobile, location: mobile), completion: completion)
     }
+    func logout(completion: @escaping (Result<BaseResponse<userProfile>, Error>) -> ()) {
+        request(target: .logout, completion: completion)
+    }
+    
     
 }

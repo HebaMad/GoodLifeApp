@@ -65,6 +65,10 @@
 		27876AB928A440ED003A012A /* WebsiteCompetitorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27876AB728A440ED003A012A /* WebsiteCompetitorCell.xib */; };
 		27876ABB28A4484B003A012A /* SpecificWebsiteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27876ABA28A4484B003A012A /* SpecificWebsiteVC.swift */; };
 		27876ABD28A4DB64003A012A /* NSUIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27876ABC28A4DB64003A012A /* NSUIColor+Hex.swift */; };
+		27A32FD028BCA34400EF4AA2 /* SignUpApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A32FCF28BCA34400EF4AA2 /* SignUpApiController.swift */; };
+		27A32FD228BCA54100EF4AA2 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A32FD128BCA54100EF4AA2 /* UIViewControllerExtension.swift */; };
+		27A32FD428BCAEA800EF4AA2 /* MenuApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A32FD328BCAEA800EF4AA2 /* MenuApiController.swift */; };
+		27A32FD628BCBAA300EF4AA2 /* ProfileApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A32FD528BCBAA300EF4AA2 /* ProfileApiController.swift */; };
 		27A7375E28913F0500FD8AD9 /* ProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27A7375D28913F0500FD8AD9 /* ProgressView.xib */; };
 		27A7376028913FFF00FD8AD9 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A7375F28913FFF00FD8AD9 /* ProgressView.swift */; };
 		27A737622891403000FD8AD9 /* UIViewFromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A737612891403000FD8AD9 /* UIViewFromNib.swift */; };
@@ -260,6 +264,10 @@
 		27876AB728A440ED003A012A /* WebsiteCompetitorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebsiteCompetitorCell.xib; sourceTree = "<group>"; };
 		27876ABA28A4484B003A012A /* SpecificWebsiteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificWebsiteVC.swift; sourceTree = "<group>"; };
 		27876ABC28A4DB64003A012A /* NSUIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSUIColor+Hex.swift"; sourceTree = "<group>"; };
+		27A32FCF28BCA34400EF4AA2 /* SignUpApiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpApiController.swift; sourceTree = "<group>"; };
+		27A32FD128BCA54100EF4AA2 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		27A32FD328BCAEA800EF4AA2 /* MenuApiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuApiController.swift; sourceTree = "<group>"; };
+		27A32FD528BCBAA300EF4AA2 /* ProfileApiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileApiController.swift; sourceTree = "<group>"; };
 		27A7375D28913F0500FD8AD9 /* ProgressView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgressView.xib; sourceTree = "<group>"; };
 		27A7375F28913FFF00FD8AD9 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		27A737612891403000FD8AD9 /* UIViewFromNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewFromNib.swift; sourceTree = "<group>"; };
@@ -454,6 +462,23 @@
 			path = XIB;
 			sourceTree = "<group>";
 		};
+		27A32FCC28BCA1C600EF4AA2 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		27A32FCD28BCA26000EF4AA2 /* WebServices */ = {
+			isa = PBXGroup;
+			children = (
+				27A32FCF28BCA34400EF4AA2 /* SignUpApiController.swift */,
+				27A32FD328BCAEA800EF4AA2 /* MenuApiController.swift */,
+				27A32FD528BCBAA300EF4AA2 /* ProfileApiController.swift */,
+			);
+			path = WebServices;
+			sourceTree = "<group>";
+		};
 		27A737712891CAA500FD8AD9 /* MapScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -571,6 +596,8 @@
 		27C9AE25288D38E900FA584A /* GoodLifeApplocation */ = {
 			isa = PBXGroup;
 			children = (
+				27A32FCD28BCA26000EF4AA2 /* WebServices */,
+				27A32FCC28BCA1C600EF4AA2 /* Presenter */,
 				27B54D8B28BA6C960074A6A1 /* Helper */,
 				27B54D8428BA635E0074A6A1 /* Networkable */,
 				27B54D7E28BA61D00074A6A1 /* Model */,
@@ -661,6 +688,7 @@
 				27CB2069289BC15C00E63694 /* SegmentControl.swift */,
 				27876ABC28A4DB64003A012A /* NSUIColor+Hex.swift */,
 				2704244B28A84BF3002EF7B5 /* Extension.swift */,
+				27A32FD128BCA54100EF4AA2 /* UIViewControllerExtension.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -1141,6 +1169,7 @@
 				27A737642891405200FD8AD9 /* CollectionViewHelper.swift in Sources */,
 				27CB2089289D48BD00E63694 /* CategoriesList.swift in Sources */,
 				2704244928A6ED08002EF7B5 /* SpecificFinancialModel.swift in Sources */,
+				27A32FD628BCBAA300EF4AA2 /* ProfileApiController.swift in Sources */,
 				2767A293289087DF00DF34D1 /* HeaderCollectionReusableView.swift in Sources */,
 				27C9AEA2288D971700FA584A /* VolunteerOpportunityVC.swift in Sources */,
 				27B54D8128BA62790074A6A1 /* SettingTarget.swift in Sources */,
@@ -1163,6 +1192,7 @@
 				2767A271288F3CD600DF34D1 /* DonationThirdFrame.swift in Sources */,
 				27C9AE7F288D4C1E00FA584A /* OnBoardingFrame2.swift in Sources */,
 				27876ABD28A4DB64003A012A /* NSUIColor+Hex.swift in Sources */,
+				27A32FD228BCA54100EF4AA2 /* UIViewControllerExtension.swift in Sources */,
 				27B54D8828BA67150074A6A1 /* DataModel.swift in Sources */,
 				27C9AEAA288DA8E300FA584A /* TaskCollectionViewCell.swift in Sources */,
 				27A7377B2891D16100FD8AD9 /* SubscriptionCollectionViewCell.swift in Sources */,
@@ -1170,6 +1200,7 @@
 				2767A27F2890478200DF34D1 /* FeaturedFundsCollectionViewCell.swift in Sources */,
 				2704244628A6E014002EF7B5 /* BusinessPlanList.swift in Sources */,
 				27CB206A289BC15C00E63694 /* SegmentControl.swift in Sources */,
+				27A32FD028BCA34400EF4AA2 /* SignUpApiController.swift in Sources */,
 				27CB2087289D467500E63694 /* DashboardVC.swift in Sources */,
 				27B54D8628BA638D0074A6A1 /* BaseResponse.swift in Sources */,
 				27C9AEB9288EF61200FA584A /* DonationVC.swift in Sources */,
@@ -1204,6 +1235,7 @@
 				27CB208B289D4A9300E63694 /* HomeCategories.swift in Sources */,
 				27B54D9328BA6E170074A6A1 /* AppData.swift in Sources */,
 				2704243D28A6C828002EF7B5 /* BusinessPlanCell.swift in Sources */,
+				27A32FD428BCAEA800EF4AA2 /* MenuApiController.swift in Sources */,
 				27876AB828A440ED003A012A /* WebsiteCompetitorCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,7 +9,7 @@ import Foundation
 import Moya
 protocol SignUserNetworkable:Networkable  {
 
-    func signUpUser(mobile:String,completion: @escaping (Result<BaseResponse<Empty>, Error>)-> ())
+    func signUpUser(mobile:String,completion: @escaping (Result<BaseResponse<userProfile>, Error>)-> ())
     func resendCode(mobile:String,completion: @escaping (Result<BaseResponse<startFundRaise>, Error>)-> ())
     func checkCode(mobile:String,code:String,completion: @escaping (Result<BaseResponse<userProfile>, Error>)-> ())
     func startFundRaise(latitude:String,longitude:String,work_type:String,amount_raise:Float,completion: @escaping (Result<BaseResponse<startFundRaise>, Error>)-> ())
@@ -27,7 +27,7 @@ class SignUserManager:SignUserNetworkable{
         return generalActions
     }()
     
-    func signUpUser(mobile: String, completion: @escaping (Result<BaseResponse<Empty>, Error>) -> ()) {
+    func signUpUser(mobile: String,completion: @escaping (Result<BaseResponse<userProfile>, Error>)-> ()) {
         request(target: .SignUp(mobile: mobile), completion: completion)
     }
     func resendCode(mobile: String, completion: @escaping (Result<BaseResponse<startFundRaise>, Error>) -> ()) {
