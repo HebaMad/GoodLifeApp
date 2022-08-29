@@ -13,5 +13,6 @@ target 'GoodLifeApplocation' do
   pod 'RangeSeekSlider'
   pod 'FittedSheets'
   pod 'Moya'
+  pod 'SVProgressHUD'
 
 end

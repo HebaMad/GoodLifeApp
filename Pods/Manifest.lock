@@ -12,6 +12,7 @@ PODS:
     - Alamofire (~> 5.0)
   - RangeSeekSlider (1.8.0)
   - SideMenu (6.5.0)
+  - SVProgressHUD (2.2.5)
   - SwiftAlgorithms (1.0.0)
   - XLPagerTabStrip (9.0.0)
 
@@ -22,6 +23,7 @@ DEPENDENCIES:
   - Moya
   - RangeSeekSlider
   - SideMenu
+  - SVProgressHUD
   - XLPagerTabStrip (~> 9.0)
 
 SPEC REPOS:
@@ -33,6 +35,7 @@ SPEC REPOS:
     - Moya
     - RangeSeekSlider
     - SideMenu
+    - SVProgressHUD
     - SwiftAlgorithms
     - XLPagerTabStrip
 
@@ -44,9 +47,10 @@ SPEC CHECKSUMS:
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
   RangeSeekSlider: 650b11fa1edcb92e1e0ede797669d98622570fb5
   SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftAlgorithms: 38dda4731d19027fdeee1125f973111bf3386b53
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: f97ad92b7e5b58db94a4e4334861936f0296c2b5
+PODFILE CHECKSUM: c740e88fdee4dbb8ef343a3f5abfba80f6428688
 
 COCOAPODS: 1.11.2
