@@ -20,7 +20,7 @@ class ProfilePresenter:NSObject{
     var delegate:profileDelegate?
     
     
-    private func sendContactMsg(msg:String){
+     func sendContactMsg(msg:String){
         SettingManager.shared.sendContactMsg(msg: msg) { Response in
             switch Response{
                 
@@ -39,7 +39,7 @@ class ProfilePresenter:NSObject{
         }
     }
     
-    private func termsAndCondition(callback:@escaping dataCallback ){
+     func termsAndCondition(callback:@escaping dataCallback ){
         SettingManager.shared.termsAndCondition { Response in
             switch Response{
                 
@@ -57,7 +57,7 @@ class ProfilePresenter:NSObject{
         }
     }
     
-    private func PrivacyPolicy(callback:@escaping dataCallback ){
+     func PrivacyPolicy(callback:@escaping dataCallback ){
         SettingManager.shared.privacyPolicy { Response in
             switch Response{
                 
@@ -75,7 +75,7 @@ class ProfilePresenter:NSObject{
         }
     }
     
-    private func logout(){
+     func logout(){
         SettingManager.shared.logout{ Response in
             switch Response{
                 
@@ -93,7 +93,7 @@ class ProfilePresenter:NSObject{
         }
     }
     
-    private func editProfile(name:String,mobileNumber:String,location:String){
+     func editProfile(name:String,mobileNumber:String,location:String){
         SettingManager.shared.editProfile(name: name, mobile: mobileNumber) { Response in
             switch Response{
                 

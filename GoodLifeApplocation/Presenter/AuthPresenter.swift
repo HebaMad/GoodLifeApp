@@ -8,10 +8,8 @@
 import Foundation
 import UIKit
 protocol AuthDelegate{
-    func showAlert(title:String,message:String)
-    func goToVerificationCodeVC()
-    func goToAccessLocationVC()
-    func goToLastOnBoardingScreen()
+//    func showAlert(title:String,message:String)
+
 
 }
 typealias authDelegate = AuthDelegate & UIViewController
@@ -19,7 +17,7 @@ typealias authDelegate = AuthDelegate & UIViewController
 class AuthPresenter:NSObject{
     weak var delegate:authDelegate?
 
-    private func signup(mobile:String){
+     func signup(mobile:String){
         
         SignUserManager.shared.signUpUser(mobile: mobile) { Response in
             
@@ -29,23 +27,24 @@ class AuthPresenter:NSObject{
                 if response.status == true{
                     DispatchQueue.main.async {
 
-                    self.delegate?.goToVerificationCodeVC()
                     }
                 }else{
                     DispatchQueue.main.async {
-                        self.delegate?.showAlert(title:"Failure", message: response.message)
+//                        self.delegate?.showAlert(title:"Failure", message: response.message)
                     }
                 }
                 
             case let .failure(error):
-                self.delegate?.showAlert(title:"Failure", message: "something wrong try again")
+                print(error)
+
+//                self.delegate?.showAlert(title:"Failure", message: "something wrong try again")
 
                 
             }
         }
     }
     
-    private func resendCode(mobile:String){
+     func resendCode(mobile:String){
         
         SignUserManager.shared.resendCode(mobile: mobile) { Response in
             
@@ -57,18 +56,20 @@ class AuthPresenter:NSObject{
 
                 }else{
                     DispatchQueue.main.async {
-                        self.delegate?.showAlert(title:"Failure", message: response.message)
+//                        self.delegate?.showAlert(title:"Failure", message: response.message)
                     }
                 }
                 
             case let .failure(error):
-                self.delegate?.showAlert(title:"Failure", message: "something wrong try again")
+                print(error)
+
+//                self.delegate?.showAlert(title:"Failure", message: "something wrong try again")
 
                 
             }
         }
     }
-    private func checkCode(mobile:String,code:String){
+     func checkCode(mobile:String,code:String){
         
         SignUserManager.shared.checkCode(mobile: mobile, code: code) { Response in
             
@@ -78,24 +79,25 @@ class AuthPresenter:NSObject{
                 if response.status == true{
                     DispatchQueue.main.async {
                        
-                    self.delegate?.goToAccessLocationVC()
                         }
                 }else{
                     DispatchQueue.main.async {
 
-                    self.delegate?.showAlert(title:"Failure", message:  response.message)
+//                    self.delegate?.showAlert(title:"Failure", message:  response.message)
                     }
                 }
                 
             case let .failure(error):
-                self.delegate?.showAlert(title:"Failure", message: "something wrong try again")
+                print(error)
+
+//                self.delegate?.showAlert(title:"Failure", message: "something wrong try again")
 
             }
         }
     }
     
     
-    private func startInvestiment(latitude:String,longitude:String,work_type:String,amount_raise:Float){
+     func startInvestiment(latitude:String,longitude:String,work_type:String,amount_raise:Float){
         
         SignUserManager.shared.startFundRaise(latitude: latitude, longitude: longitude, work_type: work_type, amount_raise:amount_raise ) { Response in
             
@@ -105,16 +107,16 @@ class AuthPresenter:NSObject{
                 if response.status == true{
                     DispatchQueue.main.async {
 
-                    self.delegate?.goToLastOnBoardingScreen()
                     }
                 }else{
                     DispatchQueue.main.async {
 
-                    self.delegate?.showAlert(title:"Failure", message: response.message)
+//                    self.delegate?.showAlert(title:"Failure", message: response.message)
                 }
                 }
             case let .failure(error):
-                self.delegate?.showAlert(title:"Failure", message: "something wrong try again")
+                print(error)
+//                self.delegate?.showAlert(title:"Failure", message: "something wrong try again")
 
             }
         }
