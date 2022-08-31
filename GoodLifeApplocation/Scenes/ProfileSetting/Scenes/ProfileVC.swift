@@ -14,10 +14,18 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var accountDetails: UIButton!
     @IBOutlet weak var venturesTableview: UITableView!
     
+    var venture:[Ventures]=[]
+    var presenter = ProfilePresenter()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         bindButtons()
         setupTableView()
+        presenter.userProfile()
+        presenter.delegate = self
+
+
+
     }
 
     private func setupTableView(){
@@ -59,11 +67,12 @@ private extension ProfileVC{
 
 extension ProfileVC:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-     5
+        venture.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:VenturesCell = tableView.dequeueReusableCell(for: indexPath)
+        cell.ventureTitle.text = venture[indexPath.row].title
         return cell
     }
     
@@ -72,4 +81,18 @@ extension ProfileVC:UITableViewDelegate,UITableViewDataSource{
 extension ProfileVC:Storyboarded{
     static var storyboardName: StoryboardName = .main
 
+}
+extension ProfileVC:ProfileDelegate{
+    func showAlert(title: String, message: String) {
+        
+    }
+    
+    func getUserData(data: userProfile) {
+        self.venture = data.ventures ?? []
+        print( self.venture.count)
+        venturesTableview.reloadData()
+
+    }
+    
+    
 }

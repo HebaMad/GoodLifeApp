@@ -8,6 +8,12 @@
 import UIKit
 
 class VenturesCell: UITableViewCell,NibLoadableView {
+    
+     //MARK: - Outlet
+    
+    @IBOutlet weak var ventureTitle: UILabel!
+    
+    //MARK: - init
 
     override func awakeFromNib() {
         super.awakeFromNib()

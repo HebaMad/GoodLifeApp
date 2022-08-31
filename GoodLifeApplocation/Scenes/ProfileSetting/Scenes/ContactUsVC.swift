@@ -13,7 +13,11 @@ class ContactUsVC: UIViewController {
     
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var contatMsgTextView: UITextView!
+    @IBOutlet weak var sendBtn: UIButtonDesignable!
     
+    
+     var presnter = ProfilePresenter()
+
     //MARK: - Life cycle
     
     override func viewDidLoad() {
@@ -36,14 +40,24 @@ class ContactUsVC: UIViewController {
     
     func bindBackButton(){
         backBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
+        sendBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
+
     }
 }
 
     //MARK: - private Handler
-   private extension ContactUsVC{
+    extension ContactUsVC{
     
-    @objc func buttonWasTapped(){
-        navigationController?.popViewController(animated: true)
+       @objc func buttonWasTapped( _ sender:UIButton){
+           
+           switch sender{
+           case backBtn:
+               navigationController?.popViewController(animated: true)
+           case sendBtn:
+               self.presnter.sendContactMsg(msg: contatMsgTextView.text)
+           default:
+               print(".")
+           }
         
     }
 }
