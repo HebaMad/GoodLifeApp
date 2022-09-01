@@ -14,7 +14,9 @@ class TaskVC: UIViewController {
     @IBOutlet weak var taskSegmentControl: UISegmentedControl!
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var AddTaskBtn: UIButtonDesignable!
-    
+ 
+    var myCurrentTask:[Tasks]=[]
+    var myCompletedTask:[Tasks]=[]
     
     //MARK: - Properties
 
@@ -92,7 +94,15 @@ private extension TaskVC{
 
 extension TaskVC:UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        5
+        switch segmentIndex{
+        case 0:
+            return myCurrentTask.count
+        case 1:
+            return myCompletedTask.count
+            
+        default: return 0
+            
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -100,9 +110,9 @@ extension TaskVC:UITableViewDelegate, UITableViewDataSource{
         
         switch segmentIndex{
         case 0 :
-            cell.configureCell(iconSystem: UIImage(systemName: "circlebadge")!, tint: UIColor(named: "button")!)
+            cell.configureCell(iconSystem: UIImage(systemName: "circlebadge")!, tint: UIColor(named: "button")!, task:myCurrentTask[indexPath.row])
         case 1 :
-            cell.configureCell(iconSystem: UIImage(systemName: "circlebadge.fill")!, tint: UIColor(named: "progressView")!)
+            cell.configureCell(iconSystem: UIImage(systemName: "circlebadge.fill")!, tint: UIColor(named: "progressView")!, task:myCompletedTask[indexPath.row] )
         default:
             print("error click")
             

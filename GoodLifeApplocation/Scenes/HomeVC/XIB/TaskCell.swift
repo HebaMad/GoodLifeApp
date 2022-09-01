@@ -29,9 +29,10 @@ class TaskCell: UITableViewCell ,NibLoadableView {
     
     //MARK: - configuration cell
 
-    func configureCell(iconSystem:UIImage,tint:UIColor){
+    func configureCell(iconSystem:UIImage,tint:UIColor,task:Tasks){
         MarkBtn.setBackgroundImage(iconSystem, for: .normal)
         MarkBtn.tintColor = tint
+        titleLabel.text=task.title ?? ""
         
     }
     

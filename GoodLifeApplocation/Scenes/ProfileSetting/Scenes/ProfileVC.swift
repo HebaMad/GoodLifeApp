@@ -13,7 +13,7 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var userImg: UIImageViewDesignable!
     @IBOutlet weak var accountDetails: UIButton!
     @IBOutlet weak var venturesTableview: UITableView!
-    
+    var privacyPolicyUrl = ""
     var venture:[Ventures]=[]
     var presenter = ProfilePresenter()
     
@@ -22,6 +22,7 @@ class ProfileVC: UIViewController {
         bindButtons()
         setupTableView()
         presenter.userProfile()
+        presenter.PrivacyPolicy()
         presenter.delegate = self
 
 
@@ -52,6 +53,7 @@ private extension ProfileVC{
         switch sender{
         case accountDetails:
             let vc = ProfileSettingVC()
+            vc.privacyPolicyUrl = self.privacyPolicyUrl
             navigationController?.pushViewController(vc, animated: true)
         case backBtn:
             navigationController?.popViewController(animated: true)
@@ -83,7 +85,13 @@ extension ProfileVC:Storyboarded{
 
 }
 extension ProfileVC:ProfileDelegate{
+    func getUrlForWebPages(data: termsAndConditions) {
+        self.privacyPolicyUrl = data.url ?? ""
+    }
+    
     func showAlert(title: String, message: String) {
+        //No implementation
+
         
     }
     

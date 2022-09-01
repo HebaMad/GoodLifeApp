@@ -17,12 +17,18 @@ class ProfileSettingVC: UIViewController {
     @IBOutlet weak var privacyPolicy: SettingNib!
     @IBOutlet weak var termAndConditionView: SettingNib!
     
+    let presenter = ProfilePresenter()
+    var TermsAndConditionUrl = ""
+    var privacyPolicyUrl = ""
+
     //MARK: - Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         bindButtons()
+        self.presenter.termsAndCondition()
+        presenter.delegate=self
     }
    
 }
@@ -43,25 +49,50 @@ extension ProfileSettingVC{
         switch sender{
             
         case profileEditView.ViewBtn:
+            
             let vc = EditProfileVC()
             navigationController?.pushViewController(vc, animated: true)
             
         case contactusView.ViewBtn:
+            
             let vc = ContactUsVC()
             navigationController?.pushViewController(vc, animated: true)
             
         case privacyPolicy.ViewBtn:
             
-            let vc = HaveAnIdeaVC()
             
+            let vc = TermsAndConditions()
+            vc.url = self.privacyPolicyUrl
+            navigationController?.pushViewController(vc, animated: true)
             
         case termAndConditionView.ViewBtn:
-            let vc = ReviewExperienceVC()
-            
+                
+                let vc = TermsAndConditions()
+                vc.url = self.TermsAndConditionUrl
+                self.navigationController?.pushViewController(vc, animated: true)
+    
+
         case backBtn:
             navigationController?.popViewController(animated: true)
         default:
             print("")
         }
     }
+}
+
+
+extension ProfileSettingVC:ProfileDelegate{
+    func showAlert(title: String, message: String) {
+        //no implementation
+    }
+    
+    func getUserData(data: userProfile) {
+        //no implementation
+    }
+    
+    func getUrlForWebPages(data: termsAndConditions) {
+        self.TermsAndConditionUrl = data.url ?? ""
+    }
+    
+    
 }

@@ -28,6 +28,15 @@ class ResourceCell: UITableViewCell, NibLoadableView {
     }
     
     //MARK: - configuration cell
+    func configureResourceCell(resource:Resources){
+        resourceTitleText.text = resource.title ?? ""
+        resourceDetails.text = resource.details ?? ""
 
+    }
+    
+    func configureCategoriesCell(category:Categories){
+        resourceTitleText.text = category.title ?? ""
+        resourceDetails.text = category.details ?? ""
+    }
     
 }

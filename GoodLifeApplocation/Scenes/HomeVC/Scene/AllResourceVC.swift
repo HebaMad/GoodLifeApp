@@ -14,6 +14,8 @@ class AllResourceVC: UIViewController {
     @IBOutlet weak var AllresourceTable: UITableView!
     @IBOutlet weak var backBtn: UIButton!
 
+    
+    var resource:[Resources]=[]
     //MARK: - Life cycle
 
     override func viewDidLoad() {
@@ -53,11 +55,12 @@ private extension AllResourceVC{
 
 extension AllResourceVC:UITableViewDelegate, UITableViewDataSource{
 func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    5
+    resource.count
 }
 
 func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell:ResourceCell = tableView.dequeueReusableCell(for: indexPath)
+    cell.configureResourceCell(resource: resource[indexPath.row])
     return cell
 }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

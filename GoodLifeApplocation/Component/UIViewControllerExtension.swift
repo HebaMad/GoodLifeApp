@@ -130,8 +130,8 @@ extension UIViewController {
     
     
     public func showLoading(){
-        SVProgressHUD.setForegroundColor(UIColor.gray)
-        SVProgressHUD.setBackgroundColor(UIColor.white)
+        SVProgressHUD.setForegroundColor(UIColor.white)
+        SVProgressHUD.setBackgroundColor(UIColor.lightGray)
         SVProgressHUD.show()
     }
 

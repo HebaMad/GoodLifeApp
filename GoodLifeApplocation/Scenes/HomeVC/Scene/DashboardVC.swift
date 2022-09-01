@@ -15,10 +15,17 @@ class DashboardVC: UIViewController {
     
     
     //MARK: - properties
+    
     private var menu :SideMenuNavigationController?
     private let sections = HomeCategories.shared.AllCategories
+    
+    let presenter = DashboardPresenter()
+    var categories:[Categories]=[]
+    var resource:[Resources]=[]
+    var myCurrentTask:[Tasks]=[]
+    var myCompletedTask:[Tasks]=[]
 
-
+    
     //MARK: - Life cycle
     
     override func viewDidLoad() {
@@ -27,6 +34,10 @@ class DashboardVC: UIViewController {
         setUpSideMenu()
         setupCollectionview()
         menuBtnBinding()
+        presenter.getCategories()
+        presenter.getResource()
+        presenter.getMyTask()
+        presenter.delegate=self
         
     }
     
@@ -150,15 +161,15 @@ class DashboardVC: UIViewController {
              
          case .categories:
              let vc = AllCategoriesVC.instantiate()
-
+             vc.categories=categories
              navigationController?.pushViewController(vc, animated: true)
          case .Task:
-             let vc = AllTasksVC.instantiate()
+             let vc = TaskVC.instantiate()
 
              navigationController?.pushViewController(vc, animated: true)
          case .Resource:
              let vc = AllResourceVC.instantiate()
-
+             vc.resource=self.resource
              navigationController?.pushViewController(vc, animated: true)
          }
     }
@@ -193,29 +204,31 @@ extension DashboardVC: UICollectionViewDataSource,UICollectionViewDelegate,UICol
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return sections[section].count
+            switch sections[section]{
+            case .categories: return categories.count
+            case .Task :return myCurrentTask.count
+            case .Resource:return resource.count
+                
+            }
+        }
 
-    }
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
-        
-
         switch sections[indexPath.section] {
-        case .categories(let items):
+        case .categories:
             
             let cell:CategoriesCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
-            cell.setup(items[indexPath.row])
+            cell.setup(categories[indexPath.row])
             return cell
             
-        case .Task(let items):
+        case .Task:
             let cell:TaskCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
-            cell.setup(items[indexPath.row])
+            cell.setup(myCurrentTask[indexPath.row])
 
             return cell
-        case .Resource(let items):
+        case .Resource:
             let cell:ResourceCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
-            cell.setup(items[indexPath.row])
+            cell.setup(resource[indexPath.row])
 
             return cell
             
@@ -255,4 +268,30 @@ extension DashboardVC: UICollectionViewDataSource,UICollectionViewDelegate,UICol
 extension DashboardVC:Storyboarded{
     static var storyboardName: StoryboardName = .main
 
+}
+
+extension DashboardVC:DashboardDelegate{
+    func showAlert(title: String, message: String) {
+        
+    }
+    
+    func getCategories(data: [Categories]) {
+        categories=data
+        elementCollectionView.reloadData()
+    }
+    
+    func getResource(data: [Resources]) {
+     resource = data
+        elementCollectionView.reloadData()
+    }
+    
+    func getMyTask(data: DashboardTask) {
+        myCompletedTask=data.completedTasks ?? []
+        myCurrentTask = data.currentTasks ?? []
+        elementCollectionView.reloadData()
+
+    }
+    
+    
+    
 }

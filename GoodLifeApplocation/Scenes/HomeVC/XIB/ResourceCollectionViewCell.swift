@@ -22,7 +22,7 @@ class ResourceCollectionViewCell: UICollectionViewCell,NibLoadableView  {
     
     //MARK: - configuration cell
 
-    func setup(_ item: listData) {
+    func setup(_ item: Resources) {
         categoriesTitle.text = item.title
     }
 }

@@ -18,9 +18,21 @@ class VerificationVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        bindTexField()
     }
 
 
 
 
+}
+extension VerificationVC{
+    func bindTexField(){
+        codeTxtField.addTarget(self, action: #selector(TxtFieldWasWrittenValue), for: .editingChanged)
+    }
+}
+extension VerificationVC{
+    @objc func  TxtFieldWasWrittenValue(){
+        NotificationCenter.default.post(name: .init(rawValue: "onBoarding"), object: [codeTxtField.text])
+
+    }
 }

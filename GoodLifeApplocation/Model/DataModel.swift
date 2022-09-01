@@ -21,8 +21,21 @@ struct userProfile: Decodable{
     let longitude:String?
     let work_type:String?
     let amount_raise:Float?
+    let status:String?
     let access_token:String?
+    let ventures:[Ventures]?
 
+}
+
+struct goalCreation:Decodable{
+    let user_id:Int?
+    let title:String?
+    let category_id:String?
+    let deadline:String?
+    let created_at:String?
+    let id:Int?
+
+ 
 }
 
 struct termsAndConditions: Decodable{
@@ -90,3 +103,67 @@ struct FeedbackCreation:Decodable{
     let id:Int?
 }
 
+struct Ventures:Codable{
+    
+    
+    let id :Int?
+    let category:String?
+    let work_type:String?
+    let amount_raise :Int?
+    let need_type_id :Int?
+    let interest:String?
+    let title:String?
+    let image:String?
+    let rate :Int?
+    let created_at :String?
+    let models:[String]?
+    let plans:[String]?
+    let websites:[String]?
+    let reviews_count :Int?
+
+
+}
+
+
+struct Categories:Codable{
+    
+    let id:Int?
+    let title:String?
+    let details:String?
+    let complete_percent:Int?
+    
+}
+struct DahboardCategory:Decodable{
+    let categories:[Categories]?
+}
+
+struct DashboardResource:Decodable{
+    let resources:[Resources]?
+    
+}
+
+struct Resources:Decodable{
+    let id:Int?
+    let status:String?
+    let title:String?
+    let details:String?
+}
+
+struct DashboardTask:Decodable{
+    let currentTasks :[Tasks]?
+    let completedTasks :[Tasks]?
+
+}
+struct Tasks:Codable{
+    
+    let id:Int?
+    let title:String?
+    let user_id:Int?
+    let category_id:Int?
+    let all_days:String?
+    let start_date:String?
+    let end_date:String?
+    let completed:String?
+    let created_at:String?
+
+    }

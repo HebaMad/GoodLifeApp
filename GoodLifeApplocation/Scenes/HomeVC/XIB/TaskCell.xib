@@ -137,6 +137,11 @@
             <point key="canvasLocation" x="219.56521739130437" y="110.49107142857143"/>
         </tableViewCell>
     </objects>
+    <designables>
+        <designable name="O1C-9s-0f5">
+            <size key="intrinsicContentSize" width="16" height="20"/>
+        </designable>
+    </designables>
     <resources>
         <image name="circlebadge" catalog="system" width="128" height="120"/>
         <image name="clock" catalog="system" width="128" height="121"/>

@@ -24,7 +24,7 @@ class CategoriesCollectionViewCell: UICollectionViewCell,NibLoadableView  {
     
     //MARK: - configuration cell
 
-    func setup(_ item: listData) {
+    func setup(_ item: Categories) {
         CategoryTitle.text = item.title
     }
 }

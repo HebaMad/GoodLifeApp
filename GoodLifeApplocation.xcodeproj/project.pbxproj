@@ -21,7 +21,14 @@
 		2704245128A8CED1002EF7B5 /* LoginProgressViews.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2704244F28A8CED1002EF7B5 /* LoginProgressViews.xib */; };
 		2704245328A95AAE002EF7B5 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2704245228A95AAE002EF7B5 /* Storyboarded.swift */; };
 		2704245528A95EAD002EF7B5 /* AllCategoriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2704245428A95EAD002EF7B5 /* AllCategoriesVC.swift */; };
-		2704245728A96034002EF7B5 /* AllTasksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2704245628A96034002EF7B5 /* AllTasksVC.swift */; };
+		270562CC28BFC3AF00B0124E /* TermsAndConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270562CA28BFC3AF00B0124E /* TermsAndConditions.swift */; };
+		270562CD28BFC3AF00B0124E /* TermsAndConditions.xib in Resources */ = {isa = PBXBuildFile; fileRef = 270562CB28BFC3AF00B0124E /* TermsAndConditions.xib */; };
+		270562D128BFD1C400B0124E /* DashboardTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270562D028BFD1C400B0124E /* DashboardTarget.swift */; };
+		270562D328BFD1EE00B0124E /* DashboardNetworkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270562D228BFD1EE00B0124E /* DashboardNetworkable.swift */; };
+		270562D528C090D400B0124E /* DashboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270562D428C090D400B0124E /* DashboardPresenter.swift */; };
+		270562D728C09DEB00B0124E /* DatePickingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270562D628C09DEB00B0124E /* DatePickingTextField.swift */; };
+		270562D928C0A26200B0124E /* UITextFieldDataPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270562D828C0A26200B0124E /* UITextFieldDataPicker.swift */; };
+		270562DB28C0A32A00B0124E /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270562DA28C0A32A00B0124E /* Validator.swift */; };
 		2706D21328913D4500546425 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2706D21228913D4500546425 /* ProgressBar.swift */; };
 		2710A28228971D94009BCE60 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710A28128971D94009BCE60 /* MockData.swift */; };
 		2710A28828971E1F009BCE60 /* ListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710A28728971E1F009BCE60 /* ListSection.swift */; };
@@ -224,7 +231,14 @@
 		2704244F28A8CED1002EF7B5 /* LoginProgressViews.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginProgressViews.xib; sourceTree = "<group>"; };
 		2704245228A95AAE002EF7B5 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		2704245428A95EAD002EF7B5 /* AllCategoriesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCategoriesVC.swift; sourceTree = "<group>"; };
-		2704245628A96034002EF7B5 /* AllTasksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTasksVC.swift; sourceTree = "<group>"; };
+		270562CA28BFC3AF00B0124E /* TermsAndConditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditions.swift; sourceTree = "<group>"; };
+		270562CB28BFC3AF00B0124E /* TermsAndConditions.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TermsAndConditions.xib; sourceTree = "<group>"; };
+		270562D028BFD1C400B0124E /* DashboardTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTarget.swift; sourceTree = "<group>"; };
+		270562D228BFD1EE00B0124E /* DashboardNetworkable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardNetworkable.swift; sourceTree = "<group>"; };
+		270562D428C090D400B0124E /* DashboardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPresenter.swift; sourceTree = "<group>"; };
+		270562D628C09DEB00B0124E /* DatePickingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickingTextField.swift; sourceTree = "<group>"; };
+		270562D828C0A26200B0124E /* UITextFieldDataPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldDataPicker.swift; sourceTree = "<group>"; };
+		270562DA28C0A32A00B0124E /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		2706D21228913D4500546425 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		2710A28128971D94009BCE60 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		2710A28728971E1F009BCE60 /* ListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSection.swift; sourceTree = "<group>"; };
@@ -448,6 +462,15 @@
 			path = LoginVC;
 			sourceTree = "<group>";
 		};
+		270562CE28BFD18A00B0124E /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				270562D028BFD1C400B0124E /* DashboardTarget.swift */,
+				270562D228BFD1EE00B0124E /* DashboardNetworkable.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
 		2767A2952890A45400DF34D1 /* Filterscreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -474,6 +497,7 @@
 				277CF36528BD52A900F2874F /* AuthPresenter.swift */,
 				277CF36728BD5AD700F2874F /* MenuPresenter.swift */,
 				277CF36928BD5DAF00F2874F /* ProfilePresenter.swift */,
+				270562D428C090D400B0124E /* DashboardPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -535,6 +559,7 @@
 		27B54D8428BA635E0074A6A1 /* Networkable */ = {
 			isa = PBXGroup;
 			children = (
+				270562CE28BFD18A00B0124E /* Dashboard */,
 				27B54D9928BAC0C30074A6A1 /* SignUp */,
 				27B54D9428BA994C0074A6A1 /* Menu */,
 				27B54D7F28BA62650074A6A1 /* Setting */,
@@ -549,6 +574,9 @@
 				27B54D8E28BA6D8B0074A6A1 /* KeychainWrapper.swift */,
 				27B54D9028BA6DA50074A6A1 /* KeychainOperations.swift */,
 				27B54D9228BA6E170074A6A1 /* AppData.swift */,
+				270562D628C09DEB00B0124E /* DatePickingTextField.swift */,
+				270562D828C0A26200B0124E /* UITextFieldDataPicker.swift */,
+				270562DA28C0A32A00B0124E /* Validator.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -855,7 +883,6 @@
 				2768DED928A3FE0A004C6A5B /* AddGoalVC.swift */,
 				2768DEDA28A3FE0A004C6A5B /* AddGoalVC.xib */,
 				2704245428A95EAD002EF7B5 /* AllCategoriesVC.swift */,
-				2704245628A96034002EF7B5 /* AllTasksVC.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -914,6 +941,8 @@
 				27F4B14428B8A663003365A6 /* ProfileVC.swift */,
 				27B54D7A28BA03C60074A6A1 /* EditProfileVC.swift */,
 				27B54D7B28BA03C60074A6A1 /* EditProfileVC.xib */,
+				270562CA28BFC3AF00B0124E /* TermsAndConditions.swift */,
+				270562CB28BFC3AF00B0124E /* TermsAndConditions.xib */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -1076,6 +1105,7 @@
 				27C9AE79288D470600FA584A /* OnBoardingVC.xib in Resources */,
 				2767A2992890A48600DF34D1 /* FilterVC.xib in Resources */,
 				27C9AE62288D3CB500FA584A /* Inter-Light-BETA.ttf in Resources */,
+				270562CD28BFC3AF00B0124E /* TermsAndConditions.xib in Resources */,
 				27C9AE56288D3CB500FA584A /* Inter-Medium.ttf in Resources */,
 				27B8C8FA28A1825D0011B039 /* ActivityCell.xib in Resources */,
 				27CB2081289D017D00E63694 /* VerificationVC.xib in Resources */,
@@ -1142,6 +1172,7 @@
 				27CB209C289FFE9800E63694 /* GeneralFinicialPagerVC.swift in Sources */,
 				27CB205F289B0FDC00E63694 /* ResourceDetailsCell.swift in Sources */,
 				27B8C8F528A16B5A0011B039 /* FilterHeaderReusableview.swift in Sources */,
+				270562D128BFD1C400B0124E /* DashboardTarget.swift in Sources */,
 				27A737692891431000FD8AD9 /* OpportunityView.swift in Sources */,
 				27CB207D289CFDFE00E63694 /* BottomBorderTextField.swift in Sources */,
 				27CB2054289B038800E63694 /* RatingControl.swift in Sources */,
@@ -1193,6 +1224,7 @@
 				2706D21328913D4500546425 /* ProgressBar.swift in Sources */,
 				2710A28A28971E3B009BCE60 /* ListItem.swift in Sources */,
 				2704245028A8CED1002EF7B5 /* LoginProgressViews.swift in Sources */,
+				270562CC28BFC3AF00B0124E /* TermsAndConditions.swift in Sources */,
 				277CF36628BD52A900F2874F /* AuthPresenter.swift in Sources */,
 				2710A28D289A5C3C009BCE60 /* TaskCell.swift in Sources */,
 				27B54D9B28BAC0F10074A6A1 /* SignUserTarget.swift in Sources */,
@@ -1203,6 +1235,7 @@
 				2767A271288F3CD600DF34D1 /* DonationThirdFrame.swift in Sources */,
 				27C9AE7F288D4C1E00FA584A /* OnBoardingFrame2.swift in Sources */,
 				27876ABD28A4DB64003A012A /* NSUIColor+Hex.swift in Sources */,
+				270562D928C0A26200B0124E /* UITextFieldDataPicker.swift in Sources */,
 				27A32FD228BCA54100EF4AA2 /* UIViewControllerExtension.swift in Sources */,
 				27B54D8828BA67150074A6A1 /* DataModel.swift in Sources */,
 				27C9AEAA288DA8E300FA584A /* TaskCollectionViewCell.swift in Sources */,
@@ -1221,6 +1254,8 @@
 				2710A28828971E1F009BCE60 /* ListSection.swift in Sources */,
 				27B54D8328BA62870074A6A1 /* SettingNetworkable.swift in Sources */,
 				27C9AE27288D38E900FA584A /* AppDelegate.swift in Sources */,
+				270562DB28C0A32A00B0124E /* Validator.swift in Sources */,
+				270562D328BFD1EE00B0124E /* DashboardNetworkable.swift in Sources */,
 				27CB2094289FC6CC00E63694 /* GeneralPagerViewVC.swift in Sources */,
 				27A7376E2891435C00FD8AD9 /* UIImageViewDesignable.swift in Sources */,
 				27C9AE29288D38E900FA584A /* SceneDelegate.swift in Sources */,
@@ -1228,6 +1263,7 @@
 				27B54D8A28BA674E0074A6A1 /* Networkable.swift in Sources */,
 				2767A275288F504A00DF34D1 /* DonationFourthFrame.swift in Sources */,
 				27CB2071289C1B3F00E63694 /* ResourceCell.swift in Sources */,
+				270562D728C09DEB00B0124E /* DatePickingTextField.swift in Sources */,
 				2767A28328904A3800DF34D1 /* OtherFundsCollectionViewCell.swift in Sources */,
 				27CB205B289B0C6B00E63694 /* ResourceDetailsVC.swift in Sources */,
 				27876ABB28A4484B003A012A /* SpecificWebsiteVC.swift in Sources */,
@@ -1242,9 +1278,9 @@
 				27C9AE9E288D8BEC00FA584A /* OpportunityViewVC.swift in Sources */,
 				27C9AE78288D470600FA584A /* OnBoardingVC.swift in Sources */,
 				27CB204D289AFDE800E63694 /* HaveAnIdeaVC.swift in Sources */,
-				2704245728A96034002EF7B5 /* AllTasksVC.swift in Sources */,
 				27CB2067289BBEA600E63694 /* BenchmarksCell.swift in Sources */,
 				27CB208B289D4A9300E63694 /* HomeCategories.swift in Sources */,
+				270562D528C090D400B0124E /* DashboardPresenter.swift in Sources */,
 				27B54D9328BA6E170074A6A1 /* AppData.swift in Sources */,
 				2704243D28A6C828002EF7B5 /* BusinessPlanCell.swift in Sources */,
 				27A32FD428BCAEA800EF4AA2 /* MenuApiController.swift in Sources */,

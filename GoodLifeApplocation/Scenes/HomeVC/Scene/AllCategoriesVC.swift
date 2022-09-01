@@ -14,6 +14,9 @@ class AllCategoriesVC: UIViewController {
     @IBOutlet weak var categoriesTable: UITableView!
     @IBOutlet weak var backBtn: UIButton!
     
+    var categories:[Categories]=[]
+    let presenter = DashboardPresenter()
+
     //MARK: - Life cycle
     
     override func viewDidLoad() {
@@ -21,6 +24,8 @@ class AllCategoriesVC: UIViewController {
         
         setupTableView()
         bindBackButton()
+     
+        
     }
     //MARK: - Setup table view
     
@@ -53,11 +58,12 @@ private extension AllCategoriesVC{
 
 extension AllCategoriesVC:UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        5
+        categories.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:ResourceCell = tableView.dequeueReusableCell(for: indexPath)
+        cell.configureCategoriesCell(category: categories[indexPath.row])
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -71,3 +77,5 @@ extension AllCategoriesVC:Storyboarded{
     static var storyboardName: StoryboardName = .main
     
 }
+
+

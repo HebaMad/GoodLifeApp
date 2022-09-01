@@ -25,7 +25,8 @@ class TaskCollectionViewCell: UICollectionViewCell,NibLoadableView  {
     
     //MARK: - configuration cell
 
-    func setup(_ item: listData) {
+    func setup(_ item: Tasks) {
         titleTxt.text = item.title
+        time.text = "\(item.start_date ?? "") -\(item.end_date ?? "")"
     }
 }

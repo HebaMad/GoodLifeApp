@@ -18,9 +18,23 @@ class OnBoardingFrame1: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        bindTexField()
+
         
     }
 
 
 
+}
+
+extension OnBoardingFrame1{
+    func bindTexField(){
+        phoneNumberTxtField.addTarget(self, action: #selector(TxtFieldWasWrittenValue), for: .editingDidEnd)
+    }
+}
+extension OnBoardingFrame1{
+    @objc func  TxtFieldWasWrittenValue(){
+        NotificationCenter.default.post(name: .init(rawValue: "onBoarding"), object: [phoneNumberTxtField.text])
+
+    }
 }
