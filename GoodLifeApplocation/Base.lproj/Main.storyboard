@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="P0b-Rx-lZw">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -93,14 +94,14 @@
                                 <rect key="frame" x="12" y="94" width="390" height="768"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="2sm-kP-Imu">
-                                    <rect key="frame" x="0.0" y="0.0" width="390" height="98"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="91"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Q1N-58-o5o">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="98"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="91"/>
                                             <subviews>
                                                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Fhd-Db-qFT">
-                                                    <rect key="frame" x="0.0" y="8" width="390" height="60"/>
+                                                    <rect key="frame" x="0.0" y="8" width="390" height="68"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <segments>
                                                         <segment title="Current Tasks"/>
@@ -109,43 +110,11 @@
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="selectedSegmentTintColor" name="Color"/>
                                                 </segmentedControl>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OC2-1G-o9b">
-                                                    <rect key="frame" x="0.0" y="73" width="390" height="25"/>
-                                                    <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ytq-pp-ACn" customClass="UIButtonDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                                            <rect key="frame" x="349" y="0.0" width="25" height="25"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="25" id="cX4-se-rYL"/>
-                                                                <constraint firstAttribute="width" secondItem="ytq-pp-ACn" secondAttribute="height" multiplier="1:1" id="w55-wD-DLf"/>
-                                                            </constraints>
-                                                            <color key="tintColor" name="button"/>
-                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                            <state key="normal" image="plus" catalog="system"/>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="color" keyPath="startColor">
-                                                                    <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="color" keyPath="endColor">
-                                                                    <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                    <color key="value" name="button"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                                    <real key="value" value="1"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                    <real key="value" value="4"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                            </userDefinedRuntimeAttributes>
-                                                        </button>
-                                                    </subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mda-kh-wbR">
+                                                    <rect key="frame" x="0.0" y="81" width="390" height="10"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="ytq-pp-ACn" secondAttribute="bottom" id="Wy0-0i-uyT"/>
-                                                        <constraint firstAttribute="height" constant="25" id="trB-qf-v2E"/>
-                                                        <constraint firstAttribute="trailing" secondItem="ytq-pp-ACn" secondAttribute="trailing" constant="16" id="weD-5m-WYq"/>
-                                                        <constraint firstItem="ytq-pp-ACn" firstAttribute="top" secondItem="OC2-1G-o9b" secondAttribute="top" id="zJg-FA-lHi"/>
+                                                        <constraint firstAttribute="height" constant="10" id="Akb-pv-pyd"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -162,7 +131,7 @@
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="fxn-KU-aZy">
-                                        <rect key="frame" x="0.0" y="142.5" width="390" height="80"/>
+                                        <rect key="frame" x="0.0" y="135.5" width="390" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fxn-KU-aZy" id="5uQ-KR-TDt">
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="80"/>
@@ -190,14 +159,45 @@
                                         <color key="textColor" name="button"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ytq-pp-ACn" customClass="UIButtonDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
+                                        <rect key="frame" x="371" y="13" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="cX4-se-rYL"/>
+                                            <constraint firstAttribute="width" secondItem="ytq-pp-ACn" secondAttribute="height" multiplier="1:1" id="w55-wD-DLf"/>
+                                        </constraints>
+                                        <color key="tintColor" name="button"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="plus" catalog="system"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="button"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="3np-dw-Sdn"/>
                                     <constraint firstItem="bqk-Z2-KPv" firstAttribute="centerY" secondItem="Oq3-bJ-cLe" secondAttribute="centerY" id="7GM-gr-Nph"/>
+                                    <constraint firstAttribute="bottom" secondItem="ytq-pp-ACn" secondAttribute="bottom" constant="12" id="CWG-NT-Yt5"/>
+                                    <constraint firstAttribute="trailing" secondItem="ytq-pp-ACn" secondAttribute="trailing" constant="18" id="Eyf-gW-7wv"/>
+                                    <constraint firstItem="ytq-pp-ACn" firstAttribute="top" secondItem="Oq3-bJ-cLe" secondAttribute="top" constant="13" id="LtB-eE-15k"/>
                                     <constraint firstItem="bqk-Z2-KPv" firstAttribute="centerX" secondItem="Oq3-bJ-cLe" secondAttribute="centerX" id="VXR-eM-AWH"/>
                                     <constraint firstItem="NRO-AZ-1ST" firstAttribute="top" secondItem="Oq3-bJ-cLe" secondAttribute="top" id="Wx3-0r-dyq"/>
                                     <constraint firstAttribute="bottom" secondItem="NRO-AZ-1ST" secondAttribute="bottom" id="dqS-ty-DGa"/>
+                                    <constraint firstAttribute="trailing" secondItem="ytq-pp-ACn" secondAttribute="trailing" constant="18" id="wE1-5t-R33"/>
                                     <constraint firstItem="NRO-AZ-1ST" firstAttribute="leading" secondItem="Oq3-bJ-cLe" secondAttribute="leading" constant="8" id="zwm-Ke-ol3"/>
                                 </constraints>
                             </view>
@@ -223,7 +223,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wqh-Qh-KJe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="839" y="82"/>
+            <point key="canvasLocation" x="837.68115942028987" y="81.696428571428569"/>
         </scene>
         <!--Goal And BenchmarkVC-->
         <scene sceneID="NeA-Ug-fgJ">
@@ -237,14 +237,14 @@
                                 <rect key="frame" x="12" y="104" width="390" height="758"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="EIc-zC-GgQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="390" height="98"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="103"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="UwX-65-kTC">
-                                            <rect key="frame" x="5" y="5" width="380" height="88"/>
+                                            <rect key="frame" x="5" y="5" width="380" height="93"/>
                                             <subviews>
                                                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TcN-vd-Q6d">
-                                                    <rect key="frame" x="0.0" y="8" width="380" height="50"/>
+                                                    <rect key="frame" x="0.0" y="8" width="380" height="70"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <segments>
                                                         <segment title="Active Goals"/>
@@ -254,43 +254,11 @@
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="selectedSegmentTintColor" name="Color"/>
                                                 </segmentedControl>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fqc-2g-1cc">
-                                                    <rect key="frame" x="0.0" y="63" width="380" height="25"/>
-                                                    <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Go-bQ-8Sh" customClass="UIButtonDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                                            <rect key="frame" x="339" y="0.0" width="25" height="25"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" secondItem="2Go-bQ-8Sh" secondAttribute="height" multiplier="1:1" id="KQi-oc-71i"/>
-                                                                <constraint firstAttribute="height" constant="25" id="PO0-Dd-0Ul"/>
-                                                            </constraints>
-                                                            <color key="tintColor" name="button"/>
-                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                            <state key="normal" image="plus" catalog="system"/>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="color" keyPath="startColor">
-                                                                    <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="color" keyPath="endColor">
-                                                                    <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                    <color key="value" name="button"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                                    <real key="value" value="1"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                    <real key="value" value="4"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                            </userDefinedRuntimeAttributes>
-                                                        </button>
-                                                    </subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="80h-gu-JAx">
+                                                    <rect key="frame" x="0.0" y="83" width="380" height="10"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstItem="2Go-bQ-8Sh" firstAttribute="top" secondItem="Fqc-2g-1cc" secondAttribute="top" id="AKC-8s-f5k"/>
-                                                        <constraint firstAttribute="bottom" secondItem="2Go-bQ-8Sh" secondAttribute="bottom" id="NBs-bS-Ha3"/>
-                                                        <constraint firstAttribute="height" constant="25" id="RKF-Ec-9dp"/>
-                                                        <constraint firstAttribute="trailing" secondItem="2Go-bQ-8Sh" secondAttribute="trailing" constant="16" id="jXo-tr-raG"/>
+                                                        <constraint firstAttribute="height" constant="10" id="gJE-Ti-STW"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -307,7 +275,7 @@
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="gHv-al-XX0">
-                                        <rect key="frame" x="0.0" y="142.5" width="390" height="110"/>
+                                        <rect key="frame" x="0.0" y="147.5" width="390" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gHv-al-XX0" id="wHg-gP-KPQ">
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="110"/>
@@ -340,15 +308,46 @@ Benchmarks</string>
                                         <color key="textColor" name="button"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Go-bQ-8Sh" customClass="UIButtonDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
+                                        <rect key="frame" x="371" y="22" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="2Go-bQ-8Sh" secondAttribute="height" multiplier="1:1" id="KQi-oc-71i"/>
+                                            <constraint firstAttribute="height" constant="25" id="PO0-Dd-0Ul"/>
+                                        </constraints>
+                                        <color key="tintColor" name="button"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="plus" catalog="system"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="button"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="YpW-zy-dwG" firstAttribute="top" secondItem="LLQ-TY-IO3" secondAttribute="top" id="Ckh-mU-xKt"/>
                                     <constraint firstItem="sub-WV-3gL" firstAttribute="centerX" secondItem="LLQ-TY-IO3" secondAttribute="centerX" id="aXy-ak-XMt"/>
+                                    <constraint firstAttribute="trailing" secondItem="2Go-bQ-8Sh" secondAttribute="trailing" constant="18" id="eDq-wx-GTy"/>
+                                    <constraint firstAttribute="trailing" secondItem="2Go-bQ-8Sh" secondAttribute="trailing" constant="18" id="mqq-QV-Ya9"/>
                                     <constraint firstItem="YpW-zy-dwG" firstAttribute="leading" secondItem="LLQ-TY-IO3" secondAttribute="leading" constant="8" id="okN-q0-2oT"/>
                                     <constraint firstAttribute="bottom" secondItem="YpW-zy-dwG" secondAttribute="bottom" id="pcr-ss-SK8"/>
                                     <constraint firstItem="sub-WV-3gL" firstAttribute="top" secondItem="LLQ-TY-IO3" secondAttribute="top" constant="14" id="r7H-ys-KS6"/>
+                                    <constraint firstItem="2Go-bQ-8Sh" firstAttribute="top" secondItem="LLQ-TY-IO3" secondAttribute="top" constant="22" id="s9a-LA-6qg"/>
                                     <constraint firstAttribute="height" constant="50" id="xgL-lB-sBA"/>
+                                    <constraint firstAttribute="bottom" secondItem="2Go-bQ-8Sh" secondAttribute="bottom" constant="3" id="yQ9-8g-tUc"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -373,7 +372,7 @@ Benchmarks</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PbA-yu-KOa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1551" y="82"/>
+            <point key="canvasLocation" x="1540.5797101449277" y="81.696428571428569"/>
         </scene>
         <!--Resource DetailsVC-->
         <scene sceneID="ng7-5O-Ufg">
