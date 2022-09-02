@@ -33,6 +33,8 @@ class TaskCell: UITableViewCell ,NibLoadableView {
         MarkBtn.setBackgroundImage(iconSystem, for: .normal)
         MarkBtn.tintColor = tint
         titleLabel.text=task.title ?? ""
+        timeLimit.text = convertTimeformat(task.start_date ?? "") + " - " + convertTimeformat(task.end_date ?? "")
+
         
     }
     

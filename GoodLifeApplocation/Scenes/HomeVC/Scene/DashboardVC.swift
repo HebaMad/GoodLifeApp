@@ -69,6 +69,7 @@ class DashboardVC: UIViewController {
 
             SideMenuManager.default.addPanGestureToPresent(toView: self.view)
         }
+    
     private func setupCollectionview(){
         
         elementCollectionView.register(CategoriesCollectionViewCell.self)
@@ -165,13 +166,21 @@ class DashboardVC: UIViewController {
              navigationController?.pushViewController(vc, animated: true)
          case .Task:
              let vc = TaskVC.instantiate()
-
+             vc.myCurrentTask = myCurrentTask
+             vc.myCompletedTask = myCompletedTask
              navigationController?.pushViewController(vc, animated: true)
          case .Resource:
              let vc = AllResourceVC.instantiate()
              vc.resource=self.resource
              navigationController?.pushViewController(vc, animated: true)
          }
+    }
+    
+    
+    @objc func markDoneBtn(_ sender:UIButton){
+        self.presenter.markMyTask(taskid: myCurrentTask[sender.tag].id ?? 0)
+        self.elementCollectionView.reloadData()
+        
     }
 }
 //MARK: - Binding
@@ -224,6 +233,9 @@ extension DashboardVC: UICollectionViewDataSource,UICollectionViewDelegate,UICol
         case .Task:
             let cell:TaskCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
             cell.setup(myCurrentTask[indexPath.row])
+            cell.DoneBtn.addTarget(self, action: #selector(markDoneBtn), for: .touchUpInside)
+            cell.DoneBtn.tag=indexPath.row
+
 
             return cell
         case .Resource:

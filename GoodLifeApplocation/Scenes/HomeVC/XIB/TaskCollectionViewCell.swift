@@ -14,7 +14,7 @@ class TaskCollectionViewCell: UICollectionViewCell,NibLoadableView  {
     @IBOutlet weak var titleTxt: UILabel!
     @IBOutlet weak var subTitleText: UILabel!
     @IBOutlet weak var time: UILabel!
-    @IBOutlet weak var startBtn: UIButtonDesignable!
+    @IBOutlet weak var DoneBtn: UIButtonDesignable!
     
     //MARK: - Initializer
 
@@ -27,6 +27,7 @@ class TaskCollectionViewCell: UICollectionViewCell,NibLoadableView  {
 
     func setup(_ item: Tasks) {
         titleTxt.text = item.title
-        time.text = "\(item.start_date ?? "") -\(item.end_date ?? "")"
+        subTitleText.text = item.category?.title ?? ""
+        time.text = convertDateFormater(item.start_date ?? "") + " - " + convertDateFormater(item.end_date ?? "")
     }
 }

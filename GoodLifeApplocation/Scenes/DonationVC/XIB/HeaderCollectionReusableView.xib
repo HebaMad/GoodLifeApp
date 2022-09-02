@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -23,20 +24,20 @@
                     <rect key="frame" x="12" y="4" width="335" height="56"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEST" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLb-JW-eI1">
-                            <rect key="frame" x="0.0" y="0.0" width="255" height="56"/>
+                            <rect key="frame" x="0.0" y="0.0" width="235" height="56"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="19"/>
                             <color key="textColor" name="Color"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rlJ-6z-dxI">
-                            <rect key="frame" x="255" y="0.0" width="80" height="56"/>
+                            <rect key="frame" x="235" y="0.0" width="100" height="56"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="80" id="lB1-57-fEQ"/>
+                                <constraint firstAttribute="width" constant="100" id="lB1-57-fEQ"/>
                             </constraints>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="View All">
-                                <fontDescription key="titleFontDescription" name="Inter-Regular" family="Inter" pointSize="10"/>
+                                <fontDescription key="titleFontDescription" name="Inter-Regular" family="Inter" pointSize="8"/>
                                 <color key="baseForegroundColor" name="BgColor"/>
                             </buttonConfiguration>
                         </button>

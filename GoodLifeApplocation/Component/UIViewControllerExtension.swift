@@ -6,8 +6,6 @@
 //
 
 import Foundation
-
-import Foundation
 import UIKit
 import SVProgressHUD
 import SystemConfiguration
@@ -63,6 +61,31 @@ extension UIView {
     let views = Bundle.main.loadNibNamed(name, owner: nil, options: nil)
     return views?.first as? UIView
   }
+    
+    func convertTimeformat(_ date: String)-> String{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss "
+        let date = dateFormatter.date(from: date)
+        dateFormatter.timeZone = TimeZone(secondsFromGMT: 3)
+
+        dateFormatter.dateFormat = "HH:mm"
+        dateFormatter.locale = Locale(identifier: "en_us")
+
+        return  dateFormatter.string(from: date ?? Date())
+
+    }
+    
+    func convertDateFormater(_ date: String) -> String
+        {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss "
+            let date = dateFormatter.date(from: date)
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+            dateFormatter.locale = Locale(identifier: "en_us")
+
+            return  dateFormatter.string(from: date ?? Date())
+
+        }
 }
 
 extension UIViewController {

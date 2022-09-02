@@ -17,7 +17,8 @@ class TaskVC: UIViewController {
  
     var myCurrentTask:[Tasks]=[]
     var myCompletedTask:[Tasks]=[]
-    
+    let presenter = DashboardPresenter()
+
     //MARK: - Properties
 
     var segmentIndex = 0
@@ -32,6 +33,11 @@ class TaskVC: UIViewController {
         bindButton()
     }
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.presenter.getMyTask()
+        self.presenter.delegate=self
+    }
     
     //MARK: - setup tableview
 
@@ -59,6 +65,24 @@ class TaskVC: UIViewController {
             print("error click")
             
         }
+    }
+    
+    @objc func markDoneBtn(_ sender:UIButton){
+        switch segmentIndex{
+        case 0:
+            sender.setBackgroundImage( UIImage(systemName: "circlebadge.fill"), for: .normal)
+            sender.tintColor = UIColor(named: "progressView")
+        self.presenter.markMyTask(taskid: myCurrentTask[sender.tag].id ?? 0)
+        self.presenter.delegate = self
+        self.TaskTableView.reloadData()
+            
+        case 1:
+            print("")
+        default:
+            print("")
+
+        }
+        
     }
 }
 
@@ -111,6 +135,8 @@ extension TaskVC:UITableViewDelegate, UITableViewDataSource{
         switch segmentIndex{
         case 0 :
             cell.configureCell(iconSystem: UIImage(systemName: "circlebadge")!, tint: UIColor(named: "button")!, task:myCurrentTask[indexPath.row])
+            cell.MarkBtn.addTarget(self, action: #selector(markDoneBtn), for: .touchUpInside)
+            cell.MarkBtn.tag=indexPath.row
         case 1 :
             cell.configureCell(iconSystem: UIImage(systemName: "circlebadge.fill")!, tint: UIColor(named: "progressView")!, task:myCompletedTask[indexPath.row] )
         default:
@@ -126,4 +152,29 @@ extension TaskVC:UITableViewDelegate, UITableViewDataSource{
 extension TaskVC:Storyboarded{
     static var storyboardName: StoryboardName = .main
 
+}
+extension TaskVC:DashboardDelegate{
+    func showAlert(title: String, message: String) {
+        //no implementayion
+
+    }
+    
+    func getCategories(data: [Categories]) {
+        //no implementayion
+
+    }
+    
+    func getResource(data: [Resources]) {
+  //no implementayion
+    }
+    
+    func getMyTask(data: DashboardTask) {
+        myCompletedTask=data.completedTasks ?? []
+        myCurrentTask = data.currentTasks ?? []
+        TaskTableView.reloadData()
+
+    }
+    
+    
+    
 }

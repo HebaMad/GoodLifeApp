@@ -18,8 +18,8 @@ final public class UITextFieldDataPicker: UITextField,UIPickerViewDataSource,UIP
     
     private let picker = UIPickerView()
     private let toolbar = UIToolbar()
-    private let textPadding: CGFloat = 23
-    private var padding = UIEdgeInsets(top: 0, left: 10 , bottom: 0, right: 5)
+    private let textPadding: CGFloat = 0
+    private var padding = UIEdgeInsets(top: 0, left: 0 , bottom: 0, right: 5)
     
     var dataSource:UITextFieldDataPickerDataSource!{didSet{
         DispatchQueue.main.async {self.picker.reloadAllComponents()}}}

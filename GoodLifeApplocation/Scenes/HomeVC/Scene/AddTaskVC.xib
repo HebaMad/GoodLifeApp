@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -20,13 +21,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddTaskVC" customModule="GoodLifeApplocation" customModuleProvider="target">
             <connections>
                 <outlet property="AddBtn" destination="1Ci-pw-xfU" id="csc-s5-GO8"/>
+                <outlet property="CategoryChoice" destination="aNJ-pI-sot" id="mpU-qi-7yq"/>
                 <outlet property="alertSwitch" destination="dnN-YY-s7t" id="2br-AK-89g"/>
-                <outlet property="categorySelectionBtn" destination="NLH-G1-hjX" id="iwh-4b-HfY"/>
                 <outlet property="closeBtn" destination="DW0-P0-qXP" id="HIx-BU-lsP"/>
-                <outlet property="endTimeBtn" destination="fiU-FY-86e" id="Akf-A3-xZG"/>
-                <outlet property="startTimeBtn" destination="KED-YP-Vem" id="IZa-N3-9H5"/>
-                <outlet property="timeEndingAlertText" destination="OPr-e7-0Lx" id="pOl-fy-ipx"/>
-                <outlet property="timeStartingAlertText" destination="26g-Tm-iK1" id="OdY-qW-Nht"/>
+                <outlet property="endDate" destination="Gpa-No-1Av" id="oCf-qy-fNp"/>
+                <outlet property="startDate" destination="jU5-g1-Pod" id="5bI-yn-QwL"/>
                 <outlet property="titleTxtfield" destination="Mub-TS-dXD" id="uWL-mn-hUc"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -111,35 +110,20 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xsN-6Q-2Ui">
                                                     <rect key="frame" x="4" y="41" width="374" height="21"/>
                                                     <subviews>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Category" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aNJ-pI-sot">
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Category" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aNJ-pI-sot" customClass="UITextFieldDataPicker" customModule="GoodLifeApplocation" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="hideInputViewOnSelect" value="NO"/>
+                                                            </userDefinedRuntimeAttributes>
                                                         </textField>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="0jP-xA-78I">
-                                                            <rect key="frame" x="351" y="5.5" width="15" height="10.5"/>
-                                                            <color key="tintColor" systemColor="opaqueSeparatorColor"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="20" id="16Q-Tw-8L1"/>
-                                                                <constraint firstAttribute="width" constant="15" id="qhb-Oi-hxQ"/>
-                                                            </constraints>
-                                                        </imageView>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLH-G1-hjX">
-                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="21"/>
-                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstItem="0jP-xA-78I" firstAttribute="centerY" secondItem="xsN-6Q-2Ui" secondAttribute="centerY" id="0DC-nt-Gao"/>
-                                                        <constraint firstItem="NLH-G1-hjX" firstAttribute="leading" secondItem="xsN-6Q-2Ui" secondAttribute="leading" id="1xW-qV-SCj"/>
                                                         <constraint firstItem="aNJ-pI-sot" firstAttribute="top" secondItem="xsN-6Q-2Ui" secondAttribute="top" id="2Hu-UW-bYo"/>
                                                         <constraint firstAttribute="trailing" secondItem="aNJ-pI-sot" secondAttribute="trailing" id="6vQ-wF-0dK"/>
                                                         <constraint firstItem="aNJ-pI-sot" firstAttribute="leading" secondItem="xsN-6Q-2Ui" secondAttribute="leading" id="82P-2u-LBn"/>
-                                                        <constraint firstItem="NLH-G1-hjX" firstAttribute="top" secondItem="xsN-6Q-2Ui" secondAttribute="top" id="CW8-NP-XkP"/>
-                                                        <constraint firstAttribute="trailing" secondItem="NLH-G1-hjX" secondAttribute="trailing" id="Rzk-YM-gAA"/>
-                                                        <constraint firstAttribute="trailing" secondItem="0jP-xA-78I" secondAttribute="trailing" constant="8" id="U3n-J7-mEr"/>
-                                                        <constraint firstAttribute="bottom" secondItem="NLH-G1-hjX" secondAttribute="bottom" id="WDW-dL-6zn"/>
                                                         <constraint firstAttribute="bottom" secondItem="aNJ-pI-sot" secondAttribute="bottom" id="fxp-uy-SpO"/>
                                                     </constraints>
                                                 </view>
@@ -213,34 +197,25 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="366" height="30"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Starts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="POb-7b-PL3">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="224.5" height="30"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="40" height="30"/>
                                                                     <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
                                                                     <color key="textColor" name="TXT"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aug 9, 2022 9:00 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="26g-Tm-iK1">
-                                                                    <rect key="frame" x="224.5" y="0.0" width="141.5" height="30"/>
-                                                                    <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
-                                                                    <color key="textColor" name="TXT"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
+                                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="YYYY-MM-dd HH:mm:ss" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jU5-g1-Pod" customClass="DatePickingTextField" customModule="GoodLifeApplocation" customModuleProvider="target">
+                                                                    <rect key="frame" x="40" y="0.0" width="326" height="30"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <textInputTraits key="textInputTraits"/>
+                                                                </textField>
                                                             </subviews>
                                                         </stackView>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KED-YP-Vem">
-                                                            <rect key="frame" x="0.0" y="0.0" width="366" height="30"/>
-                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="oLL-ZQ-NMJ" secondAttribute="trailing" id="5RY-OD-IY3"/>
                                                         <constraint firstItem="oLL-ZQ-NMJ" firstAttribute="leading" secondItem="EJv-un-Trh" secondAttribute="leading" id="Eyh-Pd-XrP"/>
                                                         <constraint firstAttribute="bottom" secondItem="oLL-ZQ-NMJ" secondAttribute="bottom" id="OCs-IV-o8X"/>
-                                                        <constraint firstAttribute="trailing" secondItem="KED-YP-Vem" secondAttribute="trailing" id="OgG-b4-GOA"/>
-                                                        <constraint firstItem="KED-YP-Vem" firstAttribute="leading" secondItem="EJv-un-Trh" secondAttribute="leading" id="fTD-9d-hMr"/>
                                                         <constraint firstItem="oLL-ZQ-NMJ" firstAttribute="top" secondItem="EJv-un-Trh" secondAttribute="top" id="hlC-Ui-e5I"/>
-                                                        <constraint firstAttribute="bottom" secondItem="KED-YP-Vem" secondAttribute="bottom" id="oIb-hM-wlF"/>
-                                                        <constraint firstItem="KED-YP-Vem" firstAttribute="top" secondItem="EJv-un-Trh" secondAttribute="top" id="wHG-nD-Zcm"/>
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rRJ-Ar-aBd">
@@ -257,35 +232,26 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="366" height="30"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Ends" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22i-K3-I2H">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="224.5" height="30"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="33" height="30"/>
                                                                     <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
                                                                     <color key="textColor" name="TXT"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aug 9, 2022 9:00 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPr-e7-0Lx">
-                                                                    <rect key="frame" x="224.5" y="0.0" width="141.5" height="30"/>
-                                                                    <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
-                                                                    <color key="textColor" name="TXT"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
+                                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="YYYY-MM-dd HH:mm:ss" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gpa-No-1Av" customClass="DatePickingTextField" customModule="GoodLifeApplocation" customModuleProvider="target">
+                                                                    <rect key="frame" x="33" y="0.0" width="333" height="30"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <textInputTraits key="textInputTraits"/>
+                                                                </textField>
                                                             </subviews>
                                                         </stackView>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fiU-FY-86e">
-                                                            <rect key="frame" x="0.0" y="0.0" width="366" height="30"/>
-                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="fiU-FY-86e" secondAttribute="bottom" id="9LR-kr-DYL"/>
-                                                        <constraint firstItem="fiU-FY-86e" firstAttribute="top" secondItem="pte-XO-yNS" secondAttribute="top" id="ITr-nQ-svU"/>
                                                         <constraint firstAttribute="height" constant="30" id="UNn-P3-d6R"/>
                                                         <constraint firstItem="M4z-dP-83L" firstAttribute="leading" secondItem="pte-XO-yNS" secondAttribute="leading" id="bhm-QD-GS3"/>
                                                         <constraint firstItem="M4z-dP-83L" firstAttribute="top" secondItem="pte-XO-yNS" secondAttribute="top" id="c8b-rh-MD4"/>
                                                         <constraint firstAttribute="bottom" secondItem="M4z-dP-83L" secondAttribute="bottom" id="faK-S1-dbm"/>
-                                                        <constraint firstAttribute="trailing" secondItem="fiU-FY-86e" secondAttribute="trailing" id="qfS-sr-EVS"/>
                                                         <constraint firstAttribute="trailing" secondItem="M4z-dP-83L" secondAttribute="trailing" id="yha-da-be9"/>
-                                                        <constraint firstItem="fiU-FY-86e" firstAttribute="leading" secondItem="pte-XO-yNS" secondAttribute="leading" id="ykx-KC-uG2"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -330,11 +296,15 @@
                 <constraint firstItem="flA-4L-xd0" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="hkh-Qm-4dD"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4r0-wQ-yU3" secondAttribute="trailing" constant="16" id="mBh-Cg-Egw"/>
             </constraints>
-            <point key="canvasLocation" x="137.68115942028987" y="123.88392857142857"/>
+            <point key="canvasLocation" x="39" y="117"/>
         </view>
     </objects>
+    <designables>
+        <designable name="aNJ-pI-sot">
+            <size key="intrinsicContentSize" width="94.5" height="18.5"/>
+        </designable>
+    </designables>
     <resources>
-        <image name="chevron.down" catalog="system" width="128" height="72"/>
         <namedColor name="TXT">
             <color red="0.37999999523162842" green="0.37999999523162842" blue="0.37999999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -344,9 +314,6 @@
         <namedColor name="button">
             <color red="0.2669999897480011" green="0.050999999046325684" blue="0.55699998140335083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

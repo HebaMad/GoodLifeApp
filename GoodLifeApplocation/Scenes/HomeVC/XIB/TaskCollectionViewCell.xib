@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -55,11 +56,11 @@
                                             <constraint firstAttribute="height" constant="1" id="wL7-Vu-gox"/>
                                         </constraints>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="115" translatesAutoresizingMaskIntoConstraints="NO" id="lha-Bx-hhH">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="lha-Bx-hhH">
                                         <rect key="frame" x="8" y="78" width="395" height="28"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Iyf-B4-Tb4">
-                                                <rect key="frame" x="0.0" y="0.0" width="140" height="28"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="205" height="28"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="XC1-ng-L2m">
                                                         <rect key="frame" x="0.0" y="0.5" width="20" height="27"/>
@@ -69,8 +70,8 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:00 AM - 11:25 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4U-G1-qtL">
-                                                        <rect key="frame" x="35" y="0.0" width="105" height="28"/>
-                                                        <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="12"/>
+                                                        <rect key="frame" x="35" y="0.0" width="170" height="28"/>
+                                                        <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="10"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -154,12 +155,12 @@
             </constraints>
             <size key="customSize" width="427" height="130"/>
             <connections>
-                <outlet property="startBtn" destination="NNZ-0p-ML0" id="NPf-yI-6lM"/>
+                <outlet property="DoneBtn" destination="NNZ-0p-ML0" id="fQu-o2-6If"/>
                 <outlet property="subTitleText" destination="ZcP-mw-myU" id="CKT-e2-jgY"/>
                 <outlet property="time" destination="R4U-G1-qtL" id="D9B-Z4-fRi"/>
                 <outlet property="titleTxt" destination="na9-Cf-p9e" id="327-hX-C7n"/>
             </connections>
-            <point key="canvasLocation" x="410.86956521739131" y="133.92857142857142"/>
+            <point key="canvasLocation" x="321" y="125"/>
         </collectionViewCell>
     </objects>
     <designables>

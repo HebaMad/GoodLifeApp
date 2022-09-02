@@ -7,32 +7,45 @@
 
 import UIKit
 
-class AddTaskVC: UIViewController {
+class AddTaskVC: UIViewController,UITextFieldDelegate,UIImagePickerControllerDelegate  {
 
     //MARK: - Outlet
     
     @IBOutlet private(set) weak var AddBtn: UIButton!
     @IBOutlet private(set) weak var closeBtn: UIButton!
-    @IBOutlet private(set) weak var categorySelectionBtn: UIButton!
-    @IBOutlet private(set) weak var startTimeBtn: UIButton!
-    @IBOutlet private(set) weak var endTimeBtn: UIButton!
-    
-    
+  
+    @IBOutlet weak var CategoryChoice: UITextFieldDataPicker!
     @IBOutlet private(set) weak var titleTxtfield: UITextField!
     @IBOutlet private(set) weak var alertSwitch: UISwitch!
-    @IBOutlet private(set) weak var timeStartingAlertText: UILabel!
-    @IBOutlet private(set) weak var timeEndingAlertText: UILabel!
+    @IBOutlet weak var startDate: DatePickingTextField!
+    @IBOutlet weak var endDate: DatePickingTextField!
+    
     
     
     //MARK: - Properties
     
-    
+    let presenter = DashboardPresenter()
+    var categories:[Categories]=[]
+    var itemID = 0
     
     //MARK: - Life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter.getCategories()
+        presenter.delegate=self
         bindBackButton()
+        CategoryChoice.pickerDelegate=self
+        CategoryChoice.dataSource=self
+        setupTimePicker()
+    
+    }
+    fileprivate func setupTimePicker() {
+        startDate.setFormat(format: "YYYY-MM-dd HH:mm:ss")
+        startDate.setDatePickerMode(mode: .dateAndTime)
+        
+        endDate.setFormat(format: "YYYY-MM-dd HH:mm:ss")
+        endDate.setDatePickerMode(mode: .dateAndTime)
     }
 
 }
@@ -40,6 +53,8 @@ private extension AddTaskVC{
     
     func bindBackButton(){
         closeBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
+        AddBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
+
     }
     
     
@@ -47,8 +62,83 @@ private extension AddTaskVC{
 //MARK: - private Handler
 private extension AddTaskVC{
 
-   @objc func buttonWasTapped(){
+    @objc func buttonWasTapped( _ sender:UIButton){
+       
+        switch sender{
+   case AddBtn:
+           
+           do{
+               
+               let taskTitle = try titleTxtfield.validatedText(validationType: .requiredField(field: "Goal title required"))
+               let taskStartDate = try startDate.validatedText(validationType: .requiredField(field: "deadline requied"))
+               let taskEndDate = try endDate.validatedText(validationType: .requiredField(field: "deadline requied"))
+
+               if itemID != 0 {
+                   
+
+                   self.presenter.AddTask(title: taskTitle, category_id: itemID, all_days: alertSwitch.isOn == true ? "yes" : "no" , start_date: taskStartDate, end_date: taskEndDate)
+
+               }else{
+                   //select your gategory
+               }
+
+           }catch{
+               
+           }
+   case closeBtn:
        navigationController?.popViewController(animated: true)
     
-  }
+        default:
+            print("")
+        }
+}
+}
+extension AddTaskVC:DashboardDelegate{
+    func showAlert(title: String, message: String) {
+        
+    }
+    
+    func getCategories(data: [Categories]) {
+        self.categories = data
+    }
+    
+    func getResource(data: [Resources]) {
+        // no implementation
+    }
+    
+    func getMyTask(data: DashboardTask) {
+        // no implementation
+
+    }
+    
+    
+}
+
+extension AddTaskVC:UITextFieldDataPickerDelegate,UITextFieldDataPickerDataSource{
+
+    
+    func textFieldDataPicker(_ textField: UITextFieldDataPicker, numberOfRowsInComponent component: Int) -> Int {
+        categories.count
+    }
+    
+    func textFieldDataPicker(_ textField: UITextFieldDataPicker, titleForRow row: Int, forComponent component: Int) -> String? {
+print("\(title ?? "")")
+        return categories[row].title
+    }
+    
+    func numberOfComponents(in textField: UITextFieldDataPicker) -> Int {
+        1
+    }
+    
+    func textFieldDataPicker(_ textField: UITextFieldDataPicker, didSelectRow row: Int, inComponent component: Int) {
+      
+        CategoryChoice.setTextFieldTitle(title: categories[row].title ?? "")
+        self.itemID=categories[row].id ?? 0
+    }
+    
+    
+    
+    
+    
+    
 }
