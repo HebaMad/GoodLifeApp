@@ -15,11 +15,12 @@ protocol DashboardNetworkable:Networkable  {
     func getCategories(completion: @escaping (Result<BaseResponse<DahboardCategory>, Error>)-> ())
     func getResource(completion: @escaping (Result<BaseResponse<DashboardResource>, Error>)-> ())
     func getMyTask(completion: @escaping (Result<BaseResponse<DashboardTask>, Error>)-> ())
+    func markMyTask(taskID:Int,completion: @escaping (Result<BaseResponse<Tasks>, Error>)-> ())
+    func getMyGoalsAndBenchmarks(completion: @escaping (Result<BaseResponse<GoalsAndBenchmark>, Error>)-> ())
 }
 
 class DashboardManager:DashboardNetworkable{
-   
- 
+
     typealias targetType = DashboardTarget
 
     var provider: MoyaProvider<DashboardTarget> = MoyaProvider<DashboardTarget>(plugins: [NetworkLoggerPlugin()])
@@ -48,10 +49,11 @@ class DashboardManager:DashboardNetworkable{
     func getMyTask(completion: @escaping (Result<BaseResponse<DashboardTask>, Error>) -> ()) {
         request(target: .getMyTask, completion: completion)
     }
-    
-
-
-
-    
-
+    func markMyTask(taskID: Int, completion: @escaping (Result<BaseResponse<Tasks>, Error>) -> ()) {
+        request(target: .markMyTask(taskID: taskID), completion: completion)
+    }
+    func getMyGoalsAndBenchmarks(completion: @escaping (Result<BaseResponse<GoalsAndBenchmark>, Error>) -> ()) {
+        request(target: .getMyGoalsAndBenchmark, completion: completion)
+    }
+ 
 }

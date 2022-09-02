@@ -165,5 +165,27 @@ struct Tasks:Codable{
     let end_date:String?
     let completed:String?
     let created_at:String?
+    let category:Categories?
 
-    }
+    
+}
+
+
+struct GoalsAndBenchmark:Decodable{
+
+    let activeGoals:[Goals]?
+    let pastGoals:[Goals]?
+
+
+}
+
+struct Goals:Codable{
+    let id:Int?
+    let title:String?
+    let user_id:Int?
+    let category_id:Int?
+    let deadline:String?
+    let completed:String?
+    let created_at:String?
+    let category:Categories?
+}

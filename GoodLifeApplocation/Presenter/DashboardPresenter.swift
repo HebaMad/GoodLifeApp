@@ -118,6 +118,24 @@ class DashboardPresenter:NSObject{
         }
     }
     
-    
+    func markMyTask(taskid:Int){
+        DashboardManager.shared.markMyTask(taskID: taskid) { Response in
+            switch Response{
+                
+            case let .success(response):
+                if response.status == true{
+                    self.getMyTask()
+                    self.delegate?.showAlert(title:"Success", message: "completed successfully")
+                   
+
+                }else{
+                    self.delegate?.showAlert(title:"Failure", message: response.message)
+                }
+                
+            case let .failure(error):
+                self.delegate?.showAlert(title:"Failure", message: "something wrong try again")
+            }
+        }
+    }
     
 }
