@@ -89,7 +89,7 @@ extension ProfileVC:ProfileDelegate{
         self.privacyPolicyUrl = data.url ?? ""
     }
     
-    func showAlert(title: String, message: String) {
+    func showAlerts(title: String, message: String) {
         //No implementation
 
         

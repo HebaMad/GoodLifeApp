@@ -15,6 +15,7 @@ class ProfileSettingVC: UIViewController {
     @IBOutlet weak var profileEditView: SettingNib!
     @IBOutlet weak var contactusView: SettingNib!
     @IBOutlet weak var privacyPolicy: SettingNib!
+    @IBOutlet weak var logoutBtn: UIButtonDesignable!
     @IBOutlet weak var termAndConditionView: SettingNib!
     
     let presenter = ProfilePresenter()
@@ -40,6 +41,7 @@ extension ProfileSettingVC{
         contactusView.ViewBtn.addTarget(self, action: #selector(ButtonWasTapped), for: .touchUpInside)
         privacyPolicy.ViewBtn.addTarget(self, action: #selector(ButtonWasTapped), for: .touchUpInside)
         termAndConditionView.ViewBtn.addTarget(self, action: #selector(ButtonWasTapped), for: .touchUpInside)
+        logoutBtn.addTarget(self, action: #selector(ButtonWasTapped), for: .touchUpInside)
     }
 }
 //MARK: - Private Handler
@@ -71,7 +73,13 @@ extension ProfileSettingVC{
                 vc.url = self.TermsAndConditionUrl
                 self.navigationController?.pushViewController(vc, animated: true)
     
+        case logoutBtn:
+            self.showAlertPopUp(title: "", message: "Do you want to logout?") {
+                self.presenter.logout()
 
+            } action2: {
+                
+            }
         case backBtn:
             navigationController?.popViewController(animated: true)
         default:
@@ -82,8 +90,9 @@ extension ProfileSettingVC{
 
 
 extension ProfileSettingVC:ProfileDelegate{
-    func showAlert(title: String, message: String) {
-        //no implementation
+    func showAlerts(title: String, message: String) {
+        self.sceneDelegate.setRootVC(vc: SplashScreen())
+
     }
     
     func getUserData(data: userProfile) {
