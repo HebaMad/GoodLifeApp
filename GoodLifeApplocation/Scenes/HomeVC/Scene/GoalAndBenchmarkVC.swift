@@ -18,7 +18,7 @@ class GoalAndBenchmarkVC: UIViewController {
     @IBOutlet weak var backBtn: UIButton!
     
     //MARK: - Properties
-    
+    let presenter = DashboardPresenter()
     var selectedSegment = 0
     var selectedCell:UITableViewCell = UITableViewCell()
     

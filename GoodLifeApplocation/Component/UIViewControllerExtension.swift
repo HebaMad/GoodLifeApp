@@ -86,6 +86,11 @@ extension UIView {
             return  dateFormatter.string(from: date ?? Date())
 
         }
+    
+    func setBorder(with color:UIColor,width:CGFloat){
+        self.layer.borderWidth = width
+        self.layer.borderColor = color.cgColor
+    }
 }
 
 extension UIViewController {

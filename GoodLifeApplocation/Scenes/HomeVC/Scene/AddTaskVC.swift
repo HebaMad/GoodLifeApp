@@ -21,7 +21,6 @@ class AddTaskVC: UIViewController,UITextFieldDelegate,UIImagePickerControllerDel
     @IBOutlet weak var endDate: DatePickingTextField!
     
     
-    
     //MARK: - Properties
     
     let presenter = DashboardPresenter()
@@ -79,11 +78,12 @@ private extension AddTaskVC{
                    self.presenter.AddTask(title: taskTitle, category_id: itemID, all_days: alertSwitch.isOn == true ? "yes" : "no" , start_date: taskStartDate, end_date: taskEndDate)
 
                }else{
-                   //select your gategory
+                   self.showAlert(title: "Notice", message: "select your category",hideCancelBtn: true)
                }
 
            }catch{
-               
+               self.showAlert(title: "Warning", message: (error as! ValidationError).message,hideCancelBtn: true)
+
            }
    case closeBtn:
        navigationController?.popViewController(animated: true)
@@ -94,8 +94,13 @@ private extension AddTaskVC{
 }
 }
 extension AddTaskVC:DashboardDelegate{
-    func showAlert(title: String, message: String) {
-        
+    func getMyGoalAndBenchmark(data: GoalsAndBenchmark) {
+        //
+    }
+    
+    func showAlerts(title: String, message: String) {
+        self.showAlert(title: title, message: message,hideCancelBtn: true)
+
     }
     
     func getCategories(data: [Categories]) {

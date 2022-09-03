@@ -154,8 +154,12 @@ extension TaskVC:Storyboarded{
 
 }
 extension TaskVC:DashboardDelegate{
-    func showAlert(title: String, message: String) {
-        //no implementayion
+    func getMyGoalAndBenchmark(data: GoalsAndBenchmark) {
+        //
+    }
+    
+    func showAlerts(title: String, message: String) {
+        self.showAlert(title: title, message: message,hideCancelBtn: true)
 
     }
     

@@ -74,11 +74,12 @@ private extension AddGoalVC{
                     self.presenter.AddGoal(title: goalTitle, category_id: self.itemID, deadline:deadline )
 
                 }else{
-                    //select your gategory
+                    self.showAlert(title: "Notice", message: "select your category",hideCancelBtn: true)
                 }
 
             }catch{
-                
+                self.showAlert(title: "Warning", message: (error as! ValidationError).message,hideCancelBtn: true)
+
             }
     case closeBtn:
        navigationController?.popViewController(animated: true)
@@ -89,7 +90,11 @@ private extension AddGoalVC{
 }
 
 extension AddGoalVC:DashboardDelegate{
-    func showAlert(title: String, message: String) {
+    func getMyGoalAndBenchmark(data: GoalsAndBenchmark) {
+        //
+    }
+    
+    func showAlerts(title: String, message: String) {
         
     }
     

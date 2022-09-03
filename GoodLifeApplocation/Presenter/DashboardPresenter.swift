@@ -9,10 +9,11 @@ import Foundation
 import Moya
 
 protocol DashboardDelegate{
-    func showAlert(title:String,message:String)
+    func showAlerts(title:String,message:String)
     func getCategories(data:[Categories])
     func getResource(data:[Resources])
     func getMyTask(data:DashboardTask)
+    func getMyGoalAndBenchmark(data:GoalsAndBenchmark)
 
 
 }
@@ -22,8 +23,6 @@ typealias dashboardDelegate = DashboardDelegate & UIViewController
 
 class DashboardPresenter:NSObject{
     
-
-
     var delegate :dashboardDelegate?
     
      func getCategories(){
@@ -34,11 +33,11 @@ class DashboardPresenter:NSObject{
                 if response.status == true{
                     self.delegate?.getCategories(data: response.data?.categories ?? [])
                 }else{
-                    self.delegate?.showAlert(title:"Failure", message: response.message)
+                    self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
                 
             case let .failure(error):
-                self.delegate?.showAlert(title:"Failure", message: "something wrong try again")
+                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
             }
         }
         
@@ -52,11 +51,11 @@ class DashboardPresenter:NSObject{
                 if response.status == true{
                     self.delegate?.getResource(data: response.data?.resources ?? [])
                 }else{
-                    self.delegate?.showAlert(title:"Failure", message: response.message)
+                    self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
                 
             case let .failure(error):
-                self.delegate?.showAlert(title:"Failure", message: "something wrong try again")
+                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
             }
         }
         
@@ -68,14 +67,14 @@ class DashboardPresenter:NSObject{
                 
             case let .success(response):
                 if response.status == true{
-                    self.delegate?.showAlert(title:"Success", message: response.message)
+                    self.delegate?.showAlerts(title:"Success", message: response.message)
 
                 }else{
-                    self.delegate?.showAlert(title:"Failure", message: response.message)
+                    self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
                 
             case let .failure(error):
-                self.delegate?.showAlert(title:"Failure", message: "something wrong try again")
+                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
             }
         }
         
@@ -87,14 +86,14 @@ class DashboardPresenter:NSObject{
                 
             case let .success(response):
                 if response.status == true{
-                    self.delegate?.showAlert(title:"Success", message: response.message)
+                    self.delegate?.showAlerts(title:"Success", message: response.message)
 
                 }else{
-                    self.delegate?.showAlert(title:"Failure", message: response.message)
+                    self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
                 
             case let .failure(error):
-                self.delegate?.showAlert(title:"Failure", message: "something wrong try again")
+                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
             }
         }
         
@@ -109,11 +108,11 @@ class DashboardPresenter:NSObject{
                     self.delegate?.getMyTask(data: response.data!)
                     
                 }else{
-                    self.delegate?.showAlert(title:"Failure", message: response.message)
+                    self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
                 
             case let .failure(error):
-                self.delegate?.showAlert(title:"Failure", message: "something wrong try again")
+                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
             }
         }
     }
@@ -125,7 +124,7 @@ class DashboardPresenter:NSObject{
             case let .success(response):
                 if response.status == true{
                     self.getMyTask()
-                    self.delegate?.showAlert(title:"Success", message: "completed successfully")
+                    self.delegate?.showAlerts(title:"Success", message: "completed successfully")
                    
 
                 }else{
@@ -133,7 +132,23 @@ class DashboardPresenter:NSObject{
                 }
                 
             case let .failure(error):
-                self.delegate?.showAlert(title:"Failure", message: "something wrong try again")
+                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
+            }}}
+    
+    func getMyGoalAndBenchmarks(){
+        DashboardManager.shared.getMyGoalsAndBenchmarks { Response in
+            switch Response{
+                
+            case let .success(response):
+                if response.status == true{
+                    self.delegate?.getMyGoalAndBenchmark(data: response.data!)
+                   
+                }else{
+                    self.delegate?.showAlerts(title:"Failure", message: response.message)
+                }
+                
+            case let .failure(error):
+                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
             }
         }
     }

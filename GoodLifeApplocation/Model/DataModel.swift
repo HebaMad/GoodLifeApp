@@ -175,6 +175,7 @@ struct GoalsAndBenchmark:Decodable{
 
     let activeGoals:[Goals]?
     let pastGoals:[Goals]?
+    let benchmarks:[Benchmark]?
 
 
 }
@@ -188,4 +189,13 @@ struct Goals:Codable{
     let completed:String?
     let created_at:String?
     let category:Categories?
+}
+
+struct Benchmark:Codable{
+    
+    let monthlyRevenueYou:Int?
+    let monthlyRevenueNiche:Int?
+    let nightlyAttendanceYou:Int?
+    let nightlyAttendanceNiche:Int?
+
 }

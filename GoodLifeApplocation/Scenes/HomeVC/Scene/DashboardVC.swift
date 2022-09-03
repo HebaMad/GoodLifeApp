@@ -283,7 +283,11 @@ extension DashboardVC:Storyboarded{
 }
 
 extension DashboardVC:DashboardDelegate{
-    func showAlert(title: String, message: String) {
+    func getMyGoalAndBenchmark(data: GoalsAndBenchmark) {
+        //
+    }
+    
+    func showAlerts(title: String, message: String) {
         
     }
     
