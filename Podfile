@@ -14,5 +14,6 @@ target 'GoodLifeApplocation' do
   pod 'FittedSheets'
   pod 'Moya'
   pod 'SVProgressHUD'
+  pod 'SDWebImage', '~> 5.0'
 
 end
