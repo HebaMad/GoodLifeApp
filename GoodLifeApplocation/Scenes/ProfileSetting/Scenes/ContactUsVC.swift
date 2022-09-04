@@ -39,9 +39,10 @@ class ContactUsVC: UIViewController {
     private extension ContactUsVC{
     
     func bindBackButton(){
+        
         backBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
         sendBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
-
+        
     }
 }
 

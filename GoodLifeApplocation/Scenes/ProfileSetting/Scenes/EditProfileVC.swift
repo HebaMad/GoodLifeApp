@@ -84,9 +84,9 @@ private extension EditProfileVC{
             navigationController?.popViewController(animated: true)
 
         case saveBtn:
-            let pic = selectedImage ?? Data()
-
-            editProfile(name: nameTxtField.text ?? "", mobileNumber: phoneNumber.text ?? "" , location: loctionTxt.text ?? "", img: pic)
+            let pic = selectedImage ?? userImage.image?.jpegData(compressionQuality: 0.3)
+           
+            editProfile(name: nameTxtField.text ?? "", mobileNumber: phoneNumber.text ?? "" , location: loctionTxt.text ?? "", img: pic ?? Data())
         default:
             print("")
         }

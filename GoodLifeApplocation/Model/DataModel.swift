@@ -24,7 +24,7 @@ struct userProfile: Decodable{
     let status:String?
     let access_token:String?
     let image_profile:String?
-    let location:String
+    let location:String?
     let ventures:[Ventures]?
 
 }
@@ -146,9 +146,10 @@ struct DashboardResource:Decodable{
 
 struct Resources:Decodable{
     let id:Int?
-    let status:String?
     let title:String?
     let details:String?
+    let icon:String?
+    let category:Categories?
 }
 
 struct DashboardTask:Decodable{

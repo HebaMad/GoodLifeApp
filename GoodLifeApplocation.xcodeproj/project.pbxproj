@@ -214,6 +214,8 @@
 		27F4B15028B8BAB4003365A6 /* SettingNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F4B14F28B8BAB4003365A6 /* SettingNib.swift */; };
 		27F4B15328B8BD90003365A6 /* ProfileSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F4B15128B8BD90003365A6 /* ProfileSettingVC.swift */; };
 		27F4B15428B8BD90003365A6 /* ProfileSettingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27F4B15228B8BD90003365A6 /* ProfileSettingVC.xib */; };
+		27F7363928C4FD4100E804B5 /* resourceSubTopicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F7363728C4FD4100E804B5 /* resourceSubTopicCell.swift */; };
+		27F7363A28C4FD4100E804B5 /* resourceSubTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27F7363828C4FD4100E804B5 /* resourceSubTopicCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -425,6 +427,8 @@
 		27F4B14F28B8BAB4003365A6 /* SettingNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingNib.swift; sourceTree = "<group>"; };
 		27F4B15128B8BD90003365A6 /* ProfileSettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingVC.swift; sourceTree = "<group>"; };
 		27F4B15228B8BD90003365A6 /* ProfileSettingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileSettingVC.xib; sourceTree = "<group>"; };
+		27F7363728C4FD4100E804B5 /* resourceSubTopicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resourceSubTopicCell.swift; sourceTree = "<group>"; };
+		27F7363828C4FD4100E804B5 /* resourceSubTopicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = resourceSubTopicCell.xib; sourceTree = "<group>"; };
 		46608627E894627402509900 /* Pods-GoodLifeApplocation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodLifeApplocation.release.xcconfig"; path = "Target Support Files/Pods-GoodLifeApplocation/Pods-GoodLifeApplocation.release.xcconfig"; sourceTree = "<group>"; };
 		D1DB83CD4E289D2153C7D862 /* Pods-GoodLifeApplocation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodLifeApplocation.debug.xcconfig"; path = "Target Support Files/Pods-GoodLifeApplocation/Pods-GoodLifeApplocation.debug.xcconfig"; sourceTree = "<group>"; };
 		F0E5AE3CF2C1C421B86FEF65 /* Pods_GoodLifeApplocation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoodLifeApplocation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -810,6 +814,8 @@
 				27CB206C289C1AA000E63694 /* AllCategoriesCell.xib */,
 				27CB206F289C1B3F00E63694 /* ResourceCell.swift */,
 				27CB2070289C1B3F00E63694 /* ResourceCell.xib */,
+				27F7363728C4FD4100E804B5 /* resourceSubTopicCell.swift */,
+				27F7363828C4FD4100E804B5 /* resourceSubTopicCell.xib */,
 			);
 			path = XIB;
 			sourceTree = "<group>";
@@ -1069,6 +1075,7 @@
 				27B54D7D28BA03C60074A6A1 /* EditProfileVC.xib in Resources */,
 				27CB2060289B0FDC00E63694 /* ResourceDetailsCell.xib in Resources */,
 				27C9AEAF288DB44600FA584A /* CategoriesCollectionViewCell.xib in Resources */,
+				27F7363A28C4FD4100E804B5 /* resourceSubTopicCell.xib in Resources */,
 				27C9AE84288D4F0600FA584A /* OnBoardingFrame3.xib in Resources */,
 				27A7376A2891431000FD8AD9 /* OpportunityView.xib in Resources */,
 				27B8C8E628A1067F0011B039 /* FilterCell.xib in Resources */,
@@ -1272,6 +1279,7 @@
 				270562D528C090D400B0124E /* DashboardPresenter.swift in Sources */,
 				27B54D9328BA6E170074A6A1 /* AppData.swift in Sources */,
 				2704243D28A6C828002EF7B5 /* BusinessPlanCell.swift in Sources */,
+				27F7363928C4FD4100E804B5 /* resourceSubTopicCell.swift in Sources */,
 				27876AB828A440ED003A012A /* WebsiteCompetitorCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

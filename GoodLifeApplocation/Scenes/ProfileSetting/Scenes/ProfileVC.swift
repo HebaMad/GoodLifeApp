@@ -19,13 +19,12 @@ class ProfileVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         bindButtons()
         setupTableView()
         presenter.userProfile()
         presenter.PrivacyPolicy()
         presenter.delegate = self
-
-
 
     }
 
@@ -35,10 +34,10 @@ class ProfileVC: UIViewController {
         venturesTableview.dataSource = self
         
     }
-
-
 }
+
 //MARK: - Binding
+
 private extension ProfileVC{
     func bindButtons(){
         accountDetails.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
@@ -46,18 +45,22 @@ private extension ProfileVC{
 
     }
 }
+
 //MARK: - Private Handler
 
 private extension ProfileVC{
     @objc func buttonWasTapped( sender :UIButton){
         switch sender{
+            
         case accountDetails:
+            
             let vc = ProfileSettingVC()
             vc.privacyPolicyUrl = self.privacyPolicyUrl
             navigationController?.pushViewController(vc, animated: true)
         case backBtn:
             navigationController?.popViewController(animated: true)
-
+            
+            
         default:
             print("error click")
         }
@@ -91,8 +94,6 @@ extension ProfileVC:ProfileDelegate{
     
     func showAlerts(title: String, message: String) {
         //No implementation
-
-        
     }
     
     func getUserData(data: userProfile) {

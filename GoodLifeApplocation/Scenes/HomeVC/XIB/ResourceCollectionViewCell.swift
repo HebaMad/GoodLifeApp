@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import SDWebImage
 class ResourceCollectionViewCell: UICollectionViewCell,NibLoadableView  {
     //MARK: - Outlet
 
@@ -17,12 +17,14 @@ class ResourceCollectionViewCell: UICollectionViewCell,NibLoadableView  {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
+
     }
     
     //MARK: - configuration cell
 
     func setup(_ item: Resources) {
         categoriesTitle.text = item.title
+        resourceIcon.sd_setImage(with: URL(string:item.icon ?? "" ))
     }
 }

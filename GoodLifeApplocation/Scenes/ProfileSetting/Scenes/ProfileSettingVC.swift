@@ -41,11 +41,14 @@ class ProfileSettingVC: UIViewController {
 
 extension ProfileSettingVC{
     private func bindButtons(){
+        
         profileEditView.ViewBtn.addTarget(self, action: #selector(ButtonWasTapped), for: .touchUpInside)
         contactusView.ViewBtn.addTarget(self, action: #selector(ButtonWasTapped), for: .touchUpInside)
         privacyPolicy.ViewBtn.addTarget(self, action: #selector(ButtonWasTapped), for: .touchUpInside)
         termAndConditionView.ViewBtn.addTarget(self, action: #selector(ButtonWasTapped), for: .touchUpInside)
         logoutBtn.addTarget(self, action: #selector(ButtonWasTapped), for: .touchUpInside)
+        backBtn.addTarget(self, action: #selector(ButtonWasTapped), for: .touchUpInside)
+
     }
 }
 //MARK: - Private Handler
@@ -80,11 +83,19 @@ extension ProfileSettingVC{
             
         case logoutBtn:
             self.showAlertPopUp(title: "", message: "Do you want to logout?") {
-                self.presenter.logout()
+                do{
+                    self.presenter.logout()
+//                    try KeychainWrapper.set(value: "" , key: email )
+//                    AppData.email = email
+
+                }catch let error {
+   
+            }
                 
             } action2: {
                 
             }
+            
         case backBtn:
             navigationController?.popViewController(animated: true)
         default:

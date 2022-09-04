@@ -13,7 +13,8 @@ class ResourceDetailsVC: UIViewController {
     
     @IBOutlet weak var FAQuestionTable: UITableView!
     @IBOutlet weak var backBtn: UIButton!
-
+    @IBOutlet weak var resorceCategory: UICollectionView!
+    
     //MARK: - Properties
     
     private var selectedIndex = -1

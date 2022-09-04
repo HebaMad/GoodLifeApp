@@ -16,6 +16,7 @@ protocol SettingNetworkable:Networkable  {
     func privacyPolicy(completion: @escaping (Result<BaseResponse<termsAndConditions>, Error>)-> ())
     func editProfile(name:String,mobileNumber:String,location:String,img:Data,completion: @escaping (Result<BaseResponse<userProfile>, Error>)-> ())
     func logout(completion: @escaping (Result<BaseResponse<userProfile>, Error>)-> ())
+    
 }
 class SettingManager:SettingNetworkable{
   

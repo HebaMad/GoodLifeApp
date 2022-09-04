@@ -77,7 +77,6 @@ final class CustomAlert:UIView{
        return view
    }
    
-   
    @IBAction func confirmBtnPressed(){
        onComplete?(.confirm)
        self.dismiss()
@@ -100,6 +99,7 @@ final class CustomAlert:UIView{
        onComplete?(.cancel)
        dismiss()
    }
+    
    func animateIn(){
        self.mainView.transform = CGAffineTransform(translationX: 0, y: -self.frame.height)
        self.alpha = 0
@@ -107,7 +107,6 @@ final class CustomAlert:UIView{
            self.mainView.transform = .identity
            self.alpha = 1
        })
-       
    }
    
    enum AlertButton{
@@ -128,13 +127,12 @@ extension UIViewController{
        DispatchQueue.main.async {
            self.view.addSubview(popUp)
        }
-       
    }
+
    func showAlert(title:UIImage,message:String,confirmBtnTitle:String? = nil , cancelBtnTitle:String? = nil, hideCancelBtn:Bool = false  ,complitionHandler: ((CustomAlert.AlertButton)->Void)? = nil){
        
        let popUp = CustomAlert(title: title, message:message,complitionHandler:complitionHandler)
        popUp.contentMode = .scaleToFill
-
        popUp.cancelButton.setTitle(cancelBtnTitle ?? "Cancel", for: .normal)
        popUp.cancelButton.isHidden = hideCancelBtn
        popUp.okButton.setTitle(confirmBtnTitle ?? "OK", for: .normal)

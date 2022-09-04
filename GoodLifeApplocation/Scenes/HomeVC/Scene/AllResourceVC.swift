@@ -21,7 +21,7 @@ class AllResourceVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-    setupTableView()
+        setupTableView()
         bindBackButton()
 }
     //MARK: - Setup table view

@@ -16,10 +16,8 @@ class LoginProgressViews: UIViewController {
     
     //MARK: - Properties
     
-    
     private var progressIndex=0
-    
-    
+        
     //MARK: - Life cycle
     
     override func viewDidLoad() {
@@ -28,7 +26,6 @@ class LoginProgressViews: UIViewController {
         checkProgressStstus()
         bindButton()
     }
-    
 }
 
    //MARK: - Binding
