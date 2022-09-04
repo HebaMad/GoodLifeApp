@@ -22,7 +22,6 @@ class ProfilePresenter:NSObject{
     
     var delegate:profileDelegate?
     
-    
      func sendContactMsg(msg:String){
         SettingManager.shared.sendContactMsg(msg: msg) { Response in
             switch Response{
@@ -98,8 +97,8 @@ class ProfilePresenter:NSObject{
         }
     }
     
-     func editProfile(name:String,mobileNumber:String,location:String){
-        SettingManager.shared.editProfile(name: name, mobile: mobileNumber) { Response in
+     func editProfile(name:String,mobileNumber:String,location:String,img:Data){
+         SettingManager.shared.editProfile(name: name, mobileNumber: mobileNumber, location: location, img: img){ Response in
             switch Response{
                 
             case let .success(response):

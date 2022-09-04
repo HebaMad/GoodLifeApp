@@ -23,6 +23,8 @@ struct userProfile: Decodable{
     let amount_raise:Float?
     let status:String?
     let access_token:String?
+    let image_profile:String?
+    let location:String
     let ventures:[Ventures]?
 
 }

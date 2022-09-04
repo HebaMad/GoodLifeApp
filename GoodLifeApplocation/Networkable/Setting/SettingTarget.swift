@@ -13,14 +13,12 @@ enum SettingApiTarget:TargetType{
     case sendContactMsg(message:String)
     case termsAndConditions
     case privacyPolicy
-    case editProfile(name:String,mobileNumber:String,location:String)
+    case editProfile(name:String,mobileNumber:String,location:String,img:Data)
     case logout
 
-    
     var baseURL: URL {
         return URL(string: "\(AppConfig.apiBaseUrl)")!
     }
-    
     
     var path: String {
         switch self {
@@ -30,7 +28,6 @@ enum SettingApiTarget:TargetType{
         case .termsAndConditions: return "termsAndConditions"
         case .editProfile: return "editProfile"
         case .logout: return "logout"
-
         }
     }
     
@@ -44,6 +41,7 @@ enum SettingApiTarget:TargetType{
        
         }
     }
+
     
     var task: Task{
         switch self{
@@ -51,8 +49,21 @@ enum SettingApiTarget:TargetType{
         case .userProfile,.termsAndConditions,.privacyPolicy,.logout:
             return .requestPlain
             
-        case .sendContactMsg,.editProfile:
+        case .sendContactMsg:
             return .requestParameters(parameters: param, encoding: URLEncoding.httpBody)
+            
+        case .editProfile(let name,let mobileNumber,let location,let img):
+            
+            
+            let userImg = MultipartFormData(provider: .data(img), name: "image_profile", fileName: "images", mimeType: "image.jpg")
+              let mobileNumber = MultipartFormData(provider: .data(mobileNumber.data(using: .utf8)!), name: "mobile")
+               let location = MultipartFormData(provider: .data(location.data(using: .utf8)!), name: "location")
+               let name = MultipartFormData(provider: .data(name.data(using: .utf8)!), name: "name")
+
+
+               let multipartData = [name,mobileNumber, location,userImg]
+
+                         return .uploadMultipart(multipartData)
         }
     }
     
@@ -66,7 +77,6 @@ enum SettingApiTarget:TargetType{
 //            catch{
 //                return ["Accept":"application/json","Accept-Language":"en"]
 //            }
-            
         case .termsAndConditions,.privacyPolicy:
             return ["Accept":"application/json","Accept-Language":"en"]
 
@@ -80,8 +90,8 @@ enum SettingApiTarget:TargetType{
         switch self {
         case .sendContactMsg(let message):
             return ["message":message]
-        case .editProfile(let name,let mobileNumber,let location):
-            return ["name":name,"mobile":mobileNumber,"name":name]
+        case .editProfile(let name,let mobileNumber,let location,let img):
+            return ["name":name,"mobile":mobileNumber,"location":location,"image_profile":img]
 
             
         default : return [:]

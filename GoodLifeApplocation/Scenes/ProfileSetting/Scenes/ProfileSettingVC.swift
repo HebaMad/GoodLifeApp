@@ -18,20 +18,24 @@ class ProfileSettingVC: UIViewController {
     @IBOutlet weak var logoutBtn: UIButtonDesignable!
     @IBOutlet weak var termAndConditionView: SettingNib!
     
+    //MARK: - Properties
+    
     let presenter = ProfilePresenter()
     var TermsAndConditionUrl = ""
     var privacyPolicyUrl = ""
-
+    var userProfile:userProfile?
+    
     //MARK: - Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         bindButtons()
-        self.presenter.termsAndCondition()
+        presenter.termsAndCondition()
+        presenter.userProfile()
         presenter.delegate=self
     }
-   
+    
 }
 //MARK: - Binding
 
@@ -53,6 +57,7 @@ extension ProfileSettingVC{
         case profileEditView.ViewBtn:
             
             let vc = EditProfileVC()
+            vc.userProfile = self.userProfile
             navigationController?.pushViewController(vc, animated: true)
             
         case contactusView.ViewBtn:
@@ -68,15 +73,15 @@ extension ProfileSettingVC{
             navigationController?.pushViewController(vc, animated: true)
             
         case termAndConditionView.ViewBtn:
-                
-                let vc = TermsAndConditions()
-                vc.url = self.TermsAndConditionUrl
-                self.navigationController?.pushViewController(vc, animated: true)
-    
+            
+            let vc = TermsAndConditions()
+            vc.url = self.TermsAndConditionUrl
+            self.navigationController?.pushViewController(vc, animated: true)
+            
         case logoutBtn:
             self.showAlertPopUp(title: "", message: "Do you want to logout?") {
                 self.presenter.logout()
-
+                
             } action2: {
                 
             }
@@ -88,15 +93,14 @@ extension ProfileSettingVC{
     }
 }
 
-
 extension ProfileSettingVC:ProfileDelegate{
     func showAlerts(title: String, message: String) {
         self.sceneDelegate.setRootVC(vc: SplashScreen())
-
+        
     }
     
     func getUserData(data: userProfile) {
-        //no implementation
+        self.userProfile = data
     }
     
     func getUrlForWebPages(data: termsAndConditions) {

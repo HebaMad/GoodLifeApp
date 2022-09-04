@@ -14,8 +14,6 @@ protocol DashboardDelegate{
     func getResource(data:[Resources])
     func getMyTask(data:DashboardTask)
     func getMyGoalAndBenchmark(data:GoalsAndBenchmark)
-
-
 }
 
 typealias dashboardDelegate = DashboardDelegate & UIViewController
