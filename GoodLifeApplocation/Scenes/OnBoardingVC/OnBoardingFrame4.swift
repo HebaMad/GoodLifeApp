@@ -14,7 +14,7 @@ class OnBoardingFrame4: UIViewController {
     @IBOutlet weak var biWeekelyBtn: UIButtonDesignable!
     @IBOutlet weak var weekelyBtn: UIButtonDesignable!
     @IBOutlet weak var dailyBtn: UIButtonDesignable!
-    
+    var choice = ""
     
     //MARK: - Life cycle
 
@@ -30,6 +30,9 @@ class OnBoardingFrame4: UIViewController {
 extension OnBoardingFrame4{
     func bindButtons(){
         biWeekelyBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
+        weekelyBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
+        dailyBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
+
     }
 }
 extension OnBoardingFrame4{
@@ -37,13 +40,16 @@ extension OnBoardingFrame4{
         
         switch sender{
         case biWeekelyBtn:
-            NotificationCenter.default.post(name: .init(rawValue: "onBoarding"), object: ["bi_weekly"])
+            choice = biWeekelyBtn.currentTitle ?? ""
+            biWeekelyBtn.bgColor = UIColor(named: "ButtonColor") ?? .white
 
         case weekelyBtn:
-            NotificationCenter.default.post(name: .init(rawValue: "onBoarding"), object: ["weekly"])
-
+            choice = weekelyBtn.currentTitle ?? ""
+            weekelyBtn.bgColor = UIColor(named: "ButtonColor") ?? .white
         case dailyBtn:
-            NotificationCenter.default.post(name: .init(rawValue: "onBoarding"), object: ["daily"])
+            choice = dailyBtn.currentTitle ?? ""
+            dailyBtn.bgColor = UIColor(named: "ButtonColor") ?? .white
+
 
         default:
             print("")

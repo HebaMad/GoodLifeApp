@@ -23,7 +23,7 @@ class OnBoardingFrame3: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupRangeSlider()
     }
 
    //MARK: - Setup RangeSlider
@@ -40,7 +40,6 @@ extension OnBoardingFrame3:RangeSeekSliderDelegate{
     func rangeSeekSlider(_ slider: RangeSeekSlider, didChange minValue: CGFloat, maxValue: CGFloat) {
         minvalue=Float(minValue)
         maxvalue=Float(maxValue)
-        NotificationCenter.default.post(name: .init(rawValue: "onBoarding"), object: [minvalue,maxvalue])
 
     }
 }

@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let _delegate = UIApplication.shared.delegate as? AppDelegate {
             _delegate.window = window
         }
-        let vc = SplashScreen()
+        let vc = OnBoardingFrame4()
         setRootVC(vc: vc)
     }
     func setRootVC(vc:UIViewController){

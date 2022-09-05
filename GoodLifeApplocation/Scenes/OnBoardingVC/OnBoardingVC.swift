@@ -22,7 +22,7 @@ class OnBoardingVC: UIViewController {
     var mobileNumber = ""
     var code = ""
     var investmentAmount = ""
-    var vc :OnBoardingFrame1?
+    var vc:UIViewController?
     
     
     
@@ -36,13 +36,13 @@ class OnBoardingVC: UIViewController {
           
         }
     }
-    var minValueInvestment:String = ""{
+    var minValueInvestment:Float = 0.0{
         didSet{
           
         }
     }
     
-    var maxValueInvestment : String = ""{
+    var maxValueInvestment : Float = 0.0{
         didSet{
           
         }
@@ -71,6 +71,7 @@ class OnBoardingVC: UIViewController {
 //        let text = vc.phoneNumberTxtField.text
 
 //        print(text)
+        onBoardingScreen=0
        checkS()
         
     }
@@ -80,9 +81,7 @@ class OnBoardingVC: UIViewController {
     @IBAction func continueBtn(_ sender: Any) {
         
         checkS()
-        
-
-    }
+            }
     
     
     func checkS(){
@@ -99,7 +98,6 @@ class OnBoardingVC: UIViewController {
                     
                     self.addChild(vc!)
                     self.contsinerView.addSubview(vc!.view)
-            //        self.onBoardingScreen=1
                     vc!.didMove(toParent: self)
                     vc!.view.frame = self.contsinerView.bounds
         
@@ -108,82 +106,100 @@ class OnBoardingVC: UIViewController {
                     break
                 case 1:
                     
-                    let text = vc!.phoneNumberTxtField.text
+                    let text = (vc as! OnBoardingFrame1).phoneNumberTxtField.text
                     print(text ?? "")
-                    
+                    if text?.isEmpty == true {
+                        self.onBoardingScreen=1
+                    showAlertMessage(title: "Notice", message: "please Enter your mobile number ")
+                        
+                    }else{
+                        
+                    self.presnter.signup(mobile: text ?? "")
+                    mobileNumber = text ?? ""
                     self.contsinerView.subviews.first?.removeFromSuperview()
         
                     self.stepsIndicator.currentStep = 1
-                    let vc=VerificationVC()
-                    self.addChild(vc)
-                    self.contsinerView.addSubview(vc.view)
+                        vc = VerificationVC()
+                        self.addChild(vc!)
+                        self.contsinerView.addSubview(vc!.view)
                     self.onBoardingScreen=2
-                    vc.didMove(toParent: self)
-                    vc.view.frame = self.contsinerView.bounds
-        //            print(myString[0])
-        //            print(myString[1])
-        //            self.presnter.checkCode(mobile:myString[0] , code: myString[1])
+                        vc!.didMove(toParent: self)
+                        vc!.view.frame = self.contsinerView.bounds
+                    }
+  
                     break
                 case 2:
+                    
+                    let text = (vc as! VerificationVC).codeTxtField.text
+                    print(text ?? "")
+                    if text?.isEmpty == true {
+                        self.onBoardingScreen=2
+
+                        
+                    }else{
+                        self.presnter.checkCode(mobile:mobileNumber, code: text ?? "")
                     self.contsinerView.subviews.first?.removeFromSuperview()
         
                     self.stepsIndicator.currentStep = 2
         
-                    let vc=OnBoardingFrame2()
-                    self.addChild(vc)
-                    self.contsinerView.addSubview(vc.view)
+                     vc = OnBoardingFrame2()
+                    self.addChild(vc!)
+                    self.contsinerView.addSubview(vc!.view)
                     self.onBoardingScreen=3
-                    vc.didMove(toParent: self)
-                    vc.view.frame = self.contsinerView.bounds
-        //            print(myString[0])
-        //            print(myString[1])
-        //            self.latitude=myString[0]
-        //            self.longitude=myString[1]
+                    vc!.didMove(toParent: self)
+                    vc!.view.frame = self.contsinerView.bounds
+                    }
+  
+                    
                     break
                 case 3:
+                    latitude = (vc as! OnBoardingFrame2).lat
+                    longitude = (vc as! OnBoardingFrame2).long
+                    print(latitude)
+                    print(longitude)
+
                     self.contsinerView.subviews.first?.removeFromSuperview()
         
                     self.stepsIndicator.currentStep = 3
         
-                    let vc=OnBoardingFrame3()
-                    self.addChild(vc)
-                    self.contsinerView.addSubview(vc.view)
+                     vc=OnBoardingFrame3()
+                    self.addChild(vc!)
+                    self.contsinerView.addSubview(vc!.view)
                     self.onBoardingScreen=4
-                    vc.didMove(toParent: self)
-                    vc.view.frame = self.contsinerView.bounds
-        //            print(myString[0])
-        //            print(myString[1])
-        //            self.minValueInvestment=myString[0]
-        //            self.maxValueInvestment=myString[1]
+                    vc!.didMove(toParent: self)
+                    vc!.view.frame = self.contsinerView.bounds
+
                     break
                 case 4:
+                    maxValueInvestment = (vc as! OnBoardingFrame3).maxvalue
+                    minValueInvestment = (vc as! OnBoardingFrame3).minvalue
                     self.contsinerView.subviews.first?.removeFromSuperview()
         
                     self.stepsIndicator.currentStep = 4
         
-                    let vc=OnBoardingFrame4()
-                    self.addChild(vc)
-                    self.contsinerView.addSubview(vc.view)
+                     vc=OnBoardingFrame4()
+                    self.addChild(vc!)
+                    self.contsinerView.addSubview(vc!.view)
                     self.onBoardingScreen=5
-                    vc.didMove(toParent: self)
-                    vc.view.frame = self.contsinerView.bounds
-        //            print(myString[0])
-        //
-        //            self.timeOfInvestment=myString[0]
-        //            self.presnter.startInvestiment(latitude: self.latitude, longitude: self.longitude, work_type: self.timeOfInvestment, amount_raise: (Float(self.maxValueInvestment) ?? 0.0)-(Float(self.minValueInvestment) ?? 0.0))
+                    vc!.didMove(toParent: self)
+                    vc!.view.frame = self.contsinerView.bounds
+     
+                    
                     break
                 case 5:
+                    timeOfInvestment = (vc as! OnBoardingFrame4).choice
+                    self.presnter.startInvestiment(latitude: self.latitude, longitude: self.longitude, work_type: self.timeOfInvestment, amount_raise: self.maxValueInvestment-self.minValueInvestment)
                     self.contsinerView.subviews.first?.removeFromSuperview()
         
                     self.stepsIndicator.currentStep = 5
         
-                    let vc=OnBoardingFrame5()
-                    self.addChild(vc)
+                     vc=OnBoardingFrame5()
+                    self.addChild(vc!)
                     self.skipAction.isEnabled = false
                     self.skipAction.titleLabel?.textColor = .clear
                     //            skipAction.setTitleColor(.clear, for: .normal)
                     self.continueAction.setTitle("Welcome!", for: .normal)
-                    self.contsinerView.addSubview(vc.view)
+                    self.contsinerView.addSubview(vc!.view)
                     self.onBoardingScreen=6
                     break
                 case 6:
