@@ -391,29 +391,6 @@ Benchmarks</string>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="T4b-vI-aT1">
                                             <rect key="frame" x="5" y="5" width="380" height="139"/>
-                                            <subviews>
-                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hQH-2H-ES9">
-                                                    <rect key="frame" x="0.0" y="12" width="380" height="115"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                    <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OB5-Bd-aGp">
-                                                        <size key="itemSize" width="113" height="81"/>
-                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                    </collectionViewFlowLayout>
-                                                    <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="o9Q-TK-TH3">
-                                                            <rect key="frame" x="0.0" y="0.0" width="113" height="81"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bvK-aV-sps">
-                                                                <rect key="frame" x="0.0" y="0.0" width="113" height="81"/>
-                                                                <autoresizingMask key="autoresizingMask"/>
-                                                            </collectionViewCellContentView>
-                                                            <size key="customSize" width="113" height="81"/>
-                                                        </collectionViewCell>
-                                                    </cells>
-                                                </collectionView>
-                                            </subviews>
                                             <directionalEdgeInsets key="directionalLayoutMargins" top="12" leading="0.0" bottom="12" trailing="0.0"/>
                                         </stackView>
                                     </subviews>
@@ -483,7 +460,6 @@ Manager</string>
                     <connections>
                         <outlet property="FAQuestionTable" destination="AOP-wM-wR1" id="peD-It-KRh"/>
                         <outlet property="backBtn" destination="yHt-CG-hI4" id="kAC-gF-blG"/>
-                        <outlet property="resorceCategory" destination="hQH-2H-ES9" id="582-Xe-sR0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ea5-aL-ic3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

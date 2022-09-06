@@ -307,7 +307,10 @@ extension DashboardVC:DashboardDelegate{
         elementCollectionView.reloadData()
 
     }
-    
+    func getResourceDetails(data: resourceDetails) {
+        // no implementation
+
+    }
     
     
 }

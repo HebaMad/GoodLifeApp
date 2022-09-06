@@ -178,7 +178,10 @@ extension TaskVC:DashboardDelegate{
         TaskTableView.reloadData()
 
     }
-    
+    func getResourceDetails(data: resourceDetails) {
+        // no implementation
+
+    }
     
     
 }

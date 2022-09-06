@@ -26,6 +26,7 @@ class OnBoardingFrame4: UIViewController {
     }
 
 }
+//MARK: - Binding
 
 extension OnBoardingFrame4{
     func bindButtons(){
@@ -35,6 +36,9 @@ extension OnBoardingFrame4{
 
     }
 }
+
+//MARK: - Private Handler
+
 extension OnBoardingFrame4{
     @objc func buttonWasTapped( sender: UIButton){
         

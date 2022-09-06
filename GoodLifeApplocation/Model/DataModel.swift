@@ -196,9 +196,28 @@ struct Goals:Codable{
 
 struct Benchmark:Codable{
     
-    let monthlyRevenueYou:Int?
-    let monthlyRevenueNiche:Int?
-    let nightlyAttendanceYou:Int?
-    let nightlyAttendanceNiche:Int?
+    let monthlyRevenue:[BenchmarkTopic]?
+    let nightlyAttendance:[BenchmarkTopic]?
+
+}
+
+struct BenchmarkTopic:Codable{
+    let title:String?
+    let value:Int?
+ 
+}
+
+struct resourceDetails:Decodable{
+    let ques_ansers :[questionAndAnswers]?
+    
+}
+struct questionAndAnswers:Codable{
+    
+    let id:Int?
+    let icon:String?
+    let title:String?
+    let ads_manager:String?
+    let details:String?
+    let category:String?
 
 }

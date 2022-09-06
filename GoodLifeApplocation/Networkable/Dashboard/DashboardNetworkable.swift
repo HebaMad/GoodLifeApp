@@ -16,10 +16,14 @@ protocol DashboardNetworkable:Networkable  {
     func getResource(completion: @escaping (Result<BaseResponse<DashboardResource>, Error>)-> ())
     func getMyTask(completion: @escaping (Result<BaseResponse<DashboardTask>, Error>)-> ())
     func markMyTask(taskID:Int,completion: @escaping (Result<BaseResponse<Tasks>, Error>)-> ())
-    func getMyGoalsAndBenchmarks(completion: @escaping (Result<BaseResponse<GoalsAndBenchmark>, Error>)-> ())
+    func getMyGoalsAndBenchmarks(categoryID:Int,completion: @escaping (Result<BaseResponse<GoalsAndBenchmark>, Error>)-> ())
+    func resourceDetails(categoryID:Int,completion: @escaping (Result<BaseResponse<resourceDetails>, Error>)-> ())
+
 }
 
 class DashboardManager:DashboardNetworkable{
+
+    
 
     typealias targetType = DashboardTarget
 
@@ -52,8 +56,12 @@ class DashboardManager:DashboardNetworkable{
     func markMyTask(taskID: Int, completion: @escaping (Result<BaseResponse<Tasks>, Error>) -> ()) {
         request(target: .markMyTask(taskID: taskID), completion: completion)
     }
-    func getMyGoalsAndBenchmarks(completion: @escaping (Result<BaseResponse<GoalsAndBenchmark>, Error>) -> ()) {
-        request(target: .getMyGoalsAndBenchmark, completion: completion)
+    func getMyGoalsAndBenchmarks(categoryID:Int,completion: @escaping (Result<BaseResponse<GoalsAndBenchmark>, Error>) -> ()) {
+        request(target: .getMyGoalsAndBenchmark(categoryID: categoryID), completion: completion)
+    }
+    
+    func resourceDetails(categoryID: Int, completion: @escaping (Result<BaseResponse<resourceDetails>, Error>) -> ()) {
+        request(target: .resourceDetails(categoryID: categoryID), completion: completion)
     }
  
 }

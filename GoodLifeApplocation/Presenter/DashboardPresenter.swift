@@ -14,6 +14,7 @@ protocol DashboardDelegate{
     func getResource(data:[Resources])
     func getMyTask(data:DashboardTask)
     func getMyGoalAndBenchmark(data:GoalsAndBenchmark)
+    func getResourceDetails(data:resourceDetails)
 }
 
 typealias dashboardDelegate = DashboardDelegate & UIViewController
@@ -133,8 +134,8 @@ class DashboardPresenter:NSObject{
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
             }}}
     
-    func getMyGoalAndBenchmarks(){
-        DashboardManager.shared.getMyGoalsAndBenchmarks { Response in
+    func getMyGoalAndBenchmarks(categoryID: Int){
+        DashboardManager.shared.getMyGoalsAndBenchmarks(categoryID: categoryID) { Response in
             switch Response{
                 
             case let .success(response):
@@ -149,6 +150,27 @@ class DashboardPresenter:NSObject{
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
             }
         }
+    }
+    
+    func getResourceDetails(categoryID:Int){
+        DashboardManager.shared.resourceDetails(categoryID: categoryID) { Response in
+            switch Response{
+                
+            case let .success(response):
+                if response.status == true{
+                    self.delegate?.getResourceDetails(data: response.data!)
+                   
+                }else{
+                    self.delegate?.showAlerts(title:"Failure", message: response.message)
+                }
+                
+            case let .failure(error):
+                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
+            }
+            
+            
+            
+    }
     }
     
 }

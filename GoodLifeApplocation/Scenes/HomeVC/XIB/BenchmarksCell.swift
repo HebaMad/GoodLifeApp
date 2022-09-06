@@ -11,6 +11,10 @@ class BenchmarksCell: UITableViewCell , NibLoadableView{
     //MARK: - Outlet
 
     @IBOutlet weak var YouprogressView: UIProgressView!
+    @IBOutlet weak var youValue: UILabel!
+    @IBOutlet weak var nicheProgressView: UIProgressView!
+    @IBOutlet weak var nicheValue: UILabel!
+    @IBOutlet weak var benchmarkTopic: UILabel!
     
     //MARK: - Initializer
 
@@ -24,5 +28,15 @@ class BenchmarksCell: UITableViewCell , NibLoadableView{
     }
     
     //MARK: - configuration cell
+    func configureCell(title:String,firstValue:String,secondValue:String,FirstProgress:Int,secondProgress:Int){
+        YouprogressView.progress = Float(FirstProgress)
+        nicheProgressView.progress = Float(secondProgress)
+        benchmarkTopic.text = title
+        youValue.text = firstValue
+        nicheValue.text = secondValue
+
+
+    }
 
 }
+

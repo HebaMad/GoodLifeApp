@@ -36,8 +36,6 @@
 		2710A28D289A5C3C009BCE60 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710A28B289A5C3C009BCE60 /* TaskCell.swift */; };
 		2710A28E289A5C3C009BCE60 /* TaskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2710A28C289A5C3C009BCE60 /* TaskCell.xib */; };
 		2710A290289A6677009BCE60 /* TaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710A28F289A6677009BCE60 /* TaskVC.swift */; };
-		2710A293289A7150009BCE60 /* GoalAndBenchmarkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710A291289A7150009BCE60 /* GoalAndBenchmarkCell.swift */; };
-		2710A294289A7150009BCE60 /* GoalAndBenchmarkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2710A292289A7150009BCE60 /* GoalAndBenchmarkCell.xib */; };
 		2710A296289ADA9E009BCE60 /* GoalAndBenchmarkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710A295289ADA9E009BCE60 /* GoalAndBenchmarkVC.swift */; };
 		2710A299289AF485009BCE60 /* PastVentures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710A297289AF485009BCE60 /* PastVentures.swift */; };
 		2710A29A289AF485009BCE60 /* PastVentures.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2710A298289AF485009BCE60 /* PastVentures.xib */; };
@@ -248,8 +246,6 @@
 		2710A28B289A5C3C009BCE60 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 		2710A28C289A5C3C009BCE60 /* TaskCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskCell.xib; sourceTree = "<group>"; };
 		2710A28F289A6677009BCE60 /* TaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskVC.swift; sourceTree = "<group>"; };
-		2710A291289A7150009BCE60 /* GoalAndBenchmarkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalAndBenchmarkCell.swift; sourceTree = "<group>"; };
-		2710A292289A7150009BCE60 /* GoalAndBenchmarkCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoalAndBenchmarkCell.xib; sourceTree = "<group>"; };
 		2710A295289ADA9E009BCE60 /* GoalAndBenchmarkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalAndBenchmarkVC.swift; sourceTree = "<group>"; };
 		2710A297289AF485009BCE60 /* PastVentures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastVentures.swift; sourceTree = "<group>"; };
 		2710A298289AF485009BCE60 /* PastVentures.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PastVentures.xib; sourceTree = "<group>"; };
@@ -803,8 +799,6 @@
 				27C9AEAD288DB44600FA584A /* CategoriesCollectionViewCell.xib */,
 				2710A28B289A5C3C009BCE60 /* TaskCell.swift */,
 				2710A28C289A5C3C009BCE60 /* TaskCell.xib */,
-				2710A291289A7150009BCE60 /* GoalAndBenchmarkCell.swift */,
-				2710A292289A7150009BCE60 /* GoalAndBenchmarkCell.xib */,
 				27CB2055289B08B900E63694 /* ResourceCollectionViewCell.swift */,
 				27CB2056289B08B900E63694 /* ResourceCollectionViewCell.xib */,
 				27CB205D289B0FDC00E63694 /* ResourceDetailsCell.swift */,
@@ -1038,7 +1032,6 @@
 				27C9AE63288D3CB500FA584A /* Inter-MediumItalic.ttf in Resources */,
 				27C9AE61288D3CB500FA584A /* Inter-SemiBoldItalic.ttf in Resources */,
 				27CB2072289C1B3F00E63694 /* ResourceCell.xib in Resources */,
-				2710A294289A7150009BCE60 /* GoalAndBenchmarkCell.xib in Resources */,
 				27594D1F28A010CE00F4DDC3 /* GeneralMarketingPageVC.xib in Resources */,
 				2704245128A8CED1002EF7B5 /* LoginProgressViews.xib in Resources */,
 				2767A272288F3CD600DF34D1 /* DonationThirdFrame.xib in Resources */,
@@ -1193,7 +1186,6 @@
 				27C9AEB3288EF14900FA584A /* MealMarkerTableViewCell.swift in Sources */,
 				27CB2085289D450000E63694 /* SearchView.swift in Sources */,
 				27A737702891435C00FD8AD9 /* UIButtonDesignable.swift in Sources */,
-				2710A293289A7150009BCE60 /* GoalAndBenchmarkCell.swift in Sources */,
 				2704244C28A84BF3002EF7B5 /* Extension.swift in Sources */,
 				27B54D7C28BA03C60074A6A1 /* EditProfileVC.swift in Sources */,
 				273D3A9E28B0CED000860702 /* choosingMinistryNeedsVC.swift in Sources */,

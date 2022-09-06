@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -149,8 +150,12 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="YouprogressView" destination="E9z-Bf-k3S" id="ajX-Pw-BZ6"/>
+                <outlet property="benchmarkTopic" destination="nf1-MG-Ht4" id="rAq-Mt-aX7"/>
+                <outlet property="nicheProgressView" destination="RZT-YO-5zb" id="RRV-Sr-GLS"/>
+                <outlet property="nicheValue" destination="8un-r0-13z" id="VuX-K6-rnS"/>
+                <outlet property="youValue" destination="Bac-Ve-cNm" id="GoB-qT-3cD"/>
             </connections>
-            <point key="canvasLocation" x="170.28985507246378" y="154.35267857142856"/>
+            <point key="canvasLocation" x="143" y="142"/>
         </tableViewCell>
     </objects>
     <resources>

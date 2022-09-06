@@ -17,7 +17,8 @@ enum DashboardTarget:TargetType{
     case Resources
     case getMyTask
     case markMyTask(taskID:Int)
-    case getMyGoalsAndBenchmark
+    case getMyGoalsAndBenchmark(categoryID:Int)
+    case resourceDetails(categoryID:Int)
     
     var baseURL: URL {
         return URL(string: "\(AppConfig.apiBaseUrl)")!
@@ -32,6 +33,7 @@ enum DashboardTarget:TargetType{
         case .Resources:return "getResources"
         case .markMyTask:return "markTaskCompleted"
         case .getMyGoalsAndBenchmark:return "getMyGoalsBenchmarks"
+        case .resourceDetails:return "getResourcesScreen"
             
         }
     }
@@ -41,7 +43,7 @@ enum DashboardTarget:TargetType{
         case .AddTask,.AddGoal,.markMyTask:
             return .post
        
-        case .categories,.Resources,.getMyTask,.getMyGoalsAndBenchmark:
+        case .categories,.Resources,.getMyTask,.getMyGoalsAndBenchmark,.resourceDetails:
             return .get
         }
     }
@@ -52,8 +54,11 @@ enum DashboardTarget:TargetType{
         case .AddTask,.AddGoal,.markMyTask:
             return .requestParameters(parameters: param, encoding: URLEncoding.httpBody)
             
-        case .categories,.Resources,.getMyTask,.getMyGoalsAndBenchmark:
+        case .categories,.Resources,.getMyTask:
             return .requestPlain
+        case .resourceDetails,.getMyGoalsAndBenchmark:
+            return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
+
         }
     }
     
@@ -69,7 +74,7 @@ enum DashboardTarget:TargetType{
 //                return ["Accept":"application/json","Accept-Language":"en"]
 //            }
   
-        case .categories,.Resources:
+        case .categories,.Resources,.resourceDetails:
             return ["Accept":"application/json","Accept-Language":"en"]
 
         }
@@ -80,7 +85,10 @@ enum DashboardTarget:TargetType{
         
         switch self {
  
-            
+        case .getMyGoalsAndBenchmark(let categoryID):
+            return ["category_id":categoryID]
+        case .resourceDetails(let categoryID):
+            return ["resource_id":categoryID]
         case .markMyTask(let taskID):
             return ["task_id":taskID]
         case .AddGoal(let title,let category_id,let deadline):

@@ -12,7 +12,8 @@ class PastGoalsCell: UITableViewCell, NibLoadableView{
 
     @IBOutlet weak var goalDetailsText: UILabel!
     @IBOutlet weak var goalTitle: UILabel!
-    
+    @IBOutlet weak var MarkBtn: UIButton!
+
     //MARK: - Initializer
 
     override func awakeFromNib() {
@@ -27,6 +28,11 @@ class PastGoalsCell: UITableViewCell, NibLoadableView{
     }
     
     //MARK: - configuration cell
-
+    func configureCell(Goal:Goals,iconSystem:UIImage,tint:UIColor){
+        MarkBtn.setBackgroundImage(iconSystem, for: .normal)
+        MarkBtn.tintColor = tint
+        goalDetailsText.text = Goal.category?.details
+        goalTitle.text = Goal.title ?? ""
+    }
     
 }

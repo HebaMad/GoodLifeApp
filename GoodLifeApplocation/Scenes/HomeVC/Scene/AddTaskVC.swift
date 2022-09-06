@@ -115,6 +115,10 @@ extension AddTaskVC:DashboardDelegate{
         // no implementation
 
     }
+    func getResourceDetails(data: resourceDetails) {
+        // no implementation
+
+    }
     
     
 }

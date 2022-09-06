@@ -110,7 +110,10 @@ extension AddGoalVC:DashboardDelegate{
         // no implementation
 
     }
-    
+    func getResourceDetails(data: resourceDetails) {
+        // no implementation
+
+    }
     
 }
 extension AddGoalVC:UITextFieldDataPickerDelegate,UITextFieldDataPickerDataSource{
