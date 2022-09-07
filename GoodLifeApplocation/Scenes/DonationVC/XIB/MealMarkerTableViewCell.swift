@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import SDWebImage
 class MealMarkerTableViewCell: UITableViewCell,NibLoadableView {
     //MARK: - Outlet
 
@@ -27,10 +27,10 @@ class MealMarkerTableViewCell: UITableViewCell,NibLoadableView {
         // Configure the view for the selected state
     }
     
-    func configureCell(image:UIImage,title:String,description:String){
-        avatarImage.image = image
-        descriptionTxt.text = description
-        titleTxt.text = title
+    func configureCell(item:Founder){
+        avatarImage.sd_setImage(with: URL(string: item.icon ?? ""))
+        descriptionTxt.text = item.details
+        titleTxt.text = item.title
     }
     
 }

@@ -13,7 +13,9 @@ enum MenuApiTarget:TargetType{
     case VolunteerOppourtinity(title:String,latitude:String,longitude:String,date:String,time:String,details:String)
     case createIdea(title:String,details:String,time_commitment:String,monthly_revenue:String)
     case createFeedback(title:String,review:String,rate:String,img:Data)
-    
+    case getWorthyCauses
+    case getSubWorthyCauses(worthycauseId:Int)
+
     var baseURL: URL {
         return URL(string: "\(AppConfig.apiBaseUrl)")!
     }
@@ -27,6 +29,10 @@ enum MenuApiTarget:TargetType{
             
         case .createFeedback:return "createFeedback"
             
+        case .getWorthyCauses:return "getWorthyCauses"
+            
+        case .getSubWorthyCauses: return "getSubWorthyCauses"
+            
         }
     }
     
@@ -34,6 +40,9 @@ enum MenuApiTarget:TargetType{
         switch self{
         case .VolunteerOppourtinity,.createIdea,.createFeedback:
             return .post
+            
+        case .getWorthyCauses,.getSubWorthyCauses:
+            return .get
        
         }
     }
@@ -55,6 +64,13 @@ enum MenuApiTarget:TargetType{
             let multipartData = [pngData,feedbackTitle,feedbackReview,feedbackRate]
 
                          return .uploadMultipart(multipartData)
+            
+        case .getWorthyCauses:
+            return .requestPlain
+            
+        case .getSubWorthyCauses:
+            return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
+
         }
     }
     var headers: [String : String]?{
@@ -68,6 +84,9 @@ enum MenuApiTarget:TargetType{
                 return ["Accept":"application/json","Accept-Language":"en"]
             }
             
+        case .getWorthyCauses,.getSubWorthyCauses:
+            return ["Accept":"application/json","Accept-Language":"en"]
+
         }
     }
     
@@ -79,7 +98,8 @@ enum MenuApiTarget:TargetType{
         
         case .createIdea(let title,let details,let time_commitment,let monthly_revenue):
             return ["title":title,"details":details,"time_commitment":time_commitment,"monthly_revenue":monthly_revenue]
-
+        case .getSubWorthyCauses(let worthycauseId):
+            return ["worthy_cause_id":worthycauseId]
             
         default : return [:]
         }

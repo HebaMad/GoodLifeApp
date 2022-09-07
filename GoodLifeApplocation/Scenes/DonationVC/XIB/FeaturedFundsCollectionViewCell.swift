@@ -6,17 +6,21 @@
 //
 
 import UIKit
-
-class FeaturedFundsCollectionViewCell: UICollectionViewCell,NibLoadableView  {
+import SDWebImage
+class FeaturedFundsCollectionViewCell: UICollectionViewCell,NibLoadableView{
     //MARK: - Outlet
 
     @IBOutlet weak var cellImageView: UIImageView!
     @IBOutlet weak var cellTitleLbl: UILabel!
+    @IBOutlet weak var detailsTxt: UILabel!
     
     //MARK: - Configuration cell
 
-    func setup(_ item: ListItem) {
-        cellImageView.image = UIImage(named: item.image)
-        cellTitleLbl.text = item.title
+    func setup(_ item: Founder) {
+        cellImageView.sd_setImage(with: URL(string: item.icon ?? ""))
+        cellTitleLbl.text = item.title ?? ""
+        detailsTxt.text = item.details ?? ""
     }
+    
+    
 }

@@ -14,7 +14,7 @@ protocol DashboardDelegate{
     func getResource(data:[Resources])
     func getMyTask(data:DashboardTask)
     func getMyGoalAndBenchmark(data:GoalsAndBenchmark)
-    func getResourceDetails(data:resourceDetails)
+    func getResourceDetails(data:ResourceDetails)
 }
 
 typealias dashboardDelegate = DashboardDelegate & UIViewController
@@ -153,7 +153,7 @@ class DashboardPresenter:NSObject{
     }
     
     func getResourceDetails(categoryID:Int){
-        DashboardManager.shared.resourceDetails(categoryID: categoryID) { Response in
+        DashboardManager.shared.resourceDetails(ResourceID: categoryID) { Response in
             switch Response{
                 
             case let .success(response):

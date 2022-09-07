@@ -17,7 +17,7 @@ protocol DashboardNetworkable:Networkable  {
     func getMyTask(completion: @escaping (Result<BaseResponse<DashboardTask>, Error>)-> ())
     func markMyTask(taskID:Int,completion: @escaping (Result<BaseResponse<Tasks>, Error>)-> ())
     func getMyGoalsAndBenchmarks(categoryID:Int,completion: @escaping (Result<BaseResponse<GoalsAndBenchmark>, Error>)-> ())
-    func resourceDetails(categoryID:Int,completion: @escaping (Result<BaseResponse<resourceDetails>, Error>)-> ())
+    func resourceDetails(ResourceID:Int,completion: @escaping (Result<BaseResponse<ResourceDetails>, Error>)-> ())
 
 }
 
@@ -60,8 +60,8 @@ class DashboardManager:DashboardNetworkable{
         request(target: .getMyGoalsAndBenchmark(categoryID: categoryID), completion: completion)
     }
     
-    func resourceDetails(categoryID: Int, completion: @escaping (Result<BaseResponse<resourceDetails>, Error>) -> ()) {
-        request(target: .resourceDetails(categoryID: categoryID), completion: completion)
+    func resourceDetails(ResourceID: Int, completion: @escaping (Result<BaseResponse<ResourceDetails>, Error>) -> ()) {
+        request(target: .resourceDetails(ResourceID: ResourceID), completion: completion)
     }
  
 }

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -44,6 +45,10 @@
                                                 <state key="normal" image="chevron.down" catalog="system"/>
                                             </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="u8c-2Z-IfJ" firstAttribute="leading" secondItem="kOJ-YP-tQI" secondAttribute="leading" constant="8" id="Y8A-Ie-sJk"/>
+                                            <constraint firstItem="u8c-2Z-IfJ" firstAttribute="top" secondItem="kOJ-YP-tQI" secondAttribute="top" id="dUm-yv-jWz"/>
+                                        </constraints>
                                         <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="8" bottom="0.0" trailing="30"/>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FM9-Yt-fED">
@@ -92,6 +97,12 @@
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                 <real key="value" value="12"/>
                             </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
@@ -107,6 +118,7 @@
             <connections>
                 <outlet property="detailsLabel" destination="TqA-lq-uQT" id="DCe-ja-hMJ"/>
                 <outlet property="showHideButton" destination="Rp8-0u-wRB" id="IEZ-Co-dib"/>
+                <outlet property="titleTxt" destination="u8c-2Z-IfJ" id="Qs6-VM-1nx"/>
             </connections>
             <point key="canvasLocation" x="202.89855072463769" y="143.63839285714286"/>
         </tableViewCell>

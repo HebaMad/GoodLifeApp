@@ -103,15 +103,15 @@ extension AllCategoriesVC:DashboardDelegate{
     
     func getMyGoalAndBenchmark(data: GoalsAndBenchmark) {
         goalsAndBenchmarks=data
-        vc.pastGoals = goalsAndBenchmarks?.pastGoals
-        vc.activeGoals = goalsAndBenchmarks?.activeGoals
-        vc.benchmarks = goalsAndBenchmarks?.benchmarks
+        vc.pastGoals = goalsAndBenchmarks?.pastGoals ?? []
+        vc.activeGoals = goalsAndBenchmarks?.activeGoals ?? []
+        vc.benchmarks = goalsAndBenchmarks?.benchmarks ?? []
 
         navigationController?.pushViewController(vc, animated: true)
 
     }
     
-    func getResourceDetails(data: resourceDetails) {
+    func getResourceDetails(data: ResourceDetails) {
         // No Implementation
 
     }

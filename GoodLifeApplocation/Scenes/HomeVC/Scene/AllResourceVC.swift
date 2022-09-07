@@ -16,6 +16,7 @@ class AllResourceVC: UIViewController {
 
     
     var resource:[Resources]=[]
+    let presenter=DashboardPresenter()
     //MARK: - Life cycle
 
     override func viewDidLoad() {
@@ -64,8 +65,9 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
     return cell
 }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = ResourceDetailsVC.instantiate()
-        navigationController?.pushViewController(vc, animated: true)
+        presenter.getResourceDetails(categoryID: resource[indexPath.row].id ?? 0)
+        self.presenter.delegate=self
+    
     }
 
 
@@ -73,4 +75,35 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
 extension AllResourceVC:Storyboarded{
     static var storyboardName: StoryboardName = .main
 
+}
+
+extension AllResourceVC:DashboardDelegate{
+    func showAlerts(title: String, message: String) {
+        //
+    }
+    
+    func getCategories(data: [Categories]) {
+        //
+    }
+    
+    func getResource(data: [Resources]) {
+        //
+    }
+    
+    func getMyTask(data: DashboardTask) {
+        //
+    }
+    
+    func getMyGoalAndBenchmark(data: GoalsAndBenchmark) {
+        //
+    }
+    
+    func getResourceDetails(data: ResourceDetails) {
+        
+        let vc = ResourceDetailsVC.instantiate()
+        vc.resourceTopic=data
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    
 }

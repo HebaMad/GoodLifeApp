@@ -11,37 +11,58 @@ class ResourceDetailsVC: UIViewController {
     
     //MARK: - Outlet
     
+    @IBOutlet weak var resourceDetailsTitle: UILabel!
     @IBOutlet weak var FAQuestionTable: UITableView!
+    @IBOutlet weak var managerBtn: UIButton!
+    @IBOutlet weak var managerTxt: UILabel!
     @IBOutlet weak var backBtn: UIButton!
-    @IBOutlet weak var resorceCategory: UICollectionView!
+    @IBOutlet weak var lessonsBtn: UIButton!
+    @IBOutlet weak var lessonsTxt: UILabel!
     
     //MARK: - Properties
-    
+    var managerUrl=""
     private var selectedIndex = -1
+    var questionAndAnswer:[questionAndAnswers] = []
+    var resourceTopic:ResourceDetails?
 
     //MARK: - Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupDataPassed()
         setupTableView()
         bindBackButton()
     }
     
-    //MARK: - setup tableview
+    //MARK: - configure Data Passed
+
+    func setupDataPassed(){
+        resourceDetailsTitle.text=resourceTopic?.resource?.title
+        lessonsTxt.text=resourceTopic?.resource?.ad_lessons_title
+        managerTxt.text = resourceTopic?.resource?.open_ads_manager_title
+        managerUrl = resourceTopic?.resource?.open_ads_manager_url ?? ""
+        questionAndAnswer = resourceTopic?.ques_ansers ?? []
+        
+    }
+    
+  //MARK: - setup tableview
     
     func setupTableView(){
         FAQuestionTable.register(ResourceDetailsCell.self)
         FAQuestionTable.delegate = self
         FAQuestionTable.dataSource = self
-        FAQuestionTable.rowHeight = 60
+        FAQuestionTable.rowHeight = 70
     }
 }
+  //MARK: - Binding
 
 private extension ResourceDetailsVC{
     
     func bindBackButton(){
         backBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
+        managerBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
+        lessonsBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
     }
     
     
@@ -49,8 +70,20 @@ private extension ResourceDetailsVC{
 //MARK: - private Handler
 private extension ResourceDetailsVC{
 
-   @objc func buttonWasTapped(){
-       navigationController?.popViewController(animated: true)
+    @objc func buttonWasTapped(_ sender:UIButton){
+        switch sender{
+            
+        case backBtn:
+            navigationController?.popViewController(animated: true)
+        case managerBtn:
+            UIApplication.shared.open(URL(string:managerUrl) ?? URL(fileURLWithPath: ""), options: [:], completionHandler: nil)
+
+        case lessonsBtn:
+            print("")
+        default:
+            print("")
+
+        }
     
   }
 }
@@ -60,11 +93,12 @@ extension ResourceDetailsVC:UITableViewDelegate, UITableViewDataSource{
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        5
+        questionAndAnswer.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:ResourceDetailsCell = tableView.dequeueReusableCell(for: indexPath)
+        cell.configureCell(item: questionAndAnswer[indexPath.row])
         return cell
     }
     
@@ -84,17 +118,21 @@ extension ResourceDetailsVC:UITableViewDelegate, UITableViewDataSource{
             if indexPath.row == selectedIndex {
                 
                 cell?.showHideButton.transform = .init(rotationAngle: .pi)
-                return 180
+                return 200
             }
             cell?.showHideButton.transform = .init(rotationAngle:0)
-            return 60
+            return 70
         }
-        return  60
+        return  70
     }
     
     
 }
 extension ResourceDetailsVC:Storyboarded{
     static var storyboardName: StoryboardName = .main
+
+}
+
+extension ResourceDetailsVC{
 
 }

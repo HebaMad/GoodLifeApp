@@ -15,6 +15,9 @@ class DonationVC: UIViewController {
     @IBOutlet weak var containerView: UIView!
     
     //MARK: - Life cycle
+    var funderID=0
+    let presenter=MenuPresenter()
+    //MARK: - Life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,12 +43,19 @@ class DonationVC: UIViewController {
             case 1:
                 self.containerView.subviews.first?.removeFromSuperview()
                 self.stepsIndicator.currentStep = 1
-                let vc = DonationFrameTwoVC.instantiate()
-                self.addChild(vc)
-                self.containerView.addSubview(vc.view)
-                vc.didMove(toParent: self)
-                vc.view.frame = self.containerView.bounds
-                self.containerHeight.constant=CGFloat(myString[1])
+                self.funderID = myString[2]
+                
+                self.presenter.getSubWorthyCause(worthyCauseID:  self.funderID){ status,data,message in
+                    let vc = DonationFrameTwoVC.instantiate()
+                    vc.subWorthyCause = data.worthy_causes
+                    self.addChild(vc)
+                    self.containerView.addSubview(vc.view)
+                    vc.didMove(toParent: self)
+                    vc.view.frame = self.containerView.bounds
+                    self.containerHeight.constant=CGFloat(myString[1])
+                    
+                }
+             
             case 2:
                 self.containerView.subviews.first?.removeFromSuperview()
 
@@ -75,4 +85,19 @@ class DonationVC: UIViewController {
     }
 
 
+}
+
+
+extension DonationVC:MenuDelegate{
+    func showAlerts(title: String, message: String) {
+        //
+    }
+    
+    func getFunderData(data: WorthyCauses) {
+        //
+    }
+    
+ 
+    
+    
 }

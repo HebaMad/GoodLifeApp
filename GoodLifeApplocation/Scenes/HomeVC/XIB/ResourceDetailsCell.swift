@@ -12,12 +12,13 @@ class ResourceDetailsCell: UITableViewCell, NibLoadableView{
 
     @IBOutlet weak var showHideButton: UIButton!
     @IBOutlet weak var detailsLabel: UILabel!
+    @IBOutlet weak var titleTxt: UILabel!
     
     //MARK: - Initializer
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -27,5 +28,9 @@ class ResourceDetailsCell: UITableViewCell, NibLoadableView{
     }
     //MARK: - configuration cell
 
-    
+    func configureCell(item:questionAndAnswers){
+        titleTxt.text = item.title ?? ""
+        detailsLabel.text = item.details ?? ""
+
+    }
 }

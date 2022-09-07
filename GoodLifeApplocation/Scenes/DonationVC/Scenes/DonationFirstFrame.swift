@@ -13,12 +13,20 @@ class DonationFirstFrame: UIViewController {
     @IBOutlet var FundCollectionView: UICollectionView!
     private let sections = MockData.shared.pageData
     
+    //MARK: - Properties
+    
+    let presenter = MenuPresenter()
+    var funder:[Founder]=[]
+    var otherFunder:[Founder]=[]
+
+    
     //MARK: - Life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        self.presenter.getWorthyCause()
+        self.presenter.delegate = self
         FundCollectionView.register(FeaturedFundsCollectionViewCell.self)
         FundCollectionView.register(OtherFundsCollectionViewCell.self)
         FundCollectionView.register(UINib(nibName:"HeaderCollectionReusableView", bundle: nil), forSupplementaryViewOfKind:UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.headerIdentifier)
@@ -41,7 +49,7 @@ class DonationFirstFrame: UIViewController {
                 let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.33), heightDimension: .absolute(140))
                 
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
-//                item.contentInsets = .init(top: 0, leading: 0, bottom: 0, trailing: 4)
+                item.contentInsets = .init(top: -10, leading: 0, bottom: 0, trailing: 4)
                 
                 let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.99), heightDimension: .estimated(0.5))
                 
@@ -51,7 +59,7 @@ class DonationFirstFrame: UIViewController {
                 let section = NSCollectionLayoutSection(group: group)
                 
 //                section.orthogonalScrollingBehavior = .continuous
-                section.contentInsets = .init(top: 0, leading: 4, bottom: 0, trailing: 4)
+                section.contentInsets = .init(top: -5, leading: 4, bottom: 0, trailing: 4)
                 section.boundarySupplementaryItems = [self.supplementaryHeaderItem()]
                 section.supplementariesFollowContentInsets = false
                 return section
@@ -68,7 +76,7 @@ class DonationFirstFrame: UIViewController {
 
                 let section = NSCollectionLayoutSection(group: group)
                 section.orthogonalScrollingBehavior = .continuous
-                section.contentInsets = .init(top: 0, leading: 10, bottom: 0, trailing: 10)
+                section.contentInsets = .init(top: -20, leading: 4, bottom: 0, trailing: 4)
                 section.boundarySupplementaryItems = [self.supplementaryHeaderItem()]
                 section.supplementariesFollowContentInsets = false
                 return section
@@ -93,8 +101,12 @@ extension DonationFirstFrame: UICollectionViewDataSource,UICollectionViewDelegat
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        return sections[section].count
+        switch sections[section]{
+        case .FeaturedFund: return funder.count
+        case .otherFund :return otherFunder.count
+            
+        }
+     
 
     }
     
@@ -103,15 +115,15 @@ extension DonationFirstFrame: UICollectionViewDataSource,UICollectionViewDelegat
         
 
         switch sections[indexPath.section] {
-        case .FeaturedFund(let items):
+        case .FeaturedFund:
             
             let cell:FeaturedFundsCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
-            cell.setup(items[indexPath.row])
+            cell.setup(funder[indexPath.row])
             return cell
             
-        case .otherFund(let items):
+        case .otherFund:
             let cell:OtherFundsCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
-            cell.setup(items[indexPath.row])
+            cell.setup(otherFunder[indexPath.row])
 
             return cell
 
@@ -131,10 +143,34 @@ extension DonationFirstFrame: UICollectionViewDataSource,UICollectionViewDelegat
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(FundCollectionView.bounds.height)
-        NotificationCenter.default.post(name: .init(rawValue: "GoodLife"), object: [1,FundCollectionView.bounds.height])
+        switch sections[indexPath.section]{
+        case .FeaturedFund:
+            NotificationCenter.default.post(name: .init(rawValue: "GoodLife"), object: [1,FundCollectionView.bounds.height,funder[indexPath.row].id ?? 0])
+
+        case .otherFund:
+            NotificationCenter.default.post(name: .init(rawValue: "GoodLife"), object: [1,FundCollectionView.bounds.height,otherFunder[indexPath.row].id ?? 0])
+
+        }
 
     }
 
 }
 
+
+extension DonationFirstFrame:MenuDelegate{
+  
+    
+    func showAlerts(title: String, message: String) {
+        
+    }
+    
+    func getFunderData(data: WorthyCauses) {
+        funder=data.featuredFunds ?? []
+        otherFunder=data.otherFunds ?? []
+        FundCollectionView.reloadData()
+
+    }
+    
+    
+    
+}

@@ -15,8 +15,8 @@ class OtherFundsCollectionViewCell: UICollectionViewCell,NibLoadableView  {
     
     //MARK: - Configuration cell
 
-    func setup(_ item: ListItem) {
-        cellImageView.image = UIImage(named: item.image)
-        cellTitleLbl.text = item.title
+    func setup(_ item: Founder) {
+        cellImageView.sd_setImage(with: URL(string: item.icon ?? ""))
+        cellTitleLbl.text = item.title ?? ""
     }
 }

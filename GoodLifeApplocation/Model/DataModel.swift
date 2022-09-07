@@ -207,8 +207,23 @@ struct BenchmarkTopic:Codable{
  
 }
 
-struct resourceDetails:Decodable{
+struct ResourceDetails:Decodable{
+    
+    let resource:resourceDetailss?
     let ques_ansers :[questionAndAnswers]?
+    
+}
+
+struct resourceDetailss:Codable{
+    
+    let id:Int?
+    let icon:String?
+    let title:String?
+    let details:String?
+    let open_ads_manager_title:String?
+    let open_ads_manager_url:String?
+    let ad_lessons_title:String?
+
     
 }
 struct questionAndAnswers:Codable{
@@ -221,3 +236,22 @@ struct questionAndAnswers:Codable{
     let category:String?
 
 }
+
+
+struct  WorthyCauses:Decodable{
+    let featuredFunds:[Founder]?
+    let otherFunds:[Founder]?
+
+}
+
+struct Founder:Codable{
+    let id:Int?
+    let title:String?
+    let details:String?
+    let icon:String?
+}
+
+struct SubWorthyCauses:Decodable{
+    let worthy_causes:[Founder]
+}
+

@@ -13,6 +13,8 @@ class DonationFrameTwoVC: UIViewController {
 
     @IBOutlet weak var mealMakerTableView: UITableView!
     
+    
+    var subWorthyCause:[Founder]=[]
     //MARK: - Life cycle
 
     override func viewDidLoad() {
@@ -36,11 +38,12 @@ class DonationFrameTwoVC: UIViewController {
  extension DonationFrameTwoVC :UITableViewDelegate , UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    4
+        subWorthyCause.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cartCell:MealMarkerTableViewCell=tableView.dequeueReusableCell(for: indexPath)
+        cartCell.configureCell(item: subWorthyCause[indexPath.row])
         return cartCell
     }
      func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

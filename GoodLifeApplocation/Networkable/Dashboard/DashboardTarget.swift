@@ -18,7 +18,7 @@ enum DashboardTarget:TargetType{
     case getMyTask
     case markMyTask(taskID:Int)
     case getMyGoalsAndBenchmark(categoryID:Int)
-    case resourceDetails(categoryID:Int)
+    case resourceDetails(ResourceID:Int)
     
     var baseURL: URL {
         return URL(string: "\(AppConfig.apiBaseUrl)")!
@@ -87,8 +87,8 @@ enum DashboardTarget:TargetType{
  
         case .getMyGoalsAndBenchmark(let categoryID):
             return ["category_id":categoryID]
-        case .resourceDetails(let categoryID):
-            return ["resource_id":categoryID]
+        case .resourceDetails(let ResourceID):
+            return ["resource_id":ResourceID]
         case .markMyTask(let taskID):
             return ["task_id":taskID]
         case .AddGoal(let title,let category_id,let deadline):
