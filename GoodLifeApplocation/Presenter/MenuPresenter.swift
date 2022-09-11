@@ -21,9 +21,9 @@ class MenuPresenter:NSObject{
     
     var delegate:menuDelegate?
         
-     func VolunteerOppourtinity(title:String,latitude:String,longitude:String,date:String,time:String,details:String){
+    func VolunteerOppourtinity(title:String,location:String,date:String,time:String,details:String){
       
-        MenuManager.shared.volunteerOppourtinity(title: title, latitude: latitude, longitude: longitude, date: date, time: time, details: details) { Response in
+        MenuManager.shared.volunteerOppourtinity(title: title, location:location, date: date, time: time, details: details) { Response in
             switch Response{
                 
             case let .success(response):
@@ -60,7 +60,7 @@ class MenuPresenter:NSObject{
             
         }
     }
-     func createFeedback(title:String,review:String,rate:String,img:Data){
+     func createFeedback(title:String,review:String,rate:Int,img:Data){
         MenuManager.shared.createFeedback(title: title, review: review, rate: rate, img: img) { Response in
             switch Response{
                 

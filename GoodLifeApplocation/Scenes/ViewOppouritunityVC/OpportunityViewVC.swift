@@ -23,10 +23,16 @@ class OpportunityViewVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        bindButton()
+        bindButtons()
     }
+  
+}
+
+     //MARK: - Binding
+
+extension OpportunityViewVC{
     
-    func bindButton(){
+    func bindButtons(){
         Profile.ViewBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
         VolunteerOpportunityView.ViewBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
         HaveIdeaView.ViewBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
@@ -35,7 +41,8 @@ class OpportunityViewVC: UIViewController {
     }
 }
 
-//MARK: - Private Handler
+
+    //MARK: - Private Handler
 
  extension OpportunityViewVC{
      @objc func buttonWasTapped( sender: UIButton){

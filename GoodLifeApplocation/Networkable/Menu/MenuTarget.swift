@@ -10,9 +10,9 @@ import Moya
 
 enum MenuApiTarget:TargetType{
     
-    case VolunteerOppourtinity(title:String,latitude:String,longitude:String,date:String,time:String,details:String)
+    case VolunteerOppourtinity(title:String,location:String,date:String,time:String,details:String)
     case createIdea(title:String,details:String,time_commitment:String,monthly_revenue:String)
-    case createFeedback(title:String,review:String,rate:String,img:Data)
+    case createFeedback(title:String,review:String,rate:Int,img:Data)
     case getWorthyCauses
     case getSubWorthyCauses(worthycauseId:Int)
     case makeDonation(worthycauseId:Int,amount:String)
@@ -60,7 +60,7 @@ enum MenuApiTarget:TargetType{
             let pngData = MultipartFormData(provider: .data(img), name: "file", fileName: "files", mimeType: "image.jpg")
               let feedbackTitle = MultipartFormData(provider: .data(title.data(using: .utf8)!), name: "title")
                let feedbackReview = MultipartFormData(provider: .data(review.data(using: .utf8)!), name: "review")
-               let feedbackRate = MultipartFormData(provider: .data(rate.data(using: .utf8)!), name: "rate")
+               let feedbackRate = MultipartFormData(provider: .data("\(rate)".data(using: .utf8)!), name: "rate")
 
 
 
@@ -96,8 +96,8 @@ enum MenuApiTarget:TargetType{
     var param: [String : Any]{
         
         switch self {
-        case .VolunteerOppourtinity(let title,let latitude,let longitude,let date,let time,let details):
-            return ["title":title,"latitude":latitude,"longitude":longitude,"date":date,"time":time,"details":details]
+        case .VolunteerOppourtinity(let title,let location,let date,let time,let details):
+            return ["title":title,"location":location,"date":date,"time":time,"details":details]
         
         case .createIdea(let title,let details,let time_commitment,let monthly_revenue):
             return ["title":title,"details":details,"time_commitment":time_commitment,"monthly_revenue":monthly_revenue]
