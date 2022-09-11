@@ -117,4 +117,24 @@ class MenuPresenter:NSObject{
             }
         }
     }
+    
+    func makeDonation(worthyCauseID:Int,amount:String){
+        
+        MenuManager.shared.makeDonation(worthycauseId: worthyCauseID, amount: amount) {Response in
+            switch Response{
+                
+            case let .success(response):
+                if response.status == true{
+
+                }else{
+                    self.delegate?.showAlerts(title:"Failure", message: response.message)
+                }
+                
+            case let .failure(error):
+
+                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
+            }
+        }
+        
+    }
 }

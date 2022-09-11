@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -20,9 +21,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DonationThirdFrame" customModule="GoodLifeApplocation" customModuleProvider="target">
             <connections>
                 <outlet property="SubscribeTypeTitle" destination="5nL-gF-1dt" id="hUb-XA-Fbf"/>
-                <outlet property="amount" destination="yQx-vJ-GuB" id="q7J-xQ-xma"/>
                 <outlet property="firstStageDesc" destination="B5r-N2-f1t" id="8b2-O9-D7D"/>
                 <outlet property="lastStageDesc" destination="PFG-Ml-UxI" id="6fo-tR-1M0"/>
+                <outlet property="priceTxt" destination="fTj-Hm-bzR" id="Pp0-gj-wcB"/>
                 <outlet property="processDescription" destination="WMR-bb-eos" id="5Jz-HB-aai"/>
                 <outlet property="scrollView" destination="IHx-Zg-2Bx" id="9AK-JT-h8h"/>
                 <outlet property="subscribeDescription" destination="PEY-2n-rkQ" id="ucK-1k-hW6"/>
@@ -50,24 +51,25 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="294" height="125"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Meal Maker Gold" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5nL-gF-1dt">
-                                                            <rect key="frame" x="0.0" y="16" width="294" height="44"/>
+                                                            <rect key="frame" x="0.0" y="16" width="294" height="46"/>
                                                             <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="18"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500 affordable meals to people in need" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEY-2n-rkQ">
-                                                            <rect key="frame" x="0.0" y="72" width="294" height="17"/>
+                                                            <rect key="frame" x="0.0" y="74" width="294" height="17"/>
                                                             <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100$" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQx-vJ-GuB">
-                                                            <rect key="frame" x="0.0" y="101" width="294" height="24"/>
-                                                            <color key="backgroundColor" red="1" green="0.78039215689999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="20"/>
-                                                            <color key="textColor" name="ButtonColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your price" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fTj-Hm-bzR">
+                                                            <rect key="frame" x="0.0" y="103" width="294" height="22"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="22" id="BJw-5D-Sss"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                        </textField>
                                                     </subviews>
                                                     <directionalEdgeInsets key="directionalLayoutMargins" top="16" leading="0.0" bottom="0.0" trailing="0.0"/>
                                                 </stackView>
@@ -404,9 +406,6 @@
         <image name="Arrow 1up" width="54" height="29"/>
         <image name="Arrow 2down" width="65" height="30"/>
         <image name="Ellipse 74" width="40" height="40"/>
-        <namedColor name="ButtonColor">
-            <color red="0.0" green="0.85100001096725464" blue="0.44299998879432678" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="backgroundColor">
             <color red="0.63099998235702515" green="0.34900000691413879" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

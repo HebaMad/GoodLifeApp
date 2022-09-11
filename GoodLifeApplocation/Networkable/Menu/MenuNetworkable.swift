@@ -16,10 +16,12 @@ protocol MenuNetworkable:Networkable  {
     func createFeedback(title:String,review:String,rate:String,img:Data,completion: @escaping (Result<BaseResponse<FeedbackCreation>, Error>)-> ())
     func getWorthyCauses(completion: @escaping (Result<BaseResponse<WorthyCauses>, Error>)-> ())
     func getSubWorthyCauses(worthycauseId:Int,completion: @escaping (Result<BaseResponse<SubWorthyCauses>, Error>)-> ())
+    func makeDonation(worthycauseId:Int,amount:String,completion: @escaping (Result<BaseResponse<SubWorthyCauses>, Error>)-> ())
 }
 
 class MenuManager:MenuNetworkable{
  
+   
 
    var provider: MoyaProvider<MenuApiTarget> = MoyaProvider<MenuApiTarget>(plugins: [NetworkLoggerPlugin()])
     
@@ -46,7 +48,9 @@ class MenuManager:MenuNetworkable{
         request(target: .getSubWorthyCauses(worthycauseId: worthycauseId), completion: completion)
     }
     
-
- 
+    func makeDonation(worthycauseId: Int, amount: String, completion: @escaping (Result<BaseResponse<SubWorthyCauses>, Error>) -> ()) {
+        request(target: .makeDonation(worthycauseId: worthycauseId, amount: amount), completion: completion)
+    }
+   
     
 }

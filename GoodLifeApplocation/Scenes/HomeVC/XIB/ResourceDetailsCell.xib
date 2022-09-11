@@ -120,7 +120,7 @@
                 <outlet property="showHideButton" destination="Rp8-0u-wRB" id="IEZ-Co-dib"/>
                 <outlet property="titleTxt" destination="u8c-2Z-IfJ" id="Qs6-VM-1nx"/>
             </connections>
-            <point key="canvasLocation" x="202.89855072463769" y="143.63839285714286"/>
+            <point key="canvasLocation" x="203" y="124"/>
         </tableViewCell>
     </objects>
     <resources>
