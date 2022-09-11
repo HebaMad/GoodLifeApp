@@ -145,7 +145,7 @@ extra hands?</string>
                                             <color key="textColor" name="button"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GUG-bZ-JHG" customClass="DatePickingTextField" customModule="GoodLifeApplocation" customModuleProvider="target">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="YYYY-MM-dd" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GUG-bZ-JHG" customClass="DatePickingTextField" customModule="GoodLifeApplocation" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="27" width="374" height="38"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
@@ -164,7 +164,7 @@ extra hands?</string>
                                             <color key="textColor" name="button"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vgb-WA-4Zv" customClass="DatePickingTextField" customModule="GoodLifeApplocation" customModuleProvider="target">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="HH:mm:ss" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vgb-WA-4Zv" customClass="DatePickingTextField" customModule="GoodLifeApplocation" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="27" width="374" height="39.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
