@@ -83,7 +83,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1959.4202898550727" y="91.741071428571431"/>
+            <point key="canvasLocation" x="-1409" y="82"/>
         </scene>
         <!--TaskVC-->
         <scene sceneID="MX7-8K-N3e">
@@ -104,7 +104,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="91"/>
                                             <subviews>
                                                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Fhd-Db-qFT">
-                                                    <rect key="frame" x="0.0" y="8" width="390" height="68"/>
+                                                    <rect key="frame" x="0.0" y="8" width="390" height="58"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <segments>
                                                         <segment title="Current Tasks"/>
@@ -114,10 +114,10 @@
                                                     <color key="selectedSegmentTintColor" name="Color"/>
                                                 </segmentedControl>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mda-kh-wbR">
-                                                    <rect key="frame" x="0.0" y="81" width="390" height="10"/>
+                                                    <rect key="frame" x="0.0" y="71" width="390" height="20"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="10" id="Akb-pv-pyd"/>
+                                                        <constraint firstAttribute="height" constant="20" id="Akb-pv-pyd"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -247,7 +247,7 @@
                                             <rect key="frame" x="5" y="5" width="380" height="93"/>
                                             <subviews>
                                                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TcN-vd-Q6d">
-                                                    <rect key="frame" x="0.0" y="8" width="380" height="70"/>
+                                                    <rect key="frame" x="0.0" y="8" width="380" height="60"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <segments>
                                                         <segment title="Active Goals"/>
@@ -258,10 +258,10 @@
                                                     <color key="selectedSegmentTintColor" name="Color"/>
                                                 </segmentedControl>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="80h-gu-JAx">
-                                                    <rect key="frame" x="0.0" y="83" width="380" height="10"/>
+                                                    <rect key="frame" x="0.0" y="73" width="380" height="20"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="10" id="gJE-Ti-STW"/>
+                                                        <constraint firstAttribute="height" constant="20" id="gJE-Ti-STW"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -1147,7 +1147,7 @@ Night</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ewu-lO-h4F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6608.6956521739139" y="81.696428571428569"/>
+            <point key="canvasLocation" x="6403" y="82"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vIY-A5-aef">

@@ -15,5 +15,5 @@ target 'GoodLifeApplocation' do
   pod 'Moya'
   pod 'SVProgressHUD'
   pod 'SDWebImage', '~> 5.0'
-
+  pod 'MaterialComponents/Snackbar'
 end
