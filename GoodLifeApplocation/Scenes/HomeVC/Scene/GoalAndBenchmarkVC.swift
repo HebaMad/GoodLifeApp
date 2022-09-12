@@ -107,6 +107,26 @@ private extension GoalAndBenchmarkVC{
        }
     
   }
+    
+    
+    @objc func markDoneBtn(_ sender:UIButton){
+        switch selectedSegment{
+        case 0:
+            sender.setBackgroundImage( UIImage(systemName: "circlebadge.fill"), for: .normal)
+            sender.tintColor = UIColor(named: "progressView")
+            self.presenter.markMyGoal(goalId: activeGoals[sender.tag].id ?? 0, categoryID:  activeGoals[sender.tag].category_id ?? 0)
+        self.presenter.delegate = self
+        self.goalAndBenchmarkTableView.reloadData()
+            
+        case 1:
+            print("")
+        default:
+            print("")
+
+        }
+        
+    }
+    
 }
 
 //MARK: - UITableViewDelegate,UITableViewDataSource configuration
@@ -131,12 +151,15 @@ extension GoalAndBenchmarkVC:UITableViewDelegate, UITableViewDataSource{
         switch selectedSegment{
         case 0:
             let cell:PastGoalsCell = tableView.dequeueReusableCell(for: indexPath)
-            cell.configureCell(Goal: activeGoals[indexPath.row],iconSystem: UIImage(systemName: "circlebadge.fill")!, tint: UIColor(named: "progressView")!)
+            cell.configureCell(Goal: activeGoals[indexPath.row],iconSystem: UIImage(systemName: "circlebadge")!, tint: UIColor(named: "button")!)
+            cell.MarkBtn.addTarget(self, action: #selector(markDoneBtn), for: .touchUpInside)
+            cell.MarkBtn.tag=indexPath.row
             return cell
         case 1:
             let cell:PastGoalsCell = tableView.dequeueReusableCell(for: indexPath)
-            cell.configureCell(Goal: pastGoals[indexPath.row],iconSystem: UIImage(systemName: "circlebadge")!, tint: UIColor(named: "button")!)
-
+            cell.configureCell(Goal: pastGoals[indexPath.row],iconSystem: UIImage(systemName: "circlebadge.fill")!, tint: UIColor(named: "progressView")!)
+            cell.MarkBtn.addTarget(self, action: #selector(markDoneBtn), for: .touchUpInside)
+            cell.MarkBtn.tag=indexPath.row
             return cell
         case 2:
             let cell:BenchmarksCell = tableView.dequeueReusableCell(for: indexPath)
@@ -153,4 +176,37 @@ extension GoalAndBenchmarkVC:UITableViewDelegate, UITableViewDataSource{
 extension GoalAndBenchmarkVC:Storyboarded{
     static var storyboardName: StoryboardName = .main
 
+}
+
+extension GoalAndBenchmarkVC:DashboardDelegate{
+    func getMyGoalAndBenchmark(data: GoalsAndBenchmark) {
+        activeGoals = data.activeGoals ?? []
+        pastGoals = data.pastGoals ?? []
+        goalAndBenchmarkTableView.reloadData()
+    }
+    
+    func showAlerts(title: String, message: String) {
+        self.showAlert(title: title, message: message,hideCancelBtn: true)
+
+    }
+    
+    func getCategories(data: [Categories]) {
+        //no implementayion
+
+    }
+    
+    func getResource(data: [Resources]) {
+  //no implementayion
+    }
+    
+    func getMyTask(data: DashboardTask) {
+   //
+
+    }
+    func getResourceDetails(data: ResourceDetails) {
+        // no implementation
+
+    }
+    
+    
 }
