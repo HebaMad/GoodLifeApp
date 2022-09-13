@@ -6,7 +6,8 @@
 //
 
 import UIKit
-import Algorithms
+//import Algorithms
+import MaterialComponents.MaterialSnackbar
 
 class GoalAndBenchmarkVC: UIViewController {
     
@@ -127,6 +128,7 @@ private extension GoalAndBenchmarkVC{
         
     }
     
+    
 }
 
 //MARK: - UITableViewDelegate,UITableViewDataSource configuration
@@ -186,8 +188,7 @@ extension GoalAndBenchmarkVC:DashboardDelegate{
     }
     
     func showAlerts(title: String, message: String) {
-        self.showAlert(title: title, message: message,hideCancelBtn: true)
-
+        showSnackBar(message:message)
     }
     
     func getCategories(data: [Categories]) {
@@ -209,4 +210,12 @@ extension GoalAndBenchmarkVC:DashboardDelegate{
     }
     
     
+}
+extension GoalAndBenchmarkVC{
+    func showSnackBar(message:String){
+        let answerMessage = MDCSnackbarMessage()
+        answerMessage.text =  message
+
+        MDCSnackbarManager.default.show(answerMessage)
+    }
 }

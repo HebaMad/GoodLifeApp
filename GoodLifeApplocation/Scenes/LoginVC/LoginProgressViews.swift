@@ -103,17 +103,9 @@ private extension LoginProgressViews{
     }
     
     func showSnackBar(message:String){
-//        let action = MDCSnackbarMessageAction()
         let answerMessage = MDCSnackbarMessage()
         answerMessage.text =  message
-//        let actionHandler = {() in
-//          let answerMessage = MDCSnackbarMessage()
-//          answerMessage.text = "Fascinating"
-//            MDCSnackbarManager.show(answerMessage)
-//        }
-//        action.handler = actionHandler
-//        action.title = "OK"
-//        message.action = action
+
         MDCSnackbarManager.default.show(answerMessage)
     }
 }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MaterialComponents.MaterialSnackbar
 
 class OnBoardingVC: UIViewController {
     
@@ -111,7 +112,7 @@ class OnBoardingVC: UIViewController {
                     print(text ?? "")
                     if text?.isEmpty == true {
                         self.onBoardingScreen=1
-                    showAlertMessage(title: "Notice", message: "please Enter your mobile number ")
+                    showSnackBar(message: "please Enter your mobile number ")
                         
                     }else{
                         
@@ -135,10 +136,13 @@ class OnBoardingVC: UIViewController {
                     print(text ?? "")
                     if text?.isEmpty == true {
                         self.onBoardingScreen=2
+                        showSnackBar(message: "please Enter your Verification code ")
 
                         
                     }else{
                         self.presnter.checkCode(mobile:mobileNumber, code: text ?? "")
+                        showSnackBar(message: "SignUp Successfully")
+
                     self.contsinerView.subviews.first?.removeFromSuperview()
         
                     self.stepsIndicator.currentStep = 2
@@ -338,3 +342,11 @@ class OnBoardingVC: UIViewController {
 //    }
 //
 //}
+extension OnBoardingVC{
+    func showSnackBar(message:String){
+        let answerMessage = MDCSnackbarMessage()
+        answerMessage.text =  message
+
+        MDCSnackbarManager.default.show(answerMessage)
+    }
+}

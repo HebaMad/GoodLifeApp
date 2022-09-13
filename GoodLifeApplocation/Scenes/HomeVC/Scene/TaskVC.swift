@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MaterialComponents.MaterialSnackbar
 
 class TaskVC: UIViewController {
     //MARK: - Outlet
@@ -113,6 +114,13 @@ private extension TaskVC{
            print("")
        }
 }
+    
+    func showSnackBar(message:String){
+        let answerMessage = MDCSnackbarMessage()
+        answerMessage.text =  message
+
+        MDCSnackbarManager.default.show(answerMessage)
+    }
 }
 //MARK: - UITableViewDelegate,UITableViewDataSource
 
@@ -159,8 +167,7 @@ extension TaskVC:DashboardDelegate{
     }
     
     func showAlerts(title: String, message: String) {
-        self.showAlert(title: title, message: message,hideCancelBtn: true)
-
+        showSnackBar(message: message)
     }
     
     func getCategories(data: [Categories]) {
