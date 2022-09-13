@@ -81,6 +81,7 @@ class OnBoardingVC: UIViewController {
     @IBAction func continueBtn(_ sender: Any) {
         
         checkS()
+        
             }
     
     

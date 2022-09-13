@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 protocol AuthDelegate{
-//    func showAlert(title:String,message:String)
+    func showAlerts(title:String,message:String)
 
 
 }
@@ -25,19 +25,17 @@ class AuthPresenter:NSObject{
                 
             case let .success(response):
                 if response.status == true{
-                    DispatchQueue.main.async {
+                        self.delegate?.showAlerts(title:"Success", message: response.message)
 
-                    }
                 }else{
-                    DispatchQueue.main.async {
-//                        self.delegate?.showAlert(title:"Failure", message: response.message)
-                    }
+                        self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
+                
                 
             case let .failure(error):
                 print(error)
 
-//                self.delegate?.showAlert(title:"Failure", message: "something wrong try again")
+                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
 
                 
             }
@@ -55,15 +53,14 @@ class AuthPresenter:NSObject{
               
 
                 }else{
-                    DispatchQueue.main.async {
-//                        self.delegate?.showAlert(title:"Failure", message: response.message)
-                    }
+                        self.delegate?.showAlerts(title:"Failure", message: response.message)
+                   
                 }
                 
             case let .failure(error):
                 print(error)
 
-//                self.delegate?.showAlert(title:"Failure", message: "something wrong try again")
+                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
 
                 
             }
@@ -77,20 +74,19 @@ class AuthPresenter:NSObject{
                 
             case let .success(response):
                 if response.status == true{
-                    DispatchQueue.main.async {
-                       
-                        }
+                    self.delegate?.showAlerts(title:"Success", message:  response.message)
+
                 }else{
                     DispatchQueue.main.async {
 
-//                    self.delegate?.showAlert(title:"Failure", message:  response.message)
+                    self.delegate?.showAlerts(title:"Failure", message:  response.message)
                     }
                 }
                 
             case let .failure(error):
                 print(error)
 
-//                self.delegate?.showAlert(title:"Failure", message: "something wrong try again")
+                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
 
             }
         }
@@ -105,18 +101,15 @@ class AuthPresenter:NSObject{
                 
             case let .success(response):
                 if response.status == true{
-                    DispatchQueue.main.async {
+                        self.delegate?.showAlerts(title:"Success", message: response.message)
 
-                    }
                 }else{
-                    DispatchQueue.main.async {
 
-//                    self.delegate?.showAlert(title:"Failure", message: response.message)
-                }
+                    self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
             case let .failure(error):
                 print(error)
-//                self.delegate?.showAlert(title:"Failure", message: "something wrong try again")
+                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
 
             }
         }

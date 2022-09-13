@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MaterialComponents.MaterialSnackbar
 
 class LoginProgressViews: UIViewController {
     
@@ -17,7 +18,9 @@ class LoginProgressViews: UIViewController {
     //MARK: - Properties
     
     private var progressIndex=0
-        
+    var vc:UIViewController?
+    var mobileNumber = ""
+    let presenter = AuthPresenter()
     //MARK: - Life cycle
     
     override func viewDidLoad() {
@@ -49,29 +52,76 @@ private extension LoginProgressViews{
             self.containerView.subviews.first?.removeFromSuperview()
             
             stepsIndicator.currentStep = 1
-            let vc=OnBoardingFrame1()
-            self.addChild(vc)
-            self.containerView.addSubview(vc.view)
+             vc=OnBoardingFrame1()
+            self.addChild(vc!)
+            self.containerView.addSubview(vc!.view)
             self.progressIndex=1
-            vc.didMove(toParent: self)
-            vc.view.frame = containerView.bounds
+            vc!.didMove(toParent: self)
+            vc!.view.frame = containerView.bounds
         case 1 :
+            let text = (vc as! OnBoardingFrame1).phoneNumberTxtField.text
+            if text?.isEmpty == true {
+                self.progressIndex=1
+            showAlertMessage(title: "Notice", message: "please Enter your mobile number ")
+                
+            }else{
+                
+            self.presenter.signup(mobile: text ?? "")
+            self.presenter.delegate = self
+                                  
+            mobileNumber = text ?? ""
             self.containerView.subviews.first?.removeFromSuperview()
             
             stepsIndicator.currentStep = 2
-            let vc=VerificationVC()
-            self.addChild(vc)
-            self.containerView.addSubview(vc.view)
+             vc=VerificationVC()
+            self.addChild(vc!)
+            self.containerView.addSubview(vc!.view)
             self.progressIndex=2
-            vc.didMove(toParent: self)
-            vc.view.frame = containerView.bounds
-            
+            vc!.didMove(toParent: self)
+            vc!.view.frame = containerView.bounds
+            }
         case 2 :
+            let text = (vc as! VerificationVC).codeTxtField.text
+            print(text ?? "")
+            if text?.isEmpty == true {
+                self.progressIndex=2
+
+                
+            }else{
+                self.presenter.checkCode(mobile:mobileNumber, code: text ?? "")
+                self.presenter.delegate=self
+
+                self.progressIndex=3
+
             let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NavigationController")
              self.sceneDelegate.setRootVC(vc: vc)
+            }
         default:
             print("error click")
         }
         
     }
+    
+    func showSnackBar(message:String){
+//        let action = MDCSnackbarMessageAction()
+        let answerMessage = MDCSnackbarMessage()
+        answerMessage.text =  message
+//        let actionHandler = {() in
+//          let answerMessage = MDCSnackbarMessage()
+//          answerMessage.text = "Fascinating"
+//            MDCSnackbarManager.show(answerMessage)
+//        }
+//        action.handler = actionHandler
+//        action.title = "OK"
+//        message.action = action
+        MDCSnackbarManager.default.show(answerMessage)
+    }
+}
+                                  
+extension LoginProgressViews:AuthDelegate{
+    func showAlerts(title: String, message: String) {
+        showSnackBar(message:message)
+    }
+               
+                
 }
