@@ -195,17 +195,12 @@ struct Goals:Codable{
 }
 
 struct Benchmark:Codable{
-    
-    let monthlyRevenue:[BenchmarkTopic]?
-    let nightlyAttendance:[BenchmarkTopic]?
-
-}
-
-struct BenchmarkTopic:Codable{
     let title:String?
-    let value:Int?
- 
+    let you_target:String?
+    let niche_target:String?
 }
+
+
 
 struct ResourceDetails:Decodable{
     
@@ -223,6 +218,22 @@ struct resourceDetailss:Codable{
     let open_ads_manager_title:String?
     let open_ads_manager_url:String?
     let ad_lessons_title:String?
+    let lessons:[Lessons]?
+    let category:Categories?
+    
+    
+}
+
+struct Lessons:Codable{
+    let id:Int?
+    let resource_id:Int?
+    let title:String?
+    let overview:String?
+    let key_aspects:String?
+    let key_takeaways:String?
+    let file:String?
+    let status:String?
+    let created_at:String?
 
     
 }

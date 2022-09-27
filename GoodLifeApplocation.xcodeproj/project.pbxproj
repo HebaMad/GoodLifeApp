@@ -46,6 +46,10 @@
 		27594D1F28A010CE00F4DDC3 /* GeneralMarketingPageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27594D1D28A010CE00F4DDC3 /* GeneralMarketingPageVC.xib */; };
 		27594D2228A017D600F4DDC3 /* GeneralLiturgicalPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27594D2028A017D600F4DDC3 /* GeneralLiturgicalPageVC.swift */; };
 		27594D2328A017D600F4DDC3 /* GeneralLiturgicalPageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27594D2128A017D600F4DDC3 /* GeneralLiturgicalPageVC.xib */; };
+		2764D6C728E2DCE800AC7F73 /* ResourceLessons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2764D6C528E2DCE800AC7F73 /* ResourceLessons.swift */; };
+		2764D6C828E2DCE800AC7F73 /* ResourceLessons.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2764D6C628E2DCE800AC7F73 /* ResourceLessons.xib */; };
+		2764D6CB28E2E47000AC7F73 /* LessonDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2764D6C928E2E47000AC7F73 /* LessonDetails.swift */; };
+		2764D6CC28E2E47000AC7F73 /* LessonDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2764D6CA28E2E47000AC7F73 /* LessonDetails.xib */; };
 		276796A928C3574B00AFEFE3 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276796A828C3574B00AFEFE3 /* CustomAlert.swift */; };
 		276796AB28C3586C00AFEFE3 /* CustomAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = 276796AA28C3586C00AFEFE3 /* CustomAlert.xib */; };
 		2767A271288F3CD600DF34D1 /* DonationThirdFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2767A26F288F3CD600DF34D1 /* DonationThirdFrame.swift */; };
@@ -255,6 +259,10 @@
 		27594D1D28A010CE00F4DDC3 /* GeneralMarketingPageVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeneralMarketingPageVC.xib; sourceTree = "<group>"; };
 		27594D2028A017D600F4DDC3 /* GeneralLiturgicalPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralLiturgicalPageVC.swift; sourceTree = "<group>"; };
 		27594D2128A017D600F4DDC3 /* GeneralLiturgicalPageVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeneralLiturgicalPageVC.xib; sourceTree = "<group>"; };
+		2764D6C528E2DCE800AC7F73 /* ResourceLessons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceLessons.swift; sourceTree = "<group>"; };
+		2764D6C628E2DCE800AC7F73 /* ResourceLessons.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResourceLessons.xib; sourceTree = "<group>"; };
+		2764D6C928E2E47000AC7F73 /* LessonDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDetails.swift; sourceTree = "<group>"; };
+		2764D6CA28E2E47000AC7F73 /* LessonDetails.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LessonDetails.xib; sourceTree = "<group>"; };
 		276796A828C3574B00AFEFE3 /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
 		276796AA28C3586C00AFEFE3 /* CustomAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomAlert.xib; sourceTree = "<group>"; };
 		2767A26F288F3CD600DF34D1 /* DonationThirdFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationThirdFrame.swift; sourceTree = "<group>"; };
@@ -875,6 +883,10 @@
 				2768DED928A3FE0A004C6A5B /* AddGoalVC.swift */,
 				2768DEDA28A3FE0A004C6A5B /* AddGoalVC.xib */,
 				2704245428A95EAD002EF7B5 /* AllCategoriesVC.swift */,
+				2764D6C528E2DCE800AC7F73 /* ResourceLessons.swift */,
+				2764D6C628E2DCE800AC7F73 /* ResourceLessons.xib */,
+				2764D6C928E2E47000AC7F73 /* LessonDetails.swift */,
+				2764D6CA28E2E47000AC7F73 /* LessonDetails.xib */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -1048,6 +1060,7 @@
 				2767A294289087DF00DF34D1 /* HeaderCollectionReusableView.xib in Resources */,
 				27C9AE3E288D39B300FA584A /* SplashScreen.xib in Resources */,
 				2767A276288F504A00DF34D1 /* DonationFourthFrame.xib in Resources */,
+				2764D6CC28E2E47000AC7F73 /* LessonDetails.xib in Resources */,
 				27C9AE5F288D3CB500FA584A /* Inter-Italic.ttf in Resources */,
 				27F4B14328B7F504003365A6 /* ContactUsVC.xib in Resources */,
 				27C9AE5E288D3CB500FA584A /* Inter-ExtraBoldItalic.ttf in Resources */,
@@ -1063,6 +1076,7 @@
 				273D3A9F28B0CED000860702 /* choosingMinistryNeedsVC.xib in Resources */,
 				27B8C8EE28A14C320011B039 /* MapVC.xib in Resources */,
 				2704244A28A6ED08002EF7B5 /* SpecificFinancialModel.xib in Resources */,
+				2764D6C828E2DCE800AC7F73 /* ResourceLessons.xib in Resources */,
 				27C9AE5D288D3CB500FA584A /* Inter-ExtraLight-BETA.ttf in Resources */,
 				27C9AE90288D54AA00FA584A /* OnBoardingFrame5.xib in Resources */,
 				27CB2064289BBA1E00E63694 /* PastGoalsCell.xib in Resources */,
@@ -1255,6 +1269,7 @@
 				2767A275288F504A00DF34D1 /* DonationFourthFrame.swift in Sources */,
 				27CB2071289C1B3F00E63694 /* ResourceCell.swift in Sources */,
 				270562D728C09DEB00B0124E /* DatePickingTextField.swift in Sources */,
+				2764D6CB28E2E47000AC7F73 /* LessonDetails.swift in Sources */,
 				2767A28328904A3800DF34D1 /* OtherFundsCollectionViewCell.swift in Sources */,
 				27CB205B289B0C6B00E63694 /* ResourceDetailsVC.swift in Sources */,
 				27876ABB28A4484B003A012A /* SpecificWebsiteVC.swift in Sources */,
@@ -1268,6 +1283,7 @@
 				27C9AE83288D4F0600FA584A /* OnBoardingFrame3.swift in Sources */,
 				27A7376028913FFF00FD8AD9 /* ProgressView.swift in Sources */,
 				27C9AE9E288D8BEC00FA584A /* OpportunityViewVC.swift in Sources */,
+				2764D6C728E2DCE800AC7F73 /* ResourceLessons.swift in Sources */,
 				27C9AE78288D470600FA584A /* OnBoardingVC.swift in Sources */,
 				27CB204D289AFDE800E63694 /* HaveAnIdeaVC.swift in Sources */,
 				27CB2067289BBEA600E63694 /* BenchmarksCell.swift in Sources */,

@@ -27,3 +27,86 @@ extension UILabel{
         self.attributedText = mutableAttributedString
     }
 }
+
+extension String {
+    var html2Attributed: NSAttributedString? {
+        do {
+            guard let data = data(using: String.Encoding.utf8) else {
+                return nil
+            }
+            return try NSAttributedString(data: data,
+                                          options: [.documentType: NSAttributedString.DocumentType.html,
+                                                    .characterEncoding: String.Encoding.utf8.rawValue],
+                                          documentAttributes: nil)
+        } catch {
+            print("error: ", error)
+            return nil
+        }
+    }
+    
+    var htmlAttributed: (NSAttributedString?, NSDictionary?) {
+        do {
+            guard let data = data(using: String.Encoding.utf8) else {
+                return (nil, nil)
+            }
+
+            var dict:NSDictionary?
+            dict = NSMutableDictionary()
+
+            return try (NSAttributedString(data: data,
+                                          options: [.documentType: NSAttributedString.DocumentType.html,
+                                                    .characterEncoding: String.Encoding.utf8.rawValue],
+                                          documentAttributes: &dict), dict)
+        } catch {
+            print("error: ", error)
+            return (nil, nil)
+        }
+    }
+    
+    func htmlAttributed(using font: UIFont, color: UIColor) -> NSAttributedString? {
+        do {
+            let htmlCSSString = "<style>" +
+                "html *" +
+                "{" +
+                "font-size: \(font.pointSize)pt !important;" +
+                "font-family: \(font.familyName), Helvetica !important;" +
+                "}</style> \(self)"
+
+            guard let data = htmlCSSString.data(using: String.Encoding.utf8) else {
+                return nil
+            }
+
+            return try NSAttributedString(data: data,
+                                          options: [.documentType: NSAttributedString.DocumentType.html,
+                                                    .characterEncoding: String.Encoding.utf8.rawValue],
+                                          documentAttributes: nil)
+        } catch {
+            print("error: ", error)
+            return nil
+        }
+    }
+
+    func htmlAttributed(family: String?, size: CGFloat, color: UIColor) -> NSAttributedString? {
+        do {
+            let htmlCSSString = "<style>" +
+                "html *" +
+                "{" +
+                "font-size: \(size)pt !important;" +
+                "font-family: \(family ?? "Helvetica"), Helvetica !important;" +
+            "}</style> \(self)"
+
+            guard let data = htmlCSSString.data(using: String.Encoding.utf8) else {
+                return nil
+            }
+
+            return try NSAttributedString(data: data,
+                                          options: [.documentType: NSAttributedString.DocumentType.html,
+                                                    .characterEncoding: String.Encoding.utf8.rawValue],
+                                          documentAttributes: nil)
+        } catch {
+            print("error: ", error)
+            return nil
+        }
+    }
+
+}

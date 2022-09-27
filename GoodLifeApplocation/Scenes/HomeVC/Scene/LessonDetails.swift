@@ -9,21 +9,24 @@ import UIKit
 
 class LessonDetails: UIViewController {
 
+    @IBOutlet weak var overviewTxt: UILabel!
+    @IBOutlet weak var keyAspectTxt: UILabel!
+    @IBOutlet weak var keyTakeawayTxt: UILabel!
+
+    var lesson:Lessons?
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupLessonData()
 
-        // Do any additional setup after loading the view.
     }
 
+    func setupLessonData(){
+        overviewTxt.text = lesson?.overview?.html2Attributed?.string
+        keyAspectTxt.text = lesson?.key_aspects?.html2Attributed?.string
+        keyTakeawayTxt.text = lesson?.key_takeaways?.html2Attributed?.string
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
+ 
 
 }

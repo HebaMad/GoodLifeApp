@@ -165,7 +165,7 @@ extension GoalAndBenchmarkVC:UITableViewDelegate, UITableViewDataSource{
             return cell
         case 2:
             let cell:BenchmarksCell = tableView.dequeueReusableCell(for: indexPath)
-//            cell.configureCell(title: benchmarks[indexPath.row]., firstValue: <#T##String#>, secondValue: <#T##String#>, FirstProgress: <#T##Int#>, secondProgress: <#T##Int#>)
+            cell.configureCell(title: benchmarks[indexPath.row].title ?? "", firstValue: benchmarks[indexPath.row].you_target ?? "", secondValue: benchmarks[indexPath.row].niche_target ?? "", FirstProgress: 500, secondProgress: 500)
             return cell
         default:
             return UITableViewCell()
@@ -184,6 +184,7 @@ extension GoalAndBenchmarkVC:DashboardDelegate{
     func getMyGoalAndBenchmark(data: GoalsAndBenchmark) {
         activeGoals = data.activeGoals ?? []
         pastGoals = data.pastGoals ?? []
+        benchmarks = data.benchmarks ?? []
         goalAndBenchmarkTableView.reloadData()
     }
     

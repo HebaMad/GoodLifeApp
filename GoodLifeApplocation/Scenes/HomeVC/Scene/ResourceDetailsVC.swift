@@ -79,7 +79,9 @@ private extension ResourceDetailsVC{
             UIApplication.shared.open(URL(string:managerUrl) ?? URL(fileURLWithPath: ""), options: [:], completionHandler: nil)
 
         case lessonsBtn:
-            print("")
+            let vc = ResourceLessons()
+            vc.lesson = resourceTopic?.resource?.lessons ?? []
+            navigationController?.pushViewController(vc, animated: true)
         default:
             print("")
 
