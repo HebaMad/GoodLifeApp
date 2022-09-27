@@ -170,7 +170,6 @@ struct Tasks:Codable{
     let created_at:String?
     let category:Categories?
 
-    
 }
 
 
@@ -179,7 +178,6 @@ struct GoalsAndBenchmark:Decodable{
     let activeGoals:[Goals]?
     let pastGoals:[Goals]?
     let benchmarks:[Benchmark]?
-
 
 }
 
