@@ -67,16 +67,16 @@ enum DashboardTarget:TargetType{
     
     var headers: [String : String]?{
         switch self{
-        case .AddTask,.AddGoal,.getMyTask,.markMyTask,.getMyGoalsAndBenchmark,.markMyGoal:
+        case .AddTask,.AddGoal,.getMyTask,.markMyTask,.getMyGoalsAndBenchmark,.markMyGoal,.resourceDetails,.Resources:
 //            do {
 //                let token = try KeychainWrapper.get(key: AppData.email) ?? ""
-                return ["Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImYxOGQ3YmY1OWQ1MTA5YmMzZDdmNTdjNjVjMTA0ZjMyNTkyNzYyNjZlMWFhNjMxNTMyODM0ZDM5NGM5NTlmNGRjZTNhNjNkYThiYmU4ZTczIn0.eyJhdWQiOiIxIiwianRpIjoiZjE4ZDdiZjU5ZDUxMDliYzNkN2Y1N2M2NWMxMDRmMzI1OTI3NjI2NmUxYWE2MzE1MzI4MzRkMzk0Yzk1OWY0ZGNlM2E2M2RhOGJiZThlNzMiLCJpYXQiOjE2NjIzMDY2MzYsIm5iZiI6MTY2MjMwNjYzNiwiZXhwIjoxNjkzODQyNjM2LCJzdWIiOiIyOCIsInNjb3BlcyI6W119.rtnkLw0dViiNlq2aAOAcngyHzeN0x-KElkwk4QP2SNBfvRQ4CQ_8oLCKJjMBv2rBARBHcrhJP4d71eYc_ilzeYj-MIx16eDoA3XnAlYhG_updsxL9WO3Kpze8UlJnjR5m1lrKwQ1bpeFnVWNNYw3vJkUr3U5lXVhzoPIE08tcaz_agXeN4kmkNht5BtSwed5Rv9BU-Z3DGInEPG5P3dDK94ssLAA-im9FrfewURIyRZUcZBHzbOzno6PkY2p6IbYkEWLRY5Ps3tPvn_feJcsZLhl0QhQXs28N4ayFs3V99MPhfJ9XuO4oDOknGHriPAFoZ_SAE2eewqQJ6oVJ_wJHk9VCDRnLtgMhLOGn3jlVDnQMahi2bsnQjKRslPnEgGnIno2kpzgC5EbPtZiujU1P6CnMYX9gPRtelIG0ChqCUFax5sKw-aMTwH0pAnXg_wCqTKgWo5Rkwsw-48e7O3hgOdtwQhghohF65by1Y00ATqqdSnsc4o2CgU7t11MscyA6OqSFkSGj3MjX3n-3zZ-XIwh_hdtnUHTpYkxVhu85rUi6ZFcfKp6jy6m1IREiJ2aXljt6PKucIfmSal-q55UrITHOEYoLVeJzt8YTDXCoIDkp2GPBnrO5bXWH2zcH8oygb0kx0e-TWhNhN1_7Uz-n1-Si1NkwW6CDada7nVHdPA" ,"Accept":"application/json","Accept-Language":"en"]
+                return ["Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImI1OGE5YjU5Mzc1OTNiNDliODNlZjkzZGNjY2U4NGNmNTEyMzNiNTlkN2FmNjFlNDVlMzlhMzc5YTMzOGEwMGU3YmE1MWIwMTE5MjYzMTQ3In0.eyJhdWQiOiIxIiwianRpIjoiYjU4YTliNTkzNzU5M2I0OWI4M2VmOTNkY2NjZTg0Y2Y1MTIzM2I1OWQ3YWY2MWU0NWUzOWEzNzlhMzM4YTAwZTdiYTUxYjAxMTkyNjMxNDciLCJpYXQiOjE2NjExMTM5OTgsIm5iZiI6MTY2MTExMzk5OCwiZXhwIjoxNjkyNjQ5OTk4LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.ja_-fbFeKtwesbWM7JH3QgWNDKdB5pP0Qni_JfvCh3iIZdMDJj-KJAe_SLSD4-XehtdrZkksKsZm8dC0uhNAx1XMfMUlRxSlwrOVZe0SPkQrIO1t1x_yVAmlXO8no3pwMky4i59G7jxsxN5aC9dwlMGUogKMo49Y5khvzNVLKsz6EBBMOMpeOjhjlI81A3NluDIDpoBgUqqZgvStdxjfAFhk7Zuj2_4oB-FdbHFucjPX1RWqRm-XDe51oW-Ws0fzj-hQPawl9dqkcRqo9-cze5U_z6NlbGIbfEvjZOEZMa1J1_J5koFG1cw5bWY5Q8urtRgn4sTkMD6hmySjCuC8FSE3J0T1RhVYuBNo8V83AeaYeo6rp_htmitllbpjQ1rR-319g2AdYapahYYOBGpYMl-lzfeluMBlWStb9z4wDqOkRFw8x5q6z5LRBg4-lbn2x5IRhadhmcxgJW---kptWgcAoe85nDp1e4I7DaZClVb94kQUwLnaEXgt6_UVwBoEKzBXD0BgndS6jlMdlQa9VIcaD6bYddrJRq5eG9D5EfEsqrNQm_piDI6ewG8cAtRAPtAuME4quvqRTXEjtIPLK-6jsuWdHcXixRE3nrOTvl3Ge8pRrqFT7Z98OjmKFqcE5-sCOA03J9FfylcLY46g2XVNpgLmr-EfqcJtOyMp66g" ,"Accept":"application/json","Accept-Language":"en"]
 //            }
 //            catch{
 //                return ["Accept":"application/json","Accept-Language":"en"]
 //            }
   
-        case .categories,.Resources,.resourceDetails:
+        case .categories:
             return ["Accept":"application/json","Accept-Language":"en"]
 
         }

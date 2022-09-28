@@ -226,14 +226,18 @@ struct Lessons:Codable{
     let id:Int?
     let resource_id:Int?
     let title:String?
-    let overview:String?
-    let key_aspects:String?
-    let key_takeaways:String?
+    let overview:[lessonTopic]?
+    let key_aspects:[lessonTopic]?
+    let key_takeaways:[lessonTopic]?
     let file:String?
     let status:String?
     let created_at:String?
 
     
+}
+
+struct lessonTopic:Codable{
+    let title:String?
 }
 struct questionAndAnswers:Codable{
     

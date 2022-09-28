@@ -17,6 +17,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LessonDetails" customModule="GoodLifeApplocation" customModuleProvider="target">
             <connections>
+                <outlet property="lessonDetailsCollectionview" destination="1hI-d1-8T8" id="xMS-DQ-el0"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

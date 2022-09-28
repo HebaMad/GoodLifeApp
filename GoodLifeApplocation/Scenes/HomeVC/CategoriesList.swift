@@ -35,3 +35,33 @@ enum categoriesList{
         }
     }
 }
+
+
+enum lessonDetails{
+    case overView([listData])
+    case keyAspect([listData])
+    case keyTakeaway([listData])
+    
+    var items: [listData] {
+        switch self {
+        case .overView(let items),.keyAspect(let items),.keyTakeaway(let items):
+               
+            return items
+        }
+    }
+    var count: Int {
+        return items.count
+    }
+    
+    var title: String {
+        switch self {
+        case .overView:
+            return "Overview"
+        case .keyAspect:
+            return "key Aspect"
+        case .keyTakeaway:
+            return "key Takeaways"
+  
+        }
+    }
+}

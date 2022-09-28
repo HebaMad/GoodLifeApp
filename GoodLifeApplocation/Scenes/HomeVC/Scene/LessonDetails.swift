@@ -7,26 +7,148 @@
 
 import UIKit
 
-class LessonDetails: UIViewController {
-
-    @IBOutlet weak var overviewTxt: UILabel!
-    @IBOutlet weak var keyAspectTxt: UILabel!
-    @IBOutlet weak var keyTakeawayTxt: UILabel!
-
+class LessonDetails: UIViewController{
+    
+    @IBOutlet weak var lessonDetailsCollectionview: UICollectionView!
     var lesson:Lessons?
-
+    private let sections = LessontopicDetails.shared.AllCategories
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLessonData()
-
+        
     }
-
+    
     func setupLessonData(){
-        overviewTxt.text = lesson?.overview?.html2Attributed?.string
-        keyAspectTxt.text = lesson?.key_aspects?.html2Attributed?.string
-        keyTakeawayTxt.text = lesson?.key_takeaways?.html2Attributed?.string
-
+        
+        lessonDetailsCollectionview.register(LessonDetailsCollectionCell.self)
+        lessonDetailsCollectionview.register(UINib(nibName:"HeaderCollectionReusableView", bundle: nil), forSupplementaryViewOfKind:UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.headerIdentifier)
+        lessonDetailsCollectionview.collectionViewLayout = createCompositionalLayout()
+        lessonDetailsCollectionview.delegate = self
+        lessonDetailsCollectionview.dataSource = self
+        lessonDetailsCollectionview.reloadData()
     }
- 
-
 }
+
+
+
+private extension LessonDetails{
+    private func createCompositionalLayout() -> UICollectionViewCompositionalLayout{
+        UICollectionViewCompositionalLayout { [weak self] sectionIndex, layoutEnviroment in
+            guard let self = self  else { return nil }
+            let section = self.sections[sectionIndex]
+            switch section {
+            case .overView:
+                
+                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(70))
+                
+                let item = NSCollectionLayoutItem(layoutSize: itemSize)
+                //                item.contentInsets = .init(top: 0, leading: 0, bottom: 0, trailing: 4)
+                
+                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(0.8))
+                
+                
+                let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+                group.contentInsets = .init(top: 0, leading: 0, bottom: 0, trailing: 0)
+                let section = NSCollectionLayoutSection(group: group)
+                
+                //                section.orthogonalScrollingBehavior = .continuous
+                section.contentInsets = .init(top: 0, leading: 4, bottom: 0, trailing: 4)
+                section.boundarySupplementaryItems = [self.supplementaryHeaderItem()]
+                section.supplementariesFollowContentInsets = false
+                return section
+            case .keyAspect:
+                
+                
+                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(40))
+                
+                let item = NSCollectionLayoutItem(layoutSize: itemSize)
+                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(0.5))
+                
+                let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+                
+                let section = NSCollectionLayoutSection(group: group)
+                //                section.orthogonalScrollingBehavior = .continuous
+                section.contentInsets = .init(top: 0, leading: 4, bottom: 0, trailing: 4)
+                section.boundarySupplementaryItems = [self.supplementaryHeaderItem()]
+                section.supplementariesFollowContentInsets = false
+                return section
+                
+            case .keyTakeaway:
+                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(60))
+                
+                let item = NSCollectionLayoutItem(layoutSize: itemSize)
+                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(0.5))
+                
+                let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+                
+                let section = NSCollectionLayoutSection(group: group)
+                //                section.orthogonalScrollingBehavior = .continuous
+                section.contentInsets = .init(top: 0, leading: 4, bottom: 0, trailing: 4)
+                section.boundarySupplementaryItems = [self.supplementaryHeaderItem()]
+                section.supplementariesFollowContentInsets = false
+                return section
+                
+                
+            }
+            
+        }
+    }
+    private func supplementaryHeaderItem() -> NSCollectionLayoutBoundarySupplementaryItem {
+        .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .estimated(50)), elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
+    }
+}
+extension LessonDetails:UICollectionViewDelegate{}
+extension LessonDetails:UICollectionViewDataSource{
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        
+        return sections.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+            switch sections[section]{
+            case .overView: return lesson?.overview?.count ?? 0
+            case .keyAspect :return lesson?.key_aspects?.count ?? 0
+            case .keyTakeaway:return lesson?.key_takeaways?.count ?? 0
+                
+            }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+
+            switch sections[indexPath.section] {
+            case .overView:
+                let cell:LessonDetailsCollectionCell = collectionView.dequeueReusableCell(for: indexPath)
+                cell.configureCell(title: lesson?.overview?[indexPath.row].title ?? "")
+                return cell
+                
+            case .keyAspect:
+                let cell:LessonDetailsCollectionCell = collectionView.dequeueReusableCell(for: indexPath)
+                cell.configureCell(title: lesson?.key_aspects?[indexPath.row].title ?? "")
+                return cell
+                
+            case .keyTakeaway:
+                let cell:LessonDetailsCollectionCell = collectionView.dequeueReusableCell(for: indexPath)
+                cell.configureCell(title: lesson?.key_takeaways?[indexPath.row].title ?? "")
+
+                return cell
+                
+            }
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    }
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.headerIdentifier, for: indexPath) as! HeaderCollectionReusableView
+ 
+        header.viewAllButton.isHidden = true
+        header.setup(sections[indexPath.section].title)
+        return header
+    }
+    
+    
+}
+

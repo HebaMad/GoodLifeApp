@@ -18,18 +18,18 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="●" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G4y-eE-1RP">
-                        <rect key="frame" x="8" y="12" width="20" height="20"/>
+                        <rect key="frame" x="8" y="12" width="10" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="VMW-ya-Zhq"/>
-                            <constraint firstAttribute="width" constant="20" id="YPA-Wh-dwM"/>
+                            <constraint firstAttribute="width" constant="10" id="YPA-Wh-dwM"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Qk-uG-XNW">
-                        <rect key="frame" x="34" y="12" width="308" height="20.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="22" y="12" width="320" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -37,7 +37,7 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="9Qk-uG-XNW" firstAttribute="leading" secondItem="G4y-eE-1RP" secondAttribute="trailing" constant="6" id="CQi-UK-W4I"/>
+                <constraint firstItem="9Qk-uG-XNW" firstAttribute="leading" secondItem="G4y-eE-1RP" secondAttribute="trailing" constant="4" id="CQi-UK-W4I"/>
                 <constraint firstItem="G4y-eE-1RP" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="Kto-vV-NaD"/>
                 <constraint firstAttribute="trailing" secondItem="9Qk-uG-XNW" secondAttribute="trailing" id="cxl-lu-W4a"/>
                 <constraint firstItem="9Qk-uG-XNW" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="12" id="hnf-yb-j25"/>
@@ -47,7 +47,7 @@
             <connections>
                 <outlet property="detailsTxt" destination="9Qk-uG-XNW" id="h4M-dE-fmM"/>
             </connections>
-            <point key="canvasLocation" x="349.27536231884062" y="153.01339285714286"/>
+            <point key="canvasLocation" x="171" y="159"/>
         </collectionViewCell>
     </objects>
 </document>

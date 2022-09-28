@@ -7,12 +7,15 @@
 
 import UIKit
 
-class LessonDetailsCollectionCell: UICollectionViewCell {
+class LessonDetailsCollectionCell: UICollectionViewCell,NibLoadableView {
 
     @IBOutlet weak var detailsTxt: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    func configureCell(title:String){
+        detailsTxt.text = title
     }
 
 }
