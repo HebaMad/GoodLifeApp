@@ -8,6 +8,7 @@
 import UIKit
 
 class FilterVC: UIViewController {
+    
     //MARK: - Outlet
 
     @IBOutlet weak var timeCommitmentTxt: UITextField!

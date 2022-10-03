@@ -8,6 +8,8 @@
 import UIKit
 import SideMenu
 import SkeletonView
+import FittedSheets
+
 class MapVC: UIViewController {
     
     //MARK: - Outlet
@@ -282,6 +284,11 @@ extension MapVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollection
 
         }else if collectionView == specificFilterCollectionview{
             
+            let controller = choosingMinistryNeedsVC()
+            let sheetController = SheetViewController(
+                controller: controller,
+                sizes: [ .intrinsic , .percent(0.80), .fixed(600), .intrinsic])
+            self.present(sheetController, animated: false, completion: nil)
             
         }else{
         }
