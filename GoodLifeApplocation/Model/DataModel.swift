@@ -12,6 +12,22 @@ struct Empty:Decodable{
 
 }
 
+struct Home:Decodable{
+    
+    let main_needs_types:[mainType]?
+    let recentlyViewed:[mainType]?
+    let recommendedMinistries:[mainType]?
+    
+}
+struct mainType:Codable{
+    let id:Int?
+    let main_category_id:Int?
+    let sub_category_id:Int?
+    let logo:String?
+    let name:String?
+    
+}
+
 struct userProfile: Decodable{
     
     let id:Int?

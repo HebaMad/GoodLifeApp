@@ -40,12 +40,18 @@
                                                 <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="NO"/>
+                                                </userDefinedRuntimeAttributes>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For Facebook Ads Manager" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZcP-mw-myU">
                                                 <rect key="frame" x="0.0" y="24.5" width="395" height="14.5"/>
                                                 <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="NO"/>
+                                                </userDefinedRuntimeAttributes>
                                             </label>
                                         </subviews>
                                     </stackView>
@@ -68,14 +74,23 @@
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="20" id="xcD-vK-BP2"/>
                                                         </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="NO"/>
+                                                        </userDefinedRuntimeAttributes>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:00 AM - 11:25 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4U-G1-qtL">
                                                         <rect key="frame" x="35" y="0.0" width="170" height="28"/>
                                                         <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="10"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="NO"/>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
                                                 </subviews>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="NO"/>
+                                                </userDefinedRuntimeAttributes>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NNZ-0p-ML0" customClass="UIButtonDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
                                                 <rect key="frame" x="255" y="0.0" width="140" height="28"/>
@@ -109,6 +124,7 @@
                                                         <real key="value" value="0.050000000000000003"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="diagonalMode" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="NO"/>
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                         </subviews>
@@ -142,6 +158,7 @@
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="diagonalMode" value="NO"/>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="horizontalMode" value="NO"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="NO"/>
                         </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>

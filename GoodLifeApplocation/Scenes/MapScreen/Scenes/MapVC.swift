@@ -7,6 +7,7 @@
 
 import UIKit
 import SideMenu
+import SkeletonView
 class MapVC: UIViewController {
     
     //MARK: - Outlet
@@ -21,6 +22,14 @@ class MapVC: UIViewController {
     private let sections = MapFilterList.shared.AllCategories
     private var menu :SideMenuNavigationController?
     private var categories=["Poverty","Orphans","Widows","Neighbor"]
+    let presenter = HomePresenter()
+    var recentlyViewed:[mainType]=[]
+    var recommendedMinistries:[mainType]=[]
+    private var isSkeleton: Bool = true {
+        didSet {
+            self.communityCollectionview.reloadData()
+        }
+    }
 
     //MARK: - Life cycle
     
@@ -63,6 +72,7 @@ class MapVC: UIViewController {
 
     //MARK: - SETUP Collection
     private func setupCollectionview(){
+        setupData()
         generalFilterCollectionview.register(FilterCell.self)
         generalFilterCollectionview.delegate = self
         generalFilterCollectionview.dataSource = self
@@ -152,6 +162,29 @@ private extension MapVC{
 
     }
 }
+
+
+//MARK: - setupData
+private extension MapVC {
+    
+    func setupData(){
+        
+        self.isSkeleton = true
+        presenter.getCategoriesData(searchTxt: "")
+        presenter.delegate = self
+        
+    }
+    
+    
+    
+    @objc func generalFilterPressed(_ sender:UIButton){
+        specificFilterCollectionview.isHidden = false
+
+//        self.presenter.markMyTask(taskid: myCurrentTask[sender.tag].id ?? 0)
+//        self.elementCollectionView.reloadData()
+        
+    }
+}
 //MARK: - delegate & datasource confirmation
 
 extension MapVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
@@ -170,8 +203,13 @@ extension MapVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollection
             return 5
             
         } else if collectionView == communityCollectionview{
+            
+            switch sections[section]{
+            case .recentlyViewed:return self.isSkeleton ? 3 :  recentlyViewed.count
+            case .recommendedMinistries:return self.isSkeleton ? 3 : recommendedMinistries.count
+            }
                 
-            return sections[section].count
+           
         }else{
             return 4
         }
@@ -179,21 +217,43 @@ extension MapVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        
         if collectionView == generalFilterCollectionview{
             let cell :FilterCell = collectionView.dequeueReusableCell(for: indexPath)
+            cell.categoriesFilterBtn.addTarget(self, action: #selector(generalFilterPressed), for: .touchUpInside)
+            cell.categoriesFilterBtn.tag=indexPath.row
+
             return cell
+            
+            
         }else if collectionView == communityCollectionview{
+   
             switch sections[indexPath.section] {
-            case .recentlyViewed(let items):
+            case .recentlyViewed:
                 
                 let cell:ActivityCell = collectionView.dequeueReusableCell(for: indexPath)
-                cell.setup(items[indexPath.row])
+                guard !self.isSkeleton else {
+                    cell.startSkeleton()
+                    return cell
+                }
+                cell.stopSkeleton()
+                
+                cell.setup(recentlyViewed[indexPath.row])
                 return cell
-            case .recommendedMinistries(let items ):
+            case .recommendedMinistries:
                 let cell:ActivityCell = collectionView.dequeueReusableCell(for: indexPath)
-                cell.setup(items[indexPath.row])
+                guard !self.isSkeleton else {
+                    cell.startSkeleton()
+                    return cell
+                }
+                cell.stopSkeleton()
+                
+                cell.setup(recommendedMinistries[indexPath.row])
                 return cell
             }
+            
+            
         }else {
             let cell :SpecificFilterCell = collectionView.dequeueReusableCell(for: indexPath)
             cell.setupCell(icon: categories[indexPath.row])
@@ -218,8 +278,10 @@ extension MapVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollection
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == generalFilterCollectionview{
-            specificFilterCollectionview.isHidden = false
+
+
         }else if collectionView == specificFilterCollectionview{
+            
             
         }else{
         }
@@ -234,5 +296,22 @@ extension MapVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollection
         header.setup(sections[indexPath.section].title)
         return header
     }
+    
+}
+
+extension MapVC :HomeDelegate{
+    func showAlerts(title: String, message: String) {
+         
+    }
+    
+    func getCategories(categories: Home) {
+        self.isSkeleton = false
+
+        recentlyViewed = categories.recentlyViewed ?? []
+        recommendedMinistries = categories.recommendedMinistries ?? []
+        communityCollectionview.reloadData()
+        
+    }
+    
     
 }

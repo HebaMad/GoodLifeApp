@@ -125,6 +125,7 @@ extension UIViewController{
        popUp.cancelButton.isHidden = hideCancelBtn
        popUp.okButton.setTitle(confirmBtnTitle ?? "OK", for: .normal)
        DispatchQueue.main.async {
+           
            self.view.addSubview(popUp)
        }
    }

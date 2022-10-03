@@ -6,21 +6,35 @@
 //
 
 import UIKit
+import AVKit
+import AVFoundation
 
 class LessonDetails: UIViewController{
     
+    //MARK: - Outlet
+    
     @IBOutlet weak var lessonDetailsCollectionview: UICollectionView!
+    @IBOutlet weak var videoPlayer: UIView!
+
+    //MARK: - Properties
+
     var lesson:Lessons?
     private let sections = LessontopicDetails.shared.AllCategories
-    
+    var playerViewController: AVPlayerViewController!
+    var isplayed = false
+
+    //MARK: - LifeCycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLessonData()
         
     }
     
+    //MARK: - setupCollectionview
+
     func setupLessonData(){
-        
+        setupVidePlayer()
         lessonDetailsCollectionview.register(LessonDetailsCollectionCell.self)
         lessonDetailsCollectionview.register(UINib(nibName:"HeaderCollectionReusableView", bundle: nil), forSupplementaryViewOfKind:UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.headerIdentifier)
         lessonDetailsCollectionview.collectionViewLayout = createCompositionalLayout()
@@ -28,6 +42,43 @@ class LessonDetails: UIViewController{
         lessonDetailsCollectionview.dataSource = self
         lessonDetailsCollectionview.reloadData()
     }
+    //MARK: - setup video player
+
+
+    private func setupVidePlayer(){
+        if  let _url = lesson?.file{
+            let urlvideoo = URL(string:_url)
+
+            let asset2 = AVAsset(url: urlvideoo!)
+            let playerItem = AVPlayerItem(asset: asset2)
+            let player = AVPlayer(playerItem: playerItem)
+            
+            let playerLayer = AVPlayerLayer(player: player)
+            playerLayer.frame = videoPlayer.bounds
+            playerLayer.videoGravity = .resizeAspect
+
+            playerViewController = AVPlayerViewController()
+            playerViewController.player = player
+            playerViewController.player?.play()
+            //gets the frame size of table view cell view
+            playerViewController.view.frame = CGRect (x:0, y:0, width:videoPlayer.frame.size.width, height:videoPlayer.frame.size.height)
+          
+            videoPlayer.addSubview(playerViewController.view)
+        
+        }
+    }
+    
+    
+    //MARK: - backBtn
+
+    @IBAction func backBtn(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    
+    
+    
+    
 }
 
 
@@ -98,7 +149,14 @@ private extension LessonDetails{
         .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .estimated(50)), elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
     }
 }
+
+   //MARK: - conform to UICollectionViewDelegate
+
 extension LessonDetails:UICollectionViewDelegate{}
+
+   //MARK: - conform to UICollectionViewDataSource
+
+
 extension LessonDetails:UICollectionViewDataSource{
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         

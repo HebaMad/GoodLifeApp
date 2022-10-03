@@ -22,7 +22,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             _delegate.window = window
         }
         
-        let vc = SplashScreen()
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NavigationController")
+
         setRootVC(vc: vc)
     }
     func setRootVC(vc:UIViewController){

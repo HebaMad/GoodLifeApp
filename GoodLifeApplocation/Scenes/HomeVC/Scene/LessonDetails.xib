@@ -18,6 +18,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LessonDetails" customModule="GoodLifeApplocation" customModuleProvider="target">
             <connections>
                 <outlet property="lessonDetailsCollectionview" destination="1hI-d1-8T8" id="xMS-DQ-el0"/>
+                <outlet property="videoPlayer" destination="DXq-1i-vNI" id="YiU-kT-Hf4"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -37,6 +38,9 @@
                             <color key="tintColor" red="0.78039215689999997" green="0.78039215689999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" image="chevron.backward" catalog="system"/>
+                            <connections>
+                                <action selector="backBtn:" destination="-1" eventType="touchUpInside" id="QDY-ea-Gw2"/>
+                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lesson" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4UM-E2-htr">
                             <rect key="frame" x="176.5" y="14" width="61" height="22"/>
@@ -56,8 +60,8 @@
                         <constraint firstItem="4UM-E2-htr" firstAttribute="centerX" secondItem="bgf-Dt-pMj" secondAttribute="centerX" id="x6E-eZ-EvB"/>
                     </constraints>
                 </view>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="1hI-d1-8T8">
-                    <rect key="frame" x="12" y="105" width="390" height="745"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="1hI-d1-8T8">
+                    <rect key="frame" x="12" y="301" width="390" height="595"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hyx-bh-fkm">
                         <size key="itemSize" width="128" height="128"/>
@@ -66,17 +70,27 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DXq-1i-vNI">
+                    <rect key="frame" x="20" y="97" width="374" height="200"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="RQv-CK-yrX"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="1hI-d1-8T8" secondAttribute="bottom" constant="12" id="0aC-cx-QSD"/>
                 <constraint firstItem="1hI-d1-8T8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="7XG-R5-nak"/>
+                <constraint firstItem="DXq-1i-vNI" firstAttribute="top" secondItem="bgf-Dt-pMj" secondAttribute="bottom" constant="4" id="E4f-dk-4Tj"/>
+                <constraint firstItem="1hI-d1-8T8" firstAttribute="top" secondItem="DXq-1i-vNI" secondAttribute="bottom" constant="4" id="LcC-mK-Nb4"/>
                 <constraint firstItem="bgf-Dt-pMj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="MEV-Kx-HSc"/>
+                <constraint firstItem="DXq-1i-vNI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Qy9-Kc-0VC"/>
                 <constraint firstItem="bgf-Dt-pMj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="43" id="RwO-E0-PCv"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1hI-d1-8T8" secondAttribute="trailing" constant="12" id="Upi-ha-96w"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bgf-Dt-pMj" secondAttribute="trailing" id="Zyo-Aq-a84"/>
-                <constraint firstItem="1hI-d1-8T8" firstAttribute="top" secondItem="bgf-Dt-pMj" secondAttribute="bottom" constant="12" id="hAF-mj-iwo"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="DXq-1i-vNI" secondAttribute="trailing" constant="20" id="kZY-E1-115"/>
+                <constraint firstAttribute="bottom" secondItem="1hI-d1-8T8" secondAttribute="bottom" id="tOJ-Jl-nrz"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="123.88392857142857"/>
         </view>

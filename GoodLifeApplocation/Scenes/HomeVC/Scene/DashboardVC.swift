@@ -7,6 +7,7 @@
 
 import UIKit
 import SideMenu
+import  SkeletonView
 class DashboardVC: UIViewController {
     //MARK: - Outlet
 
@@ -24,16 +25,23 @@ class DashboardVC: UIViewController {
     var resource:[Resources]=[]
     var myCurrentTask:[Tasks]=[]
     var myCompletedTask:[Tasks]=[]
+    private var isSkeleton: Bool = true {
+        didSet {
+            self.elementCollectionView.reloadData()
+        }
+    }
 
     
     //MARK: - Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.isSkeleton = true
+
         setUpSideMenu()
         setupCollectionview()
         menuBtnBinding()
+
         presenter.getCategories()
         presenter.getResource()
         presenter.getMyTask()
@@ -214,9 +222,9 @@ extension DashboardVC: UICollectionViewDataSource,UICollectionViewDelegate,UICol
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
             switch sections[section]{
-            case .categories: return categories.count
-            case .Task :return myCurrentTask.count
-            case .Resource:return resource.count
+            case .categories: return self.isSkeleton ? 3 :categories.count
+            case .Task :return self.isSkeleton ? 2 : myCurrentTask.count
+            case .Resource:return self.isSkeleton ? 3 : resource.count
                 
             }
         }
@@ -227,11 +235,21 @@ extension DashboardVC: UICollectionViewDataSource,UICollectionViewDelegate,UICol
         case .categories:
             
             let cell:CategoriesCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
+            guard !self.isSkeleton else {
+                cell.startSkeleton()
+                return cell
+            }
+            cell.stopSkeleton()
             cell.setup(categories[indexPath.row])
             return cell
             
         case .Task:
             let cell:TaskCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
+            guard !self.isSkeleton else {
+                cell.startSkeleton()
+                return cell
+            }
+            cell.stopSkeleton()
             cell.setup(myCurrentTask[indexPath.row])
             cell.DoneBtn.addTarget(self, action: #selector(markDoneBtn), for: .touchUpInside)
             cell.DoneBtn.tag=indexPath.row
@@ -239,7 +257,13 @@ extension DashboardVC: UICollectionViewDataSource,UICollectionViewDelegate,UICol
 
             return cell
         case .Resource:
+            
             let cell:ResourceCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
+            guard !self.isSkeleton else {
+                cell.startSkeleton()
+                return cell
+            }
+            cell.stopSkeleton()
             cell.setup(resource[indexPath.row])
 
             return cell
@@ -292,16 +316,22 @@ extension DashboardVC:DashboardDelegate{
     }
     
     func getCategories(data: [Categories]) {
+        self.isSkeleton = false
+
         categories=data
         elementCollectionView.reloadData()
     }
     
     func getResource(data: [Resources]) {
+        self.isSkeleton = false
+
      resource = data
         elementCollectionView.reloadData()
     }
     
     func getMyTask(data: DashboardTask) {
+        self.isSkeleton = false
+
         myCompletedTask=data.completedTasks ?? []
         myCurrentTask = data.currentTasks ?? []
         elementCollectionView.reloadData()

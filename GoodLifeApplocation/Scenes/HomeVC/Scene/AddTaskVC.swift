@@ -82,6 +82,7 @@ private extension AddTaskVC{
                }
 
            }catch{
+               
                self.showAlert(title: "Warning", message: (error as! ValidationError).message,hideCancelBtn: true)
 
            }
@@ -144,10 +145,6 @@ print("\(title ?? "")")
         CategoryChoice.setTextFieldTitle(title: categories[row].title ?? "")
         self.itemID=categories[row].id ?? 0
     }
-    
-    
-    
-    
-    
+   
     
 }
