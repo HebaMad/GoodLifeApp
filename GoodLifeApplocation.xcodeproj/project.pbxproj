@@ -210,6 +210,11 @@
 		27CB2099289FC79700E63694 /* SpecificPagerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27CB2097289FC79700E63694 /* SpecificPagerVC.xib */; };
 		27CB209C289FFE9800E63694 /* GeneralFinicialPagerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CB209A289FFE9800E63694 /* GeneralFinicialPagerVC.swift */; };
 		27CB209D289FFE9800E63694 /* GeneralFinicialPagerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27CB209B289FFE9800E63694 /* GeneralFinicialPagerVC.xib */; };
+		27ECA33828E982EA003DCF53 /* HomeTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ECA33728E982EA003DCF53 /* HomeTarget.swift */; };
+		27ECA33A28E99154003DCF53 /* HomeNetworkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ECA33928E99154003DCF53 /* HomeNetworkable.swift */; };
+		27ECA33D28EB25C1003DCF53 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ECA33C28EB25C1003DCF53 /* HomePresenter.swift */; };
+		27ECA33F28EB2FE0003DCF53 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ECA33E28EB2FE0003DCF53 /* UIViewExtension.swift */; };
+		27ECA34128EB313F003DCF53 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ECA34028EB313F003DCF53 /* Reusable.swift */; };
 		27F4B14228B7F504003365A6 /* ContactUsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F4B14028B7F504003365A6 /* ContactUsVC.swift */; };
 		27F4B14328B7F504003365A6 /* ContactUsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27F4B14128B7F504003365A6 /* ContactUsVC.xib */; };
 		27F4B14628B8A663003365A6 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F4B14428B8A663003365A6 /* ProfileVC.swift */; };
@@ -429,6 +434,11 @@
 		27CB2097289FC79700E63694 /* SpecificPagerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpecificPagerVC.xib; sourceTree = "<group>"; };
 		27CB209A289FFE9800E63694 /* GeneralFinicialPagerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralFinicialPagerVC.swift; sourceTree = "<group>"; };
 		27CB209B289FFE9800E63694 /* GeneralFinicialPagerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeneralFinicialPagerVC.xib; sourceTree = "<group>"; };
+		27ECA33728E982EA003DCF53 /* HomeTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTarget.swift; sourceTree = "<group>"; };
+		27ECA33928E99154003DCF53 /* HomeNetworkable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNetworkable.swift; sourceTree = "<group>"; };
+		27ECA33C28EB25C1003DCF53 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		27ECA33E28EB2FE0003DCF53 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		27ECA34028EB313F003DCF53 /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		27F4B14028B7F504003365A6 /* ContactUsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsVC.swift; sourceTree = "<group>"; };
 		27F4B14128B7F504003365A6 /* ContactUsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactUsVC.xib; sourceTree = "<group>"; };
 		27F4B14428B8A663003365A6 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
@@ -512,6 +522,7 @@
 				277CF36728BD5AD700F2874F /* MenuPresenter.swift */,
 				277CF36928BD5DAF00F2874F /* ProfilePresenter.swift */,
 				270562D428C090D400B0124E /* DashboardPresenter.swift */,
+				27ECA33C28EB25C1003DCF53 /* HomePresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -563,6 +574,7 @@
 		27B54D8428BA635E0074A6A1 /* Networkable */ = {
 			isa = PBXGroup;
 			children = (
+				27ECA33628E982D0003DCF53 /* Home */,
 				270562CE28BFD18A00B0124E /* Dashboard */,
 				27B54D9928BAC0C30074A6A1 /* SignUp */,
 				27B54D9428BA994C0074A6A1 /* Menu */,
@@ -574,6 +586,7 @@
 		27B54D8B28BA6C960074A6A1 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				27ECA33E28EB2FE0003DCF53 /* UIViewExtension.swift */,
 				27B54D8C28BA6CA20074A6A1 /* AppConfig.swift */,
 				27B54D8E28BA6D8B0074A6A1 /* KeychainWrapper.swift */,
 				27B54D9028BA6DA50074A6A1 /* KeychainOperations.swift */,
@@ -739,6 +752,7 @@
 		27C9AE6C288D444B00FA584A /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				27ECA34028EB313F003DCF53 /* Reusable.swift */,
 				27B8C8FF28A198BB0011B039 /* NibLoadableView.swift */,
 				2704245228A95AAE002EF7B5 /* Storyboarded.swift */,
 				27B54D8928BA674E0074A6A1 /* Networkable.swift */,
@@ -933,6 +947,15 @@
 				2704244828A6ED08002EF7B5 /* SpecificFinancialModel.xib */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		27ECA33628E982D0003DCF53 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				27ECA33728E982EA003DCF53 /* HomeTarget.swift */,
+				27ECA33928E99154003DCF53 /* HomeNetworkable.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		27F4B13E28B7F4B0003365A6 /* ProfileSetting */ = {
@@ -1228,6 +1251,7 @@
 				27A737642891405200FD8AD9 /* CollectionViewHelper.swift in Sources */,
 				27CB2089289D48BD00E63694 /* CategoriesList.swift in Sources */,
 				2704244928A6ED08002EF7B5 /* SpecificFinancialModel.swift in Sources */,
+				27ECA33828E982EA003DCF53 /* HomeTarget.swift in Sources */,
 				2767A293289087DF00DF34D1 /* HeaderCollectionReusableView.swift in Sources */,
 				27C9AEA2288D971700FA584A /* VolunteerOpportunityVC.swift in Sources */,
 				27B54D8128BA62790074A6A1 /* SettingTarget.swift in Sources */,
@@ -1259,8 +1283,10 @@
 				27C9AEAA288DA8E300FA584A /* TaskCollectionViewCell.swift in Sources */,
 				27A7377B2891D16100FD8AD9 /* SubscriptionCollectionViewCell.swift in Sources */,
 				27B54D8D28BA6CA20074A6A1 /* AppConfig.swift in Sources */,
+				27ECA33D28EB25C1003DCF53 /* HomePresenter.swift in Sources */,
 				2767A27F2890478200DF34D1 /* FeaturedFundsCollectionViewCell.swift in Sources */,
 				277CF36A28BD5DAF00F2874F /* ProfilePresenter.swift in Sources */,
+				27ECA34128EB313F003DCF53 /* Reusable.swift in Sources */,
 				2704244628A6E014002EF7B5 /* BusinessPlanList.swift in Sources */,
 				27CB206A289BC15C00E63694 /* SegmentControl.swift in Sources */,
 				27CB2087289D467500E63694 /* DashboardVC.swift in Sources */,
@@ -1277,6 +1303,7 @@
 				27A7376E2891435C00FD8AD9 /* UIImageViewDesignable.swift in Sources */,
 				27C9AE29288D38E900FA584A /* SceneDelegate.swift in Sources */,
 				27CB2051289B006100E63694 /* ReviewExperienceVC.swift in Sources */,
+				27ECA33F28EB2FE0003DCF53 /* UIViewExtension.swift in Sources */,
 				27B54D8A28BA674E0074A6A1 /* Networkable.swift in Sources */,
 				2767A275288F504A00DF34D1 /* DonationFourthFrame.swift in Sources */,
 				27CB2071289C1B3F00E63694 /* ResourceCell.swift in Sources */,
@@ -1297,6 +1324,7 @@
 				27C9AE9E288D8BEC00FA584A /* OpportunityViewVC.swift in Sources */,
 				2764D6C728E2DCE800AC7F73 /* ResourceLessons.swift in Sources */,
 				27C9AE78288D470600FA584A /* OnBoardingVC.swift in Sources */,
+				27ECA33A28E99154003DCF53 /* HomeNetworkable.swift in Sources */,
 				27CB204D289AFDE800E63694 /* HaveAnIdeaVC.swift in Sources */,
 				27CB2067289BBEA600E63694 /* BenchmarksCell.swift in Sources */,
 				27CB208B289D4A9300E63694 /* HomeCategories.swift in Sources */,

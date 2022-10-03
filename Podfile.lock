@@ -84,6 +84,7 @@ PODS:
     - SDWebImage/Core (= 5.12.1)
   - SDWebImage/Core (5.12.1)
   - SideMenu (6.5.0)
+  - SkeletonView (1.30.1)
   - SVProgressHUD (2.2.5)
   - SwiftAlgorithms (1.0.0)
   - XLPagerTabStrip (9.0.0)
@@ -97,6 +98,7 @@ DEPENDENCIES:
   - RangeSeekSlider
   - SDWebImage (~> 5.0)
   - SideMenu
+  - SkeletonView
   - SVProgressHUD
   - XLPagerTabStrip (~> 9.0)
 
@@ -113,6 +115,7 @@ SPEC REPOS:
     - RangeSeekSlider
     - SDWebImage
     - SideMenu
+    - SkeletonView
     - SVProgressHUD
     - SwiftAlgorithms
     - XLPagerTabStrip
@@ -129,10 +132,11 @@ SPEC CHECKSUMS:
   RangeSeekSlider: 650b11fa1edcb92e1e0ede797669d98622570fb5
   SDWebImage: 4dc3e42d9ec0c1028b960a33ac6b637bb432207b
   SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
+  SkeletonView: f1e8e19841be437746f07b7dc7ce4d028b698b96
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftAlgorithms: 38dda4731d19027fdeee1125f973111bf3386b53
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: 6c6d37954ef2f8e16b1d30559fd17d3ff3d7001e
+PODFILE CHECKSUM: fbe854b0962ae8be8f7e667ef729359eb6eb3d96
 
 COCOAPODS: 1.11.2

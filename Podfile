@@ -16,4 +16,5 @@ target 'GoodLifeApplocation' do
   pod 'SVProgressHUD'
   pod 'SDWebImage', '~> 5.0'
   pod 'MaterialComponents/Snackbar'
+  pod 'SkeletonView'
 end
