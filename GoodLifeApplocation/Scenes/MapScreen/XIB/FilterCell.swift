@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import SDWebImage
 class FilterCell: UICollectionViewCell,NibLoadableView   {
     
     //MARK: - Outlet
@@ -18,6 +18,10 @@ class FilterCell: UICollectionViewCell,NibLoadableView   {
     override func awakeFromNib() {
         super.awakeFromNib()
 
+    }
+    
+    func configureCell(category:MainCategories){
+        categoriesFilterBtn.sd_setImage(with:URL(string: category.icon ?? ""), for: .normal)
     }
 
 }

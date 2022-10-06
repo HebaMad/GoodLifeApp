@@ -19,6 +19,14 @@ struct Home:Decodable{
     let recommendedMinistries:[mainType]?
     
 }
+
+
+struct CategoriesFiltering:Decodable{
+    
+    let main_needs_types:[mainType]?
+    
+}
+
 struct mainType:Codable{
     let id:Int?
     let main_category_id:Int?
@@ -27,7 +35,23 @@ struct mainType:Codable{
     let name:String?
     
 }
+struct MainHomeCategories:Decodable{
+    let data:[MainCategories]?
+}
+struct SubHomeCategories:Decodable{
+    let data:[MainCategories]?
 
+}
+
+struct MainCategories:Codable{
+    let id:Int?
+    let type:String?
+    let status:String?
+    let icon:String?
+    let created_at:String?
+    let name:String?
+    
+}
 struct userProfile: Decodable{
     
     let id:Int?

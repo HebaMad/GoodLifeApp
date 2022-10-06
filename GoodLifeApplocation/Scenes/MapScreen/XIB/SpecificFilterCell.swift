@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import SDWebImage
 class SpecificFilterCell: UICollectionViewCell,NibLoadableView   {
     
     //MARK: - outlet
@@ -24,8 +24,9 @@ class SpecificFilterCell: UICollectionViewCell,NibLoadableView   {
     
     //MARK: - Configuration
     
-    func setupCell(icon:String){
-        categoriesIcon.image = UIImage(named: icon)
-        categoriesTitle.text = icon
+    func setupCell(icon:String,title:String){
+        categoriesIcon.sd_setImage(with: URL(string: icon))
+        categoriesTitle.text = title
     }
 }
+

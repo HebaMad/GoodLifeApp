@@ -10,12 +10,16 @@ import Moya
 protocol HomeNetworkable:Networkable  {
 
     func Home(txt:String,completion: @escaping (Result<BaseResponse<Home>, Error>)-> ())
+    func MainCategory(completion: @escaping (Result<BaseResponse<MainHomeCategories>, Error>)-> ())
+    func subCategory(completion: @escaping (Result<BaseResponse<SubHomeCategories>, Error>)-> ())
+    func categoriesFiltering(mainCategoriesID:String,subCategoriesID:String,completion: @escaping (Result<BaseResponse<CategoriesFiltering>, Error>)-> ())
     
 }
 
 class HomeManager:HomeNetworkable{
-
+  
     
+ 
     typealias targetType = HomeApiTarget
 
     var provider: MoyaProvider<HomeApiTarget> = MoyaProvider<HomeApiTarget>(plugins: [NetworkLoggerPlugin()])
@@ -28,6 +32,16 @@ class HomeManager:HomeNetworkable{
     func Home(txt: String, completion: @escaping (Result<BaseResponse<Home>, Error>) -> ()) {
         request(target: .Home(txt: txt), completion: completion)
     }
+    func MainCategory(completion: @escaping (Result<BaseResponse<MainHomeCategories>, Error>) -> ()) {
+        request(target: .getNeedMainCategory, completion: completion)
+    }
+    func subCategory(completion: @escaping (Result<BaseResponse<SubHomeCategories>, Error>) -> ()) {
+        request(target: .getNeedSubCategory, completion: completion)
+    }
+    func categoriesFiltering(mainCategoriesID: String, subCategoriesID: String, completion: @escaping (Result<BaseResponse<CategoriesFiltering>, Error>) -> ()) {
+        request(target: .categoriesFiltering(mainCategoriesID: mainCategoriesID, subCategoriesID: subCategoriesID), completion: completion)
+    }
+
 
     
 }

@@ -27,6 +27,12 @@ class MapVC: UIViewController {
     let presenter = HomePresenter()
     var recentlyViewed:[mainType]=[]
     var recommendedMinistries:[mainType]=[]
+    var generalFiltering:[MainCategories]=[]
+    var specificFiltering:[MainCategories]=[]
+    var categoriesFiltered:[mainType]=[]
+
+    
+    var categoryMainId = 0
     private var isSkeleton: Bool = true {
         didSet {
             self.communityCollectionview.reloadData()
@@ -74,6 +80,7 @@ class MapVC: UIViewController {
 
     //MARK: - SETUP Collection
     private func setupCollectionview(){
+
         setupData()
         generalFilterCollectionview.register(FilterCell.self)
         generalFilterCollectionview.delegate = self
@@ -174,6 +181,13 @@ private extension MapVC {
         self.isSkeleton = true
         presenter.getCategoriesData(searchTxt: "")
         presenter.delegate = self
+
+        presenter.mainStandardFilter()
+        presenter.delegate = self
+        
+        presenter.subStandardFilter()
+        presenter.delegate = self
+
         
     }
     
@@ -181,7 +195,7 @@ private extension MapVC {
     
     @objc func generalFilterPressed(_ sender:UIButton){
         specificFilterCollectionview.isHidden = false
-
+        categoryMainId = generalFiltering[sender.tag].id ?? 0
 //        self.presenter.markMyTask(taskid: myCurrentTask[sender.tag].id ?? 0)
 //        self.elementCollectionView.reloadData()
         
@@ -202,7 +216,7 @@ extension MapVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollection
        
         if collectionView == generalFilterCollectionview{
             
-            return 5
+            return generalFiltering.count
             
         } else if collectionView == communityCollectionview{
             
@@ -213,7 +227,7 @@ extension MapVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollection
                 
            
         }else{
-            return 4
+            return specificFiltering.count
         }
         
     }
@@ -223,6 +237,7 @@ extension MapVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollection
         
         if collectionView == generalFilterCollectionview{
             let cell :FilterCell = collectionView.dequeueReusableCell(for: indexPath)
+            cell.configureCell(category: generalFiltering[indexPath.row])
             cell.categoriesFilterBtn.addTarget(self, action: #selector(generalFilterPressed), for: .touchUpInside)
             cell.categoriesFilterBtn.tag=indexPath.row
 
@@ -258,7 +273,7 @@ extension MapVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollection
             
         }else {
             let cell :SpecificFilterCell = collectionView.dequeueReusableCell(for: indexPath)
-            cell.setupCell(icon: categories[indexPath.row])
+            cell.setupCell(icon: specificFiltering[indexPath.row].icon ?? "", title: specificFiltering[indexPath.row].name ?? "")
             return cell
         }
     }
@@ -283,12 +298,13 @@ extension MapVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollection
 
 
         }else if collectionView == specificFilterCollectionview{
-            
-            let controller = choosingMinistryNeedsVC()
-            let sheetController = SheetViewController(
-                controller: controller,
-                sizes: [ .intrinsic , .percent(0.80), .fixed(600), .intrinsic])
-            self.present(sheetController, animated: false, completion: nil)
+            self.presenter.categriesFailtered(mainCategoriesID: "\(categoryMainId)", subCategoriesID: "\(specificFiltering[indexPath.row].id ?? 0)")
+            self.presenter.delegate = self
+//            let controller = choosingMinistryNeedsVC()
+//            let sheetController = SheetViewController(
+//                controller: controller,
+//                sizes: [ .intrinsic , .percent(0.80), .fixed(600), .intrinsic])
+//            self.present(sheetController, animated: false, completion: nil)
             
         }else{
         }
@@ -307,6 +323,21 @@ extension MapVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollection
 }
 
 extension MapVC :HomeDelegate{
+    func getCategoriesFiltered(categories: CategoriesFiltering) {
+        categoriesFiltered = categories.main_needs_types ?? []
+    }
+    
+    func getsubCategoriesFiltering(categories: SubHomeCategories) {
+        specificFiltering = categories.data ?? []
+        specificFilterCollectionview.reloadData()
+    }
+    
+    func getStandardCategoriesFiltering(categories: MainHomeCategories) {
+        generalFiltering = categories.data ?? []
+        print(generalFiltering)
+        generalFilterCollectionview.reloadData()
+    }
+    
     func showAlerts(title: String, message: String) {
          
     }
