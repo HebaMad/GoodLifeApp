@@ -17,4 +17,6 @@ target 'GoodLifeApplocation' do
   pod 'SDWebImage', '~> 5.0'
   pod 'MaterialComponents/Snackbar'
   pod 'SkeletonView'
+  pod 'DropDown'
+
 end

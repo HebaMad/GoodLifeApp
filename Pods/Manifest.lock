@@ -4,6 +4,7 @@ PODS:
     - Charts/Core (= 4.0.3)
   - Charts/Core (4.0.3):
     - SwiftAlgorithms (~> 1.0)
+  - DropDown (2.3.13)
   - FittedSheets (2.4.2)
   - IQKeyboardManagerSwift (6.3.0)
   - MaterialComponents/AnimationTiming (124.2.0)
@@ -91,6 +92,7 @@ PODS:
 
 DEPENDENCIES:
   - Charts
+  - DropDown
   - FittedSheets
   - IQKeyboardManagerSwift (= 6.3.0)
   - MaterialComponents/Snackbar
@@ -106,6 +108,7 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - Charts
+    - DropDown
     - FittedSheets
     - IQKeyboardManagerSwift
     - MaterialComponents
@@ -123,6 +126,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
   Charts: d959d6723c8eedfdd0735dfc28cb0a71762ac4d9
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   FittedSheets: 661408776eb4ff514a31da75b3600bd7222b2b3d
   IQKeyboardManagerSwift: a8228c257614af98743b4cd8584637025f36358f
   MaterialComponents: 1a9b2d9d45b1601ae544de85089adc4c464306d4
@@ -137,6 +141,6 @@ SPEC CHECKSUMS:
   SwiftAlgorithms: 38dda4731d19027fdeee1125f973111bf3386b53
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: fbe854b0962ae8be8f7e667ef729359eb6eb3d96
+PODFILE CHECKSUM: dc8bccda231de2eda0f03d53ed395d82423116d6
 
 COCOAPODS: 1.11.2
