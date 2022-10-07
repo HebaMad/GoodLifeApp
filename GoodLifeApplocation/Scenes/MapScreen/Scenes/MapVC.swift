@@ -301,10 +301,12 @@ extension MapVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollection
             self.presenter.categriesFailtered(mainCategoriesID: "\(categoryMainId)", subCategoriesID: "\(specificFiltering[indexPath.row].id ?? 0)")
             self.presenter.delegate = self
 //            let controller = choosingMinistryNeedsVC()
-//            let sheetController = SheetViewController(
-//                controller: controller,
+            let controller = FilterVC()
+            let sheetController = SheetViewController(
+                controller: controller,
 //                sizes: [ .intrinsic , .percent(0.80), .fixed(600), .intrinsic])
-//            self.present(sheetController, animated: false, completion: nil)
+                sizes: [ .marginFromTop(350)])
+            self.present(sheetController, animated: false, completion: nil)
             
         }else{
         }
@@ -328,12 +330,12 @@ extension MapVC :HomeDelegate{
     }
     
     func getsubCategoriesFiltering(categories: SubHomeCategories) {
-        specificFiltering = categories.data ?? []
+        specificFiltering = categories.categories ?? []
         specificFilterCollectionview.reloadData()
     }
     
     func getStandardCategoriesFiltering(categories: MainHomeCategories) {
-        generalFiltering = categories.data ?? []
+        generalFiltering = categories.categories ?? []
         print(generalFiltering)
         generalFilterCollectionview.reloadData()
     }

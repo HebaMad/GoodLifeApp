@@ -36,10 +36,10 @@ struct mainType:Codable{
     
 }
 struct MainHomeCategories:Decodable{
-    let data:[MainCategories]?
+    let categories:[MainCategories]?
 }
 struct SubHomeCategories:Decodable{
-    let data:[MainCategories]?
+    let categories:[MainCategories]?
 
 }
 
