@@ -13,12 +13,11 @@ protocol HomeNetworkable:Networkable  {
     func MainCategory(completion: @escaping (Result<BaseResponse<MainHomeCategories>, Error>)-> ())
     func subCategory(completion: @escaping (Result<BaseResponse<SubHomeCategories>, Error>)-> ())
     func categoriesFiltering(mainCategoriesID:String,subCategoriesID:String,completion: @escaping (Result<BaseResponse<CategoriesFiltering>, Error>)-> ())
-    
+    func getOpportunities(needTypeId:Int,interestId:Int,completion: @escaping (Result<BaseResponse<Oppourtinity>, Error>)-> ())
+    func oppourtinityDetails(opportunity_id:Int,completion: @escaping (Result<BaseResponse<packageDetails>, Error>)-> ())
 }
 
 class HomeManager:HomeNetworkable{
-  
-    
  
     typealias targetType = HomeApiTarget
 
@@ -41,7 +40,17 @@ class HomeManager:HomeNetworkable{
     func categoriesFiltering(mainCategoriesID: String, subCategoriesID: String, completion: @escaping (Result<BaseResponse<CategoriesFiltering>, Error>) -> ()) {
         request(target: .categoriesFiltering(mainCategoriesID: mainCategoriesID, subCategoriesID: subCategoriesID), completion: completion)
     }
+    func getOpportunities(needTypeId: Int, interestId: Int, completion: @escaping (Result<BaseResponse<Oppourtinity>, Error>) -> ()) {
 
+        request(target: .getOpportunities(needTypeId: needTypeId, intrest: interestId), completion: completion)
+    }
+    func oppourtinityDetails(opportunity_id: Int, completion: @escaping (Result<BaseResponse<packageDetails>, Error>) -> ()) {
+        request(target: .oppourtinityDetails(opportunity_id: opportunity_id), completion: completion)
+    }
+    
+  
+  
+    
 
     
 }

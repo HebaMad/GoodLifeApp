@@ -43,6 +43,50 @@ struct SubHomeCategories:Decodable{
 
 }
 
+
+struct Oppourtinity:Decodable{
+    let items :[OppourtinityDetails]?
+    
+}
+struct packageDetails:Decodable{
+    let items :OppourtinityDetails?
+
+}
+struct OppourtinityDetails:Codable{
+    let id:Int?
+    let category:String?
+    let type:String?
+    let work_type:String?
+    let level_of_difficulty:String?
+    let amount_of_technology:String?
+    let amount_raise:Int?
+    let need_type_id:Int?
+    let interest:Int?
+    let title:String?
+    let sub_title:String?
+    let models:String?
+    let plans:String?
+    let websites:String?
+    let image:String?
+    let created_at:String?
+    let opportunity_match:Int?
+    let rate:Int?
+    let reviews_count:Int?
+    let general:[GeneralOppourtinity]?
+}
+struct GeneralOppourtinity:Codable{
+    let type:String?
+    let title:String?
+    let items:[GeneralOppourtinityDetails]?
+
+}
+
+struct GeneralOppourtinityDetails:Codable{
+    let title:String?
+    let details:String?
+    let cost:Double?
+}
+
 struct MainCategories:Codable{
     let id:Int?
     let type:String?

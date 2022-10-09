@@ -300,12 +300,13 @@ extension MapVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollection
         }else if collectionView == specificFilterCollectionview{
             self.presenter.categriesFailtered(mainCategoriesID: "\(categoryMainId)", subCategoriesID: "\(specificFiltering[indexPath.row].id ?? 0)")
             self.presenter.delegate = self
-//            let controller = choosingMinistryNeedsVC()
-            let controller = FilterVC()
+            let controller = choosingMinistryNeedsVC()
+            controller.needTypeID = categoryMainId
+//            let controller = FilterVC()
             let sheetController = SheetViewController(
                 controller: controller,
-//                sizes: [ .intrinsic , .percent(0.80), .fixed(600), .intrinsic])
-                sizes: [ .marginFromTop(350)])
+                sizes: [ .intrinsic , .percent(0.80), .fixed(600), .intrinsic])
+//                sizes: [ .marginFromTop(350)])
             self.present(sheetController, animated: false, completion: nil)
             
         }else{
@@ -325,6 +326,10 @@ extension MapVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollection
 }
 
 extension MapVC :HomeDelegate{
+    func getOppourtinityDetails(categories: packageDetails) {}
+    
+    func getOppourtinity(categories: Oppourtinity) {}
+    
     func getCategoriesFiltered(categories: CategoriesFiltering) {
         categoriesFiltered = categories.main_needs_types ?? []
     }
@@ -340,9 +345,7 @@ extension MapVC :HomeDelegate{
         generalFilterCollectionview.reloadData()
     }
     
-    func showAlerts(title: String, message: String) {
-         
-    }
+    func showAlerts(title: String, message: String) {}
     
     func getCategories(categories: Home) {
         self.isSkeleton = false

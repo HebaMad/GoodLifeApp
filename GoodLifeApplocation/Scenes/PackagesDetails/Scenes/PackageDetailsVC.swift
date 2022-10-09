@@ -17,6 +17,9 @@ class PackageDetailsVC: UIViewController {
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var nextBtn: UIButtonDesignable!
     
+    //MARK: - Properties
+    
+    var oppourtinityDetails:packageDetails?
     
     //MARK: - Life cycle
     override func viewDidLoad() {

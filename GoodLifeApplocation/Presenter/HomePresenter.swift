@@ -15,6 +15,10 @@ protocol HomeDelegate{
     func getStandardCategoriesFiltering(categories:MainHomeCategories)
     func getsubCategoriesFiltering(categories:SubHomeCategories)
     func getCategoriesFiltered(categories:CategoriesFiltering)
+    func getOppourtinity(categories:Oppourtinity)
+    func getOppourtinityDetails(categories:packageDetails)
+
+
 
 
 }
@@ -96,5 +100,48 @@ class HomePresenter:NSObject{
             }
         }
         }
+    func getSmartRecommendation(interestId:Int,needTypeId:Int){
+        HomeManager.shared.getOpportunities(needTypeId: needTypeId, interestId: interestId) { Response in
+            switch Response{
+                
+            case let .success(response):
+                if response.status == true{
+                    self.delegate?.getOppourtinity(categories: response.data!)
+                }else{
+                    self.delegate?.showAlerts(title:"Failure", message: response.message)
+                }
+                
+            case let .failure(error):
+                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
+            }
+        }
+    }
+    
+    func oppourtinityDetails(opportunityID:Int){
+        
+        HomeManager.shared.oppourtinityDetails(opportunity_id: opportunityID) { Response in
+            switch Response{
+                
+            case let .success(response):
+                if response.status == true{
+                    
+                    self.delegate?.getOppourtinityDetails(categories: response.data!)
+                    
+                }else{
+                    
+                    self.delegate?.showAlerts(title:"Failure", message: response.message)
+                }
+                
+            case let .failure(error):
+                
+                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
+            }
+        }
+        
+    }
+    
+    
+    
+    
    
 }
