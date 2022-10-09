@@ -25,6 +25,8 @@ class choosingMinistryNeedsVC: UIViewController {
     let presenter = HomePresenter()
     var oppourtinity:[OppourtinityDetails] = []
     var model:[SubscriptionCollectionViewCell.ViewModel]?
+    var arraycount = 0
+    var x = [1,2,3]
     
     //MARK: - Life cycle
 
@@ -39,8 +41,7 @@ class choosingMinistryNeedsVC: UIViewController {
     private func setupMinistryCollectionview(){
         bindBackButton()
         MinistrySubscriptionCollectionview.register(SubscriptionCollectionViewCell.self)
-        MinistrySubscriptionCollectionview.delegate=self
-        MinistrySubscriptionCollectionview.dataSource=self
+       
 
     }
     
@@ -110,7 +111,9 @@ extension choosingMinistryNeedsVC:UICollectionViewDataSource{
     
    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-return 3
+
+        print(oppourtinity.count)
+        return oppourtinity.count
 //        return oppourtinity.count
     }
         
@@ -158,9 +161,10 @@ extension choosingMinistryNeedsVC:HomeDelegate{
     func getCategoriesFiltered(categories: CategoriesFiltering) {}
     
     func getOppourtinity(categories: Oppourtinity) {
-        
-        oppourtinity = categories.items ?? []
-        MinistrySubscriptionCollectionview.reloadData()
+       
+            self.oppourtinity = categories.items ?? []
+            self.MinistrySubscriptionCollectionview.reloadData()
+
        
     }
     

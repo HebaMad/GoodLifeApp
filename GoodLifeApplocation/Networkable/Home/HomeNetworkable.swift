@@ -48,9 +48,4 @@ class HomeManager:HomeNetworkable{
         request(target: .oppourtinityDetails(opportunity_id: opportunity_id), completion: completion)
     }
     
-  
-  
-    
-
-    
 }

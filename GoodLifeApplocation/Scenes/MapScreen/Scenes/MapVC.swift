@@ -305,8 +305,8 @@ extension MapVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollection
 //            let controller = FilterVC()
             let sheetController = SheetViewController(
                 controller: controller,
-                sizes: [ .intrinsic , .percent(0.80), .fixed(600), .intrinsic])
-//                sizes: [ .marginFromTop(350)])
+//                sizes: [ .intrinsic , .percent(0.80), .fixed(600), .intrinsic])
+                sizes: [ .marginFromTop(500), .percent(0.80), .intrinsic])
             self.present(sheetController, animated: false, completion: nil)
             
         }else{

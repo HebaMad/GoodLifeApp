@@ -18,9 +18,6 @@ protocol HomeDelegate{
     func getOppourtinity(categories:Oppourtinity)
     func getOppourtinityDetails(categories:packageDetails)
 
-
-
-
 }
 
 typealias homeDelegate = HomeDelegate & UIViewController
