@@ -48,10 +48,7 @@ struct Oppourtinity:Decodable{
     let items :[OppourtinityDetails]?
     
 }
-struct packageDetails:Decodable{
-    let items :OppourtinityDetails?
 
-}
 struct OppourtinityDetails:Codable{
     let id:Int?
     let category:String?

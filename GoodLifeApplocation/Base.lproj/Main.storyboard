@@ -1575,7 +1575,7 @@ Night</string>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="138" estimatedRowHeight="138" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OgR-Ws-3Qb">
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" estimatedRowHeight="100" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OgR-Ws-3Qb">
                                                 <rect key="frame" x="12" y="224" width="390" height="648"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -1603,10 +1603,10 @@ Night</string>
                                                 </view>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="CZU-Y1-Fnu">
-                                                        <rect key="frame" x="0.0" y="108.5" width="390" height="138"/>
+                                                        <rect key="frame" x="0.0" y="108.5" width="390" height="100"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CZU-Y1-Fnu" id="Wec-0h-cqU">
-                                                            <rect key="frame" x="0.0" y="0.0" width="390" height="138"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="390" height="100"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </tableViewCellContentView>
                                                     </tableViewCell>
@@ -1672,58 +1672,26 @@ Night</string>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ok8-Cm-HNp" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
                                                 <rect key="frame" x="12" y="12" width="390" height="200"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="omV-ej-thZ" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                                        <rect key="frame" x="-4" y="0.0" width="398" height="200"/>
-                                                        <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e1p-nl-CPF" customClass="PieChartView" customModule="Charts">
-                                                                <rect key="frame" x="0.0" y="0.0" width="398" height="200"/>
-                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="200" id="Ias-Va-ohl"/>
-                                                                </constraints>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                        <real key="value" value="10"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                </userDefinedRuntimeAttributes>
-                                                            </view>
-                                                        </subviews>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e1p-nl-CPF" customClass="PieChartView" customModule="Charts">
+                                                        <rect key="frame" x="0.0" y="0.0" width="390" height="200"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="trailing" secondItem="e1p-nl-CPF" secondAttribute="trailing" id="IzA-yv-QrG"/>
-                                                            <constraint firstAttribute="trailing" secondItem="e1p-nl-CPF" secondAttribute="trailing" id="UwL-40-O6L"/>
-                                                            <constraint firstAttribute="bottom" secondItem="e1p-nl-CPF" secondAttribute="bottom" id="bHa-d7-W8y"/>
-                                                            <constraint firstItem="e1p-nl-CPF" firstAttribute="top" secondItem="omV-ej-thZ" secondAttribute="top" id="ce0-zr-Lrd"/>
-                                                            <constraint firstItem="e1p-nl-CPF" firstAttribute="leading" secondItem="omV-ej-thZ" secondAttribute="leading" id="gVb-ul-2kg"/>
-                                                            <constraint firstItem="e1p-nl-CPF" firstAttribute="top" secondItem="omV-ej-thZ" secondAttribute="top" id="j1X-hi-mK0"/>
-                                                            <constraint firstItem="e1p-nl-CPF" firstAttribute="leading" secondItem="omV-ej-thZ" secondAttribute="leading" id="jVY-AX-Yxx"/>
-                                                            <constraint firstAttribute="bottom" secondItem="e1p-nl-CPF" secondAttribute="bottom" id="tKx-l9-a0X"/>
+                                                            <constraint firstAttribute="height" constant="200" id="Ias-Va-ohl"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
-                                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
-                                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="12"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                                <real key="value" value="1"/>
+                                                                <real key="value" value="10"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstItem="omV-ej-thZ" firstAttribute="centerX" secondItem="ok8-Cm-HNp" secondAttribute="centerX" id="3oO-b8-DGP"/>
+                                                    <constraint firstItem="e1p-nl-CPF" firstAttribute="top" secondItem="ok8-Cm-HNp" secondAttribute="top" id="5a1-I0-ypK"/>
                                                     <constraint firstAttribute="height" constant="200" id="8zw-wc-7L7"/>
-                                                    <constraint firstItem="omV-ej-thZ" firstAttribute="centerY" secondItem="ok8-Cm-HNp" secondAttribute="centerY" id="DoQ-wR-Nbg"/>
-                                                    <constraint firstItem="omV-ej-thZ" firstAttribute="leading" secondItem="ok8-Cm-HNp" secondAttribute="leading" constant="-4" id="ULi-RU-AD5"/>
+                                                    <constraint firstAttribute="bottom" secondItem="e1p-nl-CPF" secondAttribute="bottom" id="PfU-CU-RAg"/>
+                                                    <constraint firstAttribute="trailing" secondItem="e1p-nl-CPF" secondAttribute="trailing" id="Q6G-ay-i47"/>
+                                                    <constraint firstItem="e1p-nl-CPF" firstAttribute="leading" secondItem="ok8-Cm-HNp" secondAttribute="leading" id="mLD-Sv-Qib"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="startColor">

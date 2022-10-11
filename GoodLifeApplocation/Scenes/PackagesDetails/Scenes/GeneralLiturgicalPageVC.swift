@@ -95,7 +95,10 @@ class GeneralLiturgicalPageVC: UIViewController, IndicatorInfoProvider{
     }
 
 }
+extension GeneralLiturgicalPageVC:Storyboarded{
+    static var storyboardName: StoryboardName = .main
 
+}
 extension GeneralLiturgicalPageVC:UITableViewDelegate{}
 extension GeneralLiturgicalPageVC:UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

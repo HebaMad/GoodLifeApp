@@ -13,7 +13,7 @@ class GeneralPagerViewVC: ButtonBarPagerTabStripViewController {
     //MARK: - Propeerties
 
     
-    var oppourtinityDetails:packageDetails?
+    var oppourtinityDetails:OppourtinityDetails?
 
     //MARK: - Life cycle
     
@@ -57,11 +57,11 @@ class GeneralPagerViewVC: ButtonBarPagerTabStripViewController {
         
         
     let second = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GeneralMarketingPageVC") as! GeneralMarketingPageVC
-        second.item = oppourtinityDetails?.items?.general?[1].items ?? []
+        second.item = oppourtinityDetails?.general?[1].items ?? []
         second.itemInfo = "Marketing"
         
         let third = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GeneralLiturgicalPageVC") as! GeneralLiturgicalPageVC
-        
+        third.item = oppourtinityDetails?.general?[2].items ?? []
         third.itemInfo = "Liturgical"
         
         

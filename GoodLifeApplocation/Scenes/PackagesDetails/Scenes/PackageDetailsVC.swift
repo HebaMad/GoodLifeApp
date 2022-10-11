@@ -19,7 +19,7 @@ class PackageDetailsVC: UIViewController {
     
     //MARK: - Properties
     
-    var oppourtinityDetails:packageDetails?
+    var oppourtinityDetails:OppourtinityDetails?
     
     //MARK: - Life cycle
     override func viewDidLoad() {
@@ -37,6 +37,9 @@ class PackageDetailsVC: UIViewController {
 
     private func setupPageview(){
         let vc = GeneralPagerViewVC()
+        print(oppourtinityDetails)
+        vc.oppourtinityDetails = oppourtinityDetails
+
         self.addChild(vc)
         self.containerView.addSubview(vc.view)
         vc.didMove(toParent: self)
@@ -59,7 +62,7 @@ class PackageDetailsVC: UIViewController {
             
             self.containerView.subviews.first?.removeFromSuperview()
             let vc=GeneralPagerViewVC()
-            vc.oppourtinityDetails = oppourtinityDetails
+            print(oppourtinityDetails)
             self.addChild(vc)
             self.containerView.addSubview(vc.view)
             vc.didMove(toParent: self)
@@ -98,7 +101,7 @@ private extension PackageDetailsVC{
         case backBtn:
             print("error selected")
 
-//            navigationController?.popViewController(animated: true)
+            navigationController?.popViewController(animated: true)
 
         case nextBtn:
             let vc = DashboardVC.instantiate()

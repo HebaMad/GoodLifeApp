@@ -25,6 +25,7 @@ class choosingMinistryNeedsVC: UIViewController {
     let presenter = HomePresenter()
     var oppourtinity:[OppourtinityDetails] = []
     var model:[SubscriptionCollectionViewCell.ViewModel]?
+    var onFilterDissmissed : OnFilterDissmissed?
 
     
     //MARK: - Life cycle
@@ -140,12 +141,14 @@ extension choosingMinistryNeedsVC:UICollectionViewDataSource{
 //MARK: - conform to HomeDelegate protocol
 
 extension choosingMinistryNeedsVC:HomeDelegate{
-    func getOppourtinityDetails(categories: packageDetails) {
-        self.dismiss(animated: true)
-        let vc = PackageDetailsVC()
-        vc.oppourtinityDetails = categories
+    func getOppourtinityDetails(categories: OppourtinityDetails) {
+        self.dismiss(animated: true) {
+            if let _delegate = self.onFilterDissmissed{
+                print(categories)
+                _delegate.filteredData(data:categories)
+            }
+        }
 
-        navigationController?.pushViewController(vc, animated: true)
     }
     
     func showAlerts(title: String, message: String) {}

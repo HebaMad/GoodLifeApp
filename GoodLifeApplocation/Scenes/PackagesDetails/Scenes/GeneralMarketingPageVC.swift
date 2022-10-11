@@ -97,7 +97,10 @@ class GeneralMarketingPageVC: UIViewController, IndicatorInfoProvider {
         return itemInfo
     }
 }
+extension GeneralMarketingPageVC:Storyboarded{
+    static var storyboardName: StoryboardName = .main
 
+}
 extension GeneralMarketingPageVC:UITableViewDelegate{}
 extension GeneralMarketingPageVC:UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -114,3 +117,4 @@ extension GeneralMarketingPageVC:UITableViewDataSource{
     
     
 }
+

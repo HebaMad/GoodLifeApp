@@ -16,7 +16,7 @@ protocol HomeDelegate{
     func getsubCategoriesFiltering(categories:SubHomeCategories)
     func getCategoriesFiltered(categories:CategoriesFiltering)
     func getOppourtinity(categories:Oppourtinity)
-    func getOppourtinityDetails(categories:packageDetails)
+    func getOppourtinityDetails(categories:OppourtinityDetails)
 
 }
 

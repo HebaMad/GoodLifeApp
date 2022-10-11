@@ -14,7 +14,7 @@ protocol HomeNetworkable:Networkable  {
     func subCategory(completion: @escaping (Result<BaseResponse<SubHomeCategories>, Error>)-> ())
     func categoriesFiltering(mainCategoriesID:String,subCategoriesID:String,completion: @escaping (Result<BaseResponse<CategoriesFiltering>, Error>)-> ())
     func getOpportunities(needTypeId:Int,interestId:Int,completion: @escaping (Result<BaseResponse<Oppourtinity>, Error>)-> ())
-    func oppourtinityDetails(opportunity_id:Int,completion: @escaping (Result<BaseResponse<packageDetails>, Error>)-> ())
+    func oppourtinityDetails(opportunity_id:Int,completion: @escaping (Result<BaseResponse<OppourtinityDetails>, Error>)-> ())
 }
 
 class HomeManager:HomeNetworkable{
@@ -44,7 +44,7 @@ class HomeManager:HomeNetworkable{
 
         request(target: .getOpportunities(needTypeId: needTypeId, intrest: interestId), completion: completion)
     }
-    func oppourtinityDetails(opportunity_id: Int, completion: @escaping (Result<BaseResponse<packageDetails>, Error>) -> ()) {
+    func oppourtinityDetails(opportunity_id: Int, completion: @escaping (Result<BaseResponse<OppourtinityDetails>, Error>) -> ()) {
         request(target: .oppourtinityDetails(opportunity_id: opportunity_id), completion: completion)
     }
     

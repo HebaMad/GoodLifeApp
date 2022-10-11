@@ -20,12 +20,12 @@ class GeneralMarketingBreakdown: UITableViewCell,NibLoadableView {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+
     }
     
     func configureCell(item:GeneralOppourtinityDetails){
         titleTxt.text = item.title ?? ""
-        subTitles.text = item.details ?? ""
+        subTitles.text = item.details?.html2Attributed?.string
         
     }
     

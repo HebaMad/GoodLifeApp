@@ -18,10 +18,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Aqz-bG-pVf">
-                        <rect key="frame" x="0.0" y="0.0" width="356" height="107"/>
+                        <rect key="frame" x="16" y="4" width="336" height="99"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top Advertising Platforms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Zh-sc-d97">
-                                <rect key="frame" x="0.0" y="0.0" width="356" height="15"/>
+                                <rect key="frame" x="0.0" y="0.0" width="336" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="n4O-5J-CI6"/>
                                 </constraints>
@@ -30,10 +30,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sN0-4H-s8h">
-                                <rect key="frame" x="0.0" y="15" width="356" height="92"/>
+                                <rect key="frame" x="0.0" y="15" width="336" height="84"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kyO-Qm-uw6">
-                                        <rect key="frame" x="16" y="8" width="332" height="76"/>
+                                        <rect key="frame" x="16" y="8" width="312" height="68"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" red="0.70588235294117641" green="0.70588235294117641" blue="0.70588235294117641" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -46,10 +46,10 @@
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="Aqz-bG-pVf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="GiW-Gc-fqx"/>
-                    <constraint firstItem="Aqz-bG-pVf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="IVq-Ug-5Uw"/>
-                    <constraint firstAttribute="trailing" secondItem="Aqz-bG-pVf" secondAttribute="trailing" id="WYB-uS-RFs"/>
-                    <constraint firstAttribute="bottom" secondItem="Aqz-bG-pVf" secondAttribute="bottom" id="kLZ-8l-dvJ"/>
+                    <constraint firstItem="Aqz-bG-pVf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="1ed-a4-Yga"/>
+                    <constraint firstAttribute="bottom" secondItem="Aqz-bG-pVf" secondAttribute="bottom" constant="4" id="kMy-6i-NAC"/>
+                    <constraint firstAttribute="trailing" secondItem="Aqz-bG-pVf" secondAttribute="trailing" constant="4" id="ogw-JS-9CM"/>
+                    <constraint firstItem="Aqz-bG-pVf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="vx4-xp-jgp"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
