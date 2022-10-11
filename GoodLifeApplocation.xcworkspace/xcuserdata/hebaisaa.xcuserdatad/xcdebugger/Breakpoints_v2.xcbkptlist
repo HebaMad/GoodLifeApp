@@ -7,80 +7,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "70CE2015-DEE6-4056-9A0A-69E8F8FC7DBE"
+            uuid = "F3F0ECF6-6894-4C9A-8AD1-42A507168474"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GoodLifeApplocation/Scenes/MapScreen/Scenes/choosingMinistryNeedsVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116"
-            landmarkName = "collectionView(_:numberOfItemsInSection:)"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
+            landmarkName = "getOppourtinityDetails(categories:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E23F7C9D-21C8-4C15-9C39-4841566D5004"
+            uuid = "DF9C8B58-BD06-4385-B099-AB7F772499C7"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GoodLifeApplocation/Scenes/MapScreen/Scenes/choosingMinistryNeedsVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
-            landmarkName = "collectionView(_:cellForItemAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "AEB7DC3C-6971-464F-91B6-D5C63D940062"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GoodLifeApplocation/Scenes/MapScreen/Scenes/choosingMinistryNeedsVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
-            landmarkName = "collectionView(_:cellForItemAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "BD952903-15F1-4CBC-88BF-EFF6D2BCB2C5"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GoodLifeApplocation/Scenes/MapScreen/Scenes/choosingMinistryNeedsVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
-            landmarkName = "collectionView(_:cellForItemAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "6B4A371D-68ED-43CF-89B8-0C48672B2FD7"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GoodLifeApplocation/Scenes/MapScreen/Scenes/choosingMinistryNeedsVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
-            landmarkName = "collectionView(_:numberOfItemsInSection:)"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
+            landmarkName = "getOppourtinityDetails(categories:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

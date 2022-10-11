@@ -9,6 +9,12 @@ import UIKit
 import XLPagerTabStrip
 
 class GeneralPagerViewVC: ButtonBarPagerTabStripViewController {
+    
+    //MARK: - Propeerties
+
+    
+    var oppourtinityDetails:packageDetails?
+
     //MARK: - Life cycle
     
     override func viewDidLoad() {
@@ -50,10 +56,11 @@ class GeneralPagerViewVC: ButtonBarPagerTabStripViewController {
         first.itemInfo = "Finicial"
         
         
-        let second = GeneralMarketingPageVC()
+    let second = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GeneralMarketingPageVC") as! GeneralMarketingPageVC
+        second.item = oppourtinityDetails?.items?.general?[1].items ?? []
         second.itemInfo = "Marketing"
         
-        let third = GeneralLiturgicalPageVC()
+        let third = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GeneralLiturgicalPageVC") as! GeneralLiturgicalPageVC
         
         third.itemInfo = "Liturgical"
         

@@ -67,7 +67,7 @@ extension OpportunityViewVC{
              navigationController?.pushViewController(vc, animated: true)
              
              case DonationView.ViewBtn:
-             let vc = DonationVC()
+             let vc = MapVC()
              navigationController?.pushViewController(vc, animated: true)
              
          default:

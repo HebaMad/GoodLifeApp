@@ -130,7 +130,7 @@
                             <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="16" bottom="0.0" trailing="16"/>
                         </stackView>
                         <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="I6P-xz-17Q">
-                            <rect key="frame" x="8" y="248" width="398" height="420"/>
+                            <rect key="frame" x="8" y="248" width="398" height="440"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Smart Recomendations" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2BI-9r-jEp">
                                     <rect key="frame" x="0.0" y="0.0" width="398" height="16"/>
@@ -142,7 +142,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="mb1-K3-iWh">
-                                    <rect key="frame" x="0.0" y="24" width="398" height="353"/>
+                                    <rect key="frame" x="0.0" y="24" width="398" height="373"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="4" minimumInteritemSpacing="4" id="Sak-IA-CNe">
                                         <size key="itemSize" width="128" height="128"/>
@@ -156,7 +156,7 @@
                                     </connections>
                                 </collectionView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ooa-4A-pJs">
-                                    <rect key="frame" x="0.0" y="385" width="398" height="35"/>
+                                    <rect key="frame" x="0.0" y="405" width="398" height="35"/>
                                     <subviews>
                                         <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h4Q-Sc-x92" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
                                             <rect key="frame" x="181.5" y="0.0" width="35" height="35"/>
@@ -202,7 +202,7 @@
                                 </view>
                             </subviews>
                             <constraints>
-                                <constraint firstAttribute="height" constant="420" id="HC4-8S-MPL"/>
+                                <constraint firstAttribute="height" constant="440" id="HC4-8S-MPL"/>
                             </constraints>
                         </stackView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZBp-9M-nYS">

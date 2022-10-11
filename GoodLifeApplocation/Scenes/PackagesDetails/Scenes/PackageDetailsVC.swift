@@ -59,6 +59,7 @@ class PackageDetailsVC: UIViewController {
             
             self.containerView.subviews.first?.removeFromSuperview()
             let vc=GeneralPagerViewVC()
+            vc.oppourtinityDetails = oppourtinityDetails
             self.addChild(vc)
             self.containerView.addSubview(vc.view)
             vc.didMove(toParent: self)

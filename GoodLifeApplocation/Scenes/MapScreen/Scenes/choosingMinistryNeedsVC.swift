@@ -25,8 +25,7 @@ class choosingMinistryNeedsVC: UIViewController {
     let presenter = HomePresenter()
     var oppourtinity:[OppourtinityDetails] = []
     var model:[SubscriptionCollectionViewCell.ViewModel]?
-    var arraycount = 0
-    var x = [1,2,3]
+
     
     //MARK: - Life cycle
 
@@ -48,6 +47,7 @@ class choosingMinistryNeedsVC: UIViewController {
     @objc func ministrySubscriptionDetails( _ sender:UIButton){
         presenter.oppourtinityDetails(opportunityID: oppourtinity[sender.tag].id ?? 0)
         presenter.delegate=self
+       
 
     }
 
@@ -109,20 +109,16 @@ extension choosingMinistryNeedsVC:UICollectionViewDelegate{}
  
 extension choosingMinistryNeedsVC:UICollectionViewDataSource{
     
-   
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
-        print(oppourtinity.count)
         return oppourtinity.count
-//        return oppourtinity.count
     }
         
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell:SubscriptionCollectionViewCell=collectionView.dequeueReusableCell(for: indexPath)
-//        model=SubscriptionCollectionViewCell.ViewModel(title: oppourtinity[indexPath.row].title ?? "", subTitleTxt: oppourtinity[indexPath.row].sub_title ?? "", financialModelTxt: oppourtinity[indexPath.row].models ?? "", businessPlanTxt: oppourtinity[indexPath.row].plans ?? "", websiteTxt: oppourtinity[indexPath.row].websites ?? "", matchesPercentageTxt: oppourtinity[indexPath.row].opportunity_match ?? 0 , review: oppourtinity[indexPath.row].reviews_count ?? 0 )
-//        print()
-//        cell.configureCell(viewModel: model!)
-//        cell.configureCell(viewModel: oppourtinity[indexPath.row])
+
+        cell.configureCell(viewModel: oppourtinity[indexPath.row])
         
         cell.tag=indexPath.row
         cell.nextBtn.addTarget(self, action: #selector(ministrySubscriptionDetails), for: .touchUpInside)
@@ -135,7 +131,7 @@ extension choosingMinistryNeedsVC:UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: (self.view.frame.width - 20)/2.5, height: 380)
+        return CGSize(width: (self.view.frame.width - 20)/2.5, height: 400)
         
     }
 }
@@ -145,8 +141,10 @@ extension choosingMinistryNeedsVC:UICollectionViewDataSource{
 
 extension choosingMinistryNeedsVC:HomeDelegate{
     func getOppourtinityDetails(categories: packageDetails) {
+        self.dismiss(animated: true)
         let vc = PackageDetailsVC()
         vc.oppourtinityDetails = categories
+
         navigationController?.pushViewController(vc, animated: true)
     }
     

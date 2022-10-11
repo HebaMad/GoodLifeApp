@@ -14,6 +14,8 @@ class GeneralMarketingPageVC: UIViewController, IndicatorInfoProvider {
     //MARK: - Outlet
     
     @IBOutlet weak var pieChartView: PieChartView!
+    @IBOutlet weak var marketingTable: UITableView!
+    
     
     //MARK: - Properties
     
@@ -21,7 +23,7 @@ class GeneralMarketingPageVC: UIViewController, IndicatorInfoProvider {
     let targetMarkets = ["Families", "Orphans", "Infants"]
     let unitsSold = [67.0, 25.0, 8.0]
     var dataEntries: [ChartDataEntry] = []
-
+    var item:[GeneralOppourtinityDetails]=[]
 
     
     //MARK: - Life cycle
@@ -30,7 +32,16 @@ class GeneralMarketingPageVC: UIViewController, IndicatorInfoProvider {
         super.viewDidLoad()
 
         setupPieChart(dataPoints: targetMarkets, values: unitsSold)
-
+        setupTableview()
+    }
+    
+    
+    //MARK: - SetupTableview
+    
+    func setupTableview(){
+        marketingTable.register(GeneralMarketingBreakdown.self)
+        marketingTable.delegate = self
+        marketingTable.dataSource = self
     }
 
     //MARK: - setup pie Chart
@@ -87,4 +98,19 @@ class GeneralMarketingPageVC: UIViewController, IndicatorInfoProvider {
     }
 }
 
-
+extension GeneralMarketingPageVC:UITableViewDelegate{}
+extension GeneralMarketingPageVC:UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        item.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell:GeneralMarketingBreakdown = tableView.dequeueReusableCell(for: indexPath)
+        cell.configureCell(item: item[indexPath.row])
+        return cell
+    }
+    
+ 
+    
+    
+}

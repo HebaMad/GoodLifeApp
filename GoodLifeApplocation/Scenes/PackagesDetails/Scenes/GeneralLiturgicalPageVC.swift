@@ -12,7 +12,8 @@ class GeneralLiturgicalPageVC: UIViewController, IndicatorInfoProvider{
     //MARK: - Outlet
 
     @IBOutlet weak var pieChartview: PieChartView!
-    
+    @IBOutlet weak var liturgicalTable: UITableView!
+
     //MARK: - Properties
 
     var itemInfo: IndicatorInfo = "Liturgical"
@@ -20,14 +21,24 @@ class GeneralLiturgicalPageVC: UIViewController, IndicatorInfoProvider{
     let targetMarkets = ["Prayer", "Worship", "Hyms"]
     let unitsSold = [57.0, 25.0, 18.0]
     var dataEntries: [ChartDataEntry] = []
-    
+    var item:[GeneralOppourtinityDetails]=[]
+
     //MARK: - Life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupPieChart(dataPoints:targetMarkets , values:unitsSold )
-        
+        setupTableview()
+    }
+
+    
+    //MARK: - SetupTableview
+    
+    func setupTableview(){
+        liturgicalTable.register(GeneralMarketingBreakdown.self)
+        liturgicalTable.delegate = self
+        liturgicalTable.dataSource = self
     }
 
     //MARK: - setup pie Chart
@@ -85,3 +96,19 @@ class GeneralLiturgicalPageVC: UIViewController, IndicatorInfoProvider{
 
 }
 
+extension GeneralLiturgicalPageVC:UITableViewDelegate{}
+extension GeneralLiturgicalPageVC:UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        item.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell:GeneralMarketingBreakdown = tableView.dequeueReusableCell(for: indexPath)
+        cell.configureCell(item: item[indexPath.row])
+        return cell
+    }
+    
+ 
+    
+    
+}
