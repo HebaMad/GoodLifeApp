@@ -502,8 +502,6 @@
 		2767A2952890A45400DF34D1 /* Filterscreen */ = {
 			isa = PBXGroup;
 			children = (
-				2767A2962890A48600DF34D1 /* FilterVC.swift */,
-				2767A2972890A48600DF34D1 /* FilterVC.xib */,
 			);
 			path = Filterscreen;
 			sourceTree = "<group>";
@@ -628,6 +626,8 @@
 		27B8C8DE28A103430011B039 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				2767A2962890A48600DF34D1 /* FilterVC.swift */,
+				2767A2972890A48600DF34D1 /* FilterVC.xib */,
 				27B8C8EB28A14C320011B039 /* MapVC.swift */,
 				27B8C8EC28A14C320011B039 /* MapVC.xib */,
 				27B8C8EF28A167E00011B039 /* FilterList.swift */,

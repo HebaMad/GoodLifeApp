@@ -7,6 +7,7 @@
 
 import UIKit
 import DropDown
+import RangeSeekSlider
 
 class FilterVC: UIViewController {
     
@@ -22,7 +23,8 @@ class FilterVC: UIViewController {
     @IBOutlet weak var AmountOfTechnologyTxt: UITextField!
     
     @IBOutlet weak var investmentAmountTxt: UILabel!
-    
+    @IBOutlet weak var priceSlidering: RangeSeekSlider!
+
     
     //MARK: - Properties
     let dropDown = DropDown()
@@ -30,15 +32,24 @@ class FilterVC: UIViewController {
     let levelOfDifficulty:[String] = ["Easy","Medium","Hard"]
     let timeCommitment:[String] = ["Daily","Weekly","Bi_weekly"]
     let AmountOfTechnology:[String] = ["Minimal","Maximal"]
-
+    var minInvestmentValue:Float = 0.0
+    var maxInvestmentValue:Float = 0.0
     
     //MARK: - Life CYCLE
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupRangeSlider()
     }
     
+    //MARK: - Setup RangeSlider
+     func setupRangeSlider(){
+     priceSlidering.numberFormatter.positivePrefix = "$"
+     priceSlidering.numberFormatter.positiveSuffix = "k"
+     priceSlidering.delegate = self
+     }
+     
+     
     //MARK: - Private Handler
  
     @IBAction func difficuiltyBtn(_ sender: Any) {
@@ -101,4 +112,14 @@ class FilterVC: UIViewController {
         self.dropDown.show()
         
     }
+}
+
+ 
+
+extension FilterVC:RangeSeekSliderDelegate{
+ func rangeSeekSlider(_ slider: RangeSeekSlider, didChange minValue: CGFloat, maxValue: CGFloat) {
+     minInvestmentValue=Float(minValue)
+     maxInvestmentValue=Float(maxValue)
+
+ }
 }
