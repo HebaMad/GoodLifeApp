@@ -129,18 +129,6 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="minValue">
-                                            <real key="value" value="0.0"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="selectedMinValue">
-                                            <integer key="value" value="100"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
-                                            <real key="value" value="500000"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="selectedMaxValue">
-                                            <real key="value" value="30000"/>
-                                        </userDefinedRuntimeAttribute>
                                         <userDefinedRuntimeAttribute type="color" keyPath="colorBetweenHandles">
                                             <color key="value" name="ButtonColor"/>
                                         </userDefinedRuntimeAttribute>
@@ -178,11 +166,6 @@
             <point key="canvasLocation" x="139" y="127"/>
         </view>
     </objects>
-    <designables>
-        <designable name="8Fs-nd-BiZ">
-            <size key="intrinsicContentSize" width="-1" height="65"/>
-        </designable>
-    </designables>
     <resources>
         <image name="investment" width="454" height="454"/>
         <namedColor name="BgColor">

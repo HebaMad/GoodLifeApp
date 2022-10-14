@@ -15,6 +15,7 @@ protocol HomeNetworkable:Networkable  {
     func categoriesFiltering(mainCategoriesID:String,subCategoriesID:String,completion: @escaping (Result<BaseResponse<CategoriesFiltering>, Error>)-> ())
     func getOpportunities(needTypeId:Int,interestId:Int,completion: @escaping (Result<BaseResponse<Oppourtinity>, Error>)-> ())
     func oppourtinityDetails(opportunity_id:Int,completion: @escaping (Result<BaseResponse<OppourtinityDetails>, Error>)-> ())
+    func Filter(investmentFrom:String,investmentTo:String,work_type:String,level_of_difficulty:String,amount_of_technology:String,completion: @escaping (Result<BaseResponse<Oppourtinity>, Error>)-> ())
 }
 
 class HomeManager:HomeNetworkable{
@@ -46,6 +47,10 @@ class HomeManager:HomeNetworkable{
     }
     func oppourtinityDetails(opportunity_id: Int, completion: @escaping (Result<BaseResponse<OppourtinityDetails>, Error>) -> ()) {
         request(target: .oppourtinityDetails(opportunity_id: opportunity_id), completion: completion)
+    }
+    
+    func Filter(investmentFrom: String, investmentTo: String, work_type: String, level_of_difficulty: String, amount_of_technology: String, completion: @escaping (Result<BaseResponse<Oppourtinity>, Error>) -> ()) {
+        request(target: .Filter(investmentFrom: investmentFrom, investmentTo: investmentTo, work_type: work_type, level_of_difficulty: level_of_difficulty, amount_of_technology: amount_of_technology), completion: completion)
     }
     
 }

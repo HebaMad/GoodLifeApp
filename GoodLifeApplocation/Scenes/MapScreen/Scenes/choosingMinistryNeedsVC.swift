@@ -6,7 +6,12 @@
 //
 
 import UIKit
+import FittedSheets
 
+protocol DataFiltered {
+    func filteredData(data:Oppourtinity)
+
+}
 class choosingMinistryNeedsVC: UIViewController {
 
     //MARK: - Outlet
@@ -16,6 +21,7 @@ class choosingMinistryNeedsVC: UIViewController {
     @IBOutlet weak var movementLifeBtn: UIButtonDesignable!
     @IBOutlet weak var MinistrySubscriptionCollectionview: UICollectionView!
     @IBOutlet weak var smartRecommendationTxt: UILabel!
+    @IBOutlet weak var filterBtn: UIButton!
     @IBOutlet weak var recommendationView: UIStackView!
     
     //MARK: - Properties
@@ -62,6 +68,8 @@ private extension choosingMinistryNeedsVC {
         socialCommitmentsBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
         lifeBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
         movementLifeBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
+        filterBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
+
 
     }
 }
@@ -93,6 +101,15 @@ private extension choosingMinistryNeedsVC{
             interest = 1
             presenter.getSmartRecommendation(interestId: interest, needTypeId: 5)
             presenter.delegate = self
+            
+        case filterBtn:
+            let controller = FilterVC()
+            controller.onFilterDissmissed = self
+            let sheetController = SheetViewController(
+                controller: controller,
+                sizes: [ .percent(0.8)])
+
+            self.present(sheetController, animated: false, completion: nil)
 
         default:
             print("")
@@ -172,5 +189,13 @@ extension choosingMinistryNeedsVC:HomeDelegate{
     
 }
 
-
+extension choosingMinistryNeedsVC:DataFiltered{
+    func filteredData(data: Oppourtinity) {
+        oppourtinity=data.items ?? []
+        MinistrySubscriptionCollectionview.reloadData()
+        
+    }
+    
+    
+}
 

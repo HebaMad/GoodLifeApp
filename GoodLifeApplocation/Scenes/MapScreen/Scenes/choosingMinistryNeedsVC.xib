@@ -17,6 +17,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="choosingMinistryNeedsVC" customModule="GoodLifeApplocation" customModuleProvider="target">
             <connections>
                 <outlet property="MinistrySubscriptionCollectionview" destination="mb1-K3-iWh" id="BZF-pj-Iwe"/>
+                <outlet property="filterBtn" destination="WBE-kv-Tdv" id="sCc-C3-jna"/>
                 <outlet property="lifeBtn" destination="YRR-vL-UZj" id="mUs-g1-RB3"/>
                 <outlet property="movementLifeBtn" destination="SjE-2C-4bb" id="M9n-xa-obw"/>
                 <outlet property="recommendationView" destination="I6P-xz-17Q" id="12c-Bv-pI3"/>

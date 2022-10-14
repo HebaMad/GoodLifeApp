@@ -27,14 +27,17 @@ class FilterVC: UIViewController {
 
     
     //MARK: - Properties
+    
     let dropDown = DropDown()
 
     let levelOfDifficulty:[String] = ["Easy","Medium","Hard"]
-    let timeCommitment:[String] = ["Daily","Weekly","Bi_weekly"]
+    let timeCommitment:[String] = ["Daily","Weekly","BiWeekly"]
     let AmountOfTechnology:[String] = ["Minimal","Maximal"]
     var minInvestmentValue:Float = 0.0
     var maxInvestmentValue:Float = 0.0
-    
+    let presenter = HomePresenter()
+    var onFilterDissmissed : DataFiltered?
+
     //MARK: - Life CYCLE
 
     override func viewDidLoad() {
@@ -44,11 +47,21 @@ class FilterVC: UIViewController {
     
     //MARK: - Setup RangeSlider
      func setupRangeSlider(){
-     priceSlidering.numberFormatter.positivePrefix = "$"
-     priceSlidering.numberFormatter.positiveSuffix = "k"
-     priceSlidering.delegate = self
+         
+         priceSlidering.delegate = self
+         priceSlidering.isMultipleTouchEnabled=true
+         priceSlidering.selectedHandleDiameterMultiplier = 1.0
+         priceSlidering.lineHeight = 10.0
+         priceSlidering.numberFormatter.positivePrefix = "$"
+         priceSlidering.numberFormatter.positiveSuffix = "k"
+         
      }
-     
+    
+    
+    @IBAction func filterBtn(_ sender: UIButtonDesignable) {
+        filterData()
+    }
+    
      
     //MARK: - Private Handler
  
@@ -62,7 +75,7 @@ class FilterVC: UIViewController {
         }
         self.dropDown.selectionAction = { [self] (index: Int, item: String) in
             print("Selected item: \(item) at index: \(index)")
-            self.LevelOfDifficultyTxt.text = item.lowercased()
+            self.LevelOfDifficultyTxt.text = item
 
             self.LevelOfDifficultyTxt.textColor = UIColor.black
             
@@ -82,7 +95,7 @@ class FilterVC: UIViewController {
         }
         self.dropDown.selectionAction = { [self] (index: Int, item: String) in
             print("Selected item: \(item) at index: \(index)")
-            self.timeCommitmentTxt.text = item.lowercased()
+            self.timeCommitmentTxt.text = item
 
             self.timeCommitmentTxt.textColor = UIColor.black
             
@@ -103,7 +116,7 @@ class FilterVC: UIViewController {
         }
         self.dropDown.selectionAction = { [self] (index: Int, item: String) in
             print("Selected item: \(item) at index: \(index)")
-            self.AmountOfTechnologyTxt.text = item.lowercased()
+            self.AmountOfTechnologyTxt.text = item
             self.AmountOfTechnologyTxt.textColor = UIColor.black
             
         }
@@ -114,10 +127,53 @@ class FilterVC: UIViewController {
     }
 }
 
- 
+extension FilterVC {
+    func filterData(){
+        
+        do{
+                let AmountOfTechnology = try AmountOfTechnologyTxt.validatedText(validationType: .requiredField(field: "Select Amount Of Technology options"))
+                let LevelOfDifficulty = try LevelOfDifficultyTxt.validatedText(validationType: .requiredField(field: "Select monthly revenu options"))
+                let timeCommitment = try timeCommitmentTxt.validatedText(validationType: .requiredField(field: "Select time of commitment options"))
+            presenter.filterPackages(investmentFrom: "\(minInvestmentValue)", investmentTo: "\(maxInvestmentValue)", work_type: timeCommitment.lowercased(), level_of_difficulty: LevelOfDifficulty.lowercased(), amount_of_technology: AmountOfTechnology.lowercased())
+                presenter.delegate=self
+                
+       
+     
+        }catch{
+            self.showAlert(title: "Warning", message: (error as! ValidationError).message,hideCancelBtn: true)
 
+        }
+    }
+}
+
+extension FilterVC:HomeDelegate{
+    
+    func showAlerts(title: String, message: String) {}
+    
+    func getCategories(categories: Home) {}
+    
+    func getStandardCategoriesFiltering(categories: MainHomeCategories) {}
+    
+    func getsubCategoriesFiltering(categories: SubHomeCategories) {}
+    
+    func getCategoriesFiltered(categories: CategoriesFiltering) {}
+    
+    func getOppourtinity(categories: Oppourtinity) {
+        self.dismiss(animated: true) {
+            if let _delegate = self.onFilterDissmissed {
+                print(categories)
+                _delegate.filteredData(data: categories)
+            }
+        }
+    }
+    
+    func getOppourtinityDetails(categories: OppourtinityDetails) {}
+    
+}
 extension FilterVC:RangeSeekSliderDelegate{
  func rangeSeekSlider(_ slider: RangeSeekSlider, didChange minValue: CGFloat, maxValue: CGFloat) {
+     investmentAmountTxt.text = "\(Int(minInvestmentValue)) - \(Int(maxInvestmentValue))"
+
      minInvestmentValue=Float(minValue)
      maxInvestmentValue=Float(maxValue)
 

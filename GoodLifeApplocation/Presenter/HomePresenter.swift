@@ -137,6 +137,26 @@ class HomePresenter:NSObject{
         
     }
     
+    func filterPackages(investmentFrom:String,investmentTo:String,work_type:String,level_of_difficulty:String,amount_of_technology:String){
+        HomeManager.shared.Filter(investmentFrom: investmentFrom, investmentTo: investmentTo, work_type: work_type, level_of_difficulty: level_of_difficulty, amount_of_technology: amount_of_technology) { Response in
+            
+            switch Response{
+                
+            case let .success(response):
+                if response.status == true{
+                    self.delegate?.getOppourtinity(categories: response.data!)
+                }else{
+                    self.delegate?.showAlerts(title:"Failure", message: response.message)
+                }
+                
+            case let .failure(error):
+                
+                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
+            }
+            
+        }
+    }
+    
     
     
     
