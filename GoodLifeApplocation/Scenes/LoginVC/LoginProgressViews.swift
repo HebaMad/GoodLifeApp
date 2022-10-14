@@ -66,19 +66,10 @@ private extension LoginProgressViews{
                 
             }else{
                 
-            self.presenter.signup(mobile: text ?? "")
+            self.presenter.login(mobile: text ?? "")
             self.presenter.delegate = self
-                                  
             mobileNumber = text ?? ""
-            self.containerView.subviews.first?.removeFromSuperview()
-            
-            stepsIndicator.currentStep = 2
-             vc=VerificationVC()
-            self.addChild(vc!)
-            self.containerView.addSubview(vc!.view)
-            self.progressIndex=2
-            vc!.didMove(toParent: self)
-            vc!.view.frame = containerView.bounds
+     
             }
         case 2 :
             let text = (vc as! VerificationVC).codeTxtField.text
@@ -91,10 +82,6 @@ private extension LoginProgressViews{
                 self.presenter.checkCode(mobile:mobileNumber, code: text ?? "")
                 self.presenter.delegate=self
 
-                self.progressIndex=3
-
-            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NavigationController")
-             self.sceneDelegate.setRootVC(vc: vc)
             }
         default:
             print("error click")
@@ -111,6 +98,34 @@ private extension LoginProgressViews{
 }
                                   
 extension LoginProgressViews:AuthDelegate{
+    func checkStatus(status: Bool, msg: String, screen: String) {
+        if status == true{
+            
+            if screen == "login"{
+                self.containerView.subviews.first?.removeFromSuperview()
+                showSnackBar(message:msg)
+
+                stepsIndicator.currentStep = 2
+                 vc=VerificationVC()
+                self.addChild(vc!)
+                self.containerView.addSubview(vc!.view)
+                self.progressIndex=2
+                vc!.didMove(toParent: self)
+                vc!.view.frame = containerView.bounds
+            }else{
+               
+                self.progressIndex=3
+
+            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NavigationController")
+             self.sceneDelegate.setRootVC(vc: vc)
+                
+            }
+        }else{
+            showSnackBar(message:msg)
+        }
+    }
+    
+    
     func showAlerts(title: String, message: String) {
         showSnackBar(message:message)
     }

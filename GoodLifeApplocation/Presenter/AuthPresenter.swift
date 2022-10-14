@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 protocol AuthDelegate{
     func showAlerts(title:String,message:String)
+    func checkStatus(status:Bool,msg:String,screen:String)
 
 
 }
@@ -26,9 +27,12 @@ class AuthPresenter:NSObject{
             case let .success(response):
                 if response.status == true{
                         self.delegate?.showAlerts(title:"Success", message: response.message)
+                    self.delegate?.checkStatus(status: true,msg: response.message, screen: "signup")
 
                 }else{
                         self.delegate?.showAlerts(title:"Failure", message: response.message)
+                    self.delegate?.checkStatus(status: false,msg: response.message, screen: "signup")
+
                 }
                 
                 
@@ -74,13 +78,12 @@ class AuthPresenter:NSObject{
                 
             case let .success(response):
                 if response.status == true{
-                    self.delegate?.showAlerts(title:"Success", message:  response.message)
+                    self.delegate?.checkStatus(status: true,msg: response.message, screen: "verification")
+
 
                 }else{
-                    DispatchQueue.main.async {
+                        self.delegate?.checkStatus(status: false,msg: response.message, screen: "verification")
 
-                    self.delegate?.showAlerts(title:"Failure", message:  response.message)
-                    }
                 }
                 
             case let .failure(error):
@@ -106,6 +109,27 @@ class AuthPresenter:NSObject{
                 }else{
 
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
+                }
+            case let .failure(error):
+                print(error)
+                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
+
+            }
+        }
+    }
+    
+    func login(mobile:String){
+        SignUserManager.shared.login(mobile: mobile) { Response in
+      
+            switch Response{
+                
+            case let .success(response):
+                if response.status == true{
+                    self.delegate?.checkStatus(status: true,msg: response.message, screen: "login")
+
+                }else{
+                    self.delegate?.checkStatus(status: false,msg: response.message, screen: "login")
+
                 }
             case let .failure(error):
                 print(error)

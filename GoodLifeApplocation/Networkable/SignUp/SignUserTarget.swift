@@ -13,6 +13,7 @@ enum SignUserTarget:TargetType{
     case resendCode(mobile:String)
     case checkCode(mobile:String,code:String)
     case startFundRaise(latitude:String,longitude:String,work_type:String,amount_raise:Float)
+    case login(mobile:String)
     
     var baseURL: URL {
         return URL(string: "\(AppConfig.apiBaseUrl)")!
@@ -24,12 +25,13 @@ enum SignUserTarget:TargetType{
         case .resendCode: return "reSendCode"
         case .checkCode:return "checkCode"
         case .startFundRaise: return "startFundRaise"
+        case .login:return "loginForUsers"
             
         }
     }
     var method: Moya.Method {
         switch self{
-        case .SignUp,.resendCode,.checkCode,.startFundRaise:
+        case .SignUp,.resendCode,.checkCode,.startFundRaise,.login:
             return .post
        
         }
@@ -38,7 +40,7 @@ enum SignUserTarget:TargetType{
     var task: Task{
         switch self{
             
-        case .SignUp,.resendCode,.checkCode,.startFundRaise:
+        case .SignUp,.resendCode,.checkCode,.startFundRaise,.login:
             return .requestParameters(parameters: param, encoding: URLEncoding.httpBody)
         }
     }
@@ -54,7 +56,7 @@ enum SignUserTarget:TargetType{
             catch{
                 return ["Accept":"application/json","Accept-Language":"en"]
             }
-        case .resendCode,.checkCode:
+        case .resendCode,.checkCode,.login:
             return ["Accept":"application/json","Accept-Language":"en"]
 
         }
@@ -73,6 +75,9 @@ enum SignUserTarget:TargetType{
 
         case .startFundRaise(let latitude,let longitude, let work_type,let amount_raise):
             return ["latitude":latitude,"longitude":longitude,"work_type":work_type,"amount_raise":amount_raise]
+
+        case .login(mobile: let mobile):
+            return ["mobile":mobile]
 
         }
         
