@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="P0b-Rx-lZw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PMg-IU-8QQ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -607,6 +607,31 @@ Manager</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jXP-aR-iMt" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
                                         <rect key="frame" x="358" y="0.0" width="40" height="40"/>
                                         <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ads-Ue-rxg" customClass="UILabelDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
+                                                <rect key="frame" x="22" y="-6" width="14" height="20"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="bWb-F6-CLN"/>
+                                                    <constraint firstAttribute="width" constant="14" id="wj6-bi-fTl"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                <color key="textColor" systemColor="systemRedColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowBgColor">
+                                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="6"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vce-EC-hch">
                                                 <rect key="frame" x="8" y="9" width="24" height="22"/>
                                                 <color key="tintColor" name="button"/>
@@ -617,6 +642,8 @@ Manager</string>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="Vce-EC-hch" firstAttribute="centerX" secondItem="jXP-aR-iMt" secondAttribute="centerX" id="9Yx-ZI-KMj"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ads-Ue-rxg" secondAttribute="trailing" constant="4" id="UIA-80-F0g"/>
+                                            <constraint firstItem="Ads-Ue-rxg" firstAttribute="top" secondItem="jXP-aR-iMt" secondAttribute="top" constant="-6" id="Wyc-hg-NWT"/>
                                             <constraint firstItem="Vce-EC-hch" firstAttribute="centerY" secondItem="jXP-aR-iMt" secondAttribute="centerY" id="cAn-AU-GAz"/>
                                             <constraint firstItem="Vce-EC-hch" firstAttribute="leading" secondItem="jXP-aR-iMt" secondAttribute="leading" constant="8" id="ght-kJ-d7T"/>
                                             <constraint firstAttribute="trailing" secondItem="Vce-EC-hch" secondAttribute="trailing" constant="8" id="ka9-OE-low"/>
@@ -706,6 +733,7 @@ Night</string>
                     <connections>
                         <outlet property="elementCollectionView" destination="X87-TY-IrI" id="gQb-V5-SGj"/>
                         <outlet property="menuBtn" destination="0Nl-j8-qOo" id="o2r-7M-Z7v"/>
+                        <outlet property="notificationBtn" destination="Vce-EC-hch" id="Qq7-aN-bWJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xkO-qj-a2V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1791,6 +1819,49 @@ Night</string>
             </objects>
             <point key="canvasLocation" x="6441" y="-585"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="lKO-i5-hRt">
+            <objects>
+                <viewController storyboardIdentifier="test" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PMg-IU-8QQ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ktn-Yf-XtN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YkK-Ix-pQ7" customClass="RangeSeekSlider" customModule="RangeSeekSlider">
+                                <rect key="frame" x="20" y="416" width="374" height="64"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="WFQ-o5-EwW"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="colorBetweenHandles">
+                                        <color key="value" name="ButtonColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="enableStep" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="step">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="egv-1Q-99t"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YkK-Ix-pQ7" firstAttribute="centerX" secondItem="Ktn-Yf-XtN" secondAttribute="centerX" id="Ydo-8S-lsR"/>
+                            <constraint firstItem="egv-1Q-99t" firstAttribute="trailing" secondItem="YkK-Ix-pQ7" secondAttribute="trailing" constant="20" id="cFL-LY-7V5"/>
+                            <constraint firstItem="YkK-Ix-pQ7" firstAttribute="centerY" secondItem="Ktn-Yf-XtN" secondAttribute="centerY" id="fJn-oL-iTN"/>
+                            <constraint firstItem="YkK-Ix-pQ7" firstAttribute="leading" secondItem="Ktn-Yf-XtN" secondAttribute="leading" constant="20" id="oz3-To-X3A"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hgU-f8-UNA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7269" y="-1040"/>
+        </scene>
     </scenes>
     <designables>
         <designable name="2Go-bQ-8Sh">
@@ -1827,6 +1898,9 @@ Night</string>
         </systemColor>
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

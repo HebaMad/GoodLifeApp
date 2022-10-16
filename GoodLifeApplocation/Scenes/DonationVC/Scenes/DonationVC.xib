@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -126,12 +127,41 @@ Causes</string>
                                 </view>
                             </subviews>
                         </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Byv-fn-qPn">
+                            <rect key="frame" x="0.0" y="-44" width="414" height="100"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="58J-5o-oJL">
+                                    <rect key="frame" x="18" y="70" width="15" height="18.5"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="22" id="YIQ-1T-n13"/>
+                                        <constraint firstAttribute="width" constant="15" id="suW-dp-tR0"/>
+                                    </constraints>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" backgroundImage="chevron.backward" catalog="system"/>
+                                    <connections>
+                                        <action selector="backAction:" destination="-1" eventType="touchUpInside" id="Mk9-bD-fxU"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="2M3-gA-SBW"/>
+                                <constraint firstAttribute="bottom" secondItem="58J-5o-oJL" secondAttribute="bottom" constant="10" id="VQl-J4-5yu"/>
+                                <constraint firstItem="58J-5o-oJL" firstAttribute="leading" secondItem="Byv-fn-qPn" secondAttribute="leading" constant="18" id="uFy-8Q-qpU"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <constraints>
                         <constraint firstItem="NGA-GJ-jrN" firstAttribute="height" secondItem="cCD-oB-1bT" secondAttribute="height" priority="250" id="CAm-g0-2ST"/>
+                        <constraint firstItem="Byv-fn-qPn" firstAttribute="leading" secondItem="cCD-oB-1bT" secondAttribute="leading" id="EUr-dl-cLS"/>
+                        <constraint firstItem="Byv-fn-qPn" firstAttribute="leading" secondItem="cCD-oB-1bT" secondAttribute="leading" id="I1I-Vr-vx2"/>
                         <constraint firstAttribute="trailing" secondItem="NGA-GJ-jrN" secondAttribute="trailing" id="OxL-nP-iQS"/>
+                        <constraint firstItem="Byv-fn-qPn" firstAttribute="top" secondItem="cCD-oB-1bT" secondAttribute="top" constant="-44" id="P0B-K0-eFv"/>
                         <constraint firstItem="NGA-GJ-jrN" firstAttribute="top" secondItem="cCD-oB-1bT" secondAttribute="top" id="REH-Oa-n8O"/>
+                        <constraint firstAttribute="trailing" secondItem="Byv-fn-qPn" secondAttribute="trailing" id="Scn-hd-bg8"/>
                         <constraint firstAttribute="bottom" secondItem="NGA-GJ-jrN" secondAttribute="bottom" id="gPo-Fx-fhz"/>
+                        <constraint firstAttribute="trailing" secondItem="Byv-fn-qPn" secondAttribute="trailing" id="gu9-nm-eFW"/>
                         <constraint firstItem="NGA-GJ-jrN" firstAttribute="leading" secondItem="cCD-oB-1bT" secondAttribute="leading" id="imd-7S-SeK"/>
                         <constraint firstItem="NGA-GJ-jrN" firstAttribute="width" secondItem="cCD-oB-1bT" secondAttribute="width" id="tVO-aJ-Vnm"/>
                     </constraints>
@@ -155,6 +185,7 @@ Causes</string>
     </objects>
     <resources>
         <image name="bg2" width="780" height="1688"/>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <namedColor name="ButtonColor">
             <color red="0.0" green="0.85100001096725464" blue="0.44299998879432678" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

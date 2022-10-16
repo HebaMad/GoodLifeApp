@@ -36,6 +36,10 @@ class DonationVC: UIViewController {
 
         notificationcenterSetup()
     }
+    @IBAction func backAction(_ sender: Any) {
+        
+        navigationController?.popViewController(animated: true)
+    }
     
     //MARK: - Notification center setup
 
@@ -48,7 +52,6 @@ class DonationVC: UIViewController {
                 self.containerView.subviews.first?.removeFromSuperview()
                 self.stepsIndicator.currentStep = 1
                 self.funderID = myString[2]
-                
                 self.presenter.getSubWorthyCause(worthyCauseID:  self.funderID){ status,data,message in
                     let vc = DonationFrameTwoVC.instantiate()
                     vc.subWorthyCause = data.worthy_causes

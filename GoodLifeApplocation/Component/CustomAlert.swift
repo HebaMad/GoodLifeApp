@@ -117,7 +117,7 @@ final class CustomAlert:UIView{
 }
 
 extension UIViewController{
-   func showAlert(title:String,message:String,confirmBtnTitle:String? = nil , cancelBtnTitle:String? = nil, hideCancelBtn:Bool = true  ,complitionHandler:( (CustomAlert.AlertButton)->Void)?  = nil){
+   func showAlert(title:String,message:String,confirmBtnTitle:String? = nil , cancelBtnTitle:String? = nil, hideCancelBtn:Bool = true  ,complitionHandler:( (CustomAlert.AlertButton)->Void)?  = nil) {
        
        let popUp = CustomAlert(title: title, message:message,complitionHandler:complitionHandler)
        popUp.contentMode = .scaleToFill
@@ -125,21 +125,18 @@ extension UIViewController{
        popUp.cancelButton.isHidden = hideCancelBtn
        popUp.okButton.setTitle(confirmBtnTitle ?? "OK", for: .normal)
        DispatchQueue.main.async {
-           
            self.view.addSubview(popUp)
        }
    }
 
-   func showAlert(title:UIImage,message:String,confirmBtnTitle:String? = nil , cancelBtnTitle:String? = nil, hideCancelBtn:Bool = false  ,complitionHandler: ((CustomAlert.AlertButton)->Void)? = nil){
+   func showAlertss(title:String,message:String,confirmBtnTitle:String? = nil , cancelBtnTitle:String? = nil, hideCancelBtn:Bool = false  ,complitionHandler: ((CustomAlert.AlertButton)->Void)? = nil)-> CustomAlert{
        
        let popUp = CustomAlert(title: title, message:message,complitionHandler:complitionHandler)
        popUp.contentMode = .scaleToFill
        popUp.cancelButton.setTitle(cancelBtnTitle ?? "Cancel", for: .normal)
        popUp.cancelButton.isHidden = hideCancelBtn
        popUp.okButton.setTitle(confirmBtnTitle ?? "OK", for: .normal)
-       DispatchQueue.main.async {
-           self.view.addSubview(popUp)
-       }
+   return popUp
    }
 }
 

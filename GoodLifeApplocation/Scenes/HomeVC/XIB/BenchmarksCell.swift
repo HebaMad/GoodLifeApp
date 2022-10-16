@@ -28,12 +28,10 @@ class BenchmarksCell: UITableViewCell , NibLoadableView{
     }
     
     //MARK: - configuration cell
-    func configureCell(title:String,firstValue:String,secondValue:String,FirstProgress:Int,secondProgress:Int){
-        YouprogressView.progress = Float(FirstProgress)
-        nicheProgressView.progress = Float(secondProgress)
+    func configureCell(title:String,value:String,progress:Int){
+        nicheProgressView.progress = Float(progress)
         benchmarkTopic.text = title
-        youValue.text = firstValue
-        nicheValue.text = secondValue
+        nicheValue.text = value
 
 
     }

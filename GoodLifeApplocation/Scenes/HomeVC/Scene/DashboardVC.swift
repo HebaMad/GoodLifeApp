@@ -13,6 +13,7 @@ class DashboardVC: UIViewController {
 
     @IBOutlet weak var elementCollectionView: UICollectionView!
     @IBOutlet weak var menuBtn: UIButton!
+    @IBOutlet weak var notificationBtn: UIButton!
     
     
     //MARK: - properties
@@ -197,14 +198,26 @@ private extension DashboardVC{
     
     func menuBtnBinding(){
         menuBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
+        notificationBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
+
     }
     
 }
 
 //MARK: - Action
 private extension DashboardVC{
-    @objc func buttonWasTapped(){
-        present(menu!, animated: true, completion: nil)
+    @objc func buttonWasTapped(_ sender:UIButton){
+        
+        switch  sender{
+        case menuBtn:
+            present(menu!, animated: true, completion: nil)
+        case notificationBtn:
+            let vc = NotificationVC()
+            navigationController?.pushViewController(vc, animated: true)
+
+        default:
+            print("error select")
+        }
 
     }
 }

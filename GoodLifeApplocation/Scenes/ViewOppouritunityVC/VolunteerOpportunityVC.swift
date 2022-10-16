@@ -40,7 +40,6 @@ class VolunteerOpportunityVC: UIViewController {
         eventDayTxt.setFormat(format: "YYYY-MM-dd")
         eventDayTxt.setDatePickerMode(mode: .date)
         
-        
     }
 }
      //MARK: - Binding

@@ -78,8 +78,8 @@
             filePath = "GoodLifeApplocation/Scenes/MapScreen/Scenes/choosingMinistryNeedsVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "164"
-            endingLineNumber = "164"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
             landmarkName = "getOppourtinityDetails(categories:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -126,8 +126,8 @@
             filePath = "GoodLifeApplocation/Scenes/MapScreen/Scenes/choosingMinistryNeedsVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "165"
-            endingLineNumber = "165"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
             landmarkName = "getOppourtinityDetails(categories:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -238,8 +238,8 @@
             filePath = "GoodLifeApplocation/Scenes/MapScreen/Scenes/FilterVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137"
+            startingLineNumber = "152"
+            endingLineNumber = "152"
             landmarkName = "filterData()"
             landmarkType = "7">
          </BreakpointContent>

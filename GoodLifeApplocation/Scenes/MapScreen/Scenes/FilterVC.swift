@@ -46,18 +46,33 @@ class FilterVC: UIViewController {
     }
     
     //MARK: - Setup RangeSlider
-     func setupRangeSlider(){
-         
-         priceSlidering.delegate = self
-         priceSlidering.isMultipleTouchEnabled=true
-         priceSlidering.selectedHandleDiameterMultiplier = 1.0
-         priceSlidering.lineHeight = 10.0
-         priceSlidering.numberFormatter.positivePrefix = "$"
-         priceSlidering.numberFormatter.positiveSuffix = "k"
-         
-     }
-    
-    
+//     func setupRangeSlider(){
+//
+//         priceSlidering.delegate = self
+////         priceSlidering.minValue = 50.0
+////         priceSlidering.maxValue = 150.0
+////         priceSlidering.selectedMinValue = 60.0
+////         priceSlidering.selectedMaxValue = 140.0
+////         priceSlidering.minDistance = 20.0
+////         priceSlidering.maxDistance = 80.0
+////         priceSlidering.handleColor = .green
+//         priceSlidering.handleDiameter = 10.0
+////         priceSlidering.selectedHandleDiameterMultiplier = 1.3
+////         priceSlidering.numberFormatter.numberStyle = .currency
+//         priceSlidering.numberFormatter.locale = Locale(identifier: "en_US")
+////         priceSlidering.numberFormatter.maximumFractionDigits = 2
+//         priceSlidering.minLabelFont = UIFont(name: "ChalkboardSE-Regular", size: 15.0)!
+//         priceSlidering.maxLabelFont = UIFont(name: "ChalkboardSE-Regular", size: 15.0)!
+//         priceSlidering.numberFormatter.positivePrefix = "$"
+//         priceSlidering.numberFormatter.positiveSuffix = "k"
+//
+//     }
+//
+    func setupRangeSlider(){
+    priceSlidering.numberFormatter.positivePrefix = "$"
+    priceSlidering.numberFormatter.positiveSuffix = "k"
+    priceSlidering.delegate = self
+    }
     @IBAction func filterBtn(_ sender: UIButtonDesignable) {
         filterData()
     }
@@ -140,8 +155,8 @@ extension FilterVC {
        
      
         }catch{
-            self.showAlert(title: "Warning", message: (error as! ValidationError).message,hideCancelBtn: true)
-
+            self.showAlertss(title: "Warning", message: (error as! ValidationError).message,hideCancelBtn: true)
+       
         }
     }
 }

@@ -55,6 +55,12 @@
 		2765D5FC28F4083C008835D9 /* GeneralFinancialCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2765D5FA28F4083C008835D9 /* GeneralFinancialCell.xib */; };
 		2765D5FF28F40D66008835D9 /* GeneralMarketingBreakdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2765D5FD28F40D66008835D9 /* GeneralMarketingBreakdown.swift */; };
 		2765D60028F40D66008835D9 /* GeneralMarketingBreakdown.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2765D5FE28F40D66008835D9 /* GeneralMarketingBreakdown.xib */; };
+		2765FB3528FC6CEC00473198 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2765FB3328FC6CEC00473198 /* NotificationCell.swift */; };
+		2765FB3628FC6CEC00473198 /* NotificationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2765FB3428FC6CEC00473198 /* NotificationCell.xib */; };
+		2765FB3928FC6DFB00473198 /* NotificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2765FB3728FC6DFB00473198 /* NotificationVC.swift */; };
+		2765FB3A28FC6DFB00473198 /* NotificationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2765FB3828FC6DFB00473198 /* NotificationVC.xib */; };
+		2765FB3C28FC7ACE00473198 /* UILableDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2765FB3B28FC7ACE00473198 /* UILableDesignable.swift */; };
+		2765FB4028FCA59F00473198 /* FilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2765FB3E28FCA59F00473198 /* FilterViewController.xib */; };
 		276796A928C3574B00AFEFE3 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276796A828C3574B00AFEFE3 /* CustomAlert.swift */; };
 		276796AB28C3586C00AFEFE3 /* CustomAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = 276796AA28C3586C00AFEFE3 /* CustomAlert.xib */; };
 		2767A271288F3CD600DF34D1 /* DonationThirdFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2767A26F288F3CD600DF34D1 /* DonationThirdFrame.swift */; };
@@ -278,6 +284,12 @@
 		2765D5FA28F4083C008835D9 /* GeneralFinancialCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeneralFinancialCell.xib; sourceTree = "<group>"; };
 		2765D5FD28F40D66008835D9 /* GeneralMarketingBreakdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralMarketingBreakdown.swift; sourceTree = "<group>"; };
 		2765D5FE28F40D66008835D9 /* GeneralMarketingBreakdown.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeneralMarketingBreakdown.xib; sourceTree = "<group>"; };
+		2765FB3328FC6CEC00473198 /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
+		2765FB3428FC6CEC00473198 /* NotificationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationCell.xib; sourceTree = "<group>"; };
+		2765FB3728FC6DFB00473198 /* NotificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationVC.swift; sourceTree = "<group>"; };
+		2765FB3828FC6DFB00473198 /* NotificationVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationVC.xib; sourceTree = "<group>"; };
+		2765FB3B28FC7ACE00473198 /* UILableDesignable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILableDesignable.swift; sourceTree = "<group>"; };
+		2765FB3E28FCA59F00473198 /* FilterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterViewController.xib; sourceTree = "<group>"; };
 		276796A828C3574B00AFEFE3 /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
 		276796AA28C3586C00AFEFE3 /* CustomAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomAlert.xib; sourceTree = "<group>"; };
 		2767A26F288F3CD600DF34D1 /* DonationThirdFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationThirdFrame.swift; sourceTree = "<group>"; };
@@ -634,6 +646,7 @@
 				27B8C8F128A1687F0011B039 /* MapFilterList.swift */,
 				273D3A9C28B0CED000860702 /* choosingMinistryNeedsVC.swift */,
 				273D3A9D28B0CED000860702 /* choosingMinistryNeedsVC.xib */,
+				2765FB3E28FCA59F00473198 /* FilterViewController.xib */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -727,6 +740,7 @@
 				27A7376B2891435C00FD8AD9 /* UIImageViewDesignable.swift */,
 				27A7376C2891435C00FD8AD9 /* UIViewDesignable.swift */,
 				27CB207C289CFDFE00E63694 /* BottomBorderTextField.swift */,
+				2765FB3B28FC7ACE00473198 /* UILableDesignable.swift */,
 			);
 			path = Designable;
 			sourceTree = "<group>";
@@ -851,6 +865,8 @@
 				27F7363828C4FD4100E804B5 /* resourceSubTopicCell.xib */,
 				2764D6CD28E2FA6600AC7F73 /* LessonDetailsCollectionCell.swift */,
 				2764D6CE28E2FA6600AC7F73 /* LessonDetailsCollectionCell.xib */,
+				2765FB3328FC6CEC00473198 /* NotificationCell.swift */,
+				2765FB3428FC6CEC00473198 /* NotificationCell.xib */,
 			);
 			path = XIB;
 			sourceTree = "<group>";
@@ -918,6 +934,8 @@
 				2764D6C928E2E47000AC7F73 /* LessonDetails.swift */,
 				2764D6CA28E2E47000AC7F73 /* LessonDetails.xib */,
 				2764D6D128E4304E00AC7F73 /* LessonTopicDetails.swift */,
+				2765FB3728FC6DFB00473198 /* NotificationVC.swift */,
+				2765FB3828FC6DFB00473198 /* NotificationVC.xib */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -1076,8 +1094,10 @@
 				27C9AE60288D3CB500FA584A /* Inter-UI-BlackItalic.ttf in Resources */,
 				27CB207B289CFC0400E63694 /* OnBoardingFrame1.xib in Resources */,
 				27C9AEAB288DA8E300FA584A /* TaskCollectionViewCell.xib in Resources */,
+				2765FB3628FC6CEC00473198 /* NotificationCell.xib in Resources */,
 				27C9AE57288D3CB500FA584A /* Inter-LightItalic-BETA.ttf in Resources */,
 				27F4B15428B8BD90003365A6 /* ProfileSettingVC.xib in Resources */,
+				2765FB3A28FC6DFB00473198 /* NotificationVC.xib in Resources */,
 				2710A28E289A5C3C009BCE60 /* TaskCell.xib in Resources */,
 				27C9AE63288D3CB500FA584A /* Inter-MediumItalic.ttf in Resources */,
 				27C9AE61288D3CB500FA584A /* Inter-SemiBoldItalic.ttf in Resources */,
@@ -1122,6 +1142,7 @@
 				27CB2060289B0FDC00E63694 /* ResourceDetailsCell.xib in Resources */,
 				27C9AEAF288DB44600FA584A /* CategoriesCollectionViewCell.xib in Resources */,
 				27F7363A28C4FD4100E804B5 /* resourceSubTopicCell.xib in Resources */,
+				2765FB4028FCA59F00473198 /* FilterViewController.xib in Resources */,
 				27C9AE84288D4F0600FA584A /* OnBoardingFrame3.xib in Resources */,
 				27A7376A2891431000FD8AD9 /* OpportunityView.xib in Resources */,
 				27B8C8E628A1067F0011B039 /* FilterCell.xib in Resources */,
@@ -1209,6 +1230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27CB206D289C1AA000E63694 /* AllCategoriesCell.swift in Sources */,
+				2765FB3928FC6DFB00473198 /* NotificationVC.swift in Sources */,
 				27C9AE89288D51FD00FA584A /* OnBoardingFrame4.swift in Sources */,
 				27594D2228A017D600F4DDC3 /* GeneralLiturgicalPageVC.swift in Sources */,
 				27F4B14B28B8AD4F003365A6 /* VenturesCell.swift in Sources */,
@@ -1228,6 +1250,7 @@
 				27594D1E28A010CE00F4DDC3 /* GeneralMarketingPageVC.swift in Sources */,
 				2704244428A6DF16002EF7B5 /* SpecificList.swift in Sources */,
 				27F4B14628B8A663003365A6 /* ProfileVC.swift in Sources */,
+				2765FB3528FC6CEC00473198 /* NotificationCell.swift in Sources */,
 				2764D6D228E4304E00AC7F73 /* LessonTopicDetails.swift in Sources */,
 				27C9AE2B288D38E900FA584A /* ViewController.swift in Sources */,
 				27B8C90028A198BB0011B039 /* NibLoadableView.swift in Sources */,
@@ -1340,6 +1363,7 @@
 				27B54D9328BA6E170074A6A1 /* AppData.swift in Sources */,
 				2704243D28A6C828002EF7B5 /* BusinessPlanCell.swift in Sources */,
 				27F7363928C4FD4100E804B5 /* resourceSubTopicCell.swift in Sources */,
+				2765FB3C28FC7ACE00473198 /* UILableDesignable.swift in Sources */,
 				27876AB828A440ED003A012A /* WebsiteCompetitorCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

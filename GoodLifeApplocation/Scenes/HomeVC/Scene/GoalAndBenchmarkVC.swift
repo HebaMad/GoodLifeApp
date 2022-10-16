@@ -165,7 +165,7 @@ extension GoalAndBenchmarkVC:UITableViewDelegate, UITableViewDataSource{
             return cell
         case 2:
             let cell:BenchmarksCell = tableView.dequeueReusableCell(for: indexPath)
-            cell.configureCell(title: benchmarks[indexPath.row].title ?? "", firstValue: benchmarks[indexPath.row].you_target ?? "", secondValue: benchmarks[indexPath.row].niche_target ?? "", FirstProgress: 500, secondProgress: 500)
+            cell.configureCell(title: benchmarks[indexPath.row].title ?? "" ,value: benchmarks[indexPath.row].niche_target ?? "", progress: 500)
             return cell
         default:
             return UITableViewCell()
