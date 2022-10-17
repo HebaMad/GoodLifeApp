@@ -145,7 +145,7 @@ extension FilterVC {
                 let AmountOfTechnology = try AmountOfTechnologyTxt.validatedText(validationType: .requiredField(field: "Select Amount Of Technology options"))
                 let LevelOfDifficulty = try LevelOfDifficultyTxt.validatedText(validationType: .requiredField(field: "Select monthly revenu options"))
                 let timeCommitment = try timeCommitmentTxt.validatedText(validationType: .requiredField(field: "Select time of commitment options"))
-            presenter.filterPackages(investmentFrom: "\(minInvestmentValue)", investmentTo: "\(maxInvestmentValue)", work_type: timeCommitment.lowercased(), level_of_difficulty: LevelOfDifficulty.lowercased(), amount_of_technology: AmountOfTechnology.lowercased())
+            presenter.filterPackages(investmentFrom: "\(minInvestmentValue*1000)", investmentTo: "\(maxInvestmentValue*1000)", work_type: timeCommitment.lowercased(), level_of_difficulty: LevelOfDifficulty.lowercased(), amount_of_technology: AmountOfTechnology.lowercased())
                 presenter.delegate=self
                 
        
@@ -183,7 +183,7 @@ extension FilterVC:HomeDelegate{
 }
 extension FilterVC:RangeSeekSliderDelegate{
  func rangeSeekSlider(_ slider: RangeSeekSlider, didChange minValue: CGFloat, maxValue: CGFloat) {
-     investmentAmountTxt.text = "\(Int(minInvestmentValue)) - \(Int(maxInvestmentValue))"
+     investmentAmountTxt.text = "\(Int(minInvestmentValue))" + " " + "k" + "-" + "\(Int(maxInvestmentValue))" + " " + "k"
 
      minInvestmentValue=Float(minValue)
      maxInvestmentValue=Float(maxValue)
