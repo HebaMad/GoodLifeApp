@@ -13,6 +13,7 @@ class FilterVC: UIViewController {
     
     //MARK: - Outlet
 
+    @IBOutlet var myView: UIView!
     @IBOutlet weak var timeCommitmentTxt: UITextField!
     @IBOutlet weak var timeCommitmentBtn: UIButton!
     
@@ -37,37 +38,32 @@ class FilterVC: UIViewController {
     var maxInvestmentValue:Float = 0.0
     let presenter = HomePresenter()
     var onFilterDissmissed : DataFiltered?
-
+    var tapGesture = UITapGestureRecognizer()
+    
     //MARK: - Life CYCLE
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupRangeSlider()
+        setupTapGesture()
     }
     
+    
+    //MARK: - Setup Tap Gesture Recognizer
+
+    func setupTapGesture(){
+        tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
+        tapGesture.numberOfTapsRequired = 1
+        tapGesture.numberOfTouchesRequired = 1
+        myView.addGestureRecognizer(tapGesture)
+        myView.isUserInteractionEnabled = true
+       }
+    
+    @objc func handleTap(_ sender: UITapGestureRecognizer) {
+        self.dismiss(animated: true)
+    }
     //MARK: - Setup RangeSlider
-//     func setupRangeSlider(){
-//
-//         priceSlidering.delegate = self
-////         priceSlidering.minValue = 50.0
-////         priceSlidering.maxValue = 150.0
-////         priceSlidering.selectedMinValue = 60.0
-////         priceSlidering.selectedMaxValue = 140.0
-////         priceSlidering.minDistance = 20.0
-////         priceSlidering.maxDistance = 80.0
-////         priceSlidering.handleColor = .green
-//         priceSlidering.handleDiameter = 10.0
-////         priceSlidering.selectedHandleDiameterMultiplier = 1.3
-////         priceSlidering.numberFormatter.numberStyle = .currency
-//         priceSlidering.numberFormatter.locale = Locale(identifier: "en_US")
-////         priceSlidering.numberFormatter.maximumFractionDigits = 2
-//         priceSlidering.minLabelFont = UIFont(name: "ChalkboardSE-Regular", size: 15.0)!
-//         priceSlidering.maxLabelFont = UIFont(name: "ChalkboardSE-Regular", size: 15.0)!
-//         priceSlidering.numberFormatter.positivePrefix = "$"
-//         priceSlidering.numberFormatter.positiveSuffix = "k"
-//
-//     }
-//
+
     func setupRangeSlider(){
     priceSlidering.numberFormatter.positivePrefix = "$"
     priceSlidering.numberFormatter.positiveSuffix = "k"
@@ -155,7 +151,7 @@ extension FilterVC {
        
      
         }catch{
-            self.showAlertss(title: "Warning", message: (error as! ValidationError).message,hideCancelBtn: true)
+            self.showAlert(title: "Warning", message: (error as! ValidationError).message,hideCancelBtn: true)
        
         }
     }

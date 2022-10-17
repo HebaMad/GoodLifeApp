@@ -166,6 +166,11 @@
             <point key="canvasLocation" x="139" y="127"/>
         </view>
     </objects>
+    <designables>
+        <designable name="8Fs-nd-BiZ">
+            <size key="intrinsicContentSize" width="-1" height="65"/>
+        </designable>
+    </designables>
     <resources>
         <image name="investment" width="454" height="454"/>
         <namedColor name="BgColor">

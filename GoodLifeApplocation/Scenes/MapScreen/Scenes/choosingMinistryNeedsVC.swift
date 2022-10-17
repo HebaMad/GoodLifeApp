@@ -103,16 +103,10 @@ private extension choosingMinistryNeedsVC{
             presenter.delegate = self
             
         case filterBtn:
-//            let controller = FilterVC()
-//            controller.onFilterDissmissed = self
-//            let sheetController = SheetViewController(
-//                controller: controller,
-//                sizes: [ .percent(0.8)])
-//
-//
+
             let vc = FilterVC()
+            vc.onFilterDissmissed = self
             self.present(vc, animated: false, completion: nil)
-//            self.present(sheetController, animated: false, completion: nil)
 
         default:
             print("")

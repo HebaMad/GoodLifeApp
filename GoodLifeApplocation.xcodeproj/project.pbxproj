@@ -60,7 +60,6 @@
 		2765FB3928FC6DFB00473198 /* NotificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2765FB3728FC6DFB00473198 /* NotificationVC.swift */; };
 		2765FB3A28FC6DFB00473198 /* NotificationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2765FB3828FC6DFB00473198 /* NotificationVC.xib */; };
 		2765FB3C28FC7ACE00473198 /* UILableDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2765FB3B28FC7ACE00473198 /* UILableDesignable.swift */; };
-		2765FB4028FCA59F00473198 /* FilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2765FB3E28FCA59F00473198 /* FilterViewController.xib */; };
 		276796A928C3574B00AFEFE3 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276796A828C3574B00AFEFE3 /* CustomAlert.swift */; };
 		276796AB28C3586C00AFEFE3 /* CustomAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = 276796AA28C3586C00AFEFE3 /* CustomAlert.xib */; };
 		2767A271288F3CD600DF34D1 /* DonationThirdFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2767A26F288F3CD600DF34D1 /* DonationThirdFrame.swift */; };
@@ -289,7 +288,6 @@
 		2765FB3728FC6DFB00473198 /* NotificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationVC.swift; sourceTree = "<group>"; };
 		2765FB3828FC6DFB00473198 /* NotificationVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationVC.xib; sourceTree = "<group>"; };
 		2765FB3B28FC7ACE00473198 /* UILableDesignable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILableDesignable.swift; sourceTree = "<group>"; };
-		2765FB3E28FCA59F00473198 /* FilterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterViewController.xib; sourceTree = "<group>"; };
 		276796A828C3574B00AFEFE3 /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
 		276796AA28C3586C00AFEFE3 /* CustomAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomAlert.xib; sourceTree = "<group>"; };
 		2767A26F288F3CD600DF34D1 /* DonationThirdFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationThirdFrame.swift; sourceTree = "<group>"; };
@@ -646,7 +644,6 @@
 				27B8C8F128A1687F0011B039 /* MapFilterList.swift */,
 				273D3A9C28B0CED000860702 /* choosingMinistryNeedsVC.swift */,
 				273D3A9D28B0CED000860702 /* choosingMinistryNeedsVC.xib */,
-				2765FB3E28FCA59F00473198 /* FilterViewController.xib */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -1142,7 +1139,6 @@
 				27CB2060289B0FDC00E63694 /* ResourceDetailsCell.xib in Resources */,
 				27C9AEAF288DB44600FA584A /* CategoriesCollectionViewCell.xib in Resources */,
 				27F7363A28C4FD4100E804B5 /* resourceSubTopicCell.xib in Resources */,
-				2765FB4028FCA59F00473198 /* FilterViewController.xib in Resources */,
 				27C9AE84288D4F0600FA584A /* OnBoardingFrame3.xib in Resources */,
 				27A7376A2891431000FD8AD9 /* OpportunityView.xib in Resources */,
 				27B8C8E628A1067F0011B039 /* FilterCell.xib in Resources */,
