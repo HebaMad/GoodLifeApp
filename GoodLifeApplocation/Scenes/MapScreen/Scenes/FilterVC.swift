@@ -65,6 +65,7 @@ class FilterVC: UIViewController {
     //MARK: - Setup RangeSlider
 
     func setupRangeSlider(){
+    priceSlidering.numberFormatter.locale = Locale(identifier: "en_US")
     priceSlidering.numberFormatter.positivePrefix = "$"
     priceSlidering.numberFormatter.positiveSuffix = "k"
     priceSlidering.delegate = self
@@ -139,6 +140,7 @@ class FilterVC: UIViewController {
 }
 
 extension FilterVC {
+    
     func filterData(){
         
         do{
@@ -147,9 +149,7 @@ extension FilterVC {
                 let timeCommitment = try timeCommitmentTxt.validatedText(validationType: .requiredField(field: "Select time of commitment options"))
             presenter.filterPackages(investmentFrom: "\(minInvestmentValue*1000)", investmentTo: "\(maxInvestmentValue*1000)", work_type: timeCommitment.lowercased(), level_of_difficulty: LevelOfDifficulty.lowercased(), amount_of_technology: AmountOfTechnology.lowercased())
                 presenter.delegate=self
-                
-       
-     
+              
         }catch{
             self.showAlert(title: "Warning", message: (error as! ValidationError).message,hideCancelBtn: true)
        
@@ -169,6 +169,8 @@ extension FilterVC:HomeDelegate{
     
     func getCategoriesFiltered(categories: CategoriesFiltering) {}
     
+    func getOppourtinityDetails(categories: OppourtinityDetails) {}
+    
     func getOppourtinity(categories: Oppourtinity) {
         self.dismiss(animated: true) {
             if let _delegate = self.onFilterDissmissed {
@@ -178,9 +180,10 @@ extension FilterVC:HomeDelegate{
         }
     }
     
-    func getOppourtinityDetails(categories: OppourtinityDetails) {}
+   
     
 }
+
 extension FilterVC:RangeSeekSliderDelegate{
  func rangeSeekSlider(_ slider: RangeSeekSlider, didChange minValue: CGFloat, maxValue: CGFloat) {
      investmentAmountTxt.text = "\(Int(minInvestmentValue))" + " " + "k" + "-" + "\(Int(maxInvestmentValue))" + " " + "k"

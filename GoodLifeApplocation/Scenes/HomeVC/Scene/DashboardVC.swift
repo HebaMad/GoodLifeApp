@@ -10,7 +10,7 @@ import SideMenu
 import  SkeletonView
 class DashboardVC: UIViewController {
     //MARK: - Outlet
-
+    
     @IBOutlet weak var elementCollectionView: UICollectionView!
     @IBOutlet weak var menuBtn: UIButton!
     @IBOutlet weak var notificationBtn: UIButton!
@@ -31,71 +31,71 @@ class DashboardVC: UIViewController {
             self.elementCollectionView.reloadData()
         }
     }
-
+    
     
     //MARK: - Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.isSkeleton = true
-
+        
         setUpSideMenu()
         setupCollectionview()
         menuBtnBinding()
-
-        presenter.getCategories()
-        presenter.getResource()
-        presenter.getMyTask()
-        presenter.delegate=self
+        
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         changeSideMenuSide()
+        presenter.getCategories()
+        presenter.getResource()
+        presenter.getMyTask()
+        presenter.delegate=self
     }
     
     //MARK: - Side menu setup
-
+    
     private func changeSideMenuSide(){
-       
-               menu?.leftSide = true
-               SideMenuManager.default.rightMenuNavigationController = nil
-               SideMenuManager.default.leftMenuNavigationController = menu
+        
+        menu?.leftSide = true
+        SideMenuManager.default.rightMenuNavigationController = nil
+        SideMenuManager.default.leftMenuNavigationController = menu
         
     }
     
     private func setUpSideMenu() {
-            let vc = OpportunityViewVC()
-            menu = SideMenuNavigationController(rootViewController: vc)
-            menu?.setNavigationBarHidden(true, animated: false)
-            menu?.presentationStyle = .menuSlideIn
-            menu?.presentationStyle.onTopShadowColor = .black
-            menu?.presentationStyle.onTopShadowRadius = 0
-            menu?.presentationStyle.onTopShadowOffset = .zero
-            menu?.presentationStyle.onTopShadowOpacity = 0
+        let vc = OpportunityViewVC()
+        menu = SideMenuNavigationController(rootViewController: vc)
+        menu?.setNavigationBarHidden(true, animated: false)
+        menu?.presentationStyle = .menuSlideIn
+        menu?.presentationStyle.onTopShadowColor = .black
+        menu?.presentationStyle.onTopShadowRadius = 0
+        menu?.presentationStyle.onTopShadowOffset = .zero
+        menu?.presentationStyle.onTopShadowOpacity = 0
         menu?.presentationStyle.presentingScaleFactor = 0.99
         menu?.menuWidth = 280
-
-            SideMenuManager.default.addPanGestureToPresent(toView: self.view)
-        }
+        
+        SideMenuManager.default.addPanGestureToPresent(toView: self.view)
+    }
     
     private func setupCollectionview(){
         
         elementCollectionView.register(CategoriesCollectionViewCell.self)
         elementCollectionView.register(TaskCollectionViewCell.self)
         elementCollectionView.register(ResourceCollectionViewCell.self)
-
+        
         elementCollectionView.register(UINib(nibName:"HeaderCollectionReusableView", bundle: nil), forSupplementaryViewOfKind:UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.headerIdentifier)
         elementCollectionView.collectionViewLayout = createCompositionalLayout()
         elementCollectionView.dataSource=self
         elementCollectionView.delegate=self
-
+        
         elementCollectionView.reloadData()
     }
-
+    
     
     //MARK: - CompositionalLayout setup
-
+    
     private func createCompositionalLayout() -> UICollectionViewCompositionalLayout {
         UICollectionViewCompositionalLayout { [weak self] sectionIndex, layoutEnviroment in
             guard let self = self  else { return nil }
@@ -106,7 +106,7 @@ class DashboardVC: UIViewController {
                 let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .absolute(140))
                 
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
-//                item.contentInsets = .init(top: 0, leading: 0, bottom: 0, trailing: 4)
+                //                item.contentInsets = .init(top: 0, leading: 0, bottom: 0, trailing: 4)
                 
                 let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.99), heightDimension: .estimated(0.5))
                 
@@ -129,9 +129,9 @@ class DashboardVC: UIViewController {
                 let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalWidth(0.3))
                 
                 let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-               
+                
                 let section = NSCollectionLayoutSection(group: group)
-//                section.orthogonalScrollingBehavior = .continuous
+                //                section.orthogonalScrollingBehavior = .continuous
                 section.contentInsets = .init(top: 0, leading: 10, bottom: 0, trailing: 10)
                 section.boundarySupplementaryItems = [self.supplementaryHeaderItem()]
                 section.supplementariesFollowContentInsets = false
@@ -141,7 +141,7 @@ class DashboardVC: UIViewController {
                 let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .absolute(140))
                 
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
-//                item.contentInsets = .init(top: 0, leading: 0, bottom: 0, trailing: 4)
+                //                item.contentInsets = .init(top: 0, leading: 0, bottom: 0, trailing: 4)
                 
                 let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.99), heightDimension: .estimated(0.5))
                 
@@ -155,34 +155,34 @@ class DashboardVC: UIViewController {
                 section.boundarySupplementaryItems = [self.supplementaryHeaderItem()]
                 section.supplementariesFollowContentInsets = false
                 return section
-
+                
             }
             
         }
     }
-        private func supplementaryHeaderItem() -> NSCollectionLayoutBoundarySupplementaryItem {
-            .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .estimated(50)), elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
+    private func supplementaryHeaderItem() -> NSCollectionLayoutBoundarySupplementaryItem {
+        .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .estimated(50)), elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
+    }
+    
+    
+    @objc func viewAllButton(_ sender:UIButton){
+        
+        switch sections[sender.tag]{
+            
+        case .categories:
+            let vc = AllCategoriesVC.instantiate()
+            vc.categories=categories
+            navigationController?.pushViewController(vc, animated: true)
+        case .Task:
+            let vc = TaskVC.instantiate()
+            vc.myCurrentTask = myCurrentTask
+            vc.myCompletedTask = myCompletedTask
+            navigationController?.pushViewController(vc, animated: true)
+        case .Resource:
+            let vc = AllResourceVC.instantiate()
+            vc.resource=self.resource
+            navigationController?.pushViewController(vc, animated: true)
         }
-    
-    
-     @objc func viewAllButton(_ sender:UIButton){
-         
-         switch sections[sender.tag]{
-             
-         case .categories:
-             let vc = AllCategoriesVC.instantiate()
-             vc.categories=categories
-             navigationController?.pushViewController(vc, animated: true)
-         case .Task:
-             let vc = TaskVC.instantiate()
-             vc.myCurrentTask = myCurrentTask
-             vc.myCompletedTask = myCompletedTask
-             navigationController?.pushViewController(vc, animated: true)
-         case .Resource:
-             let vc = AllResourceVC.instantiate()
-             vc.resource=self.resource
-             navigationController?.pushViewController(vc, animated: true)
-         }
     }
     
     
@@ -199,7 +199,7 @@ private extension DashboardVC{
     func menuBtnBinding(){
         menuBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
         notificationBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
-
+        
     }
     
 }
@@ -214,11 +214,11 @@ private extension DashboardVC{
         case notificationBtn:
             let vc = NotificationVC()
             navigationController?.pushViewController(vc, animated: true)
-
+            
         default:
             print("error select")
         }
-
+        
     }
 }
 
@@ -234,16 +234,16 @@ extension DashboardVC: UICollectionViewDataSource,UICollectionViewDelegate,UICol
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-            switch sections[section]{
-            case .categories: return self.isSkeleton ? 3 :categories.count
-            case .Task :return self.isSkeleton ? 2 : myCurrentTask.count
-            case .Resource:return self.isSkeleton ? 3 : resource.count
-                
-            }
+        switch sections[section]{
+        case .categories: return self.isSkeleton ? 3 :categories.count
+        case .Task :return self.isSkeleton ? 2 : myCurrentTask.count
+        case .Resource:return self.isSkeleton ? 3 : resource.count
+            
         }
-
+    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-
+        
         switch sections[indexPath.section] {
         case .categories:
             
@@ -266,8 +266,8 @@ extension DashboardVC: UICollectionViewDataSource,UICollectionViewDelegate,UICol
             cell.setup(myCurrentTask[indexPath.row])
             cell.DoneBtn.addTarget(self, action: #selector(markDoneBtn), for: .touchUpInside)
             cell.DoneBtn.tag=indexPath.row
-
-
+            
+            
             return cell
         case .Resource:
             
@@ -278,7 +278,7 @@ extension DashboardVC: UICollectionViewDataSource,UICollectionViewDelegate,UICol
             }
             cell.stopSkeleton()
             cell.setup(resource[indexPath.row])
-
+            
             return cell
             
         }
@@ -287,8 +287,8 @@ extension DashboardVC: UICollectionViewDataSource,UICollectionViewDelegate,UICol
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         switch sections[indexPath.section] {
-
-        
+            
+            
         case .categories:
             let vc = ResourceDetailsVC.instantiate()
             navigationController?.pushViewController(vc, animated: true)
@@ -309,14 +309,14 @@ extension DashboardVC: UICollectionViewDataSource,UICollectionViewDelegate,UICol
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.headerIdentifier, for: indexPath) as! HeaderCollectionReusableView
         header.viewAllButton.addTarget(self, action: #selector(viewAllButton), for: .touchUpInside)
         header.viewAllButton.tag = indexPath.section
-
+        
         header.setup(sections[indexPath.section].title)
         return header
     }
 }
 extension DashboardVC:Storyboarded{
     static var storyboardName: StoryboardName = .main
-
+    
 }
 
 extension DashboardVC:DashboardDelegate{
@@ -330,29 +330,29 @@ extension DashboardVC:DashboardDelegate{
     
     func getCategories(data: [Categories]) {
         self.isSkeleton = false
-
+        
         categories=data
         elementCollectionView.reloadData()
     }
     
     func getResource(data: [Resources]) {
         self.isSkeleton = false
-
-     resource = data
+        
+        resource = data
         elementCollectionView.reloadData()
     }
     
     func getMyTask(data: DashboardTask) {
         self.isSkeleton = false
-
+        
         myCompletedTask=data.completedTasks ?? []
         myCurrentTask = data.currentTasks ?? []
         elementCollectionView.reloadData()
-
+        
     }
     func getResourceDetails(data: ResourceDetails) {
         // no implementation
-
+        
     }
     
     

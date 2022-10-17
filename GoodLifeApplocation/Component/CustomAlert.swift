@@ -63,6 +63,7 @@ final class CustomAlert:UIView{
    func xibSetup() {
        view = loadViewFromNib()
        addSubview(view)
+       
        customSetup()
    }
    
@@ -121,22 +122,25 @@ extension UIViewController{
        
        let popUp = CustomAlert(title: title, message:message,complitionHandler:complitionHandler)
        popUp.contentMode = .scaleToFill
+  
        popUp.cancelButton.setTitle(cancelBtnTitle ?? "Cancel", for: .normal)
        popUp.cancelButton.isHidden = hideCancelBtn
        popUp.okButton.setTitle(confirmBtnTitle ?? "OK", for: .normal)
+       
        DispatchQueue.main.async {
+//           popUp.frame = self.view.bounds
            self.view.addSubview(popUp)
+           NSLayoutConstraint.activate([
+            popUp.topAnchor.constraint(equalTo:  self.view.topAnchor),
+            popUp.leftAnchor.constraint(equalTo:  self.view.leftAnchor),
+            popUp.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+            popUp.rightAnchor.constraint(equalTo: self.view.rightAnchor),
+            popUp.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            popUp.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
+
+           ])
        }
    }
 
-   func showAlertss(title:String,message:String,confirmBtnTitle:String? = nil , cancelBtnTitle:String? = nil, hideCancelBtn:Bool = false  ,complitionHandler: ((CustomAlert.AlertButton)->Void)? = nil)-> CustomAlert{
-       
-       let popUp = CustomAlert(title: title, message:message,complitionHandler:complitionHandler)
-       popUp.contentMode = .scaleToFill
-       popUp.cancelButton.setTitle(cancelBtnTitle ?? "Cancel", for: .normal)
-       popUp.cancelButton.isHidden = hideCancelBtn
-       popUp.okButton.setTitle(confirmBtnTitle ?? "OK", for: .normal)
-   return popUp
-   }
-}
 
+}

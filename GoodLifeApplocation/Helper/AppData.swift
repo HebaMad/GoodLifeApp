@@ -32,8 +32,8 @@ struct Storage<T> {
 
 struct AppData {
     
-    @Storage(key: "email", defaultValue: "")
-    static var email: String
+    @Storage(key: "mobile", defaultValue: "")
+    static var mobile: String
    
     
 

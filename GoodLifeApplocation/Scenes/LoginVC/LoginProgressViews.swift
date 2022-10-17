@@ -98,6 +98,17 @@ private extension LoginProgressViews{
 }
                                   
 extension LoginProgressViews:AuthDelegate{
+    func getuserToken(data: userProfile) {
+      do{
+          try KeychainWrapper.set(value: "Bearer"+" "+data.access_token! , key: data.mobile ?? "")
+          AppData.mobile = data.mobile ?? ""
+               
+        } catch let error {
+          print(error)
+    }
+    }
+  
+    
     func checkStatus(status: Bool, msg: String, screen: String) {
         if status == true{
             
