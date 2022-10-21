@@ -38,12 +38,16 @@ class AddGoalVC: UIViewController,UITextFieldDelegate,UIImagePickerControllerDel
         setupTimePicker()
     
     }
+    
+    //MARK: - SetupTimePicker
+
     fileprivate func setupTimePicker() {
         deadlineTxt.setFormat(format: "YYYY-MM-dd HH:mm:ss")
         deadlineTxt.setDatePickerMode(mode: .dateAndTime)
     }
 
 }
+//MARK: - Binding
 
 private extension AddGoalVC{
     
@@ -91,10 +95,14 @@ private extension AddGoalVC{
   }
 }
 
+//MARK: - confirm to DashboardDelegate
+
 extension AddGoalVC:DashboardDelegate{
-    func getMyGoalAndBenchmark(data: GoalsAndBenchmark) {
-        //
-    }
+    func getNotification(data: AllNotifiaction) { }
+    func getMyGoalAndBenchmark(data: GoalsAndBenchmark) { }
+    func getResource(data: [Resources]) {}
+    func getMyTask(data: DashboardTask) {}
+    func getResourceDetails(data: ResourceDetails) {}
     
     func showAlerts(title: String, message: String) {
         self.showAlert(title: title, message: message)
@@ -104,21 +112,12 @@ extension AddGoalVC:DashboardDelegate{
     func getCategories(data: [Categories]) {
         self.categories = data
     }
-    
-    func getResource(data: [Resources]) {
-        // no implementation
-    }
-    
-    func getMyTask(data: DashboardTask) {
-        // no implementation
-
-    }
-    func getResourceDetails(data: ResourceDetails) {
-        // no implementation
-
-    }
+  
     
 }
+
+//MARK: - confirm to DatePickerDelegate
+
 extension AddGoalVC:UITextFieldDataPickerDelegate,UITextFieldDataPickerDataSource{
 
     
@@ -140,14 +139,11 @@ print("\(title ?? "")")
         categoryTxt.setTextFieldTitle(title: categories[row].title ?? "")
         self.itemID=categories[row].id ?? 0
     }
-    
-    
-    
-    
-    
+   
     
 }
 
+//MARK: - Clear Data After Add
 
 extension AddGoalVC{
     func clearData(){

@@ -12,14 +12,22 @@ class NotificationVC: UIViewController {
     @IBOutlet weak var notificationTableview: UITableView!
     
     //MARK: - Properties
-
-    
+    let presenter = DashboardPresenter()
+    var notification:[notificationsDetails]=[]
     //MARK: - Life cycle
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        assignPresenterNotification()
+        
+    }
+    
+    //MARK: - getNotification
 
+    func assignPresenterNotification(){
+        presenter.notification()
+        presenter.delegate=self
         setupTableview()
     }
 
@@ -48,16 +56,37 @@ extension NotificationVC:UITableViewDelegate{}
 extension NotificationVC:UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        5
+        notification.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell:NotificationCell = tableView.dequeueReusableCell(for: indexPath)
+        cell.configureCell(data: notification[indexPath.row])
         return cell
         
     }
     
     
 }
+   //MARK: - confirm to DashboardDelegate
 
+extension NotificationVC:DashboardDelegate{
+    // no implementation
+    
+    func showAlerts(title: String, message: String) {}
+    func getCategories(data: [Categories]) {}
+    func getResource(data: [Resources]) {}
+    func getMyTask(data: DashboardTask) {}
+    func getMyGoalAndBenchmark(data: GoalsAndBenchmark) {}
+    func getResourceDetails(data: ResourceDetails) {}
+
+    // with implementation
+
+    func getNotification(data: AllNotifiaction) {
+        notification = data.notifications
+        notificationTableview.reloadData()
+    }
+    
+    
+}

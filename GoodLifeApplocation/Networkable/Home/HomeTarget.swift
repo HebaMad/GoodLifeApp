@@ -17,7 +17,7 @@ enum HomeApiTarget:TargetType{
     case getOpportunities(needTypeId:Int,intrest:Int)
     case oppourtinityDetails(opportunity_id:Int)
     case Filter(investmentFrom:String,investmentTo:String,work_type:String,level_of_difficulty:String,amount_of_technology:String)
-
+    
     var baseURL: URL {
         return URL(string: "\(AppConfig.apiBaseUrl)")!
     }
@@ -37,6 +37,7 @@ enum HomeApiTarget:TargetType{
         case .oppourtinityDetails:return "getOpportunityDetails"
             
         case .Filter:return "filterOpportunities"
+            
             
         }
     }

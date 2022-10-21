@@ -28,10 +28,10 @@ class NotificationCell: UITableViewCell , NibLoadableView{
     
     //MARK: - Configure Cell
 
-   func configureCell(title:String,details:String){
+    func configureCell(data:notificationsDetails){
         
-       self.titleTxt.text = title
-       self.detailsTxt.text = details
+        self.titleTxt.text = data.title ?? ""
+        self.detailsTxt.text = data.details ?? ""
    
    }
     

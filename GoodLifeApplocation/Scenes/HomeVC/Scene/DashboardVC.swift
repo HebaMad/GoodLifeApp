@@ -320,13 +320,11 @@ extension DashboardVC:Storyboarded{
 }
 
 extension DashboardVC:DashboardDelegate{
-    func getMyGoalAndBenchmark(data: GoalsAndBenchmark) {
-        //
-    }
+    func getNotification(data: AllNotifiaction) {}
+    func getMyGoalAndBenchmark(data: GoalsAndBenchmark) {}
+    func getResourceDetails(data: ResourceDetails) {}
+    func showAlerts(title: String, message: String) {}
     
-    func showAlerts(title: String, message: String) {
-        
-    }
     
     func getCategories(data: [Categories]) {
         self.isSkeleton = false
@@ -348,10 +346,6 @@ extension DashboardVC:DashboardDelegate{
         myCompletedTask=data.completedTasks ?? []
         myCurrentTask = data.currentTasks ?? []
         elementCollectionView.reloadData()
-        
-    }
-    func getResourceDetails(data: ResourceDetails) {
-        // no implementation
         
     }
     

@@ -270,6 +270,7 @@ struct Goals:Codable{
     let deadline:String?
     let completed:String?
     let created_at:String?
+    let url:String?
     let category:Categories?
 }
 
@@ -333,11 +334,16 @@ struct questionAndAnswers:Codable{
 
 
 struct  WorthyCauses:Decodable{
+    let donation_details:DonationDetails?
     let featuredFunds:[Founder]?
     let otherFunds:[Founder]?
 
 }
-
+struct DonationDetails:Codable{
+    let title:String?
+    let sub_title:String?
+    let details:String?
+}
 struct Founder:Codable{
     let id:Int?
     let title:String?
@@ -349,3 +355,11 @@ struct SubWorthyCauses:Decodable{
     let worthy_causes:[Founder]
 }
 
+struct AllNotifiaction: Decodable {
+    let notifications:[notificationsDetails]
+}
+
+struct notificationsDetails:Codable{
+    let title:String?
+    let details:String?
+}

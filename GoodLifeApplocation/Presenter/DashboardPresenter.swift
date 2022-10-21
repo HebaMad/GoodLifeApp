@@ -15,6 +15,7 @@ protocol DashboardDelegate{
     func getMyTask(data:DashboardTask)
     func getMyGoalAndBenchmark(data:GoalsAndBenchmark)
     func getResourceDetails(data:ResourceDetails)
+    func getNotification(data:AllNotifiaction)
 }
 
 typealias dashboardDelegate = DashboardDelegate & UIViewController
@@ -193,6 +194,26 @@ class DashboardPresenter:NSObject{
             
         }
         
+    }
+    
+    func notification(){
+        DashboardManager.shared.notification { Response in
+            switch Response{
+                
+            case let .success(response):
+                if response.status == true{
+                    self.delegate?.getNotification(data: response.data!)
+                    self.delegate?.showAlerts(title:"Success", message: "completed successfully")
+                    
+                }else{
+                    self.delegate?.showAlert(title:"Failure", message: response.message)
+                }
+                
+            case let .failure(error):
+                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
+            }
+            
+        }
     }
     
 }

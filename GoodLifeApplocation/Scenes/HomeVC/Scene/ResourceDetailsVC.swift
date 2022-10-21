@@ -130,6 +130,9 @@ extension ResourceDetailsVC:UITableViewDelegate, UITableViewDataSource{
     
     
 }
+
+//MARK: -  Storyboarded protocol configuration
+
 extension ResourceDetailsVC:Storyboarded{
     static var storyboardName: StoryboardName = .main
 

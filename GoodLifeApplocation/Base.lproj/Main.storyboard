@@ -93,7 +93,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="80" estimatedRowHeight="80" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pex-Zj-BvK">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="80" estimatedRowHeight="80" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pex-Zj-BvK">
                                 <rect key="frame" x="12" y="94" width="390" height="768"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="2sm-kP-Imu">
@@ -236,7 +236,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="100" estimatedRowHeight="100" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="VkX-6y-ZDX">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" estimatedRowHeight="100" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="VkX-6y-ZDX">
                                 <rect key="frame" x="12" y="104" width="390" height="758"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="EIc-zC-GgQ">
@@ -291,6 +291,21 @@
                                     <outlet property="delegate" destination="DcM-aD-On7" id="7IJ-eT-RT3"/>
                                 </connections>
                             </tableView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tq5-GM-hER">
+                                <rect key="frame" x="16" y="264" width="382" height="598"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noData" translatesAutoresizingMaskIntoConstraints="NO" id="d3b-mi-1u7">
+                                        <rect key="frame" x="5" y="0.0" width="372" height="298"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="d3b-mi-1u7" secondAttribute="trailing" constant="5" id="FuV-SY-hdx"/>
+                                    <constraint firstItem="d3b-mi-1u7" firstAttribute="top" secondItem="Tq5-GM-hER" secondAttribute="top" id="KRi-6s-Qqy"/>
+                                    <constraint firstAttribute="bottom" secondItem="d3b-mi-1u7" secondAttribute="bottom" constant="300" id="cq1-vg-Gl2"/>
+                                    <constraint firstItem="d3b-mi-1u7" firstAttribute="leading" secondItem="Tq5-GM-hER" secondAttribute="leading" constant="5" id="y8l-Bu-pu1"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LLQ-TY-IO3">
                                 <rect key="frame" x="0.0" y="44" width="414" height="50"/>
                                 <subviews>
@@ -303,14 +318,6 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="chevron.backward" catalog="system"/>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sub-WV-3gL">
-                                        <rect key="frame" x="160" y="14" width="94.5" height="41"/>
-                                        <string key="text">Goals and
-Benchmarks</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" name="button"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Go-bQ-8Sh" customClass="UIButtonDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
                                         <rect key="frame" x="371" y="22" width="25" height="25"/>
                                         <constraints>
@@ -338,16 +345,22 @@ Benchmarks</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WuU-5p-8pC">
+                                        <rect key="frame" x="186.5" y="15" width="41.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="WuU-5p-8pC" firstAttribute="centerY" secondItem="LLQ-TY-IO3" secondAttribute="centerY" id="1se-sB-lpe"/>
                                     <constraint firstItem="YpW-zy-dwG" firstAttribute="top" secondItem="LLQ-TY-IO3" secondAttribute="top" id="Ckh-mU-xKt"/>
-                                    <constraint firstItem="sub-WV-3gL" firstAttribute="centerX" secondItem="LLQ-TY-IO3" secondAttribute="centerX" id="aXy-ak-XMt"/>
+                                    <constraint firstItem="WuU-5p-8pC" firstAttribute="centerX" secondItem="LLQ-TY-IO3" secondAttribute="centerX" id="a53-b1-7ni"/>
                                     <constraint firstAttribute="trailing" secondItem="2Go-bQ-8Sh" secondAttribute="trailing" constant="18" id="eDq-wx-GTy"/>
                                     <constraint firstAttribute="trailing" secondItem="2Go-bQ-8Sh" secondAttribute="trailing" constant="18" id="mqq-QV-Ya9"/>
                                     <constraint firstItem="YpW-zy-dwG" firstAttribute="leading" secondItem="LLQ-TY-IO3" secondAttribute="leading" constant="8" id="okN-q0-2oT"/>
                                     <constraint firstAttribute="bottom" secondItem="YpW-zy-dwG" secondAttribute="bottom" id="pcr-ss-SK8"/>
-                                    <constraint firstItem="sub-WV-3gL" firstAttribute="top" secondItem="LLQ-TY-IO3" secondAttribute="top" constant="14" id="r7H-ys-KS6"/>
                                     <constraint firstItem="2Go-bQ-8Sh" firstAttribute="top" secondItem="LLQ-TY-IO3" secondAttribute="top" constant="22" id="s9a-LA-6qg"/>
                                     <constraint firstAttribute="height" constant="50" id="xgL-lB-sBA"/>
                                     <constraint firstAttribute="bottom" secondItem="2Go-bQ-8Sh" secondAttribute="bottom" constant="3" id="yQ9-8g-tUc"/>
@@ -357,12 +370,16 @@ Benchmarks</string>
                         <viewLayoutGuide key="safeArea" id="sRd-yA-dBP"/>
                         <color key="backgroundColor" red="0.97254901959999995" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Tq5-GM-hER" firstAttribute="top" secondItem="LLQ-TY-IO3" secondAttribute="bottom" constant="170" id="76A-QW-cBk"/>
+                            <constraint firstItem="Tq5-GM-hER" firstAttribute="leading" secondItem="sRd-yA-dBP" secondAttribute="leading" constant="16" id="AJX-1I-VVc"/>
                             <constraint firstItem="VkX-6y-ZDX" firstAttribute="top" secondItem="LLQ-TY-IO3" secondAttribute="bottom" constant="10" id="Dhd-Na-fq4"/>
                             <constraint firstItem="LLQ-TY-IO3" firstAttribute="leading" secondItem="sRd-yA-dBP" secondAttribute="leading" id="DqV-FV-s0f"/>
                             <constraint firstItem="LLQ-TY-IO3" firstAttribute="trailing" secondItem="sRd-yA-dBP" secondAttribute="trailing" id="MN9-hz-uIg"/>
+                            <constraint firstItem="Tq5-GM-hER" firstAttribute="bottom" secondItem="sRd-yA-dBP" secondAttribute="bottom" id="SsY-wI-WVu"/>
                             <constraint firstItem="sRd-yA-dBP" firstAttribute="trailing" secondItem="VkX-6y-ZDX" secondAttribute="trailing" constant="12" id="Wjg-gd-OcK"/>
                             <constraint firstItem="VkX-6y-ZDX" firstAttribute="leading" secondItem="sRd-yA-dBP" secondAttribute="leading" constant="12" id="Ysw-p0-Hzs"/>
                             <constraint firstItem="sRd-yA-dBP" firstAttribute="bottom" secondItem="VkX-6y-ZDX" secondAttribute="bottom" id="oJ1-nz-b94"/>
+                            <constraint firstItem="sRd-yA-dBP" firstAttribute="trailing" secondItem="Tq5-GM-hER" secondAttribute="trailing" constant="16" id="w3N-0g-6XS"/>
                             <constraint firstItem="LLQ-TY-IO3" firstAttribute="top" secondItem="sRd-yA-dBP" secondAttribute="top" id="ypN-6p-CeZ"/>
                         </constraints>
                     </view>
@@ -370,8 +387,9 @@ Benchmarks</string>
                         <outlet property="AddGoalBtn" destination="2Go-bQ-8Sh" id="tc4-jJ-VJd"/>
                         <outlet property="GoalSegmentControl" destination="TcN-vd-Q6d" id="lzt-Aa-7sh"/>
                         <outlet property="backBtn" destination="YpW-zy-dwG" id="VVz-Zx-pzi"/>
+                        <outlet property="emptyView" destination="Tq5-GM-hER" id="G5y-Nw-3gK"/>
                         <outlet property="goalAndBenchmarkTableView" destination="VkX-6y-ZDX" id="8c2-Md-m0b"/>
-                        <outlet property="titleTxt" destination="sub-WV-3gL" id="qz2-fq-Q28"/>
+                        <outlet property="titleTxt" destination="WuU-5p-8pC" id="Qmz-FF-vLQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PbA-yu-KOa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -386,7 +404,7 @@ Benchmarks</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" estimatedRowHeight="100" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="AOP-wM-wR1">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" estimatedRowHeight="100" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="AOP-wM-wR1">
                                 <rect key="frame" x="12" y="104" width="390" height="758"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="FPg-tJ-VaQ">
@@ -694,7 +712,7 @@ Night</string>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeHolder" value="Search Tasks, Resources, &amp; More"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="X87-TY-IrI">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="X87-TY-IrI">
                                 <rect key="frame" x="12" y="181" width="402" height="681"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Xh3-tK-IJD">
@@ -1204,7 +1222,7 @@ Night</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="80" estimatedRowHeight="80" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7KO-Lh-hgy">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="80" estimatedRowHeight="80" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7KO-Lh-hgy">
                                 <rect key="frame" x="12" y="94" width="390" height="768"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -1881,6 +1899,7 @@ Night</string>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="chevron.down" catalog="system" width="128" height="72"/>
         <image name="line.3.horizontal" catalog="system" width="128" height="64"/>
+        <image name="noData" width="292" height="137.5"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <namedColor name="ButtonColor">
             <color red="0.0" green="0.85100001096725464" blue="0.44299998879432678" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -20,6 +20,8 @@ enum DashboardTarget:TargetType{
     case markMyGoal(goalID:Int)
     case getMyGoalsAndBenchmark(categoryID:Int)
     case resourceDetails(ResourceID:Int)
+    case notification
+
     
     var baseURL: URL {
         return URL(string: "\(AppConfig.apiBaseUrl)")!
@@ -36,7 +38,8 @@ enum DashboardTarget:TargetType{
         case .getMyGoalsAndBenchmark:return "getMyGoalsBenchmarks"
         case .resourceDetails:return "getResourcesScreen"
         case .markMyGoal:return "markGoalCompleted"
-            
+        case .notification:return "getMyNotifications"
+
         }
     }
     
@@ -45,7 +48,7 @@ enum DashboardTarget:TargetType{
         case .AddTask,.AddGoal,.markMyTask,.markMyGoal:
             return .post
        
-        case .categories,.Resources,.getMyTask,.getMyGoalsAndBenchmark,.resourceDetails:
+        case .categories,.Resources,.getMyTask,.getMyGoalsAndBenchmark,.resourceDetails,.notification:
             return .get
         }
     }
@@ -56,7 +59,7 @@ enum DashboardTarget:TargetType{
         case .AddTask,.AddGoal,.markMyTask,.markMyGoal:
             return .requestParameters(parameters: param, encoding: URLEncoding.httpBody)
             
-        case .categories,.Resources,.getMyTask:
+        case .categories,.Resources,.getMyTask,.notification:
             return .requestPlain
         case .resourceDetails,.getMyGoalsAndBenchmark:
             return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
@@ -67,7 +70,7 @@ enum DashboardTarget:TargetType{
     
     var headers: [String : String]?{
         switch self{
-        case .AddTask,.AddGoal,.getMyTask,.markMyTask,.getMyGoalsAndBenchmark,.markMyGoal,.resourceDetails,.Resources:
+        case .AddTask,.AddGoal,.getMyTask,.markMyTask,.getMyGoalsAndBenchmark,.markMyGoal,.resourceDetails,.Resources,.notification:
             
             do {
                 let token = try KeychainWrapper.get(key: AppData.mobile) ?? ""

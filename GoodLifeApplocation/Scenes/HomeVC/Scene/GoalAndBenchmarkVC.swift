@@ -6,7 +6,6 @@
 //
 
 import UIKit
-//import Algorithms
 import MaterialComponents.MaterialSnackbar
 
 class GoalAndBenchmarkVC: UIViewController {
@@ -16,12 +15,14 @@ class GoalAndBenchmarkVC: UIViewController {
     @IBOutlet weak var GoalSegmentControl: UISegmentedControl!
     @IBOutlet weak var AddGoalBtn: UIButtonDesignable!
     @IBOutlet weak var titleTxt: UILabel!
-    
+    @IBOutlet var emptyView: UIView!
     @IBOutlet weak var goalAndBenchmarkTableView: UITableView!
     @IBOutlet weak var backBtn: UIButton!
     
     //MARK: - Properties
     
+    static let sharedInstance = GoalAndBenchmarkVC.instantiate()
+
     let presenter = DashboardPresenter()
     var selectedSegment = 0
     var selectedCell:UITableViewCell = UITableViewCell()
@@ -36,10 +37,11 @@ class GoalAndBenchmarkVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        emptyView.isHidden=true
+        titleTxt.text = categoryName
+
         goalAndBenchmarkTableView.register(PastGoalsCell.self)
-        setupTable()
-        
-        GoalSegmentControl.addTarget(self, action: #selector(segmentControlSetup), for: .valueChanged)
+//        setupTable()
         bindButton()
         
     }
@@ -64,16 +66,24 @@ class GoalAndBenchmarkVC: UIViewController {
             selectedSegment=0
             goalAndBenchmarkTableView.register(PastGoalsCell.self)
             setupTable()
+            checkData(goalsArr: activeGoals)
+
             
         case 1:
             selectedSegment=1
             goalAndBenchmarkTableView.register(PastGoalsCell.self)
             setupTable()
+            checkData(goalsArr: pastGoals)
+        
             
         case 2:
+            self.emptyView.isHidden = true
+
             selectedSegment=2
             goalAndBenchmarkTableView.register(BenchmarksCell.self)
             setupTable()
+
+
         default:
             print("error")
         }
@@ -83,22 +93,50 @@ class GoalAndBenchmarkVC: UIViewController {
     //MARK: - setup tableview
     
     func setupTable(){
-        titleTxt.text = categoryName
         goalAndBenchmarkTableView.delegate = self
         goalAndBenchmarkTableView.dataSource = self
         goalAndBenchmarkTableView.reloadData()
     }
     
+    //MARK: - checkData
+
+    func checkData(goalsArr:[Goals]){
+        
+        if goalsArr.count == 0 {
+            self.emptyView.isHidden = false
+        }else {
+            self.emptyView.isHidden = true
+        }
+    }
+    
+    //MARK: - check Goal and Benchmark Segment
+
+    func checkGoalandBenchmarkSegment(){
+        switch GoalSegmentControl.selectedSegmentIndex {
+        case 0 :checkData(goalsArr: activeGoals)
+        case 1 :checkData(goalsArr: pastGoals)
+        case 2: self.emptyView.isHidden = true
+
+        default : print("error")
+            
+        }
     
 }
+}
+
 //MARK: - Binding
 
 private extension GoalAndBenchmarkVC{
     
     func bindButton(){
-     
+        GoalSegmentControl.addTarget(self, action: #selector(segmentControlSetup), for: .valueChanged)
             backBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
             AddGoalBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
+
+    }
+    
+    func openUrl(url:String){
+        UIApplication.shared.open(URL(string:url) ?? URL(fileURLWithPath: ""), options: [:], completionHandler: nil)
 
     }
     
@@ -129,10 +167,13 @@ private extension GoalAndBenchmarkVC{
         case 0:
             sender.setBackgroundImage( UIImage(systemName: "circlebadge.fill"), for: .normal)
             sender.tintColor = UIColor(named: "progressView")
+//            DispatchQueue.main.sync {
             self.presenter.markMyGoal(goalId: activeGoals[sender.tag].id ?? 0, categoryID:  activeGoals[sender.tag].category_id ?? 0)
-        self.presenter.delegate = self
-        self.goalAndBenchmarkTableView.reloadData()
-            
+            self.presenter.delegate = self
+            checkData(goalsArr: activeGoals)
+            self.goalAndBenchmarkTableView.reloadData()
+//            }
+      
         case 1:
             print("")
         default:
@@ -187,43 +228,54 @@ extension GoalAndBenchmarkVC:UITableViewDelegate, UITableViewDataSource{
         
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        switch selectedSegment{
+        case 0:
+            print(activeGoals[indexPath.row].url)
+            guard let url = activeGoals[indexPath.row].url else { return }
+            openUrl(url: url)
+            
+        case 1:
+            guard let url = pastGoals[indexPath.row].url else { return }
+            openUrl(url: url)
+        default:
+            print("")
+
+        }
+    }
+    
     
 }
+//MARK: -  Storyboarded protocol configuration
+
 extension GoalAndBenchmarkVC:Storyboarded{
     static var storyboardName: StoryboardName = .main
 
 }
 
+
+//MARK: -  DashboardDelegate configuration
+
 extension GoalAndBenchmarkVC:DashboardDelegate{
+    
+    func getNotification(data: AllNotifiaction) { }
+    func getCategories(data: [Categories]) {}
+    func getResource(data: [Resources]) {}
+    func getMyTask(data: DashboardTask) {}
+    func getResourceDetails(data: ResourceDetails) {}
+    
     func getMyGoalAndBenchmark(data: GoalsAndBenchmark) {
         activeGoals = data.activeGoals ?? []
         pastGoals = data.pastGoals ?? []
         benchmarks = data.benchmarks ?? []
+        checkGoalandBenchmarkSegment()
         goalAndBenchmarkTableView.reloadData()
     }
     
     func showAlerts(title: String, message: String) {
         showSnackBar(message:message)
     }
-    
-    func getCategories(data: [Categories]) {
-        //no implementayion
-
-    }
-    
-    func getResource(data: [Resources]) {
-  //no implementayion
-    }
-    
-    func getMyTask(data: DashboardTask) {
-   //
-
-    }
-    func getResourceDetails(data: ResourceDetails) {
-        // no implementation
-
-    }
-    
     
 }
 extension GoalAndBenchmarkVC{

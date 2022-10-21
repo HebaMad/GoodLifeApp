@@ -14,7 +14,8 @@ class AllResourceVC: UIViewController {
     @IBOutlet weak var AllresourceTable: UITableView!
     @IBOutlet weak var backBtn: UIButton!
 
-    
+    //MARK: - Properties
+
     var resource:[Resources]=[]
     let presenter=DashboardPresenter()
     //MARK: - Life cycle
@@ -72,31 +73,27 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
 
 
 }
+//MARK: - confirm to Storyboarded protocol
+
 extension AllResourceVC:Storyboarded{
     static var storyboardName: StoryboardName = .main
 
 }
 
+//MARK: - confirm to DashboardDelegate
+
 extension AllResourceVC:DashboardDelegate{
-    func showAlerts(title: String, message: String) {
-        //
-    }
+    func getNotification(data: AllNotifiaction) { }
     
-    func getCategories(data: [Categories]) {
-        //
-    }
+    func showAlerts(title: String, message: String) {}
     
-    func getResource(data: [Resources]) {
-        //
-    }
+    func getCategories(data: [Categories]) {}
     
-    func getMyTask(data: DashboardTask) {
-        //
-    }
+    func getResource(data: [Resources]) {}
     
-    func getMyGoalAndBenchmark(data: GoalsAndBenchmark) {
-        //
-    }
+    func getMyTask(data: DashboardTask) {}
+    
+    func getMyGoalAndBenchmark(data: GoalsAndBenchmark) {}
     
     func getResourceDetails(data: ResourceDetails) {
         

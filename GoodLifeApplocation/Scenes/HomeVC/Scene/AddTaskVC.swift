@@ -39,6 +39,9 @@ class AddTaskVC: UIViewController,UITextFieldDelegate,UIImagePickerControllerDel
         setupTimePicker()
     
     }
+    
+    //MARK: - Setup Time Picker
+
     fileprivate func setupTimePicker() {
         startDate.setFormat(format: "YYYY-MM-dd HH:mm:ss")
         startDate.setDatePickerMode(mode: .dateAndTime)
@@ -48,6 +51,9 @@ class AddTaskVC: UIViewController,UITextFieldDelegate,UIImagePickerControllerDel
     }
 
 }
+
+//MARK: - Binding
+
 private extension AddTaskVC{
     
     func bindBackButton(){
@@ -95,10 +101,16 @@ private extension AddTaskVC{
         }
 }
 }
+
+//MARK: - confirm to DashboardDelegate
+
 extension AddTaskVC:DashboardDelegate{
-    func getMyGoalAndBenchmark(data: GoalsAndBenchmark) {
-        //
-    }
+    
+    func getNotification(data: AllNotifiaction) { }
+    func getMyGoalAndBenchmark(data: GoalsAndBenchmark) { }
+    func getResource(data: [Resources]) {}
+    func getMyTask(data: DashboardTask) {}
+    func getResourceDetails(data: ResourceDetails) {}
     
     func showAlerts(title: String, message: String) {
         self.showAlert(title: title, message: message,hideCancelBtn: true)
@@ -109,21 +121,11 @@ extension AddTaskVC:DashboardDelegate{
         self.categories = data
     }
     
-    func getResource(data: [Resources]) {
-        // no implementation
-    }
-    
-    func getMyTask(data: DashboardTask) {
-        // no implementation
 
-    }
-    func getResourceDetails(data: ResourceDetails) {
-        // no implementation
-
-    }
     
     
 }
+//MARK: - confirm to DatePickerDelegate
 
 extension AddTaskVC:UITextFieldDataPickerDelegate,UITextFieldDataPickerDataSource{
 
@@ -149,6 +151,7 @@ print("\(title ?? "")")
    
     
 }
+//MARK: - Clear Data After Add
 
 extension AddTaskVC{
     func clearData(){

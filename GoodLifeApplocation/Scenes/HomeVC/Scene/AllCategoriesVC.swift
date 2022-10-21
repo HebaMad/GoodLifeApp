@@ -14,10 +14,12 @@ class AllCategoriesVC: UIViewController {
     @IBOutlet weak var categoriesTable: UITableView!
     @IBOutlet weak var backBtn: UIButton!
     
+    //MARK: - Properties
+
     var categories:[Categories]=[]
     let presenter = DashboardPresenter()
     var goalsAndBenchmarks:GoalsAndBenchmark?
-    var vc = GoalAndBenchmarkVC.instantiate()
+    var vc = GoalAndBenchmarkVC.sharedInstance
     var categoryID=0
     var categoryname = ""
     
@@ -30,7 +32,7 @@ class AllCategoriesVC: UIViewController {
         bindBackButton()
         presenter.getCategories()
         presenter.delegate=self
-     
+        
     }
     
     //MARK: - Setup table view
@@ -84,24 +86,22 @@ extension AllCategoriesVC:Storyboarded{
     static var storyboardName: StoryboardName = .main
     
 }
+//MARK: - conform to DashboardDelegate
 
 extension AllCategoriesVC:DashboardDelegate{
-    func showAlerts(title: String, message: String) {
-        // No Implementation
-    }
+    
+    //No implementaion
+    
+    func getNotification(data: AllNotifiaction) {}
+    func showAlerts(title: String, message: String) {}
+    func getResource(data: [Resources]) {}
+    func getResourceDetails(data: ResourceDetails) {}
+    func getMyTask(data: DashboardTask) {}
+    
+    // With  implementaion
     
     func getCategories(data: [Categories]) {
         categories=data
-    }
-    
-    func getResource(data: [Resources]) {
-        // No Implementation
-
-    }
-    
-    func getMyTask(data: DashboardTask) {
-        // No Implementation
-
     }
     
     func getMyGoalAndBenchmark(data: GoalsAndBenchmark) {
@@ -111,14 +111,10 @@ extension AllCategoriesVC:DashboardDelegate{
         vc.benchmarks = goalsAndBenchmarks?.benchmarks ?? []
         vc.categoryID = categoryID
         vc.categoryName = categoryname
-        navigationController?.pushViewController(vc, animated: true)
-
+        navigationController?.pushViewController(vc, animated: false)
+        
     }
     
-    func getResourceDetails(data: ResourceDetails) {
-        // No Implementation
-
-    }
     
     
 }

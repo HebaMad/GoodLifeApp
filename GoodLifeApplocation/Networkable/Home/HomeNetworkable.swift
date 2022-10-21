@@ -19,6 +19,8 @@ protocol HomeNetworkable:Networkable  {
 }
 
 class HomeManager:HomeNetworkable{
+
+    
  
     typealias targetType = HomeApiTarget
 
@@ -52,5 +54,7 @@ class HomeManager:HomeNetworkable{
     func Filter(investmentFrom: String, investmentTo: String, work_type: String, level_of_difficulty: String, amount_of_technology: String, completion: @escaping (Result<BaseResponse<Oppourtinity>, Error>) -> ()) {
         request(target: .Filter(investmentFrom: investmentFrom, investmentTo: investmentTo, work_type: work_type, level_of_difficulty: level_of_difficulty, amount_of_technology: amount_of_technology), completion: completion)
     }
+    
+  
     
 }

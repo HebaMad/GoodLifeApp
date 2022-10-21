@@ -39,37 +39,32 @@
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cCD-oB-1bT">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="NGA-GJ-jrN">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="NGA-GJ-jrN">
+                            <rect key="frame" x="0.0" y="50" width="414" height="749.5"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="cF8-uo-F0u">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="222"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cF8-uo-F0u">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="161.5"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMl-cK-AFL">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="112"/>
-                                            <string key="text">Donate to Worthy
-Causes</string>
-                                            <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="24"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Over 18,000 Donations" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v6k-I8-s1U">
-                                            <rect key="frame" x="0.0" y="132" width="414" height="19.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v6k-I8-s1U">
+                                            <rect key="frame" x="11" y="12" width="392" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="44" id="R7u-0y-SKx"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="16"/>
                                             <color key="textColor" red="1" green="0.78039215689999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jw4-sJ-9S5">
-                                            <rect key="frame" x="0.0" y="171.5" width="414" height="50.5"/>
-                                            <string key="text">Giving a meal or an expirience to those in need has never been easier. With the use of Blockchains technology, you see where your money goes, and who uses it!</string>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jw4-sJ-9S5">
+                                            <rect key="frame" x="11" y="66" width="392" height="95.5"/>
                                             <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="14"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <directionalEdgeInsets key="directionalLayoutMargins" top="12" leading="11" bottom="0.0" trailing="11"/>
                                 </stackView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vh0-SS-d78" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="238" width="414" height="580"/>
+                                    <rect key="frame" x="0.0" y="169.5" width="414" height="580"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eRj-4u-1Sc">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="580"/>
@@ -143,10 +138,18 @@ Causes</string>
                                         <action selector="backAction:" destination="-1" eventType="touchUpInside" id="Mk9-bD-fxU"/>
                                     </connections>
                                 </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Donate to Worthy Causes" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMl-cK-AFL">
+                                    <rect key="frame" x="69.5" y="66" width="275.5" height="26.5"/>
+                                    <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="22"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="100" id="2M3-gA-SBW"/>
+                                <constraint firstItem="dMl-cK-AFL" firstAttribute="centerX" secondItem="Byv-fn-qPn" secondAttribute="centerX" id="LiA-63-Gn5"/>
+                                <constraint firstItem="dMl-cK-AFL" firstAttribute="top" secondItem="Byv-fn-qPn" secondAttribute="top" constant="66" id="RF7-X2-5UU"/>
                                 <constraint firstAttribute="bottom" secondItem="58J-5o-oJL" secondAttribute="bottom" constant="10" id="VQl-J4-5yu"/>
                                 <constraint firstItem="58J-5o-oJL" firstAttribute="leading" secondItem="Byv-fn-qPn" secondAttribute="leading" constant="18" id="uFy-8Q-qpU"/>
                             </constraints>
@@ -158,7 +161,7 @@ Causes</string>
                         <constraint firstItem="Byv-fn-qPn" firstAttribute="leading" secondItem="cCD-oB-1bT" secondAttribute="leading" id="I1I-Vr-vx2"/>
                         <constraint firstAttribute="trailing" secondItem="NGA-GJ-jrN" secondAttribute="trailing" id="OxL-nP-iQS"/>
                         <constraint firstItem="Byv-fn-qPn" firstAttribute="top" secondItem="cCD-oB-1bT" secondAttribute="top" constant="-44" id="P0B-K0-eFv"/>
-                        <constraint firstItem="NGA-GJ-jrN" firstAttribute="top" secondItem="cCD-oB-1bT" secondAttribute="top" id="REH-Oa-n8O"/>
+                        <constraint firstItem="NGA-GJ-jrN" firstAttribute="top" secondItem="cCD-oB-1bT" secondAttribute="top" constant="50" id="REH-Oa-n8O"/>
                         <constraint firstAttribute="trailing" secondItem="Byv-fn-qPn" secondAttribute="trailing" id="Scn-hd-bg8"/>
                         <constraint firstAttribute="bottom" secondItem="NGA-GJ-jrN" secondAttribute="bottom" id="gPo-Fx-fhz"/>
                         <constraint firstAttribute="trailing" secondItem="Byv-fn-qPn" secondAttribute="trailing" id="gu9-nm-eFW"/>
@@ -171,7 +174,7 @@ Causes</string>
             <color key="backgroundColor" name="bg3"/>
             <constraints>
                 <constraint firstItem="cCD-oB-1bT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="1HA-Hv-wY4"/>
-                <constraint firstItem="cF8-uo-F0u" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.247768" id="ASz-mf-8jQ"/>
+                <constraint firstItem="cF8-uo-F0u" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.18" id="ASz-mf-8jQ"/>
                 <constraint firstItem="bpP-2V-5Ne" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Pb3-en-wfP"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="bpP-2V-5Ne" secondAttribute="bottom" constant="200" id="Pxy-ny-nEZ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cCD-oB-1bT" secondAttribute="trailing" id="VSA-CC-wPg"/>

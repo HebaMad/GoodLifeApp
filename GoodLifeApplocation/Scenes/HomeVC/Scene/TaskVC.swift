@@ -16,12 +16,11 @@ class TaskVC: UIViewController {
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var AddTaskBtn: UIButtonDesignable!
  
+    //MARK: - Properties
+
     var myCurrentTask:[Tasks]=[]
     var myCompletedTask:[Tasks]=[]
     let presenter = DashboardPresenter()
-
-    //MARK: - Properties
-
     var segmentIndex = 0
     
     //MARK: - Life cycle
@@ -115,12 +114,7 @@ private extension TaskVC{
        }
 }
     
-    func showSnackBar(message:String){
-        let answerMessage = MDCSnackbarMessage()
-        answerMessage.text =  message
 
-        MDCSnackbarManager.default.show(answerMessage)
-    }
 }
 //MARK: - UITableViewDelegate,UITableViewDataSource
 
@@ -157,27 +151,25 @@ extension TaskVC:UITableViewDelegate, UITableViewDataSource{
     
 }
 
+//MARK: - confirm to Storyboarded protocol
+
 extension TaskVC:Storyboarded{
     static var storyboardName: StoryboardName = .main
 
 }
-extension TaskVC:DashboardDelegate{
-    func getMyGoalAndBenchmark(data: GoalsAndBenchmark) {
-        //
-    }
-    
-    func showAlerts(title: String, message: String) {
-        showSnackBar(message: message)
-    }
-    
-    func getCategories(data: [Categories]) {
-        //no implementayion
+//MARK: - confirm to DashboardDelegate
 
-    }
+extension TaskVC:DashboardDelegate{
+    func getNotification(data: AllNotifiaction) {}
     
-    func getResource(data: [Resources]) {
-  //no implementayion
-    }
+    func getMyGoalAndBenchmark(data: GoalsAndBenchmark) {}
+ 
+    func getResourceDetails(data: ResourceDetails) {}
+
+    func getCategories(data: [Categories]) {}
+    
+    func getResource(data: [Resources]) { }
+    
     
     func getMyTask(data: DashboardTask) {
         myCompletedTask=data.completedTasks ?? []
@@ -185,10 +177,19 @@ extension TaskVC:DashboardDelegate{
         TaskTableView.reloadData()
 
     }
-    func getResourceDetails(data: ResourceDetails) {
-        // no implementation
-
+    func showAlerts(title: String, message: String) {
+        showSnackBar(message: message)
     }
     
-    
+}
+
+//MARK: - SHOW A Msg
+
+extension TaskVC{
+    func showSnackBar(message:String){
+        let answerMessage = MDCSnackbarMessage()
+        answerMessage.text =  message
+
+        MDCSnackbarManager.default.show(answerMessage)
+    }
 }

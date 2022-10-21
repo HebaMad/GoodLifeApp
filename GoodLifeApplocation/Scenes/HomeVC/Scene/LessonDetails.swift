@@ -15,24 +15,25 @@ class LessonDetails: UIViewController{
     
     @IBOutlet weak var lessonDetailsCollectionview: UICollectionView!
     @IBOutlet weak var videoPlayer: UIView!
-
+    
     //MARK: - Properties
-
+    
     var lesson:Lessons?
     private let sections = LessontopicDetails.shared.AllCategories
     var playerViewController: AVPlayerViewController!
     var isplayed = false
-
+    
     //MARK: - LifeCycle
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupLessonData()
         
     }
     
     //MARK: - setupCollectionview
-
+    
     func setupLessonData(){
         setupVidePlayer()
         lessonDetailsCollectionview.register(LessonDetailsCollectionCell.self)
@@ -43,12 +44,12 @@ class LessonDetails: UIViewController{
         lessonDetailsCollectionview.reloadData()
     }
     //MARK: - setup video player
-
-
+    
+    
     private func setupVidePlayer(){
         if  let _url = lesson?.file{
             let urlvideoo = URL(string:_url)
-
+            
             let asset2 = AVAsset(url: urlvideoo!)
             let playerItem = AVPlayerItem(asset: asset2)
             let player = AVPlayer(playerItem: playerItem)
@@ -56,32 +57,29 @@ class LessonDetails: UIViewController{
             let playerLayer = AVPlayerLayer(player: player)
             playerLayer.frame = videoPlayer.bounds
             playerLayer.videoGravity = .resizeAspect
-
+            
             playerViewController = AVPlayerViewController()
             playerViewController.player = player
             playerViewController.player?.play()
             //gets the frame size of table view cell view
             playerViewController.view.frame = CGRect (x:0, y:0, width:videoPlayer.frame.size.width, height:videoPlayer.frame.size.height)
-          
+            
             videoPlayer.addSubview(playerViewController.view)
-        
+            
         }
     }
     
     
     //MARK: - backBtn
-
+    
     @IBAction func backBtn(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
     
-    
-    
-    
-    
 }
 
 
+//MARK: - Create CompositionalLayout
 
 private extension LessonDetails{
     private func createCompositionalLayout() -> UICollectionViewCompositionalLayout{
@@ -150,11 +148,11 @@ private extension LessonDetails{
     }
 }
 
-   //MARK: - conform to UICollectionViewDelegate
+//MARK: - conform to UICollectionViewDelegate
 
 extension LessonDetails:UICollectionViewDelegate{}
 
-   //MARK: - conform to UICollectionViewDataSource
+//MARK: - conform to UICollectionViewDataSource
 
 
 extension LessonDetails:UICollectionViewDataSource{
@@ -165,35 +163,35 @@ extension LessonDetails:UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-            switch sections[section]{
-            case .overView: return lesson?.overview?.count ?? 0
-            case .keyAspect :return lesson?.key_aspects?.count ?? 0
-            case .keyTakeaway:return lesson?.key_takeaways?.count ?? 0
-                
-            }
+        switch sections[section]{
+        case .overView: return lesson?.overview?.count ?? 0
+        case .keyAspect :return lesson?.key_aspects?.count ?? 0
+        case .keyTakeaway:return lesson?.key_takeaways?.count ?? 0
+            
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-
-            switch sections[indexPath.section] {
-            case .overView:
-                let cell:LessonDetailsCollectionCell = collectionView.dequeueReusableCell(for: indexPath)
-                cell.configureCell(title: lesson?.overview?[indexPath.row].title ?? "")
-                return cell
-                
-            case .keyAspect:
-                let cell:LessonDetailsCollectionCell = collectionView.dequeueReusableCell(for: indexPath)
-                cell.configureCell(title: lesson?.key_aspects?[indexPath.row].title ?? "")
-                return cell
-                
-            case .keyTakeaway:
-                let cell:LessonDetailsCollectionCell = collectionView.dequeueReusableCell(for: indexPath)
-                cell.configureCell(title: lesson?.key_takeaways?[indexPath.row].title ?? "")
-
-                return cell
-                
-            }
+        
+        switch sections[indexPath.section] {
+        case .overView:
+            let cell:LessonDetailsCollectionCell = collectionView.dequeueReusableCell(for: indexPath)
+            cell.configureCell(title: lesson?.overview?[indexPath.row].title ?? "")
+            return cell
+            
+        case .keyAspect:
+            let cell:LessonDetailsCollectionCell = collectionView.dequeueReusableCell(for: indexPath)
+            cell.configureCell(title: lesson?.key_aspects?[indexPath.row].title ?? "")
+            return cell
+            
+        case .keyTakeaway:
+            let cell:LessonDetailsCollectionCell = collectionView.dequeueReusableCell(for: indexPath)
+            cell.configureCell(title: lesson?.key_takeaways?[indexPath.row].title ?? "")
+            
+            return cell
+            
+        }
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
@@ -201,7 +199,7 @@ extension LessonDetails:UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.headerIdentifier, for: indexPath) as! HeaderCollectionReusableView
- 
+        
         header.viewAllButton.isHidden = true
         header.setup(sections[indexPath.section].title)
         return header

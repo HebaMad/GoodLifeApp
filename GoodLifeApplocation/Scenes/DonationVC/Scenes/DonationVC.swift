@@ -16,16 +16,19 @@ class DonationVC: UIViewController {
     
     //MARK: - Life cycle
     
+    
     var funderID=0
     let presenter=MenuPresenter()
     var worthyData:[Founder]=[]
     var worthySubData:Founder?
     
+    
     //MARK: - Life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.presenter.getWorthyCause()
+        self.presenter.delegate = self
         self.stepsIndicator.currentStep = 0
         let vc = DonationFirstFrame()
         self.addChild(vc)
@@ -103,7 +106,10 @@ extension DonationVC:MenuDelegate{
     }
     
     func getFunderData(data: WorthyCauses) {
-        //
+        titleTxt.text = data.donation_details?.title
+        noOfDonation.text = data.donation_details?.sub_title
+        donationDescription.text = data.donation_details?.details
+
     }
     
  
