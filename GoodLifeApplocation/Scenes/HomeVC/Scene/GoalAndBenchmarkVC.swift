@@ -15,17 +15,21 @@ class GoalAndBenchmarkVC: UIViewController {
     
     @IBOutlet weak var GoalSegmentControl: UISegmentedControl!
     @IBOutlet weak var AddGoalBtn: UIButtonDesignable!
+    @IBOutlet weak var titleTxt: UILabel!
     
     @IBOutlet weak var goalAndBenchmarkTableView: UITableView!
     @IBOutlet weak var backBtn: UIButton!
     
     //MARK: - Properties
+    
     let presenter = DashboardPresenter()
     var selectedSegment = 0
     var selectedCell:UITableViewCell = UITableViewCell()
     var activeGoals:[Goals]=[]
     var pastGoals:[Goals]=[]
     var benchmarks:[Benchmark]=[]
+    var categoryID=0
+    var categoryName = ""
     
     //MARK: - Life cycle
     
@@ -38,6 +42,15 @@ class GoalAndBenchmarkVC: UIViewController {
         GoalSegmentControl.addTarget(self, action: #selector(segmentControlSetup), for: .valueChanged)
         bindButton()
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.presenter.getMyGoalAndBenchmarks(categoryID: categoryID)
+        presenter.delegate = self
+        setupTable()
+
     }
  
     //MARK: - segment control configration
@@ -70,6 +83,7 @@ class GoalAndBenchmarkVC: UIViewController {
     //MARK: - setup tableview
     
     func setupTable(){
+        titleTxt.text = categoryName
         goalAndBenchmarkTableView.delegate = self
         goalAndBenchmarkTableView.dataSource = self
         goalAndBenchmarkTableView.reloadData()

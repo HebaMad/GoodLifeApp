@@ -18,6 +18,9 @@ class AllCategoriesVC: UIViewController {
     let presenter = DashboardPresenter()
     var goalsAndBenchmarks:GoalsAndBenchmark?
     var vc = GoalAndBenchmarkVC.instantiate()
+    var categoryID=0
+    var categoryname = ""
+    
     //MARK: - Life cycle
     
     override func viewDidLoad() {
@@ -28,8 +31,8 @@ class AllCategoriesVC: UIViewController {
         presenter.getCategories()
         presenter.delegate=self
      
-        
     }
+    
     //MARK: - Setup table view
     
     func setupTableView(){
@@ -70,9 +73,9 @@ extension AllCategoriesVC:UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-         
-        self.presenter.getMyGoalAndBenchmarks(categoryID: categories[indexPath.row].id ?? 0)
-
+        categoryID = categories[indexPath.row].id ?? 0
+        categoryname = categories[indexPath.row].title ?? ""
+        self.presenter.getMyGoalAndBenchmarks(categoryID: categoryID)
     }
     
     
@@ -106,7 +109,8 @@ extension AllCategoriesVC:DashboardDelegate{
         vc.pastGoals = goalsAndBenchmarks?.pastGoals ?? []
         vc.activeGoals = goalsAndBenchmarks?.activeGoals ?? []
         vc.benchmarks = goalsAndBenchmarks?.benchmarks ?? []
-
+        vc.categoryID = categoryID
+        vc.categoryName = categoryname
         navigationController?.pushViewController(vc, animated: true)
 
     }

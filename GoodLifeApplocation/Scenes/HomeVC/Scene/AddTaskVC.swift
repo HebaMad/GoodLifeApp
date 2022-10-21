@@ -76,6 +76,7 @@ private extension AddTaskVC{
                    
 
                    self.presenter.AddTask(title: taskTitle, category_id: itemID, all_days: alertSwitch.isOn == true ? "yes" : "no" , start_date: taskStartDate, end_date: taskEndDate)
+                   self.presenter.delegate = self
 
                }else{
                    self.showAlert(title: "Notice", message: "select your category",hideCancelBtn: true)
@@ -101,7 +102,7 @@ extension AddTaskVC:DashboardDelegate{
     
     func showAlerts(title: String, message: String) {
         self.showAlert(title: title, message: message,hideCancelBtn: true)
-
+        clearData()
     }
     
     func getCategories(data: [Categories]) {
@@ -147,4 +148,13 @@ print("\(title ?? "")")
     }
    
     
+}
+
+extension AddTaskVC{
+    func clearData(){
+        titleTxtfield.text = ""
+        CategoryChoice.text = ""
+        startDate.text = ""
+        endDate.text = ""
+    }
 }

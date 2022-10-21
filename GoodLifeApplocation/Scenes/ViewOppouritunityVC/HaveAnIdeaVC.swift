@@ -99,6 +99,7 @@ extension HaveAnIdeaVC{
 extension HaveAnIdeaVC:MenuDelegate{
     func showAlerts(title: String, message: String) {
         self.showAlert(title: title, message: message,hideCancelBtn: true)
+        clearData()
 
     }
     
@@ -107,4 +108,14 @@ extension HaveAnIdeaVC:MenuDelegate{
     }
     
     
+}
+
+
+extension HaveAnIdeaVC{
+    func clearData(){
+        titleProjectText.text = ""
+        monthlyRevenuTxt.text = ""
+        weeklyTimeSelection.text = ""
+        descriptionText.text = ""
+    }
 }

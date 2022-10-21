@@ -108,12 +108,21 @@ extension VolunteerOpportunityVC{
 extension VolunteerOpportunityVC:MenuDelegate{
     func showAlerts(title: String, message: String) {
         self.showAlert(title: title, message: message,hideCancelBtn: true)
-
+        clearData()
     }
     
     func getFunderData(data: WorthyCauses) {
         //No implementation here
     }
-    
-    
+}
+
+
+extension VolunteerOpportunityVC {
+    func clearData(){
+        eventTimeTxt.text = ""
+        eventDayTxt.text = ""
+        eventDescriptionTxt.text = ""
+        locationOfEvent.text = ""
+        eventTitleText.text = ""
+    }
 }

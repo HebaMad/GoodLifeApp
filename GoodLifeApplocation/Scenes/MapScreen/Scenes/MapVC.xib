@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="communityCollectionview" destination="242-4j-6GF" id="yNt-gv-QlS"/>
                 <outlet property="generalFilterCollectionview" destination="3wB-T6-IOB" id="mDD-sb-gMr"/>
+                <outlet property="mapview" destination="Y8b-85-sXm" id="e6z-NY-Z7b"/>
                 <outlet property="menuBtn" destination="rey-PC-ONn" id="WeL-OE-wy5"/>
                 <outlet property="specificFilterCollectionview" destination="ZOa-HP-cQ9" id="xBv-QI-8Y3"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

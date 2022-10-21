@@ -9,7 +9,7 @@ import UIKit
 import SideMenu
 import SkeletonView
 import FittedSheets
-
+import MapKit
 
 protocol OnFilterDissmissed{
     func filteredData(data:OppourtinityDetails)
@@ -19,6 +19,7 @@ class MapVC: UIViewController {
     
     //MARK: - Outlet
 
+    @IBOutlet weak var mapview: MKMapView!
     @IBOutlet weak var communityCollectionview: UICollectionView!
     @IBOutlet weak var generalFilterCollectionview: UICollectionView!
     @IBOutlet weak var specificFilterCollectionview: UICollectionView!
@@ -35,8 +36,13 @@ class MapVC: UIViewController {
     var generalFiltering:[MainCategories]=[]
     var specificFiltering:[MainCategories]=[]
     var categoriesFiltered:[mainType]=[]
-
     
+    var mainCategories:[[String:Any]] = [[:]]
+//    var mainCategories:[String:Double]=[:]
+//    var annotation:[String:Double]=[:]
+
+    var locationCoordinate:[Double]=[]
+    var mainNeedType:[mainType]=[]
     var categoryMainId = 0
     private var isSkeleton: Bool = true {
         didSet {
@@ -52,6 +58,7 @@ class MapVC: UIViewController {
         setUpSideMenu()
         setupCollectionview()
         menuBtnBinding()
+        setupAnnotation()
 
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -82,6 +89,14 @@ class MapVC: UIViewController {
 
             SideMenuManager.default.addPanGestureToPresent(toView: self.view)
         }
+    
+    
+    func setupAnnotation(){
+        let london = MKPointAnnotation()
+        london.title = "London"
+        london.coordinate = CLLocationCoordinate2D(latitude:Double.random(in: 31.3547...32.3547), longitude: Double.random(in: 34.3088...35.3088))
+        mapview.addAnnotation(london)
+    }
 
     //MARK: - SETUP Collection
     private func setupCollectionview(){
@@ -356,7 +371,9 @@ extension MapVC :HomeDelegate{
     
     func getCategories(categories: Home) {
         self.isSkeleton = false
-
+        mainNeedType=categories.main_needs_types ?? []
+        locationCoordinate = self.makeList(categories.main_needs_types?.count ?? 0, loc: 31.3547)
+//        annotation = createAnnotation(location: locationCoordinate)
         recentlyViewed = categories.recentlyViewed ?? []
         recommendedMinistries = categories.recommendedMinistries ?? []
         communityCollectionview.reloadData()
@@ -372,4 +389,25 @@ extension MapVC: OnFilterDissmissed {
         vc.oppourtinityDetails = data
         navigationController?.pushViewController(vc, animated: true)
     }
+    
+    
 }
+
+
+
+extension MapVC{
+    func makeList(_ n: Int,loc:Double) -> [Double] {
+        return (0..<n).map { _ in Double.random(in: loc...loc+1) }
+    }
+    
+//    func createAnnotation(location:[Double]) -> [String:Double]{
+//        for index in 0 ..< mainNeedType.count{
+//            mainCategories[mainNeedType[index].name ?? ""]=location[index]
+//
+//        }
+//        return mainCategories
+//    }
+}
+
+
+

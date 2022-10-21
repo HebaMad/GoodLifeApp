@@ -371,6 +371,7 @@ Benchmarks</string>
                         <outlet property="GoalSegmentControl" destination="TcN-vd-Q6d" id="lzt-Aa-7sh"/>
                         <outlet property="backBtn" destination="YpW-zy-dwG" id="VVz-Zx-pzi"/>
                         <outlet property="goalAndBenchmarkTableView" destination="VkX-6y-ZDX" id="8c2-Md-m0b"/>
+                        <outlet property="titleTxt" destination="sub-WV-3gL" id="qz2-fq-Q28"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PbA-yu-KOa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1866,6 +1867,9 @@ Night</string>
     <designables>
         <designable name="2Go-bQ-8Sh">
             <size key="intrinsicContentSize" width="19.5" height="18.5"/>
+        </designable>
+        <designable name="Ads-Ue-rxg">
+            <size key="intrinsicContentSize" width="14" height="14.5"/>
         </designable>
         <designable name="ytq-pp-ACn">
             <size key="intrinsicContentSize" width="19.5" height="18.5"/>

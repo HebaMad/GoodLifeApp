@@ -17,6 +17,7 @@ class AddGoalVC: UIViewController,UITextFieldDelegate,UIImagePickerControllerDel
     @IBOutlet private(set) weak var deadlineTxt: DatePickingTextField!
     @IBOutlet private(set) weak var titleTxtfield: UITextField!
     @IBOutlet weak var categoryTxt: UITextFieldDataPicker!
+    @IBOutlet weak var urlTxt: UITextField!
     
     //MARK: - properties
     
@@ -71,7 +72,8 @@ private extension AddGoalVC{
                     print(deadline)
                     print("\(itemID)")
 
-                    self.presenter.AddGoal(title: goalTitle, category_id: self.itemID, deadline:deadline )
+                    self.presenter.AddGoal(title: goalTitle, category_id: self.itemID, deadline:deadline ,url: urlTxt.text ?? "")
+                    self.presenter.delegate = self
 
                 }else{
                     self.showAlert(title: "Notice", message: "select your category",hideCancelBtn: true)
@@ -95,7 +97,8 @@ extension AddGoalVC:DashboardDelegate{
     }
     
     func showAlerts(title: String, message: String) {
-        
+        self.showAlert(title: title, message: message)
+        clearData()
     }
     
     func getCategories(data: [Categories]) {
@@ -143,4 +146,14 @@ print("\(title ?? "")")
     
     
     
+}
+
+
+extension AddGoalVC{
+    func clearData(){
+        urlTxt.text = ""
+        titleTxtfield.text = ""
+        categoryTxt.text = ""
+        deadlineTxt.text = ""
+    }
 }

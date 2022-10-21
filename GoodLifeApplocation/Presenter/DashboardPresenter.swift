@@ -79,8 +79,8 @@ class DashboardPresenter:NSObject{
         
     }
     
-    func AddGoal(title:String,category_id:Int,deadline:String){
-        DashboardManager.shared.AddGoal(title: title, category_id: category_id, deadline: deadline) { Response in
+    func AddGoal(title:String,category_id:Int,deadline:String,url:String){
+        DashboardManager.shared.AddGoal(title: title, category_id: category_id, deadline: deadline,url:url) { Response in
             switch Response{
                 
             case let .success(response):

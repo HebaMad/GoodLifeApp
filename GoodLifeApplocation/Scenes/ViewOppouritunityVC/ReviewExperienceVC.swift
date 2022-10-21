@@ -124,6 +124,7 @@ extension ReviewExperienceVC:MenuDelegate{
     
     func showAlerts(title: String, message: String) {
         self.showAlert(title: title, message: message,hideCancelBtn: true)
+        clearData()
 
     }
     
@@ -132,4 +133,10 @@ extension ReviewExperienceVC:MenuDelegate{
     }
     
     
+}
+extension ReviewExperienceVC {
+    func clearData(){
+        titleProjectText.text = ""
+        projectReview.text = ""
+    }
 }

@@ -196,16 +196,16 @@ feedback!</string>
                                                             <rect key="frame" x="20" y="308.5" width="374" height="91"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review?*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bs2-AH-4tw">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="51"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="17"/>
                                                                     <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="14"/>
                                                                     <color key="textColor" name="button"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m2y-5A-XrQ">
-                                                                    <rect key="frame" x="0.0" y="61" width="374" height="30"/>
+                                                                    <rect key="frame" x="0.0" y="27" width="374" height="64"/>
                                                                     <subviews>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ors-jE-gvQ" customClass="RatingControl" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="64"/>
                                                                             <color key="tintColor" name="review star"/>
                                                                             <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="0.0" bottom="0.0" trailing="200"/>
                                                                             <userDefinedRuntimeAttributes>
