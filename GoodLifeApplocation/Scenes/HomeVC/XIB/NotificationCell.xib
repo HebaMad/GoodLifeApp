@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,39 +19,78 @@
                 <rect key="frame" x="0.0" y="0.0" width="402" height="116"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="POW-wN-6FT">
-                        <rect key="frame" x="4" y="4" width="394" height="108"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t7F-IH-mL2" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
+                        <rect key="frame" x="8" y="8" width="386" height="100"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Notification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oOV-ov-fBl">
-                                <rect key="frame" x="0.0" y="0.0" width="394" height="16"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="16" id="kUT-Za-QEr"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                <color key="textColor" name="backgroundColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="910-8n-56U">
-                                <rect key="frame" x="0.0" y="16" width="394" height="92"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="POW-wN-6FT">
+                                <rect key="frame" x="0.0" y="0.0" width="386" height="100"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ClV-kr-N57">
+                                        <rect key="frame" x="12" y="12" width="362" height="16"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="New Notification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oOV-ov-fBl">
+                                                <rect key="frame" x="0.0" y="0.0" width="312" height="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="16" id="kUT-Za-QEr"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                <color key="textColor" name="backgroundColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4JU-td-X8f">
+                                                <rect key="frame" x="312" y="0.0" width="50" height="16"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <color key="textColor" red="0.2274509804" green="0.1019607843" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="N3M-wm-puI"/>
+                                        </constraints>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="910-8n-56U">
+                                        <rect key="frame" x="12" y="28" width="362" height="64"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <directionalEdgeInsets key="directionalLayoutMargins" top="12" leading="12" bottom="8" trailing="12"/>
+                            </stackView>
                         </subviews>
-                    </stackView>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="POW-wN-6FT" firstAttribute="top" secondItem="t7F-IH-mL2" secondAttribute="top" id="4B4-3D-C9K"/>
+                            <constraint firstItem="POW-wN-6FT" firstAttribute="leading" secondItem="t7F-IH-mL2" secondAttribute="leading" id="afB-Su-gUQ"/>
+                            <constraint firstAttribute="trailing" secondItem="POW-wN-6FT" secondAttribute="trailing" id="cDT-5I-iBB"/>
+                            <constraint firstAttribute="bottom" secondItem="POW-wN-6FT" secondAttribute="bottom" id="xfz-5N-xf4"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="POW-wN-6FT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="4GD-qk-1Q7"/>
-                    <constraint firstAttribute="trailing" secondItem="POW-wN-6FT" secondAttribute="trailing" constant="4" id="TUn-eE-4J9"/>
-                    <constraint firstAttribute="bottom" secondItem="POW-wN-6FT" secondAttribute="bottom" constant="4" id="V1V-uL-iqA"/>
-                    <constraint firstItem="POW-wN-6FT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="bxI-V5-gF4"/>
+                    <constraint firstAttribute="trailing" secondItem="t7F-IH-mL2" secondAttribute="trailing" constant="8" id="MIn-KP-w9Q"/>
+                    <constraint firstItem="t7F-IH-mL2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Way-iF-07Z"/>
+                    <constraint firstAttribute="bottom" secondItem="t7F-IH-mL2" secondAttribute="bottom" constant="8" id="u0X-Ce-o8t"/>
+                    <constraint firstItem="t7F-IH-mL2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="xcl-iG-sjh"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="detailsTxt" destination="910-8n-56U" id="UG7-lX-HqR"/>
+                <outlet property="notificationTimeTxt" destination="4JU-td-X8f" id="IIx-Mm-6Na"/>
                 <outlet property="titleTxt" destination="oOV-ov-fBl" id="scf-jk-1sx"/>
             </connections>
             <point key="canvasLocation" x="195.6521739130435" y="135.26785714285714"/>
@@ -60,5 +100,8 @@
         <namedColor name="backgroundColor">
             <color red="0.63099998235702515" green="0.34900000691413879" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

@@ -234,6 +234,7 @@ struct Resources:Decodable{
 }
 
 struct DashboardTask:Decodable{
+    
     let currentTasks :[Tasks]?
     let completedTasks :[Tasks]?
 
@@ -255,7 +256,7 @@ struct Tasks:Codable{
 
 
 struct GoalsAndBenchmark:Decodable{
-
+    let category:Categories?
     let activeGoals:[Goals]?
     let pastGoals:[Goals]?
     let benchmarks:[Benchmark]?
@@ -360,6 +361,12 @@ struct AllNotifiaction: Decodable {
 }
 
 struct notificationsDetails:Codable{
+    
+    let id:Int?
     let title:String?
-    let details:String?
+    let message:String?
+    let created_at:String?
+    let noti_since:String?
+
+        
 }

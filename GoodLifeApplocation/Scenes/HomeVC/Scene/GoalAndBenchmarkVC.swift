@@ -30,7 +30,6 @@ class GoalAndBenchmarkVC: UIViewController {
     var pastGoals:[Goals]=[]
     var benchmarks:[Benchmark]=[]
     var categoryID=0
-    var categoryName = ""
     
     //MARK: - Life cycle
     
@@ -38,8 +37,6 @@ class GoalAndBenchmarkVC: UIViewController {
         super.viewDidLoad()
         
         emptyView.isHidden=true
-        titleTxt.text = categoryName
-
         goalAndBenchmarkTableView.register(PastGoalsCell.self)
 //        setupTable()
         bindButton()
@@ -137,7 +134,6 @@ private extension GoalAndBenchmarkVC{
     
     func openUrl(url:String){
         UIApplication.shared.open(URL(string:url) ?? URL(fileURLWithPath: ""), options: [:], completionHandler: nil)
-
     }
     
     
@@ -154,7 +150,6 @@ private extension GoalAndBenchmarkVC{
        case backBtn:
            navigationController?.popViewController(animated: true)
 
-           
        default:
            print("")
        }
@@ -167,12 +162,10 @@ private extension GoalAndBenchmarkVC{
         case 0:
             sender.setBackgroundImage( UIImage(systemName: "circlebadge.fill"), for: .normal)
             sender.tintColor = UIColor(named: "progressView")
-//            DispatchQueue.main.sync {
             self.presenter.markMyGoal(goalId: activeGoals[sender.tag].id ?? 0, categoryID:  activeGoals[sender.tag].category_id ?? 0)
             self.presenter.delegate = self
             checkData(goalsArr: activeGoals)
             self.goalAndBenchmarkTableView.reloadData()
-//            }
       
         case 1:
             print("")
@@ -269,6 +262,7 @@ extension GoalAndBenchmarkVC:DashboardDelegate{
         activeGoals = data.activeGoals ?? []
         pastGoals = data.pastGoals ?? []
         benchmarks = data.benchmarks ?? []
+        titleTxt.text = data.category?.title ?? ""
         checkGoalandBenchmarkSegment()
         goalAndBenchmarkTableView.reloadData()
     }

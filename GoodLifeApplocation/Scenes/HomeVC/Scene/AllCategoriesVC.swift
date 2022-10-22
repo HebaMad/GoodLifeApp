@@ -105,12 +105,12 @@ extension AllCategoriesVC:DashboardDelegate{
     }
     
     func getMyGoalAndBenchmark(data: GoalsAndBenchmark) {
+        
         goalsAndBenchmarks=data
         vc.pastGoals = goalsAndBenchmarks?.pastGoals ?? []
         vc.activeGoals = goalsAndBenchmarks?.activeGoals ?? []
         vc.benchmarks = goalsAndBenchmarks?.benchmarks ?? []
         vc.categoryID = categoryID
-        vc.categoryName = categoryname
         navigationController?.pushViewController(vc, animated: false)
         
     }

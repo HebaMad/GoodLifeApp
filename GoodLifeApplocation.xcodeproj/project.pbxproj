@@ -509,13 +509,6 @@
 			path = Dashboard;
 			sourceTree = "<group>";
 		};
-		2767A2952890A45400DF34D1 /* Filterscreen */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Filterscreen;
-			sourceTree = "<group>";
-		};
 		27876AB528A43F11003A012A /* XIB */ = {
 			isa = PBXGroup;
 			children = (
@@ -695,7 +688,6 @@
 				2704244D28A8CE6F002EF7B5 /* LoginVC */,
 				27CB208C289FB1B700E63694 /* PackagesDetails */,
 				27A737712891CAA500FD8AD9 /* MapScreen */,
-				2767A2952890A45400DF34D1 /* Filterscreen */,
 				27C9AEB0288EF0DF00FA584A /* DonationVC */,
 				27C9AEA6288DA88200FA584A /* HomeVC */,
 				27C9AE9B288D8BB100FA584A /* ViewOppouritunityVC */,

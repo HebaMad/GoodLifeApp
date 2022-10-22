@@ -6,19 +6,27 @@
 //
 
 import UIKit
-
+import SkeletonView
 class NotificationVC: UIViewController {
     //MARK: - Outlet
     @IBOutlet weak var notificationTableview: UITableView!
-    
+    @IBOutlet var emptyView: UIView!
+
     //MARK: - Properties
     let presenter = DashboardPresenter()
     var notification:[notificationsDetails]=[]
+    private var isSkeleton: Bool = true {
+        didSet {
+            self.notificationTableview.reloadData()
+        }
+    }
     //MARK: - Life cycle
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupTableview()
+
         assignPresenterNotification()
         
     }
@@ -28,7 +36,6 @@ class NotificationVC: UIViewController {
     func assignPresenterNotification(){
         presenter.notification()
         presenter.delegate=self
-        setupTableview()
     }
 
     //MARK: - setupTableview data
@@ -44,6 +51,15 @@ class NotificationVC: UIViewController {
     @IBAction func backBtn(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
+    
+    func checkData(Alert:[notificationsDetails]) {
+        
+        if Alert.count == 0 {
+            self.emptyView.isHidden = false
+        }else {
+            self.emptyView.isHidden = true
+        }
+    }
 
 }
 
@@ -56,12 +72,17 @@ extension NotificationVC:UITableViewDelegate{}
 extension NotificationVC:UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        notification.count
+        return self.isSkeleton ? 12 : notification.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell:NotificationCell = tableView.dequeueReusableCell(for: indexPath)
+        guard !self.isSkeleton else {
+            cell.startSkeleton()
+            return cell
+        }
+        cell.stopSkeleton()
         cell.configureCell(data: notification[indexPath.row])
         return cell
         
@@ -84,7 +105,10 @@ extension NotificationVC:DashboardDelegate{
     // with implementation
 
     func getNotification(data: AllNotifiaction) {
+        self.isSkeleton = false
+
         notification = data.notifications
+        checkData(Alert: notification)
         notificationTableview.reloadData()
     }
     

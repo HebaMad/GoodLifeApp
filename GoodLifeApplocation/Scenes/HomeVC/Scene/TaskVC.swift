@@ -15,7 +15,8 @@ class TaskVC: UIViewController {
     @IBOutlet weak var taskSegmentControl: UISegmentedControl!
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var AddTaskBtn: UIButtonDesignable!
- 
+    @IBOutlet var emptyView: UIView!
+
     //MARK: - Properties
 
     var myCurrentTask:[Tasks]=[]
@@ -27,7 +28,8 @@ class TaskVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.emptyView.isHidden = true
         setupTableView()
         taskSegmentControl.addTarget(self, action: #selector(segmentControlSetup), for: .valueChanged)
         bindButton()
@@ -41,10 +43,19 @@ class TaskVC: UIViewController {
     
     //MARK: - setup tableview
 
-    func setupTableView(){
+    func setupTableView() {
         TaskTableView.register(TaskCell.self)
         TaskTableView.delegate = self
         TaskTableView.dataSource = self
+    }
+    
+    func checkData(taskArr:[Tasks]) {
+        
+        if taskArr.count == 0 {
+            self.emptyView.isHidden = false
+        }else {
+            self.emptyView.isHidden = true
+        }
     }
     
     //MARK: - segment control configration
@@ -54,11 +65,13 @@ class TaskVC: UIViewController {
         case 0 :
             
             segmentIndex = 0
+            checkData(taskArr: myCurrentTask)
             TaskTableView.reloadData()
             
         case 1 :
             
             segmentIndex = 1
+            checkData(taskArr: myCompletedTask)
             TaskTableView.reloadData()
 
         default:
@@ -84,6 +97,16 @@ class TaskVC: UIViewController {
         }
         
     }
+    func checkGoalandBenchmarkSegment(){
+        switch taskSegmentControl.selectedSegmentIndex {
+        case 0 :checkData(taskArr: myCurrentTask)
+        case 1 :checkData(taskArr: myCompletedTask)
+
+        default : print("error")
+            
+        }
+    
+}
 }
 
 //MARK: - Binding
@@ -174,6 +197,7 @@ extension TaskVC:DashboardDelegate{
     func getMyTask(data: DashboardTask) {
         myCompletedTask=data.completedTasks ?? []
         myCurrentTask = data.currentTasks ?? []
+        checkGoalandBenchmarkSegment()
         TaskTableView.reloadData()
 
     }
