@@ -18,5 +18,7 @@ target 'GoodLifeApplocation' do
   pod 'MaterialComponents/Snackbar'
   pod 'SkeletonView'
   pod 'DropDown'
-
+  pod 'FirebaseCore'
+  pod 'Firebase/Messaging'
+  pod 'Firebase/Firestore'
 end
