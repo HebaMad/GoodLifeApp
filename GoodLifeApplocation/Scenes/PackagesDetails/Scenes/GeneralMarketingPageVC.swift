@@ -26,6 +26,7 @@ class GeneralMarketingPageVC: UIViewController, IndicatorInfoProvider {
     var item:[GeneralOppourtinityDetails]=[]
 
     
+    
     //MARK: - Life cycle
 
     override func viewDidLoad() {
@@ -42,6 +43,9 @@ class GeneralMarketingPageVC: UIViewController, IndicatorInfoProvider {
         marketingTable.register(GeneralMarketingBreakdown.self)
         marketingTable.delegate = self
         marketingTable.dataSource = self
+        print(marketingTable.bounds.height)
+        NotificationCenter.default.post(name: .init(rawValue: "containerHeight"), object: marketingTable.bounds.height + 200)
+
     }
 
     //MARK: - setup pie Chart
@@ -78,8 +82,8 @@ class GeneralMarketingPageVC: UIViewController, IndicatorInfoProvider {
          legendChart.formSize = 20
          legendChart.font = .systemFont(ofSize: 16, weight: .medium)
 
-
     }
+    
     // set pie data
 
     private func setPieData(dataPoints: [String], values: [Double]) -> [ChartDataEntry] {
@@ -96,6 +100,7 @@ class GeneralMarketingPageVC: UIViewController, IndicatorInfoProvider {
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return itemInfo
     }
+    
 }
 extension GeneralMarketingPageVC:Storyboarded{
     static var storyboardName: StoryboardName = .main
@@ -112,9 +117,6 @@ extension GeneralMarketingPageVC:UITableViewDataSource{
         cell.configureCell(item: item[indexPath.row])
         return cell
     }
-    
- 
-    
     
 }
 

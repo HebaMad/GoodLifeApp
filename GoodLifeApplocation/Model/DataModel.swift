@@ -80,6 +80,16 @@ struct GeneralOppourtinity:Codable{
 
 struct GeneralOppourtinityDetails:Codable{
     let title:String?
+    let url:String?
+    let details:String?
+    let cost:Double?
+    let childs:[OppurtinityDetails]?
+    
+}
+
+struct OppurtinityDetails:Codable{
+    let title:String?
+    let url:String?
     let details:String?
     let cost:Double?
 }

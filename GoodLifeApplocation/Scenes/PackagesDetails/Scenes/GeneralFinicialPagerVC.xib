@@ -20,7 +20,26 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GeneralFinicialPagerVC" customModule="GoodLifeApplocation" customModuleProvider="target">
             <connections>
+                <outlet property="SecondSubTopicTxt" destination="Fzh-co-xW7" id="azS-AK-dGj"/>
+                <outlet property="SecondSubTopiicCost" destination="470-AK-y9h" id="7ih-hd-PP7"/>
+                <outlet property="SecondSubTopiicTxt" destination="VPc-X2-Egh" id="Bmy-Uc-XYc"/>
+                <outlet property="ThirdTopicCost" destination="cKo-V4-uFP" id="pLm-5P-Hem"/>
+                <outlet property="ThirdTopicTitle" destination="kok-vu-YMd" id="wZY-xs-4qA"/>
+                <outlet property="ToTalEarning" destination="a4G-bz-8zr" id="Qi6-7z-IkO"/>
+                <outlet property="firstSubTopicCost" destination="sUr-Y7-k1o" id="XWd-GV-zKZ"/>
+                <outlet property="firstSubTopicTitle" destination="QcD-g4-4qS" id="gVd-GC-194"/>
+                <outlet property="firstSubTopicTxt" destination="tfW-mi-mft" id="UTd-eT-fcY"/>
+                <outlet property="firstSubTopicValue" destination="rKn-88-3kc" id="fxW-2R-NBj"/>
+                <outlet property="firstSubTopiicCost" destination="kcG-9i-kZX" id="L9M-SS-ZwS"/>
+                <outlet property="firstSubTopiicTxt" destination="nm2-QZ-nOR" id="hzm-1k-JcL"/>
+                <outlet property="firstTopicCost" destination="3M4-K5-6jC" id="3FT-8T-vnM"/>
+                <outlet property="firstTopicTitle" destination="Vhp-XR-6Kt" id="836-P7-BWd"/>
                 <outlet property="lineView" destination="vmm-wN-2sv" id="oif-Sg-szp"/>
+                <outlet property="secondSubTopicCost" destination="wvo-49-YME" id="tJr-MB-1Dj"/>
+                <outlet property="secondSubTopicTitle" destination="0bC-6w-X3j" id="5qR-Md-kuJ"/>
+                <outlet property="secondSubTopicValue" destination="Fbm-tp-CYn" id="gt8-iI-tPU"/>
+                <outlet property="secondTopicCost" destination="XEy-cJ-OeS" id="t97-TC-xnz"/>
+                <outlet property="secondTopicTitle" destination="D4W-Jh-sSk" id="pBk-3b-f5l"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -30,7 +49,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eWw-fd-f39">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="620"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="650"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EKI-wF-D44" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
                             <rect key="frame" x="8" y="40" width="398" height="170"/>
@@ -141,25 +160,25 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hXU-9z-nKo" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                            <rect key="frame" x="8" y="218" width="398" height="394"/>
+                            <rect key="frame" x="8" y="218" width="398" height="424"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="TAU-Wv-NGH">
-                                    <rect key="frame" x="0.0" y="0.0" width="398" height="394"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="398" height="424"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VYA-GH-Zp7">
-                                            <rect key="frame" x="12" y="12" width="374" height="332.5"/>
+                                            <rect key="frame" x="12" y="12" width="374" height="359"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LIK-dE-k2P">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="332.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="359"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Financial Breakdown" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abi-MQ-M0Q">
-                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="47"/>
                                                             <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="20"/>
                                                             <color key="textColor" name="backgroundColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fe0-pC-XG3">
-                                                            <rect key="frame" x="0.0" y="20.5" width="374" height="312"/>
+                                                            <rect key="frame" x="0.0" y="47" width="374" height="312"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rgV-cw-gPf">
                                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="104"/>
@@ -391,23 +410,23 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KKc-JO-itZ">
-                                            <rect key="frame" x="12" y="354.5" width="374" height="1"/>
+                                            <rect key="frame" x="12" y="381" width="374" height="1"/>
                                             <color key="backgroundColor" name="TXT"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="1" id="iU1-66-5Pp"/>
                                             </constraints>
                                         </view>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="eYC-lE-7Lf">
-                                            <rect key="frame" x="12" y="365.5" width="374" height="20.5"/>
+                                            <rect key="frame" x="12" y="392" width="374" height="24"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Expected Earnings:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nen-pT-Eno">
-                                                    <rect key="frame" x="0.0" y="0.0" width="187" height="20.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="187" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200$" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4G-bz-8zr">
-                                                    <rect key="frame" x="187" y="0.0" width="187" height="20.5"/>
+                                                    <rect key="frame" x="187" y="0.0" width="187" height="24"/>
                                                     <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="20"/>
                                                     <color key="textColor" name="ButtonColor"/>
                                                     <nil key="highlightedColor"/>
@@ -446,7 +465,7 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="620" id="5vw-dj-aMq"/>
+                        <constraint firstAttribute="height" constant="650" id="5vw-dj-aMq"/>
                     </constraints>
                     <directionalEdgeInsets key="directionalLayoutMargins" top="40" leading="8" bottom="8" trailing="8"/>
                 </stackView>

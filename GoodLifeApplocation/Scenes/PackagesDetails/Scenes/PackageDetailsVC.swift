@@ -51,6 +51,7 @@ class PackageDetailsVC: UIViewController {
  
     NotificationCenter.default.addObserver(forName: .init(rawValue: "containerHeight"), object: nil, queue: .main) { notify in
         guard let containerHeight = notify.object as? Int else { return }
+        print(containerHeight)
         self.containerHeight.constant = CGFloat(containerHeight)
             
         }

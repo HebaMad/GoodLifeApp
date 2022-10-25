@@ -39,6 +39,8 @@ class GeneralLiturgicalPageVC: UIViewController, IndicatorInfoProvider{
         liturgicalTable.register(GeneralMarketingBreakdown.self)
         liturgicalTable.delegate = self
         liturgicalTable.dataSource = self
+        NotificationCenter.default.post(name: .init(rawValue: "containerHeight"), object: liturgicalTable.bounds.height+300)
+
     }
 
     //MARK: - setup pie Chart

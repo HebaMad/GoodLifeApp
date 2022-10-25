@@ -12,24 +12,29 @@ class GeneralPagerViewVC: ButtonBarPagerTabStripViewController {
     
     //MARK: - Propeerties
 
-    
+    var oppourtinityID=0
     var oppourtinityDetails:OppourtinityDetails?
+    let presenter = HomePresenter()
 
     //MARK: - Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupPagerTab()
+        presenter.oppourtinityDetails(opportunityID: UserDefaults.standard.integer(forKey: "oppourtinityID"))
+        presenter.delegate = self
+
         
+    }
+    override func viewWillAppear(_ animated: Bool) {
+      
+
     }
     
     //MARK: - SetupPagerTab
     
     private func setupPagerTab(){
-        settings.style.buttonBarBackgroundColor = .blue
-        settings.style.buttonBarItemBackgroundColor = .clear
-        settings.style.selectedBarBackgroundColor = .white
+      
         settings.style.buttonBarItemFont = .boldSystemFont(ofSize: 14)
         settings.style.selectedBarHeight = 2.0
         settings.style.buttonBarMinimumLineSpacing = 0
@@ -53,6 +58,7 @@ class GeneralPagerViewVC: ButtonBarPagerTabStripViewController {
         
         
         let first = GeneralFinicialPagerVC()
+        first.item = oppourtinityDetails?.general?[0].items ?? []
         first.itemInfo = "Finicial"
         
         
@@ -67,5 +73,28 @@ class GeneralPagerViewVC: ButtonBarPagerTabStripViewController {
         
         return [first, second,third]
     }
+    
+}
+
+
+extension GeneralPagerViewVC:HomeDelegate{
+    func showAlerts(title: String, message: String) { }
+    
+    func getCategories(categories: Home) { }
+    
+    func getStandardCategoriesFiltering(categories: MainHomeCategories) {}
+    
+    func getsubCategoriesFiltering(categories: SubHomeCategories) {}
+    
+    func getCategoriesFiltered(categories: CategoriesFiltering) {}
+    
+    func getOppourtinity(categories: Oppourtinity) {}
+    
+    func getOppourtinityDetails(categories: OppourtinityDetails) {
+        oppourtinityDetails=categories
+        setupPagerTab()
+
+    }
+    
     
 }

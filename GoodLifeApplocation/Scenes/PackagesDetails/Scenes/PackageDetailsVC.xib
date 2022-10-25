@@ -20,7 +20,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PackageDetailsVC" customModule="GoodLifeApplocation" customModuleProvider="target">
             <connections>
                 <outlet property="backBtn" destination="edz-Zl-OiQ" id="ZJa-Yx-l8k"/>
-                <outlet property="containerHeight" destination="Pke-wa-X64" id="gEN-fh-84I"/>
+                <outlet property="containerHeight" destination="Pke-wa-X64" id="zu9-aR-clk"/>
                 <outlet property="containerView" destination="hyV-Qc-AvS" id="ebv-rO-mbH"/>
                 <outlet property="nextBtn" destination="KDR-Z2-oBA" id="mFq-K1-OpG"/>
                 <outlet property="packageDetailsSegmentControl" destination="cML-wf-9XA" id="YYo-PU-Z2J"/>
