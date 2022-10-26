@@ -56,7 +56,9 @@ class PackageDetailsVC: UIViewController {
             
         }
     }
+    
     @objc func packageTypeTapped(sender : UISegmentedControl){
+        
         switch sender.selectedSegmentIndex{
             
         case 0:
@@ -79,7 +81,10 @@ class PackageDetailsVC: UIViewController {
             vc.view.frame = self.containerView.bounds
         default:
             print("error selected")
+            
+            
         }
+        
     }
 
 }

@@ -49,7 +49,8 @@ struct Oppourtinity:Decodable{
     
 }
 
-struct OppourtinityDetails:Codable{
+struct OppourtinityDetails : Codable {
+    
     let id:Int?
     let category:String?
     let type:String?
@@ -70,15 +71,48 @@ struct OppourtinityDetails:Codable{
     let rate:Int?
     let reviews_count:Int?
     let general:[GeneralOppourtinity]?
+    let specific:[SpecificOppourtinity]?
+
 }
+
 struct GeneralOppourtinity:Codable{
     let type:String?
     let title:String?
+    let footer_title:String?
+    let details:String?
     let items:[GeneralOppourtinityDetails]?
 
 }
 
 struct GeneralOppourtinityDetails:Codable{
+    
+    let title:String?
+    let url:String?
+    let approach:String?
+    let details:String?
+    let cost:Double?
+    let childs:[OppurtinityDetails]?
+    
+}
+
+struct OppurtinityDetails: Codable {
+    
+    let title:String?
+    let url:String?
+    let details:String?
+    let cost:Double?
+    
+}
+
+struct SpecificOppourtinity : Codable {
+    
+    let type:String?
+    let title:String?
+    let items:[SpecidfcOppourtinityDetails]?
+    
+}
+struct SpecidfcOppourtinityDetails:Codable{
+    
     let title:String?
     let url:String?
     let details:String?
@@ -87,12 +121,6 @@ struct GeneralOppourtinityDetails:Codable{
     
 }
 
-struct OppurtinityDetails:Codable{
-    let title:String?
-    let url:String?
-    let details:String?
-    let cost:Double?
-}
 
 struct MainCategories:Codable{
     let id:Int?
@@ -103,6 +131,7 @@ struct MainCategories:Codable{
     let name:String?
     
 }
+
 struct userProfile: Decodable{
     
     let id:Int?
