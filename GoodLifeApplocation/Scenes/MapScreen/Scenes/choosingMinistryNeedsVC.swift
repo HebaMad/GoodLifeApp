@@ -53,7 +53,6 @@ class choosingMinistryNeedsVC: UIViewController {
     
     @objc func ministrySubscriptionDetails( _ sender:UIButton){
         presenter.oppourtinityDetails(opportunityID: oppourtinity[sender.tag].id ?? 0)
-        UserDefaults.standard.set(oppourtinity[sender.tag].id ?? 0, forKey:"oppourtinityID")
         presenter.delegate=self
        
 
@@ -157,6 +156,10 @@ extension choosingMinistryNeedsVC:UICollectionViewDataSource{
 
 extension choosingMinistryNeedsVC:HomeDelegate{
     func getOppourtinityDetails(categories: OppourtinityDetails) {
+        let data =  try! JSONEncoder().encode(categories)
+
+        UserDefaults.standard.set(data, forKey:"oppourtinityID")
+
         self.dismiss(animated: true) {
             if let _delegate = self.onFilterDissmissed{
                 print(categories)

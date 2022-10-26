@@ -20,21 +20,33 @@ class GeneralPagerViewVC: ButtonBarPagerTabStripViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupPagerTab()
-        presenter.oppourtinityDetails(opportunityID: UserDefaults.standard.integer(forKey: "oppourtinityID"))
-        presenter.delegate = self
+        
+        
+//        let decoded  = UserDefaults.standard.data(forKey: "oppourtinityID")
+//        oppourtinityDetails = NSKeyedUnarchiver.unarchiveObject(with: decoded ?? Data()) as? OppourtinityDetails
+        let data = UserDefaults.standard.object(forKey: "oppourtinityID") as? Data;
+         if data != nil{
+              oppourtinityDetails =  try! JSONDecoder().decode(OppourtinityDetails.self, from: data ?? Data())
+             setupPagerTab()
+             
+         }
+           
+ 
 
         
+        
     }
+    
     override func viewWillAppear(_ animated: Bool) {
-      
 
     }
     
     //MARK: - SetupPagerTab
     
     private func setupPagerTab(){
-      
+        settings.style.buttonBarBackgroundColor = .blue
+        settings.style.buttonBarItemBackgroundColor = .clear
+        settings.style.buttonBarItemTitleColor = .white
         settings.style.buttonBarItemFont = .boldSystemFont(ofSize: 14)
         settings.style.selectedBarHeight = 2.0
         settings.style.buttonBarMinimumLineSpacing = 0
@@ -58,18 +70,28 @@ class GeneralPagerViewVC: ButtonBarPagerTabStripViewController {
         
         
         let first = GeneralFinicialPagerVC()
-        first.item = oppourtinityDetails?.general?[0].items ?? []
-        first.itemInfo = "Finicial"
+        let data = UserDefaults.standard.object(forKey: "oppourtinityID") as? Data;
+         if data != nil{
+              oppourtinityDetails =  try! JSONDecoder().decode(OppourtinityDetails.self, from: data ?? Data())
+             first.item = oppourtinityDetails?.general?[0].items ?? []
+             first.itemInfo = "Finicial"
+         }
+       
         
         
     let second = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GeneralMarketingPageVC") as! GeneralMarketingPageVC
+         if data != nil{
+        oppourtinityDetails =  try! JSONDecoder().decode(OppourtinityDetails.self, from: data ?? Data())
         second.item = oppourtinityDetails?.general?[1].items ?? []
         second.itemInfo = "Marketing"
+         }
         
         let third = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GeneralLiturgicalPageVC") as! GeneralLiturgicalPageVC
+         if data != nil{
+        oppourtinityDetails =  try! JSONDecoder().decode(OppourtinityDetails.self, from: data ?? Data())
         third.item = oppourtinityDetails?.general?[2].items ?? []
         third.itemInfo = "Liturgical"
-        
+         }
         
         return [first, second,third]
     }
@@ -78,23 +100,20 @@ class GeneralPagerViewVC: ButtonBarPagerTabStripViewController {
 
 
 extension GeneralPagerViewVC:HomeDelegate{
-    func showAlerts(title: String, message: String) { }
     
-    func getCategories(categories: Home) { }
-    
+    func showAlerts(title: String, message: String) {}
+    func getCategories(categories: Home) {}
     func getStandardCategoriesFiltering(categories: MainHomeCategories) {}
-    
     func getsubCategoriesFiltering(categories: SubHomeCategories) {}
-    
     func getCategoriesFiltered(categories: CategoriesFiltering) {}
-    
     func getOppourtinity(categories: Oppourtinity) {}
     
     func getOppourtinityDetails(categories: OppourtinityDetails) {
+        
         oppourtinityDetails=categories
         setupPagerTab()
-
+        
     }
-    
+
     
 }
