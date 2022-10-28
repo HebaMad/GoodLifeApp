@@ -64,7 +64,6 @@ struct OppourtinityDetails : Codable {
     let sub_title:String?
     let models:String?
     let plans:String?
-    let websites:String?
     let image:String?
     let created_at:String?
     let opportunity_match:Int?
@@ -75,12 +74,18 @@ struct OppourtinityDetails : Codable {
 
 }
 
+struct Graph:Codable{
+    let name:String?
+    let percent:Int?
+}
+
 struct GeneralOppourtinity:Codable{
     let type:String?
     let title:String?
     let footer_title:String?
     let details:String?
     let items:[GeneralOppourtinityDetails]?
+    let graph:[Graph]?
 
 }
 

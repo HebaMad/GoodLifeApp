@@ -1556,7 +1556,7 @@ Night</string>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="130" estimatedRowHeight="130" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OgR-Ws-3Qb">
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="150" estimatedRowHeight="150" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OgR-Ws-3Qb">
                                                 <rect key="frame" x="12" y="224" width="390" height="648"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -1582,12 +1582,43 @@ Night</string>
                                                         <constraint firstItem="LxH-Wb-s3q" firstAttribute="leading" secondItem="sKC-H1-FP6" secondAttribute="leading" constant="16" id="odH-V4-jzq"/>
                                                     </constraints>
                                                 </view>
+                                                <view key="tableFooterView" contentMode="scaleToFill" id="cqy-Qm-2i5">
+                                                    <rect key="frame" x="0.0" y="281" width="390" height="72"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="NZO-u8-sQs">
+                                                            <rect key="frame" x="0.0" y="0.0" width="390" height="72"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Overall Level of Difficulty:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mr2-BX-PN4">
+                                                                    <rect key="frame" x="16" y="-25" width="366" height="61"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medium" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQW-z9-RGz">
+                                                                    <rect key="frame" x="16" y="36" width="366" height="16"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                    <color key="textColor" red="0.70588235294117641" green="0.70588235294117641" blue="0.70588235294117641" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <directionalEdgeInsets key="directionalLayoutMargins" top="-25" leading="16" bottom="20" trailing="8"/>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="NZO-u8-sQs" secondAttribute="trailing" id="979-IT-G92"/>
+                                                        <constraint firstItem="NZO-u8-sQs" firstAttribute="top" secondItem="cqy-Qm-2i5" secondAttribute="top" id="ILN-VZ-taj"/>
+                                                        <constraint firstAttribute="bottom" secondItem="NZO-u8-sQs" secondAttribute="bottom" id="ng7-dB-CmT"/>
+                                                        <constraint firstItem="NZO-u8-sQs" firstAttribute="leading" secondItem="cqy-Qm-2i5" secondAttribute="leading" id="yIh-AS-18o"/>
+                                                    </constraints>
+                                                </view>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="CZU-Y1-Fnu">
-                                                        <rect key="frame" x="0.0" y="108.5" width="390" height="130"/>
+                                                        <rect key="frame" x="0.0" y="108.5" width="390" height="150"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CZU-Y1-Fnu" id="Wec-0h-cqU">
-                                                            <rect key="frame" x="0.0" y="0.0" width="390" height="130"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="390" height="150"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </tableViewCellContentView>
                                                     </tableViewCell>
@@ -1628,13 +1659,15 @@ Night</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="footerTitleTxt" destination="Mr2-BX-PN4" id="LHi-Hd-dB5"/>
+                        <outlet property="levelOfDifficuilty" destination="eQW-z9-RGz" id="qjF-sQ-U5V"/>
                         <outlet property="marketingTable" destination="OgR-Ws-3Qb" id="0dp-eS-IZj"/>
                         <outlet property="pieChartView" destination="AZl-Lf-lzI" id="YEY-IT-qZ7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I7g-n4-ItW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5690" y="-585"/>
+            <point key="canvasLocation" x="5689.8550724637689" y="-585.26785714285711"/>
         </scene>
         <!--General Liturgical PageVC-->
         <scene sceneID="W9Q-iz-fPb">

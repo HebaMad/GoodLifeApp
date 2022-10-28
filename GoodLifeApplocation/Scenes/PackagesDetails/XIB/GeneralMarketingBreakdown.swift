@@ -12,6 +12,8 @@ class GeneralMarketingBreakdown: UITableViewCell,NibLoadableView {
     @IBOutlet weak var titleTxt: UILabel!
     @IBOutlet weak var urlTxt: UILabel!
     @IBOutlet weak var Description: UILabel!
+    @IBOutlet weak var approachStackview: UIStackView!
+    @IBOutlet weak var approachValue: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,6 +30,14 @@ class GeneralMarketingBreakdown: UITableViewCell,NibLoadableView {
         Description.text = item.details?.html2Attributed?.string
         urlTxt.text=item.url ?? ""
         
+    }
+    
+    func configureMarketingCell(item:GeneralOppourtinityDetails){
+        
+        titleTxt.text = item.title ?? ""
+        Description.text = item.details?.html2Attributed?.string
+        urlTxt.text=item.url ?? ""
+        approachValue.text = item.approach ?? ""
     }
     
 }

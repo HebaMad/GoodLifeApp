@@ -17,21 +17,31 @@ class GeneralLiturgicalPageVC: UIViewController, IndicatorInfoProvider{
     //MARK: - Properties
 
     var itemInfo: IndicatorInfo = "Liturgical"
-
-    let targetMarkets = ["Prayer", "Worship", "Hyms"]
-    let unitsSold = [57.0, 25.0, 18.0]
+    var targetMarkets:[String] = []
+    var unitsSold:[Double] = []
     var dataEntries: [ChartDataEntry] = []
     var item:[GeneralOppourtinityDetails]=[]
+    var graph:[Graph]=[]
 
     //MARK: - Life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupPieChart(dataPoints:targetMarkets , values:unitsSold )
-        setupTableview()
+        setupGrphData()
     }
 
+    
+        func setupGrphData(){
+            for x in 0 ..< graph.count{
+                
+                targetMarkets.append(graph[x].name ?? "")
+                unitsSold.append(Double(graph[x].percent ?? 0))
+
+            }
+            setupPieChart(dataPoints:targetMarkets , values:unitsSold )
+            setupTableview()
+    }
     
     //MARK: - SetupTableview
     
@@ -111,6 +121,7 @@ extension GeneralLiturgicalPageVC:UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:GeneralMarketingBreakdown = tableView.dequeueReusableCell(for: indexPath)
+        cell.approachStackview.isHidden = true
         cell.configureCell(item: item[indexPath.row])
         return cell
     }

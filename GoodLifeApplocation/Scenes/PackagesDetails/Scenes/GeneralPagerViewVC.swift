@@ -83,6 +83,9 @@ class GeneralPagerViewVC: ButtonBarPagerTabStripViewController {
          if data != nil{
         oppourtinityDetails =  try! JSONDecoder().decode(OppourtinityDetails.self, from: data ?? Data())
         second.item = oppourtinityDetails?.general?[1].items ?? []
+        second.footerTitle =  oppourtinityDetails?.general?[1].footer_title ?? ""
+        second.footerValue =  oppourtinityDetails?.general?[1].details ?? ""
+        second.graph =  oppourtinityDetails?.general?[1].graph ?? []
         second.itemInfo = "Marketing"
          }
         
@@ -90,6 +93,8 @@ class GeneralPagerViewVC: ButtonBarPagerTabStripViewController {
          if data != nil{
         oppourtinityDetails =  try! JSONDecoder().decode(OppourtinityDetails.self, from: data ?? Data())
         third.item = oppourtinityDetails?.general?[2].items ?? []
+        third.graph =  oppourtinityDetails?.general?[2].graph ?? []
+
         third.itemInfo = "Liturgical"
          }
         

@@ -205,6 +205,7 @@ extension SpeificBusinessPlanVC:UICollectionViewDelegate, UICollectionViewDataSo
         
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.headerIdentifier, for: indexPath) as! HeaderCollectionReusableView
         header.setup(sections[indexPath.section].title)
+        header.viewAllButton.isHidden = true
         return header
     }
     
