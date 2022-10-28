@@ -114,6 +114,8 @@ struct SpecificOppourtinity : Codable {
     let type:String?
     let title:String?
     let items:[SpecidfcOppourtinityDetails]?
+    let graph:[Graph]?
+
     
 }
 struct SpecidfcOppourtinityDetails:Codable{
