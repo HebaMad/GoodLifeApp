@@ -23,8 +23,10 @@ class SpeificBusinessPlanVC: UIViewController {
     
     //MARK: - Properties
     private var sections = BusinessPlanList.shared.AllCategories
-    let targetMarkets = ["Movie & Dinner", "Drive in Movie", "In house Movie"]
-    let unitsSold = [57.0, 25.0, 18.0]
+    var targetMarkets:[String] = []
+    var unitsSold:[Double] = []
+    var item:[SpecificOppourtinityDetails]=[]
+    var graph:[Graph]=[]
     var dataEntries: [ChartDataEntry] = []
     var itemNumber = 0
     var itemInfo: IndicatorInfo = "BusinessPlan"
@@ -33,9 +35,21 @@ class SpeificBusinessPlanVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupGrphData()
+        
+    }
+    
+    
+    func setupGrphData(){
+        for x in 0 ..< graph.count{
+            
+            targetMarkets.append(graph[x].name ?? "")
+            unitsSold.append(Double(graph[x].percent ?? 0))
+
+        }
         setupPieChart(dataPoints: targetMarkets, values: unitsSold)
         setupCollectionview()
-        
     }
     
     //MARK: - Collectionview
@@ -50,7 +64,9 @@ class SpeificBusinessPlanVC: UIViewController {
         businessPlanCollectionview.collectionViewLayout = createCompositionalLayout()
         businessPlanCollectionview.delegate = self
         businessPlanCollectionview.dataSource = self
-        noOfItem()
+        NotificationCenter.default.post(name: .init(rawValue: "containerHeight"), object: businessPlanCollectionview.bounds.height+300)
+
+//        noOfItem()
 
     }
 
@@ -104,10 +120,10 @@ class SpeificBusinessPlanVC: UIViewController {
         }
     
     private func noOfItem(){
-        for index in 0 ..< sections.count{
-            itemNumber+=sections[index].count
+        for index in 0 ..< item.count{
+            itemNumber+=item[index].childs?.count ?? 0
         }
-        collectionviewHeight.constant = CGFloat((itemNumber * 120) + (sections.count * 60))
+        collectionviewHeight.constant = CGFloat((itemNumber * 120) + (item.count * 60))
         NotificationCenter.default.post(name: .init(rawValue: "containerHeight"), object: scrollviewHeight.bounds.height+40)
 
         
@@ -170,32 +186,22 @@ class SpeificBusinessPlanVC: UIViewController {
 extension SpeificBusinessPlanVC:UICollectionViewDelegate, UICollectionViewDataSource{
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         
-        return sections.count
+        return item.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
-        return sections[section].count
-
+       return item[section].childs?.count ?? 0
     }
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+             
+               let cell:BusinessPlanCell = collectionView.dequeueReusableCell(for: indexPath)
+           cell.setupCell(items: (item[indexPath.section].childs?[indexPath.row])!)
+               return cell
      
-        switch sections[indexPath.section]{
-            
-        
-        case .MovieAndDinner(let items):
-            
-            let cell:BusinessPlanCell = collectionView.dequeueReusableCell(for: indexPath)
-            cell.setupCell(items: items[indexPath.row])
-            return cell
-        case .DriveInMovie(let items):
-            let cell:BusinessPlanCell = collectionView.dequeueReusableCell(for: indexPath)
-            cell.setupCell(items: items[indexPath.row])
-
-            return cell
-        }
+          
         
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -204,7 +210,7 @@ extension SpeificBusinessPlanVC:UICollectionViewDelegate, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.headerIdentifier, for: indexPath) as! HeaderCollectionReusableView
-        header.setup(sections[indexPath.section].title)
+        header.setup(item[indexPath.section].title ?? "")
         header.viewAllButton.isHidden = true
         return header
     }

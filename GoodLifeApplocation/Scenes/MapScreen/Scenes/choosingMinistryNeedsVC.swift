@@ -52,7 +52,8 @@ class choosingMinistryNeedsVC: UIViewController {
     }
     
     @objc func ministrySubscriptionDetails( _ sender:UIButton){
-        presenter.oppourtinityDetails(opportunityID: oppourtinity[sender.tag].id ?? 0)
+        print(oppourtinity[sender.tag].id ?? 0)
+        presenter.oppourtinityDetails(opportunityID: 1)
         presenter.delegate=self
        
 

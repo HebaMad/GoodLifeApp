@@ -22,20 +22,32 @@ class SpecificFinancialModel: UIViewController {
     
     //MARK: - Properties
     private var sections = BusinessPlanList.shared.AllCategories
-    let targetMarkets = ["Ticket Price", "Subscription", "Fee"]
-    let unitsSold = [57.0, 25.0, 18.0]
     var dataEntries: [ChartDataEntry] = []
     var itemNumber = 0
     var itemInfo: IndicatorInfo = "FinancialModel"
-    
+    var targetMarkets:[String] = []
+    var unitsSold:[Double] = []
+    var item:[SpecificOppourtinityDetails]=[]
+    var graph:[Graph]=[]
+
     
     //MARK: - Life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupGrphData()
+        
+    }
+    
+    func setupGrphData(){
+        for x in 0 ..< graph.count{
+            
+            targetMarkets.append(graph[x].name ?? "")
+            unitsSold.append(Double(graph[x].percent ?? 0))
+
+        }
         setupPieChart(dataPoints: targetMarkets, values: unitsSold)
         setupCollectionview()
-        
     }
     
     //MARK: - Collectionview
@@ -50,7 +62,9 @@ class SpecificFinancialModel: UIViewController {
         FinancialModelCollectionview.collectionViewLayout = createCompositionalLayout()
         FinancialModelCollectionview.delegate = self
         FinancialModelCollectionview.dataSource = self
-        noOfItem()
+        NotificationCenter.default.post(name: .init(rawValue: "containerHeight"), object: FinancialModelCollectionview.bounds.height+300)
+
+//        noOfItem()
 
     }
 
@@ -172,32 +186,23 @@ class SpecificFinancialModel: UIViewController {
 extension SpecificFinancialModel:UICollectionViewDelegate, UICollectionViewDataSource{
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         
-        return sections.count
+        return item.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
-        return sections[section].count
+        return item[section].childs?.count ?? 0
 
     }
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
      
-        switch sections[indexPath.section]{
-            
-        
-        case .MovieAndDinner(let items):
-            
             let cell:BusinessPlanCell = collectionView.dequeueReusableCell(for: indexPath)
-            cell.setupCell(items: items[indexPath.row])
+        cell.setupCell(items: (item[indexPath.section].childs?[indexPath.row])!)
             return cell
-        case .DriveInMovie(let items):
-            let cell:BusinessPlanCell = collectionView.dequeueReusableCell(for: indexPath)
-            cell.setupCell(items: items[indexPath.row])
-
-            return cell
-        }
+  
+       
         
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -206,7 +211,7 @@ extension SpecificFinancialModel:UICollectionViewDelegate, UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.headerIdentifier, for: indexPath) as! HeaderCollectionReusableView
-        header.setup(sections[indexPath.section].title)
+        header.setup(item[indexPath.section].title ?? "")
         header.viewAllButton.isHidden = true
         return header
     }

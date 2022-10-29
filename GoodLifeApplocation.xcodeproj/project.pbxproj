@@ -82,11 +82,11 @@
 		2768DED828A3F473004C6A5B /* AddTaskVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2768DED628A3F473004C6A5B /* AddTaskVC.xib */; };
 		2768DEDB28A3FE0A004C6A5B /* AddGoalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2768DED928A3FE0A004C6A5B /* AddGoalVC.swift */; };
 		2768DEDC28A3FE0A004C6A5B /* AddGoalVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2768DEDA28A3FE0A004C6A5B /* AddGoalVC.xib */; };
+		277336F5290DBB0C002932B2 /* SpecificWebsiteCompetitorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277336F3290DBB0C002932B2 /* SpecificWebsiteCompetitorCell.swift */; };
+		277336F6290DBB0C002932B2 /* SpecificWebsiteCompetitorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 277336F4290DBB0C002932B2 /* SpecificWebsiteCompetitorCell.xib */; };
 		277CF36628BD52A900F2874F /* AuthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277CF36528BD52A900F2874F /* AuthPresenter.swift */; };
 		277CF36828BD5AD700F2874F /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277CF36728BD5AD700F2874F /* MenuPresenter.swift */; };
 		277CF36A28BD5DAF00F2874F /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277CF36928BD5DAF00F2874F /* ProfilePresenter.swift */; };
-		27876AB828A440ED003A012A /* WebsiteCompetitorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27876AB628A440ED003A012A /* WebsiteCompetitorCell.swift */; };
-		27876AB928A440ED003A012A /* WebsiteCompetitorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27876AB728A440ED003A012A /* WebsiteCompetitorCell.xib */; };
 		27876ABB28A4484B003A012A /* SpecificWebsiteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27876ABA28A4484B003A012A /* SpecificWebsiteVC.swift */; };
 		27876ABD28A4DB64003A012A /* NSUIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27876ABC28A4DB64003A012A /* NSUIColor+Hex.swift */; };
 		27A32FD228BCA54100EF4AA2 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A32FD128BCA54100EF4AA2 /* UIViewControllerExtension.swift */; };
@@ -311,11 +311,11 @@
 		2768DED628A3F473004C6A5B /* AddTaskVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddTaskVC.xib; sourceTree = "<group>"; };
 		2768DED928A3FE0A004C6A5B /* AddGoalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalVC.swift; sourceTree = "<group>"; };
 		2768DEDA28A3FE0A004C6A5B /* AddGoalVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddGoalVC.xib; sourceTree = "<group>"; };
+		277336F3290DBB0C002932B2 /* SpecificWebsiteCompetitorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificWebsiteCompetitorCell.swift; sourceTree = "<group>"; };
+		277336F4290DBB0C002932B2 /* SpecificWebsiteCompetitorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpecificWebsiteCompetitorCell.xib; sourceTree = "<group>"; };
 		277CF36528BD52A900F2874F /* AuthPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPresenter.swift; sourceTree = "<group>"; };
 		277CF36728BD5AD700F2874F /* MenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
 		277CF36928BD5DAF00F2874F /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
-		27876AB628A440ED003A012A /* WebsiteCompetitorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsiteCompetitorCell.swift; sourceTree = "<group>"; };
-		27876AB728A440ED003A012A /* WebsiteCompetitorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebsiteCompetitorCell.xib; sourceTree = "<group>"; };
 		27876ABA28A4484B003A012A /* SpecificWebsiteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificWebsiteVC.swift; sourceTree = "<group>"; };
 		27876ABC28A4DB64003A012A /* NSUIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSUIColor+Hex.swift"; sourceTree = "<group>"; };
 		27A32FD128BCA54100EF4AA2 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
@@ -515,14 +515,14 @@
 		27876AB528A43F11003A012A /* XIB */ = {
 			isa = PBXGroup;
 			children = (
-				27876AB628A440ED003A012A /* WebsiteCompetitorCell.swift */,
-				27876AB728A440ED003A012A /* WebsiteCompetitorCell.xib */,
 				2704243B28A6C828002EF7B5 /* BusinessPlanCell.swift */,
 				2704243C28A6C828002EF7B5 /* BusinessPlanCell.xib */,
 				2765D5F928F4083C008835D9 /* GeneralFinancialCell.swift */,
 				2765D5FA28F4083C008835D9 /* GeneralFinancialCell.xib */,
 				2765D5FD28F40D66008835D9 /* GeneralMarketingBreakdown.swift */,
 				2765D5FE28F40D66008835D9 /* GeneralMarketingBreakdown.xib */,
+				277336F3290DBB0C002932B2 /* SpecificWebsiteCompetitorCell.swift */,
+				277336F4290DBB0C002932B2 /* SpecificWebsiteCompetitorCell.xib */,
 			);
 			path = XIB;
 			sourceTree = "<group>";
@@ -1155,12 +1155,12 @@
 				2765D5FC28F4083C008835D9 /* GeneralFinancialCell.xib in Resources */,
 				27CB2099289FC79700E63694 /* SpecificPagerVC.xib in Resources */,
 				27C9AEBA288EF61200FA584A /* DonationVC.xib in Resources */,
+				277336F6290DBB0C002932B2 /* SpecificWebsiteCompetitorCell.xib in Resources */,
 				27C9AE8A288D51FD00FA584A /* OnBoardingFrame4.xib in Resources */,
 				2767A28828904DF800DF34D1 /* DonationFirstFrame.xib in Resources */,
 				27CB2095289FC6CC00E63694 /* GeneralPagerViewVC.xib in Resources */,
 				27A7377C2891D16100FD8AD9 /* SubscriptionCollectionViewCell.xib in Resources */,
 				27C9AE2E288D38E900FA584A /* Main.storyboard in Resources */,
-				27876AB928A440ED003A012A /* WebsiteCompetitorCell.xib in Resources */,
 				27C9AE5A288D3CB500FA584A /* Inter-ThinItalic-BETA.ttf in Resources */,
 				27C9AE79288D470600FA584A /* OnBoardingVC.xib in Resources */,
 				2767A2992890A48600DF34D1 /* FilterVC.xib in Resources */,
@@ -1295,6 +1295,7 @@
 				27B54D9B28BAC0F10074A6A1 /* SignUserTarget.swift in Sources */,
 				27B8C8ED28A14C320011B039 /* MapVC.swift in Sources */,
 				27A737622891403000FD8AD9 /* UIViewFromNib.swift in Sources */,
+				277336F5290DBB0C002932B2 /* SpecificWebsiteCompetitorCell.swift in Sources */,
 				2704245528A95EAD002EF7B5 /* AllCategoriesVC.swift in Sources */,
 				27B8C8F928A1825D0011B039 /* ActivityCell.swift in Sources */,
 				2767A271288F3CD600DF34D1 /* DonationThirdFrame.swift in Sources */,
@@ -1358,7 +1359,6 @@
 				2704243D28A6C828002EF7B5 /* BusinessPlanCell.swift in Sources */,
 				27F7363928C4FD4100E804B5 /* resourceSubTopicCell.swift in Sources */,
 				2765FB3C28FC7ACE00473198 /* UILableDesignable.swift in Sources */,
-				27876AB828A440ED003A012A /* WebsiteCompetitorCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

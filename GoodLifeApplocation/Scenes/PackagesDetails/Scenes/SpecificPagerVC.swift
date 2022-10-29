@@ -9,13 +9,27 @@ import UIKit
 import XLPagerTabStrip
 
 class SpecificPagerVC: ButtonBarPagerTabStripViewController{
-
+    
+    //MARK: - Propeerties
+    
+    var oppourtinityID=0
+    var oppourtinityDetails:OppourtinityDetails?
+    
+    //MARK: - Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        setupPagerTab()
+        
+        let data = UserDefaults.standard.object(forKey: "oppourtinityID") as? Data;
+        if data != nil{
+            oppourtinityDetails =  try! JSONDecoder().decode(OppourtinityDetails.self, from: data ?? Data())
+            setupPagerTab()
+            
+        }
     }
-
+    
+    //MARK: - setup pager Tab Strip
+    
     private func setupPagerTab(){
         settings.style.buttonBarBackgroundColor = .blue
         settings.style.buttonBarItemBackgroundColor = .clear
@@ -42,18 +56,36 @@ class SpecificPagerVC: ButtonBarPagerTabStripViewController{
         
         
         let first = SpecificFinancialModel()
-        first.itemInfo = "FinancialModel"
         
+        let data = UserDefaults.standard.object(forKey: "oppourtinityID") as? Data;
+        if data != nil{
+            oppourtinityDetails =  try! JSONDecoder().decode(OppourtinityDetails.self, from: data ?? Data())
+            first.item = oppourtinityDetails?.specific?[0].items ?? []
+            first.graph =  oppourtinityDetails?.specific?[0].graph ?? []
+            first.itemInfo = "FinancialModel"
+            
+        }
         
         let second = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SpecificWebsiteVC") as! SpecificWebsiteVC
-        second.itemInfo = "Website"
+        if data != nil{
+            oppourtinityDetails =  try! JSONDecoder().decode(OppourtinityDetails.self, from: data ?? Data())
+            second.item = oppourtinityDetails?.specific?[1].items ?? []
+            second.topCompetitorTitle =  oppourtinityDetails?.specific?[1].footer_title ?? ""
+            second.topCompetitorValue =  oppourtinityDetails?.specific?[1].details ?? ""
+            second.itemInfo = "Website"
+        }
         
         let third = SpeificBusinessPlanVC()
-        
-        third.itemInfo = "BusinessPlan"
+        if data != nil{
+            oppourtinityDetails =  try! JSONDecoder().decode(OppourtinityDetails.self, from: data ?? Data())
+            third.item = oppourtinityDetails?.specific?[2].items ?? []
+            third.graph =  oppourtinityDetails?.specific?[2].graph ?? []
+            third.itemInfo = "BusinessPlan"
+            
+        }
         
         
         return [first, second,third]
     }
-
+    
 }

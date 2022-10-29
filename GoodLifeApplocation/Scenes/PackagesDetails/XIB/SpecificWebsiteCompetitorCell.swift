@@ -1,14 +1,13 @@
 //
-//  WebsiteCompetitorCell.swift
+//  SpecificWebsiteCompetitorCell.swift
 //  GoodLifeApplocation
 //
-//  Created by heba isaa on 10/08/2022.
+//  Created by heba isaa on 29/10/2022.
 //
 
 import UIKit
 
-class WebsiteCompetitorCell: UITableViewCell, NibLoadableView {
-    
+class SpecificWebsiteCompetitorCell: UICollectionViewCell , NibLoadableView{
     //MARK: - Outlet
     
     @IBOutlet weak var websiteNameText: UILabel!
@@ -22,10 +21,9 @@ class WebsiteCompetitorCell: UITableViewCell, NibLoadableView {
         // Initialization code
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    func configureCell(index:Int,ViewModel:OppurtinityDetails){
+        websiteInfo.text = ViewModel.details?.html2Attributed?.string
+        modelNumber.text = "Model" + " " + "#\(index)"
         
-        // Configure the view for the selected state
     }
-    
 }

@@ -62,6 +62,7 @@ struct OppourtinityDetails : Codable {
     let interest:Int?
     let title:String?
     let sub_title:String?
+    let websites:String?
     let models:String?
     let plans:String?
     let image:String?
@@ -113,12 +114,14 @@ struct SpecificOppourtinity : Codable {
     
     let type:String?
     let title:String?
-    let items:[SpecidfcOppourtinityDetails]?
+    let footer_title:String?
+    let details:String?
+    let items:[SpecificOppourtinityDetails]?
     let graph:[Graph]?
 
     
 }
-struct SpecidfcOppourtinityDetails:Codable{
+struct SpecificOppourtinityDetails:Codable{
     
     let title:String?
     let url:String?

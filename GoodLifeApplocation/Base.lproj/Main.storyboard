@@ -792,7 +792,7 @@ Night</string>
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Byj-Fb-72r">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="830"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="820"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AHY-CY-6dh" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
                                                 <rect key="frame" x="12" y="12" width="390" height="150"/>
@@ -847,54 +847,29 @@ Night</string>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="138" estimatedRowHeight="138" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="P94-7V-raQ">
-                                                <rect key="frame" x="12" y="174" width="390" height="648"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MCl-JG-0OH">
+                                                <rect key="frame" x="12" y="174" width="390" height="638"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="648" id="4Jt-SE-WqC"/>
+                                                    <constraint firstAttribute="height" constant="638" id="We5-8y-rPw"/>
                                                 </constraints>
-                                                <view key="tableHeaderView" contentMode="scaleToFill" id="NAD-8K-6sg">
-                                                    <rect key="frame" x="0.0" y="0.0" width="390" height="64"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Competitor Websites" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VdI-Uu-Lyj">
-                                                            <rect key="frame" x="16" y="8" width="374" height="56"/>
-                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="20"/>
-                                                            <color key="textColor" name="button"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="VdI-Uu-Lyj" secondAttribute="trailing" id="HRX-HM-PNv"/>
-                                                        <constraint firstItem="VdI-Uu-Lyj" firstAttribute="leading" secondItem="NAD-8K-6sg" secondAttribute="leading" constant="16" id="Og8-IW-34d"/>
-                                                        <constraint firstAttribute="bottom" secondItem="VdI-Uu-Lyj" secondAttribute="bottom" id="PiC-k1-IQ5"/>
-                                                        <constraint firstItem="VdI-Uu-Lyj" firstAttribute="top" secondItem="NAD-8K-6sg" secondAttribute="top" constant="8" id="TpU-bo-h7L"/>
-                                                    </constraints>
-                                                </view>
-                                                <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="XHa-wE-cAt">
-                                                        <rect key="frame" x="0.0" y="108.5" width="390" height="138"/>
-                                                        <autoresizingMask key="autoresizingMask"/>
-                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XHa-wE-cAt" id="mbm-g2-PrT">
-                                                            <rect key="frame" x="0.0" y="0.0" width="390" height="138"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uba-Hr-ocH">
+                                                    <size key="itemSize" width="128" height="128"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="E8u-3x-C6H">
+                                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="I2z-YW-zQt">
+                                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                                             <autoresizingMask key="autoresizingMask"/>
-                                                        </tableViewCellContentView>
-                                                    </tableViewCell>
-                                                </prototypes>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="8"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" systemColor="systemGray4Color"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </tableView>
+                                                        </collectionViewCellContentView>
+                                                    </collectionViewCell>
+                                                </cells>
+                                            </collectionView>
                                         </subviews>
                                         <directionalEdgeInsets key="directionalLayoutMargins" top="12" leading="12" bottom="8" trailing="12"/>
                                     </stackView>
@@ -919,15 +894,14 @@ Night</string>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="competitorWebsiteTableview" destination="P94-7V-raQ" id="Atb-y0-de2"/>
+                        <outlet property="competitorWebsiteTableview" destination="MCl-JG-0OH" id="Fp7-Wd-qPq"/>
                         <outlet property="scrollviewHeight" destination="ICX-dD-HLX" id="2UG-Ow-Lm3"/>
-                        <outlet property="tableHeight" destination="4Jt-SE-WqC" id="dDf-dc-I3l"/>
                         <outlet property="topCompetitorText" destination="VrZ-Bb-bXe" id="XHd-T6-zQm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6OT-bo-5R1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4899" y="82"/>
+            <point key="canvasLocation" x="4898.5507246376819" y="81.696428571428569"/>
         </scene>
         <!--ProfileVC-->
         <scene sceneID="gsb-Mo-wX4">

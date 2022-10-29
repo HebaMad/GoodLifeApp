@@ -11,15 +11,16 @@ class BusinessPlanCell: UICollectionViewCell, NibLoadableView {
 
     @IBOutlet weak var titleTxt: UILabel!
     @IBOutlet weak var informationTxt: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
     }
 
     
-    func setupCell(items:BusinessPlanData){
-        titleTxt.text = items.title
-        informationTxt.text = items.information
+    func setupCell(items:OppurtinityDetails){
+        titleTxt.text = items.title?.html2Attributed?.string
+        informationTxt.text = items.details?.html2Attributed?.string
 
     }
 }
