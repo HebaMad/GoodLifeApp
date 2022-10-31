@@ -12,7 +12,7 @@ enum MenuApiTarget:TargetType{
     
     case VolunteerOppourtinity(title:String,location:String,date:String,time:String,details:String)
     case createIdea(title:String,details:String,time_commitment:String,monthly_revenue:String)
-    case createFeedback(title:String,review:String,rate:Int,img:Data)
+    case createFeedback(opportunity_id:String,review:String,rate:Int,img:Data)
     case getWorthyCauses
     case getSubWorthyCauses(worthycauseId:Int)
     case makeDonation(worthycauseId:Int,amount:String)
@@ -56,9 +56,9 @@ enum MenuApiTarget:TargetType{
         case .VolunteerOppourtinity,.createIdea,.makeDonation:
             return .requestParameters(parameters: param, encoding: URLEncoding.httpBody)
             
-        case .createFeedback(let title,let review,let rate,let img):
+        case .createFeedback(let opportunity_id,let review,let rate,let img):
             let pngData = MultipartFormData(provider: .data(img), name: "file", fileName: "files", mimeType: "image.jpg")
-              let feedbackTitle = MultipartFormData(provider: .data(title.data(using: .utf8)!), name: "title")
+              let feedbackTitle = MultipartFormData(provider: .data(opportunity_id.data(using: .utf8)!), name: "opportunity_id")
                let feedbackReview = MultipartFormData(provider: .data(review.data(using: .utf8)!), name: "review")
                let feedbackRate = MultipartFormData(provider: .data("\(rate)".data(using: .utf8)!), name: "rate")
 

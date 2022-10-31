@@ -42,6 +42,7 @@
 		2734CD8528913E3A00E6964F /* GoodLifeApplocation.xcworkspace in Resources */ = {isa = PBXBuildFile; fileRef = 27C9AE68288D427600FA584A /* GoodLifeApplocation.xcworkspace */; };
 		273D3A9E28B0CED000860702 /* choosingMinistryNeedsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273D3A9C28B0CED000860702 /* choosingMinistryNeedsVC.swift */; };
 		273D3A9F28B0CED000860702 /* choosingMinistryNeedsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 273D3A9D28B0CED000860702 /* choosingMinistryNeedsVC.xib */; };
+		2756BB07290FB80300E0304C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2756BB06290FB80300E0304C /* GoogleService-Info.plist */; };
 		27594D1E28A010CE00F4DDC3 /* GeneralMarketingPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27594D1C28A010CE00F4DDC3 /* GeneralMarketingPageVC.swift */; };
 		27594D2228A017D600F4DDC3 /* GeneralLiturgicalPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27594D2028A017D600F4DDC3 /* GeneralLiturgicalPageVC.swift */; };
 		2764D6C728E2DCE800AC7F73 /* ResourceLessons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2764D6C528E2DCE800AC7F73 /* ResourceLessons.swift */; };
@@ -271,6 +272,7 @@
 		2710A298289AF485009BCE60 /* PastVentures.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PastVentures.xib; sourceTree = "<group>"; };
 		273D3A9C28B0CED000860702 /* choosingMinistryNeedsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = choosingMinistryNeedsVC.swift; sourceTree = "<group>"; };
 		273D3A9D28B0CED000860702 /* choosingMinistryNeedsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = choosingMinistryNeedsVC.xib; sourceTree = "<group>"; };
+		2756BB06290FB80300E0304C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		27594D1C28A010CE00F4DDC3 /* GeneralMarketingPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralMarketingPageVC.swift; sourceTree = "<group>"; };
 		27594D2028A017D600F4DDC3 /* GeneralLiturgicalPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralLiturgicalPageVC.swift; sourceTree = "<group>"; };
 		2764D6C528E2DCE800AC7F73 /* ResourceLessons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceLessons.swift; sourceTree = "<group>"; };
@@ -682,6 +684,7 @@
 				27C9AE2F288D38EA00FA584A /* Assets.xcassets */,
 				27C9AE31288D38EA00FA584A /* LaunchScreen.storyboard */,
 				27C9AE34288D38EA00FA584A /* Info.plist */,
+				2756BB06290FB80300E0304C /* GoogleService-Info.plist */,
 			);
 			path = GoodLifeApplocation;
 			sourceTree = "<group>";
@@ -1093,6 +1096,7 @@
 				27F4B15428B8BD90003365A6 /* ProfileSettingVC.xib in Resources */,
 				2765FB3A28FC6DFB00473198 /* NotificationVC.xib in Resources */,
 				2710A28E289A5C3C009BCE60 /* TaskCell.xib in Resources */,
+				2756BB07290FB80300E0304C /* GoogleService-Info.plist in Resources */,
 				27C9AE63288D3CB500FA584A /* Inter-MediumItalic.ttf in Resources */,
 				27C9AE61288D3CB500FA584A /* Inter-SemiBoldItalic.ttf in Resources */,
 				27CB2072289C1B3F00E63694 /* ResourceCell.xib in Resources */,
@@ -1507,7 +1511,7 @@
 				CODE_SIGN_ENTITLEMENTS = GoodLifeApplocation/GoodLifeApplocation.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = H74677C27V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GoodLifeApplocation/Info.plist;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We want to use your location to see all activites linked to your site";
@@ -1517,7 +1521,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1540,7 +1544,7 @@
 				CODE_SIGN_ENTITLEMENTS = GoodLifeApplocation/GoodLifeApplocation.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = H74677C27V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GoodLifeApplocation/Info.plist;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We want to use your location to see all activites linked to your site";
@@ -1550,7 +1554,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

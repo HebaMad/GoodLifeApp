@@ -53,7 +53,7 @@ class choosingMinistryNeedsVC: UIViewController {
     
     @objc func ministrySubscriptionDetails( _ sender:UIButton){
         print(oppourtinity[sender.tag].id ?? 0)
-        presenter.oppourtinityDetails(opportunityID: 1)
+        presenter.oppourtinityDetails(opportunityID: oppourtinity[sender.tag].id ?? 0)
         presenter.delegate=self
        
 
@@ -136,9 +136,14 @@ extension choosingMinistryNeedsVC:UICollectionViewDataSource{
 
         cell.configureCell(viewModel: oppourtinity[indexPath.row])
         
-        cell.tag=indexPath.row
-        cell.nextBtn.addTarget(self, action: #selector(ministrySubscriptionDetails), for: .touchUpInside)
+//        cell.tag=indexPath.row
+//        cell.nextBtn.addTarget(self, action: #selector(ministrySubscriptionDetails), for: .touchUpInside)
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        presenter.oppourtinityDetails(opportunityID: oppourtinity[indexPath.row].id ?? 0)
+        presenter.delegate=self
     }
 }
       //MARK: - conform to UICollectionViewDelegateFlowLayout protocol
@@ -181,7 +186,7 @@ extension choosingMinistryNeedsVC:HomeDelegate{
     func getCategoriesFiltered(categories: CategoriesFiltering) {}
     
     func getOppourtinity(categories: Oppourtinity) {
-       
+        print(categories.items ?? [])
             self.oppourtinity = categories.items ?? []
             self.MinistrySubscriptionCollectionview.reloadData()
 

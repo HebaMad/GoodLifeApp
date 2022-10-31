@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -111,6 +110,7 @@
                                                     <subviews>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Category" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9iF-Rn-LSD" customClass="UITextFieldDataPicker" customModule="GoodLifeApplocation" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
+                                                            <color key="tintColor" name="TXT"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
                                                             <userDefinedRuntimeAttributes>
@@ -240,9 +240,6 @@
     <designables>
         <designable name="9iF-Rn-LSD">
             <size key="intrinsicContentSize" width="59.5" height="18.5"/>
-        </designable>
-        <designable name="lqA-gQ-3sH">
-            <size key="intrinsicContentSize" width="92" height="18.5"/>
         </designable>
     </designables>
     <resources>

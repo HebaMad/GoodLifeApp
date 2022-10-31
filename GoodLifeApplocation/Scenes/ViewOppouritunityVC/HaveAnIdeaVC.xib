@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -34,6 +33,13 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JVl-rK-03l">
+                    <rect key="frame" x="0.0" y="682" width="414" height="214"/>
+                    <color key="backgroundColor" name="bg3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="214" id="TfA-S9-9a8"/>
+                    </constraints>
+                </view>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="gVd-g4-DeW">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                     <subviews>
@@ -54,7 +60,7 @@
                                             <state key="normal" backgroundImage="chevron.backward" catalog="system"/>
                                         </button>
                                     </subviews>
-                                    <color key="backgroundColor" name="BgColor"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="80" id="JsN-t8-myJ"/>
                                         <constraint firstItem="gcE-CT-R6c" firstAttribute="leading" secondItem="Rls-cN-Le4" secondAttribute="leading" constant="18" id="qY8-K3-Jaw"/>
@@ -310,14 +316,17 @@ ministry idea??</string>
                 </scrollView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" name="bg3"/>
+            <color key="backgroundColor" name="BgColor"/>
             <constraints>
+                <constraint firstItem="JVl-rK-03l" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="1hu-MQ-vGO"/>
+                <constraint firstItem="JVl-rK-03l" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="2of-R4-122"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gVd-g4-DeW" secondAttribute="trailing" id="MHC-kj-t8d"/>
+                <constraint firstAttribute="bottom" secondItem="JVl-rK-03l" secondAttribute="bottom" id="Yg8-pZ-moC"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="gVd-g4-DeW" secondAttribute="bottom" id="nLd-Ym-gyA"/>
                 <constraint firstItem="gVd-g4-DeW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="uGF-aL-TaH"/>
                 <constraint firstItem="gVd-g4-DeW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="we0-8m-uQp"/>
             </constraints>
-            <point key="canvasLocation" x="139" y="110"/>
+            <point key="canvasLocation" x="137.68115942028987" y="109.82142857142857"/>
         </view>
     </objects>
     <designables>

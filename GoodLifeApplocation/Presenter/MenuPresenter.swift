@@ -60,8 +60,8 @@ class MenuPresenter:NSObject{
             
         }
     }
-     func createFeedback(title:String,review:String,rate:Int,img:Data){
-        MenuManager.shared.createFeedback(title: title, review: review, rate: rate, img: img) { Response in
+     func createFeedback(id:String,review:String,rate:Int,img:Data){
+         MenuManager.shared.createFeedback(id: id, review: review, rate: rate, img: img) { Response in
             switch Response{
                 
             case let .success(response):

@@ -46,7 +46,7 @@ class SpecificWebsiteVC: UIViewController {
         competitorWebsiteTableview.collectionViewLayout = createCompositionalLayout()
         competitorWebsiteTableview.delegate = self
         competitorWebsiteTableview.dataSource = self
-        NotificationCenter.default.post(name: .init(rawValue: "containerHeight"), object: competitorWebsiteTableview.bounds.height+300)
+        NotificationCenter.default.post(name: .init(rawValue: "containerHeight"), object: competitorWebsiteTableview.bounds.height+200)
 
     }
    

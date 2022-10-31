@@ -20,11 +20,10 @@ class VerificationVC: UIViewController {
 
         bindTexField()
     }
+     
+    }
 
 
-
-
-}
 extension VerificationVC{
     func bindTexField(){
         codeTxtField.addTarget(self, action: #selector(TxtFieldWasWrittenValue), for: .editingChanged)
@@ -32,7 +31,20 @@ extension VerificationVC{
 }
 extension VerificationVC{
     @objc func  TxtFieldWasWrittenValue(){
+        guard let code = codeTxtField.text, code.count > 0 else { return }
+        
+
+        let attributedString = NSMutableAttributedString(string: code)
+        attributedString.addAttribute(NSAttributedString.Key.kern, value: CGFloat(80), range: NSRange(location: 0, length: attributedString.length))
+        self.codeTxtField.attributedText = attributedString
+        
+        
+        if code.count == 4{
+            self.view.endEditing(true)
+
+            
         NotificationCenter.default.post(name: .init(rawValue: "onBoarding"), object: [codeTxtField.text])
 
     }
+}
 }
