@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import SDWebImage
 class ProfileVC: UIViewController {
 
     @IBOutlet weak var backBtn: UIButton!
@@ -98,6 +98,7 @@ extension ProfileVC:ProfileDelegate{
     
     func getUserData(data: userProfile) {
         self.venture = data.ventures ?? []
+        userImg.sd_setImage(with: URL(string:data.image_profile ?? "" ))
         print( self.venture.count)
         venturesTableview.reloadData()
 

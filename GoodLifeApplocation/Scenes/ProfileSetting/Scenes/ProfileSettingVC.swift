@@ -82,19 +82,15 @@ extension ProfileSettingVC{
             self.navigationController?.pushViewController(vc, animated: true)
             
         case logoutBtn:
-            self.showAlertPopUp(title: "", message: "Do you want to logout?") {
-                do{
-                    self.presenter.logout()
-//                    try KeychainWrapper.set(value: "" , key: email )
-//                    AppData.email = email
+            
+            self.showAlertPopUp(title: "Notice", message: "Do you want to logout?", buttonTitle1: "Ok", buttonTitle2: "Cancel", buttonTitle1Style: .default, buttonTitle2Style: .cancel) {
+                self.presenter.logout()
 
-                }catch let error {
-   
-            }
-                
             } action2: {
                 
             }
+
+     
             
         case backBtn:
             navigationController?.popViewController(animated: true)

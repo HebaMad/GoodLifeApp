@@ -56,9 +56,22 @@ class ContactUsVC: UIViewController {
                navigationController?.popViewController(animated: true)
            case sendBtn:
                self.presnter.sendContactMsg(msg: contatMsgTextView.text)
+               self.presnter.delegate = self
            default:
                print(".")
            }
         
     }
+}
+
+
+extension ContactUsVC:ProfileDelegate{
+    func showAlerts(title: String, message: String) {
+        self.showAlert(title: title, message: message)
+        contatMsgTextView.text = ""
+    }
+    func getUserData(data: userProfile) { }
+    func getUrlForWebPages(data: termsAndConditions) {}
+    
+    
 }

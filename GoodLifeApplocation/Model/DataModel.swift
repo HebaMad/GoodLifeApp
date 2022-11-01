@@ -236,22 +236,25 @@ struct FeedbackCreation:Decodable{
 }
 
 struct Ventures:Codable{
-    
-    
-    let id :Int?
+    let id:Int?
     let category:String?
+    let type:String?
     let work_type:String?
-    let amount_raise :Int?
-    let need_type_id :Int?
-    let interest:String?
+    let level_of_difficulty:String?
+    let amount_of_technology:String?
+    let amount_raise:Int?
+    let need_type_id:Int?
+    let interest:Int?
     let title:String?
-    let image:String?
-    let rate :Int?
-    let created_at :String?
+    let sub_title:String?
+    let websites:[String]?
     let models:[String]?
     let plans:[String]?
-    let websites:[String]?
-    let reviews_count :Int?
+    let image:String?
+    let created_at:String?
+    let opportunity_match:Int?
+    let rate:Int?
+    let reviews_count:Int?
 
 
 }

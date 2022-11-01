@@ -24,7 +24,11 @@ class TermsAndConditions: UIViewController {
         SVProgressHUD.show()
         setupWebview(URl: url)
     }
-
+    
+    @IBAction func backBtn(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
 
 }
 

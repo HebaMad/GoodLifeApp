@@ -9,7 +9,7 @@ import UIKit
 
 class VolunteerOpportunityVC: UIViewController {
     //MARK: - Outlet
-
+    
     @IBOutlet weak var eventTimeTxt: DatePickingTextField!
     @IBOutlet weak var eventDayTxt: DatePickingTextField!
     @IBOutlet weak var eventDescriptionTxt: UITextView!
@@ -41,6 +41,7 @@ class VolunteerOpportunityVC: UIViewController {
         eventDayTxt.setDatePickerMode(mode: .date)
         
     }
+    
 }
      //MARK: - Binding
 
