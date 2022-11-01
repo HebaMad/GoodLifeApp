@@ -22,10 +22,9 @@ extension Networkable{
             switch result {
             
             case let .success(response):
-                print(response.request?.method)
-                print(response.request?.urlRequest)
-                print(response.request?.headers)
                 print(response.request?.httpBody)
+         
+
 
                 do {
                     print(String(data: response.data, encoding: .utf8))

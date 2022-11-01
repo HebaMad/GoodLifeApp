@@ -253,7 +253,7 @@ extension GoalAndBenchmarkVC:Storyboarded{
 extension GoalAndBenchmarkVC:DashboardDelegate{
     
     func getNotification(data: AllNotifiaction) { }
-    func getCategories(data: [Categories]) {}
+    func getCategories(data: DahboardCategory) {}
     func getResource(data: [Resources]) {}
     func getMyTask(data: DashboardTask) {}
     func getResourceDetails(data: ResourceDetails) {}

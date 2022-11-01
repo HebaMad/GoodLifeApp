@@ -118,8 +118,8 @@ class AuthPresenter:NSObject{
         }
     }
     
-    func login(mobile:String){
-        SignUserManager.shared.login(mobile: mobile) { Response in
+    func login(mobile:String,token:String){
+        SignUserManager.shared.login(mobile: mobile, token: token) { Response in
       
             switch Response{
                 

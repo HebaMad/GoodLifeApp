@@ -87,7 +87,8 @@ extension AllResourceVC:DashboardDelegate{
     
     func showAlerts(title: String, message: String) {}
     
-    func getCategories(data: [Categories]) {}
+    func getCategories(data: DahboardCategory) {}
+
     
     func getResource(data: [Resources]) {}
     

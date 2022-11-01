@@ -100,8 +100,9 @@ extension AllCategoriesVC:DashboardDelegate{
     
     // With  implementaion
     
-    func getCategories(data: [Categories]) {
-        categories=data
+    func getCategories(data: DahboardCategory) {
+
+        categories=data.categories ?? []
     }
     
     func getMyGoalAndBenchmark(data: GoalsAndBenchmark) {

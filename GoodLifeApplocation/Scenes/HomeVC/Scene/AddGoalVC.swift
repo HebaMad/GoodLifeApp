@@ -109,8 +109,9 @@ extension AddGoalVC:DashboardDelegate{
         clearData()
     }
     
-    func getCategories(data: [Categories]) {
-        self.categories = data
+    func getCategories(data: DahboardCategory) {
+
+        self.categories = data.categories ?? []
     }
   
     

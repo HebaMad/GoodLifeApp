@@ -13,7 +13,8 @@ protocol SignUserNetworkable:Networkable  {
     func resendCode(mobile:String,completion: @escaping (Result<BaseResponse<startFundRaise>, Error>)-> ())
     func checkCode(mobile:String,code:String,completion: @escaping (Result<BaseResponse<userProfile>, Error>)-> ())
     func startFundRaise(latitude:String,longitude:String,work_type:String,amount_raise:Float,completion: @escaping (Result<BaseResponse<startFundRaise>, Error>)-> ())
-    func login(mobile:String,completion: @escaping (Result<BaseResponse<userProfile>, Error>)-> ())
+    func login(mobile:String,token:String,completion: @escaping (Result<BaseResponse<userProfile>, Error>)-> ())
+    
     
 }
 class SignUserManager:SignUserNetworkable{
@@ -42,8 +43,8 @@ class SignUserManager:SignUserNetworkable{
     func startFundRaise(latitude: String, longitude: String, work_type: String, amount_raise: Float, completion: @escaping (Result<BaseResponse<startFundRaise>, Error>) -> ()) {
         request(target: .startFundRaise(latitude: latitude, longitude: longitude, work_type: work_type, amount_raise: amount_raise), completion: completion)
     }
-    func login(mobile: String, completion: @escaping (Result<BaseResponse<userProfile>, Error>) -> ()) {
-        request(target: .login(mobile: mobile), completion: completion)
+    func login(mobile: String,token:String ,completion: @escaping (Result<BaseResponse<userProfile>, Error>) -> ()) {
+        request(target: .login(mobile: mobile,token: token), completion: completion)
     }
     
 

@@ -269,6 +269,7 @@ struct Categories:Codable{
     
 }
 struct DahboardCategory:Decodable{
+    let notificationsCount:Int?
     let categories:[Categories]?
 }
 

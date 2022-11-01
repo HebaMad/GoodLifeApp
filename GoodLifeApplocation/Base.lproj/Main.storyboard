@@ -647,13 +647,13 @@ Manager</string>
                                         <rect key="frame" x="358" y="0.0" width="40" height="40"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ads-Ue-rxg" customClass="UILabelDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                                <rect key="frame" x="22" y="-6" width="14" height="20"/>
+                                                <rect key="frame" x="18" y="-6" width="30" height="30"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="20" id="bWb-F6-CLN"/>
-                                                    <constraint firstAttribute="width" constant="14" id="wj6-bi-fTl"/>
+                                                    <constraint firstAttribute="height" constant="30" id="bWb-F6-CLN"/>
+                                                    <constraint firstAttribute="width" constant="30" id="wj6-bi-fTl"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                 <color key="textColor" systemColor="systemRedColor"/>
                                                 <nil key="highlightedColor"/>
                                                 <userDefinedRuntimeAttributes>
@@ -681,7 +681,7 @@ Manager</string>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="Vce-EC-hch" firstAttribute="centerX" secondItem="jXP-aR-iMt" secondAttribute="centerX" id="9Yx-ZI-KMj"/>
-                                            <constraint firstAttribute="trailing" secondItem="Ads-Ue-rxg" secondAttribute="trailing" constant="4" id="UIA-80-F0g"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ads-Ue-rxg" secondAttribute="trailing" constant="-8" id="UIA-80-F0g"/>
                                             <constraint firstItem="Ads-Ue-rxg" firstAttribute="top" secondItem="jXP-aR-iMt" secondAttribute="top" constant="-6" id="Wyc-hg-NWT"/>
                                             <constraint firstItem="Vce-EC-hch" firstAttribute="centerY" secondItem="jXP-aR-iMt" secondAttribute="centerY" id="cAn-AU-GAz"/>
                                             <constraint firstItem="Vce-EC-hch" firstAttribute="leading" secondItem="jXP-aR-iMt" secondAttribute="leading" constant="8" id="ght-kJ-d7T"/>
@@ -773,6 +773,7 @@ Night</string>
                         <outlet property="elementCollectionView" destination="X87-TY-IrI" id="gQb-V5-SGj"/>
                         <outlet property="menuBtn" destination="0Nl-j8-qOo" id="o2r-7M-Z7v"/>
                         <outlet property="notificationBtn" destination="Vce-EC-hch" id="Qq7-aN-bWJ"/>
+                        <outlet property="notificationNumber" destination="Ads-Ue-rxg" id="KKB-hg-Zvc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xkO-qj-a2V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -932,22 +933,22 @@ Night</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nQc-zy-erF" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                <rect key="frame" x="20" y="116" width="374" height="142"/>
+                                <rect key="frame" x="28" y="116" width="358" height="142"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GWF-Hb-hcb" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                        <rect key="frame" x="12" y="76" width="350" height="42"/>
+                                        <rect key="frame" x="12" y="76" width="334" height="42"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpp-Tb-vi3">
-                                                <rect key="frame" x="0.0" y="0.0" width="350" height="42"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="334" height="42"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KsP-od-SSb">
-                                                        <rect key="frame" x="8" y="8" width="304" height="26"/>
+                                                        <rect key="frame" x="8" y="8" width="288" height="26"/>
                                                         <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="14"/>
                                                         <color key="textColor" name="Color"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="uEA-ry-n61">
-                                                        <rect key="frame" x="312" y="10.5" width="30" height="21"/>
+                                                        <rect key="frame" x="296" y="10.5" width="30" height="21"/>
                                                         <color key="tintColor" name="Color"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="30" id="7cw-RT-rIr"/>
@@ -957,7 +958,7 @@ Night</string>
                                                 <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TTM-ty-6V3">
-                                                <rect key="frame" x="0.0" y="0.0" width="350" height="42"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="334" height="42"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             </button>
@@ -991,7 +992,6 @@ Night</string>
                                 <constraints>
                                     <constraint firstItem="GWF-Hb-hcb" firstAttribute="leading" secondItem="nQc-zy-erF" secondAttribute="leading" constant="12" id="5Su-vI-Sa5"/>
                                     <constraint firstAttribute="trailing" secondItem="GWF-Hb-hcb" secondAttribute="trailing" constant="12" id="McE-7k-JL6"/>
-                                    <constraint firstAttribute="width" constant="374" id="NGu-gj-ixb"/>
                                     <constraint firstItem="GWF-Hb-hcb" firstAttribute="centerX" secondItem="nQc-zy-erF" secondAttribute="centerX" id="hYt-tv-mLW"/>
                                     <constraint firstAttribute="height" constant="142" id="pfM-tP-ePK"/>
                                     <constraint firstAttribute="bottom" secondItem="GWF-Hb-hcb" secondAttribute="bottom" constant="24" id="xnL-II-Ibr"/>
@@ -1016,7 +1016,7 @@ Night</string>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="diagonalMode" value="NO"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qTC-Bh-aub" customClass="UIImageViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qTC-Bh-aub" customClass="UIImageViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
                                 <rect key="frame" x="167" y="76" width="80" height="80"/>
                                 <color key="backgroundColor" red="0.79607843140000001" green="0.63899999860000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -1080,12 +1080,14 @@ Night</string>
                         <color key="backgroundColor" name="backgroundColor"/>
                         <constraints>
                             <constraint firstItem="rG7-6o-w4z" firstAttribute="trailing" secondItem="Os3-Y8-2eP" secondAttribute="trailing" id="3Xe-PL-sij"/>
+                            <constraint firstItem="nQc-zy-erF" firstAttribute="leading" secondItem="Os3-Y8-2eP" secondAttribute="leading" constant="28" id="4zg-4F-JVn"/>
                             <constraint firstItem="nQc-zy-erF" firstAttribute="top" secondItem="rG7-6o-w4z" secondAttribute="bottom" constant="32" id="7N8-a6-4fx"/>
                             <constraint firstItem="nQc-zy-erF" firstAttribute="centerX" secondItem="1Cf-ui-Wa1" secondAttribute="centerX" id="EUR-CC-2fs"/>
                             <constraint firstAttribute="bottom" secondItem="Vk9-Ff-fKZ" secondAttribute="bottom" id="GbI-Ml-Wxc"/>
                             <constraint firstItem="Vk9-Ff-fKZ" firstAttribute="top" secondItem="nQc-zy-erF" secondAttribute="bottom" constant="16" id="d4q-dv-LOB"/>
                             <constraint firstItem="rG7-6o-w4z" firstAttribute="top" secondItem="Os3-Y8-2eP" secondAttribute="top" id="eax-aP-KaN"/>
                             <constraint firstAttribute="trailing" secondItem="Vk9-Ff-fKZ" secondAttribute="trailing" id="hzk-Q7-uIx"/>
+                            <constraint firstItem="Os3-Y8-2eP" firstAttribute="trailing" secondItem="nQc-zy-erF" secondAttribute="trailing" constant="28" id="jex-42-Z9p"/>
                             <constraint firstItem="rG7-6o-w4z" firstAttribute="leading" secondItem="Os3-Y8-2eP" secondAttribute="leading" id="lXr-mE-hna"/>
                             <constraint firstItem="Vk9-Ff-fKZ" firstAttribute="leading" secondItem="1Cf-ui-Wa1" secondAttribute="leading" id="nyi-9a-eio"/>
                             <constraint firstItem="qTC-Bh-aub" firstAttribute="centerX" secondItem="1Cf-ui-Wa1" secondAttribute="centerX" id="ub4-dJ-Cfn"/>
@@ -1784,7 +1786,7 @@ Night</string>
             <size key="intrinsicContentSize" width="19.5" height="18.5"/>
         </designable>
         <designable name="Ads-Ue-rxg">
-            <size key="intrinsicContentSize" width="14" height="14.5"/>
+            <size key="intrinsicContentSize" width="16" height="17"/>
         </designable>
         <designable name="ytq-pp-ACn">
             <size key="intrinsicContentSize" width="19.5" height="18.5"/>

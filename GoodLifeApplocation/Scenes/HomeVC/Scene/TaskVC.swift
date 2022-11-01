@@ -189,7 +189,8 @@ extension TaskVC:DashboardDelegate{
  
     func getResourceDetails(data: ResourceDetails) {}
 
-    func getCategories(data: [Categories]) {}
+    func getCategories(data: DahboardCategory) {}
+
     
     func getResource(data: [Resources]) { }
     

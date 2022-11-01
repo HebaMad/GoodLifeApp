@@ -96,7 +96,7 @@ extension NotificationVC:DashboardDelegate{
     // no implementation
     
     func showAlerts(title: String, message: String) {}
-    func getCategories(data: [Categories]) {}
+    func getCategories(data: DahboardCategory) {}
     func getResource(data: [Resources]) {}
     func getMyTask(data: DashboardTask) {}
     func getMyGoalAndBenchmark(data: GoalsAndBenchmark) {}

@@ -10,7 +10,7 @@ import Moya
 
 protocol DashboardDelegate{
     func showAlerts(title:String,message:String)
-    func getCategories(data:[Categories])
+    func getCategories(data:DahboardCategory)
     func getResource(data:[Resources])
     func getMyTask(data:DashboardTask)
     func getMyGoalAndBenchmark(data:GoalsAndBenchmark)
@@ -31,7 +31,7 @@ class DashboardPresenter:NSObject{
                 
             case let .success(response):
                 if response.status == true{
-                    self.delegate?.getCategories(data: response.data?.categories ?? [])
+                    self.delegate?.getCategories(data: response.data!)
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }

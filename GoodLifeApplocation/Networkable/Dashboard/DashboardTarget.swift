@@ -70,7 +70,7 @@ enum DashboardTarget:TargetType{
     
     var headers: [String : String]?{
         switch self{
-        case .AddTask,.AddGoal,.getMyTask,.markMyTask,.getMyGoalsAndBenchmark,.markMyGoal,.resourceDetails,.Resources,.notification:
+        case .AddTask,.AddGoal,.getMyTask,.markMyTask,.getMyGoalsAndBenchmark,.markMyGoal,.resourceDetails,.Resources,.notification,.categories:
             
             do {
                 let token = try KeychainWrapper.get(key: AppData.mobile) ?? ""
@@ -80,9 +80,7 @@ enum DashboardTarget:TargetType{
                 return ["Accept":"application/json","Accept-Language":"en"]
             }
             
-        case .categories:
-            return ["Accept":"application/json","Accept-Language":"en"]
-
+  
         }
     }
     

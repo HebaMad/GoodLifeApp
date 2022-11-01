@@ -14,7 +14,7 @@ class DashboardVC: UIViewController {
     @IBOutlet weak var elementCollectionView: UICollectionView!
     @IBOutlet weak var menuBtn: UIButton!
     @IBOutlet weak var notificationBtn: UIButton!
-    
+    @IBOutlet weak var notificationNumber: UILabelDesignable!
     
     //MARK: - properties
     
@@ -320,18 +320,19 @@ extension DashboardVC:Storyboarded{
 }
 
 extension DashboardVC:DashboardDelegate{
+    func getCategories(data: DahboardCategory) {
+        self.isSkeleton = false
+        notificationNumber.text = "\(data.notificationsCount ?? 0)"
+        categories=data.categories ?? []
+        elementCollectionView.reloadData()
+    }
+    
     func getNotification(data: AllNotifiaction) {}
     func getMyGoalAndBenchmark(data: GoalsAndBenchmark) {}
     func getResourceDetails(data: ResourceDetails) {}
     func showAlerts(title: String, message: String) {}
     
-    
-    func getCategories(data: [Categories]) {
-        self.isSkeleton = false
-        
-        categories=data
-        elementCollectionView.reloadData()
-    }
+
     
     func getResource(data: [Resources]) {
         self.isSkeleton = false
