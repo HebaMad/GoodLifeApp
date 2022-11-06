@@ -110,7 +110,7 @@ private extension PackageDetailsVC{
             navigationController?.popViewController(animated: true)
 
         case nextBtn:
-            let vc = DashboardVC.instantiate()
+            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NavigationController")
             self.sceneDelegate.setRootVC(vc: vc)
         default:
             print("error selected")

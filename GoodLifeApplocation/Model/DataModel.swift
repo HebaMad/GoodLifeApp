@@ -247,9 +247,9 @@ struct Ventures:Codable{
     let interest:Int?
     let title:String?
     let sub_title:String?
-    let websites:[String]?
-    let models:[String]?
-    let plans:[String]?
+    let websites:String?
+    let models:String?
+    let plans:String?
     let image:String?
     let created_at:String?
     let opportunity_match:Int?

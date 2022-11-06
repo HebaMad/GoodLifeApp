@@ -37,11 +37,12 @@ class MapVC: UIViewController {
     var specificFiltering:[MainCategories]=[]
     var categoriesFiltered:[mainType]=[]
     
-    var mainCategories:[[String:Any]] = [[:]]
-//    var mainCategories:[String:Double]=[:]
+    var mainCategories:[String:[Double:Double]] = [:]
 //    var annotation:[String:Double]=[:]
-
-    var locationCoordinate:[Double]=[]
+    var latitudeList:[Double]=[]
+    var longitudeList:[Double]=[]
+var counter = 0
+    var locationCoordinate:[Double:Double]=[:]
     var mainNeedType:[mainType]=[]
     var categoryMainId = 0
     private var isSkeleton: Bool = true {
@@ -54,11 +55,12 @@ class MapVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        mapview.delegate=self
+
         specificFilterCollectionview.isHidden = true
         setUpSideMenu()
         setupCollectionview()
         menuBtnBinding()
-        setupAnnotation()
 
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -91,12 +93,7 @@ class MapVC: UIViewController {
         }
     
     
-    func setupAnnotation(){
-        let london = MKPointAnnotation()
-        london.title = "London"
-        london.coordinate = CLLocationCoordinate2D(latitude:Double.random(in: 31.3547...32.3547), longitude: Double.random(in: 34.3088...35.3088))
-        mapview.addAnnotation(london)
-    }
+
 
     //MARK: - SETUP Collection
     private func setupCollectionview(){
@@ -320,16 +317,6 @@ extension MapVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollection
         }else if collectionView == specificFilterCollectionview{
             self.presenter.categriesFailtered(mainCategoriesID: "\(categoryMainId)", subCategoriesID: "\(specificFiltering[indexPath.row].id ?? 0)")
             self.presenter.delegate = self
-            let controller = choosingMinistryNeedsVC()
-            controller.needTypeID = categoryMainId
-//            let controller = FilterVC()
-            let sheetController = SheetViewController(
-                controller: controller,
-//                sizes: [ .intrinsic , .percent(0.80), .fixed(600), .intrinsic])
-                sizes: [ .marginFromTop(500), .percent(0.8), .intrinsic])
-            controller.onFilterDissmissed = self
-
-            self.present(sheetController, animated: false, completion: nil)
             
         }else{
         }
@@ -353,7 +340,16 @@ extension MapVC :HomeDelegate{
     func getOppourtinity(categories: Oppourtinity) {}
     
     func getCategoriesFiltered(categories: CategoriesFiltering) {
-        categoriesFiltered = categories.main_needs_types ?? []
+        latitudeList=[]
+        longitudeList=[]
+        
+        mainNeedType = categories.main_needs_types ?? []
+        latitudeList = makeLatitudeRandomList(mainNeedType.count, lat: 31.3547)
+        longitudeList = makeLongtiudeRandomList(mainNeedType.count, long: 34.3088)
+        print(latitudeList)
+        print(latitudeList)
+
+         createLocationCoordinateRandomPoints(latList: latitudeList, longList: longitudeList)
     }
     
     func getsubCategoriesFiltering(categories: SubHomeCategories) {
@@ -370,12 +366,16 @@ extension MapVC :HomeDelegate{
     func showAlerts(title: String, message: String) {}
     
     func getCategories(categories: Home) {
+        latitudeList=[]
+        longitudeList=[]
         self.isSkeleton = false
         mainNeedType=categories.main_needs_types ?? []
-        locationCoordinate = self.makeList(categories.main_needs_types?.count ?? 0, loc: 31.3547)
-//        annotation = createAnnotation(location: locationCoordinate)
+
         recentlyViewed = categories.recentlyViewed ?? []
         recommendedMinistries = categories.recommendedMinistries ?? []
+        latitudeList = makeLatitudeRandomList(5, lat: 31.3547)
+        longitudeList = makeLongtiudeRandomList(5, long: 34.3088)
+         createLocationCoordinateRandomPoints(latList: latitudeList, longList: longitudeList)
         communityCollectionview.reloadData()
         
     }
@@ -396,18 +396,71 @@ extension MapVC: OnFilterDissmissed {
 
 
 extension MapVC{
-    func makeList(_ n: Int,loc:Double) -> [Double] {
-        return (0..<n).map { _ in Double.random(in: loc...loc+1) }
+    func makeLatitudeRandomList(_ n: Int,lat:Double) -> [Double] {
+        return (0..<n).map { _ in Double.random(in: lat...lat+1.1) }
+    }
+    func makeLongtiudeRandomList(_ n: Int,long:Double) -> [Double] {
+        
+        return (0..<n).map { _ in Double.random(in: long...long+1.1) }
+    
     }
     
-//    func createAnnotation(location:[Double]) -> [String:Double]{
-//        for index in 0 ..< mainNeedType.count{
-//            mainCategories[mainNeedType[index].name ?? ""]=location[index]
-//
-//        }
-//        return mainCategories
-//    }
+    func createLocationCoordinateRandomPoints(latList:[Double],longList:[Double]){
+        for index in 0 ..< latList.count{
+            locationCoordinate[latList[index]]=longList[index]
+        }
+        createAnnotation(location: locationCoordinate)
+
+        
+    }
+    
+    
+    func createAnnotation(location:[Double:Double]){
+        mainCategories = [:]
+        for indx in 0 ..< mainNeedType.count{
+            mainCategories[mainNeedType[indx].name ?? ""] = [Array(location.keys)[indx] : Array(location.values)[indx]]
+        }
+        
+        
+
+        print(mainCategories)
+        setupAnnotation(point: mainCategories)
+
+
+}
+    
+    
+    func setupAnnotation(point:[String:[Double:Double]]){
+        print(point)
+        print(point.count)
+        let allAnnotations = self.mapview.annotations
+        self.mapview.removeAnnotations(allAnnotations)
+        for (key,value) in point{
+            let point = MKPointAnnotation()
+            point.title = key
+            point.coordinate = CLLocationCoordinate2D(latitude: Array(value.keys)[0], longitude:Array(value.values)[0])
+            mapview.addAnnotation(point)
+            
+        }
+        
+        mapview.delegate=self
+       
+    }
+
 }
 
-
+extension MapVC:MKMapViewDelegate{
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+                    let controller = choosingMinistryNeedsVC()
+                    controller.needTypeID = categoryMainId
+      
+                    let sheetController = SheetViewController(
+                        controller: controller,
+        //                sizes: [ .intrinsic , .percent(0.80), .fixed(600), .intrinsic])
+                        sizes: [ .marginFromTop(500), .percent(0.8), .intrinsic])
+                    controller.onFilterDissmissed = self
+        
+                    self.present(sheetController, animated: false, completion: nil)
+    }
+}
 

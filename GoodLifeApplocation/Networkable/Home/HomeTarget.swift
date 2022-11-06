@@ -85,7 +85,7 @@ enum HomeApiTarget:TargetType{
             return ["txt" :txt ]
             
         case .categoriesFiltering(let mainCategoriesID,let subCategoriesID):
-            return ["main_category_id" : mainCategoriesID ,"sub_category_id":subCategoriesID]
+            return ["main_category_id" : 3 ,"sub_category_id":7]
 
         case .getOpportunities(let need_type_id ,let interest ):
             return ["need_type_id":need_type_id,"interest":interest]

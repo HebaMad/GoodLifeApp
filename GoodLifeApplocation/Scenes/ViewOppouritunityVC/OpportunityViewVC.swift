@@ -11,6 +11,7 @@ class OpportunityViewVC: UIViewController {
     
     //MARK: - Outlet
     
+    @IBOutlet weak var viewAllOppourtinity: OpportunityView!
     @IBOutlet weak var Profile: OpportunityView!
     @IBOutlet weak var VolunteerOpportunityView: OpportunityView!
     @IBOutlet weak var HaveIdeaView: OpportunityView!
@@ -38,6 +39,7 @@ extension OpportunityViewVC{
         HaveIdeaView.ViewBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
         experienceView.ViewBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
         DonationView.ViewBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
+        viewAllOppourtinity.ViewBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
     }
 }
 
@@ -67,10 +69,13 @@ extension OpportunityViewVC{
              navigationController?.pushViewController(vc, animated: true)
              
              case DonationView.ViewBtn:
-//             let vc = DonationVC()
-             let vc = MapVC()
+             let vc = DonationVC()
              navigationController?.pushViewController(vc, animated: true)
              
+         case viewAllOppourtinity.ViewBtn:
+             
+             let vc = MapVC()
+             navigationController?.pushViewController(vc, animated: true)
          default:
              print("")
          }

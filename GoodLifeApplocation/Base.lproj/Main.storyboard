@@ -646,8 +646,8 @@ Manager</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jXP-aR-iMt" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
                                         <rect key="frame" x="358" y="0.0" width="40" height="40"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ads-Ue-rxg" customClass="UILabelDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                                <rect key="frame" x="18" y="-6" width="30" height="30"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ads-Ue-rxg" customClass="UILabelDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
+                                                <rect key="frame" x="14" y="-8" width="30" height="30"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="bWb-F6-CLN"/>
@@ -672,7 +672,7 @@ Manager</string>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vce-EC-hch">
-                                                <rect key="frame" x="8" y="9" width="24" height="22"/>
+                                                <rect key="frame" x="4" y="9" width="32" height="22"/>
                                                 <color key="tintColor" name="button"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="bell.fill" catalog="system"/>
@@ -681,11 +681,11 @@ Manager</string>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="Vce-EC-hch" firstAttribute="centerX" secondItem="jXP-aR-iMt" secondAttribute="centerX" id="9Yx-ZI-KMj"/>
-                                            <constraint firstAttribute="trailing" secondItem="Ads-Ue-rxg" secondAttribute="trailing" constant="-8" id="UIA-80-F0g"/>
-                                            <constraint firstItem="Ads-Ue-rxg" firstAttribute="top" secondItem="jXP-aR-iMt" secondAttribute="top" constant="-6" id="Wyc-hg-NWT"/>
+                                            <constraint firstItem="Ads-Ue-rxg" firstAttribute="top" secondItem="jXP-aR-iMt" secondAttribute="top" constant="-8" id="GCs-ZT-cc7"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ads-Ue-rxg" secondAttribute="trailing" constant="-4" id="UIA-80-F0g"/>
                                             <constraint firstItem="Vce-EC-hch" firstAttribute="centerY" secondItem="jXP-aR-iMt" secondAttribute="centerY" id="cAn-AU-GAz"/>
-                                            <constraint firstItem="Vce-EC-hch" firstAttribute="leading" secondItem="jXP-aR-iMt" secondAttribute="leading" constant="8" id="ght-kJ-d7T"/>
-                                            <constraint firstAttribute="trailing" secondItem="Vce-EC-hch" secondAttribute="trailing" constant="8" id="ka9-OE-low"/>
+                                            <constraint firstItem="Vce-EC-hch" firstAttribute="leading" secondItem="jXP-aR-iMt" secondAttribute="leading" constant="4" id="ght-kJ-d7T"/>
+                                            <constraint firstAttribute="trailing" secondItem="Vce-EC-hch" secondAttribute="trailing" constant="4" id="ka9-OE-low"/>
                                             <constraint firstAttribute="width" constant="40" id="tZR-ua-VLt"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
@@ -1785,9 +1785,7 @@ Night</string>
         <designable name="2Go-bQ-8Sh">
             <size key="intrinsicContentSize" width="19.5" height="18.5"/>
         </designable>
-        <designable name="Ads-Ue-rxg">
-            <size key="intrinsicContentSize" width="16" height="17"/>
-        </designable>
+        <designable name="Ads-Ue-rxg"/>
         <designable name="ytq-pp-ACn">
             <size key="intrinsicContentSize" width="19.5" height="18.5"/>
         </designable>

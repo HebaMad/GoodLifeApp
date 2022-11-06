@@ -44,7 +44,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-8" translatesAutoresizingMaskIntoConstraints="NO" id="sAx-mk-SWv">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="1004.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="978.5"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Qh-eM-hYq">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
@@ -68,7 +68,7 @@
                                     </constraints>
                                 </view>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-16" translatesAutoresizingMaskIntoConstraints="NO" id="dfq-lt-4kv">
-                                    <rect key="frame" x="0.0" y="72" width="414" height="932.5"/>
+                                    <rect key="frame" x="0.0" y="72" width="414" height="906.5"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OCd-SV-6cz">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="350"/>
@@ -101,7 +101,7 @@ feedback!</string>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a brief review via text, image or video! All feedback from every project helps make us better!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZD-st-neS">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a brief review via text or image , All feedback from every project helps make us better!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZD-st-neS">
                                                             <rect key="frame" x="0.0" y="232.5" width="382" height="61"/>
                                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -123,26 +123,26 @@ feedback!</string>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0aG-LK-rRo" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="334" width="414" height="598.5"/>
+                                            <rect key="frame" x="0.0" y="334" width="414" height="572.5"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Nl1-Mx-vmE">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="598.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="572.5"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="13M-zN-fKk">
                                                             <rect key="frame" x="20" y="20" width="374" height="91"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Project title?*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iNF-LB-DqD">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="31"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="41"/>
                                                                     <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="14"/>
                                                                     <color key="textColor" name="button"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gho-wA-NQy" customClass="UITextFieldDataPicker" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="41" width="374" height="50"/>
+                                                                    <rect key="frame" x="0.0" y="51" width="374" height="40"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <color key="tintColor" name="TXT"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="height" constant="50" id="tDT-4v-l6B"/>
+                                                                        <constraint firstAttribute="height" constant="40" id="tDT-4v-l6B"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <textInputTraits key="textInputTraits"/>
@@ -166,7 +166,7 @@ feedback!</string>
                                                                     <subviews>
                                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="T99-p0-Rch">
                                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="146.5"/>
-                                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <color key="textColor" systemColor="labelColor"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -187,7 +187,7 @@ feedback!</string>
                                                                             <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </userDefinedRuntimeAttribute>
                                                                         <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                            <color key="value" systemColor="systemGray4Color"/>
+                                                                            <color key="value" name="bg3"/>
                                                                         </userDefinedRuntimeAttribute>
                                                                         <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                                             <real key="value" value="1"/>
@@ -203,16 +203,16 @@ feedback!</string>
                                                             <rect key="frame" x="20" y="308.5" width="374" height="91"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review?*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bs2-AH-4tw">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="17"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="51"/>
                                                                     <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="14"/>
                                                                     <color key="textColor" name="button"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m2y-5A-XrQ">
-                                                                    <rect key="frame" x="0.0" y="27" width="374" height="64"/>
+                                                                    <rect key="frame" x="0.0" y="61" width="374" height="30"/>
                                                                     <subviews>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ors-jE-gvQ" customClass="RatingControl" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="64"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
                                                                             <color key="tintColor" name="review star"/>
                                                                             <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="0.0" bottom="0.0" trailing="200"/>
                                                                             <userDefinedRuntimeAttributes>
@@ -249,35 +249,55 @@ feedback!</string>
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="euU-ii-9ZR">
-                                                            <rect key="frame" x="20" y="411.5" width="374" height="87"/>
+                                                            <rect key="frame" x="20" y="411.5" width="374" height="61"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xxa-9i-Trv">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="87"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="61"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add image " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYX-lE-UTZ">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="284" height="87"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="194" height="61"/>
                                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
                                                                             <color key="textColor" name="button"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
-                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFc-1X-HUd">
-                                                                            <rect key="frame" x="284" y="0.0" width="90" height="87"/>
-                                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFc-1X-HUd" customClass="UIButtonDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
+                                                                            <rect key="frame" x="194" y="0.0" width="180" height="61"/>
+                                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <constraints>
-                                                                                <constraint firstAttribute="width" constant="90" id="MtI-rl-Tad"/>
+                                                                                <constraint firstAttribute="width" constant="180" id="MtI-rl-Tad"/>
                                                                             </constraints>
                                                                             <color key="tintColor" name="button"/>
                                                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                             <state key="normal" title="  Add" image="camera.fill" catalog="system">
                                                                                 <color key="titleColor" name="button"/>
                                                                             </state>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                                                    <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                                <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                                                    <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                    <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                                <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                                                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                                                    <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                    <real key="value" value="12"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
                                                                         </button>
                                                                     </subviews>
                                                                 </stackView>
                                                             </subviews>
                                                         </stackView>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yUY-wV-nZL">
-                                                            <rect key="frame" x="20" y="510.5" width="374" height="80"/>
+                                                            <rect key="frame" x="20" y="484.5" width="374" height="80"/>
                                                             <subviews>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zvb-sP-y1F" customClass="UIButtonDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
                                                                     <rect key="frame" x="308" y="2" width="50" height="50"/>
@@ -315,7 +335,7 @@ feedback!</string>
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstItem="eLL-Z5-q0q" firstAttribute="height" secondItem="13M-zN-fKk" secondAttribute="height" multiplier="1.90909" id="Mrx-JV-G3a"/>
-                                                        <constraint firstItem="euU-ii-9ZR" firstAttribute="height" secondItem="eLL-Z5-q0q" secondAttribute="height" multiplier="0.5" id="Peo-QD-Qmb"/>
+                                                        <constraint firstItem="euU-ii-9ZR" firstAttribute="height" secondItem="eLL-Z5-q0q" secondAttribute="height" multiplier="0.35" id="Peo-QD-Qmb"/>
                                                         <constraint firstItem="ZsE-LN-S36" firstAttribute="height" secondItem="13M-zN-fKk" secondAttribute="height" id="dWN-pT-Ato"/>
                                                     </constraints>
                                                     <directionalEdgeInsets key="directionalLayoutMargins" top="20" leading="20" bottom="8" trailing="20"/>
@@ -374,7 +394,7 @@ feedback!</string>
             <size key="intrinsicContentSize" width="244" height="131"/>
         </designable>
         <designable name="Gho-wA-NQy">
-            <size key="intrinsicContentSize" width="32" height="34"/>
+            <size key="intrinsicContentSize" width="53" height="34"/>
         </designable>
         <designable name="Zvb-sP-y1F">
             <size key="intrinsicContentSize" width="12.5" height="22"/>
@@ -409,9 +429,6 @@ feedback!</string>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

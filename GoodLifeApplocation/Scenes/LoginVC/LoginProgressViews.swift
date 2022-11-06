@@ -65,7 +65,9 @@ private extension LoginProgressViews{
             showAlertMessage(title: "Notice", message: "please Enter your mobile number ")
                 
             }else{
-                
+                print(UserDefaults.standard.string(forKey: "fcmToken") ?? "")
+                print(text ?? "")
+
             self.presenter.login(mobile: text ?? "", token: UserDefaults.standard.string(forKey: "fcmToken") ?? "")
             self.presenter.delegate = self
             mobileNumber = text ?? ""

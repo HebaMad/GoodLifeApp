@@ -72,13 +72,14 @@ extension HaveAnIdeaVC{
     
     
     func createIdea(){
-        
+        if  checkAllField() {
+            
+       
         do{
+                let title = try titleProjectText.validatedText(validationType: .requiredField(field: "Title required"))
             if descriptionText.text.isEmpty != true {
-                let title = try titleProjectText.validatedText(validationType: .requiredField(field: "title required"))
-                let revenu = try monthlyRevenuTxt.validatedText(validationType: .requiredField(field: "monthly revenu required"))
-                let time = try weeklyTimeSelection.validatedText(validationType: .requiredField(field: "time commitment required"))
-
+                let time = try weeklyTimeSelection.validatedText(validationType: .requiredField(field: "Time commitment required"))
+                let revenu = try monthlyRevenuTxt.validatedText(validationType: .requiredField(field: "Monthly revenu required"))
                 presenter.createIdea(title: title, details: descriptionText.text, time_commitment: time, monthly_revenue: revenu)
                 presenter.delegate=self
                 
@@ -89,7 +90,7 @@ extension HaveAnIdeaVC{
      
         }catch{
             self.showAlert(title: "Warning", message: (error as! ValidationError).message,hideCancelBtn: true)
-
+        }
         }
     }
 }
@@ -112,10 +113,25 @@ extension HaveAnIdeaVC:MenuDelegate{
 
 
 extension HaveAnIdeaVC{
-    func clearData(){
+    
+    func clearData() {
         titleProjectText.text = ""
         monthlyRevenuTxt.text = ""
         weeklyTimeSelection.text = ""
         descriptionText.text = ""
+    }
+    
+    func checkAllField() -> Bool{
+        if !titleProjectText.text!.isEmpty || !monthlyRevenuTxt.text!.isEmpty || !weeklyTimeSelection.text!.isEmpty || !descriptionText.text!.isEmpty{
+            
+            return true
+            
+        }else{
+            
+            self.showAlert(title: "Warning", message: "Please enter the required data ",hideCancelBtn: true)
+            return false
+            
+        }
+        
     }
 }

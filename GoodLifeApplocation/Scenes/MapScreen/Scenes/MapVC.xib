@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -25,10 +24,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Y8b-85-sXm">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="537"/>
                 </mapView>
                 <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="W4p-ag-nqa">
-                    <rect key="frame" x="0.0" y="396" width="414" height="500"/>
+                    <rect key="frame" x="0.0" y="416" width="414" height="480"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0dA-Nd-tTj">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
@@ -73,10 +72,10 @@
                             </collectionViewFlowLayout>
                         </collectionView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AA7-r5-7Nk" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="122" width="414" height="378"/>
+                            <rect key="frame" x="0.0" y="122" width="414" height="358"/>
                             <subviews>
                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="242-4j-6GF">
-                                    <rect key="frame" x="0.0" y="4" width="414" height="374"/>
+                                    <rect key="frame" x="0.0" y="4" width="414" height="354"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iND-6v-nY6">
                                         <size key="itemSize" width="128" height="128"/>
@@ -111,7 +110,7 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="500" id="WQ5-Er-cNb"/>
+                        <constraint firstAttribute="height" constant="480" id="WQ5-Er-cNb"/>
                     </constraints>
                     <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
                 </stackView>
@@ -129,12 +128,12 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="bg3"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="Y8b-85-sXm" secondAttribute="bottom" id="0oU-0W-aIX"/>
                 <constraint firstItem="rey-PC-ONn" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="8U6-MI-fHd"/>
                 <constraint firstItem="W4p-ag-nqa" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="BXA-sA-2Rm"/>
                 <constraint firstItem="Y8b-85-sXm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Xg9-OK-vRn"/>
                 <constraint firstAttribute="bottom" secondItem="W4p-ag-nqa" secondAttribute="bottom" id="dEo-nU-tyY"/>
                 <constraint firstAttribute="trailing" secondItem="Y8b-85-sXm" secondAttribute="trailing" id="eXd-VY-Jmg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Y8b-85-sXm" secondAttribute="bottom" constant="325" id="fDj-q7-mjp"/>
                 <constraint firstItem="W4p-ag-nqa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="hs0-9N-E44"/>
                 <constraint firstItem="Y8b-85-sXm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="qsY-VD-T3p"/>
                 <constraint firstItem="rey-PC-ONn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="wyu-Mu-cJX"/>

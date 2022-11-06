@@ -99,6 +99,7 @@ private extension ReviewExperienceVC{
         do{
             
             let title = try categoryTxt.validatedText(validationType: .requiredField(field: "category required"))
+            if reviewRate.rating != 0 {
             if projectReview.text.isEmpty != true{
                 
                 presenter.createFeedback(id:"\(itemID)", review: projectReview.text, rate: reviewRate.rating, img: selectedImage ?? Data())
@@ -108,7 +109,10 @@ private extension ReviewExperienceVC{
                 self.showAlert(title: "Warning", message:" Review text required ",hideCancelBtn: true)
                 
             }
-            
+            }else{
+                self.showAlert(title: "Warning", message:" Review  your experience please",hideCancelBtn: true)
+
+            }
         }catch{
             self.showAlert(title: "Warning", message: (error as! ValidationError).message,hideCancelBtn: true)
             

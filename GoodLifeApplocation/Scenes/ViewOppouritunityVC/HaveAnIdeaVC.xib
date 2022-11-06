@@ -132,16 +132,16 @@ ministry idea??</string>
                                                             <rect key="frame" x="20" y="20" width="374" height="91"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title of project?*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="915-Ab-HIv">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="31"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="41"/>
                                                                     <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="14"/>
                                                                     <color key="textColor" name="button"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f0h-cm-vBu">
-                                                                    <rect key="frame" x="0.0" y="41" width="374" height="50"/>
+                                                                    <rect key="frame" x="0.0" y="51" width="374" height="40"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="height" constant="50" id="EmU-K5-dpP"/>
+                                                                        <constraint firstAttribute="height" constant="40" id="EmU-K5-dpP"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <textInputTraits key="textInputTraits"/>
@@ -165,7 +165,7 @@ ministry idea??</string>
                                                                     <subviews>
                                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HdB-3z-HJ7">
                                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="146.5"/>
-                                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <color key="textColor" systemColor="labelColor"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -186,7 +186,7 @@ ministry idea??</string>
                                                                             <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </userDefinedRuntimeAttribute>
                                                                         <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                            <color key="value" systemColor="systemGray4Color"/>
+                                                                            <color key="value" name="bg3"/>
                                                                         </userDefinedRuntimeAttribute>
                                                                         <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                                             <real key="value" value="1"/>
@@ -202,15 +202,15 @@ ministry idea??</string>
                                                             <rect key="frame" x="20" y="308.5" width="374" height="91"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estimated Time Commitment?*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tww-An-L8G">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="31"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="41"/>
                                                                     <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="14"/>
                                                                     <color key="textColor" name="button"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select your time" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tpR-Po-dDb" customClass="DatePickingTextField" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="41" width="374" height="50"/>
+                                                                    <rect key="frame" x="0.0" y="51" width="374" height="40"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="height" constant="50" id="gCz-yy-MoA"/>
+                                                                        <constraint firstAttribute="height" constant="40" id="gCz-yy-MoA"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <textInputTraits key="textInputTraits"/>
@@ -221,15 +221,15 @@ ministry idea??</string>
                                                             <rect key="frame" x="20" y="411.5" width="374" height="91"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monthly Revenue?*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOx-ad-DtG">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="31"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="41"/>
                                                                     <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="14"/>
                                                                     <color key="textColor" name="button"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uuq-ax-vAY">
-                                                                    <rect key="frame" x="0.0" y="41" width="374" height="50"/>
+                                                                    <rect key="frame" x="0.0" y="51" width="374" height="40"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="height" constant="50" id="uzV-oM-Zhu"/>
+                                                                        <constraint firstAttribute="height" constant="40" id="uzV-oM-Zhu"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <textInputTraits key="textInputTraits"/>
@@ -359,9 +359,6 @@ ministry idea??</string>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
