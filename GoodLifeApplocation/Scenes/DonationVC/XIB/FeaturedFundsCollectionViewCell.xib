@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -24,10 +23,10 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QIZ-X8-sWR" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                        <rect key="frame" x="4" y="70" width="262" height="100"/>
+                        <rect key="frame" x="4" y="60" width="262" height="110"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ejR-KF-MbU">
-                                <rect key="frame" x="8" y="36" width="246" height="48"/>
+                                <rect key="frame" x="8" y="46" width="246" height="48"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Faith Focus" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="48K-nK-U6Q">
                                         <rect key="frame" x="0.0" y="0.0" width="246" height="22"/>
@@ -75,7 +74,7 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bFN-JR-eQB" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                        <rect key="frame" x="105" y="40" width="60" height="60"/>
+                        <rect key="frame" x="105" y="35" width="60" height="60"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ubW-w2-I5c">
                                 <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -125,18 +124,21 @@
                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                 <real key="value" value="1"/>
                             </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="skeletonCornerRadius">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="QIZ-X8-sWR" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="70" id="Cm0-24-htK"/>
+                <constraint firstItem="QIZ-X8-sWR" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="60" id="Cm0-24-htK"/>
                 <constraint firstAttribute="bottom" secondItem="QIZ-X8-sWR" secondAttribute="bottom" constant="20" id="Hob-H0-754"/>
                 <constraint firstItem="bFN-JR-eQB" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Kgf-su-ejc"/>
                 <constraint firstItem="QIZ-X8-sWR" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="WBp-bJ-duj"/>
                 <constraint firstAttribute="trailing" secondItem="QIZ-X8-sWR" secondAttribute="trailing" constant="4" id="Yil-FK-H9m"/>
-                <constraint firstItem="bFN-JR-eQB" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="40" id="dlT-Rz-B4L"/>
+                <constraint firstItem="bFN-JR-eQB" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="35" id="dlT-Rz-B4L"/>
             </constraints>
             <size key="customSize" width="270" height="190"/>
             <connections>

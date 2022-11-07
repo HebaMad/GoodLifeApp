@@ -225,13 +225,13 @@
     </objects>
     <designables>
         <designable name="OTO-cd-VPU">
-            <size key="intrinsicContentSize" width="156" height="30.5"/>
+            <size key="intrinsicContentSize" width="161.5" height="31"/>
         </designable>
         <designable name="SjE-2C-4bb">
-            <size key="intrinsicContentSize" width="154.5" height="30.5"/>
+            <size key="intrinsicContentSize" width="160.5" height="31"/>
         </designable>
         <designable name="YRR-vL-UZj">
-            <size key="intrinsicContentSize" width="47" height="30.5"/>
+            <size key="intrinsicContentSize" width="48.5" height="31"/>
         </designable>
     </designables>
     <resources>

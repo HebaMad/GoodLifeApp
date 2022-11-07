@@ -19,7 +19,7 @@ class AllCategoriesVC: UIViewController {
     var categories:[Categories]=[]
     let presenter = DashboardPresenter()
     var goalsAndBenchmarks:GoalsAndBenchmark?
-    var vc = GoalAndBenchmarkVC.sharedInstance
+    var  vc = GoalAndBenchmarkVC.instantiate()
     var categoryID=0
     var categoryname = ""
     

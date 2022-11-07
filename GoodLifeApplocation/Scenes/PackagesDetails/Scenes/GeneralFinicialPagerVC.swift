@@ -37,7 +37,6 @@ class GeneralFinicialPagerVC: UIViewController, IndicatorInfoProvider {
     @IBOutlet weak var SecondSubTopiicTxt: UILabel!
     @IBOutlet weak var SecondSubTopiicCost: UILabel!
     
-    @IBOutlet weak var ToTalEarning: UILabel!
 
     //MARK: - Properties
     
@@ -158,6 +157,5 @@ extension GeneralFinicialPagerVC{
        
         let output = fmt.string(from: earning as NSNumber)!
         
-        ToTalEarning.text = output
     }
 }

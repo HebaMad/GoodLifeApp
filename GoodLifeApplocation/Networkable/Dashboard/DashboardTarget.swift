@@ -28,6 +28,7 @@ enum DashboardTarget:TargetType{
     }
   
     var path: String {
+        
         switch self {
         case .AddTask:return "createNewTask"
         case .AddGoal:return "createNewGoal"
@@ -39,8 +40,8 @@ enum DashboardTarget:TargetType{
         case .resourceDetails:return "getResourcesScreen"
         case .markMyGoal:return "markGoalCompleted"
         case .notification:return "getMyNotifications"
-
         }
+        
     }
     
     var method: Moya.Method {
@@ -79,7 +80,6 @@ enum DashboardTarget:TargetType{
             catch{
                 return ["Accept":"application/json","Accept-Language":"en"]
             }
-            
   
         }
     }

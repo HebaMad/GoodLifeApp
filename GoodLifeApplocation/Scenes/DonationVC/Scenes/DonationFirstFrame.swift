@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import SkeletonView
 class DonationFirstFrame: UIViewController {
 
     //MARK: - Outlets
@@ -18,13 +18,18 @@ class DonationFirstFrame: UIViewController {
     let presenter = MenuPresenter()
     var funder:[Founder]=[]
     var otherFunder:[Founder]=[]
-
+    private var isSkeleton: Bool = true {
+        didSet {
+            self.FundCollectionView.reloadData()
+        }
+    }
     
     //MARK: - Life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.isSkeleton = true
         self.presenter.getWorthyCause()
         self.presenter.delegate = self
         FundCollectionView.register(FeaturedFundsCollectionViewCell.self)
@@ -49,7 +54,7 @@ class DonationFirstFrame: UIViewController {
                 let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.33), heightDimension: .absolute(140))
                 
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
-                item.contentInsets = .init(top: -10, leading: 0, bottom: 0, trailing: 4)
+                item.contentInsets = .init(top: 0, leading: 0, bottom: 0, trailing: 4)
                 
                 let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.99), heightDimension: .estimated(0.5))
                 
@@ -59,24 +64,24 @@ class DonationFirstFrame: UIViewController {
                 let section = NSCollectionLayoutSection(group: group)
                 
 //                section.orthogonalScrollingBehavior = .continuous
-                section.contentInsets = .init(top: -5, leading: 4, bottom: 0, trailing: 4)
+                section.contentInsets = .init(top: 0, leading: 4, bottom: 0, trailing: 4)
                 section.boundarySupplementaryItems = [self.supplementaryHeaderItem()]
                 section.supplementariesFollowContentInsets = false
                 return section
-            case .FeaturedFund:
                 
+            case .FeaturedFund:
                 
                 
                 let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(200))
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
-                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.6), heightDimension: .fractionalWidth(0.6))
+                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.76), heightDimension: .fractionalWidth(0.6))
                 
                 let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
                 group.contentInsets = .init(top: 0, leading: 0, bottom: 0, trailing: 0)
 
                 let section = NSCollectionLayoutSection(group: group)
                 section.orthogonalScrollingBehavior = .continuous
-                section.contentInsets = .init(top: -20, leading: 4, bottom: 0, trailing: 4)
+                section.contentInsets = .init(top: -10, leading: 4, bottom:-30, trailing: 4)
                 section.boundarySupplementaryItems = [self.supplementaryHeaderItem()]
                 section.supplementariesFollowContentInsets = false
                 return section
@@ -102,12 +107,10 @@ extension DonationFirstFrame: UICollectionViewDataSource,UICollectionViewDelegat
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch sections[section]{
-        case .FeaturedFund: return funder.count
-        case .otherFund :return otherFunder.count
+        case .FeaturedFund: return self.isSkeleton ? 3 : funder.count
+        case .otherFund :return self.isSkeleton ? 6: otherFunder.count
             
         }
-     
-
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -118,11 +121,21 @@ extension DonationFirstFrame: UICollectionViewDataSource,UICollectionViewDelegat
         case .FeaturedFund:
             
             let cell:FeaturedFundsCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
+            guard !self.isSkeleton else {
+                cell.startSkeleton()
+                return cell
+            }
+            cell.stopSkeleton()
             cell.setup(funder[indexPath.row])
             return cell
             
         case .otherFund:
             let cell:OtherFundsCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
+            guard !self.isSkeleton else {
+                cell.startSkeleton()
+                return cell
+            }
+            cell.stopSkeleton()
             cell.setup(otherFunder[indexPath.row])
 
             return cell
@@ -165,6 +178,8 @@ extension DonationFirstFrame:MenuDelegate{
     }
     
     func getFunderData(data: WorthyCauses) {
+        self.isSkeleton = false
+
         funder=data.featuredFunds ?? []
         otherFunder=data.otherFunds ?? []
         FundCollectionView.reloadData()

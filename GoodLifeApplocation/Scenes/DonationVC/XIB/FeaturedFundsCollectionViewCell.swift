@@ -14,6 +14,21 @@ class FeaturedFundsCollectionViewCell: UICollectionViewCell,NibLoadableView{
     @IBOutlet weak var cellTitleLbl: UILabel!
     @IBOutlet weak var detailsTxt: UILabel!
     
+    //MARK: - Properties
+
+    private var skeletonViews = [UIView]()
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+                self.skeletonViews = [
+                    self.cellImageView,
+                    self.cellTitleLbl,
+                    self.detailsTxt,
+        
+                ]
+        self.backgroundColor = .clear
+     
+    }
     //MARK: - Configuration cell
 
     func setup(_ item: Founder) {
@@ -23,4 +38,14 @@ class FeaturedFundsCollectionViewCell: UICollectionViewCell,NibLoadableView{
     }
     
     
+}
+extension FeaturedFundsCollectionViewCell {
+    
+    public func startSkeleton() {
+        self.playSkeleton(for: self.skeletonViews)
+    }
+    
+    public func stopSkeleton() {
+        self.stopSkeleton(for: self.skeletonViews)
+    }
 }

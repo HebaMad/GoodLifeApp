@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -25,7 +24,6 @@
                 <outlet property="SecondSubTopiicTxt" destination="VPc-X2-Egh" id="Bmy-Uc-XYc"/>
                 <outlet property="ThirdTopicCost" destination="cKo-V4-uFP" id="pLm-5P-Hem"/>
                 <outlet property="ThirdTopicTitle" destination="kok-vu-YMd" id="wZY-xs-4qA"/>
-                <outlet property="ToTalEarning" destination="a4G-bz-8zr" id="Qi6-7z-IkO"/>
                 <outlet property="firstSubTopicCost" destination="sUr-Y7-k1o" id="XWd-GV-zKZ"/>
                 <outlet property="firstSubTopicTitle" destination="QcD-g4-4qS" id="gVd-GC-194"/>
                 <outlet property="firstSubTopicTxt" destination="tfW-mi-mft" id="UTd-eT-fcY"/>
@@ -166,19 +164,19 @@
                                     <rect key="frame" x="0.0" y="0.0" width="398" height="424"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VYA-GH-Zp7">
-                                            <rect key="frame" x="12" y="12" width="374" height="359"/>
+                                            <rect key="frame" x="12" y="12" width="374" height="370"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LIK-dE-k2P">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="359"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="370"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Financial Breakdown" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abi-MQ-M0Q">
-                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="47"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="58"/>
                                                             <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="20"/>
                                                             <color key="textColor" name="backgroundColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fe0-pC-XG3">
-                                                            <rect key="frame" x="0.0" y="47" width="374" height="312"/>
+                                                            <rect key="frame" x="0.0" y="58" width="374" height="312"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rgV-cw-gPf">
                                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="104"/>
@@ -409,26 +407,19 @@
                                                 <constraint firstItem="LIK-dE-k2P" firstAttribute="top" secondItem="VYA-GH-Zp7" secondAttribute="top" id="xQ7-xW-sFn"/>
                                             </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KKc-JO-itZ">
-                                            <rect key="frame" x="12" y="381" width="374" height="1"/>
-                                            <color key="backgroundColor" name="TXT"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="1" id="iU1-66-5Pp"/>
-                                            </constraints>
-                                        </view>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="eYC-lE-7Lf">
                                             <rect key="frame" x="12" y="392" width="374" height="24"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Expected Earnings:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nen-pT-Eno">
                                                     <rect key="frame" x="0.0" y="0.0" width="187" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200$" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4G-bz-8zr">
                                                     <rect key="frame" x="187" y="0.0" width="187" height="24"/>
                                                     <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="20"/>
-                                                    <color key="textColor" name="ButtonColor"/>
+                                                    <color key="textColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>

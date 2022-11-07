@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,31 +12,28 @@
         <array key="Inter-Bold.ttf">
             <string>Inter-Bold</string>
         </array>
-        <array key="Inter-Regular.ttf">
-            <string>Inter-Regular</string>
-        </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="122" id="KGk-i7-Jjw" customClass="PastGoalsCell" customModule="GoodLifeApplocation" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="122"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="112" id="KGk-i7-Jjw" customClass="PastGoalsCell" customModule="GoodLifeApplocation" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="112"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="122"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="112"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QyH-wQ-f6F" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                        <rect key="frame" x="6" y="6" width="308" height="110"/>
+                        <rect key="frame" x="6" y="6" width="308" height="100"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="0bd-KY-55V">
-                                <rect key="frame" x="0.0" y="0.0" width="308" height="110"/>
+                                <rect key="frame" x="0.0" y="0.0" width="308" height="100"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EhA-wF-cw8">
-                                        <rect key="frame" x="8" y="8" width="30" height="94"/>
+                                        <rect key="frame" x="8" y="8" width="30" height="84"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uzu-fm-kR4">
-                                                <rect key="frame" x="0.0" y="34.5" width="30" height="25"/>
+                                                <rect key="frame" x="0.0" y="29.5" width="30" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Uzu-fm-kR4" secondAttribute="height" multiplier="1:1" id="70G-6g-BJT"/>
                                                     <constraint firstAttribute="height" constant="30" id="HKp-KI-P4p"/>
@@ -55,31 +51,24 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FQU-j8-z29">
-                                        <rect key="frame" x="44" y="8" width="1" height="94"/>
+                                        <rect key="frame" x="44" y="8" width="1" height="84"/>
                                         <color key="backgroundColor" systemColor="systemGray3Color"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="1" id="QRS-sF-gkx"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qf4-F1-OgQ">
-                                        <rect key="frame" x="51" y="8" width="249" height="94"/>
+                                        <rect key="frame" x="51" y="8" width="249" height="84"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5S6-hh-Ase">
-                                                <rect key="frame" x="0.0" y="0.0" width="249" height="94"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="249" height="84"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L2A-yW-cpn">
-                                                        <rect key="frame" x="8" y="8" width="233" height="38.5"/>
+                                                        <rect key="frame" x="8" y="8" width="233" height="68"/>
                                                         <string key="text">Complete Facebook ad
 lessons</string>
                                                         <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="16"/>
                                                         <color key="textColor" name="button"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="3 Facebook ad video lessons left" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rbh-0r-4ko">
-                                                        <rect key="frame" x="8" y="46.5" width="233" height="39.5"/>
-                                                        <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="8" bottom="10" trailing="8"/>
-                                                        <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="10"/>
-                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -130,10 +119,9 @@ lessons</string>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="MarkBtn" destination="Uzu-fm-kR4" id="Gn1-6n-tUm"/>
-                <outlet property="goalDetailsText" destination="Rbh-0r-4ko" id="hZf-yl-FI4"/>
                 <outlet property="goalTitle" destination="L2A-yW-cpn" id="Otc-g6-xWh"/>
             </connections>
-            <point key="canvasLocation" x="131.8840579710145" y="87.723214285714278"/>
+            <point key="canvasLocation" x="131.8840579710145" y="84.375"/>
         </tableViewCell>
     </objects>
     <resources>

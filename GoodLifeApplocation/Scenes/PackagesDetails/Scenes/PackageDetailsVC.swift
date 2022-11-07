@@ -17,6 +17,9 @@ class PackageDetailsVC: UIViewController {
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var nextBtn: UIButtonDesignable!
     
+    @IBOutlet weak var subTitle: UILabel!
+    @IBOutlet weak var revireTxt: UILabel!
+    @IBOutlet weak var titleTxt: UILabel!
     //MARK: - Properties
     
     var oppourtinityDetails:OppourtinityDetails?
@@ -36,8 +39,10 @@ class PackageDetailsVC: UIViewController {
     //MARK: - setup container view
 
     private func setupPageview(){
+        subTitle.text = oppourtinityDetails?.sub_title ?? ""
+        titleTxt.text = oppourtinityDetails?.title ?? ""
+        revireTxt.text = "\(Float(oppourtinityDetails?.reviews_count ?? 0 ))"
         let vc = GeneralPagerViewVC()
-        print(oppourtinityDetails)
         vc.oppourtinityDetails = oppourtinityDetails
 
         self.addChild(vc)

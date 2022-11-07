@@ -14,11 +14,14 @@ class MealMarkerTableViewCell: UITableViewCell,NibLoadableView {
     @IBOutlet weak var descriptionTxt: UILabel!
     @IBOutlet weak var titleTxt: UILabel!
     
+    
+    private var skeletonViews = [UIView]()
+
     //MARK: - Initializer
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+     
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -33,4 +36,13 @@ class MealMarkerTableViewCell: UITableViewCell,NibLoadableView {
         titleTxt.text = item.title
     }
     
+}
+extension MealMarkerTableViewCell{
+public func startSkeleton() {
+    self.playSkeleton(for: self.skeletonViews)
+}
+
+public func stopSkeleton() {
+    self.stopSkeleton(for: self.skeletonViews)
+}
 }

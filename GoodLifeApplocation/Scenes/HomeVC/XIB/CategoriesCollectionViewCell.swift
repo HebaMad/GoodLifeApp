@@ -15,6 +15,7 @@ class CategoriesCollectionViewCell: UICollectionViewCell,NibLoadableView  {
     @IBOutlet weak var noOfCategory: UILabel!
     @IBOutlet weak var percentageOfAccomplish: UILabel!
     
+    @IBOutlet weak var completionRate: UIProgressView!
     //MARK: - Properties
 
     private var skeletonViews = [UIView]()
@@ -37,6 +38,8 @@ class CategoriesCollectionViewCell: UICollectionViewCell,NibLoadableView  {
 
     func setup(_ item: Categories) {
         CategoryTitle.text = item.title
+        percentageOfAccomplish.text = String(describing: item.complete_percent ?? 0) + "%"
+        completionRate.progress = Float(item.complete_percent ?? 0)/100.0
     }
 }
 extension CategoriesCollectionViewCell {

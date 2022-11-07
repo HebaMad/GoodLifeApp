@@ -47,11 +47,13 @@ class DashboardVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
         changeSideMenuSide()
         presenter.getCategories()
         presenter.getResource()
         presenter.getMyTask()
         presenter.delegate=self
+        
     }
     
     //MARK: - Side menu setup
@@ -290,14 +292,12 @@ extension DashboardVC: UICollectionViewDataSource,UICollectionViewDelegate,UICol
             
             
         case .categories:
-            let vc = ResourceDetailsVC.instantiate()
-            navigationController?.pushViewController(vc, animated: true)
+         print("")
         case .Task:
-            let vc = ResourceDetailsVC.instantiate()
-            navigationController?.pushViewController(vc, animated: true)
+           print("")
         case .Resource:
-            let vc = ResourceDetailsVC.instantiate()
-            navigationController?.pushViewController(vc, animated: true)
+            presenter.getResourceDetails(categoryID: resource[indexPath.row].id ?? 0)
+            self.presenter.delegate=self
         }
     }
     
@@ -329,7 +329,14 @@ extension DashboardVC:DashboardDelegate{
     
     func getNotification(data: AllNotifiaction) {}
     func getMyGoalAndBenchmark(data: GoalsAndBenchmark) {}
-    func getResourceDetails(data: ResourceDetails) {}
+
+    func getResourceDetails(data: ResourceDetails) {
+            
+            let vc = ResourceDetailsVC.instantiate()
+            vc.resourceTopic=data
+            navigationController?.pushViewController(vc, animated: true)
+        }
+  
     func showAlerts(title: String, message: String) {}
     
 

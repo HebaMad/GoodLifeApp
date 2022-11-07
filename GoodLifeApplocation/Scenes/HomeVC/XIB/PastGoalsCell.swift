@@ -10,7 +10,6 @@ import UIKit
 class PastGoalsCell: UITableViewCell, NibLoadableView{
     //MARK: - Outlet
 
-    @IBOutlet weak var goalDetailsText: UILabel!
     @IBOutlet weak var goalTitle: UILabel!
     @IBOutlet weak var MarkBtn: UIButton!
 
@@ -31,7 +30,6 @@ class PastGoalsCell: UITableViewCell, NibLoadableView{
     func configureCell(Goal:Goals,iconSystem:UIImage,tint:UIColor){
         MarkBtn.setBackgroundImage(iconSystem, for: .normal)
         MarkBtn.tintColor = tint
-        goalDetailsText.text = Goal.category?.details
         goalTitle.text = Goal.title ?? ""
     }
     

@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -43,15 +42,15 @@
                                         <rect key="frame" x="0.0" y="8" width="223" height="40"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KsG-p7-VXi">
-                                                <rect key="frame" x="8" y="0.0" width="177" height="40"/>
+                                                <rect key="frame" x="8" y="0.0" width="207" height="40"/>
                                                 <string key="text">Community
 Movie Night</string>
                                                 <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="16"/>
                                                 <color key="textColor" name="button"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9wp-R6-FFg">
-                                                <rect key="frame" x="185" y="0.0" width="30" height="40"/>
+                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9wp-R6-FFg">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="40"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r2w-BD-LMh" customClass="UIButtonDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
                                                         <rect key="frame" x="2.5" y="7.5" width="25" height="25"/>
@@ -287,7 +286,7 @@ Movie Night</string>
                                 </subviews>
                                 <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="0.0" bottom="0.0" trailing="0.0"/>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVg-fT-6eB" customClass="UIButtonDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVg-fT-6eB" customClass="UIButtonDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
                                 <rect key="frame" x="181" y="420" width="34" height="34"/>
                                 <color key="backgroundColor" name="ButtonColor"/>
                                 <constraints>
