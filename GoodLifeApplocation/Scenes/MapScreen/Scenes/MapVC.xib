@@ -94,6 +94,7 @@
                                 <constraint firstItem="242-4j-6GF" firstAttribute="leading" secondItem="AA7-r5-7Nk" secondAttribute="leading" id="BmJ-fE-NrM"/>
                                 <constraint firstItem="242-4j-6GF" firstAttribute="top" secondItem="AA7-r5-7Nk" secondAttribute="top" constant="4" id="D9C-dN-4Fe"/>
                                 <constraint firstAttribute="trailing" secondItem="242-4j-6GF" secondAttribute="trailing" id="FDw-2j-dU4"/>
+                                <constraint firstAttribute="height" constant="358" id="i7D-Lw-3lF"/>
                             </constraints>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="color" keyPath="startColor">
@@ -109,9 +110,6 @@
                         </view>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="480" id="WQ5-Er-cNb"/>
-                    </constraints>
                     <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
                 </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rey-PC-ONn">
@@ -137,6 +135,7 @@
                 <constraint firstItem="W4p-ag-nqa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="hs0-9N-E44"/>
                 <constraint firstItem="Y8b-85-sXm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="qsY-VD-T3p"/>
                 <constraint firstItem="rey-PC-ONn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="wyu-Mu-cJX"/>
+                <constraint firstItem="W4p-ag-nqa" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.535714" id="y6f-5i-gqe"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="123.88392857142857"/>
         </view>

@@ -49,7 +49,7 @@ class DashboardVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         
         changeSideMenuSide()
-        presenter.getCategories()
+        presenter.getCategories(opportunity_id: UserDefaults.standard.integer(forKey: "id"))
         presenter.getResource()
         presenter.getMyTask()
         presenter.delegate=self

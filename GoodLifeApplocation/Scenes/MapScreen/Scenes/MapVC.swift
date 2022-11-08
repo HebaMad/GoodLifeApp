@@ -451,6 +451,8 @@ extension MapVC{
 
 extension MapVC:MKMapViewDelegate{
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        print(view.annotation!.title!!)
+        getAnnotationId(title:view.annotation!.title!!)
                     let controller = choosingMinistryNeedsVC()
                     controller.needTypeID = categoryMainId
       
@@ -462,5 +464,18 @@ extension MapVC:MKMapViewDelegate{
         
                     self.present(sheetController, animated: false, completion: nil)
     }
+    
+    
 }
 
+
+extension MapVC {
+    func getAnnotationId(title:String){
+        for indx in 0 ..< mainNeedType.count{
+           if mainNeedType[indx].name == title {
+               UserDefaults.standard.set(2, forKey: "id")
+               break
+            }
+        }
+    }
+}

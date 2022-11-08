@@ -30,7 +30,7 @@ class AllCategoriesVC: UIViewController {
         
         setupTableView()
         bindBackButton()
-        presenter.getCategories()
+        presenter.getCategories(opportunity_id: UserDefaults.standard.integer(forKey: "id"))
         presenter.delegate=self
         
     }

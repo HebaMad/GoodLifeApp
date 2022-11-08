@@ -13,7 +13,7 @@ enum DashboardTarget:TargetType{
     
     case AddTask(title:String,category_id:Int,all_days:String,start_date:String,end_date:String)
     case AddGoal(title:String,category_id:Int,deadline:String,url:String)
-    case categories
+    case categories(opportunity_id:Int)
     case Resources
     case getMyTask
     case markMyTask(taskID:Int)
@@ -60,9 +60,9 @@ enum DashboardTarget:TargetType{
         case .AddTask,.AddGoal,.markMyTask,.markMyGoal:
             return .requestParameters(parameters: param, encoding: URLEncoding.httpBody)
             
-        case .categories,.Resources,.getMyTask,.notification:
+        case .Resources,.getMyTask,.notification:
             return .requestPlain
-        case .resourceDetails,.getMyGoalsAndBenchmark:
+        case .resourceDetails,.getMyGoalsAndBenchmark,.categories:
             return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
 
         }
@@ -88,7 +88,8 @@ enum DashboardTarget:TargetType{
         
         
         switch self {
- 
+        case .categories(let opportunity_id):
+            return ["opportunity_id":opportunity_id]
         case .getMyGoalsAndBenchmark(let categoryID):
             return ["category_id":categoryID]
         case .resourceDetails(let ResourceID):

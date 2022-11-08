@@ -75,6 +75,8 @@ struct OppourtinityDetails : Codable {
 
 }
 
+
+
 struct Graph:Codable{
     let name:String?
     let percent:Int?
@@ -263,11 +265,14 @@ struct Ventures:Codable{
 struct Categories:Codable{
     
     let id:Int?
+    let opportunity_id:Int?
+    let sub_title:String?
     let title:String?
     let details:String?
     let complete_percent:Int?
     
 }
+
 struct DahboardCategory:Decodable{
     let notificationsCount:Int?
     let categories:[Categories]?

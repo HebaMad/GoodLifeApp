@@ -25,8 +25,8 @@ class DashboardPresenter:NSObject{
     
     var delegate :dashboardDelegate?
     
-    func getCategories(){
-        DashboardManager.shared.getCategories { Response in
+    func getCategories(opportunity_id:Int){
+        DashboardManager.shared.getCategories(opportunity_id: opportunity_id) { Response in
             switch Response{
                 
             case let .success(response):

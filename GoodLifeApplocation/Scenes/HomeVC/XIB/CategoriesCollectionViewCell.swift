@@ -37,7 +37,8 @@ class CategoriesCollectionViewCell: UICollectionViewCell,NibLoadableView  {
     //MARK: - configuration cell
 
     func setup(_ item: Categories) {
-        CategoryTitle.text = item.title
+        CategoryTitle.text = item.title ?? ""
+        noOfCategory.text = item.sub_title ?? ""
         percentageOfAccomplish.text = String(describing: item.complete_percent ?? 0) + "%"
         completionRate.progress = Float(item.complete_percent ?? 0)/100.0
     }

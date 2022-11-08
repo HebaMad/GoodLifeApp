@@ -18,7 +18,6 @@ class GeneralMarketingPageVC: UIViewController, IndicatorInfoProvider {
     @IBOutlet weak var levelOfDifficuilty: UILabel!
     @IBOutlet weak var footerTitleTxt: UILabel!
     
-    
     //MARK: - Properties
     
     var itemInfo: IndicatorInfo = "Marketing"
@@ -44,6 +43,7 @@ class GeneralMarketingPageVC: UIViewController, IndicatorInfoProvider {
     //MARK: - SetupTableview
     
     func setupTableview(){
+        
         marketingTable.register(GeneralMarketingBreakdown.self)
         marketingTable.delegate = self
         marketingTable.dataSource = self

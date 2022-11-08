@@ -9,11 +9,11 @@ import UIKit
 
 class AddTaskVC: UIViewController,UITextFieldDelegate,UIImagePickerControllerDelegate  {
 
+    
     //MARK: - Outlet
     
     @IBOutlet private(set) weak var AddBtn: UIButton!
     @IBOutlet private(set) weak var closeBtn: UIButton!
-  
     @IBOutlet weak var CategoryChoice: UITextFieldDataPicker!
     @IBOutlet private(set) weak var titleTxtfield: UITextField!
     @IBOutlet private(set) weak var alertSwitch: UISwitch!
@@ -31,7 +31,8 @@ class AddTaskVC: UIViewController,UITextFieldDelegate,UIImagePickerControllerDel
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter.getCategories()
+        
+        presenter.getCategories(opportunity_id: UserDefaults.standard.integer(forKey: "id"))
         presenter.delegate=self
         bindBackButton()
         CategoryChoice.pickerDelegate=self

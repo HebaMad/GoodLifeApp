@@ -12,7 +12,7 @@ protocol DashboardNetworkable:Networkable  {
 
     func AddTask(title:String,category_id:Int,all_days:String,start_date:String,end_date:String,completion: @escaping (Result<BaseResponse<userProfile>, Error>)-> ())
     func AddGoal(title:String,category_id:Int,deadline:String,url:String,completion: @escaping (Result<BaseResponse<goalCreation>, Error>)-> ())
-    func getCategories(completion: @escaping (Result<BaseResponse<DahboardCategory>, Error>)-> ())
+    func getCategories(opportunity_id:Int,completion: @escaping (Result<BaseResponse<DahboardCategory>, Error>)-> ())
     func getResource(completion: @escaping (Result<BaseResponse<DashboardResource>, Error>)-> ())
     func getMyTask(completion: @escaping (Result<BaseResponse<DashboardTask>, Error>)-> ())
     func markMyTask(taskID:Int,completion: @escaping (Result<BaseResponse<Tasks>, Error>)-> ())
@@ -20,7 +20,7 @@ protocol DashboardNetworkable:Networkable  {
     func resourceDetails(ResourceID:Int,completion: @escaping (Result<BaseResponse<ResourceDetails>, Error>)-> ())
     func markMyGoal(goalID:Int,completion: @escaping (Result<BaseResponse<Tasks>, Error>)-> ())
     func notification(completion: @escaping (Result<BaseResponse<AllNotifiaction>, Error>)-> ())
-
+    
 }
 
 class DashboardManager:DashboardNetworkable{
@@ -44,8 +44,8 @@ class DashboardManager:DashboardNetworkable{
         request(target: .AddGoal(title: title, category_id: category_id, deadline: deadline,url:url), completion: completion)
     }
     
-    func getCategories(completion: @escaping (Result<BaseResponse<DahboardCategory>, Error>) -> ()) {
-        request(target: .categories, completion: completion)
+    func getCategories(opportunity_id:Int,completion: @escaping (Result<BaseResponse<DahboardCategory>, Error>) -> ()) {
+        request(target: .categories(opportunity_id: opportunity_id), completion: completion)
     }
     
     func getResource(completion: @escaping (Result<BaseResponse<DashboardResource>, Error>) -> ()) {

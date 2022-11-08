@@ -74,6 +74,8 @@ private extension choosingMinistryNeedsVC {
 
     }
 }
+
+
     //MARK: - PrivateHandler
 
 private extension choosingMinistryNeedsVC{
@@ -86,21 +88,21 @@ private extension choosingMinistryNeedsVC{
             
             recommendationView.isHidden = false
             interest = 3
-            presenter.getSmartRecommendation(interestId: interest, needTypeId: 5)
+            presenter.getSmartRecommendation(interestId: interest, needTypeId: UserDefaults.standard.integer(forKey: "id"))
             presenter.delegate = self
             
         case lifeBtn:
          
             recommendationView.isHidden = false
             interest = 2
-            presenter.getSmartRecommendation(interestId: interest, needTypeId: 5)
+            presenter.getSmartRecommendation(interestId: interest, needTypeId:5)
             presenter.delegate = self
 
         case movementLifeBtn:
             
             recommendationView.isHidden = false
             interest = 1
-            presenter.getSmartRecommendation(interestId: interest, needTypeId: 5)
+            presenter.getSmartRecommendation(interestId: interest, needTypeId: UserDefaults.standard.integer(forKey: "id"))
             presenter.delegate = self
             
         case filterBtn:
@@ -197,12 +199,11 @@ extension choosingMinistryNeedsVC:HomeDelegate{
 }
 
 extension choosingMinistryNeedsVC:DataFiltered{
+    
     func filteredData(data: Oppourtinity) {
         oppourtinity=data.items ?? []
         MinistrySubscriptionCollectionview.reloadData()
         
     }
-    
-    
 }
 
