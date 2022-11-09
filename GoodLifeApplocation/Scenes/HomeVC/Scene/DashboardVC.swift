@@ -11,6 +11,7 @@ import  SkeletonView
 class DashboardVC: UIViewController {
     //MARK: - Outlet
     
+    @IBOutlet weak var searchBar: SearchView!
     @IBOutlet weak var elementCollectionView: UICollectionView!
     @IBOutlet weak var menuBtn: UIButton!
     @IBOutlet weak var notificationBtn: UIButton!
@@ -33,12 +34,14 @@ class DashboardVC: UIViewController {
     }
     
     
+    
+    
     //MARK: - Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.isSkeleton = true
-        
+//        setupSearchProperties()
         setUpSideMenu()
         setupCollectionview()
         menuBtnBinding()
@@ -93,6 +96,34 @@ class DashboardVC: UIViewController {
         elementCollectionView.delegate=self
         
         elementCollectionView.reloadData()
+    }
+    
+    
+    
+//   func  setupSearchProperties(){
+//    searchBar.btnSearch.addTarget(self, action: #selector(searchActioon), for: .touchUpInside)
+//
+//    searchBar.startHandler {
+//    }
+//
+//    searchBar.endEditingHandler {
+//
+//        self.HomeSearch()
+//    }
+//
+//    }
+    
+    @objc func searchActioon(_ sender : UIButton ) {
+        HomeSearch()
+     
+}
+    
+    
+    func HomeSearch(){
+        if (self.searchBar.txtSearch.text)?.count != 0{
+        
+        
+        }
     }
     
     

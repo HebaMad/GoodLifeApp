@@ -24,6 +24,7 @@ enum HomeApiTarget:TargetType{
     
     var path: String {
         switch self {
+            
         case .Home:return "userHomeScreenFilter"
             
         case .getNeedMainCategory:return "getNeedMainCategory"
@@ -37,7 +38,6 @@ enum HomeApiTarget:TargetType{
         case .oppourtinityDetails:return "getOpportunityDetails"
             
         case .Filter:return "filterOpportunities"
-            
             
         }
     }

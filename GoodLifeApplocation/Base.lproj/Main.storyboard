@@ -774,6 +774,7 @@ Night</string>
                         <outlet property="menuBtn" destination="0Nl-j8-qOo" id="o2r-7M-Z7v"/>
                         <outlet property="notificationBtn" destination="Vce-EC-hch" id="Qq7-aN-bWJ"/>
                         <outlet property="notificationNumber" destination="Ads-Ue-rxg" id="KKB-hg-Zvc"/>
+                        <outlet property="searchBar" destination="6RK-aP-vgX" id="uop-54-3sb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xkO-qj-a2V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1205,7 +1206,7 @@ Night</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="94" estimatedRowHeight="94" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Xyv-zA-WNd">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="94" estimatedRowHeight="94" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Xyv-zA-WNd">
                                 <rect key="frame" x="12" y="94" width="390" height="768"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>

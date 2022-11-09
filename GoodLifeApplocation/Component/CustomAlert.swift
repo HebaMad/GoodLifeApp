@@ -128,8 +128,9 @@ extension UIViewController{
        popUp.okButton.setTitle(confirmBtnTitle ?? "OK", for: .normal)
        
        DispatchQueue.main.async {
-//           popUp.frame = self.view.bounds
+        popUp.frame = self.view.bounds
            self.view.addSubview(popUp)
+           
            NSLayoutConstraint.activate([
             popUp.topAnchor.constraint(equalTo:  self.view.topAnchor),
             popUp.leftAnchor.constraint(equalTo:  self.view.leftAnchor),

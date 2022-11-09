@@ -144,6 +144,10 @@ class OnBoardingVC: UIViewController {
                     longitude = (vc as! OnBoardingFrame2).long
                     print(latitude)
                     print(longitude)
+                    if Double(latitude) == 0.0 && Double(longitude) == 0.0 {
+                        showSnackBar(message: "please we want your location to provide you an application services")
+
+                    }else{
 
                     self.contsinerView.subviews.first?.removeFromSuperview()
         
@@ -155,7 +159,7 @@ class OnBoardingVC: UIViewController {
                     self.onBoardingScreen=4
                     vc!.didMove(toParent: self)
                     vc!.view.frame = self.contsinerView.bounds
-
+                    }
                     break
                 case 4:
                     maxValueInvestment = (vc as! OnBoardingFrame3).maxvalue
