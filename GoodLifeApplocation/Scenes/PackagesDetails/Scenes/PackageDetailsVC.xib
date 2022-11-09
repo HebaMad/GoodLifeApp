@@ -23,6 +23,7 @@
                 <outlet property="containerView" destination="hyV-Qc-AvS" id="ebv-rO-mbH"/>
                 <outlet property="nextBtn" destination="KDR-Z2-oBA" id="mFq-K1-OpG"/>
                 <outlet property="packageDetailsSegmentControl" destination="cML-wf-9XA" id="YYo-PU-Z2J"/>
+                <outlet property="rateCount" destination="Cgy-CI-kuu" id="Ifs-28-HK2"/>
                 <outlet property="revireTxt" destination="SOP-mn-53C" id="HKM-OJ-HNJ"/>
                 <outlet property="subTitle" destination="cVk-rU-GaA" id="Fqy-Z6-Zna"/>
                 <outlet property="titleTxt" destination="Wrp-xd-f1u" id="4l4-5l-Uh6"/>
@@ -88,23 +89,20 @@ Movie Night</string>
                                                     <rect key="frame" x="20" y="0.0" width="161" height="20"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="HFz-FR-2yG">
-                                                            <rect key="frame" x="70" y="-0.5" width="30" height="20"/>
+                                                            <rect key="frame" x="96" y="-0.5" width="16" height="20"/>
                                                             <color key="tintColor" name="review star"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="30" id="Slg-z6-tOc"/>
+                                                                <constraint firstAttribute="width" constant="16" id="Slg-z6-tOc"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.25" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOP-mn-53C">
-                                                            <rect key="frame" x="90" y="0.0" width="63" height="20"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="63" id="0e5-Zz-VKn"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <rect key="frame" x="102" y="0.0" width="43" height="20"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="70" bottom="0.0" trailing="8"/>
+                                                    <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="96" bottom="0.0" trailing="16"/>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(196) from community" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cgy-CI-kuu">
                                                     <rect key="frame" x="166" y="0.0" width="161" height="20"/>

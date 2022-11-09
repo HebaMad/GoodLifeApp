@@ -98,6 +98,7 @@ class ProfilePresenter:NSObject{
     }
     
      func editProfile(name:String,mobileNumber:String,location:String,img:Data){
+         SVProgressHUD.show()
          SettingManager.shared.editProfile(name: name, mobileNumber: mobileNumber, location: location, img: img){ Response in
             switch Response{
                 
@@ -114,11 +115,12 @@ class ProfilePresenter:NSObject{
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
 
             }
+             SVProgressHUD.dismiss()
         }
     }
     
     func userProfile(){
-        SVProgressHUD.show()
+//        SVProgressHUD.show()
         
         SettingManager.shared.getUserProfile { Response in
             switch Response{
@@ -135,7 +137,7 @@ class ProfilePresenter:NSObject{
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
 
             }
-            SVProgressHUD.dismiss()
+//            SVProgressHUD.dismiss()
 
         }
     }

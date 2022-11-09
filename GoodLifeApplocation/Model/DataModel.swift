@@ -69,6 +69,7 @@ struct OppourtinityDetails : Codable {
     let created_at:String?
     let opportunity_match:Int?
     let rate:Int?
+    let rate_count:Int?
     let reviews_count:Int?
     let general:[GeneralOppourtinity]?
     let specific:[SpecificOppourtinity]?
@@ -256,6 +257,7 @@ struct Ventures:Codable{
     let created_at:String?
     let opportunity_match:Int?
     let rate:Int?
+    let rate_count:Int?
     let reviews_count:Int?
 
 

@@ -95,7 +95,8 @@ private extension choosingMinistryNeedsVC{
          
             recommendationView.isHidden = false
             interest = 2
-            presenter.getSmartRecommendation(interestId: interest, needTypeId:5)
+            print( UserDefaults.standard.integer(forKey: "id"))
+            presenter.getSmartRecommendation(interestId: interest, needTypeId: UserDefaults.standard.integer(forKey: "id"))
             presenter.delegate = self
 
         case movementLifeBtn:
@@ -144,6 +145,7 @@ extension choosingMinistryNeedsVC:UICollectionViewDataSource{
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(oppourtinity[indexPath.row].id ?? 0)
         presenter.oppourtinityDetails(opportunityID: oppourtinity[indexPath.row].id ?? 0)
         presenter.delegate=self
     }

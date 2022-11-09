@@ -7,6 +7,7 @@
 
 import UIKit
 import SDWebImage
+import SVProgressHUD
 class ProfileVC: UIViewController {
 
     @IBOutlet weak var backBtn: UIButton!
@@ -20,12 +21,22 @@ class ProfileVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        bindButtons()
+//        setupTableView()
+//        presenter.userProfile()
+//        presenter.PrivacyPolicy()
+//        presenter.delegate = self
+
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        SVProgressHUD.show()
         bindButtons()
         setupTableView()
         presenter.userProfile()
         presenter.PrivacyPolicy()
         presenter.delegate = self
-
+        
     }
 
     private func setupTableView(){
@@ -100,6 +111,7 @@ extension ProfileVC:ProfileDelegate{
         self.venture = data.ventures ?? []
         userImg.sd_setImage(with: URL(string:data.image_profile ?? "" ))
         print( self.venture.count)
+        SVProgressHUD.dismiss()
         venturesTableview.reloadData()
 
     }

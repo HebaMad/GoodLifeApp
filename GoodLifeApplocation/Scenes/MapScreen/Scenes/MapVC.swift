@@ -473,7 +473,7 @@ extension MapVC {
     func getAnnotationId(title:String){
         for indx in 0 ..< mainNeedType.count{
            if mainNeedType[indx].name == title {
-               UserDefaults.standard.set(2, forKey: "id")
+               UserDefaults.standard.set(mainNeedType[indx].id, forKey: "id")
                break
             }
         }

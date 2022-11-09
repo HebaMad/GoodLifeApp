@@ -20,6 +20,7 @@ class PackageDetailsVC: UIViewController {
     @IBOutlet weak var subTitle: UILabel!
     @IBOutlet weak var revireTxt: UILabel!
     @IBOutlet weak var titleTxt: UILabel!
+    @IBOutlet weak var rateCount: UILabel!
     //MARK: - Properties
     
     var oppourtinityDetails:OppourtinityDetails?
@@ -41,7 +42,8 @@ class PackageDetailsVC: UIViewController {
     private func setupPageview(){
         subTitle.text = oppourtinityDetails?.sub_title ?? ""
         titleTxt.text = oppourtinityDetails?.title ?? ""
-        revireTxt.text = "\(Float(oppourtinityDetails?.reviews_count ?? 0 ))"
+        revireTxt.text = "\(Float(oppourtinityDetails?.rate ?? 0 ))"
+        rateCount.text = "(\(oppourtinityDetails?.rate_count ?? 0))" + "" + "from community"
         let vc = GeneralPagerViewVC()
         vc.oppourtinityDetails = oppourtinityDetails
 

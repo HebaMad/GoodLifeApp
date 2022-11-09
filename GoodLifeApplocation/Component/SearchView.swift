@@ -55,10 +55,10 @@ class SearchView: UIView {
            }
            @IBInspectable var placeHolder: String? {
                get {
-                   return self.txtSearch.text;
+                   return self.txtSearch.placeholder;
                }
                set {
-                   self.txtSearch.text = newValue;
+                   self.txtSearch.placeholder = newValue;
                }
            }
        
@@ -97,6 +97,7 @@ class SearchView: UIView {
             return view
         }
         open func setupData(){
+            self.txtSearch.textColor = UIColor(named: "button")
             self.txtSearch.addTarget(self, action:#selector(self.editingChange), for: .editingChanged);
             self.txtSearch.addTarget(self, action:#selector(self.endChange), for: .editingDidEnd);
             self.txtSearch.delegate=self;

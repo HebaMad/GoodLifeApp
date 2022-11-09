@@ -99,7 +99,7 @@ extension EditProfileVC{
         do{
 
             let name = try nameTxtField.validatedText(validationType: .requiredField(field: "Name required"))
-            let number = try phoneNumber.validatedText(validationType: .requiredField(field: "number requied"))
+            let number = try phoneNumber.validatedText(validationType: .requiredField(field: "Number requied"))
             let location = try loctionTxt.validatedText(validationType: .requiredField(field: "Location requied"))
             
             self.presenter.editProfile(name: name, mobileNumber: number, location: location, img: img)
