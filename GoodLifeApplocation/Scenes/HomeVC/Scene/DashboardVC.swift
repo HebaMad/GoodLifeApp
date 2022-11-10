@@ -41,7 +41,7 @@ class DashboardVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.isSkeleton = true
-//        setupSearchProperties()
+        setupSearchProperties()
         setUpSideMenu()
         setupCollectionview()
         menuBtnBinding()
@@ -52,9 +52,9 @@ class DashboardVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         
         changeSideMenuSide()
-        presenter.getCategories(opportunity_id: UserDefaults.standard.integer(forKey: "id"))
-        presenter.getResource()
-        presenter.getMyTask()
+        presenter.getCategories(opportunity_id: UserDefaults.standard.integer(forKey: "id"), searchTxt: "")
+        presenter.getResource(searchTxt: "", category_id:  UserDefaults.standard.integer(forKey: "id"))
+        presenter.getMyTask(searchTxt: "")
         presenter.delegate=self
         
     }
@@ -100,18 +100,18 @@ class DashboardVC: UIViewController {
     
     
     
-//   func  setupSearchProperties(){
-//    searchBar.btnSearch.addTarget(self, action: #selector(searchActioon), for: .touchUpInside)
-//
-//    searchBar.startHandler {
-//    }
-//
-//    searchBar.endEditingHandler {
-//
-//        self.HomeSearch()
-//    }
-//
-//    }
+   func  setupSearchProperties(){
+    searchBar.btnSearch.addTarget(self, action: #selector(searchActioon), for: .touchUpInside)
+
+    searchBar.startHandler {
+    }
+
+    searchBar.endEditingHandler {
+
+        self.HomeSearch()
+    }
+
+    }
     
     @objc func searchActioon(_ sender : UIButton ) {
         HomeSearch()
@@ -120,10 +120,20 @@ class DashboardVC: UIViewController {
     
     
     func HomeSearch(){
+        self.isSkeleton = true
+ 
         if (self.searchBar.txtSearch.text)?.count != 0{
         
-        
+            presenter.getCategories(opportunity_id: UserDefaults.standard.integer(forKey: "id"), searchTxt:self.searchBar.txtSearch.text!)
+            presenter.getResource(searchTxt:self.searchBar.txtSearch.text! , category_id:  UserDefaults.standard.integer(forKey: "id"))
+            presenter.getMyTask(searchTxt:self.searchBar.txtSearch.text!)
+        }else{
+            presenter.getCategories(opportunity_id: UserDefaults.standard.integer(forKey: "id"), searchTxt: "")
+            presenter.getResource(searchTxt: "", category_id:  UserDefaults.standard.integer(forKey: "id"))
+            presenter.getMyTask(searchTxt: "")
         }
+        presenter.delegate=self
+
     }
     
     
@@ -139,9 +149,10 @@ class DashboardVC: UIViewController {
                 let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .absolute(140))
                 
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
-                //                item.contentInsets = .init(top: 0, leading: 0, bottom: 0, trailing: 4)
                 
-                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.99), heightDimension: .estimated(0.5))
+                // item.contentInsets = .init(top: 0, leading: 0, bottom: 0, trailing: 4)
+                
+                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(0.5))
                 
                 
                 let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])

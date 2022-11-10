@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchView" customModule="GoodLifeApplocation" customModuleProvider="target">
             <connections>
+                <outlet property="btnSearch" destination="g4H-3O-NHX" id="6g1-vT-7u8"/>
                 <outlet property="txtSearch" destination="Ctf-1P-FCj" id="ftX-ag-49u"/>
             </connections>
         </placeholder>

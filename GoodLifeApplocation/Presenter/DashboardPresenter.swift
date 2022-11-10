@@ -25,8 +25,8 @@ class DashboardPresenter:NSObject{
     
     var delegate :dashboardDelegate?
     
-    func getCategories(opportunity_id:Int){
-        DashboardManager.shared.getCategories(opportunity_id: opportunity_id) { Response in
+    func getCategories(opportunity_id:Int,searchTxt:String){
+        DashboardManager.shared.getCategories(opportunity_id: opportunity_id, searchTxt: searchTxt) { Response in
             switch Response{
                 
             case let .success(response):
@@ -43,8 +43,8 @@ class DashboardPresenter:NSObject{
         
     }
     
-    func getResource(){
-        DashboardManager.shared.getResource { Response in
+    func getResource(searchTxt:String,category_id:Int){
+        DashboardManager.shared.getResources(searchTxt:searchTxt,category_id:category_id) { Response in
             switch Response{
                 
             case let .success(response):
@@ -99,8 +99,8 @@ class DashboardPresenter:NSObject{
         
     }
     
-    func getMyTask(){
-        DashboardManager.shared.getMyTask { Response in
+    func getMyTask(searchTxt:String){
+        DashboardManager.shared.getMyTask(searchTxt: searchTxt) { Response in
             switch Response{
                 
             case let .success(response):
@@ -123,7 +123,7 @@ class DashboardPresenter:NSObject{
                 
             case let .success(response):
                 if response.status == true{
-                    self.getMyTask()
+                    self.getMyTask(searchTxt: "")
                     self.delegate?.showAlerts(title:"Success", message: "completed successfully")
                     
                     

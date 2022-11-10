@@ -13,9 +13,9 @@ enum DashboardTarget:TargetType{
     
     case AddTask(title:String,category_id:Int,all_days:String,start_date:String,end_date:String)
     case AddGoal(title:String,category_id:Int,deadline:String,url:String)
-    case categories(opportunity_id:Int)
-    case Resources
-    case getMyTask
+    case categories(opportunity_id:Int,searchTxt:String)
+    case Resources(searchTxt:String,category_id:Int)
+    case getMyTask(searchTxt:String)
     case markMyTask(taskID:Int)
     case markMyGoal(goalID:Int)
     case getMyGoalsAndBenchmark(categoryID:Int)
@@ -60,9 +60,9 @@ enum DashboardTarget:TargetType{
         case .AddTask,.AddGoal,.markMyTask,.markMyGoal:
             return .requestParameters(parameters: param, encoding: URLEncoding.httpBody)
             
-        case .Resources,.getMyTask,.notification:
+        case .notification:
             return .requestPlain
-        case .resourceDetails,.getMyGoalsAndBenchmark,.categories:
+        case .resourceDetails,.getMyGoalsAndBenchmark,.categories,.getMyTask,.Resources:
             return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
 
         }
@@ -88,8 +88,8 @@ enum DashboardTarget:TargetType{
         
         
         switch self {
-        case .categories(let opportunity_id):
-            return ["opportunity_id":opportunity_id]
+        case .categories(let opportunity_id,let searchTxt):
+            return ["opportunity_id":opportunity_id,"txt": searchTxt]
         case .getMyGoalsAndBenchmark(let categoryID):
             return ["category_id":categoryID]
         case .resourceDetails(let ResourceID):
@@ -103,7 +103,12 @@ enum DashboardTarget:TargetType{
 
         case .AddTask(let title,let category_id,let all_days,let start_date,let end_date):
             return ["title":title,"category_id":category_id,"all_days":all_days,"start_date":start_date,"end_date":end_date]
+         
+        case .Resources(let searchTxt,let category_id):
+            return ["txt":searchTxt,"category_id":category_id]
             
+        case .getMyTask(let searchTxt):
+            return ["txt":searchTxt]
         default : return [:]
 
 

@@ -37,7 +37,7 @@ class TaskVC: UIViewController {
     
     
     override func viewWillAppear(_ animated: Bool) {
-        self.presenter.getMyTask()
+        self.presenter.getMyTask(searchTxt: "")
         self.presenter.delegate=self
     }
     
