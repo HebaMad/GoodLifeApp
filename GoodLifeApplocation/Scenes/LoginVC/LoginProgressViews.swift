@@ -131,7 +131,7 @@ extension LoginProgressViews:AuthDelegate{
 
 //            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NavigationController")
                 let nav1 = UINavigationController()
-                let mainView = MapVC()  //ViewController = Name of your controller
+                let mainView = MapVC()  
                 nav1.viewControllers = [mainView]
                 nav1.navigationBar.isHidden = true
              self.sceneDelegate.setRootVC(vc: nav1)

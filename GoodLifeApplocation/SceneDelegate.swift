@@ -22,10 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             _delegate.window = window
         }
         
-//        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NavigationController")
-        let vc = SplashScreen()
-
-        setRootVC(vc: vc)
+        saveLogin()
     }
     func setRootVC(vc:UIViewController){
         
@@ -33,6 +30,28 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             self.window?.makeKeyAndVisible()
         
         }
+    
+    func saveLogin(){
+        
+        do {
+            let token = try KeychainWrapper.get(key: AppData.mobile) ?? ""
+            print(token)
+            if token == ""{
+                setRootVC(vc: SplashScreen())
+            }else{
+                let nav1 = UINavigationController()
+                let mainView = MapVC()  
+                nav1.viewControllers = [mainView]
+                nav1.navigationBar.isHidden = true
+                setRootVC(vc: nav1)
+            }
+        }
+        catch{
+            
+            setRootVC(vc: SplashScreen())
+
+        }
+    }
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.

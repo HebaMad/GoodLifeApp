@@ -22,7 +22,7 @@ class AllCategoriesVC: UIViewController {
     var  vc = GoalAndBenchmarkVC.instantiate()
     var categoryID=0
     var categoryname = ""
-    
+    var isChecked = false
     //MARK: - Life cycle
     
     override func viewDidLoad() {
@@ -33,6 +33,11 @@ class AllCategoriesVC: UIViewController {
         presenter.getCategories(opportunity_id: UserDefaults.standard.integer(forKey: "id"), searchTxt: "")
         presenter.delegate=self
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        isChecked = false
     }
     
     //MARK: - Setup table view
@@ -75,9 +80,14 @@ extension AllCategoriesVC:UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if isChecked == false{
+            isChecked = true
         categoryID = categories[indexPath.row].id ?? 0
         categoryname = categories[indexPath.row].title ?? ""
         self.presenter.getMyGoalAndBenchmarks(categoryID: categoryID)
+        }else{
+            
+        }
     }
     
     

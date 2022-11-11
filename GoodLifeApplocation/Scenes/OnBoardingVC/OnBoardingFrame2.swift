@@ -58,7 +58,7 @@ extension OnBoardingFrame2{
                 
                 
             }catch(let error){
-                self.showAlert(title: "Warning", message: (error as! ValidationError).message,hideCancelBtn: true)
+
             }
         }
     }
