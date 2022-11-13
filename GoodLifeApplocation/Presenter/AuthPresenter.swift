@@ -10,7 +10,8 @@ import UIKit
 protocol AuthDelegate{
     func showAlerts(title:String,message:String)
     func checkStatus(status:Bool,msg:String,screen:String)
-    func getuserToken(data:userProfile)
+    func getuserToken(data:startFundRaise)
+    func getLoginToken(data:userProfile)
 
 }
 typealias authDelegate = AuthDelegate & UIViewController
@@ -79,7 +80,7 @@ class AuthPresenter:NSObject{
             case let .success(response):
                 if response.status == true{
                     self.delegate?.checkStatus(status: true,msg: response.message, screen: "verification")
-                    self.delegate?.getuserToken(data: response.data!)
+                    self.delegate?.getLoginToken(data: response.data!)
 
                 }else{
                         self.delegate?.checkStatus(status: false,msg: response.message, screen: "verification")
@@ -104,7 +105,7 @@ class AuthPresenter:NSObject{
                 
             case let .success(response):
                 if response.status == true{
-                        self.delegate?.showAlerts(title:"Success", message: response.message)
+                    self.delegate?.getuserToken(data: response.data!)
 
                 }else{
 

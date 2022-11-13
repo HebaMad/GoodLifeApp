@@ -145,6 +145,7 @@ private extension ReviewExperienceVC{
     func getOppourtinityDetails(categories: OppourtinityDetails) {}
     
     func getOppourtinity(categories: Oppourtinity) {
+        print(self.oppourtinity.count)
         self.oppourtinity = categories.items ?? []
         categoryTxt.pickerDelegate=self
         categoryTxt.dataSource=self

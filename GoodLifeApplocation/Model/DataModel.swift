@@ -190,7 +190,8 @@ struct startFundRaise:Decodable{
     let latitude:String?
     let longitude:String?
     let work_type:String?
-    let amount_raise:Float?
+    let amount_raise:String?
+    let access_token:String?
 }
 struct contactUS:Decodable{
     

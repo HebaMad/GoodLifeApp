@@ -48,7 +48,7 @@ enum SignUserTarget:TargetType{
     
     var headers: [String : String]?{
         switch self{
-        case .SignUp,.startFundRaise:
+        case .SignUp:
             
             do {
                 let token = try KeychainWrapper.get(key: AppData.mobile) ?? ""
@@ -58,7 +58,7 @@ enum SignUserTarget:TargetType{
                 return ["Accept":"application/json","Accept-Language":"en"]
             }
             
-        case .resendCode,.checkCode,.login:
+        case .resendCode,.checkCode,.login,.startFundRaise:
             return ["Accept":"application/json","Accept-Language":"en"]
 
         }

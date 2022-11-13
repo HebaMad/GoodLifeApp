@@ -25,9 +25,6 @@ protocol DashboardNetworkable:Networkable  {
 
 class DashboardManager:DashboardNetworkable{
  
-    
-
-
     typealias targetType = DashboardTarget
 
     var provider: MoyaProvider<DashboardTarget> = MoyaProvider<DashboardTarget>(plugins: [NetworkLoggerPlugin()])

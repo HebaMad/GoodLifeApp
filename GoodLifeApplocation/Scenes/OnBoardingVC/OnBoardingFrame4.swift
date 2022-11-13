@@ -46,15 +46,22 @@ extension OnBoardingFrame4{
         case biWeekelyBtn:
             choice = biWeekelyBtn.currentTitle ?? ""
             biWeekelyBtn.bgColor = UIColor(named: "ButtonColor") ?? .white
-
+            weekelyBtn.backgroundColor = .clear
+            dailyBtn.backgroundColor = .clear
+            break
+            
         case weekelyBtn:
             choice = weekelyBtn.currentTitle ?? ""
             weekelyBtn.bgColor = UIColor(named: "ButtonColor") ?? .white
+            biWeekelyBtn.backgroundColor = .clear
+            dailyBtn.backgroundColor = .clear
+            break
+            
         case dailyBtn:
             choice = dailyBtn.currentTitle ?? ""
             dailyBtn.bgColor = UIColor(named: "ButtonColor") ?? .white
-
-
+            biWeekelyBtn.backgroundColor = .clear
+            weekelyBtn.backgroundColor = .clear
         default:
             print("")
         }

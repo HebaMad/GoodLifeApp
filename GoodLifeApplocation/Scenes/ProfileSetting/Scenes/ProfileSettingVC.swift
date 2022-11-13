@@ -84,7 +84,14 @@ extension ProfileSettingVC{
         case logoutBtn:
             
             self.showAlertPopUp(title: "Notice", message: "Do you want to logout?", buttonTitle1: "Ok", buttonTitle2: "Cancel", buttonTitle1Style: .default, buttonTitle2Style: .cancel) {
-                self.presenter.logout()
+                do{
+                    try KeychainWrapper.set(value:"" , key: self.userProfile?.mobile ?? "")
+                    AppData.mobile = self.userProfile?.mobile ?? ""
+                    self.presenter.logout()
+
+                  } catch let error {
+                    print(error)
+              }
 
             } action2: {
                 

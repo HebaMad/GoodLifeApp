@@ -45,9 +45,9 @@ extension OnBoardingFrame2{
 //            }
             
             guard let location = location else {
-                self.showAlert(title: "Location Permission Required", message: "You should activate your location ", confirmBtnTitle: "OK", cancelBtnTitle: "", hideCancelBtn: true) { (action) in
+//                self.showAlert(title: "Location Permission Required", message: "You should activate your location ", confirmBtnTitle: "OK", cancelBtnTitle: "", hideCancelBtn: true) { (action) in
                     UIApplication.shared.open(URL(string:UIApplication.openSettingsURLString)!)
-                }
+//                }
                 return
             }
             self.lat = "\(location.coordinate.latitude)"

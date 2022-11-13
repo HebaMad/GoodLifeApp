@@ -100,16 +100,18 @@ private extension LoginProgressViews{
 }
                                   
 extension LoginProgressViews:AuthDelegate{
-    func getuserToken(data: userProfile) {
-      do{
-          try KeychainWrapper.set(value: "Bearer"+" "+data.access_token! , key: data.mobile ?? "")
-          AppData.mobile = data.mobile ?? ""
-               
-        } catch let error {
-          print(error)
+    func getuserToken(data: startFundRaise) {}
+    
+    func getLoginToken(data: userProfile) {
+        do{
+            try KeychainWrapper.set(value: "Bearer"+" "+data.access_token! , key: data.mobile ?? "")
+            AppData.mobile = data.mobile ?? ""
+                 
+          } catch let error {
+            print(error)
+      }
     }
-    }
-  
+
     
     func checkStatus(status: Bool, msg: String, screen: String) {
         if status == true{
@@ -129,7 +131,6 @@ extension LoginProgressViews:AuthDelegate{
                
                 self.progressIndex=3
 
-//            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NavigationController")
                 let nav1 = UINavigationController()
                 let mainView = MapVC()  
                 nav1.viewControllers = [mainView]
