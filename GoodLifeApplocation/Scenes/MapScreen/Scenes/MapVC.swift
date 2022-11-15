@@ -18,13 +18,13 @@ protocol OnFilterDissmissed{
 class MapVC: UIViewController {
     
     //MARK: - Outlet
-
+    
     @IBOutlet weak var mapview: MKMapView!
     @IBOutlet weak var communityCollectionview: UICollectionView!
     @IBOutlet weak var generalFilterCollectionview: UICollectionView!
     @IBOutlet weak var specificFilterCollectionview: UICollectionView!
     @IBOutlet weak var menuBtn: UIButton!
-        
+    
     //MARK: - properties
     
     private let sections = MapFilterList.shared.AllCategories
@@ -38,71 +38,73 @@ class MapVC: UIViewController {
     var categoriesFiltered:[mainType]=[]
     
     var mainCategories:[String:[Double:Double]] = [:]
-//    var annotation:[String:Double]=[:]
+    //    var annotation:[String:Double]=[:]
     var latitudeList:[Double]=[]
     var longitudeList:[Double]=[]
-var counter = 0
+    var counter = 0
     var locationCoordinate:[Double:Double]=[:]
     var mainNeedType:[mainType]=[]
     var categoryMainId = 0
+    var latitude:Double = 0.0
+    var longitude:Double = 0.0
     private var isSkeleton: Bool = true {
         didSet {
             self.communityCollectionview.reloadData()
         }
     }
-
+    
     //MARK: - Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        mapview.delegate=self
-
+        //        mapview.delegate=self
+        
         specificFilterCollectionview.isHidden = true
         setUpSideMenu()
         setupCollectionview()
         menuBtnBinding()
-
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         changeSideMenuSide()
-
+        
     }
     
     //MARK: - SETUP side menu
-
+    
     private func changeSideMenuSide(){
-       
-               menu?.leftSide = true
-               SideMenuManager.default.rightMenuNavigationController = nil
-               SideMenuManager.default.leftMenuNavigationController = menu
-            }
+        
+        menu?.leftSide = true
+        SideMenuManager.default.rightMenuNavigationController = nil
+        SideMenuManager.default.leftMenuNavigationController = menu
+    }
     
     private func setUpSideMenu() {
-            let vc = OpportunityViewVC()
-            menu = SideMenuNavigationController(rootViewController: vc)
-            menu?.setNavigationBarHidden(true, animated: false)
-            menu?.presentationStyle = .menuSlideIn
-            menu?.presentationStyle.onTopShadowColor = .black
-            menu?.presentationStyle.onTopShadowRadius = 0
-            menu?.presentationStyle.onTopShadowOffset = .zero
-            menu?.presentationStyle.onTopShadowOpacity = 0
-            menu?.presentationStyle.presentingScaleFactor = 0.99
-            menu?.menuWidth = 280
-
-            SideMenuManager.default.addPanGestureToPresent(toView: self.view)
-        }
+        let vc = OpportunityViewVC()
+        menu = SideMenuNavigationController(rootViewController: vc)
+        menu?.setNavigationBarHidden(true, animated: false)
+        menu?.presentationStyle = .menuSlideIn
+        menu?.presentationStyle.onTopShadowColor = .black
+        menu?.presentationStyle.onTopShadowRadius = 0
+        menu?.presentationStyle.onTopShadowOffset = .zero
+        menu?.presentationStyle.onTopShadowOpacity = 0
+        menu?.presentationStyle.presentingScaleFactor = 0.99
+        menu?.menuWidth = 280
+        
+        SideMenuManager.default.addPanGestureToPresent(toView: self.view)
+    }
     
     
-
-
+    
+    
     //MARK: - SETUP Collection
     private func setupCollectionview(){
-
+        
         setupData()
         generalFilterCollectionview.register(FilterCell.self)
         generalFilterCollectionview.delegate = self
         generalFilterCollectionview.dataSource = self
-
+        
         specificFilterCollectionview.register(SpecificFilterCell.self)
         specificFilterCollectionview.delegate = self
         specificFilterCollectionview.dataSource = self
@@ -112,12 +114,12 @@ var counter = 0
         communityCollectionview.collectionViewLayout = createCompositionalLayout()
         communityCollectionview.dataSource=self
         communityCollectionview.delegate=self
-
+        
         communityCollectionview.reloadData()
-
+        
     }
     //MARK: - compositional layout creation
-
+    
     private func createCompositionalLayout() -> UICollectionViewCompositionalLayout{
         UICollectionViewCompositionalLayout { [weak self] sectionIndex, layoutEnviroment in
             guard let self = self  else { return nil }
@@ -128,7 +130,7 @@ var counter = 0
                 let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(30))
                 
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
-//                item.contentInsets = .init(top: 0, leading: 0, bottom: 0, trailing: 4)
+                //                item.contentInsets = .init(top: 0, leading: 0, bottom: 0, trailing: 4)
                 
                 let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(0.5))
                 
@@ -137,7 +139,7 @@ var counter = 0
                 group.contentInsets = .init(top: 0, leading: 0, bottom: 0, trailing: 0)
                 let section = NSCollectionLayoutSection(group: group)
                 
-//                section.orthogonalScrollingBehavior = .continuous
+                //                section.orthogonalScrollingBehavior = .continuous
                 section.contentInsets = .init(top: 0, leading: 4, bottom: 0, trailing: 4)
                 section.boundarySupplementaryItems = [self.supplementaryHeaderItem()]
                 section.supplementariesFollowContentInsets = false
@@ -146,14 +148,14 @@ var counter = 0
                 
                 
                 let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(30))
-
+                
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
                 let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(0.5))
                 
                 let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-               
+                
                 let section = NSCollectionLayoutSection(group: group)
-//                section.orthogonalScrollingBehavior = .continuous
+                //                section.orthogonalScrollingBehavior = .continuous
                 section.contentInsets = .init(top: 0, leading: 4, bottom: 0, trailing: 4)
                 section.boundarySupplementaryItems = [self.supplementaryHeaderItem()]
                 section.supplementariesFollowContentInsets = false
@@ -167,7 +169,7 @@ var counter = 0
     private func supplementaryHeaderItem() -> NSCollectionLayoutBoundarySupplementaryItem {
         .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .estimated(50)), elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
     }
-
+    
 }
 
 
@@ -185,7 +187,7 @@ private extension MapVC{
 private extension MapVC{
     @objc func buttonWasTapped(){
         present(menu!, animated: true, completion: nil)
-
+        
     }
 }
 
@@ -198,13 +200,13 @@ private extension MapVC {
         self.isSkeleton = true
         presenter.getCategoriesData(searchTxt: "")
         presenter.delegate = self
-
+        
         presenter.mainStandardFilter()
         presenter.delegate = self
         
         presenter.subStandardFilter()
         presenter.delegate = self
-
+        
         
     }
     
@@ -213,8 +215,8 @@ private extension MapVC {
     @objc func generalFilterPressed(_ sender:UIButton){
         specificFilterCollectionview.isHidden = false
         categoryMainId = generalFiltering[sender.tag].id ?? 0
-//        self.presenter.markMyTask(taskid: myCurrentTask[sender.tag].id ?? 0)
-//        self.elementCollectionView.reloadData()
+        //        self.presenter.markMyTask(taskid: myCurrentTask[sender.tag].id ?? 0)
+        //        self.elementCollectionView.reloadData()
         
     }
 }
@@ -230,7 +232,7 @@ extension MapVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollection
         }
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-       
+        
         if collectionView == generalFilterCollectionview{
             
             return generalFiltering.count
@@ -241,8 +243,8 @@ extension MapVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollection
             case .recentlyViewed:return self.isSkeleton ? 3 :  recentlyViewed.count
             case .recommendedMinistries:return self.isSkeleton ? 3 : recommendedMinistries.count
             }
-                
-           
+            
+            
         }else{
             return specificFiltering.count
         }
@@ -257,12 +259,12 @@ extension MapVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollection
             cell.configureCell(category: generalFiltering[indexPath.row])
             cell.categoriesFilterBtn.addTarget(self, action: #selector(generalFilterPressed), for: .touchUpInside)
             cell.categoriesFilterBtn.tag=indexPath.row
-
+            
             return cell
             
             
         }else if collectionView == communityCollectionview{
-   
+            
             switch sections[indexPath.section] {
             case .recentlyViewed:
                 
@@ -299,21 +301,21 @@ extension MapVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollection
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == generalFilterCollectionview{
             return  CGSize(width:((self.view.frame.width/5)-12), height: 45)
-
-
+            
+            
         }else if collectionView == specificFilterCollectionview{
             return  CGSize(width:((self.view.frame.width / 4)-12), height:66)
         }else{
             return  CGSize(width:(self.view.frame.width), height:30)
         }
-
+        
     }
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == generalFilterCollectionview{
-
-
+            
+            
         }else if collectionView == specificFilterCollectionview{
             self.presenter.categriesFailtered(mainCategoriesID: "\(categoryMainId)", subCategoriesID: "\(specificFiltering[indexPath.row].id ?? 0)")
             self.presenter.delegate = self
@@ -348,8 +350,8 @@ extension MapVC :HomeDelegate{
         longitudeList = makeLongtiudeRandomList(mainNeedType.count, long: 34.3088)
         print(latitudeList)
         print(latitudeList)
-
-         createLocationCoordinateRandomPoints(latList: latitudeList, longList: longitudeList)
+        
+        createLocationCoordinateRandomPoints(latList: latitudeList, longList: longitudeList)
     }
     
     func getsubCategoriesFiltering(categories: SubHomeCategories) {
@@ -370,12 +372,12 @@ extension MapVC :HomeDelegate{
         longitudeList=[]
         self.isSkeleton = false
         mainNeedType=categories.main_needs_types ?? []
-
+        
         recentlyViewed = categories.recentlyViewed ?? []
         recommendedMinistries = categories.recommendedMinistries ?? []
-        latitudeList = makeLatitudeRandomList(5, lat: 31.3547)
-        longitudeList = makeLongtiudeRandomList(5, long: 34.3088)
-         createLocationCoordinateRandomPoints(latList: latitudeList, longList: longitudeList)
+        latitudeList = makeLatitudeRandomList(5, lat: latitude)
+        longitudeList = makeLongtiudeRandomList(5, long: longitude)
+        createLocationCoordinateRandomPoints(latList: latitudeList, longList: longitudeList)
         communityCollectionview.reloadData()
         
     }
@@ -385,7 +387,7 @@ extension MapVC :HomeDelegate{
 extension MapVC: OnFilterDissmissed {
     func filteredData(data: OppourtinityDetails) {
         print(data)
-       let vc = PackageDetailsVC()
+        let vc = PackageDetailsVC()
         vc.oppourtinityDetails = data
         navigationController?.pushViewController(vc, animated: true)
     }
@@ -402,7 +404,7 @@ extension MapVC{
     func makeLongtiudeRandomList(_ n: Int,long:Double) -> [Double] {
         
         return (0..<n).map { _ in Double.random(in: long...long+1.1) }
-    
+        
     }
     
     func createLocationCoordinateRandomPoints(latList:[Double],longList:[Double]){
@@ -410,7 +412,7 @@ extension MapVC{
             locationCoordinate[latList[index]]=longList[index]
         }
         createAnnotation(location: locationCoordinate)
-
+        
         
     }
     
@@ -422,12 +424,12 @@ extension MapVC{
         }
         
         
-
+        
         print(mainCategories)
         setupAnnotation(point: mainCategories)
-
-
-}
+        
+        
+    }
     
     
     func setupAnnotation(point:[String:[Double:Double]]){
@@ -444,25 +446,25 @@ extension MapVC{
         }
         
         mapview.delegate=self
-       
+        
     }
-
+    
 }
 
 extension MapVC:MKMapViewDelegate{
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         print(view.annotation!.title!!)
         getAnnotationId(title:view.annotation!.title!!)
-                    let controller = choosingMinistryNeedsVC()
-                    controller.needTypeID = categoryMainId
-      
-                    let sheetController = SheetViewController(
-                        controller: controller,
-        //                sizes: [ .intrinsic , .percent(0.80), .fixed(600), .intrinsic])
-                        sizes: [ .marginFromTop(500), .percent(0.8), .intrinsic])
-                    controller.onFilterDissmissed = self
+        let controller = choosingMinistryNeedsVC()
+        controller.needTypeID = categoryMainId
         
-                    self.present(sheetController, animated: false, completion: nil)
+        let sheetController = SheetViewController(
+            controller: controller,
+            //                sizes: [ .intrinsic , .percent(0.80), .fixed(600), .intrinsic])
+            sizes: [ .marginFromTop(500), .percent(0.8), .intrinsic])
+        controller.onFilterDissmissed = self
+        
+        self.present(sheetController, animated: false, completion: nil)
     }
     
     
@@ -472,9 +474,9 @@ extension MapVC:MKMapViewDelegate{
 extension MapVC {
     func getAnnotationId(title:String){
         for indx in 0 ..< mainNeedType.count{
-           if mainNeedType[indx].name == title {
-               UserDefaults.standard.set(mainNeedType[indx].id, forKey: "id")
-               break
+            if mainNeedType[indx].name == title {
+                UserDefaults.standard.set(mainNeedType[indx].id, forKey: "id")
+                break
             }
         }
     }

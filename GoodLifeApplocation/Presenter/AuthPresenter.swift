@@ -97,9 +97,9 @@ class AuthPresenter:NSObject{
     }
     
     
-     func startInvestiment(latitude:String,longitude:String,work_type:String,amount_raise:Float){
+    func startInvestiment(mobile:String,latitude:String,longitude:String,work_type:String,amount_raise:Float){
         
-        SignUserManager.shared.startFundRaise(latitude: latitude, longitude: longitude, work_type: work_type, amount_raise:amount_raise ) { Response in
+         SignUserManager.shared.startFundRaise(mobile: mobile, latitude: latitude, longitude: longitude, work_type: work_type, amount_raise:amount_raise ) { Response in
             
             switch Response{
                 

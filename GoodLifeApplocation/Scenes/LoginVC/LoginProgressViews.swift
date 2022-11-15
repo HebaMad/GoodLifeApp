@@ -21,6 +21,9 @@ class LoginProgressViews: UIViewController {
     var vc:UIViewController?
     var mobileNumber = ""
     let presenter = AuthPresenter()
+    var latitude:Double = 0.0
+    var longitude:Double = 0.0
+
     //MARK: - Life cycle
     
     override func viewDidLoad() {
@@ -106,7 +109,9 @@ extension LoginProgressViews:AuthDelegate{
         do{
             try KeychainWrapper.set(value: "Bearer"+" "+data.access_token! , key: data.mobile ?? "")
             AppData.mobile = data.mobile ?? ""
-                 
+            latitude = Double(data.latitude ?? "") ?? 0.0
+            longitude = Double(data.longitude ?? "") ?? 0.0
+
           } catch let error {
             print(error)
       }
@@ -132,7 +137,9 @@ extension LoginProgressViews:AuthDelegate{
                 self.progressIndex=3
 
                 let nav1 = UINavigationController()
-                let mainView = MapVC()  
+                let mainView = MapVC()
+                mainView.longitude=longitude
+                mainView.latitude=latitude
                 nav1.viewControllers = [mainView]
                 nav1.navigationBar.isHidden = true
              self.sceneDelegate.setRootVC(vc: nav1)

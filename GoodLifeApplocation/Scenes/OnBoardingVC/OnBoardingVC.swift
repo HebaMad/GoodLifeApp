@@ -24,7 +24,8 @@ class OnBoardingVC: UIViewController {
     var code = ""
     var investmentAmount = ""
     var vc:UIViewController?
-    
+    var lat:Double = 0.0
+    var long:Double = 0.0
     
     
     var latitude : String = ""{
@@ -73,7 +74,7 @@ class OnBoardingVC: UIViewController {
         
         //        print(text)
         onBoardingScreen=0
-        checkS()
+        checkonboardingScreen()
         
     }
     
@@ -81,12 +82,12 @@ class OnBoardingVC: UIViewController {
     
     @IBAction func continueBtn(_ sender: Any) {
         
-        checkS()
+        checkonboardingScreen()
         
     }
     
     
-    func checkS(){
+    func checkonboardingScreen(){
         
         switch self.onBoardingScreen{
             
@@ -190,7 +191,7 @@ class OnBoardingVC: UIViewController {
                 showSnackBar(message: "Please select your investment time ")
                 
             }else{
-                self.presnter.startInvestiment(latitude: self.latitude, longitude: self.longitude, work_type: self.timeOfInvestment.lowercased(), amount_raise: self.maxValueInvestment-self.minValueInvestment)
+                self.presnter.startInvestiment(mobile: mobileNumber, latitude: self.latitude, longitude: self.longitude, work_type: self.timeOfInvestment.lowercased(), amount_raise: self.maxValueInvestment-self.minValueInvestment)
                 self.presnter.delegate=self
                 self.contsinerView.subviews.first?.removeFromSuperview()
                 self.stepsIndicator.currentStep = 5
@@ -204,6 +205,8 @@ class OnBoardingVC: UIViewController {
         case 6:
             let nav1 = UINavigationController()
             let mainView = MapVC()
+            mainView.latitude = lat
+            mainView.longitude = long
             nav1.viewControllers = [mainView]
             nav1.navigationBar.isHidden = true
             self.sceneDelegate.setRootVC(vc: nav1)
@@ -232,6 +235,8 @@ extension OnBoardingVC:AuthDelegate{
         do{
             try KeychainWrapper.set(value: "Bearer"+" "+data.access_token! , key: data.mobile ?? "")
             AppData.mobile = data.mobile ?? ""
+            lat = Double(data.latitude ?? "") ?? 0.0
+            long = Double(data.longitude ?? "") ?? 0.0
             
         } catch let error {
             print(error)

@@ -33,6 +33,7 @@ class ReviewExperienceVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        categoryTxt.isEnabled = false
         categoryPresenter.getSmartRecommendation(interestId: 0, needTypeId: 0)
         categoryPresenter.delegate = self
         bindBackButton()
@@ -147,6 +148,9 @@ private extension ReviewExperienceVC{
     func getOppourtinity(categories: Oppourtinity) {
         print(self.oppourtinity.count)
         self.oppourtinity = categories.items ?? []
+        print(self.oppourtinity)
+        categoryTxt.isEnabled = true
+
         categoryTxt.pickerDelegate=self
         categoryTxt.dataSource=self
     }

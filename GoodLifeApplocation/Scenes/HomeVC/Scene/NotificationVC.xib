@@ -33,13 +33,13 @@
                     <rect key="frame" x="16" y="149" width="382" height="713"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noData" translatesAutoresizingMaskIntoConstraints="NO" id="vEQ-J3-0BD">
-                            <rect key="frame" x="5" y="0.0" width="372" height="413"/>
+                            <rect key="frame" x="5" y="0.0" width="372" height="513"/>
                         </imageView>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="vEQ-J3-0BD" firstAttribute="top" secondItem="FzF-vd-ePO" secondAttribute="top" id="6nh-hZ-V5D"/>
-                        <constraint firstAttribute="bottom" secondItem="vEQ-J3-0BD" secondAttribute="bottom" constant="300" id="9wQ-Lm-wvP"/>
+                        <constraint firstAttribute="bottom" secondItem="vEQ-J3-0BD" secondAttribute="bottom" constant="200" id="9wQ-Lm-wvP"/>
                         <constraint firstItem="vEQ-J3-0BD" firstAttribute="leading" secondItem="FzF-vd-ePO" secondAttribute="leading" constant="5" id="NNF-8S-CcT"/>
                         <constraint firstItem="vEQ-J3-0BD" firstAttribute="top" secondItem="FzF-vd-ePO" secondAttribute="top" id="WSk-jL-twS"/>
                         <constraint firstAttribute="trailing" secondItem="vEQ-J3-0BD" secondAttribute="trailing" constant="5" id="YlI-l0-l9E"/>
