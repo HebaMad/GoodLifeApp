@@ -84,12 +84,14 @@ extension HaveAnIdeaVC{
                 presenter.delegate=self
                 
             }else{
-                self.showAlert(title: "Warning", message: "Description of idea required",hideCancelBtn: true)
+                Alert.showErrorAlert(message: "Description of idea required")
+//                self.showAlert(title: "Warning", message: "Description of idea required",hideCancelBtn: true)
 
             }
      
         }catch{
-            self.showAlert(title: "Warning", message: (error as! ValidationError).message,hideCancelBtn: true)
+            Alert.showErrorAlert(message: (error as! ValidationError).message)
+//            self.showAlert(title: "Warning", message: (error as! ValidationError).message,hideCancelBtn: true)
         }
         }
     }
@@ -99,7 +101,8 @@ extension HaveAnIdeaVC{
 
 extension HaveAnIdeaVC:MenuDelegate{
     func showAlerts(title: String, message: String) {
-        self.showAlert(title: title, message: message,hideCancelBtn: true)
+//        self.showAlert(title: title, message: message,hideCancelBtn: true)
+        Alert.showSuccessAlert(message:message)
         clearData()
 
     }
@@ -127,8 +130,8 @@ extension HaveAnIdeaVC{
             return true
             
         }else{
-            
-            self.showAlert(title: "Warning", message: "Please enter the required data ",hideCancelBtn: true)
+            Alert.showErrorAlert(message:"Please enter the required data ")
+//            self.showAlert(title: "Warning", message: "Please enter the required data ",hideCancelBtn: true)
             return false
             
         }

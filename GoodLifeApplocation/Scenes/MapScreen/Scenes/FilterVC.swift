@@ -151,7 +151,9 @@ extension FilterVC {
                 presenter.delegate=self
               
         }catch{
-            self.showAlert(title: "Warning", message: (error as! ValidationError).message,hideCancelBtn: true)
+            showSnackBar(message: (error as! ValidationError).message)
+
+//            self.showAlert(title: "Warning", message: (error as! ValidationError).message,hideCancelBtn: true)
        
         }
     }

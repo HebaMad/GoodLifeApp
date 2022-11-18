@@ -107,15 +107,18 @@ private extension ReviewExperienceVC{
                 presenter.delegate=self
                 
             }else{
-                self.showAlert(title: "Warning", message:" Review text required ",hideCancelBtn: true)
+                Alert.showErrorAlert(message: "Review text required ")
+//                self.showAlert(title: "Warning", message:" Review text required ",hideCancelBtn: true)
                 
             }
             }else{
-                self.showAlert(title: "Warning", message:" Review  your experience please",hideCancelBtn: true)
+                Alert.showErrorAlert(message: "Review  your experience please")
+//                self.showAlert(title: "Warning", message:" Review  your experience please",hideCancelBtn: true)
 
             }
         }catch{
-            self.showAlert(title: "Warning", message: (error as! ValidationError).message,hideCancelBtn: true)
+            Alert.showErrorAlert(message: (error as! ValidationError).message)
+//            self.showAlert(title: "Warning", message: (error as! ValidationError).message,hideCancelBtn: true)
             
         }
     }
@@ -129,7 +132,8 @@ private extension ReviewExperienceVC{
    extension ReviewExperienceVC:MenuDelegate{
     
     func showAlerts(title: String, message: String) {
-        self.showAlert(title: title, message: message,hideCancelBtn: true)
+//        self.showAlert(title: title, message: message,hideCancelBtn: true)
+        Alert.showSuccessAlert(message:message)
         clearData()
         
     }

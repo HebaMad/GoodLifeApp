@@ -227,6 +227,13 @@
 		27CBC56C2926AD67000AE9A6 /* CreateOppourtinityThirdVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27CBC56A2926AD67000AE9A6 /* CreateOppourtinityThirdVC.xib */; };
 		27CBC56F2926C005000AE9A6 /* CreateOppourtinityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CBC56D2926C005000AE9A6 /* CreateOppourtinityVC.swift */; };
 		27CBC5702926C005000AE9A6 /* CreateOppourtinityVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27CBC56E2926C005000AE9A6 /* CreateOppourtinityVC.xib */; };
+		27CBC5A72927CDA5000AE9A6 /* CDAlertHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CBC5A02927CDA4000AE9A6 /* CDAlertHeaderView.swift */; };
+		27CBC5A82927CDA5000AE9A6 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CBC5A12927CDA4000AE9A6 /* AlertController.swift */; };
+		27CBC5A92927CDA5000AE9A6 /* LayoutConstraintsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CBC5A22927CDA4000AE9A6 /* LayoutConstraintsExtension.swift */; };
+		27CBC5AA2927CDA5000AE9A6 /* CDAlertViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CBC5A32927CDA5000AE9A6 /* CDAlertViewType.swift */; };
+		27CBC5AB2927CDA5000AE9A6 /* CDAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CBC5A42927CDA5000AE9A6 /* CDAlertView.swift */; };
+		27CBC5AC2927CDA5000AE9A6 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CBC5A52927CDA5000AE9A6 /* ImageHelper.swift */; };
+		27CBC5AD2927CDA5000AE9A6 /* CDAlertView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CBC5A62927CDA5000AE9A6 /* CDAlertView+Extension.swift */; };
 		27EB22A92905BB07004B4568 /* FCMTopics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EB22A82905BB07004B4568 /* FCMTopics.swift */; };
 		27ECA33828E982EA003DCF53 /* HomeTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ECA33728E982EA003DCF53 /* HomeTarget.swift */; };
 		27ECA33A28E99154003DCF53 /* HomeNetworkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ECA33928E99154003DCF53 /* HomeNetworkable.swift */; };
@@ -469,6 +476,13 @@
 		27CBC56A2926AD67000AE9A6 /* CreateOppourtinityThirdVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateOppourtinityThirdVC.xib; sourceTree = "<group>"; };
 		27CBC56D2926C005000AE9A6 /* CreateOppourtinityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOppourtinityVC.swift; sourceTree = "<group>"; };
 		27CBC56E2926C005000AE9A6 /* CreateOppourtinityVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateOppourtinityVC.xib; sourceTree = "<group>"; };
+		27CBC5A02927CDA4000AE9A6 /* CDAlertHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDAlertHeaderView.swift; sourceTree = "<group>"; };
+		27CBC5A12927CDA4000AE9A6 /* AlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
+		27CBC5A22927CDA4000AE9A6 /* LayoutConstraintsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutConstraintsExtension.swift; sourceTree = "<group>"; };
+		27CBC5A32927CDA5000AE9A6 /* CDAlertViewType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDAlertViewType.swift; sourceTree = "<group>"; };
+		27CBC5A42927CDA5000AE9A6 /* CDAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDAlertView.swift; sourceTree = "<group>"; };
+		27CBC5A52927CDA5000AE9A6 /* ImageHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
+		27CBC5A62927CDA5000AE9A6 /* CDAlertView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDAlertView+Extension.swift"; sourceTree = "<group>"; };
 		27EB22A72905B7F9004B4568 /* GoodLifeApplocation.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GoodLifeApplocation.entitlements; sourceTree = "<group>"; };
 		27EB22A82905BB07004B4568 /* FCMTopics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FCMTopics.swift; sourceTree = "<group>"; };
 		27ECA33728E982EA003DCF53 /* HomeTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTarget.swift; sourceTree = "<group>"; };
@@ -765,6 +779,7 @@
 		27C9AE67288D425100FA584A /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				27CBC59F2927CD95000AE9A6 /* CustomAlert */,
 				27CB2082289D44C500E63694 /* SearchView.xib */,
 				27CB2084289D450000E63694 /* SearchView.swift */,
 				27C9AE64288D3F2700FA584A /* Designable */,
@@ -1003,6 +1018,20 @@
 				27CBC56E2926C005000AE9A6 /* CreateOppourtinityVC.xib */,
 			);
 			path = OppourtinityScreen;
+			sourceTree = "<group>";
+		};
+		27CBC59F2927CD95000AE9A6 /* CustomAlert */ = {
+			isa = PBXGroup;
+			children = (
+				27CBC5A12927CDA4000AE9A6 /* AlertController.swift */,
+				27CBC5A02927CDA4000AE9A6 /* CDAlertHeaderView.swift */,
+				27CBC5A42927CDA5000AE9A6 /* CDAlertView.swift */,
+				27CBC5A62927CDA5000AE9A6 /* CDAlertView+Extension.swift */,
+				27CBC5A32927CDA5000AE9A6 /* CDAlertViewType.swift */,
+				27CBC5A52927CDA5000AE9A6 /* ImageHelper.swift */,
+				27CBC5A22927CDA4000AE9A6 /* LayoutConstraintsExtension.swift */,
+			);
+			path = CustomAlert;
 			sourceTree = "<group>";
 		};
 		27ECA33628E982D0003DCF53 /* Home */ = {
@@ -1274,6 +1303,7 @@
 				27F4B15328B8BD90003365A6 /* ProfileSettingVC.swift in Sources */,
 				27C9AE3D288D39B300FA584A /* SplashScreen.swift in Sources */,
 				2710A299289AF485009BCE60 /* PastVentures.swift in Sources */,
+				27CBC5A92927CDA5000AE9A6 /* LayoutConstraintsExtension.swift in Sources */,
 				27CB209C289FFE9800E63694 /* GeneralFinicialPagerVC.swift in Sources */,
 				27CB205F289B0FDC00E63694 /* ResourceDetailsCell.swift in Sources */,
 				27B8C8F528A16B5A0011B039 /* FilterHeaderReusableview.swift in Sources */,
@@ -1290,10 +1320,13 @@
 				2765FB3528FC6CEC00473198 /* NotificationCell.swift in Sources */,
 				2764D6D228E4304E00AC7F73 /* LessonTopicDetails.swift in Sources */,
 				27C9AE2B288D38E900FA584A /* ViewController.swift in Sources */,
+				27CBC5AD2927CDA5000AE9A6 /* CDAlertView+Extension.swift in Sources */,
 				27B8C90028A198BB0011B039 /* NibLoadableView.swift in Sources */,
 				27CB2098289FC79700E63694 /* SpecificPagerVC.swift in Sources */,
 				27C9AEBC288EFBA200FA584A /* DonationFrameTwoVC.swift in Sources */,
+				27CBC5A82927CDA5000AE9A6 /* AlertController.swift in Sources */,
 				27F4B15028B8BAB4003365A6 /* SettingNib.swift in Sources */,
+				27CBC5AC2927CDA5000AE9A6 /* ImageHelper.swift in Sources */,
 				2764D6CF28E2FA6600AC7F73 /* LessonDetailsCollectionCell.swift in Sources */,
 				27A737662891407200FD8AD9 /* TableViewHelper.swift in Sources */,
 				27CB2075289C1CEF00E63694 /* AllResourceVC.swift in Sources */,
@@ -1343,6 +1376,7 @@
 				27CBC56429268BC9000AE9A6 /* CheckBox.swift in Sources */,
 				27B8C8ED28A14C320011B039 /* MapVC.swift in Sources */,
 				27A737622891403000FD8AD9 /* UIViewFromNib.swift in Sources */,
+				27CBC5AA2927CDA5000AE9A6 /* CDAlertViewType.swift in Sources */,
 				277336F5290DBB0C002932B2 /* SpecificWebsiteCompetitorCell.swift in Sources */,
 				2704245528A95EAD002EF7B5 /* AllCategoriesVC.swift in Sources */,
 				27B8C8F928A1825D0011B039 /* ActivityCell.swift in Sources */,
@@ -1371,7 +1405,9 @@
 				27C9AE27288D38E900FA584A /* AppDelegate.swift in Sources */,
 				270562DB28C0A32A00B0124E /* Validator.swift in Sources */,
 				2765D5FB28F4083C008835D9 /* GeneralFinancialCell.swift in Sources */,
+				27CBC5AB2927CDA5000AE9A6 /* CDAlertView.swift in Sources */,
 				270562D328BFD1EE00B0124E /* DashboardNetworkable.swift in Sources */,
+				27CBC5A72927CDA5000AE9A6 /* CDAlertHeaderView.swift in Sources */,
 				27CB2094289FC6CC00E63694 /* GeneralPagerViewVC.swift in Sources */,
 				27A7376E2891435C00FD8AD9 /* UIImageViewDesignable.swift in Sources */,
 				27C9AE29288D38E900FA584A /* SceneDelegate.swift in Sources */,

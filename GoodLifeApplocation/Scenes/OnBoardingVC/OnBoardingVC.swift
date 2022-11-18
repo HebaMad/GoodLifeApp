@@ -218,14 +218,14 @@ class OnBoardingVC: UIViewController {
     }
 }
 
-extension OnBoardingVC{
-    func showSnackBar(message:String){
-        let answerMessage = MDCSnackbarMessage()
-        answerMessage.text =  message
-        
-        MDCSnackbarManager.default.show(answerMessage)
-    }
-}
+//extension OnBoardingVC{
+//    func showSnackBar(message:String){
+//        let answerMessage = MDCSnackbarMessage()
+//        answerMessage.text =  message
+//        
+//        MDCSnackbarManager.default.show(answerMessage)
+//    }
+//}
 
 extension OnBoardingVC:AuthDelegate{
     func getLoginToken(data: userProfile) {}

@@ -46,7 +46,8 @@ class DonationThirdFrame: UIViewController {
             NotificationCenter.default.post(name: .init(rawValue: "GoodLife"), object: [3,scrollView.bounds.height+30])
             
         }catch{
-            self.showAlert(title: "Warning", message: (error as! ValidationError).message,hideCancelBtn: true)
+            showSnackBar(message: (error as! ValidationError).message)
+//            self.showAlert(title: "Warning", message: (error as! ValidationError).message,hideCancelBtn: true)
 
         }
   

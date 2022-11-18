@@ -7,9 +7,18 @@
 
 import Foundation
 import UIKit
+import MaterialComponents.MaterialSnackbar
+
 extension UIViewController{
     var sceneDelegate:SceneDelegate{
         return (self.view.window?.windowScene?.delegate)! as! SceneDelegate
+    }
+    
+    func showSnackBar(message:String){
+        let answerMessage = MDCSnackbarMessage()
+        answerMessage.text =  message
+
+        MDCSnackbarManager.default.show(answerMessage)
     }
 }
 extension UILabel{

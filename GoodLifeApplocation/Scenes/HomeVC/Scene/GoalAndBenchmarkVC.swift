@@ -225,7 +225,6 @@ extension GoalAndBenchmarkVC:UITableViewDelegate, UITableViewDataSource{
 
         switch selectedSegment{
         case 0:
-            print(activeGoals[indexPath.row].url)
             guard let url = activeGoals[indexPath.row].url else { return }
             openUrl(url: url)
             
@@ -272,11 +271,11 @@ extension GoalAndBenchmarkVC:DashboardDelegate{
     }
     
 }
-extension GoalAndBenchmarkVC{
-    func showSnackBar(message:String){
-        let answerMessage = MDCSnackbarMessage()
-        answerMessage.text =  message
-
-        MDCSnackbarManager.default.show(answerMessage)
-    }
-}
+//extension GoalAndBenchmarkVC{
+//    func showSnackBar(message:String){
+//        let answerMessage = MDCSnackbarMessage()
+//        answerMessage.text =  message
+//
+//        MDCSnackbarManager.default.show(answerMessage)
+//    }
+//}

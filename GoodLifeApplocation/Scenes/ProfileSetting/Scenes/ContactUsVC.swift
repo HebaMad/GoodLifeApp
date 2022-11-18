@@ -55,8 +55,16 @@ class ContactUsVC: UIViewController {
            case backBtn:
                navigationController?.popViewController(animated: true)
            case sendBtn:
-               self.presnter.sendContactMsg(msg: contatMsgTextView.text)
-               self.presnter.delegate = self
+             
+               if contatMsgTextView.text != "" {
+                   self.presnter.sendContactMsg(msg: contatMsgTextView.text)
+                   self.presnter.delegate = self
+
+           }else{
+                   Alert.showErrorAlert(message: "enter your message please")
+
+               }
+             
            default:
                print(".")
            }
@@ -67,7 +75,7 @@ class ContactUsVC: UIViewController {
 
 extension ContactUsVC:ProfileDelegate{
     func showAlerts(title: String, message: String) {
-        self.showAlert(title: title, message: message)
+        Alert.showSuccessAlert(message: message)
         contatMsgTextView.text = ""
     }
     func getUserData(data: userProfile) { }

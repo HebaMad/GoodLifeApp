@@ -80,11 +80,13 @@ private extension AddGoalVC{
                     self.presenter.delegate = self
 
                 }else{
-                    self.showAlert(title: "Notice", message: "select your category",hideCancelBtn: true)
+                    Alert.showErrorAlert(message:"select your category")
+//                    self.showAlert(title: "Notice", message: "select your category",hideCancelBtn: true)
                 }
 
             }catch{
-                self.showAlert(title: "Warning", message: (error as! ValidationError).message,hideCancelBtn: true)
+                Alert.showErrorAlert(message: (error as! ValidationError).message)
+//                self.showAlert(title: "Warning", message: (error as! ValidationError).message,hideCancelBtn: true)
 
             }
     case closeBtn:
@@ -105,7 +107,8 @@ extension AddGoalVC:DashboardDelegate{
     func getResourceDetails(data: ResourceDetails) {}
     
     func showAlerts(title: String, message: String) {
-        self.showAlert(title: title, message: message)
+        Alert.showSuccessAlert(message: message)
+//        self.showAlert(title: title, message: message)
         clearData()
     }
     

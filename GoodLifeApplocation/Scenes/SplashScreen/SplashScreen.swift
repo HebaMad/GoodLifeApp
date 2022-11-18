@@ -53,6 +53,8 @@ private extension SplashScreen{
             
            let vc = LoginProgressViews()
             self.sceneDelegate.setRootVC(vc: vc)
+//            Alert.showSuccessAlert(message: "test testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest")
+//            Alert.showErrorAlert(message: "error")
             
         case getStartedBtn:
             

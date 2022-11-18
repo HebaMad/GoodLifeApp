@@ -94,12 +94,12 @@ private extension LoginProgressViews{
         
     }
     
-    func showSnackBar(message:String){
-        let answerMessage = MDCSnackbarMessage()
-        answerMessage.text =  message
-
-        MDCSnackbarManager.default.show(answerMessage)
-    }
+//    func showSnackBar(message:String){
+//        let answerMessage = MDCSnackbarMessage()
+//        answerMessage.text =  message
+//
+//        MDCSnackbarManager.default.show(answerMessage)
+//    }
 }
                                   
 extension LoginProgressViews:AuthDelegate{
