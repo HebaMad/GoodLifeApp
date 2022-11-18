@@ -218,6 +218,15 @@
 		27CB2099289FC79700E63694 /* SpecificPagerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27CB2097289FC79700E63694 /* SpecificPagerVC.xib */; };
 		27CB209C289FFE9800E63694 /* GeneralFinicialPagerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CB209A289FFE9800E63694 /* GeneralFinicialPagerVC.swift */; };
 		27CB209D289FFE9800E63694 /* GeneralFinicialPagerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27CB209B289FFE9800E63694 /* GeneralFinicialPagerVC.xib */; };
+		27CBC5612926898B000AE9A6 /* CreateOppourtinityFirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CBC55F2926898B000AE9A6 /* CreateOppourtinityFirstVC.swift */; };
+		27CBC5622926898B000AE9A6 /* CreateOppourtinityFirstVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27CBC5602926898B000AE9A6 /* CreateOppourtinityFirstVC.xib */; };
+		27CBC56429268BC9000AE9A6 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CBC56329268BC9000AE9A6 /* CheckBox.swift */; };
+		27CBC5672926A2D0000AE9A6 /* CreateOppourtinitySecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CBC5652926A2D0000AE9A6 /* CreateOppourtinitySecondVC.swift */; };
+		27CBC5682926A2D0000AE9A6 /* CreateOppourtinitySecondVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27CBC5662926A2D0000AE9A6 /* CreateOppourtinitySecondVC.xib */; };
+		27CBC56B2926AD67000AE9A6 /* CreateOppourtinityThirdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CBC5692926AD67000AE9A6 /* CreateOppourtinityThirdVC.swift */; };
+		27CBC56C2926AD67000AE9A6 /* CreateOppourtinityThirdVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27CBC56A2926AD67000AE9A6 /* CreateOppourtinityThirdVC.xib */; };
+		27CBC56F2926C005000AE9A6 /* CreateOppourtinityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CBC56D2926C005000AE9A6 /* CreateOppourtinityVC.swift */; };
+		27CBC5702926C005000AE9A6 /* CreateOppourtinityVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27CBC56E2926C005000AE9A6 /* CreateOppourtinityVC.xib */; };
 		27EB22A92905BB07004B4568 /* FCMTopics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EB22A82905BB07004B4568 /* FCMTopics.swift */; };
 		27ECA33828E982EA003DCF53 /* HomeTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ECA33728E982EA003DCF53 /* HomeTarget.swift */; };
 		27ECA33A28E99154003DCF53 /* HomeNetworkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ECA33928E99154003DCF53 /* HomeNetworkable.swift */; };
@@ -451,6 +460,15 @@
 		27CB2097289FC79700E63694 /* SpecificPagerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpecificPagerVC.xib; sourceTree = "<group>"; };
 		27CB209A289FFE9800E63694 /* GeneralFinicialPagerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralFinicialPagerVC.swift; sourceTree = "<group>"; };
 		27CB209B289FFE9800E63694 /* GeneralFinicialPagerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeneralFinicialPagerVC.xib; sourceTree = "<group>"; };
+		27CBC55F2926898B000AE9A6 /* CreateOppourtinityFirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOppourtinityFirstVC.swift; sourceTree = "<group>"; };
+		27CBC5602926898B000AE9A6 /* CreateOppourtinityFirstVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateOppourtinityFirstVC.xib; sourceTree = "<group>"; };
+		27CBC56329268BC9000AE9A6 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
+		27CBC5652926A2D0000AE9A6 /* CreateOppourtinitySecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOppourtinitySecondVC.swift; sourceTree = "<group>"; };
+		27CBC5662926A2D0000AE9A6 /* CreateOppourtinitySecondVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateOppourtinitySecondVC.xib; sourceTree = "<group>"; };
+		27CBC5692926AD67000AE9A6 /* CreateOppourtinityThirdVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOppourtinityThirdVC.swift; sourceTree = "<group>"; };
+		27CBC56A2926AD67000AE9A6 /* CreateOppourtinityThirdVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateOppourtinityThirdVC.xib; sourceTree = "<group>"; };
+		27CBC56D2926C005000AE9A6 /* CreateOppourtinityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOppourtinityVC.swift; sourceTree = "<group>"; };
+		27CBC56E2926C005000AE9A6 /* CreateOppourtinityVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateOppourtinityVC.xib; sourceTree = "<group>"; };
 		27EB22A72905B7F9004B4568 /* GoodLifeApplocation.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GoodLifeApplocation.entitlements; sourceTree = "<group>"; };
 		27EB22A82905BB07004B4568 /* FCMTopics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FCMTopics.swift; sourceTree = "<group>"; };
 		27ECA33728E982EA003DCF53 /* HomeTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTarget.swift; sourceTree = "<group>"; };
@@ -692,6 +710,7 @@
 		27C9AE3A288D399400FA584A /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				27CBC55E292680A1000AE9A6 /* OppourtinityScreen */,
 				27F4B13E28B7F4B0003365A6 /* ProfileSetting */,
 				2704244D28A8CE6F002EF7B5 /* LoginVC */,
 				27CB208C289FB1B700E63694 /* PackagesDetails */,
@@ -738,6 +757,7 @@
 				27A7376C2891435C00FD8AD9 /* UIViewDesignable.swift */,
 				27CB207C289CFDFE00E63694 /* BottomBorderTextField.swift */,
 				2765FB3B28FC7ACE00473198 /* UILableDesignable.swift */,
+				27CBC56329268BC9000AE9A6 /* CheckBox.swift */,
 			);
 			path = Designable;
 			sourceTree = "<group>";
@@ -970,6 +990,21 @@
 			path = Scenes;
 			sourceTree = "<group>";
 		};
+		27CBC55E292680A1000AE9A6 /* OppourtinityScreen */ = {
+			isa = PBXGroup;
+			children = (
+				27CBC55F2926898B000AE9A6 /* CreateOppourtinityFirstVC.swift */,
+				27CBC5602926898B000AE9A6 /* CreateOppourtinityFirstVC.xib */,
+				27CBC5652926A2D0000AE9A6 /* CreateOppourtinitySecondVC.swift */,
+				27CBC5662926A2D0000AE9A6 /* CreateOppourtinitySecondVC.xib */,
+				27CBC5692926AD67000AE9A6 /* CreateOppourtinityThirdVC.swift */,
+				27CBC56A2926AD67000AE9A6 /* CreateOppourtinityThirdVC.xib */,
+				27CBC56D2926C005000AE9A6 /* CreateOppourtinityVC.swift */,
+				27CBC56E2926C005000AE9A6 /* CreateOppourtinityVC.xib */,
+			);
+			path = OppourtinityScreen;
+			sourceTree = "<group>";
+		};
 		27ECA33628E982D0003DCF53 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -1087,8 +1122,10 @@
 				2704244228A6CA13002EF7B5 /* SpeificBusinessPlanVC.xib in Resources */,
 				27C9AEA3288D971700FA584A /* VolunteerOpportunityVC.xib in Resources */,
 				27C9AE59288D3CB500FA584A /* Inter-SemiBold.ttf in Resources */,
+				27CBC5702926C005000AE9A6 /* CreateOppourtinityVC.xib in Resources */,
 				27C9AE5C288D3CB500FA584A /* Inter-Regular.ttf in Resources */,
 				27C9AE60288D3CB500FA584A /* Inter-UI-BlackItalic.ttf in Resources */,
+				27CBC5682926A2D0000AE9A6 /* CreateOppourtinitySecondVC.xib in Resources */,
 				27CB207B289CFC0400E63694 /* OnBoardingFrame1.xib in Resources */,
 				27C9AEAB288DA8E300FA584A /* TaskCollectionViewCell.xib in Resources */,
 				2765FB3628FC6CEC00473198 /* NotificationCell.xib in Resources */,
@@ -1164,6 +1201,7 @@
 				2767A28828904DF800DF34D1 /* DonationFirstFrame.xib in Resources */,
 				27CB2095289FC6CC00E63694 /* GeneralPagerViewVC.xib in Resources */,
 				27A7377C2891D16100FD8AD9 /* SubscriptionCollectionViewCell.xib in Resources */,
+				27CBC56C2926AD67000AE9A6 /* CreateOppourtinityThirdVC.xib in Resources */,
 				27C9AE2E288D38E900FA584A /* Main.storyboard in Resources */,
 				27C9AE5A288D3CB500FA584A /* Inter-ThinItalic-BETA.ttf in Resources */,
 				27C9AE79288D470600FA584A /* OnBoardingVC.xib in Resources */,
@@ -1174,6 +1212,7 @@
 				27B8C8FA28A1825D0011B039 /* ActivityCell.xib in Resources */,
 				27CB2081289D017D00E63694 /* VerificationVC.xib in Resources */,
 				2768DEDC28A3FE0A004C6A5B /* AddGoalVC.xib in Resources */,
+				27CBC5622926898B000AE9A6 /* CreateOppourtinityFirstVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1230,6 +1269,7 @@
 				2765FB3928FC6DFB00473198 /* NotificationVC.swift in Sources */,
 				27C9AE89288D51FD00FA584A /* OnBoardingFrame4.swift in Sources */,
 				27594D2228A017D600F4DDC3 /* GeneralLiturgicalPageVC.swift in Sources */,
+				27CBC56B2926AD67000AE9A6 /* CreateOppourtinityThirdVC.swift in Sources */,
 				27F4B14B28B8AD4F003365A6 /* VenturesCell.swift in Sources */,
 				27F4B15328B8BD90003365A6 /* ProfileSettingVC.swift in Sources */,
 				27C9AE3D288D39B300FA584A /* SplashScreen.swift in Sources */,
@@ -1263,6 +1303,7 @@
 				27A737702891435C00FD8AD9 /* UIButtonDesignable.swift in Sources */,
 				2704244C28A84BF3002EF7B5 /* Extension.swift in Sources */,
 				27B54D7C28BA03C60074A6A1 /* EditProfileVC.swift in Sources */,
+				27CBC56F2926C005000AE9A6 /* CreateOppourtinityVC.swift in Sources */,
 				273D3A9E28B0CED000860702 /* choosingMinistryNeedsVC.swift in Sources */,
 				27B8C8E528A1067F0011B039 /* FilterCell.swift in Sources */,
 				27B8C8F028A167E00011B039 /* FilterList.swift in Sources */,
@@ -1285,6 +1326,7 @@
 				27B8C8F228A1687F0011B039 /* MapFilterList.swift in Sources */,
 				27C9AEAE288DB44600FA584A /* CategoriesCollectionViewCell.swift in Sources */,
 				27CB207A289CFC0400E63694 /* OnBoardingFrame1.swift in Sources */,
+				27CBC5612926898B000AE9A6 /* CreateOppourtinityFirstVC.swift in Sources */,
 				276796A928C3574B00AFEFE3 /* CustomAlert.swift in Sources */,
 				2704245328A95AAE002EF7B5 /* Storyboarded.swift in Sources */,
 				2768DEDB28A3FE0A004C6A5B /* AddGoalVC.swift in Sources */,
@@ -1293,10 +1335,12 @@
 				2706D21328913D4500546425 /* ProgressBar.swift in Sources */,
 				2710A28A28971E3B009BCE60 /* ListItem.swift in Sources */,
 				2704245028A8CED1002EF7B5 /* LoginProgressViews.swift in Sources */,
+				27CBC5672926A2D0000AE9A6 /* CreateOppourtinitySecondVC.swift in Sources */,
 				270562CC28BFC3AF00B0124E /* TermsAndConditions.swift in Sources */,
 				277CF36628BD52A900F2874F /* AuthPresenter.swift in Sources */,
 				2710A28D289A5C3C009BCE60 /* TaskCell.swift in Sources */,
 				27B54D9B28BAC0F10074A6A1 /* SignUserTarget.swift in Sources */,
+				27CBC56429268BC9000AE9A6 /* CheckBox.swift in Sources */,
 				27B8C8ED28A14C320011B039 /* MapVC.swift in Sources */,
 				27A737622891403000FD8AD9 /* UIViewFromNib.swift in Sources */,
 				277336F5290DBB0C002932B2 /* SpecificWebsiteCompetitorCell.swift in Sources */,

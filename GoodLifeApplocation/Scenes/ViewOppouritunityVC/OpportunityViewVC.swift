@@ -1,5 +1,5 @@
 //
-//  OpportunityViewVC.swift
+//  OpportunityViewVC.swift/Users/hebaisaa/Documents/GoodLifeApplocation/GoodLifeApplocation/Scenes/ViewOppouritunityVC/OpportunityViewVC.swift
 //  GoodLifeApplocation
 //
 //  Created by heba isaa on 24/07/2022.
@@ -11,6 +11,7 @@ class OpportunityViewVC: UIViewController {
     
     //MARK: - Outlet
     
+    @IBOutlet weak var createOppourtinity: OpportunityView!
     @IBOutlet weak var viewAllOppourtinity: OpportunityView!
     @IBOutlet weak var Profile: OpportunityView!
     @IBOutlet weak var VolunteerOpportunityView: OpportunityView!
@@ -40,6 +41,7 @@ extension OpportunityViewVC{
         experienceView.ViewBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
         DonationView.ViewBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
         viewAllOppourtinity.ViewBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
+        createOppourtinity.ViewBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
     }
 }
 
@@ -75,6 +77,10 @@ extension OpportunityViewVC{
          case viewAllOppourtinity.ViewBtn:
              
              let vc = MapVC()
+             navigationController?.pushViewController(vc, animated: true)
+             
+         case createOppourtinity.ViewBtn:
+             let vc = CreateOppourtinityVC()
              navigationController?.pushViewController(vc, animated: true)
          default:
              print("")
