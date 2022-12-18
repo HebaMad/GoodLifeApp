@@ -62,7 +62,7 @@ class MapVC: UIViewController {
             let center = CLLocationCoordinate2DMake((location?.coordinate.latitude) ?? latitude , (location?.coordinate.longitude) ?? longitude)
             UserDefaults.standard.set(location?.coordinate.latitude,forKey: "lat")
             UserDefaults.standard.set(location?.coordinate.longitude,forKey: "long")
-
+            setupData()
             let span = MKCoordinateSpan(latitudeDelta: 2.71, longitudeDelta: 1.85)
                                let region = MKCoordinateRegion(center: center, span: span)
             self.mapview.region = region
@@ -108,7 +108,7 @@ class MapVC: UIViewController {
     //MARK: - SETUP Collection
     private func setupCollectionview(){
         
-        setupData()
+        
         generalFilterCollectionview.register(FilterCell.self)
         generalFilterCollectionview.delegate = self
         generalFilterCollectionview.dataSource = self
@@ -386,6 +386,9 @@ extension MapVC :HomeDelegate{
         
         recentlyViewed = categories.recentlyViewed ?? []
         recommendedMinistries = categories.recommendedMinistries ?? []
+        print(UserDefaults.standard.double(forKey: "lat"))
+        print(UserDefaults.standard.double(forKey: "long"))
+
         //UserDefaults.standard.double(forKey: "lat")
         latitudeList = makeLatitudeRandomList(mainNeedType.count, lat:UserDefaults.standard.double(forKey: "lat"))
         //UserDefaults.standard.double(forKey: "long")
