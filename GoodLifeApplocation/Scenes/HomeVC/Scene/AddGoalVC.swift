@@ -20,7 +20,7 @@ class AddGoalVC: UIViewController,UITextFieldDelegate,UIImagePickerControllerDel
     @IBOutlet weak var urlTxt: UITextField!
     
     //MARK: - properties
-    
+
     let presenter = DashboardPresenter()
     var categories:[Categories]=[]
 
@@ -76,7 +76,7 @@ private extension AddGoalVC{
                     print(deadline)
                     print("\(itemID)")
 
-                    self.presenter.AddGoal(title: goalTitle, category_id: self.itemID, deadline:deadline ,url: urlTxt.text ?? "")
+                    self.presenter.AddGoal(title: goalTitle, category_id: "\(self.itemID)", deadline:deadline ,url: urlTxt.text ?? "")
                     self.presenter.delegate = self
 
                 }else{
@@ -144,7 +144,6 @@ print("\(title ?? "")")
         self.itemID=categories[row].id ?? 0
     }
    
-    
 }
 
 //MARK: - Clear Data After Add

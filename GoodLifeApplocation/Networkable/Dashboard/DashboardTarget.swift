@@ -12,7 +12,7 @@ import Moya
 enum DashboardTarget:TargetType{
     
     case AddTask(title:String,category_id:Int,all_days:String,start_date:String,end_date:String)
-    case AddGoal(title:String,category_id:Int,deadline:String,url:String)
+    case AddGoal(title:String,category_id:String,deadline:String,url:String)
     case categories(opportunity_id:Int,searchTxt:String)
     case Resources(searchTxt:String,category_id:Int)
     case getMyTask(searchTxt:String)

@@ -57,9 +57,9 @@ struct OppourtinityDetails : Codable {
     let work_type:String?
     let level_of_difficulty:String?
     let amount_of_technology:String?
-    let amount_raise:Int?
-    let need_type_id:Int?
-    let interest:Int?
+    let amount_raise:String?
+    let need_type_id:String?
+    let interest:String?
     let title:String?
     let sub_title:String?
     let websites:String?
@@ -67,7 +67,7 @@ struct OppourtinityDetails : Codable {
     let plans:String?
     let image:String?
     let created_at:String?
-    let opportunity_match:Int?
+    let opportunity_match:String?
     let rate:Int?
     let rate_count:Int?
     let reviews_count:Int?
@@ -80,7 +80,7 @@ struct OppourtinityDetails : Codable {
 
 struct Graph:Codable{
     let name:String?
-    let percent:Int?
+    let percent:String?
 }
 
 struct GeneralOppourtinity:Codable{
@@ -99,7 +99,7 @@ struct GeneralOppourtinityDetails:Codable{
     let url:String?
     let approach:String?
     let details:String?
-    let cost:Double?
+    let cost:String?
     let childs:[OppurtinityDetails]?
     
 }
@@ -109,7 +109,7 @@ struct OppurtinityDetails: Codable {
     let title:String?
     let url:String?
     let details:String?
-    let cost:Double?
+    let cost:String?
     
 }
 
@@ -129,7 +129,7 @@ struct SpecificOppourtinityDetails:Codable{
     let title:String?
     let url:String?
     let details:String?
-    let cost:Double?
+    let cost:String?
     let childs:[OppurtinityDetails]?
     
 }
@@ -153,7 +153,7 @@ struct userProfile: Decodable{
     let latitude:String?
     let longitude:String?
     let work_type:String?
-    let amount_raise:Float?
+    let amount_raise:String?
     let status:String?
     let access_token:String?
     let image_profile:String?
@@ -195,7 +195,7 @@ struct startFundRaise:Decodable{
 }
 struct contactUS:Decodable{
     
-    let user_id:Int?
+    let user_id:String?
     let message:String?
     let created_at:String?
     let id:Int?
@@ -246,9 +246,9 @@ struct Ventures:Codable{
     let work_type:String?
     let level_of_difficulty:String?
     let amount_of_technology:String?
-    let amount_raise:Int?
+    let amount_raise:String?
     let need_type_id:Int?
-    let interest:Int?
+    let interest:String?
     let title:String?
     let sub_title:String?
     let websites:String?
@@ -256,7 +256,7 @@ struct Ventures:Codable{
     let plans:String?
     let image:String?
     let created_at:String?
-    let opportunity_match:Int?
+    let opportunity_match:String?
     let rate:Int?
     let rate_count:Int?
     let reviews_count:Int?
@@ -268,7 +268,7 @@ struct Ventures:Codable{
 struct Categories:Codable{
     
     let id:Int?
-    let opportunity_id:Int?
+    let opportunity_id:String?
     let sub_title:String?
     let title:String?
     let details:String?
@@ -304,8 +304,8 @@ struct Tasks:Codable{
     
     let id:Int?
     let title:String?
-    let user_id:Int?
-    let category_id:Int?
+    let user_id:String?
+    let category_id:String?
     let all_days:String?
     let start_date:String?
     let end_date:String?
@@ -327,8 +327,8 @@ struct GoalsAndBenchmark:Decodable{
 struct Goals:Codable{
     let id:Int?
     let title:String?
-    let user_id:Int?
-    let category_id:Int?
+    let user_id:String?
+    let category_id:String?
     let deadline:String?
     let completed:String?
     let created_at:String?
@@ -368,7 +368,7 @@ struct resourceDetailss:Codable{
 
 struct Lessons:Codable{
     let id:Int?
-    let resource_id:Int?
+    let resource_id:String?
     let title:String?
     let overview:[lessonTopic]?
     let key_aspects:[lessonTopic]?

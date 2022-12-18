@@ -36,7 +36,7 @@ class GeneralLiturgicalPageVC: UIViewController, IndicatorInfoProvider{
             for x in 0 ..< graph.count{
                 
                 targetMarkets.append(graph[x].name ?? "")
-                unitsSold.append(Double(graph[x].percent ?? 0))
+                unitsSold.append(Double(graph[x].percent ?? "") ?? 0.0)
 
             }
             setupPieChart(dataPoints:targetMarkets , values:unitsSold )

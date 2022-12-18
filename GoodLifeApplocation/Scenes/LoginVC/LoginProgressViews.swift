@@ -111,6 +111,8 @@ extension LoginProgressViews:AuthDelegate{
             AppData.mobile = data.mobile ?? ""
             latitude = Double(data.latitude ?? "") ?? 0.0
             longitude = Double(data.longitude ?? "") ?? 0.0
+            UserDefaults.standard.set(latitude, forKey: "lat")
+            UserDefaults.standard.set(longitude, forKey: "long")
 
           } catch let error {
             print(error)
@@ -138,8 +140,7 @@ extension LoginProgressViews:AuthDelegate{
 
                 let nav1 = UINavigationController()
                 let mainView = MapVC()
-                mainView.longitude=longitude
-                mainView.latitude=latitude
+           
                 nav1.viewControllers = [mainView]
                 nav1.navigationBar.isHidden = true
              self.sceneDelegate.setRootVC(vc: nav1)

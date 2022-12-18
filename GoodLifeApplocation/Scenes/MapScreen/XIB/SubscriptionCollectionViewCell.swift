@@ -36,7 +36,7 @@ class SubscriptionCollectionViewCell: UICollectionViewCell,NibLoadableView   {
         financialModelTxt.text = viewModel.models?.html2Attributed?.string
         businessPlanTxt.text = viewModel.plans?.html2Attributed?.string
         websiteTxt.text = viewModel.websites?.html2Attributed?.string
-        matchesPercentageTxt.text = String(describing: viewModel.opportunity_match ?? 0)+"%" + " " + "Match"
+        matchesPercentageTxt.text = String(describing: viewModel.opportunity_match ?? "")+"%" + " " + "Match"
         review.text = String(describing: viewModel.reviews_count ?? 0)
 
         

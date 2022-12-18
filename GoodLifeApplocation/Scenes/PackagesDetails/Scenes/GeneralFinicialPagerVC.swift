@@ -131,28 +131,28 @@ extension GeneralFinicialPagerVC{
         fmt.minimumFractionDigits = 3
         
         firstTopicTitle.text = item[0].title ?? ""
-        firstTopicCost.text =  fmt.string(from: (item[0].cost ?? 0.0) as NSNumber)!
-        firstSubTopicValue.text = "\(item[0].childs?[0].cost ?? 0.0)"
+        firstTopicCost.text =  fmt.string(from: Float((item[0].cost ?? "")) as! NSNumber)!
+        firstSubTopicValue.text = item[0].childs?[0].cost ?? ""
         firstSubTopicTitle.text = item[0].childs?[0].title ?? ""
         secondSubTopicTitle.text = item[0].childs?[1].title ?? ""
-        secondSubTopicValue.text = "\(item[0].childs?[1].cost ?? 0.0)"
+        secondSubTopicValue.text = item[0].childs?[1].cost ?? ""
         
         secondTopicTitle.text = item[1].title ?? ""
-        secondTopicCost.text =  fmt.string(from: (item[1].cost ?? 0.0) as NSNumber)!
-        firstSubTopicCost.text = "\(item[1].childs?[0].cost ?? 0.0)"
+        secondTopicCost.text =  fmt.string(from: Float((item[1].cost ?? "")) as! NSNumber)!
+        firstSubTopicCost.text = item[1].childs?[0].cost ?? ""
         firstSubTopicTxt.text = item[1].childs?[0].title ?? ""
         SecondSubTopicTxt.text = item[1].childs?[1].title ?? ""
-        secondSubTopicCost.text = "\(item[1].childs?[1].cost ?? 0.0)"
+        secondSubTopicCost.text = item[1].childs?[1].cost ?? ""
 
         ThirdTopicTitle.text = item[2].title ?? ""
-        ThirdTopicCost.text = fmt.string(from: (item[2].cost ?? 0.0) as NSNumber)!
-        firstSubTopiicCost.text = "\(item[2].childs?[0].cost ?? 0.0)"
+        ThirdTopicCost.text = fmt.string(from: Float((item[2].cost ?? "")) as! NSNumber)!
+        firstSubTopiicCost.text = item[2].childs?[0].cost ?? ""
         firstSubTopiicTxt.text = item[2].childs?[0].title ?? ""
         SecondSubTopiicTxt.text = item[2].childs?[1].title ?? ""
-        SecondSubTopiicCost.text = "\(item[2].childs?[1].cost ?? 0.0)"
+        SecondSubTopiicCost.text = item[2].childs?[1].cost ?? ""
         
         
-        let earning = item[1].cost ?? 0.0  + (item[0].cost ?? 0.0) + (item[2].cost ?? 0.0)
+        let earning = (Float(item[1].cost ?? "") ?? 0.0)  + (Float((item[0].cost ?? "")) ?? 0.0) + (Float((item[2].cost ?? "")) ?? 0.0)
         
        
         let output = fmt.string(from: earning as NSNumber)!

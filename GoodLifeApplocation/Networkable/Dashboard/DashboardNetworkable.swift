@@ -11,7 +11,7 @@ import Moya
 protocol DashboardNetworkable:Networkable  {
 
     func AddTask(title:String,category_id:Int,all_days:String,start_date:String,end_date:String,completion: @escaping (Result<BaseResponse<userProfile>, Error>)-> ())
-    func AddGoal(title:String,category_id:Int,deadline:String,url:String,completion: @escaping (Result<BaseResponse<goalCreation>, Error>)-> ())
+    func AddGoal(title:String,category_id:String,deadline:String,url:String,completion: @escaping (Result<BaseResponse<goalCreation>, Error>)-> ())
     func getCategories(opportunity_id:Int,searchTxt:String,completion: @escaping (Result<BaseResponse<DahboardCategory>, Error>)-> ())
     func getResources(searchTxt:String,category_id:Int,completion: @escaping (Result<BaseResponse<DashboardResource>, Error>)-> ())
     func getMyTask(searchTxt:String,completion: @escaping (Result<BaseResponse<DashboardTask>, Error>)-> ())
@@ -39,7 +39,7 @@ class DashboardManager:DashboardNetworkable{
         request(target: .AddTask(title: title, category_id: category_id, all_days: all_days, start_date: start_date, end_date: end_date), completion:completion )
     }
 
-    func AddGoal(title: String, category_id: Int, deadline: String,url:String, completion: @escaping (Result<BaseResponse<goalCreation>, Error>) -> ()) {
+    func AddGoal(title: String, category_id: String, deadline: String,url:String, completion: @escaping (Result<BaseResponse<goalCreation>, Error>) -> ()) {
         request(target: .AddGoal(title: title, category_id: category_id, deadline: deadline,url:url), completion: completion)
     }
     

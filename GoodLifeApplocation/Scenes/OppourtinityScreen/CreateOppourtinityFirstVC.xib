@@ -549,6 +549,9 @@
         <designable name="HF1-NK-JsP">
             <size key="intrinsicContentSize" width="12.5" height="22"/>
         </designable>
+        <designable name="bbs-Je-60E">
+            <size key="intrinsicContentSize" width="133.5" height="31"/>
+        </designable>
     </designables>
     <resources>
         <image name="chevron.right" catalog="system" width="96" height="128"/>

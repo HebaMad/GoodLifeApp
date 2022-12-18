@@ -45,8 +45,8 @@ class MapVC: UIViewController {
     var locationCoordinate:[Double:Double]=[:]
     var mainNeedType:[mainType]=[]
     var categoryMainId = 0
-    var latitude:Double = 0.0
-    var longitude:Double = 0.0
+    var latitude:Double = UserDefaults.standard.double(forKey: "lat")
+    var longitude:Double = UserDefaults.standard.double(forKey: "long")
     private var isSkeleton: Bool = true {
         didSet {
             self.communityCollectionview.reloadData()
@@ -57,8 +57,16 @@ class MapVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //        mapview.delegate=self
-        
+                mapview.delegate=self
+        LocationManager.shared.getLocation { [self] location, error in
+            let center = CLLocationCoordinate2DMake((location?.coordinate.latitude) ?? latitude , (location?.coordinate.longitude) ?? longitude)
+            UserDefaults.standard.set(location?.coordinate.latitude,forKey: "lat")
+            UserDefaults.standard.set(location?.coordinate.longitude,forKey: "long")
+
+            let span = MKCoordinateSpan(latitudeDelta: 2.71, longitudeDelta: 1.85)
+                               let region = MKCoordinateRegion(center: center, span: span)
+            self.mapview.region = region
+        }
         specificFilterCollectionview.isHidden = true
         setUpSideMenu()
         setupCollectionview()
@@ -346,8 +354,10 @@ extension MapVC :HomeDelegate{
         longitudeList=[]
         
         mainNeedType = categories.main_needs_types ?? []
-        latitudeList = makeLatitudeRandomList(mainNeedType.count, lat: 31.3547)
-        longitudeList = makeLongtiudeRandomList(mainNeedType.count, long: 34.3088)
+        print(UserDefaults.standard.double(forKey: "lat"))
+        print(UserDefaults.standard.double(forKey: "long"))
+        latitudeList = makeLatitudeRandomList(mainNeedType.count, lat: UserDefaults.standard.double(forKey: "lat") )
+        longitudeList = makeLongtiudeRandomList(mainNeedType.count, long: UserDefaults.standard.double(forKey: "long"))
         print(latitudeList)
         print(latitudeList)
         
@@ -368,6 +378,7 @@ extension MapVC :HomeDelegate{
     func showAlerts(title: String, message: String) {}
     
     func getCategories(categories: Home) {
+        print(latitude)
         latitudeList=[]
         longitudeList=[]
         self.isSkeleton = false
@@ -375,8 +386,11 @@ extension MapVC :HomeDelegate{
         
         recentlyViewed = categories.recentlyViewed ?? []
         recommendedMinistries = categories.recommendedMinistries ?? []
-        latitudeList = makeLatitudeRandomList(5, lat: latitude)
-        longitudeList = makeLongtiudeRandomList(5, long: longitude)
+        //UserDefaults.standard.double(forKey: "lat")
+        latitudeList = makeLatitudeRandomList(mainNeedType.count, lat:UserDefaults.standard.double(forKey: "lat"))
+        //UserDefaults.standard.double(forKey: "long")
+        
+        longitudeList = makeLongtiudeRandomList(mainNeedType.count, long:UserDefaults.standard.double(forKey: "long"))
         createLocationCoordinateRandomPoints(latList: latitudeList, longList: longitudeList)
         communityCollectionview.reloadData()
         
@@ -437,6 +451,10 @@ extension MapVC{
         print(point.count)
         let allAnnotations = self.mapview.annotations
         self.mapview.removeAnnotations(allAnnotations)
+//        let center = CLLocationCoordinate2DMake( latitude , longitude)
+//            let span = MKCoordinateSpan(latitudeDelta: 0.0, longitudeDelta: 0.0)
+//            let region = MKCoordinateRegion(center: center, span: span)
+//            self.mapview.region = region
         for (key,value) in point{
             let point = MKPointAnnotation()
             point.title = key

@@ -162,7 +162,7 @@ private extension GoalAndBenchmarkVC{
         case 0:
             sender.setBackgroundImage( UIImage(systemName: "circlebadge.fill"), for: .normal)
             sender.tintColor = UIColor(named: "progressView")
-            self.presenter.markMyGoal(goalId: activeGoals[sender.tag].id ?? 0, categoryID:  activeGoals[sender.tag].category_id ?? 0)
+            self.presenter.markMyGoal(goalId: activeGoals[sender.tag].id ?? 0, categoryID: Int( activeGoals[sender.tag].category_id ?? "") ?? 0)
             self.presenter.delegate = self
             checkData(goalsArr: activeGoals)
             self.goalAndBenchmarkTableView.reloadData()

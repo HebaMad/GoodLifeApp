@@ -205,8 +205,8 @@ class OnBoardingVC: UIViewController {
         case 6:
             let nav1 = UINavigationController()
             let mainView = MapVC()
-            mainView.latitude = lat
-            mainView.longitude = long
+ 
+
             nav1.viewControllers = [mainView]
             nav1.navigationBar.isHidden = true
             self.sceneDelegate.setRootVC(vc: nav1)
@@ -237,7 +237,8 @@ extension OnBoardingVC:AuthDelegate{
             AppData.mobile = data.mobile ?? ""
             lat = Double(data.latitude ?? "") ?? 0.0
             long = Double(data.longitude ?? "") ?? 0.0
-            
+            UserDefaults.standard.set(latitude, forKey: "lat")
+            UserDefaults.standard.set(longitude, forKey: "long")
         } catch let error {
             print(error)
         }
