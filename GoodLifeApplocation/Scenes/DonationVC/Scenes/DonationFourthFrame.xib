@@ -57,16 +57,16 @@
                     </userDefinedRuntimeAttributes>
                 </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="CDB-vi-3xG">
-                    <rect key="frame" x="20" y="178" width="362" height="95"/>
+                    <rect key="frame" x="20" y="178" width="362" height="94"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank you" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YJK-jV-y99">
-                            <rect key="frame" x="0.0" y="0.0" width="362" height="29"/>
+                            <rect key="frame" x="0.0" y="0.0" width="362" height="28"/>
                             <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="24"/>
                             <color key="textColor" name="backgroundColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can claim your free NFT below, and track how many meals are used with the unique link" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hR4-rP-BFa">
-                            <rect key="frame" x="0.0" y="54" width="362" height="41"/>
+                            <rect key="frame" x="0.0" y="53" width="362" height="41"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -74,7 +74,7 @@
                     </subviews>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bC4-bu-Xjg">
-                    <rect key="frame" x="32" y="319" width="350" height="82.5"/>
+                    <rect key="frame" x="32" y="318" width="350" height="82"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLL-B8-Aa3" customClass="UIButtonDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="350" height="46"/>
@@ -103,7 +103,7 @@
                             </userDefinedRuntimeAttributes>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x3g-i0-kjf">
-                            <rect key="frame" x="0.0" y="54" width="350" height="28.5"/>
+                            <rect key="frame" x="0.0" y="54" width="350" height="28"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="Meal Tracker">
                                 <fontDescription key="titleFontDescription" name="Inter-Medium" family="Inter" pointSize="12"/>
@@ -130,7 +130,7 @@
     </objects>
     <designables>
         <designable name="eLL-B8-Aa3">
-            <size key="intrinsicContentSize" width="114.5" height="36"/>
+            <size key="intrinsicContentSize" width="109" height="35"/>
         </designable>
         <designable name="jHs-1b-tba">
             <size key="intrinsicContentSize" width="40" height="40"/>

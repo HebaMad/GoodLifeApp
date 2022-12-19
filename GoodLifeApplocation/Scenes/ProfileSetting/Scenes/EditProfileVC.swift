@@ -106,7 +106,7 @@ extension EditProfileVC{
             self.presenter.delegate = self
             
         }catch{
-            self.showAlert(title: "Warning", message: (error as! ValidationError).message,hideCancelBtn: true)
+            Alert.showErrorAlert(message: (error as! ValidationError).message)
 
         }
         
@@ -115,7 +115,7 @@ extension EditProfileVC{
 
 extension EditProfileVC:ProfileDelegate{
     func showAlerts(title: String, message: String) {
-        self.showAlert(title: title, message: message,hideCancelBtn: true)
+        Alert.showSuccessAlert(message: message)
 
     }
     
