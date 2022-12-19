@@ -195,7 +195,7 @@ struct startFundRaise:Decodable{
 }
 struct contactUS:Decodable{
     
-    let user_id:String?
+    let user_id:Int?
     let message:String?
     let created_at:String?
     let id:Int?

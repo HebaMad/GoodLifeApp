@@ -146,18 +146,18 @@
                                 <rect key="frame" x="16" y="264" width="382" height="598"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noData" translatesAutoresizingMaskIntoConstraints="NO" id="LMV-dU-vCa">
-                                        <rect key="frame" x="5" y="0.0" width="372" height="298"/>
+                                        <rect key="frame" x="12" y="0.0" width="358" height="298"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="LMV-dU-vCa" firstAttribute="leading" secondItem="RNa-B6-Ebz" secondAttribute="leading" constant="5" id="MoT-Rb-TSh"/>
+                                    <constraint firstItem="LMV-dU-vCa" firstAttribute="leading" secondItem="RNa-B6-Ebz" secondAttribute="leading" constant="12" id="MoT-Rb-TSh"/>
                                     <constraint firstItem="LMV-dU-vCa" firstAttribute="top" secondItem="RNa-B6-Ebz" secondAttribute="top" id="UzY-X2-SyX"/>
-                                    <constraint firstItem="LMV-dU-vCa" firstAttribute="leading" secondItem="RNa-B6-Ebz" secondAttribute="leading" constant="5" id="aSB-bq-EgW"/>
+                                    <constraint firstItem="LMV-dU-vCa" firstAttribute="leading" secondItem="RNa-B6-Ebz" secondAttribute="leading" constant="12" id="aSB-bq-EgW"/>
                                     <constraint firstAttribute="bottom" secondItem="LMV-dU-vCa" secondAttribute="bottom" constant="300" id="gFT-at-y2U"/>
                                     <constraint firstItem="LMV-dU-vCa" firstAttribute="top" secondItem="RNa-B6-Ebz" secondAttribute="top" id="hov-8h-ShP"/>
-                                    <constraint firstAttribute="trailing" secondItem="LMV-dU-vCa" secondAttribute="trailing" constant="5" id="iYn-af-iPN"/>
-                                    <constraint firstAttribute="trailing" secondItem="LMV-dU-vCa" secondAttribute="trailing" constant="5" id="mub-Z1-gpf"/>
+                                    <constraint firstAttribute="trailing" secondItem="LMV-dU-vCa" secondAttribute="trailing" constant="12" id="iYn-af-iPN"/>
+                                    <constraint firstAttribute="trailing" secondItem="LMV-dU-vCa" secondAttribute="trailing" constant="12" id="mub-Z1-gpf"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oq3-bJ-cLe">
@@ -317,15 +317,15 @@
                                 <rect key="frame" x="16" y="264" width="382" height="598"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noData" translatesAutoresizingMaskIntoConstraints="NO" id="d3b-mi-1u7">
-                                        <rect key="frame" x="5" y="0.0" width="372" height="298"/>
+                                        <rect key="frame" x="12" y="0.0" width="358" height="298"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="d3b-mi-1u7" secondAttribute="trailing" constant="5" id="FuV-SY-hdx"/>
+                                    <constraint firstAttribute="trailing" secondItem="d3b-mi-1u7" secondAttribute="trailing" constant="12" id="FuV-SY-hdx"/>
                                     <constraint firstItem="d3b-mi-1u7" firstAttribute="top" secondItem="Tq5-GM-hER" secondAttribute="top" id="KRi-6s-Qqy"/>
                                     <constraint firstAttribute="bottom" secondItem="d3b-mi-1u7" secondAttribute="bottom" constant="300" id="cq1-vg-Gl2"/>
-                                    <constraint firstItem="d3b-mi-1u7" firstAttribute="leading" secondItem="Tq5-GM-hER" secondAttribute="leading" constant="5" id="y8l-Bu-pu1"/>
+                                    <constraint firstItem="d3b-mi-1u7" firstAttribute="leading" secondItem="Tq5-GM-hER" secondAttribute="leading" constant="12" id="y8l-Bu-pu1"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LLQ-TY-IO3">

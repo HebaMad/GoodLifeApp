@@ -232,7 +232,7 @@ ministry idea??</string>
                                                                         <constraint firstAttribute="height" constant="40" id="uzV-oM-Zhu"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                    <textInputTraits key="textInputTraits"/>
+                                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                                 </textField>
                                                             </subviews>
                                                         </stackView>

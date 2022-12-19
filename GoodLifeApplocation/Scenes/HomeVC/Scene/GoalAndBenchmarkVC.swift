@@ -60,6 +60,8 @@ class GoalAndBenchmarkVC: UIViewController {
             
             
         case 0:
+            self.emptyView.isHidden = true
+
             selectedSegment=0
             goalAndBenchmarkTableView.register(PastGoalsCell.self)
             setupTable()
@@ -67,6 +69,8 @@ class GoalAndBenchmarkVC: UIViewController {
 
             
         case 1:
+            self.emptyView.isHidden = true
+
             selectedSegment=1
             goalAndBenchmarkTableView.register(PastGoalsCell.self)
             setupTable()

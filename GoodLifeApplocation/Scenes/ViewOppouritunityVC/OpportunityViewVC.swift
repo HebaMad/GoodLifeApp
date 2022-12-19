@@ -80,8 +80,9 @@ extension OpportunityViewVC{
              navigationController?.pushViewController(vc, animated: true)
              
          case createOppourtinity.ViewBtn:
-             let vc = CreateOppourtinityVC()
-             navigationController?.pushViewController(vc, animated: true)
+             print("")
+//             let vc = CreateOppourtinityVC()
+//             navigationController?.pushViewController(vc, animated: true)
          default:
              print("")
          }

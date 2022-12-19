@@ -125,7 +125,7 @@ feedback!</string>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0aG-LK-rRo" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="334" width="414" height="572.5"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Nl1-Mx-vmE">
+                                                <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Nl1-Mx-vmE">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="572.5"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="13M-zN-fKk">
@@ -153,7 +153,7 @@ feedback!</string>
                                                             </constraints>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eLL-Z5-q0q">
-                                                            <rect key="frame" x="20" y="123" width="374" height="173.5"/>
+                                                            <rect key="frame" x="20" y="126" width="374" height="173.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review of project?*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Bd-Yp-5jU">
                                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="17"/>
@@ -200,19 +200,19 @@ feedback!</string>
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZsE-LN-S36">
-                                                            <rect key="frame" x="20" y="308.5" width="374" height="91"/>
+                                                            <rect key="frame" x="20" y="314.5" width="374" height="91"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review?*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bs2-AH-4tw">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="17"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="51"/>
                                                                     <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="14"/>
                                                                     <color key="textColor" name="button"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m2y-5A-XrQ">
-                                                                    <rect key="frame" x="0.0" y="27" width="374" height="64"/>
+                                                                    <rect key="frame" x="0.0" y="61" width="374" height="30"/>
                                                                     <subviews>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ors-jE-gvQ" customClass="RatingControl" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="64"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
                                                                             <color key="tintColor" name="review star"/>
                                                                             <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="0.0" bottom="0.0" trailing="200"/>
                                                                             <userDefinedRuntimeAttributes>
@@ -249,19 +249,19 @@ feedback!</string>
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="euU-ii-9ZR">
-                                                            <rect key="frame" x="20" y="411.5" width="374" height="61"/>
+                                                            <rect key="frame" x="20" y="420.5" width="374" height="49"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xxa-9i-Trv">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="61"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="49"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add image " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYX-lE-UTZ">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="194" height="61"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="194" height="49"/>
                                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
                                                                             <color key="textColor" name="button"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFc-1X-HUd" customClass="UIButtonDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                                                            <rect key="frame" x="194" y="0.0" width="180" height="61"/>
+                                                                            <rect key="frame" x="194" y="0.0" width="180" height="49"/>
                                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="180" id="MtI-rl-Tad"/>
@@ -335,7 +335,7 @@ feedback!</string>
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstItem="eLL-Z5-q0q" firstAttribute="height" secondItem="13M-zN-fKk" secondAttribute="height" multiplier="1.90909" id="Mrx-JV-G3a"/>
-                                                        <constraint firstItem="euU-ii-9ZR" firstAttribute="height" secondItem="eLL-Z5-q0q" secondAttribute="height" multiplier="0.35" id="Peo-QD-Qmb"/>
+                                                        <constraint firstItem="euU-ii-9ZR" firstAttribute="height" secondItem="eLL-Z5-q0q" secondAttribute="height" multiplier="0.28" id="Peo-QD-Qmb"/>
                                                         <constraint firstItem="ZsE-LN-S36" firstAttribute="height" secondItem="13M-zN-fKk" secondAttribute="height" id="dWN-pT-Ato"/>
                                                     </constraints>
                                                     <directionalEdgeInsets key="directionalLayoutMargins" top="20" leading="20" bottom="8" trailing="20"/>
@@ -394,7 +394,7 @@ feedback!</string>
             <size key="intrinsicContentSize" width="244" height="131"/>
         </designable>
         <designable name="Gho-wA-NQy">
-            <size key="intrinsicContentSize" width="32" height="34"/>
+            <size key="intrinsicContentSize" width="53" height="34"/>
         </designable>
         <designable name="TFc-1X-HUd">
             <size key="intrinsicContentSize" width="66.5" height="22"/>
