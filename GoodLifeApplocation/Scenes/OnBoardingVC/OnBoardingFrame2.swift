@@ -17,7 +17,7 @@ class OnBoardingFrame2: UIViewController {
     //MARK: - Outlet
     var lat = ""
     var long = ""
-    
+    var city = ""
     //MARK: - Life cycle
     
     override func viewDidLoad() {
@@ -52,14 +52,12 @@ extension OnBoardingFrame2{
             }
             self.lat = "\(location.coordinate.latitude)"
             self.long = "\(location.coordinate.longitude)"
+            LocationManager.shared.getAddressFromLatLon(pdblLatitude: self.lat, withLongitude: self.long) { status, mapaddress, mapcountry in
+                self.city = mapcountry ?? ""
+            }
             
             print("Latitude: \(location.coordinate.latitude) Longitude: \(location.coordinate.longitude)")
-            do{
-                
-                
-            }catch(let error){
-
-            }
+          
         }
     }
 }

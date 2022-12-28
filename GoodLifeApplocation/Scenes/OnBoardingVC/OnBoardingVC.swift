@@ -27,7 +27,11 @@ class OnBoardingVC: UIViewController {
     var lat:Double = 0.0
     var long:Double = 0.0
     
-    
+    var city : String = ""{
+        didSet{
+            
+        }
+    }
     var latitude : String = ""{
         didSet{
             
@@ -143,6 +147,7 @@ class OnBoardingVC: UIViewController {
         case 3:
             latitude = (vc as! OnBoardingFrame2).lat
             longitude = (vc as! OnBoardingFrame2).long
+            city  =  (vc as! OnBoardingFrame2).city
             print(latitude)
             print(longitude)
             if latitude == "" && longitude == "" {
@@ -191,7 +196,7 @@ class OnBoardingVC: UIViewController {
                 showSnackBar(message: "Please select your investment time ")
                 
             }else{
-                self.presnter.startInvestiment(mobile: mobileNumber, latitude: self.latitude, longitude: self.longitude, work_type: self.timeOfInvestment.lowercased(), amount_raise: self.maxValueInvestment-self.minValueInvestment)
+                self.presnter.startInvestiment(mobile: mobileNumber, latitude: self.latitude, longitude: self.longitude, city: city, work_type: self.timeOfInvestment.lowercased(), amount_raise: self.maxValueInvestment-self.minValueInvestment)
                 self.presnter.delegate=self
                 self.contsinerView.subviews.first?.removeFromSuperview()
                 self.stepsIndicator.currentStep = 5
@@ -239,6 +244,8 @@ extension OnBoardingVC:AuthDelegate{
             long = Double(data.longitude ?? "") ?? 0.0
             UserDefaults.standard.set(latitude, forKey: "lat")
             UserDefaults.standard.set(longitude, forKey: "long")
+            UserDefaults.standard.set(city, forKey: "city")
+
         } catch let error {
             print(error)
         }

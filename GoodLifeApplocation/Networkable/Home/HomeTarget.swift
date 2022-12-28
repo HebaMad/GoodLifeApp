@@ -13,7 +13,7 @@ enum HomeApiTarget:TargetType{
     case Home(txt:String)
     case getNeedMainCategory
     case getNeedSubCategory
-    case categoriesFiltering(mainCategoriesID:String,subCategoriesID:String)
+    case categoriesFiltering(mainCategoriesID:String,subCategoriesID:String,latitude:String,longitude:String,city:String)
     case getOpportunities(needTypeId:Int,intrest:Int)
     case oppourtinityDetails(opportunity_id:Int)
     case Filter(investmentFrom:String,investmentTo:String,work_type:String,level_of_difficulty:String,amount_of_technology:String)
@@ -84,8 +84,8 @@ enum HomeApiTarget:TargetType{
         case .Home(let txt):
             return ["txt" :txt ]
             
-        case .categoriesFiltering(let mainCategoriesID,let subCategoriesID):
-            return ["main_category_id" : mainCategoriesID ,"sub_category_id":subCategoriesID]
+        case .categoriesFiltering(let mainCategoriesID,let subCategoriesID,let latitude,let longitude,let city):
+            return ["main_category_id" : mainCategoriesID ,"sub_category_id":subCategoriesID,"latitude":latitude,"longitude":longitude,"city":city]
 
         case .getOpportunities(let need_type_id ,let interest ):
             return ["need_type_id":need_type_id,"interest":interest]

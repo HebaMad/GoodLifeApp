@@ -325,7 +325,7 @@ extension MapVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollection
             
             
         }else if collectionView == specificFilterCollectionview{
-            self.presenter.categriesFailtered(mainCategoriesID: "\(categoryMainId)", subCategoriesID: "\(specificFiltering[indexPath.row].id ?? 0)")
+            self.presenter.categriesFailtered(mainCategoriesID: "\(categoryMainId)", subCategoriesID: "\(specificFiltering[indexPath.row].id ?? 0)",latitude:"latitude",longitude:"longitude",city:"city")
             self.presenter.delegate = self
             
         }else{

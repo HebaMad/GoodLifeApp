@@ -12,7 +12,7 @@ enum SignUserTarget:TargetType{
     case SignUp(mobile:String)
     case resendCode(mobile:String)
     case checkCode(mobile:String,code:String)
-    case startFundRaise(mobile:String,latitude:String,longitude:String,work_type:String,amount_raise:Float)
+    case startFundRaise(mobile:String,latitude:String,city:String,longitude:String,work_type:String,amount_raise:Float)
     case login(mobile:String,token:String)
     
     var baseURL: URL {
@@ -75,8 +75,8 @@ enum SignUserTarget:TargetType{
         case .checkCode( let mobile,let code):
             return ["mobile":mobile,"code":code]
 
-        case .startFundRaise(let mobile,let latitude,let longitude, let work_type,let amount_raise):
-            return ["mobile":mobile,"latitude":latitude,"longitude":longitude,"work_type":work_type,"amount_raise":amount_raise]
+        case .startFundRaise(let mobile,let latitude,let longitude,let city ,let work_type,let amount_raise):
+            return ["mobile":mobile,"latitude":latitude,"longitude":longitude,"city":city,"work_type":work_type,"amount_raise":amount_raise]
 
         case .login( let mobile , let token):
             return ["mobile":mobile,"fcm_token":token ,"device_type":"ios"]

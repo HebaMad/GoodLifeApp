@@ -13,8 +13,7 @@ typealias Callback = ( _ status: Bool,_ mapaddress:String?,_ mapcountry:String?)
 final class LocationManager: NSObject {
     
     enum LocationErrors: String {
-        
-        
+                
         case denied = "Locations are turned off. Please turn it on in Settings"
         case restricted = "Locations are restricted"
         case notDetermined = "Locations are not determined yet"
@@ -22,9 +21,9 @@ final class LocationManager: NSObject {
         case invalidLocation = "Invalid Location"
         case reverseGeocodingFailed = "Reverse Geocoding Failed"
         case unknown = "Some Unknown Error occurred"
-    
-        
+      
     }
+    
     var addressString : String = ""
 
     typealias LocationClosure = ((_ location:CLLocation?,_ error: NSError?)->Void)
@@ -49,8 +48,11 @@ final class LocationManager: NSObject {
     private override init() {}
 
     //MARK:- Destroy the LocationManager
+    
     deinit {
+        
         destroyLocationManager()
+        
     }
     
     func getAddressFromLatLon(pdblLatitude: String, withLongitude pdblLongitude: String,callback: @escaping Callback) {
@@ -63,14 +65,12 @@ final class LocationManager: NSObject {
 
             let loc: CLLocation = CLLocation(latitude:center.latitude, longitude: center.longitude)
 
-
             ceo.reverseGeocodeLocation(loc, completionHandler:
                 {(placemarks, error) in
                     if (error != nil)
                     {
                         print("reverse geodcode fail: \(error!.localizedDescription)")
                         callback(false,error?.localizedDescription ?? "",error?.localizedDescription ?? "")
-                        
                     }
                     let pm = placemarks! as [CLPlacemark]
 
@@ -92,16 +92,11 @@ final class LocationManager: NSObject {
                         if pm.postalCode != nil {
                             self.addressString = self.addressString + pm.postalCode! + " "
                         }
-
-
                         print(self.addressString)
                         callback(true,self.addressString,pm.country)
-
                   }
             })
-        
-
-        }
+    }
     
     
     

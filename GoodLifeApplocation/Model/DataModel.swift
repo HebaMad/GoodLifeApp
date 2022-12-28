@@ -29,6 +29,9 @@ struct CategoriesFiltering:Decodable{
 
 struct mainType:Codable{
     let id:Int?
+    let latitude:String?
+    let longitude:String?
+    let city:String?
     let main_category_id:Int?
     let sub_category_id:Int?
     let logo:String?

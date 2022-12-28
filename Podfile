@@ -9,7 +9,6 @@ target 'GoodLifeApplocation' do
   pod 'IQKeyboardManagerSwift', '6.3.0'
   pod 'SideMenu'
   pod 'XLPagerTabStrip', '~> 9.0'
-  pod 'Charts'
   pod 'RangeSeekSlider'
   pod 'FittedSheets'
   pod 'Moya'
@@ -21,4 +20,6 @@ target 'GoodLifeApplocation' do
   pod 'FirebaseCore'
   pod 'Firebase/Messaging'
   pod 'Firebase/Firestore'
+  pod 'Charts' 
+
 end

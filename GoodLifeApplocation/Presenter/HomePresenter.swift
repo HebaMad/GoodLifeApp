@@ -82,8 +82,8 @@ class HomePresenter:NSObject{
         }
     }
     
-    func categriesFailtered(mainCategoriesID:String,subCategoriesID:String){
-        HomeManager.shared.categoriesFiltering(mainCategoriesID: mainCategoriesID, subCategoriesID: subCategoriesID) { Response in
+    func categriesFailtered(mainCategoriesID:String,subCategoriesID:String,latitude:String,longitude:String,city:String){
+        HomeManager.shared.categoriesFiltering(mainCategoriesID: mainCategoriesID, subCategoriesID: subCategoriesID,latitude:latitude,longitude:longitude,city:city) { Response in
             switch Response{
                 
             case let .success(response):
