@@ -57,8 +57,8 @@ class MapVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                mapview.delegate=self
-        LocationManager.shared.getLocation { [self] location, error in
+            mapview.delegate=self
+            LocationManager.shared.getLocation { [self] location, error in
             let center = CLLocationCoordinate2DMake((location?.coordinate.latitude) ?? latitude , (location?.coordinate.longitude) ?? longitude)
             UserDefaults.standard.set(location?.coordinate.latitude,forKey: "lat")
             UserDefaults.standard.set(location?.coordinate.longitude,forKey: "long")
@@ -67,10 +67,10 @@ class MapVC: UIViewController {
                                let region = MKCoordinateRegion(center: center, span: span)
             self.mapview.region = region
         }
-        specificFilterCollectionview.isHidden = true
-        setUpSideMenu()
-        setupCollectionview()
-        menuBtnBinding()
+            specificFilterCollectionview.isHidden = true
+            setUpSideMenu()
+            setupCollectionview()
+            menuBtnBinding()
         
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -98,7 +98,6 @@ class MapVC: UIViewController {
         menu?.presentationStyle.onTopShadowOpacity = 0
         menu?.presentationStyle.presentingScaleFactor = 0.99
         menu?.menuWidth = 280
-        
         SideMenuManager.default.addPanGestureToPresent(toView: self.view)
     }
     
@@ -206,7 +205,7 @@ private extension MapVC {
     func setupData(){
         
         self.isSkeleton = true
-        presenter.getCategoriesData(searchTxt: "")
+        presenter.getCategoriesData(searchTxt: "") // edit here
         presenter.delegate = self
         
         presenter.mainStandardFilter()
@@ -354,14 +353,15 @@ extension MapVC :HomeDelegate{
         longitudeList=[]
         
         mainNeedType = categories.main_needs_types ?? []
-        print(UserDefaults.standard.double(forKey: "lat"))
-        print(UserDefaults.standard.double(forKey: "long"))
-        latitudeList = makeLatitudeRandomList(mainNeedType.count, lat: UserDefaults.standard.double(forKey: "lat") )
-        longitudeList = makeLongtiudeRandomList(mainNeedType.count, long: UserDefaults.standard.double(forKey: "long"))
-        print(latitudeList)
-        print(latitudeList)
+        setupAnnotation(points:mainNeedType)
+//        print(UserDefaults.standard.double(forKey: "lat"))
+//        print(UserDefaults.standard.double(forKey: "long"))
+//        latitudeList = makeLatitudeRandomList(mainNeedType.count, lat: UserDefaults.standard.double(forKey: "lat") )
+//        longitudeList = makeLongtiudeRandomList(mainNeedType.count, long: UserDefaults.standard.double(forKey: "long"))
+//        print(latitudeList)
+//        print(latitudeList)
         
-        createLocationCoordinateRandomPoints(latList: latitudeList, longList: longitudeList)
+//        createLocationCoordinateRandomPoints(latList: latitudeList, longList: longitudeList)
     }
     
     func getsubCategoriesFiltering(categories: SubHomeCategories) {
@@ -386,15 +386,14 @@ extension MapVC :HomeDelegate{
         
         recentlyViewed = categories.recentlyViewed ?? []
         recommendedMinistries = categories.recommendedMinistries ?? []
-        print(UserDefaults.standard.double(forKey: "lat"))
-        print(UserDefaults.standard.double(forKey: "long"))
-
+       
+        setupAnnotation(points:mainNeedType)
         //UserDefaults.standard.double(forKey: "lat")
-        latitudeList = makeLatitudeRandomList(mainNeedType.count, lat:UserDefaults.standard.double(forKey: "lat"))
-        //UserDefaults.standard.double(forKey: "long")
-        
-        longitudeList = makeLongtiudeRandomList(mainNeedType.count, long:UserDefaults.standard.double(forKey: "long"))
-        createLocationCoordinateRandomPoints(latList: latitudeList, longList: longitudeList)
+//        latitudeList = makeLatitudeRandomList(mainNeedType.count, lat:UserDefaults.standard.double(forKey: "lat"))
+//        //UserDefaults.standard.double(forKey: "long")
+//
+//        longitudeList = makeLongtiudeRandomList(mainNeedType.count, long:UserDefaults.standard.double(forKey: "long"))
+//        createLocationCoordinateRandomPoints(latList: latitudeList, longList: longitudeList)
         communityCollectionview.reloadData()
         
     }
@@ -415,57 +414,42 @@ extension MapVC: OnFilterDissmissed {
 
 
 extension MapVC{
-    func makeLatitudeRandomList(_ n: Int,lat:Double) -> [Double] {
-        return (0..<n).map { _ in Double.random(in: lat...lat+1.1) }
-    }
-    func makeLongtiudeRandomList(_ n: Int,long:Double) -> [Double] {
-        
-        return (0..<n).map { _ in Double.random(in: long...long+1.1) }
-        
-    }
+
     
-    func createLocationCoordinateRandomPoints(latList:[Double],longList:[Double]){
-        for index in 0 ..< latList.count{
-            locationCoordinate[latList[index]]=longList[index]
-        }
-        createAnnotation(location: locationCoordinate)
-        
-        
-    }
+//    func makeLatitudeRandomList(_ n: Int,lat:Double) -> [Double] {
+//        return (0..<n).map { _ in Double.random(in: lat...lat+1.1) }
+//    }
+//    func makeLongtiudeRandomList(_ n: Int,long:Double) -> [Double] {
+//
+//        return (0..<n).map { _ in Double.random(in: long...long+1.1) }
+//
+//    }
     
+//    func createLocationCoordinateRandomPoints(latList:[Double],longList:[Double]){
+//        for index in 0 ..< latList.count{
+//            locationCoordinate[latList[index]]=longList[index]
+//        }
+//        createAnnotation(location: locationCoordinate)
+
+//    func createAnnotation(location:[Double:Double]){
+//        mainCategories = [:]
+//        for indx in 0 ..< mainNeedType.count{
+//            mainCategories[mainNeedType[indx].name ?? ""] = [Array(location.keys)[indx] : Array(location.values)[indx]]
+//        }
+
+//    }
+//
     
-    func createAnnotation(location:[Double:Double]){
-        mainCategories = [:]
-        for indx in 0 ..< mainNeedType.count{
-            mainCategories[mainNeedType[indx].name ?? ""] = [Array(location.keys)[indx] : Array(location.values)[indx]]
-        }
-        
-        
-        
-        print(mainCategories)
-        setupAnnotation(point: mainCategories)
-        
-        
-    }
-    
-    
-    func setupAnnotation(point:[String:[Double:Double]]){
-        print(point)
-        print(point.count)
+    func setupAnnotation(points:[mainType]){
+  
         let allAnnotations = self.mapview.annotations
         self.mapview.removeAnnotations(allAnnotations)
-//        let center = CLLocationCoordinate2DMake( latitude , longitude)
-//            let span = MKCoordinateSpan(latitudeDelta: 0.0, longitudeDelta: 0.0)
-//            let region = MKCoordinateRegion(center: center, span: span)
-//            self.mapview.region = region
-        for (key,value) in point{
+        for index in 0 ..< points.count{
             let point = MKPointAnnotation()
-            point.title = key
-            point.coordinate = CLLocationCoordinate2D(latitude: Array(value.keys)[0], longitude:Array(value.values)[0])
+            point.title = points[index].name
+            point.coordinate = CLLocationCoordinate2D(latitude: Double(points[index].latitude ?? "") ?? 0.0, longitude:Double(points[index].longitude ?? "") ?? 0.0)
             mapview.addAnnotation(point)
-            
         }
-        
         mapview.delegate=self
         
     }

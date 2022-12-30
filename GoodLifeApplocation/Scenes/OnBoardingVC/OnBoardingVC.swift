@@ -150,6 +150,8 @@ class OnBoardingVC: UIViewController {
             city  =  (vc as! OnBoardingFrame2).city
             print(latitude)
             print(longitude)
+            print(city)
+
             if latitude == "" && longitude == "" {
                 showSnackBar(message: "please we want your location to provide you an application services")
                 
