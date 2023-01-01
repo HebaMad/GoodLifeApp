@@ -74,17 +74,13 @@ struct OppourtinityDetails : Codable {
     let rate:Int?
     let rate_count:Int?
     let reviews_count:Int?
-    let general:[GeneralOppourtinity]?
-    let specific:[SpecificOppourtinity]?
+    let generals:[GeneralOppourtinity]?
+    let specifics:[SpecificOppourtinity]?
 
 }
 
 
 
-struct Graph:Codable{
-    let name:String?
-    let percent:String?
-}
 
 struct GeneralOppourtinity:Codable{
     let type:String?
@@ -95,8 +91,12 @@ struct GeneralOppourtinity:Codable{
     let graph:[Graph]?
 
 }
+struct Graph: Codable {
+    let name:String?
+    let percent:String?
+}
 
-struct GeneralOppourtinityDetails:Codable{
+struct GeneralOppourtinityDetails: Codable {
     
     let title:String?
     let url:String?
@@ -127,7 +127,7 @@ struct SpecificOppourtinity : Codable {
 
     
 }
-struct SpecificOppourtinityDetails:Codable{
+struct SpecificOppourtinityDetails: Codable {
     
     let title:String?
     let url:String?
@@ -138,7 +138,7 @@ struct SpecificOppourtinityDetails:Codable{
 }
 
 
-struct MainCategories:Codable{
+struct MainCategories: Codable {
     let id:Int?
     let type:String?
     let status:String?

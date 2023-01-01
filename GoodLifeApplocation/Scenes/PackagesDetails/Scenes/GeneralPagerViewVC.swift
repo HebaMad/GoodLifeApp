@@ -73,7 +73,7 @@ class GeneralPagerViewVC: ButtonBarPagerTabStripViewController {
         let data = UserDefaults.standard.object(forKey: "oppourtinityID") as? Data;
          if data != nil{
               oppourtinityDetails =  try! JSONDecoder().decode(OppourtinityDetails.self, from: data ?? Data())
-             first.item = oppourtinityDetails?.general?[0].items ?? []
+             first.item = oppourtinityDetails?.generals?[0].items ?? []
              first.itemInfo = "Finicial"
          }
        
@@ -82,18 +82,18 @@ class GeneralPagerViewVC: ButtonBarPagerTabStripViewController {
     let second = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GeneralMarketingPageVC") as! GeneralMarketingPageVC
          if data != nil{
         oppourtinityDetails =  try! JSONDecoder().decode(OppourtinityDetails.self, from: data ?? Data())
-        second.item = oppourtinityDetails?.general?[1].items ?? []
-        second.footerTitle =  oppourtinityDetails?.general?[1].footer_title ?? ""
-        second.footerValue =  oppourtinityDetails?.general?[1].details ?? ""
-        second.graph =  oppourtinityDetails?.general?[1].graph ?? []
+        second.item = oppourtinityDetails?.generals?[1].items ?? []
+        second.footerTitle =  oppourtinityDetails?.generals?[1].footer_title ?? ""
+        second.footerValue =  oppourtinityDetails?.generals?[1].details ?? ""
+        second.graph =  oppourtinityDetails?.generals?[1].graph ?? []
         second.itemInfo = "Marketing"
          }
         
         let third = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GeneralLiturgicalPageVC") as! GeneralLiturgicalPageVC
          if data != nil{
         oppourtinityDetails =  try! JSONDecoder().decode(OppourtinityDetails.self, from: data ?? Data())
-        third.item = oppourtinityDetails?.general?[2].items ?? []
-        third.graph =  oppourtinityDetails?.general?[2].graph ?? []
+        third.item = oppourtinityDetails?.generals?[2].items ?? []
+        third.graph =  oppourtinityDetails?.generals?[2].graph ?? []
 
         third.itemInfo = "Liturgical"
          }

@@ -60,11 +60,14 @@ class MapVC: UIViewController {
             mapview.delegate=self
             LocationManager.shared.getLocation { [self] location, error in
             let center = CLLocationCoordinate2DMake((location?.coordinate.latitude) ?? latitude , (location?.coordinate.longitude) ?? longitude)
+                latitude=location?.coordinate.latitude ?? 0.0
+                longitude=location?.coordinate.longitude ?? 0.0
             UserDefaults.standard.set(location?.coordinate.latitude,forKey: "lat")
             UserDefaults.standard.set(location?.coordinate.longitude,forKey: "long")
             setupData()
-            let span = MKCoordinateSpan(latitudeDelta: 2.71, longitudeDelta: 1.85)
-                               let region = MKCoordinateRegion(center: center, span: span)
+                
+            let span = MKCoordinateSpan(latitudeDelta: 35, longitudeDelta: 35)
+            let region = MKCoordinateRegion(center: center, span: span)
             self.mapview.region = region
         }
             specificFilterCollectionview.isHidden = true
@@ -205,8 +208,10 @@ private extension MapVC {
     func setupData(){
         
         self.isSkeleton = true
-        presenter.getCategoriesData(searchTxt: "") // edit here
-        presenter.delegate = self
+//        presenter.getCategoriesData(searchTxt: "") // edit here
+//        presenter.delegate = self
+        self.presenter.categriesFailtered(mainCategoriesID: "0", subCategoriesID:"0",latitude:"\(latitude)",longitude:"\(longitude)",city:UserDefaults.standard.string(forKey: "city")!)
+        self.presenter.delegate = self
         
         presenter.mainStandardFilter()
         presenter.delegate = self
@@ -324,7 +329,7 @@ extension MapVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollection
             
             
         }else if collectionView == specificFilterCollectionview{
-            self.presenter.categriesFailtered(mainCategoriesID: "\(categoryMainId)", subCategoriesID: "\(specificFiltering[indexPath.row].id ?? 0)",latitude:"latitude",longitude:"longitude",city:"city")
+            self.presenter.categriesFailtered(mainCategoriesID: "\(categoryMainId)", subCategoriesID: "\(specificFiltering[indexPath.row].id ?? 0)",latitude:"\(latitude)",longitude:"\(longitude)",city:UserDefaults.standard.string(forKey: "city")!)
             self.presenter.delegate = self
             
         }else{

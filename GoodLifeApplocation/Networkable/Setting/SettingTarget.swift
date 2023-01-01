@@ -55,7 +55,7 @@ enum SettingApiTarget:TargetType{
         case .editProfile(let name,let mobileNumber,let location,let img):
             
             
-            let userImg = MultipartFormData(provider: .data(img), name: "image_profile", fileName: "images", mimeType: "image.jpg")
+            let userImg = MultipartFormData(provider: .data(img), name: "image_profile", fileName: "", mimeType: "image.jpg")
               let mobileNumber = MultipartFormData(provider: .data(mobileNumber.data(using: .utf8)!), name: "mobile")
                let location = MultipartFormData(provider: .data(location.data(using: .utf8)!), name: "location")
                let name = MultipartFormData(provider: .data(name.data(using: .utf8)!), name: "name")

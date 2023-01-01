@@ -56,9 +56,8 @@ extension OnBoardingFrame2{
             print(self.long)
 
             LocationManager.shared.getAddressFromLatLon(pdblLatitude: self.lat, withLongitude: self.long) { status, mapaddress, mapcountry in
-                print(mapaddress)
-                print(mapcountry)
-                self.city = mapaddress ?? ""
+             
+                self.city = mapcountry ?? ""
             }
             
             print("Latitude: \(location.coordinate.latitude) Longitude: \(location.coordinate.longitude)")

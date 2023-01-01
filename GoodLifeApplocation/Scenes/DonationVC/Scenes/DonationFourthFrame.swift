@@ -41,8 +41,9 @@ extension DonationFourthFrame{
         
         switch sender{
         case claimNftBtn:
-            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NavigationController")
-            self.sceneDelegate.setRootVC(vc: vc)
+            print("claim")
+//            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NavigationController")
+//            self.sceneDelegate.setRootVC(vc: vc)
             
         case mealMarkerBtn:
             let vc = DonationFifthFrameVC()

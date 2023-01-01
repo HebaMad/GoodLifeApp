@@ -104,6 +104,7 @@ extension SpecificWebsiteVC:UICollectionViewDelegate, UICollectionViewDataSource
      
             let cell:SpecificWebsiteCompetitorCell = collectionView.dequeueReusableCell(for: indexPath)
         cell.configureCell(index: indexPath.row + 1 , ViewModel: (item[indexPath.section].childs?[indexPath.row])!)
+        cell.websiteNameText.isHidden=true
             return cell
   
        

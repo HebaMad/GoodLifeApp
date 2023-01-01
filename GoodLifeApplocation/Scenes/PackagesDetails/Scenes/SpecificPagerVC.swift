@@ -60,8 +60,8 @@ class SpecificPagerVC: ButtonBarPagerTabStripViewController{
         let data = UserDefaults.standard.object(forKey: "oppourtinityID") as? Data;
         if data != nil{
             oppourtinityDetails =  try! JSONDecoder().decode(OppourtinityDetails.self, from: data ?? Data())
-            first.item = oppourtinityDetails?.specific?[0].items ?? []
-            first.graph =  oppourtinityDetails?.specific?[0].graph ?? []
+            first.item = oppourtinityDetails?.specifics?[0].items ?? []
+            first.graph =  oppourtinityDetails?.specifics?[0].graph ?? []
             first.itemInfo = "FinancialModel"
             
         }
@@ -69,17 +69,17 @@ class SpecificPagerVC: ButtonBarPagerTabStripViewController{
         let second = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SpecificWebsiteVC") as! SpecificWebsiteVC
         if data != nil{
             oppourtinityDetails =  try! JSONDecoder().decode(OppourtinityDetails.self, from: data ?? Data())
-            second.item = oppourtinityDetails?.specific?[1].items ?? []
-            second.topCompetitorTitle =  oppourtinityDetails?.specific?[1].footer_title ?? ""
-            second.topCompetitorValue =  oppourtinityDetails?.specific?[1].details ?? ""
+            second.item = oppourtinityDetails?.specifics?[1].items ?? []
+            second.topCompetitorTitle =  oppourtinityDetails?.specifics?[1].footer_title ?? ""
+            second.topCompetitorValue =  oppourtinityDetails?.specifics?[1].details ?? ""
             second.itemInfo = "Website"
         }
         
         let third = SpeificBusinessPlanVC()
         if data != nil{
             oppourtinityDetails =  try! JSONDecoder().decode(OppourtinityDetails.self, from: data ?? Data())
-            third.item = oppourtinityDetails?.specific?[2].items ?? []
-            third.graph =  oppourtinityDetails?.specific?[2].graph ?? []
+            third.item = oppourtinityDetails?.specifics?[2].items ?? []
+            third.graph =  oppourtinityDetails?.specifics?[2].graph ?? []
             third.itemInfo = "BusinessPlan"
             
         }
