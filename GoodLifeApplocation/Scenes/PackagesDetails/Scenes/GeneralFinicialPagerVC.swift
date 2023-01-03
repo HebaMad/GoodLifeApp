@@ -127,29 +127,29 @@ extension GeneralFinicialPagerVC{
         NotificationCenter.default.post(name: .init(rawValue: "containerHeight"), object: 950)
 
         let fmt = NumberFormatter()
-        fmt.maximumFractionDigits = 3
-        fmt.minimumFractionDigits = 3
+        fmt.maximumFractionDigits = 1
+        fmt.minimumFractionDigits = 1
         
         firstTopicTitle.text = item[0].title ?? ""
-        firstTopicCost.text =  fmt.string(from: Float((item[0].cost ?? "")) as! NSNumber)!
-        firstSubTopicValue.text = item[0].childs?[0].cost ?? ""
+        firstTopicCost.text =  fmt.string(from: Float((item[0].cost ?? ""))! as NSNumber)!  + " " + "K"
+        firstSubTopicValue.text = item[0].childs?[0].cost ?? "" + " " + "k"
         firstSubTopicTitle.text = item[0].childs?[0].title ?? ""
         secondSubTopicTitle.text = item[0].childs?[1].title ?? ""
-        secondSubTopicValue.text = item[0].childs?[1].cost ?? ""
+        secondSubTopicValue.text = item[0].childs?[1].cost ?? "" + " " + "k"
         
         secondTopicTitle.text = item[1].title ?? ""
-        secondTopicCost.text =  fmt.string(from: Float((item[1].cost ?? "")) as! NSNumber)!
-        firstSubTopicCost.text = item[1].childs?[0].cost ?? ""
+        secondTopicCost.text =  fmt.string(from: Float((item[1].cost ?? ""))! as NSNumber)! + " "  + "K"
+        firstSubTopicCost.text = item[1].childs?[0].cost ?? ""  + " " + "k"
         firstSubTopicTxt.text = item[1].childs?[0].title ?? ""
         SecondSubTopicTxt.text = item[1].childs?[1].title ?? ""
-        secondSubTopicCost.text = item[1].childs?[1].cost ?? ""
+        secondSubTopicCost.text = item[1].childs?[1].cost ?? "" + " "  + "k"
 
         ThirdTopicTitle.text = item[2].title ?? ""
-        ThirdTopicCost.text = fmt.string(from: Float((item[2].cost ?? "")) as! NSNumber)!
-        firstSubTopiicCost.text = item[2].childs?[0].cost ?? ""
+        ThirdTopicCost.text = fmt.string(from: Float((item[2].cost ?? ""))! as NSNumber)!  + " " + "K"
+        firstSubTopiicCost.text = item[2].childs?[0].cost ?? "" + " "  + "k"
         firstSubTopiicTxt.text = item[2].childs?[0].title ?? ""
         SecondSubTopiicTxt.text = item[2].childs?[1].title ?? ""
-        SecondSubTopiicCost.text = item[2].childs?[1].cost ?? ""
+        SecondSubTopiicCost.text = item[2].childs?[1].cost ?? "" + " "  + "k"
         
         
         let earning = (Float(item[1].cost ?? "") ?? 0.0)  + (Float((item[0].cost ?? "")) ?? 0.0) + (Float((item[2].cost ?? "")) ?? 0.0)

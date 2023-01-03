@@ -50,10 +50,10 @@ class DashboardVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
+        print(UserDefaults.standard.integer(forKey: "oppourtinity"))
         changeSideMenuSide()
-        presenter.getCategories(opportunity_id: UserDefaults.standard.integer(forKey: "id"), searchTxt: "")
-        presenter.getResource(searchTxt: "", category_id:  UserDefaults.standard.integer(forKey: "id"))
+        presenter.getCategories(opportunity_id: UserDefaults.standard.integer(forKey: "oppourtinity"), searchTxt: "")
+        presenter.getResource(searchTxt: "", category_id:  UserDefaults.standard.integer(forKey: "oppourtinity"))
         presenter.getMyTask(searchTxt: "")
         presenter.delegate=self
         

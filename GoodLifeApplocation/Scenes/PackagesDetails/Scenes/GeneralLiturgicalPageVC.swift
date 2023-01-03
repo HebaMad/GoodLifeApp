@@ -121,8 +121,8 @@ extension GeneralLiturgicalPageVC:UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:GeneralMarketingBreakdown = tableView.dequeueReusableCell(for: indexPath)
-        cell.approachStackview.isHidden = true
-        cell.configureCell(item: item[indexPath.row])
+//        cell.approachStackview.isHidden = true
+        cell.configureCell(item: item[indexPath.row],id:indexPath.row)
         return cell
     }
     

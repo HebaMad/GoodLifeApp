@@ -145,8 +145,11 @@ extension choosingMinistryNeedsVC:UICollectionViewDataSource{
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
         print(oppourtinity[indexPath.row].id ?? 0)
         presenter.oppourtinityDetails(opportunityID: oppourtinity[indexPath.row].id ?? 0)
+        UserDefaults.standard.set(oppourtinity[indexPath.row].id, forKey: "oppourtinity")
+
         presenter.delegate=self
     }
 }

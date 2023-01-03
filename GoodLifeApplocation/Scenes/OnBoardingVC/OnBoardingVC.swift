@@ -63,8 +63,6 @@ class OnBoardingVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //
         //        self.contsinerView.subviews.first?.removeFromSuperview()
         //
         //        self.stepsIndicator.currentStep = 0

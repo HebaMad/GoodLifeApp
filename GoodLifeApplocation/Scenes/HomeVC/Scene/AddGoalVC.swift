@@ -30,7 +30,7 @@ class AddGoalVC: UIViewController,UITextFieldDelegate,UIImagePickerControllerDel
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter.getCategories(opportunity_id: UserDefaults.standard.integer(forKey: "id"), searchTxt: "")
+        presenter.getCategories(opportunity_id: UserDefaults.standard.integer(forKey: "oppourtinity"), searchTxt: "")
         presenter.delegate=self
         bindBackButton()
         categoryTxt.pickerDelegate=self

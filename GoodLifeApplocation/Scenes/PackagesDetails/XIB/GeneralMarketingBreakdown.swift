@@ -24,10 +24,10 @@ class GeneralMarketingBreakdown: UITableViewCell,NibLoadableView {
 
     }
     
-    func configureCell(item:GeneralOppourtinityDetails){
+    func configureCell(item:GeneralOppourtinityDetails,id:Int){
         
         titleTxt.text = item.title ?? ""
-        Description.text = item.details?.html2Attributed?.string
+        Description.text = item.details ?? ""
         urlTxt.text=item.url ?? ""
         
     }

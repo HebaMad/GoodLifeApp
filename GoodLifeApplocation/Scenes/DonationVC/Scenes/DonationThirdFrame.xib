@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -36,7 +36,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IHx-Zg-2Bx">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="0.0" y="48" width="414" height="814"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="unc-mn-4d8">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="594"/>
@@ -94,7 +94,7 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </view>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ellipse 74" translatesAutoresizingMaskIntoConstraints="NO" id="bM5-As-GZE" customClass="UIImageViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bM5-As-GZE" customClass="UIImageViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
                                             <rect key="frame" x="162" y="-16" width="50" height="50"/>
                                             <color key="backgroundColor" red="1" green="0.78039215689999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
@@ -280,7 +280,7 @@
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HqV-GX-WIj" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
                                                                     <rect key="frame" x="18.5" y="7" width="70" height="70"/>
                                                                     <subviews>
-                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ellipse 74" translatesAutoresizingMaskIntoConstraints="NO" id="5R4-15-5SN" customClass="UIImageViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5R4-15-5SN" customClass="UIImageViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
                                                                             <rect key="frame" x="15" y="15" width="40" height="40"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="40" id="GmQ-L4-ItL"/>
@@ -392,20 +392,13 @@
         </view>
     </objects>
     <designables>
-        <designable name="5R4-15-5SN">
-            <size key="intrinsicContentSize" width="40" height="40"/>
-        </designable>
         <designable name="Loh-wq-23v">
-            <size key="intrinsicContentSize" width="103" height="31"/>
-        </designable>
-        <designable name="bM5-As-GZE">
-            <size key="intrinsicContentSize" width="40" height="40"/>
+            <size key="intrinsicContentSize" width="117.5" height="34.5"/>
         </designable>
     </designables>
     <resources>
         <image name="Arrow 1up" width="54" height="29"/>
         <image name="Arrow 2down" width="65" height="30"/>
-        <image name="Ellipse 74" width="40" height="40"/>
         <namedColor name="backgroundColor">
             <color red="0.63099998235702515" green="0.34900000691413879" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
