@@ -41,7 +41,7 @@ class SignUserManager:SignUserNetworkable{
     }
     
     func startFundRaise(mobile:String,latitude: String, longitude: String,city:String ,work_type: String, amount_raise: Float, completion: @escaping (Result<BaseResponse<startFundRaise>, Error>) -> ()) {
-        request(target: .startFundRaise(mobile:mobile,latitude: latitude, city:city, longitude: longitude ,work_type: work_type, amount_raise: amount_raise), completion: completion)
+        request(target: .startFundRaise(mobile:mobile,latitude: latitude, longitude: longitude, city:city ,work_type: work_type, amount_raise: amount_raise), completion: completion)
     }
     func login(mobile: String,token:String ,completion: @escaping (Result<BaseResponse<userProfile>, Error>) -> ()) {
         request(target: .login(mobile: mobile,token: token), completion: completion)

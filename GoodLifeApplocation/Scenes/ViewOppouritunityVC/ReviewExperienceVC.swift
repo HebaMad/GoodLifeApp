@@ -146,7 +146,7 @@ private extension ReviewExperienceVC{
     func getCategories(categories: Home) {}
     func getStandardCategoriesFiltering(categories: MainHomeCategories) {}
     func getsubCategoriesFiltering(categories: SubHomeCategories) {}
-    func getCategoriesFiltered(categories: CategoriesFiltering) {}
+    func getCategoriesFiltered(categories: Home) {}
     func getOppourtinityDetails(categories: OppourtinityDetails) {}
     
     func getOppourtinity(categories: Oppourtinity) {

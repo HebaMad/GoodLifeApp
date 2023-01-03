@@ -38,7 +38,7 @@ class EditProfileVC: UIViewController {
     func setupData(){
         nameTxtField.text = userProfile?.name ?? ""
         phoneNumber.text = userProfile?.mobile ?? ""
-        loctionTxt.text = userProfile?.location ?? ""
+        loctionTxt.text = userProfile?.city ?? ""
         userImage.sd_setImage(with: URL(string:userProfile?.image_profile ?? "" ))
     }
     

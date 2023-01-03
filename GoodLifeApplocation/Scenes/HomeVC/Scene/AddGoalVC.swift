@@ -24,7 +24,7 @@ class AddGoalVC: UIViewController,UITextFieldDelegate,UIImagePickerControllerDel
     let presenter = DashboardPresenter()
     var categories:[Categories]=[]
 
-    var itemID = 0
+    var itemID = -1
     
     //MARK: - Life cycle
 
@@ -67,10 +67,10 @@ private extension AddGoalVC{
     case AddBtn:
             
             do{
-                
+                if itemID != -1 {
                 let goalTitle = try titleTxtfield.validatedText(validationType: .requiredField(field: "Goal title required"))
                 let deadline = try deadlineTxt.validatedText(validationType: .requiredField(field: "deadline requied"))
-                if itemID != 0 {
+                
                     
                     print(goalTitle)
                     print(deadline)

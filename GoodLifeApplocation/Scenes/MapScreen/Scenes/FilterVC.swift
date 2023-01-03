@@ -169,7 +169,7 @@ extension FilterVC:HomeDelegate{
     
     func getsubCategoriesFiltering(categories: SubHomeCategories) {}
     
-    func getCategoriesFiltered(categories: CategoriesFiltering) {}
+    func getCategoriesFiltered(categories: Home) {}
     
     func getOppourtinityDetails(categories: OppourtinityDetails) {}
     

@@ -12,7 +12,7 @@ enum SignUserTarget:TargetType{
     case SignUp(mobile:String)
     case resendCode(mobile:String)
     case checkCode(mobile:String,code:String)
-    case startFundRaise(mobile:String,latitude:String,city:String,longitude:String,work_type:String,amount_raise:Float)
+    case startFundRaise(mobile:String,latitude:String,longitude:String,city:String,work_type:String,amount_raise:Float)
     case login(mobile:String,token:String)
     
     var baseURL: URL {

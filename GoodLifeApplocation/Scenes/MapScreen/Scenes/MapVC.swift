@@ -36,7 +36,7 @@ class MapVC: UIViewController {
     var generalFiltering:[MainCategories]=[]
     var specificFiltering:[MainCategories]=[]
     var categoriesFiltered:[mainType]=[]
-    
+    var city = ""
     var mainCategories:[String:[Double:Double]] = [:]
     //    var annotation:[String:Double]=[:]
     var latitudeList:[Double]=[]
@@ -64,9 +64,14 @@ class MapVC: UIViewController {
                 longitude=location?.coordinate.longitude ?? 0.0
             UserDefaults.standard.set(location?.coordinate.latitude,forKey: "lat")
             UserDefaults.standard.set(location?.coordinate.longitude,forKey: "long")
-            setupData()
+                LocationManager.shared.getAddressFromLatLon(pdblLatitude: "\(self.latitude)", withLongitude: "\(self.longitude)") { status, mapaddress, mapcountry in
+                 
+                    self.city = mapcountry ?? ""
+                    self.setupData()
+                }
+            
                 
-            let span = MKCoordinateSpan(latitudeDelta: 35, longitudeDelta: 35)
+            let span = MKCoordinateSpan(latitudeDelta:20, longitudeDelta: 20)
             let region = MKCoordinateRegion(center: center, span: span)
             self.mapview.region = region
         }
@@ -210,7 +215,7 @@ private extension MapVC {
         self.isSkeleton = true
 //        presenter.getCategoriesData(searchTxt: "") // edit here
 //        presenter.delegate = self
-        self.presenter.categriesFailtered(mainCategoriesID: "0", subCategoriesID:"0",latitude:"\(latitude)",longitude:"\(longitude)",city:UserDefaults.standard.string(forKey: "city")!)
+        self.presenter.categriesFailtered(mainCategoriesID: "0", subCategoriesID:"0",latitude:"\(latitude)",longitude:"\(longitude)",city:self.city)
         self.presenter.delegate = self
         
         presenter.mainStandardFilter()
@@ -329,7 +334,7 @@ extension MapVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollection
             
             
         }else if collectionView == specificFilterCollectionview{
-            self.presenter.categriesFailtered(mainCategoriesID: "\(categoryMainId)", subCategoriesID: "\(specificFiltering[indexPath.row].id ?? 0)",latitude:"\(latitude)",longitude:"\(longitude)",city:UserDefaults.standard.string(forKey: "city")!)
+            self.presenter.categriesFailtered(mainCategoriesID: "\(categoryMainId)", subCategoriesID: "\(specificFiltering[indexPath.row].id ?? 0)",latitude:"\(latitude)",longitude:"\(longitude)",city:self.city)
             self.presenter.delegate = self
             
         }else{
@@ -353,12 +358,17 @@ extension MapVC :HomeDelegate{
     
     func getOppourtinity(categories: Oppourtinity) {}
     
-    func getCategoriesFiltered(categories: CategoriesFiltering) {
+    func getCategoriesFiltered(categories: Home) {
         latitudeList=[]
         longitudeList=[]
         
-        mainNeedType = categories.main_needs_types ?? []
+        self.isSkeleton = false
+        mainNeedType=categories.main_needs_types ?? []
+        
+        recentlyViewed = categories.recentlyViewed ?? []
+        recommendedMinistries = categories.recommendedMinistries ?? []
         setupAnnotation(points:mainNeedType)
+        communityCollectionview.reloadData()
 //        print(UserDefaults.standard.double(forKey: "lat"))
 //        print(UserDefaults.standard.double(forKey: "long"))
 //        latitudeList = makeLatitudeRandomList(mainNeedType.count, lat: UserDefaults.standard.double(forKey: "lat") )

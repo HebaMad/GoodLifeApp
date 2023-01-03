@@ -162,6 +162,7 @@ struct userProfile: Decodable{
     let image_profile:String?
     let location:String?
     let ventures:[Ventures]?
+    let city:String?
 
 }
 
