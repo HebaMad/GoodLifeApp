@@ -89,7 +89,7 @@ class GeneralPagerViewVC: ButtonBarPagerTabStripViewController {
         second.itemInfo = "Marketing"
          }
         
-        let third = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GeneralLiturgicalPageVC") as! GeneralLiturgicalPageVC
+        let third = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GeneralsLiturgicalPageVC") as! GeneralsLiturgicalPageVC
          if data != nil{
         oppourtinityDetails =  try! JSONDecoder().decode(OppourtinityDetails.self, from: data ?? Data())
         third.item = oppourtinityDetails?.generals?[2].items ?? []

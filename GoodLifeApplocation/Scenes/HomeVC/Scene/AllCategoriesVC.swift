@@ -15,7 +15,7 @@ class AllCategoriesVC: UIViewController {
     @IBOutlet weak var backBtn: UIButton!
     
     //MARK: - Properties
-
+    
     var categories:[Categories]=[]
     let presenter = DashboardPresenter()
     var goalsAndBenchmarks:GoalsAndBenchmark?
@@ -82,9 +82,9 @@ extension AllCategoriesVC:UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if isChecked == false{
             isChecked = true
-        categoryID = categories[indexPath.row].id ?? 0
-        categoryname = categories[indexPath.row].title ?? ""
-        self.presenter.getMyGoalAndBenchmarks(categoryID: categoryID)
+            categoryID = categories[indexPath.row].id ?? 0
+            categoryname = categories[indexPath.row].title ?? ""
+            self.presenter.getMyGoalAndBenchmarks(categoryID: categoryID)
         }else{
             
         }
@@ -100,7 +100,6 @@ extension AllCategoriesVC:Storyboarded{
 
 extension AllCategoriesVC:DashboardDelegate{
     
-    //No implementaion
     
     func getNotification(data: AllNotifiaction) {}
     func showAlerts(title: String, message: String) {}
@@ -108,10 +107,8 @@ extension AllCategoriesVC:DashboardDelegate{
     func getResourceDetails(data: ResourceDetails) {}
     func getMyTask(data: DashboardTask) {}
     
-    // With  implementaion
-    
     func getCategories(data: DahboardCategory) {
-
+        
         categories=data.categories ?? []
     }
     

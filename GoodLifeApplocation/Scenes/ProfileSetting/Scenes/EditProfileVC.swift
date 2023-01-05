@@ -26,7 +26,7 @@ class EditProfileVC: UIViewController {
     var userProfile:userProfile?
     var selectedImage:Data?
     let presenter = ProfilePresenter()
-    
+    var pic:Data?
     
     //MARK: - Life Cycle
 
@@ -38,7 +38,7 @@ class EditProfileVC: UIViewController {
     func setupData(){
         nameTxtField.text = userProfile?.name ?? ""
         phoneNumber.text = userProfile?.mobile ?? ""
-        loctionTxt.text = userProfile?.city ?? ""
+        loctionTxt.text = userProfile?.location ?? ""
         userImage.sd_setImage(with: URL(string:userProfile?.image_profile ?? "" ))
     }
     
@@ -84,9 +84,9 @@ private extension EditProfileVC{
             navigationController?.popViewController(animated: true)
 
         case saveBtn:
-            let pic = selectedImage ?? userImage.image?.jpegData(compressionQuality: 0.3)
-            print(pic)
-           print( pic ?? Data())
+             pic = selectedImage ?? userImage.image?.jpegData(compressionQuality: 0.3)
+      print(pic)
+    print( pic ?? Data())
             editProfile(name: nameTxtField.text ?? "", mobileNumber: phoneNumber.text ?? "" , location: loctionTxt.text ?? "", img: pic ?? Data())
         default:
             print("")
@@ -97,15 +97,19 @@ private extension EditProfileVC{
 
 extension EditProfileVC{
     func editProfile(name:String,mobileNumber:String,location:String,img:Data){
+        
         do{
-
-            let name = try nameTxtField.validatedText(validationType: .requiredField(field: "Name required"))
-            let number = try phoneNumber.validatedText(validationType: .requiredField(field: "Number requied"))
-            let location = try loctionTxt.validatedText(validationType: .requiredField(field: "Location requied"))
-            
-            self.presenter.editProfile(name: name, mobileNumber: number, location: location, img: img)
-            self.presenter.delegate = self
-            
+            print(img)
+            if pic != nil {
+                let name = try nameTxtField.validatedText(validationType: .requiredField(field: "Name required"))
+                let number = try phoneNumber.validatedText(validationType: .requiredField(field: "Number requied"))
+                let location = try loctionTxt.validatedText(validationType: .requiredField(field: "Location requied"))
+                
+                self.presenter.editProfile(name: name, mobileNumber: number, location: location, img: img)
+                self.presenter.delegate = self
+            }else{
+                Alert.showErrorAlert(message: "image required ")
+            }
         }catch{
             Alert.showErrorAlert(message: (error as! ValidationError).message)
 

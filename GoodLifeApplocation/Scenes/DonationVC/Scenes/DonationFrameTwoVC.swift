@@ -30,8 +30,6 @@ class DonationFrameTwoVC: UIViewController {
 
     private func setupTableView(){
         mealMakerTableView.register(MealMarkerTableViewCell.self)
-       
-
         mealMakerTableView.delegate=self
         mealMakerTableView.dataSource=self
         self.isSkeleton = false

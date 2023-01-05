@@ -132,25 +132,31 @@ extension GeneralFinicialPagerVC{
         
         firstTopicTitle.text = item[0].title ?? ""
         firstTopicCost.text =  fmt.string(from: Float((item[0].cost ?? ""))! as NSNumber)!  + " " + "K"
-        firstSubTopicValue.text = item[0].childs?[0].cost ?? "" + " " + "k"
+        firstSubTopicValue.text = item[0].childs?[0].cost ?? ""
+        firstSubTopicValue.text? += " " + "k"
         firstSubTopicTitle.text = item[0].childs?[0].title ?? ""
         secondSubTopicTitle.text = item[0].childs?[1].title ?? ""
-        secondSubTopicValue.text = item[0].childs?[1].cost ?? "" + " " + "k"
+        secondSubTopicValue.text = item[0].childs?[1].cost ?? ""
+        secondSubTopicValue.text? += " " + "k"
         
         secondTopicTitle.text = item[1].title ?? ""
         secondTopicCost.text =  fmt.string(from: Float((item[1].cost ?? ""))! as NSNumber)! + " "  + "K"
-        firstSubTopicCost.text = item[1].childs?[0].cost ?? ""  + " " + "k"
+        firstSubTopicCost.text = item[1].childs?[0].cost ?? ""
+        firstSubTopicCost.text? += " " + "k"
         firstSubTopicTxt.text = item[1].childs?[0].title ?? ""
         SecondSubTopicTxt.text = item[1].childs?[1].title ?? ""
-        secondSubTopicCost.text = item[1].childs?[1].cost ?? "" + " "  + "k"
+        secondSubTopicCost.text = item[1].childs?[1].cost ?? ""
+        secondSubTopicCost.text? += " " + "k"
 
         ThirdTopicTitle.text = item[2].title ?? ""
         ThirdTopicCost.text = fmt.string(from: Float((item[2].cost ?? ""))! as NSNumber)!  + " " + "K"
-        firstSubTopiicCost.text = item[2].childs?[0].cost ?? "" + " "  + "k"
+        firstSubTopiicCost.text = item[2].childs?[0].cost ?? ""
+        firstSubTopiicCost.text? += " " + "k"
         firstSubTopiicTxt.text = item[2].childs?[0].title ?? ""
         SecondSubTopiicTxt.text = item[2].childs?[1].title ?? ""
-        SecondSubTopiicCost.text = item[2].childs?[1].cost ?? "" + " "  + "k"
-        
+        SecondSubTopiicCost.text = item[2].childs?[1].cost ?? ""
+        SecondSubTopiicCost.text? += " " + "k"
+
         
         let earning = (Float(item[1].cost ?? "") ?? 0.0)  + (Float((item[0].cost ?? "")) ?? 0.0) + (Float((item[2].cost ?? "")) ?? 0.0)
         

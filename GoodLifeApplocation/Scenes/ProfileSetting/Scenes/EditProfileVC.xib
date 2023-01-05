@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -30,7 +31,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KNH-GK-SZf">
-                    <rect key="frame" x="0.0" y="44" width="414" height="40"/>
+                    <rect key="frame" x="0.0" y="48" width="414" height="40"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyF-L5-TGV">
                             <rect key="frame" x="8" y="0.0" width="40" height="40"/>
@@ -61,7 +62,7 @@
                     </constraints>
                 </view>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mpn-Oe-9Ze" customClass="UIImageViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                    <rect key="frame" x="167" y="108" width="80" height="80"/>
+                    <rect key="frame" x="167" y="112" width="80" height="80"/>
                     <color key="backgroundColor" red="0.79607843140000001" green="0.63899999860000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="80" id="9T1-ff-0sZ"/>
@@ -74,7 +75,7 @@
                     </userDefinedRuntimeAttributes>
                 </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="F34-Cb-awG">
-                    <rect key="frame" x="0.0" y="196" width="414" height="154"/>
+                    <rect key="frame" x="0.0" y="200" width="414" height="154"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LHx-3H-FBo">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="1"/>
@@ -164,13 +165,15 @@
                         <constraint firstItem="MW6-2w-f4z" firstAttribute="height" secondItem="Er1-Sf-kda" secondAttribute="height" id="iWU-uY-NEr"/>
                     </constraints>
                 </stackView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xyz-a2-7cq">
-                    <rect key="frame" x="167" y="108" width="80" height="80"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xyz-a2-7cq">
+                    <rect key="frame" x="167" y="142" width="80" height="50"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="80" id="LTq-wb-HYh"/>
-                        <constraint firstAttribute="height" constant="80" id="MhB-5T-pDp"/>
+                        <constraint firstAttribute="height" constant="50" id="MhB-5T-pDp"/>
                     </constraints>
+                    <color key="tintColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="camera" catalog="system"/>
                     <connections>
                         <action selector="selectPhotoBtn:" destination="-1" eventType="touchUpInside" id="UF1-do-F9j"/>
                     </connections>
@@ -179,9 +182,9 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="bg3"/>
             <constraints>
+                <constraint firstItem="xyz-a2-7cq" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="3X9-uY-RZ4"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="F34-Cb-awG" secondAttribute="trailing" id="BGW-K4-P6R"/>
                 <constraint firstItem="F34-Cb-awG" firstAttribute="top" secondItem="xyz-a2-7cq" secondAttribute="bottom" constant="8" id="DXc-Os-8VU"/>
-                <constraint firstItem="xyz-a2-7cq" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="JB7-6A-s2i"/>
                 <constraint firstItem="F34-Cb-awG" firstAttribute="top" secondItem="mpn-Oe-9Ze" secondAttribute="bottom" constant="8" id="NXz-Aw-bBP"/>
                 <constraint firstItem="KNH-GK-SZf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="VP2-xH-RkL"/>
                 <constraint firstItem="mpn-Oe-9Ze" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Z7F-lB-xnl"/>
@@ -194,7 +197,8 @@
         </view>
     </objects>
     <resources>
-        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <image name="camera" catalog="system" width="128" height="93"/>
+        <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <namedColor name="Color">
             <color red="0.22699999809265137" green="0.10199999809265137" blue="0.39599999785423279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

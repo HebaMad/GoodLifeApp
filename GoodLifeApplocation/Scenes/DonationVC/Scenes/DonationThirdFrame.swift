@@ -6,17 +6,19 @@
 //
 
 import UIKit
-
+import SDWebImage
 class DonationThirdFrame: UIViewController {
     
     //MARK: - Outlet
     
+    @IBOutlet weak var subWorthyCause: UIImageViewDesignable!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var SubscribeTypeTitle: UILabel!
     @IBOutlet weak var subscribeDescription: UILabel!
     @IBOutlet weak var processDescription: UILabel!
     @IBOutlet weak var firstStageDesc: UILabel!
     @IBOutlet weak var lastStageDesc: UILabel!
+    @IBOutlet weak var graphImage: UIImageViewDesignable!
     @IBOutlet weak var priceTxt: UITextField!
     
     var detailsData:Founder?
@@ -31,6 +33,9 @@ class DonationThirdFrame: UIViewController {
     func setupData(){
         SubscribeTypeTitle.text = detailsData?.title
         subscribeDescription.text=detailsData?.details
+        subWorthyCause.sd_setImage(with: URL(string: detailsData?.icon ?? ""))
+        graphImage.sd_setImage(with: URL(string: detailsData?.icon ?? ""))
+
     }
     
     //MARK: - Private Handler

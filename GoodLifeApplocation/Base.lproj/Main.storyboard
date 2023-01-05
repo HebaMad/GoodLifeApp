@@ -1273,6 +1273,95 @@ Night</string>
             </objects>
             <point key="canvasLocation" x="-533" y="72"/>
         </scene>
+        <!--Generals Liturgical PageVC-->
+        <scene sceneID="pB6-1J-Hnn">
+            <objects>
+                <viewController storyboardIdentifier="GeneralsLiturgicalPageVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SVv-LA-Wmc" customClass="GeneralsLiturgicalPageVC" customModule="GoodLifeApplocation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6rh-mi-Nya">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xq1-R5-zPz">
+                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Psj-C9-YRo">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="830"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y1b-CH-50I" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
+                                                <rect key="frame" x="12" y="12" width="390" height="150"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eyz-Dv-p6h" customClass="PieChartView" customModule="Charts">
+                                                        <rect key="frame" x="0.0" y="0.0" width="390" height="150"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="eyz-Dv-p6h" secondAttribute="trailing" id="KM6-xP-p4I"/>
+                                                    <constraint firstAttribute="bottom" secondItem="eyz-Dv-p6h" secondAttribute="bottom" id="QBf-w0-DAm"/>
+                                                    <constraint firstItem="eyz-Dv-p6h" firstAttribute="leading" secondItem="Y1b-CH-50I" secondAttribute="leading" id="emI-mM-zf5"/>
+                                                    <constraint firstItem="eyz-Dv-p6h" firstAttribute="top" secondItem="Y1b-CH-50I" secondAttribute="top" id="sSf-LG-vQX"/>
+                                                    <constraint firstAttribute="height" constant="150" id="zp9-EQ-Byh"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.85882352939999995" green="0.85882352939999995" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Vhy-fR-gXm">
+                                                <rect key="frame" x="12" y="174" width="390" height="648"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="648" id="qC4-80-gZB"/>
+                                                </constraints>
+                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="X7O-vY-TZg">
+                                                    <size key="itemSize" width="128" height="128"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                            </collectionView>
+                                        </subviews>
+                                        <directionalEdgeInsets key="directionalLayoutMargins" top="12" leading="12" bottom="8" trailing="12"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Psj-C9-YRo" firstAttribute="top" secondItem="xq1-R5-zPz" secondAttribute="top" id="60U-d1-3Bg"/>
+                                    <constraint firstAttribute="trailing" secondItem="Psj-C9-YRo" secondAttribute="trailing" id="DIw-3E-SYl"/>
+                                    <constraint firstItem="Psj-C9-YRo" firstAttribute="height" secondItem="xq1-R5-zPz" secondAttribute="height" priority="250" id="Dii-su-G3P"/>
+                                    <constraint firstAttribute="bottom" secondItem="Psj-C9-YRo" secondAttribute="bottom" id="Fbq-XR-KwP"/>
+                                    <constraint firstItem="Psj-C9-YRo" firstAttribute="leading" secondItem="xq1-R5-zPz" secondAttribute="leading" id="Od8-gS-Qik"/>
+                                    <constraint firstItem="Psj-C9-YRo" firstAttribute="width" secondItem="xq1-R5-zPz" secondAttribute="width" id="aoH-Uv-qet"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Lo6-zA-DVn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Lo6-zA-DVn" firstAttribute="trailing" secondItem="xq1-R5-zPz" secondAttribute="trailing" id="FQC-yw-2ZI"/>
+                            <constraint firstItem="xq1-R5-zPz" firstAttribute="leading" secondItem="Lo6-zA-DVn" secondAttribute="leading" id="WR6-OR-QcF"/>
+                            <constraint firstItem="Lo6-zA-DVn" firstAttribute="bottom" secondItem="xq1-R5-zPz" secondAttribute="bottom" id="WqY-Wd-03u"/>
+                            <constraint firstItem="xq1-R5-zPz" firstAttribute="top" secondItem="Lo6-zA-DVn" secondAttribute="top" id="me5-PA-nRU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionviewHeight" destination="qC4-80-gZB" id="ZIA-ty-BgU"/>
+                        <outlet property="liturgicalTable" destination="Vhy-fR-gXm" id="g9n-kb-ZFL"/>
+                        <outlet property="pieChartview" destination="eyz-Dv-p6h" id="F4e-kj-FaY"/>
+                        <outlet property="scrollviewHeight" destination="Dii-su-G3P" id="vij-v2-JQf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TM3-Bp-xFv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3427" y="-777"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="A8B-iA-RQ5">
             <objects>

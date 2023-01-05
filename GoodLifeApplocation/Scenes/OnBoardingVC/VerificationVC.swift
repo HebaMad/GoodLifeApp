@@ -19,16 +19,14 @@ class VerificationVC: UIViewController {
         super.viewDidLoad()
 
         bindTexField()
-    }
-     
-    }
-
+    }}
 
 extension VerificationVC{
     func bindTexField(){
         codeTxtField.addTarget(self, action: #selector(TxtFieldWasWrittenValue), for: .editingChanged)
     }
 }
+
 extension VerificationVC{
     @objc func  TxtFieldWasWrittenValue(){
         guard let code = codeTxtField.text, code.count > 0 else { return }

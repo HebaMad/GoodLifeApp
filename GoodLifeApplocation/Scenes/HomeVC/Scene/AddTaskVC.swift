@@ -8,7 +8,7 @@
 import UIKit
 
 class AddTaskVC: UIViewController,UITextFieldDelegate,UIImagePickerControllerDelegate  {
-
+    
     
     //MARK: - Outlet
     
@@ -28,7 +28,7 @@ class AddTaskVC: UIViewController,UITextFieldDelegate,UIImagePickerControllerDel
     var itemID = 0
     
     //MARK: - Life cycle
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,11 +38,11 @@ class AddTaskVC: UIViewController,UITextFieldDelegate,UIImagePickerControllerDel
         CategoryChoice.pickerDelegate=self
         CategoryChoice.dataSource=self
         setupTimePicker()
-    
+        
     }
     
     //MARK: - Setup Time Picker
-
+    
     fileprivate func setupTimePicker() {
         startDate.setFormat(format: "YYYY-MM-dd HH:mm:ss")
         startDate.setDatePickerMode(mode: .dateAndTime)
@@ -50,7 +50,7 @@ class AddTaskVC: UIViewController,UITextFieldDelegate,UIImagePickerControllerDel
         endDate.setFormat(format: "YYYY-MM-dd HH:mm:ss")
         endDate.setDatePickerMode(mode: .dateAndTime)
     }
-
+    
 }
 
 //MARK: - Binding
@@ -60,48 +60,47 @@ private extension AddTaskVC{
     func bindBackButton(){
         closeBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
         AddBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
-
+        
     }
     
     
 }
 //MARK: - private Handler
 private extension AddTaskVC{
-
-    @objc func buttonWasTapped( _ sender:UIButton){
-       
-        switch sender{
-   case AddBtn:
-           
-           do{
-               
-               let taskTitle = try titleTxtfield.validatedText(validationType: .requiredField(field: "Goal title required"))
-               let taskStartDate = try startDate.validatedText(validationType: .requiredField(field: "deadline requied"))
-               let taskEndDate = try endDate.validatedText(validationType: .requiredField(field: "deadline requied"))
-
-               if itemID != 0 {
-                   
-
-                   self.presenter.AddTask(title: taskTitle, category_id: itemID, all_days: alertSwitch.isOn == true ? "yes" : "no" , start_date: taskStartDate, end_date: taskEndDate)
-                   self.presenter.delegate = self
-
-               }else{
-                   Alert.showErrorAlert(message:"select your category")
-//                   self.showAlert(title: "Notice", message: "select your category",hideCancelBtn: true)
-               }
-
-           }catch{
-               Alert.showErrorAlert(message: (error as! ValidationError).message)
-//               self.showAlert(title: "Warning", message: (error as! ValidationError).message,hideCancelBtn: true)
-
-           }
-   case closeBtn:
-       navigationController?.popViewController(animated: true)
     
+    @objc func buttonWasTapped( _ sender:UIButton){
+        
+        switch sender{
+        case AddBtn:
+            
+            do{
+                
+                let taskTitle = try titleTxtfield.validatedText(validationType: .requiredField(field: "Goal title required"))
+                let taskStartDate = try startDate.validatedText(validationType: .requiredField(field: "deadline requied"))
+                let taskEndDate = try endDate.validatedText(validationType: .requiredField(field: "deadline requied"))
+                
+                if itemID != 0 {
+                    
+                    
+                    self.presenter.AddTask(title: taskTitle, category_id: itemID, all_days: alertSwitch.isOn == true ? "yes" : "no" , start_date: taskStartDate, end_date: taskEndDate)
+                    itemID = 0
+                    self.presenter.delegate = self
+                    
+                }else{
+                    Alert.showErrorAlert(message:"select your category")
+                }
+                
+            }catch{
+                Alert.showErrorAlert(message: (error as! ValidationError).message)
+                
+            }
+        case closeBtn:
+            navigationController?.popViewController(animated: true)
+            
         default:
             print("")
         }
-}
+    }
 }
 
 //MARK: - confirm to DashboardDelegate
@@ -116,30 +115,30 @@ extension AddTaskVC:DashboardDelegate{
     
     func showAlerts(title: String, message: String) {
         Alert.showSuccessAlert(message: message)
-//        self.showAlert(title: title, message: message,hideCancelBtn: true)
+        //        self.showAlert(title: title, message: message,hideCancelBtn: true)
         clearData()
     }
     
     func getCategories(data: DahboardCategory) {
-
+        
         self.categories = data.categories ?? []
     }
     
-
+    
     
     
 }
 //MARK: - confirm to DatePickerDelegate
 
 extension AddTaskVC:UITextFieldDataPickerDelegate,UITextFieldDataPickerDataSource{
-
+    
     
     func textFieldDataPicker(_ textField: UITextFieldDataPicker, numberOfRowsInComponent component: Int) -> Int {
         categories.count
     }
     
     func textFieldDataPicker(_ textField: UITextFieldDataPicker, titleForRow row: Int, forComponent component: Int) -> String? {
-print("\(title ?? "")")
+        print("\(title ?? "")")
         return categories[row].title
     }
     
@@ -148,11 +147,11 @@ print("\(title ?? "")")
     }
     
     func textFieldDataPicker(_ textField: UITextFieldDataPicker, didSelectRow row: Int, inComponent component: Int) {
-      
+        
         CategoryChoice.setTextFieldTitle(title: categories[row].title ?? "")
         self.itemID=categories[row].id ?? 0
     }
-   
+    
     
 }
 //MARK: - Clear Data After Add

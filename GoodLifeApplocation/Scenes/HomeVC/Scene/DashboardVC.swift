@@ -21,12 +21,14 @@ class DashboardVC: UIViewController {
     
     private var menu :SideMenuNavigationController?
     private let sections = HomeCategories.shared.AllCategories
-    
+    var categoryID=0
     let presenter = DashboardPresenter()
     var categories:[Categories]=[]
     var resource:[Resources]=[]
     var myCurrentTask:[Tasks]=[]
     var myCompletedTask:[Tasks]=[]
+    var goalsAndBenchmarks:GoalsAndBenchmark?
+    var  vc = GoalAndBenchmarkVC.instantiate()
     private var isSkeleton: Bool = true {
         didSet {
             self.elementCollectionView.reloadData()
@@ -124,12 +126,12 @@ class DashboardVC: UIViewController {
  
         if (self.searchBar.txtSearch.text)?.count != 0{
         
-            presenter.getCategories(opportunity_id: UserDefaults.standard.integer(forKey: "id"), searchTxt:self.searchBar.txtSearch.text!)
-            presenter.getResource(searchTxt:self.searchBar.txtSearch.text! , category_id:  UserDefaults.standard.integer(forKey: "id"))
+            presenter.getCategories(opportunity_id: UserDefaults.standard.integer(forKey: "oppourtinity"), searchTxt:self.searchBar.txtSearch.text!)
+            presenter.getResource(searchTxt:self.searchBar.txtSearch.text! , category_id:  UserDefaults.standard.integer(forKey: "oppourtinity"))
             presenter.getMyTask(searchTxt:self.searchBar.txtSearch.text!)
         }else{
-            presenter.getCategories(opportunity_id: UserDefaults.standard.integer(forKey: "id"), searchTxt: "")
-            presenter.getResource(searchTxt: "", category_id:  UserDefaults.standard.integer(forKey: "id"))
+            presenter.getCategories(opportunity_id: UserDefaults.standard.integer(forKey: "oppourtinity"), searchTxt: "")
+            presenter.getResource(searchTxt: "", category_id:  UserDefaults.standard.integer(forKey: "oppourtinity"))
             presenter.getMyTask(searchTxt: "")
         }
         presenter.delegate=self
@@ -228,7 +230,6 @@ class DashboardVC: UIViewController {
             navigationController?.pushViewController(vc, animated: true)
         }
     }
-    
     
     @objc func markDoneBtn(_ sender:UIButton){
         self.presenter.markMyTask(taskid: myCurrentTask[sender.tag].id ?? 0)
@@ -334,7 +335,8 @@ extension DashboardVC: UICollectionViewDataSource,UICollectionViewDelegate,UICol
             
             
         case .categories:
-         print("")
+            categoryID = categories[indexPath.row].id ?? 0
+            self.presenter.getMyGoalAndBenchmarks(categoryID: categories[indexPath.row].id ?? 0)
         case .Task:
            print("")
         case .Resource:
@@ -370,7 +372,14 @@ extension DashboardVC:DashboardDelegate{
     }
     
     func getNotification(data: AllNotifiaction) {}
-    func getMyGoalAndBenchmark(data: GoalsAndBenchmark) {}
+    func getMyGoalAndBenchmark(data: GoalsAndBenchmark) {
+        goalsAndBenchmarks=data
+        vc.pastGoals = goalsAndBenchmarks?.pastGoals ?? []
+        vc.activeGoals = goalsAndBenchmarks?.activeGoals ?? []
+        vc.benchmarks = goalsAndBenchmarks?.benchmarks ?? []
+        vc.categoryID = categoryID
+        navigationController?.pushViewController(vc, animated: false)
+    }
 
     func getResourceDetails(data: ResourceDetails) {
             
