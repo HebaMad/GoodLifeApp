@@ -18,7 +18,7 @@ protocol HomeDelegate{
     func getOppourtinity(categories:Oppourtinity)
     func getOppourtinityDetails(categories:OppourtinityDetails)
     
-
+    
 }
 
 typealias homeDelegate = HomeDelegate & UIViewController
@@ -30,16 +30,18 @@ class HomePresenter:NSObject{
     
     func getCategoriesData(searchTxt:String){
         
-        HomeManager.shared.Home(txt: searchTxt) { Response in
+        HomeManager.shared.Home(txt: searchTxt) {  Response in
             switch Response{
                 
             case let .success(response):
-                if response.status == true{
-                    self.delegate?.getCategories(categories: response.data! )
+                if response.code == 200{
+                    self.delegate?.getCategories(categories: response.data!)
+                    
+                }else if response.code == 401{
+                    SceneDelegate.init().setRootVC(vc: SplashScreen())
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
-                
             case let .failure(error):
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
             }
@@ -52,8 +54,10 @@ class HomePresenter:NSObject{
             switch Response{
                 
             case let .success(response):
-                if response.status == true{
+                if response.code == 200{
                     self.delegate?.getStandardCategoriesFiltering(categories: response.data! )
+                }else if response.code == 401{
+                    SceneDelegate.init().setRootVC(vc: SplashScreen())
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
@@ -70,12 +74,13 @@ class HomePresenter:NSObject{
             switch Response{
                 
             case let .success(response):
-                if response.status == true{
+                if response.code == 200{
                     self.delegate?.getsubCategoriesFiltering(categories: response.data! )
+                }else if response.code == 401{
+                    SceneDelegate.init().setRootVC(vc: SplashScreen())
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
-                
             case let .failure(error):
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
             }
@@ -84,27 +89,33 @@ class HomePresenter:NSObject{
     
     func categriesFailtered(mainCategoriesID:String,subCategoriesID:String,latitude:String,longitude:String,city:String){
         HomeManager.shared.categoriesFiltering(mainCategoriesID: mainCategoriesID, subCategoriesID: subCategoriesID,latitude:latitude,longitude:longitude,city:city) { Response in
+            
             switch Response{
                 
             case let .success(response):
-                if response.status == true{
+                if response.code == 200{
                     self.delegate?.getCategoriesFiltered(categories: response.data! )
+                    
+                }else if response.code == 401{
+                    SceneDelegate.init().setRootVC(vc: SplashScreen())
+                    
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
-                
             case let .failure(error):
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
             }
         }
-        }
+    }
     func getSmartRecommendation(interestId:Int,needTypeId:Int){
         HomeManager.shared.getOpportunities(needTypeId: needTypeId, interestId: interestId) { Response in
             switch Response{
                 
             case let .success(response):
-                if response.status == true{
+                if response.code == 200{
                     self.delegate?.getOppourtinity(categories: response.data!)
+                }else if response.code == 401{
+                    SceneDelegate.init().setRootVC(vc: SplashScreen())
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
@@ -121,12 +132,12 @@ class HomePresenter:NSObject{
             switch Response{
                 
             case let .success(response):
-                if response.status == true{
-                    
+                if response.code == 200{
                     self.delegate?.getOppourtinityDetails(categories: response.data!)
                     
+                }else if response.code == 401{
+                    SceneDelegate.init().setRootVC(vc: SplashScreen())
                 }else{
-                    
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
                 
@@ -144,12 +155,13 @@ class HomePresenter:NSObject{
             switch Response{
                 
             case let .success(response):
-                if response.status == true{
+                if response.code == 200{
                     self.delegate?.getOppourtinity(categories: response.data!)
+                }else if response.code == 401{
+                    SceneDelegate.init().setRootVC(vc: SplashScreen())
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
-                
             case let .failure(error):
                 
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
@@ -161,5 +173,5 @@ class HomePresenter:NSObject{
     
     
     
-   
+    
 }

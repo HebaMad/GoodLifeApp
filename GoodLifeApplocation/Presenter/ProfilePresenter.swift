@@ -27,9 +27,11 @@ class ProfilePresenter:NSObject{
             switch Response{
                 
             case let .success(response):
-                if response.status == true{
+                if response.code == 200{
                     self.delegate?.showAlerts(title:"Success", message: response.message)
 
+                }else if response.code == 401{
+                    SceneDelegate.init().setRootVC(vc: SplashScreen())
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
@@ -46,11 +48,12 @@ class ProfilePresenter:NSObject{
             switch Response{
                 
             case let .success(response):
-                if response.status == true{
+                if response.code == 200{
                     self.delegate?.getUrlForWebPages(data: response.data!)
+                }else if response.code == 401{
+                    SceneDelegate.init().setRootVC(vc: SplashScreen())
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
-
                 }
                 
             case let .failure(error):
@@ -65,13 +68,13 @@ class ProfilePresenter:NSObject{
             switch Response{
                 
             case let .success(response):
-                if response.status == true{
+                if response.code == 200{
                     self.delegate?.getUrlForWebPages(data: response.data!)
-
+                }else if response.code == 401{
+                    SceneDelegate.init().setRootVC(vc: SplashScreen())
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
-                
             case let .failure(error):
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
             }
@@ -83,13 +86,13 @@ class ProfilePresenter:NSObject{
             switch Response{
                 
             case let .success(response):
-                if response.status == true{
+                if response.code == 200{
                     self.delegate?.showAlerts(title:"Success", message: "logout Sucessfully")
-                    
+                }else if response.code == 401{
+                    SceneDelegate.init().setRootVC(vc: SplashScreen())
                 }else{
-                    self.delegate?.showAlerts(title:"Failure", message:"something wrong try again")
+                    self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
-                
             case let .failure(error):
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
             }
@@ -103,12 +106,13 @@ class ProfilePresenter:NSObject{
             switch Response{
                 
             case let .success(response):
-                if response.status == true{
+                if response.code == 200{
                     self.delegate?.showAlerts(title:"Success", message: response.message)
 
+                }else if response.code == 401{
+                    SceneDelegate.init().setRootVC(vc: SplashScreen())
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
-
                 }
                 
             case let .failure(error):
@@ -126,13 +130,13 @@ class ProfilePresenter:NSObject{
             switch Response{
                 
             case let .success(response):
-                if response.status == true{
+                if response.code == 200{
                     self.delegate?.getUserData(data: response.data!)
+                }else if response.code == 401{
+                    SceneDelegate.init().setRootVC(vc: SplashScreen())
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
-
                 }
-                
             case let .failure(error):
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
 

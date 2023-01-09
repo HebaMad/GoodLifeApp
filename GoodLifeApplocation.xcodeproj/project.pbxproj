@@ -647,9 +647,9 @@
 				27B54D9028BA6DA50074A6A1 /* KeychainOperations.swift */,
 				27B54D9228BA6E170074A6A1 /* AppData.swift */,
 				270562D628C09DEB00B0124E /* DatePickingTextField.swift */,
+				27F7363B28C5D7C800E804B5 /* LocationManager.swift */,
 				270562D828C0A26200B0124E /* UITextFieldDataPicker.swift */,
 				270562DA28C0A32A00B0124E /* Validator.swift */,
-				27F7363B28C5D7C800E804B5 /* LocationManager.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -738,10 +738,10 @@
 				27CB208C289FB1B700E63694 /* PackagesDetails */,
 				27A737712891CAA500FD8AD9 /* MapScreen */,
 				27C9AEB0288EF0DF00FA584A /* DonationVC */,
+				27C9AE75288D46EA00FA584A /* OnBoardingVC */,
 				27C9AEA6288DA88200FA584A /* HomeVC */,
 				27C9AE9B288D8BB100FA584A /* ViewOppouritunityVC */,
 				27C9AE7A288D471300FA584A /* SplashScreen */,
-				27C9AE75288D46EA00FA584A /* OnBoardingVC */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";

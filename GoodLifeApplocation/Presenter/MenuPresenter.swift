@@ -27,12 +27,13 @@ class MenuPresenter:NSObject{
             switch Response{
                 
             case let .success(response):
-                if response.status == true{
+                if response.code == 200{
                     self.delegate?.showAlerts(title:"Success", message: response.message)
 
+                }else if response.code == 401{
+                    SceneDelegate.init().setRootVC(vc: SplashScreen())
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
-
                 }
                 
             case let .failure(error):
@@ -47,9 +48,11 @@ class MenuPresenter:NSObject{
             switch Response{
                 
             case let .success(response):
-                if response.status == true{
+                if response.code == 200{
                     self.delegate?.showAlerts(title:"Success", message: response.message)
 
+                }else if response.code == 401{
+                    SceneDelegate.init().setRootVC(vc: SplashScreen())
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
@@ -65,9 +68,11 @@ class MenuPresenter:NSObject{
             switch Response{
                 
             case let .success(response):
-                if response.status == true{
+                if response.code == 200{
                     self.delegate?.showAlerts(title:"Success", message: response.message)
 
+                }else if response.code == 401{
+                    SceneDelegate.init().setRootVC(vc: SplashScreen())
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
@@ -86,9 +91,11 @@ class MenuPresenter:NSObject{
             switch Response{
                 
             case let .success(response):
-                if response.status == true{
+                if response.code == 200{
                     self.delegate?.getFunderData(data: response.data!)
 
+                }else if response.code == 401{
+                    SceneDelegate.init().setRootVC(vc: SplashScreen())
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
@@ -104,13 +111,13 @@ class MenuPresenter:NSObject{
             switch Response{
                 
             case let .success(response):
-                if response.status == true{
+                if response.code == 200{
                     callback(response.status, response.data!, response.message)
-
+                }else if response.code == 401{
+                    SceneDelegate.init().setRootVC(vc: SplashScreen())
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
-                
             case let .failure(error):
 
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
@@ -124,8 +131,9 @@ class MenuPresenter:NSObject{
             switch Response{
                 
             case let .success(response):
-                if response.status == true{
-
+                if response.code == 200{
+                }else if response.code == 401{
+                    SceneDelegate.init().setRootVC(vc: SplashScreen())
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }

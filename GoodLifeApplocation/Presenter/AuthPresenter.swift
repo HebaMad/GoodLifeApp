@@ -26,16 +26,17 @@ class AuthPresenter:NSObject{
             switch Response{
                 
             case let .success(response):
-                if response.status == true{
+                if response.code == 200{
                         self.delegate?.showAlerts(title:"Success", message: response.message)
                     self.delegate?.checkStatus(status: true,msg: response.message, screen: "signup")
 
-                }else{
-                        self.delegate?.showAlerts(title:"Failure", message: response.message)
-                    self.delegate?.checkStatus(status: false,msg: response.message, screen: "signup")
-
-                }
-                
+            }else if response.code == 401{
+                SceneDelegate.init().setRootVC(vc: SplashScreen())
+            }else{
+                self.delegate?.showAlerts(title:"Failure", message: response.message)
+                self.delegate?.checkStatus(status: false,msg: response.message, screen: "signup")
+            }
+            
                 
             case let .failure(error):
                 print(error)
@@ -54,12 +55,13 @@ class AuthPresenter:NSObject{
             switch Response{
                 
             case let .success(response):
-                if response.status == true{
+                if response.code == 200{
               
 
+                }else if response.code == 401{
+                    SceneDelegate.init().setRootVC(vc: SplashScreen())
                 }else{
-                        self.delegate?.showAlerts(title:"Failure", message: response.message)
-                   
+                    self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
                 
             case let .failure(error):
@@ -78,15 +80,15 @@ class AuthPresenter:NSObject{
             switch Response{
                 
             case let .success(response):
-                if response.status == true{
+                if response.code == 200{
                     self.delegate?.checkStatus(status: true,msg: response.message, screen: "verification")
                     self.delegate?.getLoginToken(data: response.data!)
-
+                }else if response.code == 401{
+                    SceneDelegate.init().setRootVC(vc: SplashScreen())
                 }else{
-                        self.delegate?.checkStatus(status: false,msg: response.message, screen: "verification")
-
+                    self.delegate?.checkStatus(status: false,msg: response.message, screen: "verification")
                 }
-                
+             
             case let .failure(error):
                 print(error)
 
@@ -104,11 +106,12 @@ class AuthPresenter:NSObject{
             switch Response{
                 
             case let .success(response):
-                if response.status == true{
+                if response.code == 200{
                     self.delegate?.getuserToken(data: response.data!)
 
+                }else if response.code == 401{
+                    SceneDelegate.init().setRootVC(vc: SplashScreen())
                 }else{
-
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
             case let .failure(error):
@@ -125,12 +128,13 @@ class AuthPresenter:NSObject{
             switch Response{
                 
             case let .success(response):
-                if response.status == true{
+                if response.code == 200{
                     self.delegate?.checkStatus(status: true,msg: response.message, screen: "login")
 
+                }else if response.code == 401{
+                    SceneDelegate.init().setRootVC(vc: SplashScreen())
                 }else{
-                    self.delegate?.checkStatus(status: false,msg: response.message, screen: "login")
-
+                    self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
             case let .failure(error):
                 print(error)

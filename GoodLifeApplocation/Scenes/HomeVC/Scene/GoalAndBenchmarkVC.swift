@@ -67,7 +67,6 @@ class GoalAndBenchmarkVC: UIViewController {
             setupTable()
             checkData(goalsArr: activeGoals)
 
-            
         case 1:
             self.emptyView.isHidden = true
 
