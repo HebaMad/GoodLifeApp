@@ -10,9 +10,9 @@ import UIKit
 protocol MenuDelegate{
     func showAlerts(title:String,message:String)
     func getFunderData(data:WorthyCauses)
-
-
-
+    
+    
+    
 }
 typealias menuDelegate = MenuDelegate & UIViewController
 typealias subWorthyCallback = ( _ status: Bool,_ data:SubWorthyCauses,_ message:String ) -> Void
@@ -20,18 +20,16 @@ typealias subWorthyCallback = ( _ status: Bool,_ data:SubWorthyCauses,_ message:
 class MenuPresenter:NSObject{
     
     var delegate:menuDelegate?
-        
+    
     func VolunteerOppourtinity(title:String,location:String,date:String,time:String,details:String){
-      
+        
         MenuManager.shared.volunteerOppourtinity(title: title, location:location, date: date, time: time, details: details) { Response in
             switch Response{
                 
             case let .success(response):
-                if response.code == 200{
+                if response.status == true{
                     self.delegate?.showAlerts(title:"Success", message: response.message)
-
-                }else if response.code == 401{
-                    SceneDelegate.init().setRootVC(vc: SplashScreen())
+                    
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
@@ -43,16 +41,14 @@ class MenuPresenter:NSObject{
     }
     
     
-     func createIdea(title:String,details:String,time_commitment:String,monthly_revenue:String){
+    func createIdea(title:String,details:String,time_commitment:String,monthly_revenue:String){
         MenuManager.shared.createIdea(title: title, details: details, time_commitment: time_commitment, monthly_revenue:monthly_revenue ) { Response in
             switch Response{
                 
             case let .success(response):
-                if response.code == 200{
+                if response.status == true{
                     self.delegate?.showAlerts(title:"Success", message: response.message)
-
-                }else if response.code == 401{
-                    SceneDelegate.init().setRootVC(vc: SplashScreen())
+                    
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
@@ -63,16 +59,14 @@ class MenuPresenter:NSObject{
             
         }
     }
-     func createFeedback(id:String,review:String,rate:Int,img:Data){
-         MenuManager.shared.createFeedback(id: id, review: review, rate: rate, img: img) { Response in
+    func createFeedback(id:String,review:String,rate:Int,img:Data){
+        MenuManager.shared.createFeedback(id: id, review: review, rate: rate, img: img) { Response in
             switch Response{
                 
             case let .success(response):
-                if response.code == 200{
+                if response.status == true{
                     self.delegate?.showAlerts(title:"Success", message: response.message)
-
-                }else if response.code == 401{
-                    SceneDelegate.init().setRootVC(vc: SplashScreen())
+                    
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
@@ -91,11 +85,9 @@ class MenuPresenter:NSObject{
             switch Response{
                 
             case let .success(response):
-                if response.code == 200{
+                if response.status == true{
                     self.delegate?.getFunderData(data: response.data!)
-
-                }else if response.code == 401{
-                    SceneDelegate.init().setRootVC(vc: SplashScreen())
+                    
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
@@ -111,15 +103,14 @@ class MenuPresenter:NSObject{
             switch Response{
                 
             case let .success(response):
-                if response.code == 200{
+                if response.status == true{
                     callback(response.status, response.data!, response.message)
-                }else if response.code == 401{
-                    SceneDelegate.init().setRootVC(vc: SplashScreen())
+                    
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
             case let .failure(error):
-
+                
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
             }
         }
@@ -131,15 +122,13 @@ class MenuPresenter:NSObject{
             switch Response{
                 
             case let .success(response):
-                if response.code == 200{
-                }else if response.code == 401{
-                    SceneDelegate.init().setRootVC(vc: SplashScreen())
+                if response.status == true{
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
                 
             case let .failure(error):
-
+                
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
             }
         }

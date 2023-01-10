@@ -24,13 +24,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         saveLogin()
     }
+    
     func setRootVC(vc:UIViewController){
-        
             self.window?.rootViewController = vc
             self.window?.makeKeyAndVisible()
         
         }
-
+    
+ 
     func saveLogin(){
         
         do {

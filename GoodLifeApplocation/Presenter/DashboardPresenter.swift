@@ -30,10 +30,9 @@ class DashboardPresenter:NSObject{
             switch Response{
                 
             case let .success(response):
-                if response.code == 200{
+                if response.status == true{
                     self.delegate?.getCategories(data: response.data!)
-                }else if response.code == 401{
-                    SceneDelegate.init().setRootVC(vc: SplashScreen())
+                    
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
@@ -49,10 +48,9 @@ class DashboardPresenter:NSObject{
             switch Response{
                 
             case let .success(response):
-                if response.code == 200{
+                if response.status == true{
                     self.delegate?.getResource(data: response.data?.resources ?? [])
-                }else if response.code == 401{
-                    SceneDelegate.init().setRootVC(vc: SplashScreen())
+                    
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
@@ -68,11 +66,9 @@ class DashboardPresenter:NSObject{
             switch Response{
                 
             case let .success(response):
-                if response.code == 200{
+                if response.status == true{
                     self.delegate?.showAlerts(title:"Success", message: response.message)
                     
-                }else if response.code == 401{
-                    SceneDelegate.init().setRootVC(vc: SplashScreen())
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
@@ -88,11 +84,9 @@ class DashboardPresenter:NSObject{
             switch Response{
                 
             case let .success(response):
-                if response.code == 200{
+                if response.status == true{
                     self.delegate?.showAlerts(title:"Success", message: response.message)
                     
-                }else if response.code == 401{
-                    SceneDelegate.init().setRootVC(vc: SplashScreen())
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
@@ -108,10 +102,9 @@ class DashboardPresenter:NSObject{
             switch Response{
                 
             case let .success(response):
-                if response.code == 200{
+                if response.status == true{
                     self.delegate?.getMyTask(data: response.data!)
-                }else if response.code == 401{
-                    SceneDelegate.init().setRootVC(vc: SplashScreen())
+                    
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
@@ -126,12 +119,10 @@ class DashboardPresenter:NSObject{
             switch Response{
                 
             case let .success(response):
-                if response.code == 200{
+                if response.status == true{
                     self.getMyTask(searchTxt: "")
                     self.delegate?.showAlerts(title:"Success", message: "completed successfully")
                     
-                }else if response.code == 401{
-                    SceneDelegate.init().setRootVC(vc: SplashScreen())
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
@@ -144,10 +135,9 @@ class DashboardPresenter:NSObject{
             switch Response{
                 
             case let .success(response):
-                if response.code == 200{
+                if response.status == true{
                     self.delegate?.getMyGoalAndBenchmark(data: response.data!)
-                }else if response.code == 401{
-                    SceneDelegate.init().setRootVC(vc: SplashScreen())
+                    
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
@@ -162,11 +152,9 @@ class DashboardPresenter:NSObject{
             switch Response{
                 
             case let .success(response):
-                if response.code == 200{
+                if response.status == true{
                     self.delegate?.getResourceDetails(data: response.data!)
                     
-                }else if response.code == 401{
-                    SceneDelegate.init().setRootVC(vc: SplashScreen())
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
@@ -184,12 +172,10 @@ class DashboardPresenter:NSObject{
             switch Response{
                 
             case let .success(response):
-                if response.code == 200{
+                if response.status == true{
                     self.getMyGoalAndBenchmarks(categoryID: categoryID)
                     self.delegate?.showAlerts(title:"Success", message: "completed successfully")
                     
-                }else if response.code == 401{
-                    SceneDelegate.init().setRootVC(vc: SplashScreen())
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
@@ -206,12 +192,9 @@ class DashboardPresenter:NSObject{
             switch Response{
                 
             case let .success(response):
-                if response.code == 200{
+                if response.status == true{
                     self.delegate?.getNotification(data: response.data!)
                     self.delegate?.showAlerts(title:"Success", message: "completed successfully")
-                    
-                }else if response.code == 401{
-                    SceneDelegate.init().setRootVC(vc: SplashScreen())
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }

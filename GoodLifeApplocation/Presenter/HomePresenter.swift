@@ -34,11 +34,10 @@ class HomePresenter:NSObject{
             switch Response{
                 
             case let .success(response):
-                if response.code == 200{
+                if response.status == true{
                     self.delegate?.getCategories(categories: response.data!)
                     
-                }else if response.code == 401{
-                    SceneDelegate.init().setRootVC(vc: SplashScreen())
+                    
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
@@ -54,10 +53,9 @@ class HomePresenter:NSObject{
             switch Response{
                 
             case let .success(response):
-                if response.code == 200{
+                if response.status == true{
                     self.delegate?.getStandardCategoriesFiltering(categories: response.data! )
-                }else if response.code == 401{
-                    SceneDelegate.init().setRootVC(vc: SplashScreen())
+                    
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
@@ -74,10 +72,9 @@ class HomePresenter:NSObject{
             switch Response{
                 
             case let .success(response):
-                if response.code == 200{
+                if response.status == true{
                     self.delegate?.getsubCategoriesFiltering(categories: response.data! )
-                }else if response.code == 401{
-                    SceneDelegate.init().setRootVC(vc: SplashScreen())
+                    
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
@@ -93,11 +90,8 @@ class HomePresenter:NSObject{
             switch Response{
                 
             case let .success(response):
-                if response.code == 200{
+                if response.status == true{
                     self.delegate?.getCategoriesFiltered(categories: response.data! )
-                    
-                }else if response.code == 401{
-                    SceneDelegate.init().setRootVC(vc: SplashScreen())
                     
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
@@ -155,10 +149,9 @@ class HomePresenter:NSObject{
             switch Response{
                 
             case let .success(response):
-                if response.code == 200{
+                if response.status == true{
                     self.delegate?.getOppourtinity(categories: response.data!)
-                }else if response.code == 401{
-                    SceneDelegate.init().setRootVC(vc: SplashScreen())
+                    
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }

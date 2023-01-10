@@ -13,7 +13,7 @@ protocol ProfileDelegate{
     func showAlerts(title:String,message:String)
     func getUserData(data:userProfile)
     func getUrlForWebPages(data:termsAndConditions)
-
+    
 }
 
 typealias profileDelegate = ProfileDelegate & UIViewController
@@ -22,16 +22,14 @@ class ProfilePresenter:NSObject{
     
     var delegate:profileDelegate?
     
-     func sendContactMsg(msg:String){
+    func sendContactMsg(msg:String){
         SettingManager.shared.sendContactMsg(msg: msg) { Response in
             switch Response{
                 
             case let .success(response):
-                if response.code == 200{
+                if response.status == true{
                     self.delegate?.showAlerts(title:"Success", message: response.message)
-
-                }else if response.code == 401{
-                    SceneDelegate.init().setRootVC(vc: SplashScreen())
+                    
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
@@ -43,35 +41,31 @@ class ProfilePresenter:NSObject{
         }
     }
     
-     func termsAndCondition(){
+    func termsAndCondition(){
         SettingManager.shared.termsAndCondition { Response in
             switch Response{
                 
             case let .success(response):
-                if response.code == 200{
+                if response.status == true{
                     self.delegate?.getUrlForWebPages(data: response.data!)
-                }else if response.code == 401{
-                    SceneDelegate.init().setRootVC(vc: SplashScreen())
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
                 
             case let .failure(error):
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
-
+                
             }
         }
     }
     
-     func PrivacyPolicy(){
+    func PrivacyPolicy(){
         SettingManager.shared.privacyPolicy { Response in
             switch Response{
                 
             case let .success(response):
-                if response.code == 200{
+                if response.status == true{
                     self.delegate?.getUrlForWebPages(data: response.data!)
-                }else if response.code == 401{
-                    SceneDelegate.init().setRootVC(vc: SplashScreen())
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
@@ -81,15 +75,14 @@ class ProfilePresenter:NSObject{
         }
     }
     
-     func logout(){
+    func logout(){
         SettingManager.shared.logout{ Response in
             switch Response{
                 
             case let .success(response):
-                if response.code == 200{
+                if response.status == true{
                     self.delegate?.showAlerts(title:"Success", message: "logout Sucessfully")
-                }else if response.code == 401{
-                    SceneDelegate.init().setRootVC(vc: SplashScreen())
+                    
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
@@ -100,49 +93,46 @@ class ProfilePresenter:NSObject{
         }
     }
     
-     func editProfile(name:String,mobileNumber:String,location:String,img:Data){
-         SVProgressHUD.show()
-         SettingManager.shared.editProfile(name: name, mobileNumber: mobileNumber, location: location, img: img){ Response in
+    func editProfile(name:String,mobileNumber:String,location:String,img:Data){
+        SVProgressHUD.show()
+        SettingManager.shared.editProfile(name: name, mobileNumber: mobileNumber, location: location, img: img){ Response in
             switch Response{
                 
             case let .success(response):
-                if response.code == 200{
+                if response.status == true{
                     self.delegate?.showAlerts(title:"Success", message: response.message)
-
-                }else if response.code == 401{
-                    SceneDelegate.init().setRootVC(vc: SplashScreen())
+                    
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
                 
             case let .failure(error):
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
-
+                
             }
-             SVProgressHUD.dismiss()
+            SVProgressHUD.dismiss()
         }
     }
     
     func userProfile(){
-//        SVProgressHUD.show()
+        //        SVProgressHUD.show()
         
         SettingManager.shared.getUserProfile { Response in
             switch Response{
                 
             case let .success(response):
-                if response.code == 200{
+                if response.status == true{
                     self.delegate?.getUserData(data: response.data!)
-                }else if response.code == 401{
-                    SceneDelegate.init().setRootVC(vc: SplashScreen())
+                    
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
             case let .failure(error):
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
-
+                
             }
-//            SVProgressHUD.dismiss()
-
+            //            SVProgressHUD.dismiss()
+            
         }
     }
     

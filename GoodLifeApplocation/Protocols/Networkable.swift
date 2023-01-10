@@ -6,15 +6,14 @@
 //
 
 import Foundation
-
 import Moya
+
+
 protocol Networkable{
     
     associatedtype targetType:TargetType
-    
     var provider: MoyaProvider<targetType> { get }
     func request<T:Decodable>(target:targetType,completion: @escaping (Result<T, Error>) -> ())
-    
 }
 extension Networkable{
 
@@ -23,37 +22,24 @@ extension Networkable{
             
             print(result )
             switch result {
-            
              case let .success(response):
-                       
                 if  response.statusCode == 401 {
-                    
-                    SceneDelegate.init().setRootVC(vc: SplashScreen())
-                    do {
-                        print(String(data: response.data, encoding: .utf8))
-                        let results = try JSONDecoder().decode(T.self, from: response.data)
-                        completion(.success(results))
-                    } catch let error {
-                        print(error)
-                        completion(.failure(error))
-                    }
+                   
+                    if let delegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate {
+                         delegate.setRootVC(vc: SplashScreen())
+                     }
+//           
                 } else if  response.statusCode == 200 {
-                    
                     do {
                         print(String(data: response.data, encoding: .utf8))
                         let results = try JSONDecoder().decode(T.self, from: response.data)
                         completion(.success(results))
-                        
                     } catch let error {
                         print(error)
                         completion(.failure(error))
-                    }
-                    
-                }
-                
+                    } }
             case let .failure(error):
                 print(error)
-
                 completion(.failure(error))
             }
         }

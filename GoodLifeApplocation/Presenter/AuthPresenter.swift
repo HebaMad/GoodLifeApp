@@ -12,88 +12,82 @@ protocol AuthDelegate{
     func checkStatus(status:Bool,msg:String,screen:String)
     func getuserToken(data:startFundRaise)
     func getLoginToken(data:userProfile)
-
+    
 }
 typealias authDelegate = AuthDelegate & UIViewController
 
 class AuthPresenter:NSObject{
     weak var delegate:authDelegate?
-
-     func signup(mobile:String){
+    
+    func signup(mobile:String){
         
         SignUserManager.shared.signUpUser(mobile: mobile) { Response in
             
             switch Response{
                 
             case let .success(response):
-                if response.code == 200{
-                        self.delegate?.showAlerts(title:"Success", message: response.message)
+                if response.status == true{
+                    self.delegate?.showAlerts(title:"Success", message: response.message)
                     self.delegate?.checkStatus(status: true,msg: response.message, screen: "signup")
-
-            }else if response.code == 401{
-                SceneDelegate.init().setRootVC(vc: SplashScreen())
-            }else{
-                self.delegate?.showAlerts(title:"Failure", message: response.message)
-                self.delegate?.checkStatus(status: false,msg: response.message, screen: "signup")
-            }
-            
+                    
+                }else{
+                    self.delegate?.showAlerts(title:"Failure", message: response.message)
+                    self.delegate?.checkStatus(status: false,msg: response.message, screen: "signup")
+                }
+                
                 
             case let .failure(error):
                 print(error)
-
+                
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
-
+                
                 
             }
         }
     }
     
-     func resendCode(mobile:String){
+    func resendCode(mobile:String){
         
         SignUserManager.shared.resendCode(mobile: mobile) { Response in
             
             switch Response{
                 
             case let .success(response):
-                if response.code == 200{
-              
-
-                }else if response.code == 401{
-                    SceneDelegate.init().setRootVC(vc: SplashScreen())
+                if response.status == true{
+                    
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
                 
             case let .failure(error):
                 print(error)
-
+                
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
-
+                
                 
             }
         }
     }
-     func checkCode(mobile:String,code:String){
+    func checkCode(mobile:String,code:String){
         
         SignUserManager.shared.checkCode(mobile: mobile, code: code) { Response in
             
             switch Response{
                 
             case let .success(response):
-                if response.code == 200{
+                if response.status == true{
                     self.delegate?.checkStatus(status: true,msg: response.message, screen: "verification")
                     self.delegate?.getLoginToken(data: response.data!)
-                }else if response.code == 401{
-                    SceneDelegate.init().setRootVC(vc: SplashScreen())
+                    
                 }else{
                     self.delegate?.checkStatus(status: false,msg: response.message, screen: "verification")
                 }
-             
+                
             case let .failure(error):
                 print(error)
-
+                
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
-
+                
             }
         }
     }
@@ -106,40 +100,36 @@ class AuthPresenter:NSObject{
             switch Response{
                 
             case let .success(response):
-                if response.code == 200{
+                if response.status == true{
                     self.delegate?.getuserToken(data: response.data!)
-
-                }else if response.code == 401{
-                    SceneDelegate.init().setRootVC(vc: SplashScreen())
+                    
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
             case let .failure(error):
                 print(error)
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
-
+                
             }
         }
     }
     
     func login(mobile:String,token:String){
         SignUserManager.shared.login(mobile: mobile, token: token) { Response in
-      
+            
             switch Response{
                 
             case let .success(response):
-                if response.code == 200{
+                if response.status == true{
                     self.delegate?.checkStatus(status: true,msg: response.message, screen: "login")
-
-                }else if response.code == 401{
-                    SceneDelegate.init().setRootVC(vc: SplashScreen())
+                    
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
             case let .failure(error):
                 print(error)
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
-
+                
             }
         }
     }
