@@ -1884,7 +1884,7 @@ Night</string>
     <resources>
         <image name="arrow.right" catalog="system" width="128" height="95"/>
         <image name="bell.fill" catalog="system" width="123" height="128"/>
-        <image name="chevron.backward" catalog="system" width="97" height="128"/>
+        <image name="chevron.backward" catalog="system" width="32" height="32"/>
         <image name="chevron.down" catalog="system" width="128" height="70"/>
         <image name="line.3.horizontal" catalog="system" width="128" height="65"/>
         <image name="noData" width="292" height="137.5"/>

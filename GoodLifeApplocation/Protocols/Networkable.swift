@@ -10,7 +10,6 @@ import Moya
 
 
 protocol Networkable{
-    
     associatedtype targetType:TargetType
     var provider: MoyaProvider<targetType> { get }
     func request<T:Decodable>(target:targetType,completion: @escaping (Result<T, Error>) -> ())
@@ -19,16 +18,14 @@ extension Networkable{
 
     func request<T: Decodable>(target: targetType, completion: @escaping (Result<T, Error>) -> ()) {
         provider.request(target) { result in
-            
-            print(result )
-            switch result {
+              switch result {
              case let .success(response):
                 if  response.statusCode == 401 {
                    
                     if let delegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate {
                          delegate.setRootVC(vc: SplashScreen())
                      }
-//           
+                    
                 } else if  response.statusCode == 200 {
                     do {
                         print(String(data: response.data, encoding: .utf8))

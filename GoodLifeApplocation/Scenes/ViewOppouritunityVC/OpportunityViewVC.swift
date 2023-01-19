@@ -54,15 +54,12 @@ extension OpportunityViewVC{
          switch sender{
              
              case Profile.ViewBtn:
-//             self.navigationController?.popToRootViewController(animated: true)
-//             let vc = ProfileVC.instantiate()
-         let   vc = SplashScreen()
              
-             self.sceneDelegate.setRootVC(vc: vc)
-             
-//             navigationController?.pushViewController(vc, animated: true)
+             let vc = ProfileVC.instantiate()
+             navigationController?.pushViewController(vc, animated: true)
 
              case VolunteerOpportunityView.ViewBtn:
+             
              let vc = VolunteerOpportunityVC()
              navigationController?.pushViewController(vc, animated: true)
              
