@@ -36,7 +36,7 @@ class HaveAnIdeaVC: UIViewController {
     //MARK: - setupTimePicker
 
     fileprivate func setupTimePicker() {
-        weeklyTimeSelection.setFormat(format: "HH:mm:ss")
+        weeklyTimeSelection.setFormat(format: "HH:mm a")
         weeklyTimeSelection.setDatePickerMode(mode: .time)
     }
 }
