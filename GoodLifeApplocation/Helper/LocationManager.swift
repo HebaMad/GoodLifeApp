@@ -72,7 +72,7 @@ final class LocationManager: NSObject {
                         print("reverse geodcode fail: \(error!.localizedDescription)")
                         callback(false,error?.localizedDescription ?? "",error?.localizedDescription ?? "")
                     }
-                    let pm = placemarks! as [CLPlacemark]
+                let pm = placemarks ?? [] as [CLPlacemark]
 
                     if pm.count > 0 {
                         let pm = placemarks![0]

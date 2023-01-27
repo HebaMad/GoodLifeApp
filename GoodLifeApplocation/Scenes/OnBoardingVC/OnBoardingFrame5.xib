@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -26,26 +27,35 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="abS-uH-dKI">
-                    <rect key="frame" x="10" y="44" width="394" height="818"/>
+                <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="abS-uH-dKI">
+                    <rect key="frame" x="10" y="48" width="394" height="814"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to the Good Life!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1c7-W3-Ko2">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to the Good Life!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1c7-W3-Ko2">
                             <rect key="frame" x="0.0" y="8" width="394" height="77"/>
-                            <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="32"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="77" id="B67-de-lcp"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="30"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We’re happy to have you! We hope this program helps you bring your community together!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CNg-HY-YAO">
-                            <rect key="frame" x="0.0" y="90" width="394" height="38.5"/>
-                            <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="16"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We’re happy to have you! We hope this program helps you bring your community together!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="CNg-HY-YAO">
+                            <rect key="frame" x="0.0" y="103" width="394" height="45"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="x6S-RH-DJX"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="15"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WelcomePic" translatesAutoresizingMaskIntoConstraints="NO" id="bvi-Cq-lHv">
-                            <rect key="frame" x="0.0" y="133.5" width="394" height="353"/>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WelcomePic" translatesAutoresizingMaskIntoConstraints="NO" id="bvi-Cq-lHv">
+                            <rect key="frame" x="0.0" y="166" width="394" height="300"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="300" id="OjF-U1-PDU"/>
+                            </constraints>
                         </imageView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zde-0X-2z7">
-                            <rect key="frame" x="0.0" y="491.5" width="394" height="318.5"/>
+                            <rect key="frame" x="0.0" y="484" width="394" height="322"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                     </subviews>
@@ -55,7 +65,6 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="BgColor"/>
             <constraints>
-                <constraint firstItem="bvi-Cq-lHv" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.393973" id="4kz-dQ-cp4"/>
                 <constraint firstItem="abS-uH-dKI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="bLy-cx-mBs"/>
                 <constraint firstItem="abS-uH-dKI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="emv-1d-K9S"/>
                 <constraint firstAttribute="bottom" secondItem="abS-uH-dKI" secondAttribute="bottom" constant="34" id="pIw-Of-Kqf"/>

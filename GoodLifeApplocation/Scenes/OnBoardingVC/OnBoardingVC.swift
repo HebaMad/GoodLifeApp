@@ -205,6 +205,9 @@ class OnBoardingVC: UIViewController {
                 self.continueAction.setTitle("Welcome!", for: .normal)
                 self.contsinerView.addSubview(vc!.view)
                 self.onBoardingScreen=6
+                vc!.didMove(toParent: self)
+                vc!.view.frame = self.contsinerView.bounds
+                
             }
             break
         case 6:
