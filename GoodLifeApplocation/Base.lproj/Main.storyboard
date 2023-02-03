@@ -925,6 +925,12 @@ Night</string>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="chevron.backward" catalog="system"/>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NcK-dW-baJ">
+                                        <rect key="frame" x="163.5" y="8" width="87.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -932,13 +938,15 @@ Night</string>
                                     <constraint firstItem="tXl-El-sH3" firstAttribute="top" secondItem="rG7-6o-w4z" secondAttribute="top" id="B8u-gV-xVT"/>
                                     <constraint firstAttribute="bottom" secondItem="tXl-El-sH3" secondAttribute="bottom" id="Bf5-51-65Q"/>
                                     <constraint firstItem="tXl-El-sH3" firstAttribute="leading" secondItem="rG7-6o-w4z" secondAttribute="leading" constant="8" id="LM8-Z9-Vbw"/>
+                                    <constraint firstItem="NcK-dW-baJ" firstAttribute="top" secondItem="rG7-6o-w4z" secondAttribute="top" constant="8" id="TsS-Qq-nXX"/>
+                                    <constraint firstItem="NcK-dW-baJ" firstAttribute="centerX" secondItem="rG7-6o-w4z" secondAttribute="centerX" id="piz-42-fJt"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nQc-zy-erF" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                <rect key="frame" x="28" y="120" width="358" height="142"/>
+                                <rect key="frame" x="28" y="126" width="358" height="136"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GWF-Hb-hcb" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                        <rect key="frame" x="12" y="76" width="334" height="42"/>
+                                        <rect key="frame" x="12" y="70" width="334" height="42"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpp-Tb-vi3">
                                                 <rect key="frame" x="0.0" y="0.0" width="334" height="42"/>
@@ -994,8 +1002,9 @@ Night</string>
                                 <constraints>
                                     <constraint firstItem="GWF-Hb-hcb" firstAttribute="leading" secondItem="nQc-zy-erF" secondAttribute="leading" constant="12" id="5Su-vI-Sa5"/>
                                     <constraint firstAttribute="trailing" secondItem="GWF-Hb-hcb" secondAttribute="trailing" constant="12" id="McE-7k-JL6"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="112" id="aat-IJ-yNv"/>
                                     <constraint firstItem="GWF-Hb-hcb" firstAttribute="centerX" secondItem="nQc-zy-erF" secondAttribute="centerX" id="hYt-tv-mLW"/>
-                                    <constraint firstAttribute="height" constant="142" id="pfM-tP-ePK"/>
+                                    <constraint firstItem="GWF-Hb-hcb" firstAttribute="top" secondItem="nQc-zy-erF" secondAttribute="top" constant="70" id="psF-rG-ibL"/>
                                     <constraint firstAttribute="bottom" secondItem="GWF-Hb-hcb" secondAttribute="bottom" constant="24" id="xnL-II-Ibr"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -1019,7 +1028,7 @@ Night</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qTC-Bh-aub" customClass="UIImageViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                <rect key="frame" x="167" y="80" width="80" height="80"/>
+                                <rect key="frame" x="167" y="93" width="80" height="80"/>
                                 <color key="backgroundColor" red="0.79607843140000001" green="0.63899999860000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="I3Y-k7-jnd"/>
@@ -1032,10 +1041,10 @@ Night</string>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vk9-Ff-fKZ">
-                                <rect key="frame" x="0.0" y="278" width="414" height="618"/>
+                                <rect key="frame" x="0.0" y="274" width="414" height="622"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="50" estimatedRowHeight="50" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2yL-ou-dsI">
-                                        <rect key="frame" x="24" y="12" width="366" height="594"/>
+                                        <rect key="frame" x="24" y="12" width="366" height="598"/>
                                         <color key="backgroundColor" name="bg3"/>
                                         <view key="tableHeaderView" contentMode="scaleToFill" id="aVE-HG-sRt">
                                             <rect key="frame" x="0.0" y="0.0" width="366" height="72"/>
@@ -1083,17 +1092,17 @@ Night</string>
                         <constraints>
                             <constraint firstItem="rG7-6o-w4z" firstAttribute="trailing" secondItem="Os3-Y8-2eP" secondAttribute="trailing" id="3Xe-PL-sij"/>
                             <constraint firstItem="nQc-zy-erF" firstAttribute="leading" secondItem="Os3-Y8-2eP" secondAttribute="leading" constant="28" id="4zg-4F-JVn"/>
-                            <constraint firstItem="nQc-zy-erF" firstAttribute="top" secondItem="rG7-6o-w4z" secondAttribute="bottom" constant="32" id="7N8-a6-4fx"/>
                             <constraint firstItem="nQc-zy-erF" firstAttribute="centerX" secondItem="1Cf-ui-Wa1" secondAttribute="centerX" id="EUR-CC-2fs"/>
                             <constraint firstAttribute="bottom" secondItem="Vk9-Ff-fKZ" secondAttribute="bottom" id="GbI-Ml-Wxc"/>
-                            <constraint firstItem="Vk9-Ff-fKZ" firstAttribute="top" secondItem="nQc-zy-erF" secondAttribute="bottom" constant="16" id="d4q-dv-LOB"/>
+                            <constraint firstItem="Vk9-Ff-fKZ" firstAttribute="top" secondItem="nQc-zy-erF" secondAttribute="bottom" constant="12" id="d4q-dv-LOB"/>
                             <constraint firstItem="rG7-6o-w4z" firstAttribute="top" secondItem="Os3-Y8-2eP" secondAttribute="top" id="eax-aP-KaN"/>
                             <constraint firstAttribute="trailing" secondItem="Vk9-Ff-fKZ" secondAttribute="trailing" id="hzk-Q7-uIx"/>
                             <constraint firstItem="Os3-Y8-2eP" firstAttribute="trailing" secondItem="nQc-zy-erF" secondAttribute="trailing" constant="28" id="jex-42-Z9p"/>
                             <constraint firstItem="rG7-6o-w4z" firstAttribute="leading" secondItem="Os3-Y8-2eP" secondAttribute="leading" id="lXr-mE-hna"/>
+                            <constraint firstItem="nQc-zy-erF" firstAttribute="top" secondItem="rG7-6o-w4z" secondAttribute="bottom" constant="38" id="mgg-Jr-B59"/>
                             <constraint firstItem="Vk9-Ff-fKZ" firstAttribute="leading" secondItem="1Cf-ui-Wa1" secondAttribute="leading" id="nyi-9a-eio"/>
                             <constraint firstItem="qTC-Bh-aub" firstAttribute="centerX" secondItem="1Cf-ui-Wa1" secondAttribute="centerX" id="ub4-dJ-Cfn"/>
-                            <constraint firstItem="qTC-Bh-aub" firstAttribute="top" secondItem="Os3-Y8-2eP" secondAttribute="top" constant="32" id="yrV-gL-m8U"/>
+                            <constraint firstItem="qTC-Bh-aub" firstAttribute="top" secondItem="Os3-Y8-2eP" secondAttribute="top" constant="45" id="yrV-gL-m8U"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1105,7 +1114,7 @@ Night</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p7k-zx-j6k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5690" y="72"/>
+            <point key="canvasLocation" x="5689.8550724637689" y="71.651785714285708"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vIY-A5-aef">
@@ -1884,7 +1893,7 @@ Night</string>
     <resources>
         <image name="arrow.right" catalog="system" width="128" height="95"/>
         <image name="bell.fill" catalog="system" width="123" height="128"/>
-        <image name="chevron.backward" catalog="system" width="32" height="32"/>
+        <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <image name="chevron.down" catalog="system" width="128" height="70"/>
         <image name="line.3.horizontal" catalog="system" width="128" height="65"/>
         <image name="noData" width="292" height="137.5"/>

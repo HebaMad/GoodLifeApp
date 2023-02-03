@@ -18,14 +18,21 @@ class OpportunityViewVC: UIViewController {
     @IBOutlet weak var HaveIdeaView: OpportunityView!
     @IBOutlet weak var experienceView: OpportunityView!
     @IBOutlet weak var DonationView: OpportunityView!
+    @IBOutlet weak var rewardingResourceView: OpportunityView!
+    @IBOutlet weak var logoutView: OpportunityView!
     
     
+    let presenter = ProfilePresenter()
+
+    var userProfile:userProfile?
     //MARK: - Life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         bindButtons()
+        presenter.userProfile()
+        presenter.delegate=self
     }
   
 }
@@ -42,6 +49,8 @@ extension OpportunityViewVC{
         DonationView.ViewBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
         viewAllOppourtinity.ViewBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
         createOppourtinity.ViewBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
+        rewardingResourceView.ViewBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
+        logoutView.ViewBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
     }
 }
 
@@ -83,11 +92,50 @@ extension OpportunityViewVC{
              
          case createOppourtinity.ViewBtn:
              print("")
+             
 //             let vc = CreateOppourtinityVC()
 //             navigationController?.pushViewController(vc, animated: true)
+             
+         case rewardingResourceView.ViewBtn:
+             print("")
+             
+         case logoutView.ViewBtn:
+             print("")
+             
+             self.showAlertPopUp(title: "Notice", message: "Do you want to logout?", buttonTitle1: "Ok", buttonTitle2: "Cancel", buttonTitle1Style: .default, buttonTitle2Style: .cancel) {
+                 do{
+                     try KeychainWrapper.set(value:"" , key: self.userProfile?.mobile ?? "")
+                     AppData.mobile = self.userProfile?.mobile ?? ""
+                     self.presenter.logout()
+
+                   } catch let error {
+                     print(error)
+               }
+
+             } action2: {
+                 
+             }
+
+      
+
          default:
              print("")
          }
       
      }
+}
+
+extension OpportunityViewVC:ProfileDelegate{
+    func showAlerts(title: String, message: String) {
+        
+    }
+    
+    func getUserData(data: userProfile) {
+        self.userProfile = data
+    }
+    
+    func getUrlForWebPages(data: termsAndConditions) {
+    }
+    
+    
 }

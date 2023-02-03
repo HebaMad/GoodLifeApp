@@ -141,7 +141,7 @@
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMR-bb-eos">
                                     <rect key="frame" x="20" y="196" width="374" height="72"/>
-                                    <string key="text">With Meal Maker Gold, you directly impact 500 people. In addidion, you will recieve a free NFT to signify your generousity. Every meal recieved will be accounted for via Blockchain. </string>
+                                    <string key="text">With Meal Maker Gold, you directly impact 500 people. In addidion, you will recieve a free Token to signify your generousity. Every meal recieved will be accounted for via Blockchain. </string>
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>

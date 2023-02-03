@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -18,7 +19,6 @@
             <connections>
                 <outlet property="backBtn" destination="tB8-Bj-Pyy" id="Vwq-l8-oc8"/>
                 <outlet property="contactusView" destination="2Xi-OK-sIl" id="oh8-7m-w6f"/>
-                <outlet property="logoutBtn" destination="Ahl-GI-EDi" id="zmn-HW-NWa"/>
                 <outlet property="privacyPolicy" destination="uiy-kp-hu3" id="oPh-C9-jur"/>
                 <outlet property="profileEditView" destination="MOd-Id-1TA" id="Cm2-2b-Dhq"/>
                 <outlet property="termAndConditionView" destination="ico-TO-mlt" id="t1p-eP-PdN"/>
@@ -31,7 +31,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XdL-xJ-Pq7">
-                    <rect key="frame" x="0.0" y="44" width="414" height="40"/>
+                    <rect key="frame" x="0.0" y="48" width="414" height="40"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tB8-Bj-Pyy">
                             <rect key="frame" x="8" y="0.0" width="40" height="40"/>
@@ -60,7 +60,7 @@
                     </constraints>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="mHd-2A-d8l">
-                    <rect key="frame" x="24" y="145.5" width="366" height="200"/>
+                    <rect key="frame" x="24" y="149.5" width="366" height="200"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MOd-Id-1TA" customClass="SettingNib" customModule="GoodLifeApplocation" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="366" height="44"/>
@@ -95,34 +95,8 @@
                         <constraint firstAttribute="height" constant="200" id="pge-EG-rR7"/>
                     </constraints>
                 </stackView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ahl-GI-EDi" customClass="UIButtonDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                    <rect key="frame" x="24" y="801" width="366" height="45"/>
-                    <color key="backgroundColor" name="button"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="45" id="O7e-zm-fuQ"/>
-                    </constraints>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Logout">
-                        <fontDescription key="titleFontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
-                        <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    </buttonConfiguration>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="color" keyPath="startColor">
-                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="color" keyPath="endColor">
-                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
-                            <color key="value" name="Color"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                            <real key="value" value="12"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Help Center" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJX-JZ-RiC">
-                    <rect key="frame" x="24" y="106" width="70" height="14.5"/>
+                    <rect key="frame" x="24" y="110" width="70" height="14.5"/>
                     <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="12"/>
                     <color key="textColor" name="Color"/>
                     <nil key="highlightedColor"/>
@@ -133,35 +107,23 @@
             <constraints>
                 <constraint firstItem="nJX-JZ-RiC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="5w4-fc-BsZ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XdL-xJ-Pq7" secondAttribute="trailing" id="BBx-MH-MSZ"/>
-                <constraint firstItem="Ahl-GI-EDi" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="IY8-Fa-cOs"/>
                 <constraint firstItem="mHd-2A-d8l" firstAttribute="top" secondItem="nJX-JZ-RiC" secondAttribute="bottom" constant="25" id="PFc-1M-9Rf"/>
-                <constraint firstItem="Ahl-GI-EDi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="Ts1-Om-V00"/>
                 <constraint firstItem="nJX-JZ-RiC" firstAttribute="top" secondItem="XdL-xJ-Pq7" secondAttribute="bottom" constant="22" id="aWF-lP-3fN"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mHd-2A-d8l" secondAttribute="trailing" constant="24" id="h8L-Sg-iU2"/>
                 <constraint firstItem="XdL-xJ-Pq7" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="jtq-Hf-FrL"/>
                 <constraint firstItem="mHd-2A-d8l" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="kV4-pc-zqV"/>
                 <constraint firstItem="XdL-xJ-Pq7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ku4-vY-8f7"/>
-                <constraint firstItem="Ahl-GI-EDi" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="-16" id="pxZ-7x-Yex"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ahl-GI-EDi" secondAttribute="trailing" constant="24" id="sMh-yG-1Kf"/>
             </constraints>
             <point key="canvasLocation" x="144.92753623188406" y="151.33928571428569"/>
         </view>
     </objects>
-    <designables>
-        <designable name="Ahl-GI-EDi">
-            <size key="intrinsicContentSize" width="70" height="31"/>
-        </designable>
-    </designables>
     <resources>
-        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <namedColor name="Color">
             <color red="0.22699999809265137" green="0.10199999809265137" blue="0.39599999785423279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="bg3">
             <color red="0.97299998998641968" green="0.9649999737739563" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="button">
-            <color red="0.2669999897480011" green="0.050999999046325684" blue="0.55699998140335083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

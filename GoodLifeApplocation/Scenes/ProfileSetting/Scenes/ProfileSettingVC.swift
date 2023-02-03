@@ -15,7 +15,6 @@ class ProfileSettingVC: UIViewController {
     @IBOutlet weak var profileEditView: SettingNib!
     @IBOutlet weak var contactusView: SettingNib!
     @IBOutlet weak var privacyPolicy: SettingNib!
-    @IBOutlet weak var logoutBtn: UIButtonDesignable!
     @IBOutlet weak var termAndConditionView: SettingNib!
     
     //MARK: - Properties
@@ -46,7 +45,6 @@ extension ProfileSettingVC{
         contactusView.ViewBtn.addTarget(self, action: #selector(ButtonWasTapped), for: .touchUpInside)
         privacyPolicy.ViewBtn.addTarget(self, action: #selector(ButtonWasTapped), for: .touchUpInside)
         termAndConditionView.ViewBtn.addTarget(self, action: #selector(ButtonWasTapped), for: .touchUpInside)
-        logoutBtn.addTarget(self, action: #selector(ButtonWasTapped), for: .touchUpInside)
         backBtn.addTarget(self, action: #selector(ButtonWasTapped), for: .touchUpInside)
 
     }
@@ -81,23 +79,8 @@ extension ProfileSettingVC{
             vc.url = self.TermsAndConditionUrl
             self.navigationController?.pushViewController(vc, animated: true)
             
-        case logoutBtn:
-            
-            self.showAlertPopUp(title: "Notice", message: "Do you want to logout?", buttonTitle1: "Ok", buttonTitle2: "Cancel", buttonTitle1Style: .default, buttonTitle2Style: .cancel) {
-                do{
-                    try KeychainWrapper.set(value:"" , key: self.userProfile?.mobile ?? "")
-                    AppData.mobile = self.userProfile?.mobile ?? ""
-                    self.presenter.logout()
-
-                  } catch let error {
-                    print(error)
-              }
-
-            } action2: {
-                
-            }
-
      
+      
             
         case backBtn:
             navigationController?.popViewController(animated: true)

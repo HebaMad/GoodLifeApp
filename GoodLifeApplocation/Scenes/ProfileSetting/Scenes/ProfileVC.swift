@@ -14,9 +14,12 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var userImg: UIImageViewDesignable!
     @IBOutlet weak var accountDetails: UIButton!
     @IBOutlet weak var venturesTableview: UITableView!
+    
+    
     var privacyPolicyUrl = ""
     var venture:[Ventures]=[]
     var presenter = ProfilePresenter()
+    var username:String=""
     
     override func viewDidLoad() {
         super.viewDidLoad()
