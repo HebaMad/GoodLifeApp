@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HaveAnIdeaVC: UIViewController {
+class HaveAnIdeaVC: UIViewController ,UITextFieldDelegate{
     
     //MARK: - Outlet
 
@@ -20,7 +20,8 @@ class HaveAnIdeaVC: UIViewController {
     @IBOutlet weak var monthlyRevenuTxt: UITextField!
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var nextBtn: UIButtonDesignable!
-    
+    @IBOutlet weak var defaultLocation: UIButtonDesignable!
+    @IBOutlet weak var categoryTxt: UITextFieldDataPicker!
     //MARK: - Properties
     
     var presenter = MenuPresenter()
@@ -29,8 +30,18 @@ class HaveAnIdeaVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+        monthlyRevenuTxt.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+        setupDataPicker()
         setupTimePicker()
         bindBackButton()
+    }
+    
+    //MARK: - setup Data Picker
+    
+    func setupDataPicker(){
+        categoryTxt.dataSource=self
+        categoryTxt.pickerDelegate=self
     }
     
     //MARK: - setupTimePicker
@@ -38,6 +49,16 @@ class HaveAnIdeaVC: UIViewController {
     fileprivate func setupTimePicker() {
         weeklyTimeSelection.setFormat(format: "HH:mm a")
         weeklyTimeSelection.setDatePickerMode(mode: .time)
+    }
+    
+   @objc func textFieldDidChange(textField: UITextField){
+
+      guard let text = textField.text else { return }
+      
+   
+      if !text.hasPrefix("$") {
+        textField.text = "$" + " " + text
+      }
     }
 }
 //MARK: - Binding
@@ -47,6 +68,7 @@ private extension HaveAnIdeaVC{
     func bindBackButton(){
         backBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
         nextBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
+        defaultLocation.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
 
     }
 }
@@ -60,6 +82,9 @@ private extension HaveAnIdeaVC{
 
         case nextBtn:
             createIdea()
+            
+        case defaultLocation:
+            print("")
         default:break
             
         }
@@ -137,4 +162,32 @@ extension HaveAnIdeaVC{
         }
         
     }
+}
+
+
+//MARK: - confirm to DatePickerDelegate
+
+extension HaveAnIdeaVC:UITextFieldDataPickerDelegate,UITextFieldDataPickerDataSource{
+    
+    
+    func textFieldDataPicker(_ textField: UITextFieldDataPicker, numberOfRowsInComponent component: Int) -> Int {
+        2
+    }
+    
+    func textFieldDataPicker(_ textField: UITextFieldDataPicker, titleForRow row: Int, forComponent component: Int) -> String? {
+        print("\(title ?? "")")
+        return ""
+    }
+    
+    func numberOfComponents(in textField: UITextFieldDataPicker) -> Int {
+        1
+    }
+    
+    func textFieldDataPicker(_ textField: UITextFieldDataPicker, didSelectRow row: Int, inComponent component: Int) {
+        
+//        CategoryChoice.setTextFieldTitle(title: categories[row].title ?? "")
+//        self.itemID=categories[row].id ?? 0
+    }
+    
+    
 }
