@@ -15,8 +15,9 @@ class ReviewExperienceVC: UIViewController {
     @IBOutlet weak var titleTxt: UILabel!
     @IBOutlet weak var Description: UILabel!
     @IBOutlet weak var projectReview: UITextView!
-    @IBOutlet weak var reviewRate: RatingControl!
     
+    @IBOutlet weak var categoryTableHeight: NSLayoutConstraint!
+    @IBOutlet weak var categoryRateTable: UITableView!
     @IBOutlet weak var nextBtn: UIButton!
     @IBOutlet weak var addDocumentBtn: UIButton!
     @IBOutlet weak var backBtn: UIButton!
@@ -37,7 +38,15 @@ class ReviewExperienceVC: UIViewController {
         categoryPresenter.getSmartRecommendation(interestId: 0, needTypeId: 0)
         categoryPresenter.delegate = self
         bindBackButton()
+        categoryRateSetupTable()
    
+    }
+    
+    func categoryRateSetupTable(){
+        categoryRateTable.register(CategoryReviews.self)
+        categoryRateTable.delegate=self
+        categoryRateTable.dataSource=self
+        
     }
 }
 //MARK: - Binding
@@ -100,10 +109,10 @@ private extension ReviewExperienceVC{
         do{
             
             let title = try categoryTxt.validatedText(validationType: .requiredField(field: "category required"))
-            if reviewRate.rating != 0 {
+           
             if projectReview.text.isEmpty != true{
                 
-                presenter.createFeedback(id:"\(itemID)", review: projectReview.text, rate: reviewRate.rating, img: selectedImage ?? Data())
+//                presenter.createFeedback(id:"\(itemID)", review: projectReview.text, rate: reviewRate.rating, img: selectedImage ?? Data())
                 presenter.delegate=self
                 
             }else{
@@ -111,11 +120,7 @@ private extension ReviewExperienceVC{
 //                self.showAlert(title: "Warning", message:" Review text required ",hideCancelBtn: true)
                 
             }
-            }else{
-                Alert.showErrorAlert(message: "Review  your experience please")
-//                self.showAlert(title: "Warning", message:" Review  your experience please",hideCancelBtn: true)
-
-            }
+       
         }catch{
             Alert.showErrorAlert(message: (error as! ValidationError).message)
 //            self.showAlert(title: "Warning", message: (error as! ValidationError).message,hideCancelBtn: true)
@@ -188,6 +193,21 @@ private extension ReviewExperienceVC{
         
         categoryTxt.setTextFieldTitle(title: " " + (oppourtinity[row].title ?? ""))
         self.itemID=oppourtinity[row].id ?? 0
+    }
+    
+    
+}
+
+
+extension ReviewExperienceVC:UITableViewDelegate{}
+extension ReviewExperienceVC:UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        2
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell:CategoryReviews = tableView.dequeueReusableCell(for: indexPath)
+        return cell
     }
     
     

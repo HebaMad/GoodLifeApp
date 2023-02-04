@@ -20,11 +20,11 @@
                 <outlet property="Description" destination="uZD-st-neS" id="fuV-Av-lQS"/>
                 <outlet property="addDocumentBtn" destination="TFc-1X-HUd" id="KKe-qj-uW8"/>
                 <outlet property="backBtn" destination="r2Y-nG-92E" id="1CP-Xf-3Ci"/>
+                <outlet property="categoryRateTable" destination="Nk5-Rp-yiQ" id="XLk-oY-eww"/>
                 <outlet property="categoryTxt" destination="Gho-wA-NQy" id="KEC-Tg-wfA"/>
                 <outlet property="coverImage" destination="5e2-82-xG1" id="tEX-TU-1Cb"/>
                 <outlet property="nextBtn" destination="Zvb-sP-y1F" id="eCd-27-eUT"/>
                 <outlet property="projectReview" destination="T99-p0-Rch" id="YuD-z9-0NL"/>
-                <outlet property="reviewRate" destination="ors-jE-gvQ" id="JSK-rq-yyw"/>
                 <outlet property="titleTxt" destination="WiC-qg-XrO" id="V0D-wf-qD7"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -45,7 +45,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-8" translatesAutoresizingMaskIntoConstraints="NO" id="sAx-mk-SWv">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="978.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="979.5"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Qh-eM-hYq">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
@@ -69,7 +69,7 @@
                                     </constraints>
                                 </view>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-16" translatesAutoresizingMaskIntoConstraints="NO" id="dfq-lt-4kv">
-                                    <rect key="frame" x="0.0" y="72" width="414" height="906.5"/>
+                                    <rect key="frame" x="0.0" y="72" width="414" height="907.5"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OCd-SV-6cz">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="350"/>
@@ -124,10 +124,10 @@ feedback!</string>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0aG-LK-rRo" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="334" width="414" height="572.5"/>
+                                            <rect key="frame" x="0.0" y="334" width="414" height="573.5"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Nl1-Mx-vmE">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="572.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="573.5"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="13M-zN-fKk">
                                                             <rect key="frame" x="20" y="20" width="374" height="91"/>
@@ -201,56 +201,28 @@ feedback!</string>
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZsE-LN-S36">
-                                                            <rect key="frame" x="20" y="314.5" width="374" height="91"/>
+                                                            <rect key="frame" x="20" y="314.5" width="374" height="92"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review?*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bs2-AH-4tw">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="51"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="17"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="17" id="kBc-pK-mB6"/>
+                                                                    </constraints>
                                                                     <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="14"/>
                                                                     <color key="textColor" name="button"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m2y-5A-XrQ">
-                                                                    <rect key="frame" x="0.0" y="61" width="374" height="30"/>
-                                                                    <subviews>
-                                                                        <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ors-jE-gvQ" customClass="RatingControl" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
-                                                                            <color key="tintColor" name="review star"/>
-                                                                            <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="0.0" bottom="0.0" trailing="200"/>
-                                                                            <userDefinedRuntimeAttributes>
-                                                                                <userDefinedRuntimeAttribute type="number" keyPath="starCount">
-                                                                                    <integer key="value" value="5"/>
-                                                                                </userDefinedRuntimeAttribute>
-                                                                                <userDefinedRuntimeAttribute type="number" keyPath="spacingBetween">
-                                                                                    <real key="value" value="2"/>
-                                                                                </userDefinedRuntimeAttribute>
-                                                                                <userDefinedRuntimeAttribute type="size" keyPath="starSize">
-                                                                                    <size key="value" width="30" height="30"/>
-                                                                                </userDefinedRuntimeAttribute>
-                                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                                    <integer key="value" value="12"/>
-                                                                                </userDefinedRuntimeAttribute>
-                                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                                    <color key="value" name="review star"/>
-                                                                                </userDefinedRuntimeAttribute>
-                                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                                                    <real key="value" value="0.5"/>
-                                                                                </userDefinedRuntimeAttribute>
-                                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isEnabled" value="YES"/>
-                                                                            </userDefinedRuntimeAttributes>
-                                                                        </stackView>
-                                                                    </subviews>
-                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="30" estimatedRowHeight="30" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Nk5-Rp-yiQ">
+                                                                    <rect key="frame" x="0.0" y="27" width="374" height="65"/>
+                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="bottom" secondItem="ors-jE-gvQ" secondAttribute="bottom" id="Dl6-p6-6dq"/>
-                                                                        <constraint firstItem="ors-jE-gvQ" firstAttribute="leading" secondItem="m2y-5A-XrQ" secondAttribute="leading" id="SWf-Hk-DfG"/>
-                                                                        <constraint firstItem="ors-jE-gvQ" firstAttribute="top" secondItem="m2y-5A-XrQ" secondAttribute="top" id="gnw-kz-62m"/>
-                                                                        <constraint firstAttribute="trailing" secondItem="ors-jE-gvQ" secondAttribute="trailing" id="hNj-Ac-xlg"/>
+                                                                        <constraint firstAttribute="height" constant="65" id="0x9-rr-T0Z"/>
                                                                     </constraints>
-                                                                </view>
+                                                                </tableView>
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="euU-ii-9ZR">
-                                                            <rect key="frame" x="20" y="420.5" width="374" height="49"/>
+                                                            <rect key="frame" x="20" y="421.5" width="374" height="49"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xxa-9i-Trv">
                                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="49"/>
@@ -298,7 +270,7 @@ feedback!</string>
                                                             </subviews>
                                                         </stackView>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yUY-wV-nZL">
-                                                            <rect key="frame" x="20" y="484.5" width="374" height="80"/>
+                                                            <rect key="frame" x="20" y="485.5" width="374" height="80"/>
                                                             <subviews>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zvb-sP-y1F" customClass="UIButtonDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
                                                                     <rect key="frame" x="308" y="2" width="50" height="50"/>
@@ -337,7 +309,6 @@ feedback!</string>
                                                     <constraints>
                                                         <constraint firstItem="eLL-Z5-q0q" firstAttribute="height" secondItem="13M-zN-fKk" secondAttribute="height" multiplier="1.90909" id="Mrx-JV-G3a"/>
                                                         <constraint firstItem="euU-ii-9ZR" firstAttribute="height" secondItem="eLL-Z5-q0q" secondAttribute="height" multiplier="0.28" id="Peo-QD-Qmb"/>
-                                                        <constraint firstItem="ZsE-LN-S36" firstAttribute="height" secondItem="13M-zN-fKk" secondAttribute="height" id="dWN-pT-Ato"/>
                                                     </constraints>
                                                     <directionalEdgeInsets key="directionalLayoutMargins" top="20" leading="20" bottom="8" trailing="20"/>
                                                 </stackView>
@@ -395,7 +366,7 @@ feedback!</string>
             <size key="intrinsicContentSize" width="244" height="131"/>
         </designable>
         <designable name="Gho-wA-NQy">
-            <size key="intrinsicContentSize" width="53" height="34"/>
+            <size key="intrinsicContentSize" width="32" height="34"/>
         </designable>
         <designable name="TFc-1X-HUd">
             <size key="intrinsicContentSize" width="66.5" height="22"/>
@@ -424,9 +395,6 @@ feedback!</string>
         </namedColor>
         <namedColor name="button">
             <color red="0.2669999897480011" green="0.050999999046325684" blue="0.55699998140335083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="review star">
-            <color red="1" green="0.77999997138977051" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
