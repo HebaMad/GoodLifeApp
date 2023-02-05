@@ -79,6 +79,8 @@
 		2767A294289087DF00DF34D1 /* HeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2767A292289087DF00DF34D1 /* HeaderCollectionReusableView.xib */; };
 		2767A2982890A48600DF34D1 /* FilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2767A2962890A48600DF34D1 /* FilterVC.swift */; };
 		2767A2992890A48600DF34D1 /* FilterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2767A2972890A48600DF34D1 /* FilterVC.xib */; };
+		2768159029904DD800084834 /* menuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2768158E29904DD800084834 /* menuItemCell.swift */; };
+		2768159129904DD800084834 /* menuItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2768158F29904DD800084834 /* menuItemCell.xib */; };
 		2768DED728A3F473004C6A5B /* AddTaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2768DED528A3F473004C6A5B /* AddTaskVC.swift */; };
 		2768DED828A3F473004C6A5B /* AddTaskVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2768DED628A3F473004C6A5B /* AddTaskVC.xib */; };
 		2768DEDB28A3FE0A004C6A5B /* AddGoalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2768DED928A3FE0A004C6A5B /* AddGoalVC.swift */; };
@@ -330,6 +332,8 @@
 		2767A292289087DF00DF34D1 /* HeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCollectionReusableView.xib; sourceTree = "<group>"; };
 		2767A2962890A48600DF34D1 /* FilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterVC.swift; sourceTree = "<group>"; };
 		2767A2972890A48600DF34D1 /* FilterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterVC.xib; sourceTree = "<group>"; };
+		2768158E29904DD800084834 /* menuItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuItemCell.swift; sourceTree = "<group>"; };
+		2768158F29904DD800084834 /* menuItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = menuItemCell.xib; sourceTree = "<group>"; };
 		2768DED528A3F473004C6A5B /* AddTaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskVC.swift; sourceTree = "<group>"; };
 		2768DED628A3F473004C6A5B /* AddTaskVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddTaskVC.xib; sourceTree = "<group>"; };
 		2768DED928A3FE0A004C6A5B /* AddGoalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalVC.swift; sourceTree = "<group>"; };
@@ -1098,6 +1102,8 @@
 				27F4B14A28B8AD4F003365A6 /* VenturesCell.xib */,
 				27F4B14D28B8B94E003365A6 /* SettingNib.xib */,
 				27F4B14F28B8BAB4003365A6 /* SettingNib.swift */,
+				2768158E29904DD800084834 /* menuItemCell.swift */,
+				2768158F29904DD800084834 /* menuItemCell.xib */,
 			);
 			path = XIB;
 			sourceTree = "<group>";
@@ -1193,6 +1199,7 @@
 				2767A272288F3CD600DF34D1 /* DonationThirdFrame.xib in Resources */,
 				27CB2052289B006100E63694 /* ReviewExperienceVC.xib in Resources */,
 				27C9AE53288D3CA300FA584A /* Inter-Bold.ttf in Resources */,
+				2768159129904DD800084834 /* menuItemCell.xib in Resources */,
 				27CB2058289B08B900E63694 /* ResourceCollectionViewCell.xib in Resources */,
 				27C9AE5B288D3CB500FA584A /* Inter-ExtraBold.ttf in Resources */,
 				27C9AE54288D3CB500FA584A /* Inter-BoldItalic.ttf in Resources */,
@@ -1331,6 +1338,7 @@
 				27CBC5A92927CDA5000AE9A6 /* LayoutConstraintsExtension.swift in Sources */,
 				27CB209C289FFE9800E63694 /* GeneralFinicialPagerVC.swift in Sources */,
 				27CB205F289B0FDC00E63694 /* ResourceDetailsCell.swift in Sources */,
+				2768159029904DD800084834 /* menuItemCell.swift in Sources */,
 				27B8C8F528A16B5A0011B039 /* FilterHeaderReusableview.swift in Sources */,
 				270562D128BFD1C400B0124E /* DashboardTarget.swift in Sources */,
 				27A737692891431000FD8AD9 /* OpportunityView.swift in Sources */,
