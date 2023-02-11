@@ -21,7 +21,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let _delegate = UIApplication.shared.delegate as? AppDelegate {
             _delegate.window = window
         }
-        saveLogin()
+//        saveLogin()
+        setRootVC(vc: AddFundTypes())
     }
     
     func setRootVC(vc:UIViewController){

@@ -34,7 +34,7 @@ class ProfilePresenter:NSObject{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
                 
-            case let .failure(error):
+            case  .failure(_):
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
             }
             
@@ -52,7 +52,7 @@ class ProfilePresenter:NSObject{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
                 
-            case let .failure(error):
+            case  .failure(_):
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
                 
             }
@@ -69,7 +69,7 @@ class ProfilePresenter:NSObject{
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
-            case let .failure(error):
+            case let .failure(_):
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
             }
         }
@@ -86,7 +86,7 @@ class ProfilePresenter:NSObject{
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
-            case let .failure(error):
+            case  .failure(_):
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
             }
             
@@ -106,7 +106,7 @@ class ProfilePresenter:NSObject{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
                 
-            case let .failure(error):
+            case  .failure(_):
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
                 
             }
@@ -127,7 +127,7 @@ class ProfilePresenter:NSObject{
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
-            case let .failure(error):
+            case  .failure(_):
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
                 
             }

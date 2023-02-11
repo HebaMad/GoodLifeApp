@@ -16,6 +16,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OpportunityViewVC" customModule="GoodLifeApplocation" customModuleProvider="target">
             <connections>
+                <outlet property="AddFundTypeView" destination="lvc-ht-wgB" id="zRt-eO-05Z"/>
                 <outlet property="DonationView" destination="gLI-af-tpr" id="Z4D-zn-GJS"/>
                 <outlet property="HaveIdeaView" destination="15Q-A4-VHb" id="gRt-tY-q77"/>
                 <outlet property="Profile" destination="p2A-4q-8IO" id="HBB-iO-Qf3"/>
@@ -46,7 +47,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="pSj-Vx-m0T">
-                            <rect key="frame" x="6" y="60" width="408" height="540"/>
+                            <rect key="frame" x="6" y="60" width="408" height="600"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y7t-1y-RqM" customClass="OpportunityView" customModule="GoodLifeApplocation" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="408" height="60"/>
@@ -59,8 +60,19 @@
                                         <userDefinedRuntimeAttribute type="string" keyPath="subTitle" value="See the map with all oppurtunites"/>
                                     </userDefinedRuntimeAttributes>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fzX-NF-TXR" customClass="OpportunityView" customModule="GoodLifeApplocation" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lvc-ht-wgB" customClass="OpportunityView" customModule="GoodLifeApplocation" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="60" width="408" height="60"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="60" id="xS2-TL-Lfv"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="text" value="Add"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="subTitle" value="Add Category "/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fzX-NF-TXR" customClass="OpportunityView" customModule="GoodLifeApplocation" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="120" width="408" height="60"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="60" id="AD9-JD-yEe"/>
@@ -71,7 +83,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p2A-4q-8IO" customClass="OpportunityView" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="120" width="408" height="60"/>
+                                    <rect key="frame" x="0.0" y="180" width="408" height="60"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="60" id="wUY-i1-5Vm"/>
@@ -82,7 +94,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9nJ-A5-dnL" customClass="OpportunityView" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="180" width="408" height="60"/>
+                                    <rect key="frame" x="0.0" y="240" width="408" height="60"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="60" id="UTN-Xk-6H4"/>
@@ -93,7 +105,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="15Q-A4-VHb" customClass="OpportunityView" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="240" width="408" height="60"/>
+                                    <rect key="frame" x="0.0" y="300" width="408" height="60"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="60" id="JVD-q7-k3z"/>
@@ -104,7 +116,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xvo-Rv-2Ee" customClass="OpportunityView" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="300" width="408" height="60"/>
+                                    <rect key="frame" x="0.0" y="360" width="408" height="60"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="60" id="y3r-pw-yy3"/>
@@ -115,7 +127,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gLI-af-tpr" customClass="OpportunityView" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="360" width="408" height="60"/>
+                                    <rect key="frame" x="0.0" y="420" width="408" height="60"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="60" id="bTT-yQ-s5W"/>
@@ -126,7 +138,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="edj-xc-iON" customClass="OpportunityView" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="420" width="408" height="60"/>
+                                    <rect key="frame" x="0.0" y="480" width="408" height="60"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="60" id="Ybp-Dm-x0w"/>
@@ -136,7 +148,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aID-8G-UlK" customClass="OpportunityView" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="480" width="408" height="60"/>
+                                    <rect key="frame" x="0.0" y="540" width="408" height="60"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="60" id="Viw-PW-1AU"/>
@@ -148,7 +160,7 @@
                             </subviews>
                         </stackView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="59X-Og-FFK">
-                            <rect key="frame" x="6" y="624" width="408" height="182"/>
+                            <rect key="frame" x="6" y="684" width="408" height="122"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                     </subviews>

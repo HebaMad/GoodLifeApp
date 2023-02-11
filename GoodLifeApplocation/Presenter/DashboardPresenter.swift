@@ -36,7 +36,7 @@ class DashboardPresenter:NSObject{
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
-            case let .failure(error):
+            case  .failure(_):
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
             }
         }
@@ -54,7 +54,7 @@ class DashboardPresenter:NSObject{
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
-            case let .failure(error):
+            case  .failure(_):
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
             }
         }
@@ -72,7 +72,7 @@ class DashboardPresenter:NSObject{
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
-            case let .failure(error):
+            case  .failure(_):
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
             }
         }
@@ -90,7 +90,7 @@ class DashboardPresenter:NSObject{
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
-            case let .failure(error):
+            case  .failure(_):
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
             }
         }
@@ -108,7 +108,7 @@ class DashboardPresenter:NSObject{
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
-            case let .failure(error):
+            case  .failure(_):
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
             }
         }
@@ -126,7 +126,7 @@ class DashboardPresenter:NSObject{
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
-            case let .failure(error):
+            case  .failure(_):
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
             }}}
     
@@ -141,7 +141,7 @@ class DashboardPresenter:NSObject{
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
-            case let .failure(error):
+            case  .failure(_):
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
             }
         }
@@ -158,7 +158,7 @@ class DashboardPresenter:NSObject{
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
-            case let .failure(error):
+            case  .failure(_):
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
             }
             
@@ -179,7 +179,7 @@ class DashboardPresenter:NSObject{
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
-            case let .failure(error):
+            case  .failure(_):
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
             }
             
@@ -198,7 +198,7 @@ class DashboardPresenter:NSObject{
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
-            case let .failure(error):
+            case  .failure(_):
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
             }
             

@@ -42,6 +42,8 @@
 		2734CD8528913E3A00E6964F /* GoodLifeApplocation.xcworkspace in Resources */ = {isa = PBXBuildFile; fileRef = 27C9AE68288D427600FA584A /* GoodLifeApplocation.xcworkspace */; };
 		273D3A9E28B0CED000860702 /* choosingMinistryNeedsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273D3A9C28B0CED000860702 /* choosingMinistryNeedsVC.swift */; };
 		273D3A9F28B0CED000860702 /* choosingMinistryNeedsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 273D3A9D28B0CED000860702 /* choosingMinistryNeedsVC.xib */; };
+		274B65972997BD45008EA6D5 /* AddFundTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274B65952997BD45008EA6D5 /* AddFundTypes.swift */; };
+		274B65982997BD45008EA6D5 /* AddFundTypes.xib in Resources */ = {isa = PBXBuildFile; fileRef = 274B65962997BD45008EA6D5 /* AddFundTypes.xib */; };
 		2756BB07290FB80300E0304C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2756BB06290FB80300E0304C /* GoogleService-Info.plist */; };
 		27594D1E28A010CE00F4DDC3 /* GeneralMarketingPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27594D1C28A010CE00F4DDC3 /* GeneralMarketingPageVC.swift */; };
 		27594D2228A017D600F4DDC3 /* GeneralLiturgicalPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27594D2028A017D600F4DDC3 /* GeneralLiturgicalPageVC.swift */; };
@@ -300,6 +302,8 @@
 		2710A298289AF485009BCE60 /* PastVentures.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PastVentures.xib; sourceTree = "<group>"; };
 		273D3A9C28B0CED000860702 /* choosingMinistryNeedsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = choosingMinistryNeedsVC.swift; sourceTree = "<group>"; };
 		273D3A9D28B0CED000860702 /* choosingMinistryNeedsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = choosingMinistryNeedsVC.xib; sourceTree = "<group>"; };
+		274B65952997BD45008EA6D5 /* AddFundTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFundTypes.swift; sourceTree = "<group>"; };
+		274B65962997BD45008EA6D5 /* AddFundTypes.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddFundTypes.xib; sourceTree = "<group>"; };
 		2756BB06290FB80300E0304C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		27594D1C28A010CE00F4DDC3 /* GeneralMarketingPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralMarketingPageVC.swift; sourceTree = "<group>"; };
 		27594D2028A017D600F4DDC3 /* GeneralLiturgicalPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralLiturgicalPageVC.swift; sourceTree = "<group>"; };
@@ -906,6 +910,8 @@
 				27CB204C289AFDE800E63694 /* HaveAnIdeaVC.xib */,
 				27CB204F289B006100E63694 /* ReviewExperienceVC.swift */,
 				27CB2050289B006100E63694 /* ReviewExperienceVC.xib */,
+				274B65952997BD45008EA6D5 /* AddFundTypes.swift */,
+				274B65962997BD45008EA6D5 /* AddFundTypes.xib */,
 			);
 			path = ViewOppouritunityVC;
 			sourceTree = "<group>";
@@ -1261,6 +1267,7 @@
 				27EE4C822965F53500A7A3B1 /* GeneralLiturgicalCell.xib in Resources */,
 				27CB2060289B0FDC00E63694 /* ResourceDetailsCell.xib in Resources */,
 				27C9AEAF288DB44600FA584A /* CategoriesCollectionViewCell.xib in Resources */,
+				274B65982997BD45008EA6D5 /* AddFundTypes.xib in Resources */,
 				27F7363A28C4FD4100E804B5 /* resourceSubTopicCell.xib in Resources */,
 				27C9AE84288D4F0600FA584A /* OnBoardingFrame3.xib in Resources */,
 				27A7376A2891431000FD8AD9 /* OpportunityView.xib in Resources */,
@@ -1454,6 +1461,7 @@
 				27ECA33D28EB25C1003DCF53 /* HomePresenter.swift in Sources */,
 				2767A27F2890478200DF34D1 /* FeaturedFundsCollectionViewCell.swift in Sources */,
 				277CF36A28BD5DAF00F2874F /* ProfilePresenter.swift in Sources */,
+				274B65972997BD45008EA6D5 /* AddFundTypes.swift in Sources */,
 				27ECA34128EB313F003DCF53 /* Reusable.swift in Sources */,
 				2704244628A6E014002EF7B5 /* BusinessPlanList.swift in Sources */,
 				27CB206A289BC15C00E63694 /* SegmentControl.swift in Sources */,

@@ -435,3 +435,21 @@ struct notificationsDetails:Codable{
 
         
 }
+
+
+struct FundType:Decodable{
+    
+    let id:Int?
+    let main_category_id:Int?
+    let sub_category_id:Int?
+    let latitude:Int?
+    let longitude:Int?
+    let city:String?
+    let name:String?
+    let logo:String?
+    let default_need:Int?
+
+
+
+    
+}

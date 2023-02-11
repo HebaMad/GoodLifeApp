@@ -34,7 +34,7 @@ class MenuPresenter:NSObject{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
                 
-            case let .failure(error):
+            case  .failure(_):
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
             }
         }
@@ -53,7 +53,7 @@ class MenuPresenter:NSObject{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
                 
-            case let .failure(error):
+            case  .failure(_):
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
             }
             
@@ -71,7 +71,7 @@ class MenuPresenter:NSObject{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
                 
-            case let .failure(error):
+            case  .failure(_):
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
             }
             
@@ -92,7 +92,7 @@ class MenuPresenter:NSObject{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
                 
-            case let .failure(error):
+            case .failure(_):
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
             }
         }
@@ -109,7 +109,7 @@ class MenuPresenter:NSObject{
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
-            case let .failure(error):
+            case .failure(_):
                 
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
             }
@@ -127,11 +127,31 @@ class MenuPresenter:NSObject{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
                 
-            case let .failure(error):
+            case .failure(_):
                 
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
             }
         }
         
+    }
+    
+    
+    func createFundType(name: String, main_category_id: String, sub_category_id: String, latitude: String, longitude: String, city: String, default_need: String){
+        MenuManager.shared.AddFundType(name: name, main_category_id: main_category_id, sub_category_id: sub_category_id, latitude: latitude, longitude: longitude, city: city, default_need: default_need) { Response in
+            switch Response{
+                
+            case let .success(response):
+                if response.status == true{
+                    self.delegate?.showAlerts(title:"Success", message: response.message)
+
+                }else{
+                    self.delegate?.showAlerts(title:"Failure", message: response.message)
+                }
+                
+            case .failure(_):
+                
+                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
+            }
+        }
     }
 }

@@ -16,7 +16,9 @@ enum MenuApiTarget:TargetType{
     case getWorthyCauses
     case getSubWorthyCauses(worthycauseId:Int)
     case makeDonation(worthycauseId:Int,amount:String)
-
+    case AddFundType(name:String,main_category_id:String,sub_category_id:String,latitude:String,longitude:String,city:String,default_need:String)
+    
+    
     var baseURL: URL {
         return URL(string: "\(AppConfig.apiBaseUrl)")!
     }
@@ -36,12 +38,14 @@ enum MenuApiTarget:TargetType{
             
         case .makeDonation:return "makeDonation"
             
+        case .AddFundType:return "createFundType"
+            
         }
     }
     
     var method: Moya.Method {
         switch self{
-        case .VolunteerOppourtinity,.createIdea,.createFeedback,.makeDonation:
+        case .VolunteerOppourtinity,.createIdea,.createFeedback,.makeDonation,.AddFundType:
             return .post
             
         case .getWorthyCauses,.getSubWorthyCauses:
@@ -53,7 +57,7 @@ enum MenuApiTarget:TargetType{
     var task: Task{
         switch self{
    
-        case .VolunteerOppourtinity,.createIdea,.makeDonation:
+        case .VolunteerOppourtinity,.createIdea,.makeDonation,.AddFundType:
             return .requestParameters(parameters: param, encoding: URLEncoding.httpBody)
             
         case .createFeedback(let opportunity_id,let review,let rate,let img):
@@ -78,7 +82,7 @@ enum MenuApiTarget:TargetType{
     }
     var headers: [String : String]?{
         switch self{
-        case .VolunteerOppourtinity,.createIdea,.createFeedback,.makeDonation:
+        case .VolunteerOppourtinity,.createIdea,.createFeedback,.makeDonation,.AddFundType:
             
             do {
                 let token = try KeychainWrapper.get(key: AppData.mobile) ?? ""
@@ -106,7 +110,8 @@ enum MenuApiTarget:TargetType{
             
         case .makeDonation(let worthycauseId,let amount):
             return ["worthy_cause_id":worthycauseId,"amount":amount]
-            
+        case .AddFundType( let name,let main_category_id,let sub_category_id,let latitude, let longitude,let city, let default_need):
+            return ["name":name,"main_category_id":main_category_id,"sub_category_id":sub_category_id,"latitude":latitude,"longitude":longitude,"city":city,"default_need":default_need]
         default : return [:]
         }
         

@@ -36,8 +36,7 @@ class AuthPresenter:NSObject{
                 }
                 
                 
-            case let .failure(error):
-                print(error)
+            case  .failure(_):
                 
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
                 
@@ -59,8 +58,7 @@ class AuthPresenter:NSObject{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
                 
-            case let .failure(error):
-                print(error)
+            case  .failure(_):
                 
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
                 
@@ -83,8 +81,7 @@ class AuthPresenter:NSObject{
                     self.delegate?.checkStatus(status: false,msg: response.message, screen: "verification")
                 }
                 
-            case let .failure(error):
-                print(error)
+            case  .failure(_):
                 
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
                 
@@ -106,8 +103,7 @@ class AuthPresenter:NSObject{
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
-            case let .failure(error):
-                print(error)
+            case  .failure(_):
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
                 
             }
@@ -126,8 +122,7 @@ class AuthPresenter:NSObject{
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message)
                 }
-            case let .failure(error):
-                print(error)
+            case  .failure(_):
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
                 
             }

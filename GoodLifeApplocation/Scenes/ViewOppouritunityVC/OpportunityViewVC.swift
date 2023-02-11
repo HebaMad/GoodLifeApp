@@ -13,6 +13,7 @@ class OpportunityViewVC: UIViewController {
     
     @IBOutlet weak var createOppourtinity: OpportunityView!
     @IBOutlet weak var viewAllOppourtinity: OpportunityView!
+    @IBOutlet weak var AddFundTypeView: OpportunityView!
     @IBOutlet weak var Profile: OpportunityView!
     @IBOutlet weak var VolunteerOpportunityView: OpportunityView!
     @IBOutlet weak var HaveIdeaView: OpportunityView!
@@ -51,6 +52,7 @@ extension OpportunityViewVC{
         createOppourtinity.ViewBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
         rewardingResourceView.ViewBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
         logoutView.ViewBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
+        AddFundTypeView.ViewBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
     }
 }
 
@@ -96,6 +98,9 @@ extension OpportunityViewVC{
 //             let vc = CreateOppourtinityVC()
 //             navigationController?.pushViewController(vc, animated: true)
              
+         case AddFundTypeView.ViewBtn:
+             let vc = AddFundTypes()
+             navigationController?.pushViewController(vc, animated: true)
          case rewardingResourceView.ViewBtn:
              print("")
              
