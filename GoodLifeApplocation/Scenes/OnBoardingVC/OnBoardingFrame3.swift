@@ -40,6 +40,6 @@ extension OnBoardingFrame3:RangeSeekSliderDelegate{
     func rangeSeekSlider(_ slider: RangeSeekSlider, didChange minValue: CGFloat, maxValue: CGFloat) {
         minvalue=Float(minValue)
         maxvalue=Float(maxValue)
-
+        investmentAmountLabel.text = "\(Int(maxvalue-minvalue))" + "k"
     }
 }

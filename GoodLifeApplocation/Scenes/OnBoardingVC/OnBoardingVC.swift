@@ -26,6 +26,8 @@ class OnBoardingVC: UIViewController {
     var vc:UIViewController?
     var lat:Double = 0.0
     var long:Double = 0.0
+    var listIntrest:[String]=[]
+    var ListTalent:[String]=[]
     
     var city : String = ""{
         didSet{
@@ -196,7 +198,27 @@ class OnBoardingVC: UIViewController {
                 showSnackBar(message: "Please select your investment time ")
                 
             }else{
-                self.presnter.startInvestiment(mobile: mobileNumber, latitude: self.latitude, longitude: self.longitude, city: city, work_type: self.timeOfInvestment.lowercased(), amount_raise: self.maxValueInvestment-self.minValueInvestment)
+                self.contsinerView.subviews.first?.removeFromSuperview()
+                
+                self.stepsIndicator.currentStep = 5
+                
+                vc=FavouriteHobbiesVC()
+                self.addChild(vc!)
+                self.contsinerView.addSubview(vc!.view)
+                self.onBoardingScreen=6
+                vc!.didMove(toParent: self)
+                vc!.view.frame = self.contsinerView.bounds
+            }
+            break
+        case 6:
+            ListTalent =  (vc as! FavouriteHobbiesVC).listTalent
+            listIntrest =  (vc as! FavouriteHobbiesVC).listInterest
+            
+            if listIntrest.count == 0 || ListTalent.count == 0 {
+                showSnackBar(message: "Please select your Interests & Talents ")
+
+            }else{
+                self.presnter.startInvestiment(mobile: mobileNumber, latitude: self.latitude, longitude: self.longitude, city: city, work_type: self.timeOfInvestment.lowercased(), amount_raise: self.maxValueInvestment-self.minValueInvestment,interest: listIntrest,talent: ListTalent)
                 self.presnter.delegate=self
                 self.contsinerView.subviews.first?.removeFromSuperview()
                 self.stepsIndicator.currentStep = 5
@@ -204,13 +226,12 @@ class OnBoardingVC: UIViewController {
                 self.addChild(vc!)
                 self.continueAction.setTitle("Welcome!", for: .normal)
                 self.contsinerView.addSubview(vc!.view)
-                self.onBoardingScreen=6
+                self.onBoardingScreen=7
                 vc!.didMove(toParent: self)
                 vc!.view.frame = self.contsinerView.bounds
-                
             }
             break
-        case 6:
+        case 7:
             let nav1 = UINavigationController()
             let mainView = MapVC()
  
@@ -219,6 +240,8 @@ class OnBoardingVC: UIViewController {
             nav1.navigationBar.isHidden = true
             self.sceneDelegate.setRootVC(vc: nav1)
             break
+            
+            
         default:
             print("test")
         }

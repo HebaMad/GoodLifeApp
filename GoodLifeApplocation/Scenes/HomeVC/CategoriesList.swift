@@ -65,3 +65,36 @@ enum lessonDetails{
         }
     }
 }
+
+
+enum Hobbies{
+    case talent([listData])
+    case interest([listData])
+    
+    var items: [listData] {
+        
+        switch self {
+            
+        case .talent(let items),.interest(let items):
+               
+            return items
+        }
+        
+    }
+    var count: Int {
+        return items.count
+    }
+    
+    var title: String {
+        switch self {
+        case .talent:
+            return "Pick up your  Talents!"
+        case .interest:
+            return "Pick up your favorite interests!"
+
+  
+        }
+    }
+    
+    
+}
