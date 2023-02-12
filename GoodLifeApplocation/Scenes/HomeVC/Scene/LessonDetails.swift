@@ -199,7 +199,7 @@ extension LessonDetails:UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.headerIdentifier, for: indexPath) as! HeaderCollectionReusableView
-        
+        header.editBtn.isHidden=true
         header.viewAllButton.isHidden = true
         header.setup(sections[indexPath.section].title)
         return header

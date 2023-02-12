@@ -353,7 +353,8 @@ extension DashboardVC: UICollectionViewDataSource,UICollectionViewDelegate,UICol
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.headerIdentifier, for: indexPath) as! HeaderCollectionReusableView
         header.viewAllButton.addTarget(self, action: #selector(viewAllButton), for: .touchUpInside)
         header.viewAllButton.tag = indexPath.section
-        
+        header.editBtn.isHidden=true
+
         header.setup(sections[indexPath.section].title)
         return header
     }

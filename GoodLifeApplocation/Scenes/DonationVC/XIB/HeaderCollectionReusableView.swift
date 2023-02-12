@@ -18,6 +18,7 @@ class HeaderCollectionReusableView: UICollectionReusableView {
     @IBOutlet weak var viewAllButton: UIButton!
     @IBOutlet weak var headerTitleLabel: UILabel!
     
+    @IBOutlet weak var editBtn: UIButton!
     //MARK: - Initializer
 
     override func awakeFromNib() {

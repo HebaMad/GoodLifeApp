@@ -151,6 +151,7 @@ extension DonationFirstFrame: UICollectionViewDataSource,UICollectionViewDelegat
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.headerIdentifier, for: indexPath) as! HeaderCollectionReusableView
         header.setup(sections[indexPath.section].title)
         header.viewAllButton.isHidden = true
+        header.editBtn.isHidden=true
         header.headerTitleLabel.textAlignment = .center
         return header
     }

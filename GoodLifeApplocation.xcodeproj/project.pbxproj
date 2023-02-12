@@ -40,10 +40,17 @@
 		2710A299289AF485009BCE60 /* PastVentures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710A297289AF485009BCE60 /* PastVentures.swift */; };
 		2710A29A289AF485009BCE60 /* PastVentures.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2710A298289AF485009BCE60 /* PastVentures.xib */; };
 		2734CD8528913E3A00E6964F /* GoodLifeApplocation.xcworkspace in Resources */ = {isa = PBXBuildFile; fileRef = 27C9AE68288D427600FA584A /* GoodLifeApplocation.xcworkspace */; };
+		273D2FD529996730006D9CB0 /* StewardingMyResourcesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273D2FD429996730006D9CB0 /* StewardingMyResourcesVC.swift */; };
 		273D3A9E28B0CED000860702 /* choosingMinistryNeedsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273D3A9C28B0CED000860702 /* choosingMinistryNeedsVC.swift */; };
 		273D3A9F28B0CED000860702 /* choosingMinistryNeedsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 273D3A9D28B0CED000860702 /* choosingMinistryNeedsVC.xib */; };
 		274B65972997BD45008EA6D5 /* AddFundTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274B65952997BD45008EA6D5 /* AddFundTypes.swift */; };
 		274B65982997BD45008EA6D5 /* AddFundTypes.xib in Resources */ = {isa = PBXBuildFile; fileRef = 274B65962997BD45008EA6D5 /* AddFundTypes.xib */; };
+		274B659B2997D525008EA6D5 /* TimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274B65992997D525008EA6D5 /* TimeCell.swift */; };
+		274B659C2997D525008EA6D5 /* TimeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 274B659A2997D525008EA6D5 /* TimeCell.xib */; };
+		274B659E2998EA94008EA6D5 /* StewardingMyMoney.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274B659D2998EA94008EA6D5 /* StewardingMyMoney.swift */; };
+		274B65A02998EBF3008EA6D5 /* StewardingTimeAndTalent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274B659F2998EBF3008EA6D5 /* StewardingTimeAndTalent.swift */; };
+		274B65A22999558B008EA6D5 /* StewardingResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274B65A12999558B008EA6D5 /* StewardingResource.swift */; };
+		274B65A429995DED008EA6D5 /* StewardingMyResourceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274B65A329995DED008EA6D5 /* StewardingMyResourceVC.swift */; };
 		2756BB07290FB80300E0304C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2756BB06290FB80300E0304C /* GoogleService-Info.plist */; };
 		27594D1E28A010CE00F4DDC3 /* GeneralMarketingPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27594D1C28A010CE00F4DDC3 /* GeneralMarketingPageVC.swift */; };
 		27594D2228A017D600F4DDC3 /* GeneralLiturgicalPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27594D2028A017D600F4DDC3 /* GeneralLiturgicalPageVC.swift */; };
@@ -300,10 +307,17 @@
 		2710A295289ADA9E009BCE60 /* GoalAndBenchmarkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalAndBenchmarkVC.swift; sourceTree = "<group>"; };
 		2710A297289AF485009BCE60 /* PastVentures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastVentures.swift; sourceTree = "<group>"; };
 		2710A298289AF485009BCE60 /* PastVentures.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PastVentures.xib; sourceTree = "<group>"; };
+		273D2FD429996730006D9CB0 /* StewardingMyResourcesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StewardingMyResourcesVC.swift; sourceTree = "<group>"; };
 		273D3A9C28B0CED000860702 /* choosingMinistryNeedsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = choosingMinistryNeedsVC.swift; sourceTree = "<group>"; };
 		273D3A9D28B0CED000860702 /* choosingMinistryNeedsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = choosingMinistryNeedsVC.xib; sourceTree = "<group>"; };
 		274B65952997BD45008EA6D5 /* AddFundTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFundTypes.swift; sourceTree = "<group>"; };
 		274B65962997BD45008EA6D5 /* AddFundTypes.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddFundTypes.xib; sourceTree = "<group>"; };
+		274B65992997D525008EA6D5 /* TimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCell.swift; sourceTree = "<group>"; };
+		274B659A2997D525008EA6D5 /* TimeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeCell.xib; sourceTree = "<group>"; };
+		274B659D2998EA94008EA6D5 /* StewardingMyMoney.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StewardingMyMoney.swift; sourceTree = "<group>"; };
+		274B659F2998EBF3008EA6D5 /* StewardingTimeAndTalent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StewardingTimeAndTalent.swift; sourceTree = "<group>"; };
+		274B65A12999558B008EA6D5 /* StewardingResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StewardingResource.swift; sourceTree = "<group>"; };
+		274B65A329995DED008EA6D5 /* StewardingMyResourceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StewardingMyResourceVC.swift; sourceTree = "<group>"; };
 		2756BB06290FB80300E0304C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		27594D1C28A010CE00F4DDC3 /* GeneralMarketingPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralMarketingPageVC.swift; sourceTree = "<group>"; };
 		27594D2028A017D600F4DDC3 /* GeneralLiturgicalPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralLiturgicalPageVC.swift; sourceTree = "<group>"; };
@@ -605,6 +619,8 @@
 			children = (
 				2798B9E3298EEA2A00BB18BF /* CategoryReviews.swift */,
 				2798B9E4298EEA2A00BB18BF /* CategoryReviews.xib */,
+				274B65992997D525008EA6D5 /* TimeCell.swift */,
+				274B659A2997D525008EA6D5 /* TimeCell.xib */,
 			);
 			path = XIB;
 			sourceTree = "<group>";
@@ -912,6 +928,11 @@
 				27CB2050289B006100E63694 /* ReviewExperienceVC.xib */,
 				274B65952997BD45008EA6D5 /* AddFundTypes.swift */,
 				274B65962997BD45008EA6D5 /* AddFundTypes.xib */,
+				274B659D2998EA94008EA6D5 /* StewardingMyMoney.swift */,
+				274B659F2998EBF3008EA6D5 /* StewardingTimeAndTalent.swift */,
+				274B65A12999558B008EA6D5 /* StewardingResource.swift */,
+				274B65A329995DED008EA6D5 /* StewardingMyResourceVC.swift */,
+				273D2FD429996730006D9CB0 /* StewardingMyResourcesVC.swift */,
 			);
 			path = ViewOppouritunityVC;
 			sourceTree = "<group>";
@@ -1301,6 +1322,7 @@
 				2767A2992890A48600DF34D1 /* FilterVC.xib in Resources */,
 				27C9AE62288D3CB500FA584A /* Inter-Light-BETA.ttf in Resources */,
 				270562CD28BFC3AF00B0124E /* TermsAndConditions.xib in Resources */,
+				274B659C2997D525008EA6D5 /* TimeCell.xib in Resources */,
 				27C9AE56288D3CB500FA584A /* Inter-Medium.ttf in Resources */,
 				27B8C8FA28A1825D0011B039 /* ActivityCell.xib in Resources */,
 				27CB2081289D017D00E63694 /* VerificationVC.xib in Resources */,
@@ -1384,6 +1406,7 @@
 				27F4B14628B8A663003365A6 /* ProfileVC.swift in Sources */,
 				2765FB3528FC6CEC00473198 /* NotificationCell.swift in Sources */,
 				2764D6D228E4304E00AC7F73 /* LessonTopicDetails.swift in Sources */,
+				274B65A02998EBF3008EA6D5 /* StewardingTimeAndTalent.swift in Sources */,
 				27C9AE2B288D38E900FA584A /* ViewController.swift in Sources */,
 				27CBC5AD2927CDA5000AE9A6 /* CDAlertView+Extension.swift in Sources */,
 				2798B9E5298EEA2A00BB18BF /* CategoryReviews.swift in Sources */,
@@ -1393,9 +1416,11 @@
 				27CBC5A82927CDA5000AE9A6 /* AlertController.swift in Sources */,
 				27F4B15028B8BAB4003365A6 /* SettingNib.swift in Sources */,
 				27CBC5AC2927CDA5000AE9A6 /* ImageHelper.swift in Sources */,
+				274B65A429995DED008EA6D5 /* StewardingMyResourceVC.swift in Sources */,
 				279D477B2996A5BB000A011E /* HobbiesItems.swift in Sources */,
 				2764D6CF28E2FA6600AC7F73 /* LessonDetailsCollectionCell.swift in Sources */,
 				27A737662891407200FD8AD9 /* TableViewHelper.swift in Sources */,
+				273D2FD529996730006D9CB0 /* StewardingMyResourcesVC.swift in Sources */,
 				27CB2075289C1CEF00E63694 /* AllResourceVC.swift in Sources */,
 				27CB2063289BBA1E00E63694 /* PastGoalsCell.swift in Sources */,
 				27985F3C29968F2F006C8FE9 /* FavouriteHobbiesVC.swift in Sources */,
@@ -1420,6 +1445,7 @@
 				27A737642891405200FD8AD9 /* CollectionViewHelper.swift in Sources */,
 				27CB2089289D48BD00E63694 /* CategoriesList.swift in Sources */,
 				2704244928A6ED08002EF7B5 /* SpecificFinancialModel.swift in Sources */,
+				274B659B2997D525008EA6D5 /* TimeCell.swift in Sources */,
 				27ECA33828E982EA003DCF53 /* HomeTarget.swift in Sources */,
 				2767A293289087DF00DF34D1 /* HeaderCollectionReusableView.swift in Sources */,
 				27C9AEA2288D971700FA584A /* VolunteerOpportunityVC.swift in Sources */,
@@ -1494,6 +1520,7 @@
 				2767A28328904A3800DF34D1 /* OtherFundsCollectionViewCell.swift in Sources */,
 				27CB205B289B0C6B00E63694 /* ResourceDetailsVC.swift in Sources */,
 				27876ABB28A4484B003A012A /* SpecificWebsiteVC.swift in Sources */,
+				274B659E2998EA94008EA6D5 /* StewardingMyMoney.swift in Sources */,
 				27B54D9628BA99940074A6A1 /* MenuTarget.swift in Sources */,
 				27CB2080289D017D00E63694 /* VerificationVC.swift in Sources */,
 				2704244128A6CA13002EF7B5 /* SpeificBusinessPlanVC.swift in Sources */,
@@ -1511,6 +1538,7 @@
 				27CB2067289BBEA600E63694 /* BenchmarksCell.swift in Sources */,
 				27CB208B289D4A9300E63694 /* HomeCategories.swift in Sources */,
 				270562D528C090D400B0124E /* DashboardPresenter.swift in Sources */,
+				274B65A22999558B008EA6D5 /* StewardingResource.swift in Sources */,
 				27B54D9328BA6E170074A6A1 /* AppData.swift in Sources */,
 				2704243D28A6C828002EF7B5 /* BusinessPlanCell.swift in Sources */,
 				27F7363928C4FD4100E804B5 /* resourceSubTopicCell.swift in Sources */,

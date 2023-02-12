@@ -1,20 +1,20 @@
 //
-//  HobbiesItems.swift
+//  StewardingResource.swift
 //  GoodLifeApplocation
 //
-//  Created by heba isaa on 10/02/2023.
+//  Created by heba isaa on 12/02/2023.
 //
 
 import Foundation
-struct HobbiesItem{
+struct StewardingResourceItem{
     
-    var AllHobbiesItem:[Hobbies]{
-        [talent,interest]
+    var AllHobbiesItem:[StewardingResource]{
+        [talent,time,interest]
     }
     
-    static let shared = HobbiesItem()
+    static let shared = StewardingResourceItem()
     
-     let talent:Hobbies = {
+     let talent:StewardingResource = {
         
         .talent([.init(title: "Sales"),
                  .init(title: "Investments"),
@@ -28,7 +28,7 @@ struct HobbiesItem{
         
     }()
     
-     let interest:Hobbies = {
+     let interest:StewardingResource = {
         
         .interest([.init(title: "Charity"),
                  .init(title: "Community"),
@@ -39,7 +39,15 @@ struct HobbiesItem{
                 ])
         
     }()
+    
+    let time:StewardingResource = {
+        
+        .Time([.init(title: "Per week"),
+                   .init(title: "Per month")
+               
+
+                ])
+        
+    }()
    
 }
-
-

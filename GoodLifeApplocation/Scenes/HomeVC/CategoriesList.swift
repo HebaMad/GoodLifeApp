@@ -98,3 +98,40 @@ enum Hobbies{
     
     
 }
+
+
+enum StewardingResource{
+    case talent([listData])
+    case interest([listData])
+    case Time([listData])
+    
+    
+    var items: [listData] {
+        
+        switch self {
+            
+        case .talent(let items),.interest(let items),.Time(let items):
+               
+            return items
+     
+        }
+        
+    }
+    var count: Int {
+        return items.count
+    }
+    
+    var title: String {
+        switch self {
+        case .talent:
+            return "Talents"
+        case .interest:
+            return "Interests"
+        case .Time:
+            return "Time"
+
+        }
+    }
+    
+    
+}

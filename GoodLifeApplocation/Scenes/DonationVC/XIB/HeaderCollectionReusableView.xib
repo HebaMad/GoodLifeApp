@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,21 +17,21 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="titleCollectionview" id="U6b-Vx-4bR" customClass="HeaderCollectionReusableView" customModule="GoodLifeApplocation" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="359" height="64"/>
+            <rect key="frame" x="0.0" y="0.0" width="359" height="80"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u56-iz-ZVL">
-                    <rect key="frame" x="12" y="4" width="335" height="56"/>
+                <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u56-iz-ZVL">
+                    <rect key="frame" x="12" y="4" width="335" height="72"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEST" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLb-JW-eI1">
-                            <rect key="frame" x="0.0" y="0.0" width="235" height="56"/>
+                            <rect key="frame" x="0.0" y="8" width="205" height="56"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="19"/>
                             <color key="textColor" name="Color"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rlJ-6z-dxI">
-                            <rect key="frame" x="235" y="0.0" width="100" height="56"/>
+                            <rect key="frame" x="205" y="8" width="100" height="56"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="100" id="lB1-57-fEQ"/>
                             </constraints>
@@ -40,7 +41,29 @@
                                 <color key="baseForegroundColor" name="BgColor"/>
                             </buttonConfiguration>
                         </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2JF-8Q-bpd">
+                            <rect key="frame" x="305" y="8" width="30" height="56"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dts-hT-eLx">
+                                    <rect key="frame" x="2.5" y="16" width="25" height="24"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="25" id="82c-Wi-I0B"/>
+                                        <constraint firstAttribute="width" secondItem="Dts-hT-eLx" secondAttribute="height" multiplier="1:1" id="W2Q-Xx-QUu"/>
+                                    </constraints>
+                                    <color key="tintColor" name="backgroundColor"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" backgroundImage="pencil.circle.fill" catalog="system"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="6yd-vn-aD9"/>
+                                <constraint firstItem="Dts-hT-eLx" firstAttribute="centerY" secondItem="2JF-8Q-bpd" secondAttribute="centerY" id="V0c-Wd-fa4"/>
+                                <constraint firstItem="Dts-hT-eLx" firstAttribute="centerX" secondItem="2JF-8Q-bpd" secondAttribute="centerX" id="uI7-77-cNS"/>
+                            </constraints>
+                        </view>
                     </subviews>
+                    <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="0.0" bottom="8" trailing="0.0"/>
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
@@ -51,18 +74,23 @@
                 <constraint firstAttribute="trailing" secondItem="u56-iz-ZVL" secondAttribute="trailing" constant="12" id="uKC-4K-qRc"/>
             </constraints>
             <connections>
+                <outlet property="editBtn" destination="Dts-hT-eLx" id="nxQ-j6-InB"/>
                 <outlet property="headerTitleLabel" destination="aLb-JW-eI1" id="1bs-ke-pr9"/>
                 <outlet property="viewAllButton" destination="rlJ-6z-dxI" id="hRS-6J-xB7"/>
             </connections>
-            <point key="canvasLocation" x="165.94202898550725" y="127.90178571428571"/>
+            <point key="canvasLocation" x="165.94202898550725" y="133.25892857142856"/>
         </collectionReusableView>
     </objects>
     <resources>
+        <image name="pencil.circle.fill" catalog="system" width="128" height="123"/>
         <namedColor name="BgColor">
             <color red="0.59200000762939453" green="0.27799999713897705" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Color">
             <color red="0.22699999809265137" green="0.10199999809265137" blue="0.39599999785423279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="backgroundColor">
+            <color red="0.63099998235702515" green="0.34900000691413879" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
