@@ -17,7 +17,7 @@ protocol MenuNetworkable:Networkable  {
     func getWorthyCauses(completion: @escaping (Result<BaseResponse<WorthyCauses>, Error>)-> ())
     func getSubWorthyCauses(worthycauseId:Int,completion: @escaping (Result<BaseResponse<SubWorthyCauses>, Error>)-> ())
     func makeDonation(worthycauseId:Int,amount:String,completion: @escaping (Result<BaseResponse<SubWorthyCauses>, Error>)-> ())
-    func  AddFundType(name:String,main_category_id:String,sub_category_id:String,latitude:String,longitude:String,city:String,default_need:String,completion: @escaping (Result<BaseResponse<FundType>, Error>)-> ())
+
 
 }
 
@@ -51,9 +51,7 @@ class MenuManager:MenuNetworkable{
     func makeDonation(worthycauseId: Int, amount: String, completion: @escaping (Result<BaseResponse<SubWorthyCauses>, Error>) -> ()) {
         request(target: .makeDonation(worthycauseId: worthycauseId, amount: amount), completion: completion)
     }
-    func AddFundType(name: String, main_category_id: String, sub_category_id: String, latitude: String, longitude: String, city: String, default_need: String, completion: @escaping (Result<BaseResponse<FundType>, Error>) -> ()) {
-        request(target: .AddFundType(name: name, main_category_id: main_category_id, sub_category_id: sub_category_id, latitude: latitude, longitude: longitude, city: city, default_need: default_need), completion: completion)
-    }
+
     
     
 }

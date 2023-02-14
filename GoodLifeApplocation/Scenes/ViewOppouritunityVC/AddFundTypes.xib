@@ -20,6 +20,18 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddFundTypes" customModule="GoodLifeApplocation" customModuleProvider="target">
             <connections>
+                <outlet property="AddImg" destination="wTN-sb-O3A" id="3Yv-O4-cnc"/>
+                <outlet property="addCategoryBtn" destination="eCY-P2-csB" id="HWo-Vt-fJu"/>
+                <outlet property="backBtn" destination="KAY-Dg-K9U" id="oJM-cY-9ZM"/>
+                <outlet property="categoryImage" destination="GJG-Pz-ZRU" id="sQy-ZH-Idi"/>
+                <outlet property="cityTxt" destination="gke-Vl-wBw" id="Yd5-2P-5dK"/>
+                <outlet property="currentLocationBtn" destination="JYX-0w-llo" id="oPM-Hv-sQK"/>
+                <outlet property="defaultPointSwitch" destination="kd2-46-nce" id="C9d-oD-MdX"/>
+                <outlet property="latitudetxt" destination="exa-wF-caa" id="bRK-oL-F0Y"/>
+                <outlet property="longitudeTxt" destination="RYZ-ZF-H9X" id="Qzp-p5-A7L"/>
+                <outlet property="mainCategoryTxt" destination="0jL-tp-Qa5" id="IYz-LP-ugp"/>
+                <outlet property="pointName" destination="K48-hm-tex" id="oFf-B7-Sdq"/>
+                <outlet property="subCategoryTxt" destination="bzb-dl-Ikn" id="jhu-B1-l1o"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -79,7 +91,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kzn-Pq-o4i">
                                                     <rect key="frame" x="309" y="0.0" width="60" height="50"/>
                                                     <subviews>
-                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kd2-46-nce">
+                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kd2-46-nce">
                                                             <rect key="frame" x="5.6666666666666856" y="9.6666666666666572" width="51" height="31"/>
                                                         </switch>
                                                     </subviews>
@@ -122,7 +134,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mOh-hO-TgL">
                                                     <rect key="frame" x="12" y="8" width="345" height="90"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GJG-Pz-ZRU" customClass="UIImageViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GJG-Pz-ZRU" customClass="UIImageViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="5" width="80" height="80"/>
                                                             <color key="backgroundColor" name="bg3"/>
                                                             <constraints>
@@ -187,37 +199,18 @@
                                                     <rect key="frame" x="12" y="194" width="345" height="80"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="p0L-tJ-Z9l">
-                                                            <rect key="frame" x="0.0" y="0.0" width="166.66666666666666" height="80"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="345" height="80"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZKw-qB-kPO">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="166.66666666666666" height="20"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="345" height="20"/>
                                                                     <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="14"/>
                                                                     <color key="textColor" name="button"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E.g  Manhattan" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gke-Vl-wBw">
-                                                                    <rect key="frame" x="0.0" y="30" width="166.66666666666666" height="50"/>
+                                                                    <rect key="frame" x="0.0" y="30" width="345" height="50"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="50" id="YuN-Bp-oSg"/>
-                                                                    </constraints>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                    <textInputTraits key="textInputTraits"/>
-                                                                </textField>
-                                                            </subviews>
-                                                        </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jrJ-2c-lby">
-                                                            <rect key="frame" x="178.66666666666663" y="0.0" width="166.33333333333337" height="80"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="State" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CgH-xM-bhP">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="166.33333333333334" height="20"/>
-                                                                    <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="14"/>
-                                                                    <color key="textColor" name="button"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E.g  NewYork" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ark-oq-YoJ">
-                                                                    <rect key="frame" x="0.0" y="30" width="166.33333333333334" height="50"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="50" id="Lix-8M-adx"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <textInputTraits key="textInputTraits"/>
@@ -289,13 +282,13 @@
                                                                     <color key="textColor" name="button"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E.g  Manhattan" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="exa-wF-caa">
+                                                                <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Eg 31.3" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="exa-wF-caa">
                                                                     <rect key="frame" x="0.0" y="30" width="166.66666666666666" height="50"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="50" id="TTk-DM-0vv"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                    <textInputTraits key="textInputTraits"/>
+                                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                                 </textField>
                                                             </subviews>
                                                         </stackView>
@@ -308,13 +301,13 @@
                                                                     <color key="textColor" name="button"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E.g 31.3" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RYZ-ZF-H9X">
+                                                                <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Eg 35.3" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RYZ-ZF-H9X">
                                                                     <rect key="frame" x="0.0" y="30" width="166.33333333333334" height="50"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="50" id="SLe-ch-AoU"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                    <textInputTraits key="textInputTraits"/>
+                                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                                 </textField>
                                                             </subviews>
                                                         </stackView>
@@ -408,7 +401,7 @@
                 <constraint firstItem="ipS-mc-btl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="vfx-Tt-enF"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ipS-mc-btl" secondAttribute="bottom" id="zhN-6N-hg2"/>
             </constraints>
-            <point key="canvasLocation" x="-31.297709923664122" y="-74.647887323943664"/>
+            <point key="canvasLocation" x="289" y="-79"/>
         </view>
     </objects>
     <designables>
@@ -417,6 +410,9 @@
         </designable>
         <designable name="bzb-dl-Ikn">
             <size key="intrinsicContentSize" width="53" height="34"/>
+        </designable>
+        <designable name="eCY-P2-csB">
+            <size key="intrinsicContentSize" width="141" height="34.333333333333336"/>
         </designable>
     </designables>
     <resources>

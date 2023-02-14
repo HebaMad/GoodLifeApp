@@ -102,7 +102,7 @@ extension OpportunityViewVC{
              let vc = AddFundTypes()
              navigationController?.pushViewController(vc, animated: true)
          case rewardingResourceView.ViewBtn:
-             let vc = StewardingMyResourceVC.instantiate()
+             let vc = StewardingMyResourcesVC.instantiate()
              navigationController?.pushViewController(vc, animated: true)
          case logoutView.ViewBtn:
              print("")

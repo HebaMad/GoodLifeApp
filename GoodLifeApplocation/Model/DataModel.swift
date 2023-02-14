@@ -32,8 +32,8 @@ struct mainType:Codable{
     let latitude:String?
     let longitude:String?
     let city:String?
-    let main_category_id:Int?
-    let sub_category_id:Int?
+    let main_category_id:String?
+    let sub_category_id:String?
     let logo:String?
     let name:String?
     
@@ -138,7 +138,7 @@ struct SpecificOppourtinityDetails: Codable {
 }
 
 
-struct MainCategories: Codable {
+struct MainCategories: Decodable {
     let id:Int?
     let type:String?
     let status:String?
@@ -436,20 +436,3 @@ struct notificationsDetails:Codable{
         
 }
 
-
-struct FundType:Decodable{
-    
-    let id:Int?
-    let main_category_id:Int?
-    let sub_category_id:Int?
-    let latitude:Int?
-    let longitude:Int?
-    let city:String?
-    let name:String?
-    let logo:String?
-    let default_need:Int?
-
-
-
-    
-}
