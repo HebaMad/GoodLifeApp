@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             _delegate.window = window
         }
         saveLogin()
-//        setRootVC(vc: StewardingMyResourcesVC.instantiate())
+//        setRootVC(vc: AvailableSupportVC())
         
     }
     

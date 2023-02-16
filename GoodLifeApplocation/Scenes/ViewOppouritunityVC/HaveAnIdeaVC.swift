@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import MapKit
 
 class HaveAnIdeaVC: UIViewController ,UITextFieldDelegate{
     
     //MARK: - Outlet
-
+    
+    @IBOutlet weak var locationTxt: UITextField!
     @IBOutlet weak var coverImage: UIImageViewDesignable!
     @IBOutlet weak var titleTxt: UILabel!
     @IBOutlet weak var Description: UILabel!
@@ -22,15 +24,20 @@ class HaveAnIdeaVC: UIViewController ,UITextFieldDelegate{
     @IBOutlet weak var nextBtn: UIButtonDesignable!
     @IBOutlet weak var defaultLocation: UIButtonDesignable!
     @IBOutlet weak var categoryTxt: UITextFieldDataPicker!
-    //MARK: - Properties
     
+    //MARK: - Properties
+    var latitude=0.0
+    var longitude=0.0
     var presenter = MenuPresenter()
+    var fundTypeID=0
+    var fundTypeData:[mainType]=[]
     
     //MARK: - Life cycle
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        presenter.getFundType()
+        presenter.delegate=self
         monthlyRevenuTxt.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         setupDataPicker()
         setupTimePicker()
@@ -45,20 +52,20 @@ class HaveAnIdeaVC: UIViewController ,UITextFieldDelegate{
     }
     
     //MARK: - setupTimePicker
-
+    
     fileprivate func setupTimePicker() {
         weeklyTimeSelection.setFormat(format: "HH:mm a")
         weeklyTimeSelection.setDatePickerMode(mode: .time)
     }
     
-   @objc func textFieldDidChange(textField: UITextField){
-
-      guard let text = textField.text else { return }
-      
-   
-      if !text.hasPrefix("$") {
-        textField.text = "$" + " " + text
-      }
+    @objc func textFieldDidChange(textField: UITextField){
+        
+        guard let text = textField.text else { return }
+        
+        
+        if !text.hasPrefix("$") {
+            textField.text = "$" + " " + text
+        }
     }
 }
 //MARK: - Binding
@@ -69,27 +76,27 @@ private extension HaveAnIdeaVC{
         backBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
         nextBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
         defaultLocation.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
-
+        
     }
 }
 //MARK: - private Handler
 private extension HaveAnIdeaVC{
-
+    
     @objc func buttonWasTapped(_ sender:UIButton){
         switch sender{
         case backBtn:
             navigationController?.popViewController(animated: true)
-
+            
         case nextBtn:
             createIdea()
             
         case defaultLocation:
-            print("")
+            getCurrentLocation()
         default:break
             
         }
-    
-  }
+        
+    }
 }
 //MARK: - Create Idea request
 
@@ -99,25 +106,24 @@ extension HaveAnIdeaVC{
     func createIdea(){
         if  checkAllField() {
             
-       
-        do{
+            
+            do{
                 let title = try titleProjectText.validatedText(validationType: .requiredField(field: "Title required"))
-            if descriptionText.text.isEmpty != true {
-                let time = try weeklyTimeSelection.validatedText(validationType: .requiredField(field: "Time commitment required"))
-                let revenu = try monthlyRevenuTxt.validatedText(validationType: .requiredField(field: "Monthly revenu required"))
-                presenter.createIdea(title: title, details: descriptionText.text, time_commitment: time, monthly_revenue: revenu)
-                presenter.delegate=self
+                if descriptionText.text.isEmpty != true {
+                    let time = try weeklyTimeSelection.validatedText(validationType: .requiredField(field: "Time commitment required"))
+                    let revenu = try monthlyRevenuTxt.validatedText(validationType: .requiredField(field: "Monthly revenu required"))
+                    let loc = try locationTxt.validatedText(validationType: .requiredField(field: "location required"))
+                    presenter.createIdea(title: title, details: descriptionText.text, time_commitment: time, monthly_revenue: revenu,fund_type_id: "\(self.fundTypeID)",location:loc)
+                    presenter.delegate=self
+                    
+                }else{
+                    Alert.showErrorAlert(message: "Description of idea required")
+                    
+                }
                 
-            }else{
-                Alert.showErrorAlert(message: "Description of idea required")
-//                self.showAlert(title: "Warning", message: "Description of idea required",hideCancelBtn: true)
-
+            }catch{
+                Alert.showErrorAlert(message: (error as! ValidationError).message)
             }
-     
-        }catch{
-            Alert.showErrorAlert(message: (error as! ValidationError).message)
-//            self.showAlert(title: "Warning", message: (error as! ValidationError).message,hideCancelBtn: true)
-        }
         }
     }
 }
@@ -125,11 +131,15 @@ extension HaveAnIdeaVC{
 //MARK: - Confirm to Menu Delegate
 
 extension HaveAnIdeaVC:MenuDelegate{
+    func getFundTypeData(data: FundType) {
+        fundTypeData=data.fund_types ?? []
+    }
+    
     func showAlerts(title: String, message: String) {
-//        self.showAlert(title: title, message: message,hideCancelBtn: true)
+        //        self.showAlert(title: title, message: message,hideCancelBtn: true)
         Alert.showSuccessAlert(message:message)
         clearData()
-
+        
     }
     
     func getFunderData(data: WorthyCauses) {
@@ -143,10 +153,14 @@ extension HaveAnIdeaVC:MenuDelegate{
 extension HaveAnIdeaVC{
     
     func clearData() {
+        
         titleProjectText.text = ""
         monthlyRevenuTxt.text = ""
         weeklyTimeSelection.text = ""
         descriptionText.text = ""
+        locationTxt.text = ""
+        categoryTxt.text = ""
+
     }
     
     func checkAllField() -> Bool{
@@ -156,11 +170,25 @@ extension HaveAnIdeaVC{
             
         }else{
             Alert.showErrorAlert(message:"Please enter the required data ")
-//            self.showAlert(title: "Warning", message: "Please enter the required data ",hideCancelBtn: true)
+            //            self.showAlert(title: "Warning", message: "Please enter the required data ",hideCancelBtn: true)
             return false
             
         }
         
+    }
+    
+    func getCurrentLocation(){
+        LocationManager.shared.getLocation { [self] location, error in
+            let center = CLLocationCoordinate2DMake((location?.coordinate.latitude) ?? latitude , (location?.coordinate.longitude) ?? longitude)
+            latitude=location?.coordinate.latitude ?? 0.0
+            longitude=location?.coordinate.longitude ?? 0.0
+            
+            LocationManager.shared.getAddressFromLatLon(pdblLatitude: "\(self.latitude)", withLongitude: "\(self.longitude)") { status, mapaddress, mapcountry in
+                
+                self.locationTxt.text=mapaddress
+                
+            }
+        }
     }
 }
 
@@ -171,12 +199,12 @@ extension HaveAnIdeaVC:UITextFieldDataPickerDelegate,UITextFieldDataPickerDataSo
     
     
     func textFieldDataPicker(_ textField: UITextFieldDataPicker, numberOfRowsInComponent component: Int) -> Int {
-        2
+        return fundTypeData.count
     }
     
     func textFieldDataPicker(_ textField: UITextFieldDataPicker, titleForRow row: Int, forComponent component: Int) -> String? {
-        print("\(title ?? "")")
-        return ""
+        
+        return fundTypeData[row].name
     }
     
     func numberOfComponents(in textField: UITextFieldDataPicker) -> Int {
@@ -184,9 +212,9 @@ extension HaveAnIdeaVC:UITextFieldDataPickerDelegate,UITextFieldDataPickerDataSo
     }
     
     func textFieldDataPicker(_ textField: UITextFieldDataPicker, didSelectRow row: Int, inComponent component: Int) {
-        
-//        CategoryChoice.setTextFieldTitle(title: categories[row].title ?? "")
-//        self.itemID=categories[row].id ?? 0
+        self.fundTypeID=fundTypeData[row].id ?? 0
+        categoryTxt.setTextFieldTitle(title: fundTypeData[row].name ?? "")
+     
     }
     
     

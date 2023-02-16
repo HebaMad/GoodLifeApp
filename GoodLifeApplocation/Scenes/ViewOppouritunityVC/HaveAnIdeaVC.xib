@@ -23,6 +23,7 @@
                 <outlet property="coverImage" destination="lNS-eJ-Vrf" id="dvc-At-tHB"/>
                 <outlet property="defaultLocation" destination="tHo-q8-ePB" id="j7y-Zg-aQS"/>
                 <outlet property="descriptionText" destination="HdB-3z-HJ7" id="C34-pp-APl"/>
+                <outlet property="locationTxt" destination="njE-x2-xRe" id="p8H-oS-swr"/>
                 <outlet property="monthlyRevenuTxt" destination="uuq-ax-vAY" id="cJG-I9-P9U"/>
                 <outlet property="nextBtn" destination="m7h-c6-h1V" id="nwD-0R-T83"/>
                 <outlet property="titleProjectText" destination="f0h-cm-vBu" id="rJl-hm-RJy"/>
@@ -269,7 +270,7 @@ ministry idea??</string>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QSX-cg-YkQ">
                                                             <rect key="frame" x="20" y="597.5" width="374" height="91"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JU7-FK-v2M">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JU7-FK-v2M">
                                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="41"/>
                                                                     <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="14"/>
                                                                     <color key="textColor" name="button"/>
@@ -421,7 +422,7 @@ ministry idea??</string>
             <size key="intrinsicContentSize" width="12.5" height="22"/>
         </designable>
         <designable name="rTn-aA-lXH">
-            <size key="intrinsicContentSize" width="53" height="34"/>
+            <size key="intrinsicContentSize" width="32" height="34"/>
         </designable>
         <designable name="tHo-q8-ePB">
             <size key="intrinsicContentSize" width="107" height="24"/>

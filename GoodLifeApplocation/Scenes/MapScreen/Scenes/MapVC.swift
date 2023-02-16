@@ -481,7 +481,7 @@ extension MapVC:MKMapViewDelegate{
         let sheetController = SheetViewController(
             controller: controller,
             //                sizes: [ .intrinsic , .percent(0.80), .fixed(600), .intrinsic])
-            sizes: [ .marginFromTop(500), .percent(0.8), .intrinsic])
+            sizes: [ .marginFromTop(480), .percent(0.75), .intrinsic])
         controller.onFilterDissmissed = self
         
         self.present(sheetController, animated: false, completion: nil)

@@ -159,7 +159,7 @@ extension choosingMinistryNeedsVC:UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: (self.view.frame.width - 20)/2.5, height: 385)
+        return CGSize(width: (self.view.frame.width - 20)/2.5, height: 240)
         
     }
 }

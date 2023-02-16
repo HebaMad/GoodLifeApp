@@ -11,12 +11,12 @@ import Moya
 enum MenuApiTarget:TargetType{
     
     case VolunteerOppourtinity(title:String,location:String,date:String,time:String,details:String)
-    case createIdea(title:String,details:String,time_commitment:String,monthly_revenue:String)
+    case createIdea(title:String,details:String,time_commitment:String,monthly_revenue:String,fund_type_id:String,location:String)
     case createFeedback(opportunity_id:String,review:String,rate:Int,img:Data)
     case getWorthyCauses
     case getSubWorthyCauses(worthycauseId:Int)
     case makeDonation(worthycauseId:Int,amount:String)
-
+    case FundType
     
     
     var baseURL: URL {
@@ -38,6 +38,7 @@ enum MenuApiTarget:TargetType{
             
         case .makeDonation:return "makeDonation"
             
+        case .FundType:return "getFundTypes"
             
         }
     }
@@ -47,7 +48,7 @@ enum MenuApiTarget:TargetType{
         case .VolunteerOppourtinity,.createIdea,.createFeedback,.makeDonation:
             return .post
             
-        case .getWorthyCauses,.getSubWorthyCauses:
+        case .getWorthyCauses,.getSubWorthyCauses,.FundType:
             return .get
        
         }
@@ -71,7 +72,7 @@ enum MenuApiTarget:TargetType{
 
                          return .uploadMultipart(multipartData)
             
-        case .getWorthyCauses:
+        case .getWorthyCauses,.FundType:
             return .requestPlain
             
         case .getSubWorthyCauses:
@@ -81,7 +82,7 @@ enum MenuApiTarget:TargetType{
     }
     var headers: [String : String]?{
         switch self{
-        case .VolunteerOppourtinity,.createIdea,.createFeedback,.makeDonation:
+        case .VolunteerOppourtinity,.createIdea,.createFeedback,.makeDonation,.FundType:
             
             do {
                 let token = try KeychainWrapper.get(key: AppData.mobile) ?? ""
@@ -102,8 +103,8 @@ enum MenuApiTarget:TargetType{
         case .VolunteerOppourtinity(let title,let location,let date,let time,let details):
             return ["title":title,"location":location,"date":date,"time":time,"details":details]
         
-        case .createIdea(let title,let details,let time_commitment,let monthly_revenue):
-            return ["title":title,"details":details,"time_commitment":time_commitment,"monthly_revenue":monthly_revenue]
+        case .createIdea(let title,let details,let time_commitment,let monthly_revenue,let fund_type_id,let location):
+            return ["title":title,"details":details,"time_commitment":time_commitment,"monthly_revenue":monthly_revenue,"fund_type_id":fund_type_id,"location":location]
         case .getSubWorthyCauses(let worthycauseId):
             return ["worthy_cause_id":worthycauseId]
             

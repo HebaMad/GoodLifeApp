@@ -2005,8 +2005,10 @@ Night</string>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="Mec-dN-zXO" firstAttribute="centerX" secondItem="EUG-Pr-FBC" secondAttribute="centerX" id="APq-1F-dmt"/>
                                     <constraint firstItem="Mec-dN-zXO" firstAttribute="centerX" secondItem="EUG-Pr-FBC" secondAttribute="centerX" id="Caq-Y1-zFp"/>
                                     <constraint firstAttribute="bottom" secondItem="8hT-1f-3hg" secondAttribute="bottom" id="SKm-Kw-eC0"/>
+                                    <constraint firstItem="Mec-dN-zXO" firstAttribute="centerY" secondItem="EUG-Pr-FBC" secondAttribute="centerY" id="W00-xZ-CYE"/>
                                     <constraint firstItem="Mec-dN-zXO" firstAttribute="top" secondItem="EUG-Pr-FBC" secondAttribute="top" constant="8" id="XDi-JN-A6N"/>
                                     <constraint firstItem="8hT-1f-3hg" firstAttribute="top" secondItem="EUG-Pr-FBC" secondAttribute="top" id="ZEv-Kz-ulO"/>
                                     <constraint firstItem="Mec-dN-zXO" firstAttribute="centerX" secondItem="EUG-Pr-FBC" secondAttribute="centerX" id="r72-Kk-WUZ"/>
@@ -2062,7 +2064,7 @@ Night</string>
                                                         <color key="textColor" red="0.27058823529411763" green="0.27058823529411763" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$2450" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ir0-LV-yc4">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1000 to $2000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wyG-dF-IKz">
                                                         <rect key="frame" x="0.0" y="40" width="390" height="40"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                         <color key="textColor" name="button"/>

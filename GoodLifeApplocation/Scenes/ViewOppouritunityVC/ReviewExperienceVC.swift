@@ -134,7 +134,9 @@ private extension ReviewExperienceVC{
 //MARK: - Confirm to Menu Delegate
 
 
-   extension ReviewExperienceVC:MenuDelegate{
+extension ReviewExperienceVC:MenuDelegate{
+    func getFundTypeData(data: FundType) {}
+    
     
     func showAlerts(title: String, message: String) {
 //        self.showAlert(title: title, message: message,hideCancelBtn: true)

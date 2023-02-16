@@ -41,6 +41,10 @@
 		2710A29A289AF485009BCE60 /* PastVentures.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2710A298289AF485009BCE60 /* PastVentures.xib */; };
 		2734CD8528913E3A00E6964F /* GoodLifeApplocation.xcworkspace in Resources */ = {isa = PBXBuildFile; fileRef = 27C9AE68288D427600FA584A /* GoodLifeApplocation.xcworkspace */; };
 		273D2FD529996730006D9CB0 /* StewardingMyResourcesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273D2FD429996730006D9CB0 /* StewardingMyResourcesVC.swift */; };
+		273D2FD8299BD42B006D9CB0 /* AvailableSupportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273D2FD6299BD42B006D9CB0 /* AvailableSupportVC.swift */; };
+		273D2FD9299BD42B006D9CB0 /* AvailableSupportVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 273D2FD7299BD42B006D9CB0 /* AvailableSupportVC.xib */; };
+		273D2FDC299BE516006D9CB0 /* TimeScreenEditing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273D2FDA299BE516006D9CB0 /* TimeScreenEditing.swift */; };
+		273D2FDD299BE516006D9CB0 /* TimeScreenEditing.xib in Resources */ = {isa = PBXBuildFile; fileRef = 273D2FDB299BE516006D9CB0 /* TimeScreenEditing.xib */; };
 		273D3A9E28B0CED000860702 /* choosingMinistryNeedsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273D3A9C28B0CED000860702 /* choosingMinistryNeedsVC.swift */; };
 		273D3A9F28B0CED000860702 /* choosingMinistryNeedsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 273D3A9D28B0CED000860702 /* choosingMinistryNeedsVC.xib */; };
 		274B65972997BD45008EA6D5 /* AddFundTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274B65952997BD45008EA6D5 /* AddFundTypes.swift */; };
@@ -308,6 +312,10 @@
 		2710A297289AF485009BCE60 /* PastVentures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastVentures.swift; sourceTree = "<group>"; };
 		2710A298289AF485009BCE60 /* PastVentures.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PastVentures.xib; sourceTree = "<group>"; };
 		273D2FD429996730006D9CB0 /* StewardingMyResourcesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StewardingMyResourcesVC.swift; sourceTree = "<group>"; };
+		273D2FD6299BD42B006D9CB0 /* AvailableSupportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableSupportVC.swift; sourceTree = "<group>"; };
+		273D2FD7299BD42B006D9CB0 /* AvailableSupportVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AvailableSupportVC.xib; sourceTree = "<group>"; };
+		273D2FDA299BE516006D9CB0 /* TimeScreenEditing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeScreenEditing.swift; sourceTree = "<group>"; };
+		273D2FDB299BE516006D9CB0 /* TimeScreenEditing.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeScreenEditing.xib; sourceTree = "<group>"; };
 		273D3A9C28B0CED000860702 /* choosingMinistryNeedsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = choosingMinistryNeedsVC.swift; sourceTree = "<group>"; };
 		273D3A9D28B0CED000860702 /* choosingMinistryNeedsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = choosingMinistryNeedsVC.xib; sourceTree = "<group>"; };
 		274B65952997BD45008EA6D5 /* AddFundTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFundTypes.swift; sourceTree = "<group>"; };
@@ -933,6 +941,10 @@
 				274B65A12999558B008EA6D5 /* StewardingResource.swift */,
 				274B65A329995DED008EA6D5 /* StewardingMyResourceVC.swift */,
 				273D2FD429996730006D9CB0 /* StewardingMyResourcesVC.swift */,
+				273D2FD6299BD42B006D9CB0 /* AvailableSupportVC.swift */,
+				273D2FD7299BD42B006D9CB0 /* AvailableSupportVC.xib */,
+				273D2FDA299BE516006D9CB0 /* TimeScreenEditing.swift */,
+				273D2FDB299BE516006D9CB0 /* TimeScreenEditing.xib */,
 			);
 			path = ViewOppouritunityVC;
 			sourceTree = "<group>";
@@ -1232,6 +1244,7 @@
 				27C9AE59288D3CB500FA584A /* Inter-SemiBold.ttf in Resources */,
 				27CBC5702926C005000AE9A6 /* CreateOppourtinityVC.xib in Resources */,
 				27C9AE5C288D3CB500FA584A /* Inter-Regular.ttf in Resources */,
+				273D2FD9299BD42B006D9CB0 /* AvailableSupportVC.xib in Resources */,
 				27C9AE60288D3CB500FA584A /* Inter-UI-BlackItalic.ttf in Resources */,
 				27CBC5682926A2D0000AE9A6 /* CreateOppourtinitySecondVC.xib in Resources */,
 				27CB207B289CFC0400E63694 /* OnBoardingFrame1.xib in Resources */,
@@ -1274,6 +1287,7 @@
 				2710A29A289AF485009BCE60 /* PastVentures.xib in Resources */,
 				27C9AE33288D38EA00FA584A /* LaunchScreen.storyboard in Resources */,
 				2767A28428904A3800DF34D1 /* OtherFundsCollectionViewCell.xib in Resources */,
+				273D2FDD299BE516006D9CB0 /* TimeScreenEditing.xib in Resources */,
 				27B8C8EA28A1106C0011B039 /* SpecificFilterCell.xib in Resources */,
 				273D3A9F28B0CED000860702 /* choosingMinistryNeedsVC.xib in Resources */,
 				27B8C8EE28A14C320011B039 /* MapVC.xib in Resources */,
@@ -1434,6 +1448,7 @@
 				27B8C8E528A1067F0011B039 /* FilterCell.swift in Sources */,
 				27B8C8F028A167E00011B039 /* FilterList.swift in Sources */,
 				27B54D9D28BAC3060074A6A1 /* SignUserNetworkable.swift in Sources */,
+				273D2FD8299BD42B006D9CB0 /* AvailableSupportVC.swift in Sources */,
 				27F4B14228B7F504003365A6 /* ContactUsVC.swift in Sources */,
 				27B54D8F28BA6D8B0074A6A1 /* KeychainWrapper.swift in Sources */,
 				277CF36828BD5AD700F2874F /* MenuPresenter.swift in Sources */,
@@ -1490,6 +1505,7 @@
 				274B65972997BD45008EA6D5 /* AddFundTypes.swift in Sources */,
 				27ECA34128EB313F003DCF53 /* Reusable.swift in Sources */,
 				2704244628A6E014002EF7B5 /* BusinessPlanList.swift in Sources */,
+				273D2FDC299BE516006D9CB0 /* TimeScreenEditing.swift in Sources */,
 				27CB206A289BC15C00E63694 /* SegmentControl.swift in Sources */,
 				27CB2087289D467500E63694 /* DashboardVC.swift in Sources */,
 				27B54D8628BA638D0074A6A1 /* BaseResponse.swift in Sources */,

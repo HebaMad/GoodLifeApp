@@ -8,12 +8,13 @@
 import Foundation
 import UIKit
 protocol MenuDelegate{
+    
     func showAlerts(title:String,message:String)
     func getFunderData(data:WorthyCauses)
-     
-    
+    func getFundTypeData(data:FundType)
     
 }
+
 typealias menuDelegate = MenuDelegate & UIViewController
 typealias subWorthyCallback = ( _ status: Bool,_ data:SubWorthyCauses,_ message:String ) -> Void
 
@@ -41,8 +42,8 @@ class MenuPresenter:NSObject{
     }
     
     
-    func createIdea(title:String,details:String,time_commitment:String,monthly_revenue:String){
-        MenuManager.shared.createIdea(title: title, details: details, time_commitment: time_commitment, monthly_revenue:monthly_revenue ) { Response in
+    func createIdea(title:String,details:String,time_commitment:String,monthly_revenue:String,fund_type_id:String ,location:String ){
+        MenuManager.shared.createIdea(title: title, details: details, time_commitment: time_commitment, monthly_revenue:monthly_revenue,fund_type_id:fund_type_id ,location:location ) { Response in
             switch Response{
                 
             case let .success(response):
@@ -132,7 +133,24 @@ class MenuPresenter:NSObject{
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
             }
         }
-        
+    }
+    
+    func getFundType(){
+        MenuManager.shared.fundType { Response in
+            switch Response{
+                
+            case let .success(response):
+                if response.status == true{
+                    self.delegate?.getFundTypeData(data: response.data!)
+                }else{
+                    self.delegate?.showAlerts(title:"Failure", message: response.message)
+                }
+                
+            case .failure(_):
+                
+                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
+            }
+        }
     }
     
     

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -130,7 +131,7 @@
                             <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="16" bottom="0.0" trailing="16"/>
                         </stackView>
                         <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="I6P-xz-17Q">
-                            <rect key="frame" x="8" y="248" width="398" height="440"/>
+                            <rect key="frame" x="8" y="248" width="398" height="320"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Smart Recomendations" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2BI-9r-jEp">
                                     <rect key="frame" x="0.0" y="0.0" width="398" height="16"/>
@@ -142,7 +143,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="mb1-K3-iWh">
-                                    <rect key="frame" x="0.0" y="24" width="398" height="373"/>
+                                    <rect key="frame" x="0.0" y="24" width="398" height="253"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="4" minimumInteritemSpacing="4" id="Sak-IA-CNe">
                                         <size key="itemSize" width="128" height="128"/>
@@ -156,7 +157,7 @@
                                     </connections>
                                 </collectionView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ooa-4A-pJs">
-                                    <rect key="frame" x="0.0" y="405" width="398" height="35"/>
+                                    <rect key="frame" x="0.0" y="285" width="398" height="35"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="swy-yu-dej" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
                                             <rect key="frame" x="181.5" y="0.0" width="35" height="35"/>
@@ -201,7 +202,7 @@
                                 </view>
                             </subviews>
                             <constraints>
-                                <constraint firstAttribute="height" constant="440" id="HC4-8S-MPL"/>
+                                <constraint firstAttribute="height" constant="320" id="HC4-8S-MPL"/>
                             </constraints>
                         </stackView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZBp-9M-nYS">

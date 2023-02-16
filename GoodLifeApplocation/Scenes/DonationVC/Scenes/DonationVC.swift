@@ -101,6 +101,10 @@ class DonationVC: UIViewController {
 
 
 extension DonationVC:MenuDelegate{
+    func getFundTypeData(data: FundType) {
+        
+    }
+    
     func showAlerts(title: String, message: String) {
         //
     }

@@ -172,8 +172,9 @@ extension DonationFirstFrame: UICollectionViewDataSource,UICollectionViewDelegat
 
 
 extension DonationFirstFrame:MenuDelegate{
-  
-    
+    func getFundTypeData(data: FundType) {
+        }
+
     func showAlerts(title: String, message: String) {
         
     }

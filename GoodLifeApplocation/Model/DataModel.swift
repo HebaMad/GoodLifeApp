@@ -36,7 +36,11 @@ struct mainType:Codable{
     let sub_category_id:String?
     let logo:String?
     let name:String?
-    
+    let default_need:String?
+}
+
+struct FundType:Decodable{
+    let fund_types:[mainType]?
 }
 struct MainHomeCategories:Decodable{
     let categories:[MainCategories]?
