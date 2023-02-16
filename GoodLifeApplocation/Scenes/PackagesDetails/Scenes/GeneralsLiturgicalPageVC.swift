@@ -211,6 +211,8 @@ extension GeneralsLiturgicalPageVC:UICollectionViewDelegate, UICollectionViewDat
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.headerIdentifier, for: indexPath) as! HeaderCollectionReusableView
         header.setup(item[indexPath.section].title ?? "")
         header.viewAllButton.isHidden = true
+        header.editBtn.isHidden=true
+
         return header
     }
     
