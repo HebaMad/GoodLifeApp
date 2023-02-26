@@ -54,7 +54,7 @@ class HaveAnIdeaVC: UIViewController ,UITextFieldDelegate{
     //MARK: - setupTimePicker
     
     fileprivate func setupTimePicker() {
-        weeklyTimeSelection.setFormat(format: "HH:mm a")
+        weeklyTimeSelection.setFormat(format: "HH:mm")
         weeklyTimeSelection.setDatePickerMode(mode: .time)
     }
     
@@ -131,6 +131,8 @@ extension HaveAnIdeaVC{
 //MARK: - Confirm to Menu Delegate
 
 extension HaveAnIdeaVC:MenuDelegate{
+    func getMyResource(data: StewardingMyResource) {}
+    
     func getFundTypeData(data: FundType) {
         fundTypeData=data.fund_types ?? []
     }

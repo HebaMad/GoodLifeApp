@@ -39,7 +39,7 @@ class HomePresenter:NSObject{
                     
                     
                 }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message)
+                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
                 }
             case  .failure(_):
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
@@ -57,7 +57,7 @@ class HomePresenter:NSObject{
                     self.delegate?.getStandardCategoriesFiltering(categories: response.data! )
                     
                 }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message)
+                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
                 }
                 
             case  .failure(_):
@@ -76,7 +76,7 @@ class HomePresenter:NSObject{
                     self.delegate?.getsubCategoriesFiltering(categories: response.data! )
                     
                 }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message)
+                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
                 }
             case  .failure(_):
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
@@ -94,7 +94,7 @@ class HomePresenter:NSObject{
                     self.delegate?.getCategoriesFiltered(categories: response.data! )
                     
                 }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message)
+                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
                 }
             case  .failure(_):
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
@@ -111,7 +111,7 @@ class HomePresenter:NSObject{
                 }else if response.code == 401{
                     SceneDelegate.init().setRootVC(vc: SplashScreen())
                 }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message)
+                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
                 }
                 
             case  .failure(_):
@@ -132,7 +132,7 @@ class HomePresenter:NSObject{
                 }else if response.code == 401{
                     SceneDelegate.init().setRootVC(vc: SplashScreen())
                 }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message)
+                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
                 }
                 
             case  .failure(_):
@@ -153,7 +153,7 @@ class HomePresenter:NSObject{
                     self.delegate?.getOppourtinity(categories: response.data!)
                     
                 }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message)
+                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
                 }
             case  .failure(_):
                 
@@ -169,10 +169,10 @@ class HomePresenter:NSObject{
                 
             case let .success(response):
                 if response.status == true{
-                    self.delegate?.showAlerts(title:"Success", message: response.message)
+                    self.delegate?.showAlerts(title:"Success", message: response.message ?? "")
 
                 }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message)
+                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
                 }
                 
             case .failure(_):

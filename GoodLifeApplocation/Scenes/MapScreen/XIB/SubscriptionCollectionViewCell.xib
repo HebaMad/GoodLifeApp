@@ -147,38 +147,38 @@ Movie Night</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q6P-t9-8la" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="184" width="160" height="26"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kjd-jh-qvj">
+                                            <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="kjd-jh-qvj">
                                                 <rect key="frame" x="0.0" y="0.0" width="160" height="20"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qxF-As-Dj7">
-                                                        <rect key="frame" x="4" y="2" width="75.5" height="17"/>
+                                                        <rect key="frame" x="4" y="2" width="71.5" height="17"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="UYV-oI-Znw">
-                                                                <rect key="frame" x="20" y="-0.5" width="20" height="17"/>
+                                                                <rect key="frame" x="24" y="-0.5" width="12" height="17"/>
                                                                 <color key="tintColor" systemColor="systemYellowColor"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="20" id="Aje-BS-xUp"/>
+                                                                    <constraint firstAttribute="width" constant="12" id="Aje-BS-xUp"/>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.25" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAU-f9-vph">
-                                                                <rect key="frame" x="40" y="0.0" width="27.5" height="17"/>
+                                                                <rect key="frame" x="36" y="0.0" width="31.5" height="17"/>
                                                                 <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="10"/>
                                                                 <color key="textColor" systemColor="systemYellowColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
-                                                        <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="20" bottom="0.0" trailing="8"/>
+                                                        <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="24" bottom="0.0" trailing="4"/>
                                                     </stackView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WMA-6t-63U">
                                                         <rect key="frame" x="79.5" y="2" width="1" height="17"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <color key="backgroundColor" systemColor="systemGray3Color"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="1" id="Kds-JI-cot"/>
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   93% Match" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mI5-ri-enx">
-                                                        <rect key="frame" x="80.5" y="2" width="75.5" height="17"/>
+                                                        <rect key="frame" x="84.5" y="2" width="71.5" height="17"/>
                                                         <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="10"/>
                                                         <color key="textColor" name="ButtonColor"/>
                                                         <nil key="highlightedColor"/>
@@ -317,6 +317,9 @@ Movie Night</string>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

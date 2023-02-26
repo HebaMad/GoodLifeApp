@@ -135,6 +135,8 @@ private extension ReviewExperienceVC{
 
 
 extension ReviewExperienceVC:MenuDelegate{
+    func getMyResource(data: StewardingMyResource) {}
+    
     func getFundTypeData(data: FundType) {}
     
     

@@ -440,3 +440,23 @@ struct notificationsDetails:Codable{
         
 }
 
+
+struct StewardingMyResource:Decodable{
+    let money:Money?
+    let timeAndTalent:TimeAndTalent?
+}
+
+struct Money:Codable{
+    let revenue:String?
+    let investments:String?
+}
+struct TimeAndTalent:Codable {
+    let talents:[String]?
+    let interests:[String]?
+    let time:[Time]?
+
+}
+struct Time:Codable{
+    let title:String?
+    let value:String?
+}

@@ -24,21 +24,30 @@ class OpportunityViewVC: UIViewController {
     
     
     let presenter = ProfilePresenter()
-
+    let stewardingResourcePresenter = MenuPresenter()
     var userProfile:userProfile?
+    var stewardingResourceData:StewardingMyResource?
     //MARK: - Life cycle
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         bindButtons()
+     
+        
+    }
+    
+    func getPresenterRequest(){
         presenter.userProfile()
         presenter.delegate=self
+        
+        stewardingResourcePresenter.getStewardingMyResource()
+        stewardingResourcePresenter.delegate=self
     }
-  
+    
 }
 
-     //MARK: - Binding
+//MARK: - Binding
 
 extension OpportunityViewVC{
     
@@ -57,77 +66,77 @@ extension OpportunityViewVC{
 }
 
 
-    //MARK: - Private Handler
+//MARK: - Private Handler
 
- extension OpportunityViewVC{
-     @objc func buttonWasTapped( sender: UIButton){
-         
-         switch sender{
-             
-             case Profile.ViewBtn:
-             
-             let vc = ProfileVC.instantiate()
-             navigationController?.pushViewController(vc, animated: true)
-
-             case VolunteerOpportunityView.ViewBtn:
-             
-             let vc = VolunteerOpportunityVC()
-             navigationController?.pushViewController(vc, animated: true)
-             
-             case HaveIdeaView.ViewBtn:
+extension OpportunityViewVC{
+    @objc func buttonWasTapped( sender: UIButton){
         
-             let vc = HaveAnIdeaVC()
-             navigationController?.pushViewController(vc, animated: true)
-             
-             case experienceView.ViewBtn:
-             let vc = ReviewExperienceVC()
-             navigationController?.pushViewController(vc, animated: true)
-             
-             case DonationView.ViewBtn:
-             let vc = DonationVC()
-             navigationController?.pushViewController(vc, animated: true)
-             
-         case viewAllOppourtinity.ViewBtn:
-             
-             let vc = MapVC()
-             navigationController?.pushViewController(vc, animated: true)
-             
-         case createOppourtinity.ViewBtn:
-             print("")
-             
-//             let vc = CreateOppourtinityVC()
-//             navigationController?.pushViewController(vc, animated: true)
-             
-         case AddFundTypeView.ViewBtn:
-             let vc = AddFundTypes()
-             navigationController?.pushViewController(vc, animated: true)
-         case rewardingResourceView.ViewBtn:
-             let vc = StewardingMyResourcesVC.instantiate()
-             navigationController?.pushViewController(vc, animated: true)
-         case logoutView.ViewBtn:
-             print("")
-             
-             self.showAlertPopUp(title: "Notice", message: "Do you want to logout?", buttonTitle1: "Ok", buttonTitle2: "Cancel", buttonTitle1Style: .default, buttonTitle2Style: .cancel) {
-                 do{
-                     try KeychainWrapper.set(value:"" , key: self.userProfile?.mobile ?? "")
-                     AppData.mobile = self.userProfile?.mobile ?? ""
-                     self.presenter.logout()
-
-                   } catch let error {
-                     print(error)
-               }
-
-             } action2: {
-                 
-             }
-
-      
-
-         default:
-             print("")
-         }
-      
-     }
+        switch sender{
+            
+        case Profile.ViewBtn:
+            
+            let vc = ProfileVC.instantiate()
+            navigationController?.pushViewController(vc, animated: true)
+            
+        case VolunteerOpportunityView.ViewBtn:
+            
+            let vc = VolunteerOpportunityVC()
+            navigationController?.pushViewController(vc, animated: true)
+            
+        case HaveIdeaView.ViewBtn:
+            
+            let vc = HaveAnIdeaVC()
+            navigationController?.pushViewController(vc, animated: true)
+            
+        case experienceView.ViewBtn:
+            let vc = ReviewExperienceVC()
+            navigationController?.pushViewController(vc, animated: true)
+            
+        case DonationView.ViewBtn:
+            let vc = DonationVC()
+            navigationController?.pushViewController(vc, animated: true)
+            
+        case viewAllOppourtinity.ViewBtn:
+            
+            let vc = MapVC()
+            navigationController?.pushViewController(vc, animated: true)
+            
+        case createOppourtinity.ViewBtn:
+            print("")
+            
+            //             let vc = CreateOppourtinityVC()
+            //             navigationController?.pushViewController(vc, animated: true)
+            
+        case AddFundTypeView.ViewBtn:
+            let vc = AddFundTypes()
+            navigationController?.pushViewController(vc, animated: true)
+        case rewardingResourceView.ViewBtn:
+            let vc = StewardingMyResourcesVC.instantiate()
+            navigationController?.pushViewController(vc, animated: true)
+        case logoutView.ViewBtn:
+            print("")
+            
+            self.showAlertPopUp(title: "Notice", message: "Do you want to logout?", buttonTitle1: "Ok", buttonTitle2: "Cancel", buttonTitle1Style: .default, buttonTitle2Style: .cancel) {
+                do{
+                    try KeychainWrapper.set(value:"" , key: self.userProfile?.mobile ?? "")
+                    AppData.mobile = self.userProfile?.mobile ?? ""
+                    self.presenter.logout()
+                    
+                } catch let error {
+                    print(error)
+                }
+                
+            } action2: {
+                
+            }
+            
+            
+            
+        default:
+            print("")
+        }
+        
+    }
 }
 
 extension OpportunityViewVC:ProfileDelegate{
@@ -140,6 +149,18 @@ extension OpportunityViewVC:ProfileDelegate{
     }
     
     func getUrlForWebPages(data: termsAndConditions) {
+    }
+    
+    
+}
+
+extension OpportunityViewVC:MenuDelegate{
+    func getFunderData(data: WorthyCauses) {}
+    
+    func getFundTypeData(data: FundType) {}
+    
+    func getMyResource(data: StewardingMyResource) {
+        stewardingResourceData=data
     }
     
     

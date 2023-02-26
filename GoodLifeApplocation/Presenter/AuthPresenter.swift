@@ -27,12 +27,12 @@ class AuthPresenter:NSObject{
                 
             case let .success(response):
                 if response.status == true{
-                    self.delegate?.showAlerts(title:"Success", message: response.message)
-                    self.delegate?.checkStatus(status: true,msg: response.message, screen: "signup")
+                    self.delegate?.showAlerts(title:"Success", message: response.message ?? "")
+                    self.delegate?.checkStatus(status: true,msg: response.message ?? "", screen: "signup")
                     
                 }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message)
-                    self.delegate?.checkStatus(status: false,msg: response.message, screen: "signup")
+                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
+                    self.delegate?.checkStatus(status: false,msg: response.message ?? "", screen: "signup")
                 }
                 
                 
@@ -55,7 +55,7 @@ class AuthPresenter:NSObject{
                 if response.status == true{
                     
                 }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message)
+                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
                 }
                 
             case  .failure(_):
@@ -74,11 +74,11 @@ class AuthPresenter:NSObject{
                 
             case let .success(response):
                 if response.status == true{
-                    self.delegate?.checkStatus(status: true,msg: response.message, screen: "verification")
+                    self.delegate?.checkStatus(status: true,msg: response.message ?? "", screen: "verification")
                     self.delegate?.getLoginToken(data: response.data!)
                     
                 }else{
-                    self.delegate?.checkStatus(status: false,msg: response.message, screen: "verification")
+                    self.delegate?.checkStatus(status: false,msg: response.message ?? "", screen: "verification")
                 }
                 
             case  .failure(_):
@@ -101,7 +101,7 @@ class AuthPresenter:NSObject{
                     self.delegate?.getuserToken(data: response.data!)
                     
                 }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message)
+                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "" )
                 }
             case  .failure(_):
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
@@ -117,10 +117,10 @@ class AuthPresenter:NSObject{
                 
             case let .success(response):
                 if response.status == true{
-                    self.delegate?.checkStatus(status: true,msg: response.message, screen: "login")
+                    self.delegate?.checkStatus(status: true,msg: response.message ?? "", screen: "login")
                     
                 }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message)
+                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
                 }
             case  .failure(_):
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")

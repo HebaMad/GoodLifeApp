@@ -18,10 +18,13 @@ protocol MenuNetworkable:Networkable  {
     func getSubWorthyCauses(worthycauseId:Int,completion: @escaping (Result<BaseResponse<SubWorthyCauses>, Error>)-> ())
     func makeDonation(worthycauseId:Int,amount:String,completion: @escaping (Result<BaseResponse<SubWorthyCauses>, Error>)-> ())
     func fundType(completion: @escaping (Result<BaseResponse<FundType>, Error>)-> ())
+    func stewardingMyResourse(completion: @escaping (Result<BaseResponse<StewardingMyResource>, Error>)-> ())
 
 }
 
 class MenuManager:MenuNetworkable{
+ 
+    
 
    var provider: MoyaProvider<MenuApiTarget> = MoyaProvider<MenuApiTarget>(plugins: [NetworkLoggerPlugin()])
     
@@ -55,5 +58,7 @@ class MenuManager:MenuNetworkable{
         request(target: .FundType, completion: completion)
     }
     
-
+    func stewardingMyResourse(completion: @escaping (Result<BaseResponse<StewardingMyResource>, Error>) -> ()) {
+        request(target: .stewardingMyResourse, completion: completion)
+    }
 }

@@ -28,10 +28,10 @@ class ProfilePresenter:NSObject{
                 
             case let .success(response):
                 if response.status == true{
-                    self.delegate?.showAlerts(title:"Success", message: response.message)
+                    self.delegate?.showAlerts(title:"Success", message: response.message ?? "")
                     
                 }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message)
+                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
                 }
                 
             case  .failure(_):
@@ -49,7 +49,7 @@ class ProfilePresenter:NSObject{
                 if response.status == true{
                     self.delegate?.getUrlForWebPages(data: response.data!)
                 }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message)
+                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
                 }
                 
             case  .failure(_):
@@ -67,7 +67,7 @@ class ProfilePresenter:NSObject{
                 if response.status == true{
                     self.delegate?.getUrlForWebPages(data: response.data!)
                 }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message)
+                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
                 }
             case let .failure(_):
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
@@ -84,7 +84,7 @@ class ProfilePresenter:NSObject{
                     self.delegate?.showAlerts(title:"Success", message: "logout Sucessfully")
                     
                 }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message)
+                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
                 }
             case  .failure(_):
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
@@ -100,10 +100,10 @@ class ProfilePresenter:NSObject{
                 
             case let .success(response):
                 if response.status == true{
-                    self.delegate?.showAlerts(title:"Success", message: response.message)
+                    self.delegate?.showAlerts(title:"Success", message: response.message ?? "")
                     
                 }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message)
+                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
                 }
                 
             case  .failure(_):
@@ -125,7 +125,7 @@ class ProfilePresenter:NSObject{
                     self.delegate?.getUserData(data: response.data!)
                     
                 }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message)
+                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
                 }
             case  .failure(_):
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")

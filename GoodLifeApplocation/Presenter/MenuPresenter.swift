@@ -7,12 +7,13 @@
 
 import Foundation
 import UIKit
+
 protocol MenuDelegate{
     
     func showAlerts(title:String,message:String)
     func getFunderData(data:WorthyCauses)
     func getFundTypeData(data:FundType)
-    
+    func getMyResource(data:StewardingMyResource)
 }
 
 typealias menuDelegate = MenuDelegate & UIViewController
@@ -29,10 +30,10 @@ class MenuPresenter:NSObject{
                 
             case let .success(response):
                 if response.status == true{
-                    self.delegate?.showAlerts(title:"Success", message: response.message)
+                    self.delegate?.showAlerts(title:"Success", message: response.message ?? "")
                     
                 }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message)
+                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
                 }
                 
             case  .failure(_):
@@ -48,10 +49,10 @@ class MenuPresenter:NSObject{
                 
             case let .success(response):
                 if response.status == true{
-                    self.delegate?.showAlerts(title:"Success", message: response.message)
+                    self.delegate?.showAlerts(title:"Success", message: response.message ?? "")
                     
                 }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message)
+                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
                 }
                 
             case  .failure(_):
@@ -66,10 +67,10 @@ class MenuPresenter:NSObject{
                 
             case let .success(response):
                 if response.status == true{
-                    self.delegate?.showAlerts(title:"Success", message: response.message)
+                    self.delegate?.showAlerts(title:"Success", message: response.message ?? "")
                     
                 }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message)
+                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
                 }
                 
             case  .failure(_):
@@ -90,7 +91,7 @@ class MenuPresenter:NSObject{
                     self.delegate?.getFunderData(data: response.data!)
                     
                 }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message)
+                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
                 }
                 
             case .failure(_):
@@ -105,10 +106,10 @@ class MenuPresenter:NSObject{
                 
             case let .success(response):
                 if response.status == true{
-                    callback(response.status, response.data!, response.message)
+                    callback(response.status ?? false, response.data!, response.message ?? "")
                     
                 }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message)
+                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
                 }
             case .failure(_):
                 
@@ -125,7 +126,7 @@ class MenuPresenter:NSObject{
             case let .success(response):
                 if response.status == true{
                 }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message)
+                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
                 }
                 
             case .failure(_):
@@ -143,7 +144,7 @@ class MenuPresenter:NSObject{
                 if response.status == true{
                     self.delegate?.getFundTypeData(data: response.data!)
                 }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message)
+                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
                 }
                 
             case .failure(_):
@@ -151,6 +152,25 @@ class MenuPresenter:NSObject{
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
             }
         }
+    }
+    
+    func getStewardingMyResource(){
+        MenuManager.shared.stewardingMyResourse { Response in
+            switch Response{
+                
+            case let .success(response):
+                if response.status == true{
+                    self.delegate?.getMyResource(data: response.data!)
+                }else{
+                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
+                }
+                
+            case .failure(_):
+                
+                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
+            }
+        }
+        
     }
     
     

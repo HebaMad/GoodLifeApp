@@ -26,11 +26,23 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qll-97-SYf">
+                                <rect key="frame" x="98" y="2" width="15" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="g5o-LD-X2O"/>
+                                    <constraint firstAttribute="width" constant="15" id="xCf-Ej-IIg"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="xmark" catalog="system"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="gxi-2g-W8V" firstAttribute="centerX" secondItem="bet-bT-WDc" secondAttribute="centerX" id="4Jb-zM-H19"/>
                             <constraint firstItem="gxi-2g-W8V" firstAttribute="centerY" secondItem="bet-bT-WDc" secondAttribute="centerY" id="CwG-As-yLw"/>
+                            <constraint firstAttribute="trailing" secondItem="Qll-97-SYf" secondAttribute="trailing" constant="2" id="Wjn-yJ-ptc"/>
+                            <constraint firstItem="Qll-97-SYf" firstAttribute="top" secondItem="bet-bT-WDc" secondAttribute="top" constant="2" id="rp1-SE-Nkx"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -61,10 +73,14 @@
             </constraints>
             <size key="customSize" width="123" height="41"/>
             <connections>
+                <outlet property="deleteItemBtn" destination="Qll-97-SYf" id="tCb-eA-yWx"/>
                 <outlet property="hobbiesTitle" destination="gxi-2g-W8V" id="9FU-Bj-Clq"/>
                 <outlet property="hobbyView" destination="bet-bT-WDc" id="Ko7-gf-6Yt"/>
             </connections>
             <point key="canvasLocation" x="194.6564885496183" y="16.549295774647888"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+    </resources>
 </document>

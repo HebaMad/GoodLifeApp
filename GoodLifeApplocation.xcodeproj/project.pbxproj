@@ -105,6 +105,10 @@
 		277CF36A28BD5DAF00F2874F /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277CF36928BD5DAF00F2874F /* ProfilePresenter.swift */; };
 		27876ABB28A4484B003A012A /* SpecificWebsiteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27876ABA28A4484B003A012A /* SpecificWebsiteVC.swift */; };
 		27876ABD28A4DB64003A012A /* NSUIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27876ABC28A4DB64003A012A /* NSUIColor+Hex.swift */; };
+		279404C0299EA57800742AD9 /* HobbiesAddition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279404BE299EA57800742AD9 /* HobbiesAddition.swift */; };
+		279404C1299EA57800742AD9 /* HobbiesAddition.xib in Resources */ = {isa = PBXBuildFile; fileRef = 279404BF299EA57800742AD9 /* HobbiesAddition.xib */; };
+		279404C6299EAC8A00742AD9 /* EditHobbiesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279404C4299EAC8A00742AD9 /* EditHobbiesVC.swift */; };
+		279404C7299EAC8A00742AD9 /* EditHobbiesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 279404C5299EAC8A00742AD9 /* EditHobbiesVC.xib */; };
 		27985F3C29968F2F006C8FE9 /* FavouriteHobbiesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27985F3A29968F2F006C8FE9 /* FavouriteHobbiesVC.swift */; };
 		27985F3D29968F2F006C8FE9 /* FavouriteHobbiesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27985F3B29968F2F006C8FE9 /* FavouriteHobbiesVC.xib */; };
 		27985F4129969004006C8FE9 /* HobbiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27985F3F29969004006C8FE9 /* HobbiesCell.swift */; };
@@ -376,6 +380,10 @@
 		277CF36928BD5DAF00F2874F /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		27876ABA28A4484B003A012A /* SpecificWebsiteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificWebsiteVC.swift; sourceTree = "<group>"; };
 		27876ABC28A4DB64003A012A /* NSUIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSUIColor+Hex.swift"; sourceTree = "<group>"; };
+		279404BE299EA57800742AD9 /* HobbiesAddition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HobbiesAddition.swift; sourceTree = "<group>"; };
+		279404BF299EA57800742AD9 /* HobbiesAddition.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HobbiesAddition.xib; sourceTree = "<group>"; };
+		279404C4299EAC8A00742AD9 /* EditHobbiesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHobbiesVC.swift; sourceTree = "<group>"; };
+		279404C5299EAC8A00742AD9 /* EditHobbiesVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditHobbiesVC.xib; sourceTree = "<group>"; };
 		27985F3A29968F2F006C8FE9 /* FavouriteHobbiesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteHobbiesVC.swift; sourceTree = "<group>"; };
 		27985F3B29968F2F006C8FE9 /* FavouriteHobbiesVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouriteHobbiesVC.xib; sourceTree = "<group>"; };
 		27985F3F29969004006C8FE9 /* HobbiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HobbiesCell.swift; sourceTree = "<group>"; };
@@ -625,6 +633,8 @@
 		2798B9E2298EE9C100BB18BF /* XIB */ = {
 			isa = PBXGroup;
 			children = (
+				279404BE299EA57800742AD9 /* HobbiesAddition.swift */,
+				279404BF299EA57800742AD9 /* HobbiesAddition.xib */,
 				2798B9E3298EEA2A00BB18BF /* CategoryReviews.swift */,
 				2798B9E4298EEA2A00BB18BF /* CategoryReviews.xib */,
 				274B65992997D525008EA6D5 /* TimeCell.swift */,
@@ -945,6 +955,8 @@
 				273D2FD7299BD42B006D9CB0 /* AvailableSupportVC.xib */,
 				273D2FDA299BE516006D9CB0 /* TimeScreenEditing.swift */,
 				273D2FDB299BE516006D9CB0 /* TimeScreenEditing.xib */,
+				279404C4299EAC8A00742AD9 /* EditHobbiesVC.swift */,
+				279404C5299EAC8A00742AD9 /* EditHobbiesVC.xib */,
 			);
 			path = ViewOppouritunityVC;
 			sourceTree = "<group>";
@@ -1291,6 +1303,7 @@
 				27B8C8EA28A1106C0011B039 /* SpecificFilterCell.xib in Resources */,
 				273D3A9F28B0CED000860702 /* choosingMinistryNeedsVC.xib in Resources */,
 				27B8C8EE28A14C320011B039 /* MapVC.xib in Resources */,
+				279404C1299EA57800742AD9 /* HobbiesAddition.xib in Resources */,
 				2704244A28A6ED08002EF7B5 /* SpecificFinancialModel.xib in Resources */,
 				2764D6C828E2DCE800AC7F73 /* ResourceLessons.xib in Resources */,
 				27C9AE5D288D3CB500FA584A /* Inter-ExtraLight-BETA.ttf in Resources */,
@@ -1320,6 +1333,7 @@
 				27C9AE55288D3CB500FA584A /* Inter-ExtraLightItalic-BETA.ttf in Resources */,
 				27C9AE30288D38EA00FA584A /* Assets.xcassets in Resources */,
 				27CB209D289FFE9800E63694 /* GeneralFinicialPagerVC.xib in Resources */,
+				279404C7299EAC8A00742AD9 /* EditHobbiesVC.xib in Resources */,
 				2764D6D028E2FA6600AC7F73 /* LessonDetailsCollectionCell.xib in Resources */,
 				2765D5FC28F4083C008835D9 /* GeneralFinancialCell.xib in Resources */,
 				27CB2099289FC79700E63694 /* SpecificPagerVC.xib in Resources */,
@@ -1474,8 +1488,10 @@
 				2704245328A95AAE002EF7B5 /* Storyboarded.swift in Sources */,
 				2768DEDB28A3FE0A004C6A5B /* AddGoalVC.swift in Sources */,
 				27A7376F2891435C00FD8AD9 /* UIViewDesignable.swift in Sources */,
+				279404C6299EAC8A00742AD9 /* EditHobbiesVC.swift in Sources */,
 				2768DED728A3F473004C6A5B /* AddTaskVC.swift in Sources */,
 				2706D21328913D4500546425 /* ProgressBar.swift in Sources */,
+				279404C0299EA57800742AD9 /* HobbiesAddition.swift in Sources */,
 				2710A28A28971E3B009BCE60 /* ListItem.swift in Sources */,
 				2704245028A8CED1002EF7B5 /* LoginProgressViews.swift in Sources */,
 				27CBC5672926A2D0000AE9A6 /* CreateOppourtinitySecondVC.swift in Sources */,

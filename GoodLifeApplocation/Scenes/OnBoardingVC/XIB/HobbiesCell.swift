@@ -14,6 +14,7 @@ class HobbiesCell: UICollectionViewCell , NibLoadableView {
     @IBOutlet weak var hobbyView: UIViewDesignable!
     @IBOutlet weak var hobbiesTitle: UILabel!
     
+    @IBOutlet weak var deleteItemBtn: UIButton!
     //MARK: - Initializer
 
     override func awakeFromNib() {
@@ -24,5 +25,9 @@ class HobbiesCell: UICollectionViewCell , NibLoadableView {
 
     func setupCell(hobbyTitle:listData){
         self.hobbiesTitle.text = hobbyTitle.title
+    }
+    
+    func setupCustomCell(hobbyTitle:String){
+        self.hobbiesTitle.text = hobbyTitle
     }
 }

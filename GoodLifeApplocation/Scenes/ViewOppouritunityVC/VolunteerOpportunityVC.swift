@@ -111,6 +111,8 @@ extension VolunteerOpportunityVC{
 //MARK: - Confirm to Menu Delegate
 
 extension VolunteerOpportunityVC:MenuDelegate{
+    func getMyResource(data: StewardingMyResource) {}
+    
     func getFundTypeData(data: FundType) {}
     
     func showAlerts(title: String, message: String) {
