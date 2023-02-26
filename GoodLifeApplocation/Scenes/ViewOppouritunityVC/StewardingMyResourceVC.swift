@@ -9,10 +9,13 @@ import UIKit
 import XLPagerTabStrip
 
 class StewardingMyResourceVC: ButtonBarPagerTabStripViewController {
+    var  stewardingResourceData:StewardingMyResource?
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupPagerTab()
+        print(stewardingResourceData)
     }
     
 

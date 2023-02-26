@@ -34,7 +34,7 @@ class OpportunityViewVC: UIViewController {
         
         bindButtons()
      
-        
+        getPresenterRequest()
     }
     
     func getPresenterRequest(){
@@ -104,14 +104,15 @@ extension OpportunityViewVC{
         case createOppourtinity.ViewBtn:
             print("")
             
-            //             let vc = CreateOppourtinityVC()
-            //             navigationController?.pushViewController(vc, animated: true)
+            // let vc = CreateOppourtinityVC()
+            // navigationController?.pushViewController(vc, animated: true)
             
         case AddFundTypeView.ViewBtn:
             let vc = AddFundTypes()
             navigationController?.pushViewController(vc, animated: true)
         case rewardingResourceView.ViewBtn:
             let vc = StewardingMyResourcesVC.instantiate()
+            vc.stewardingResourceData=stewardingResourceData
             navigationController?.pushViewController(vc, animated: true)
         case logoutView.ViewBtn:
             print("")

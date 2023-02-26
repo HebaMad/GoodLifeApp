@@ -2019,9 +2019,6 @@ Night</string>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BXH-nN-xvc">
                                 <rect key="frame" x="20" y="92" width="374" height="770"/>
-                                <connections>
-                                    <segue destination="imC-Pa-Ujb" kind="embed" id="EF3-b1-V9X"/>
-                                </connections>
                             </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FFm-Dw-yqw"/>
@@ -2036,6 +2033,9 @@ Night</string>
                             <constraint firstItem="FFm-Dw-yqw" firstAttribute="trailing" secondItem="BXH-nN-xvc" secondAttribute="trailing" constant="20" id="mzY-BG-7ge"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="stewardingContaimerView" destination="BXH-nN-xvc" id="sAF-xe-lsT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mYr-FE-Sye" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2216,11 +2216,11 @@ Night</string>
             <objects>
                 <viewController storyboardIdentifier="StewardingMyResourceVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="imC-Pa-Ujb" customClass="StewardingMyResourceVC" customModule="GoodLifeApplocation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qxB-5z-h6m">
-                        <rect key="frame" x="0.0" y="0.0" width="374" height="770"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zsr-x6-Q0T" customClass="ButtonBarView" customModule="XLPagerTabStrip">
-                                <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
