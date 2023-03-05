@@ -18,6 +18,7 @@ enum MenuApiTarget:TargetType{
     case makeDonation(worthycauseId:Int,amount:String)
     case FundType
     case stewardingMyResourse
+    case updateStewardingTime(timePerHour:String,timePerMonth:String)
     
     
     var baseURL: URL {
@@ -42,12 +43,14 @@ enum MenuApiTarget:TargetType{
         case .FundType:return "getFundTypes"
         case .stewardingMyResourse:return "getStewarding"
             
+        case .updateStewardingTime: return "updateStewarding"
+            
         }
     }
     
     var method: Moya.Method {
         switch self{
-        case .VolunteerOppourtinity,.createIdea,.createFeedback,.makeDonation:
+        case .VolunteerOppourtinity,.createIdea,.createFeedback,.makeDonation,.updateStewardingTime:
             return .post
             
         case .getWorthyCauses,.getSubWorthyCauses,.FundType,.stewardingMyResourse:
@@ -60,7 +63,7 @@ enum MenuApiTarget:TargetType{
     var task: Task{
         switch self{
             
-        case .VolunteerOppourtinity,.createIdea,.makeDonation:
+        case .VolunteerOppourtinity,.createIdea,.makeDonation,.updateStewardingTime:
             return .requestParameters(parameters: param, encoding: URLEncoding.httpBody)
             
         case .createFeedback(let opportunity_id,let review,let rate,let img):
@@ -83,7 +86,7 @@ enum MenuApiTarget:TargetType{
     }
     var headers: [String : String]?{
         switch self{
-        case .VolunteerOppourtinity,.createIdea,.createFeedback,.makeDonation,.FundType,.stewardingMyResourse:
+        case .VolunteerOppourtinity,.createIdea,.createFeedback,.makeDonation,.FundType,.stewardingMyResourse,.updateStewardingTime:
             
             do {
                 let token = try KeychainWrapper.get(key: AppData.mobile) ?? ""
@@ -111,7 +114,9 @@ enum MenuApiTarget:TargetType{
             
         case .makeDonation(let worthycauseId,let amount):
             return ["worthy_cause_id":worthycauseId,"amount":amount]
-            
+        case .updateStewardingTime(let timePerHour,let timePerMonth):
+            return ["timePerHour":timePerHour,"timePerMonth":timePerMonth]
+
         default : return [:]
         }
         

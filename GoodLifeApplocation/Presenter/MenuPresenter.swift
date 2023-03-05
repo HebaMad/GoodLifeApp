@@ -173,5 +173,23 @@ class MenuPresenter:NSObject{
         
     }
     
+    func updateStewardingTime(timePerHour:String,timePerMonth:String){
+        MenuManager.shared.updateStewardingTime(timePerHour: timePerHour, timePerMonth: timePerMonth) { Response in
+            switch Response{
+                
+            case let .success(response):
+                if response.status == true{
+                    self.delegate?.showAlerts(title:"Success", message: response.message ?? "")
+                }else{
+                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
+                }
+                
+            case .failure(_):
+                
+                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
+            }
+        }
+    }
+    
     
 }

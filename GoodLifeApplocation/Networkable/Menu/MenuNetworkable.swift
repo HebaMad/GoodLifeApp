@@ -19,11 +19,12 @@ protocol MenuNetworkable:Networkable  {
     func makeDonation(worthycauseId:Int,amount:String,completion: @escaping (Result<BaseResponse<SubWorthyCauses>, Error>)-> ())
     func fundType(completion: @escaping (Result<BaseResponse<FundType>, Error>)-> ())
     func stewardingMyResourse(completion: @escaping (Result<BaseResponse<StewardingMyResource>, Error>)-> ())
+    func updateStewardingTime(timePerHour:String,timePerMonth:String,completion: @escaping (Result<BaseResponse<userProfile>, Error>)-> ())
 
 }
 
 class MenuManager:MenuNetworkable{
- 
+
     
 
    var provider: MoyaProvider<MenuApiTarget> = MoyaProvider<MenuApiTarget>(plugins: [NetworkLoggerPlugin()])
@@ -61,4 +62,9 @@ class MenuManager:MenuNetworkable{
     func stewardingMyResourse(completion: @escaping (Result<BaseResponse<StewardingMyResource>, Error>) -> ()) {
         request(target: .stewardingMyResourse, completion: completion)
     }
+    func updateStewardingTime(timePerHour: String, timePerMonth: String, completion: @escaping (Result<BaseResponse<userProfile>, Error>) -> ()) {
+        request(target: .updateStewardingTime(timePerHour: timePerHour, timePerMonth: timePerMonth), completion: completion)
+    }
+    
+ 
 }
