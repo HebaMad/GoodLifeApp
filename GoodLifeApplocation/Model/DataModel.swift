@@ -162,11 +162,17 @@ struct userProfile: Decodable{
     let work_type:String?
     let amount_raise:String?
     let status:String?
-    let access_token:String?
+    let api_token:String?
     let image_profile:String?
     let location:String?
     let ventures:[Ventures]?
     let city:String?
+    let timePerHour:String?
+    let timePerMonth:String?
+    let interests:[String]?
+    let talents:[String]?
+    let ministry_ideas:[ministryIdea]?
+    let volunteer_requests:[volunteerRequests]?
 
 }
 
@@ -449,6 +455,7 @@ struct StewardingMyResource:Decodable{
 struct Money:Codable{
     let revenue:String?
     let investments:String?
+    let available_support:String?
 }
 struct TimeAndTalent:Codable {
     let talents:[String]?
@@ -460,3 +467,37 @@ struct Time:Codable{
     let title:String?
     let value:String?
 }
+
+
+
+struct ministryIdea:Decodable{
+    let id : String?
+    let user_id:String?
+    let title:String?
+    let details:String?
+    let time_commitment:String
+    let monthly_revenue:String?
+    let fund_type_id:String?
+    let location:String?
+    let read : String?
+    let created_at:String?
+          
+               
+}
+struct volunteerRequests:Decodable{
+    
+    let id : String?
+    let user_id:String?
+    let title:String?
+    let details:String?
+    let date:String?
+    let time:String?
+    let longitude:String?
+    let latitude:String?
+    let location:String?
+    let read : String?
+    let created_at:String?
+          
+}
+
+
