@@ -19,7 +19,7 @@ enum MenuApiTarget:TargetType{
     case FundType
     case stewardingMyResourse
     case updateStewardingTime(timePerHour:String,timePerMonth:String)
-    
+    case updateAvailableSupportMoney(availableSupport:String)
     
     var baseURL: URL {
         return URL(string: "\(AppConfig.apiBaseUrl)")!
@@ -45,12 +45,14 @@ enum MenuApiTarget:TargetType{
             
         case .updateStewardingTime: return "updateStewarding"
             
+        case .updateAvailableSupportMoney:return "updateAvailableSupport"
+            
         }
     }
     
     var method: Moya.Method {
         switch self{
-        case .VolunteerOppourtinity,.createIdea,.createFeedback,.makeDonation,.updateStewardingTime:
+        case .VolunteerOppourtinity,.createIdea,.createFeedback,.makeDonation,.updateStewardingTime,.updateAvailableSupportMoney:
             return .post
             
         case .getWorthyCauses,.getSubWorthyCauses,.FundType,.stewardingMyResourse:
@@ -63,7 +65,7 @@ enum MenuApiTarget:TargetType{
     var task: Task{
         switch self{
             
-        case .VolunteerOppourtinity,.createIdea,.makeDonation,.updateStewardingTime:
+        case .VolunteerOppourtinity,.createIdea,.makeDonation,.updateStewardingTime,.updateAvailableSupportMoney:
             return .requestParameters(parameters: param, encoding: URLEncoding.httpBody)
             
         case .createFeedback(let opportunity_id,let review,let rate,let img):
@@ -86,7 +88,7 @@ enum MenuApiTarget:TargetType{
     }
     var headers: [String : String]?{
         switch self{
-        case .VolunteerOppourtinity,.createIdea,.createFeedback,.makeDonation,.FundType,.stewardingMyResourse,.updateStewardingTime:
+        case .VolunteerOppourtinity,.createIdea,.createFeedback,.makeDonation,.FundType,.stewardingMyResourse,.updateStewardingTime,.updateAvailableSupportMoney:
             
             do {
                 let token = try KeychainWrapper.get(key: AppData.mobile) ?? ""
@@ -116,6 +118,8 @@ enum MenuApiTarget:TargetType{
             return ["worthy_cause_id":worthycauseId,"amount":amount]
         case .updateStewardingTime(let timePerHour,let timePerMonth):
             return ["timePerHour":timePerHour,"timePerMonth":timePerMonth]
+        case .updateAvailableSupportMoney(let availableSupport):
+            return ["available_support":availableSupport]
 
         default : return [:]
         }

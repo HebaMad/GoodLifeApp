@@ -179,7 +179,23 @@ class MenuPresenter:NSObject{
                 
             case let .success(response):
                 if response.status == true{
-                    self.delegate?.showAlerts(title:"Success", message: response.message ?? "")
+                }else{
+                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
+                }
+                
+            case .failure(_):
+                
+                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
+            }
+        }
+    }
+    
+    func updateAvailableSupportMoney(availableSupportMoney:String){
+        MenuManager.shared.updateAvailableSupportMoney(availableSupport: availableSupportMoney) { Response in
+            switch Response{
+                
+            case let .success(response):
+                if response.status == true{
                 }else{
                     self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
                 }
