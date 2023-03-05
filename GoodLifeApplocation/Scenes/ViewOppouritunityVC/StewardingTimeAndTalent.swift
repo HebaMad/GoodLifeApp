@@ -45,7 +45,17 @@ class StewardingTimeAndTalent: UIViewController,IndicatorInfoProvider {
     
     @objc func buttonTapped(_ sender:UIButton){
         switch sender.tag {
-        case 0:break
+        case 0:
+            let controller = EditHobbiesVC()
+            
+            let sheetController = SheetViewController(
+                controller: controller,
+                //                sizes: [ .intrinsic , .percent(0.80), .fixed(600), .intrinsic])
+                sizes: [ .marginFromTop(500), .percent(0.4), .intrinsic])
+            controller.hobbiesType="talent"
+            controller.onSheetDissmissed = self
+            
+            self.present(sheetController, animated: false, completion: nil)
         case 1:
             let controller = TimeScreenEditing()
             
@@ -58,6 +68,16 @@ class StewardingTimeAndTalent: UIViewController,IndicatorInfoProvider {
             self.present(sheetController, animated: false, completion: nil)
         
         case 2:break
+            let controller = EditHobbiesVC()
+            
+            let sheetController = SheetViewController(
+                controller: controller,
+                //                sizes: [ .intrinsic , .percent(0.80), .fixed(600), .intrinsic])
+                sizes: [ .marginFromTop(500), .percent(0.4), .intrinsic])
+            controller.hobbiesType="interest"
+            controller.onSheetDissmissed = self
+            
+            self.present(sheetController, animated: false, completion: nil)
             
         default:
             ""
@@ -231,6 +251,14 @@ extension StewardingTimeAndTalent:DataTransfered{
     func getData(time: [Time]) {
         self.time=time
         hobbiesCollectionview.reloadData()
+    }
+    
+    
+}
+
+extension StewardingTimeAndTalent:hobbiesTransfered{
+    func getHobbiesData(hobbies: [String]) {
+        
     }
     
     

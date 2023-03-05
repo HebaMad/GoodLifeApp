@@ -471,7 +471,7 @@ struct Time:Codable{
 
 
 struct ministryIdea:Decodable{
-    let id : String?
+    let id : Int?
     let user_id:String?
     let title:String?
     let details:String?

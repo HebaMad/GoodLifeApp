@@ -104,8 +104,8 @@ extension OpportunityViewVC{
         case createOppourtinity.ViewBtn:
             print("")
             
-            // let vc = CreateOppourtinityVC()
-            // navigationController?.pushViewController(vc, animated: true)
+             let vc = EditHobbiesVC()
+             navigationController?.pushViewController(vc, animated: true)
             
         case AddFundTypeView.ViewBtn:
             let vc = AddFundTypes()

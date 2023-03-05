@@ -6,7 +6,9 @@
 //
 
 import UIKit
-
+protocol hobbiesTransfered{
+    func getHobbiesData(hobbies:[String])
+}
 class EditHobbiesVC: UIViewController {
     
     @IBOutlet weak var hobbiesCollectionview: UICollectionView!
@@ -18,7 +20,7 @@ class EditHobbiesVC: UIViewController {
     var listTalent:[String] = []
     var listInterest:[String] = []
     var hobbiesType : String = ""
-    
+    var onSheetDissmissed:hobbiesTransfered?
     //MARK: - Life cycle
     
     override func viewDidLoad() {

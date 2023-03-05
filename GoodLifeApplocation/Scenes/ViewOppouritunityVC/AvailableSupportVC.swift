@@ -17,6 +17,7 @@ class AvailableSupportVC: UIViewController ,UITextFieldDataPickerDelegate , UITe
     let availableMoneyRange : [String] = [ "<$100","$100 to $500" , "$500 to $1,000" , "$1,000 to $2,500","$2,500 to $5,000" , "$5,000 to $10,000","$10,000 to $25,000" , "$25,000 to $50,000" , "$50,000 to $100,000" ,"$100,000 to $250,000" , "$250,000 to $500,000" , "$500,000 to $1,000,000" , ">$1,000,000" ]
     
     
+    let presenter=MenuPresenter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +27,8 @@ class AvailableSupportVC: UIViewController ,UITextFieldDataPickerDelegate , UITe
     @IBAction func saveBtn(_ sender: Any) {
         if self.availableMoney.text != "" {
             
-            
+            presenter.updateAvailableSupportMoney(availableSupportMoney: self.availableMoney.text!)
+            presenter.delegate=self
             self.dismiss(animated: true) {
                 if let _delegate = self.onSheetDissmissed{
                     _delegate.getData(data:self.availableMoney.text!)
@@ -60,3 +62,17 @@ extension AvailableSupportVC {
     }
 }
 
+extension AvailableSupportVC:MenuDelegate{
+    func showAlerts(title: String, message: String) {
+        Alert.showErrorAlert(message: message)
+
+    }
+    
+    func getFunderData(data: WorthyCauses) {}
+    
+    func getFundTypeData(data: FundType) { }
+    
+    func getMyResource(data: StewardingMyResource) { }
+    
+    
+}

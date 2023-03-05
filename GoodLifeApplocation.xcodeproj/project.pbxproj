@@ -55,6 +55,8 @@
 		274B65A02998EBF3008EA6D5 /* StewardingTimeAndTalent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274B659F2998EBF3008EA6D5 /* StewardingTimeAndTalent.swift */; };
 		274B65A22999558B008EA6D5 /* StewardingResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274B65A12999558B008EA6D5 /* StewardingResource.swift */; };
 		274B65A429995DED008EA6D5 /* StewardingMyResourceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274B65A329995DED008EA6D5 /* StewardingMyResourceVC.swift */; };
+		2752CA8629B532A700AB35CD /* ButtonActionFooterCollectionview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2752CA8429B532A700AB35CD /* ButtonActionFooterCollectionview.swift */; };
+		2752CA8729B532A700AB35CD /* ButtonActionFooterCollectionview.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2752CA8529B532A700AB35CD /* ButtonActionFooterCollectionview.xib */; };
 		2756BB07290FB80300E0304C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2756BB06290FB80300E0304C /* GoogleService-Info.plist */; };
 		27594D1E28A010CE00F4DDC3 /* GeneralMarketingPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27594D1C28A010CE00F4DDC3 /* GeneralMarketingPageVC.swift */; };
 		27594D2228A017D600F4DDC3 /* GeneralLiturgicalPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27594D2028A017D600F4DDC3 /* GeneralLiturgicalPageVC.swift */; };
@@ -330,6 +332,8 @@
 		274B659F2998EBF3008EA6D5 /* StewardingTimeAndTalent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StewardingTimeAndTalent.swift; sourceTree = "<group>"; };
 		274B65A12999558B008EA6D5 /* StewardingResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StewardingResource.swift; sourceTree = "<group>"; };
 		274B65A329995DED008EA6D5 /* StewardingMyResourceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StewardingMyResourceVC.swift; sourceTree = "<group>"; };
+		2752CA8429B532A700AB35CD /* ButtonActionFooterCollectionview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonActionFooterCollectionview.swift; sourceTree = "<group>"; };
+		2752CA8529B532A700AB35CD /* ButtonActionFooterCollectionview.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonActionFooterCollectionview.xib; sourceTree = "<group>"; };
 		2756BB06290FB80300E0304C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		27594D1C28A010CE00F4DDC3 /* GeneralMarketingPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralMarketingPageVC.swift; sourceTree = "<group>"; };
 		27594D2028A017D600F4DDC3 /* GeneralLiturgicalPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralLiturgicalPageVC.swift; sourceTree = "<group>"; };
@@ -639,6 +643,8 @@
 				2798B9E4298EEA2A00BB18BF /* CategoryReviews.xib */,
 				274B65992997D525008EA6D5 /* TimeCell.swift */,
 				274B659A2997D525008EA6D5 /* TimeCell.xib */,
+				2752CA8429B532A700AB35CD /* ButtonActionFooterCollectionview.swift */,
+				2752CA8529B532A700AB35CD /* ButtonActionFooterCollectionview.xib */,
 			);
 			path = XIB;
 			sourceTree = "<group>";
@@ -1297,6 +1303,7 @@
 				2768DED828A3F473004C6A5B /* AddTaskVC.xib in Resources */,
 				27A7375E28913F0500FD8AD9 /* ProgressView.xib in Resources */,
 				2710A29A289AF485009BCE60 /* PastVentures.xib in Resources */,
+				2752CA8729B532A700AB35CD /* ButtonActionFooterCollectionview.xib in Resources */,
 				27C9AE33288D38EA00FA584A /* LaunchScreen.storyboard in Resources */,
 				2767A28428904A3800DF34D1 /* OtherFundsCollectionViewCell.xib in Resources */,
 				273D2FDD299BE516006D9CB0 /* TimeScreenEditing.xib in Resources */,
@@ -1481,6 +1488,7 @@
 				27985F4129969004006C8FE9 /* HobbiesCell.swift in Sources */,
 				27B54D8128BA62790074A6A1 /* SettingTarget.swift in Sources */,
 				27B8C8F228A1687F0011B039 /* MapFilterList.swift in Sources */,
+				2752CA8629B532A700AB35CD /* ButtonActionFooterCollectionview.swift in Sources */,
 				27C9AEAE288DB44600FA584A /* CategoriesCollectionViewCell.swift in Sources */,
 				27CB207A289CFC0400E63694 /* OnBoardingFrame1.swift in Sources */,
 				27CBC5612926898B000AE9A6 /* CreateOppourtinityFirstVC.swift in Sources */,
