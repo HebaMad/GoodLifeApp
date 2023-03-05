@@ -107,7 +107,7 @@ extension LoginProgressViews:AuthDelegate{
     
     func getLoginToken(data: userProfile) {
         do{
-            try KeychainWrapper.set(value: "Bearer"+" "+data.access_token! , key: data.mobile ?? "")
+            try KeychainWrapper.set(value: "Bearer"+" "+data.api_token! , key: data.mobile ?? "")
             AppData.mobile = data.mobile ?? ""
             latitude = Double(data.latitude ?? "") ?? 0.0
             longitude = Double(data.longitude ?? "") ?? 0.0

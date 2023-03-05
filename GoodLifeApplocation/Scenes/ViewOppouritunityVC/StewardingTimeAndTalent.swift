@@ -6,7 +6,9 @@
 //
 
 import UIKit
-import  XLPagerTabStrip
+import XLPagerTabStrip
+import FittedSheets
+
 class StewardingTimeAndTalent: UIViewController,IndicatorInfoProvider {
 
     //MARK: - Outlet
@@ -39,6 +41,28 @@ class StewardingTimeAndTalent: UIViewController,IndicatorInfoProvider {
         interest = hobbies?.interests ?? []
         time=hobbies?.time ?? []
 
+    }
+    
+    @objc func buttonTapped(_ sender:UIButton){
+        switch sender.tag {
+        case 0:break
+        case 1:
+            let controller = TimeScreenEditing()
+            
+            let sheetController = SheetViewController(
+                controller: controller,
+                //                sizes: [ .intrinsic , .percent(0.80), .fixed(600), .intrinsic])
+                sizes: [ .marginFromTop(500), .percent(0.4), .intrinsic])
+            controller.onSheetDissmissed = self
+            
+            self.present(sheetController, animated: false, completion: nil)
+        
+        case 2:break
+            
+        default:
+            ""
+        }
+        
     }
 
     private func setupCollectionview(){
@@ -157,6 +181,7 @@ extension StewardingTimeAndTalent:UICollectionViewDataSource,UICollectionViewDel
             cell.setupCustomCell(hobbyTitle: talent[indexPath.row])
             cell.hobbyView.backgroundColor = UIColor(named: "bg3")
             cell.hobbiesTitle.textColor = .black
+            
             return cell
             
         case .interest:
@@ -186,6 +211,8 @@ extension StewardingTimeAndTalent:UICollectionViewDataSource,UICollectionViewDel
         header.headerTitleLabel.textAlignment = .left
         header.headerTitleLabel.textColor = .gray
         header.headerTitleLabel.font = UIFont.boldSystemFont(ofSize: 16.0)
+        header.editBtn.tag = indexPath.section
+        header.editBtn.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
         return header
     }
 }
@@ -198,4 +225,13 @@ extension StewardingTimeAndTalent{
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return itemInfo
     }
+}
+
+extension StewardingTimeAndTalent:DataTransfered{
+    func getData(time: [Time]) {
+        self.time=time
+        hobbiesCollectionview.reloadData()
+    }
+    
+    
 }

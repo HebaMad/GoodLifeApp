@@ -2109,13 +2109,51 @@ Night</string>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bXB-la-Wye">
                                                 <rect key="frame" x="12" y="237" width="390" height="80"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available support" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZy-8P-foh">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dG2-Il-Jub">
                                                         <rect key="frame" x="0.0" y="0.0" width="390" height="40"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                                                        <color key="textColor" red="0.27058823529999998" green="0.27058823529999998" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$2450" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kKH-pt-rMq">
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available support" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZy-8P-foh">
+                                                                <rect key="frame" x="0.0" y="0.0" width="350" height="40"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                                <color key="textColor" red="0.27058823529999998" green="0.27058823529999998" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d54-JO-fQ2">
+                                                                <rect key="frame" x="350" y="0.0" width="40" height="40"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ugm-mz-eKi" customClass="UIButtonDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
+                                                                        <rect key="frame" x="6" y="6" width="28" height="28"/>
+                                                                        <color key="backgroundColor" name="BgColor"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="28" id="BDJ-28-Aw3"/>
+                                                                            <constraint firstAttribute="height" constant="28" id="rAS-bI-emA"/>
+                                                                        </constraints>
+                                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <state key="normal" image="pencil" catalog="system"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <real key="value" value="14"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                                                                <color key="value" name="backgroundColor"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="availableSupportBtn:" destination="2FP-QH-N8o" eventType="touchUpInside" id="p6G-Cr-jvH"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="40" id="B3k-dZ-Evm"/>
+                                                                    <constraint firstItem="Ugm-mz-eKi" firstAttribute="centerX" secondItem="d54-JO-fQ2" secondAttribute="centerX" id="g0D-Xc-uhI"/>
+                                                                    <constraint firstItem="Ugm-mz-eKi" firstAttribute="centerY" secondItem="d54-JO-fQ2" secondAttribute="centerY" id="sWe-tA-BPk"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1000 to $2000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kKH-pt-rMq">
                                                         <rect key="frame" x="0.0" y="40" width="390" height="40"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                         <color key="textColor" name="button"/>
@@ -2253,6 +2291,9 @@ Night</string>
             <size key="intrinsicContentSize" width="22.5" height="21.5"/>
         </designable>
         <designable name="Ads-Ue-rxg"/>
+        <designable name="Ugm-mz-eKi">
+            <size key="intrinsicContentSize" width="17.5" height="22"/>
+        </designable>
         <designable name="ytq-pp-ACn">
             <size key="intrinsicContentSize" width="22.5" height="21.5"/>
         </designable>
@@ -2264,7 +2305,11 @@ Night</string>
         <image name="chevron.down" catalog="system" width="128" height="70"/>
         <image name="line.3.horizontal" catalog="system" width="128" height="65"/>
         <image name="noData" width="292" height="137.5"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <namedColor name="BgColor">
+            <color red="0.59200000762939453" green="0.27799999713897705" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="ButtonColor">
             <color red="0.0" green="0.85100001096725464" blue="0.44299998879432678" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

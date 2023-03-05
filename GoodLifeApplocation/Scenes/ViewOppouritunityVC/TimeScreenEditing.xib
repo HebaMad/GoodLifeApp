@@ -12,6 +12,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TimeScreenEditing" customModule="GoodLifeApplocation" customModuleProvider="target">
             <connections>
+                <outlet property="timePerMonthSlider" destination="zcD-Ck-jpK" id="kxw-7q-zBt"/>
+                <outlet property="timePerMonthTxt" destination="gvl-se-fB0" id="M7c-V4-f9v"/>
+                <outlet property="timePerWeekSlider" destination="aqf-EI-t1f" id="uii-Sv-DXF"/>
+                <outlet property="timePerWeekTxt" destination="KUd-D8-kUt" id="hVV-GP-YnK"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,15 +25,15 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="UYa-Eh-ipn">
-                    <rect key="frame" x="0.0" y="0.0" width="393" height="222"/>
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="237"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="G9q-Ym-jZf">
-                            <rect key="frame" x="12" y="20" width="369" height="48"/>
+                            <rect key="frame" x="12" y="35" width="369" height="48"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CmU-UY-4im">
                                     <rect key="frame" x="0.0" y="0.0" width="369" height="18"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 h" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="KUd-D8-kUt">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 h" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="KUd-D8-kUt">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="18"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="50" id="6tv-aH-1oF"/>
@@ -46,19 +50,19 @@
                                         </label>
                                     </subviews>
                                 </stackView>
-                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" minValue="0.0" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="aqf-EI-t1f">
+                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="0.0" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="aqf-EI-t1f">
                                     <rect key="frame" x="-2" y="18" width="373" height="31"/>
                                     <color key="tintColor" name="backgroundColor"/>
                                 </slider>
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xd2-Xz-ZYD">
-                            <rect key="frame" x="12" y="93" width="369" height="48"/>
+                            <rect key="frame" x="12" y="108" width="369" height="48"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pEp-XU-3AW">
                                     <rect key="frame" x="0.0" y="0.0" width="369" height="18"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 h" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gvl-se-fB0">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20 h" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gvl-se-fB0">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="18"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="50" id="B7p-d7-PNy"/>
@@ -75,14 +79,14 @@
                                         </label>
                                     </subviews>
                                 </stackView>
-                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="zcD-Ck-jpK">
+                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="zcD-Ck-jpK">
                                     <rect key="frame" x="-2" y="18" width="373" height="31"/>
                                 </slider>
                             </subviews>
                             <color key="tintColor" name="backgroundColor"/>
                         </stackView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="to1-Or-6Ph" customClass="UIButtonDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                            <rect key="frame" x="12" y="166" width="369" height="48"/>
+                            <rect key="frame" x="12" y="181" width="369" height="48"/>
                             <color key="backgroundColor" name="backgroundColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="48" id="88W-D5-ojo"/>
@@ -106,9 +110,12 @@
                                     <color key="value" name="backgroundColor"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="saveBtn:" destination="-1" eventType="touchUpInside" id="xHO-vp-6u7"/>
+                            </connections>
                         </button>
                     </subviews>
-                    <directionalEdgeInsets key="directionalLayoutMargins" top="20" leading="12" bottom="8" trailing="12"/>
+                    <directionalEdgeInsets key="directionalLayoutMargins" top="35" leading="12" bottom="8" trailing="12"/>
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

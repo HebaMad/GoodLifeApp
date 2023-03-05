@@ -19,7 +19,7 @@ class TimeCell: UICollectionViewCell , NibLoadableView {
     
     func configureCell(data:Time){
         titleLimit.text = data.title
-        timeTxt.text = data.value
+        timeTxt.text = (data.value ?? "") + "h"
     }
 
 }
