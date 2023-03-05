@@ -9,16 +9,28 @@ import UIKit
 import XLPagerTabStrip
 
 class StewardingMyMoney: UIViewController ,IndicatorInfoProvider{
+    var money:Money?
 
     var itemInfo: IndicatorInfo = "Money"
 
+    @IBOutlet weak var revenuMoneyTxt: UILabel!
+    @IBOutlet weak var investmentMoney: UILabel!
+    
+    @IBOutlet weak var availableSupportTxt: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        getMoneyData()
+        
     }
     
-
+    func getMoneyData(){
+        print(money?.revenue)
+        revenuMoneyTxt.text = money?.revenue
+        investmentMoney.text = money?.investments
+        availableSupportTxt.text = money.
+    }
 
 
 }

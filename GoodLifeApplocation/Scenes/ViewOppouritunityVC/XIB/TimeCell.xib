@@ -49,6 +49,7 @@
             </constraints>
             <size key="customSize" width="292" height="61"/>
             <connections>
+                <outlet property="timeTxt" destination="7pn-Qb-qMf" id="TYU-k7-Gtm"/>
                 <outlet property="titleLimit" destination="rC4-So-gcE" id="HCx-n8-bHg"/>
             </connections>
             <point key="canvasLocation" x="163.35877862595419" y="23.591549295774648"/>

@@ -9,14 +9,17 @@ import UIKit
 
 class TimeCell: UICollectionViewCell , NibLoadableView {
 
+    @IBOutlet weak var timeTxt: UILabel!
     @IBOutlet weak var titleLimit: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
-    func configureCell(data:listData){
+    func configureCell(data:Time){
         titleLimit.text = data.title
+        timeTxt.text = data.value
     }
 
 }

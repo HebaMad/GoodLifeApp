@@ -44,15 +44,13 @@ class StewardingMyResourceVC: ButtonBarPagerTabStripViewController {
         
         
         let first = StewardingTimeAndTalent.instantiate()
-
+             first.hobbies = stewardingResourceData?.timeAndTalent
              first.itemInfo = "Time & Talent"
  
-       
-        
         
         let second = StewardingMyMoney.instantiate()
- 
-        second.itemInfo = "Money"
+            second.money = stewardingResourceData?.money
+            second.itemInfo = "Money"
        
 
         return [second,first]

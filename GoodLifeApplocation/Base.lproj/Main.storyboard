@@ -2160,6 +2160,11 @@ Night</string>
                             <constraint firstItem="V7q-DC-IPU" firstAttribute="leading" secondItem="CEI-hE-v38" secondAttribute="leading" id="zAs-7G-V1S"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="availableSupportTxt" destination="kKH-pt-rMq" id="Bm6-9e-jvR"/>
+                        <outlet property="investmentMoney" destination="wyG-dF-IKz" id="bxC-L3-4nY"/>
+                        <outlet property="revenuMoneyTxt" destination="5NK-vt-eqc" id="oxx-FX-hOv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3gB-ml-Y7Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

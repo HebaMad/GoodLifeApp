@@ -12,11 +12,13 @@ class EditHobbiesVC: UIViewController {
     @IBOutlet weak var hobbiesCollectionview: UICollectionView!
     
     //MARK: - Properties
+    
     var footer = HobbiesAddition()
     private let sections = HobbiesItem.shared.AllHobbiesItem
     var listTalent:[String] = []
     var listInterest:[String] = []
     var hobbiesType : String = ""
+    
     //MARK: - Life cycle
     
     override func viewDidLoad() {
@@ -124,9 +126,6 @@ extension EditHobbiesVC:UICollectionViewDataSource,UICollectionViewDelegateFlowL
         cell.deleteItemBtn.isHidden=false
         cell.deleteItemBtn.tag=indexPath.row
         cell.deleteItemBtn.addTarget(self, action: #selector(deleteHobbiesItem), for: .touchUpInside)
-        
-        
-        
         
         return cell
    

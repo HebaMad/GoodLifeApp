@@ -7,32 +7,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "68ADB7FF-124D-4C9D-900E-1E04FA4CC0BD"
+            uuid = "96FF5468-BE42-413B-89EE-E3BD5FC90CDB"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GoodLifeApplocation/Scenes/ViewOppouritunityVC/StewardingMyResourceVC.swift"
+            filePath = "GoodLifeApplocation/Scenes/ViewOppouritunityVC/StewardingMyMoney.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "getMoneyData()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "CFB62E1D-9129-4832-91FD-23DC27AC7246"
+            uuid = "58B2A9F8-350B-4D07-A5D5-2E743FCC6D72"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GoodLifeApplocation/Scenes/ViewOppouritunityVC/StewardingMyResourcesVC.swift"
+            filePath = "GoodLifeApplocation/Scenes/ViewOppouritunityVC/StewardingMyMoney.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "getMoneyData()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

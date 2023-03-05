@@ -19,7 +19,10 @@ class StewardingTimeAndTalent: UIViewController,IndicatorInfoProvider {
      var listTalent:[String] = []
      var listInterest:[String] = []
     var itemInfo: IndicatorInfo = "Time & Talent"
-
+    var hobbies:TimeAndTalent?
+    var talent:[String]=[]
+    var interest:[String]=[]
+    var time:[Time]=[]
     
     //MARK: - Life cycle
 
@@ -28,6 +31,14 @@ class StewardingTimeAndTalent: UIViewController,IndicatorInfoProvider {
 
         setupCollectionview()
         hobbiesCollectionview.layer.cornerRadius = 16
+        getData()
+    }
+    
+    func  getData(){
+        talent = hobbies?.talents ?? []
+        interest = hobbies?.interests ?? []
+        time=hobbies?.time ?? []
+
     }
 
     private func setupCollectionview(){
@@ -132,34 +143,34 @@ extension StewardingTimeAndTalent:UICollectionViewDataSource,UICollectionViewDel
         
         switch sections[section]{
             
-        case .talent: return  sections[section].count
-        case .interest : return sections[section].count
-        case .Time:return sections[section].count
+        case .talent: return  talent.count
+        case .interest : return interest.count
+        case .Time:return time.count
             
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch sections[indexPath.section]{
-        case .talent(let items):
+        case .talent:
             let cell:HobbiesCell = collectionView.dequeueReusableCell(for: indexPath)
-            cell.setupCell(hobbyTitle: items[indexPath.row])
+            cell.setupCustomCell(hobbyTitle: talent[indexPath.row])
             cell.hobbyView.backgroundColor = UIColor(named: "bg3")
             cell.hobbiesTitle.textColor = .black
             return cell
             
-        case .interest(let items):
+        case .interest:
             
             let cell:HobbiesCell = collectionView.dequeueReusableCell(for: indexPath)
-            cell.setupCell(hobbyTitle: items[indexPath.row])
+            cell.setupCustomCell(hobbyTitle: interest[indexPath.row])
             cell.hobbyView.backgroundColor = UIColor(named: "bg3")
             cell.hobbiesTitle.textColor = .black
             return cell
             
-        case .Time(let items):
+        case .Time:
             
             let cell:TimeCell = collectionView.dequeueReusableCell(for: indexPath)
-            cell.configureCell(data:  items[indexPath.row])
+            cell.configureCell(data:  time[indexPath.row])
             return cell
         }
         
