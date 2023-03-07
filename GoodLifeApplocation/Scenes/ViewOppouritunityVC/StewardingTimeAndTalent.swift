@@ -66,7 +66,7 @@ class StewardingTimeAndTalent: UIViewController,IndicatorInfoProvider {
             controller.hobbiesType="interest"
             controller.listInterest=interest
             let sheetController = SheetViewController(controller: controller,sizes: [ .marginFromTop(500), .percent(0.4), .intrinsic])
-             controller.onSheetDissmissed = self
+            controller.onSheetDissmissed = self
             self.present(sheetController, animated: false, completion: nil)
             
             
@@ -96,7 +96,7 @@ class StewardingTimeAndTalent: UIViewController,IndicatorInfoProvider {
             
             let section = self.sections[sectionIndex]
             switch section {
-     
+                
             case .talent:
                 
                 let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.33), heightDimension: .absolute(50))
@@ -195,7 +195,7 @@ extension StewardingTimeAndTalent:UICollectionViewDataSource,UICollectionViewDel
             
             return cell
             
-       
+            
             
         case .Time:
             
@@ -259,7 +259,7 @@ extension StewardingTimeAndTalent:hobbiesTransfered{
         hobbiesCollectionview.reloadData()
     }
     
- 
+    
     
     
 }

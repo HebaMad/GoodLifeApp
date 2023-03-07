@@ -33,7 +33,7 @@ class OpportunityViewVC: UIViewController {
         super.viewDidLoad()
         
         bindButtons()
-     
+        
         getPresenterRequest()
     }
     
@@ -104,8 +104,7 @@ extension OpportunityViewVC{
         case createOppourtinity.ViewBtn:
             print("")
             
-             let vc = EditHobbiesVC()
-             navigationController?.pushViewController(vc, animated: true)
+            
             
         case AddFundTypeView.ViewBtn:
             let vc = AddFundTypes()

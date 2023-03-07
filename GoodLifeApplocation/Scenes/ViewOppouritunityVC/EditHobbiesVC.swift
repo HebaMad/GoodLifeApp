@@ -15,7 +15,6 @@ class EditHobbiesVC: UIViewController {
     
     //MARK: - Properties
     
-//    var footer = HobbiesAddition()
     var footer2 = ButtonActionFooterCollectionview()
     private let sections = HobbiesItem.shared.AllHobbiesItem
     var listTalent:[String] = ["test","test","test","test","test"]
@@ -37,9 +36,9 @@ class EditHobbiesVC: UIViewController {
         hobbiesCollectionview.register(AddingItemCell.self)
         
         hobbiesCollectionview.register(UINib(nibName:"HeaderCollectionReusableView", bundle: nil), forSupplementaryViewOfKind:UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.headerIdentifier)
-   
+        
         hobbiesCollectionview.register(UINib(nibName:"ButtonActionFooterCollectionview", bundle: nil), forSupplementaryViewOfKind:UICollectionView.elementKindSectionFooter, withReuseIdentifier: ButtonActionFooterCollectionview.footerIdentifier)
-
+        
         hobbiesCollectionview.collectionViewLayout = createCompositionalLayout()
         hobbiesCollectionview.dataSource=self
         hobbiesCollectionview.delegate=self
@@ -73,7 +72,7 @@ class EditHobbiesVC: UIViewController {
                 section.boundarySupplementaryItems = [self.supplementaryHeaderItem()]
                 section.supplementariesFollowContentInsets = false
                 return section
-
+                
                 
             case .interest:
                 
@@ -100,9 +99,9 @@ class EditHobbiesVC: UIViewController {
             }
         }
     }
-        func supplementaryHeaderItem() -> NSCollectionLayoutBoundarySupplementaryItem {
-            .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .estimated(50)), elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
-        }
+    func supplementaryHeaderItem() -> NSCollectionLayoutBoundarySupplementaryItem {
+        .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .estimated(50)), elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
+    }
     func supplementaryFooterItem() -> NSCollectionLayoutBoundarySupplementaryItem {
         .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .estimated(80)), elementKind: UICollectionView.elementKindSectionFooter, alignment: .bottom)
     }
@@ -116,25 +115,23 @@ extension EditHobbiesVC:UICollectionViewDataSource,UICollectionViewDelegateFlowL
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-
+        
         switch sections[section]{
-
-        case .talent:
-         
-            return hobbiesType == "talent" ? listTalent.count : listInterest.count
+            
+        case .talent: return hobbiesType == "talent" ? listTalent.count : listInterest.count
             
         case .interest: return 1
             
-        default:return 0
+            
             
         }
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch sections[indexPath.section]{
-
+            
         case .talent :
             let cell:HobbiesCell = collectionView.dequeueReusableCell(for: indexPath)
             
@@ -142,30 +139,25 @@ extension EditHobbiesVC:UICollectionViewDataSource,UICollectionViewDelegateFlowL
             cell.deleteItemBtn.isHidden=false
             cell.deleteItemBtn.tag=indexPath.row
             cell.deleteItemBtn.addTarget(self, action: #selector(deleteHobbiesItem), for: .touchUpInside)
-            
             return cell
+            
         case .interest:
             let cell :AddingItemCell = collectionView.dequeueReusableCell(for: indexPath)
             cell.addBtn.tag = indexPath.row
             cell.addBtn.addTarget(self, action: #selector(AddHobbies), for: .touchUpInside)
             return cell
-        default:return UICollectionViewCell()
             
         }
-     
+        
     }
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        return  CGSize(width:((self.view.frame.width / 4)-20), height: 100)
-//    }
-
-
+    
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-
+        
         switch kind{
-
+            
         case UICollectionView.elementKindSectionHeader:
-
+            
             let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.headerIdentifier, for: indexPath) as! HeaderCollectionReusableView
             header.setup(sections[indexPath.section].title)
             header.viewAllButton.isHidden = true
@@ -180,25 +172,25 @@ extension EditHobbiesVC:UICollectionViewDataSource,UICollectionViewDelegateFlowL
             }
             
             return header
-
+            
         case UICollectionView.elementKindSectionFooter:
-    
-         footer2 = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: ButtonActionFooterCollectionview.footerIdentifier, for: indexPath) as! ButtonActionFooterCollectionview
+            
+            footer2 = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: ButtonActionFooterCollectionview.footerIdentifier, for: indexPath) as! ButtonActionFooterCollectionview
             footer2.saveBtn.addTarget(self, action: #selector(updateHobbies), for: .touchUpInside)
             return footer2
-  
+            
         default:
-
+            
             return UICollectionReusableView()
         }
-
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
-            return CGSize(width: collectionView.frame.width, height: 80)
+        return CGSize(width: collectionView.frame.width, height: 80)
     }
     
-    }
+}
 
 
 extension EditHobbiesVC {
@@ -214,10 +206,10 @@ extension EditHobbiesVC {
             }else{
                 listInterest.append(cell.hobbiesTxtField.text!)
                 cell.hobbiesTxtField.text = ""
-
+                
             }
             hobbiesCollectionview.reloadData()
-
+            
         }
     }
     
@@ -225,7 +217,7 @@ extension EditHobbiesVC {
         let indexPath = NSIndexPath(row: sender.tag, section: 0)
         let cell:HobbiesCell = hobbiesCollectionview.cellForItem(at: indexPath as IndexPath) as! HobbiesCell
         if cell.hobbiesTitle.text != ""{
-
+            
             if hobbiesType == "talent" {
                 listTalent.remove(at: indexPath.row)
                 hobbiesCollectionview.reloadData()
@@ -245,9 +237,10 @@ extension EditHobbiesVC {
                     _delegate.getHobbiesData(hobbies: self.listTalent, hobbiesType: "talent")
                 }
             }
-          
-
+            
+            
         } else {
+            
             listInterest.count != 0  ? presenter.updateIntrest(intrest: listInterest) : Alert.showErrorAlert(message:"please select your Intrest ")
             self.dismiss(animated: true) {
                 if let _delegate = self.onSheetDissmissed{
