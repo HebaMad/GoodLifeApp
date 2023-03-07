@@ -150,7 +150,7 @@ extension ReviewExperienceVC:MenuDelegate{
 }
 
 
-   extension ReviewExperienceVC:HomeDelegate{
+   extension ReviewExperienceVC : HomeDelegate {
     
     func getCategories(categories: Home) {}
     func getStandardCategoriesFiltering(categories: MainHomeCategories) {}
@@ -159,9 +159,8 @@ extension ReviewExperienceVC:MenuDelegate{
     func getOppourtinityDetails(categories: OppourtinityDetails) {}
     
     func getOppourtinity(categories: Oppourtinity) {
-        print(self.oppourtinity.count)
+        
         self.oppourtinity = categories.items ?? []
-        print(self.oppourtinity)
         categoryTxt.isEnabled = true
 
         categoryTxt.pickerDelegate=self
@@ -171,10 +170,12 @@ extension ReviewExperienceVC:MenuDelegate{
 }
 
     extension ReviewExperienceVC {
-    func clearData(){
+        
+    func clearData() {
         categoryTxt.text = ""
         projectReview.text = ""
     }
+        
 }
 
    extension ReviewExperienceVC:UITextFieldDataPickerDelegate,UITextFieldDataPickerDataSource{
@@ -198,8 +199,7 @@ extension ReviewExperienceVC:MenuDelegate{
         categoryTxt.setTextFieldTitle(title: " " + (oppourtinity[row].title ?? ""))
         self.itemID=oppourtinity[row].id ?? 0
     }
-    
-    
+ 
 }
 
 

@@ -206,6 +206,38 @@ class MenuPresenter:NSObject{
             }
         }
     }
+    func updateTalent(talent:[String]){
+        MenuManager.shared.updateTalent(talent: talent) { Response in
+            switch Response{
+                
+            case let .success(response):
+                if response.status == true{
+                }else{
+                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
+                }
+                
+            case .failure(_):
+                
+                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
+            }
+        }
+    }
     
+    func updateIntrest(intrest:[String]){
+        MenuManager.shared.updateInterest(intrest: intrest) { Response in
+            switch Response{
+                
+            case let .success(response):
+                if response.status == true{
+                }else{
+                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
+                }
+                
+            case .failure(_):
+                
+                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
+            }
+        }
+    }
     
 }

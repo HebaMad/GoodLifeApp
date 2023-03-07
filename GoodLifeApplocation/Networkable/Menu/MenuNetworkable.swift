@@ -21,6 +21,8 @@ protocol MenuNetworkable:Networkable  {
     func stewardingMyResourse(completion: @escaping (Result<BaseResponse<StewardingMyResource>, Error>)-> ())
     func updateStewardingTime(timePerHour:String,timePerMonth:String,completion: @escaping (Result<BaseResponse<userProfile>, Error>)-> ())
     func  updateAvailableSupportMoney(availableSupport:String,completion: @escaping (Result<BaseResponse<userProfile>, Error>)-> ())
+    func updateTalent(talent:[String],completion: @escaping (Result<BaseResponse<userProfile>, Error>)-> ())
+    func updateInterest(intrest:[String],completion: @escaping (Result<BaseResponse<userProfile>, Error>)-> ())
 
 }
 
@@ -67,6 +69,14 @@ class MenuManager:MenuNetworkable{
     }
     func updateAvailableSupportMoney(availableSupport: String, completion: @escaping (Result<BaseResponse<userProfile>, Error>) -> ()) {
         request(target: .updateAvailableSupportMoney(availableSupport: availableSupport), completion: completion)
+    }
+    
+    func updateTalent(talent: [String], completion: @escaping (Result<BaseResponse<userProfile>, Error>) -> ()) {
+        request(target: .updateTalent(talent: talent), completion: completion)
+    }
+    
+    func updateInterest(intrest: [String], completion: @escaping (Result<BaseResponse<userProfile>, Error>) -> ()) {
+        request(target: .updateInterest(intrest: intrest), completion: completion)
     }
     
 

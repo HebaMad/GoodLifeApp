@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="AddingItemCell" customModule="GoodLifeApplocation" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="396" height="69"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="396" height="69"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y57-bq-Aok">
+                        <rect key="frame" x="4" y="4" width="388" height="61"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k8r-tb-WOV">
+                                <rect key="frame" x="10" y="8" width="368" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Do-AW-XvI" customClass="UIButtonDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
+                                <rect key="frame" x="290" y="8" width="90" height="45"/>
+                                <color key="backgroundColor" name="button"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="CyQ-70-BLo"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add +"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                        <color key="value" name="button"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0Do-AW-XvI" firstAttribute="top" secondItem="y57-bq-Aok" secondAttribute="top" constant="8" id="6in-mt-fox"/>
+                            <constraint firstItem="k8r-tb-WOV" firstAttribute="top" secondItem="y57-bq-Aok" secondAttribute="top" constant="8" id="6vZ-78-hkW"/>
+                            <constraint firstAttribute="bottom" secondItem="k8r-tb-WOV" secondAttribute="bottom" constant="8" id="MHb-EL-0re"/>
+                            <constraint firstItem="k8r-tb-WOV" firstAttribute="leading" secondItem="y57-bq-Aok" secondAttribute="leading" constant="10" id="Rj0-oA-R1I"/>
+                            <constraint firstAttribute="trailing" secondItem="0Do-AW-XvI" secondAttribute="trailing" constant="8" id="bfh-LF-gv2"/>
+                            <constraint firstAttribute="bottom" secondItem="0Do-AW-XvI" secondAttribute="bottom" constant="8" id="qcI-Uo-tFe"/>
+                            <constraint firstAttribute="trailing" secondItem="k8r-tb-WOV" secondAttribute="trailing" constant="10" id="xsF-HK-L8p"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="y57-bq-Aok" secondAttribute="bottom" constant="4" id="NDK-S4-K22"/>
+                <constraint firstAttribute="trailing" secondItem="y57-bq-Aok" secondAttribute="trailing" constant="4" id="Yzu-Jr-sM9"/>
+                <constraint firstItem="y57-bq-Aok" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="4" id="gMj-LA-tFy"/>
+                <constraint firstItem="y57-bq-Aok" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="v2X-hs-Qvy"/>
+            </constraints>
+            <size key="customSize" width="396" height="69"/>
+            <connections>
+                <outlet property="addBtn" destination="0Do-AW-XvI" id="cIf-hZ-5Mq"/>
+                <outlet property="hobbiesTxtField" destination="k8r-tb-WOV" id="g39-ry-dng"/>
+            </connections>
+            <point key="canvasLocation" x="274.80916030534348" y="26.408450704225352"/>
+        </collectionViewCell>
+    </objects>
+    <designables>
+        <designable name="0Do-AW-XvI">
+            <size key="intrinsicContentSize" width="69.333333333333329" height="34.333333333333336"/>
+        </designable>
+    </designables>
+    <resources>
+        <namedColor name="button">
+            <color red="0.2669999897480011" green="0.050999999046325684" blue="0.55699998140335083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

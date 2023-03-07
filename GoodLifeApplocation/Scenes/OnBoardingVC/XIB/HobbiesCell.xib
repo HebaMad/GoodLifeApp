@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,26 +24,26 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxi-2g-W8V">
                                 <rect key="frame" x="40" y="8" width="35.333333333333343" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qll-97-SYf">
-                                <rect key="frame" x="98" y="2" width="15" height="15"/>
+                                <rect key="frame" x="97" y="10" width="12" height="12"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="15" id="g5o-LD-X2O"/>
-                                    <constraint firstAttribute="width" constant="15" id="xCf-Ej-IIg"/>
+                                    <constraint firstAttribute="height" constant="12" id="g5o-LD-X2O"/>
+                                    <constraint firstAttribute="width" constant="12" id="xCf-Ej-IIg"/>
                                 </constraints>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="xmark" catalog="system"/>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="bg3"/>
                         <constraints>
                             <constraint firstItem="gxi-2g-W8V" firstAttribute="centerX" secondItem="bet-bT-WDc" secondAttribute="centerX" id="4Jb-zM-H19"/>
                             <constraint firstItem="gxi-2g-W8V" firstAttribute="centerY" secondItem="bet-bT-WDc" secondAttribute="centerY" id="CwG-As-yLw"/>
-                            <constraint firstAttribute="trailing" secondItem="Qll-97-SYf" secondAttribute="trailing" constant="2" id="Wjn-yJ-ptc"/>
-                            <constraint firstItem="Qll-97-SYf" firstAttribute="top" secondItem="bet-bT-WDc" secondAttribute="top" constant="2" id="rp1-SE-Nkx"/>
+                            <constraint firstAttribute="trailing" secondItem="Qll-97-SYf" secondAttribute="trailing" constant="6" id="Wjn-yJ-ptc"/>
+                            <constraint firstItem="Qll-97-SYf" firstAttribute="top" secondItem="bet-bT-WDc" secondAttribute="top" constant="10" id="rp1-SE-Nkx"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -55,7 +56,7 @@
                                 <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="value" name="bg3"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                 <real key="value" value="1"/>
@@ -82,5 +83,8 @@
     </objects>
     <resources>
         <image name="xmark" catalog="system" width="128" height="113"/>
+        <namedColor name="bg3">
+            <color red="0.97299998998641968" green="0.9649999737739563" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

@@ -10,7 +10,7 @@ import XLPagerTabStrip
 import FittedSheets
 
 class StewardingTimeAndTalent: UIViewController,IndicatorInfoProvider {
-
+    
     //MARK: - Outlet
     
     @IBOutlet weak var hobbiesCollectionview: UICollectionView!
@@ -18,8 +18,8 @@ class StewardingTimeAndTalent: UIViewController,IndicatorInfoProvider {
     //MARK: - Properties
     
     private let sections = StewardingResourceItem.shared.AllHobbiesItem
-     var listTalent:[String] = []
-     var listInterest:[String] = []
+    var listTalent:[String] = []
+    var listInterest:[String] = []
     var itemInfo: IndicatorInfo = "Time & Talent"
     var hobbies:TimeAndTalent?
     var talent:[String]=[]
@@ -27,64 +27,55 @@ class StewardingTimeAndTalent: UIViewController,IndicatorInfoProvider {
     var time:[Time]=[]
     
     //MARK: - Life cycle
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        getData()
         setupCollectionview()
         hobbiesCollectionview.layer.cornerRadius = 16
-        getData()
+        
     }
     
     func  getData(){
         talent = hobbies?.talents ?? []
         interest = hobbies?.interests ?? []
         time=hobbies?.time ?? []
-
+        
     }
     
     @objc func buttonTapped(_ sender:UIButton){
         switch sender.tag {
         case 0:
             let controller = EditHobbiesVC()
-            
-            let sheetController = SheetViewController(
-                controller: controller,
-                //                sizes: [ .intrinsic , .percent(0.80), .fixed(600), .intrinsic])
-                sizes: [ .marginFromTop(500), .percent(0.4), .intrinsic])
             controller.hobbiesType="talent"
+            controller.listTalent=talent
+            let sheetController = SheetViewController(controller: controller, sizes: [ .marginFromTop(400), .percent(0.4), .intrinsic])
             controller.onSheetDissmissed = self
-            
             self.present(sheetController, animated: false, completion: nil)
+            
         case 1:
+            
             let controller = TimeScreenEditing()
-            
-            let sheetController = SheetViewController(
-                controller: controller,
-                //                sizes: [ .intrinsic , .percent(0.80), .fixed(600), .intrinsic])
-                sizes: [ .marginFromTop(500), .percent(0.4), .intrinsic])
+            let sheetController = SheetViewController(controller: controller, sizes: [ .marginFromTop(500), .percent(0.4), .intrinsic])
             controller.onSheetDissmissed = self
-            
             self.present(sheetController, animated: false, completion: nil)
-        
-        case 2:break
+            
+        case 2:
             let controller = EditHobbiesVC()
-            
-            let sheetController = SheetViewController(
-                controller: controller,
-                //                sizes: [ .intrinsic , .percent(0.80), .fixed(600), .intrinsic])
-                sizes: [ .marginFromTop(500), .percent(0.4), .intrinsic])
             controller.hobbiesType="interest"
-            controller.onSheetDissmissed = self
-            
+            controller.listInterest=interest
+            let sheetController = SheetViewController(controller: controller,sizes: [ .marginFromTop(500), .percent(0.4), .intrinsic])
+             controller.onSheetDissmissed = self
             self.present(sheetController, animated: false, completion: nil)
+            
             
         default:
             ""
         }
         
     }
-
+    
     private func setupCollectionview(){
         
         hobbiesCollectionview.register(HobbiesCell.self)
@@ -96,8 +87,8 @@ class StewardingTimeAndTalent: UIViewController,IndicatorInfoProvider {
         
         hobbiesCollectionview.reloadData()
     }
-
-
+    
+    
     //MARK: -  setup UICollectionViewCompositionalLayout
     private func createCompositionalLayout() -> UICollectionViewCompositionalLayout {
         UICollectionViewCompositionalLayout { [weak self] sectionIndex, layoutEnviroment in
@@ -105,26 +96,7 @@ class StewardingTimeAndTalent: UIViewController,IndicatorInfoProvider {
             
             let section = self.sections[sectionIndex]
             switch section {
-            case .interest:
-                
-                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.33), heightDimension: .absolute(50))
-                
-                let item = NSCollectionLayoutItem(layoutSize: itemSize)
-                item.contentInsets = .init(top: 0, leading: 0, bottom: 0, trailing: 4)
-                
-                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.99), heightDimension: .estimated(0.5))
-                
-                
-                let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-                group.contentInsets = .init(top: 0, leading: 0, bottom: 0, trailing: 0)
-                let section = NSCollectionLayoutSection(group: group)
-                
-                //                section.orthogonalScrollingBehavior = .continuous
-                section.contentInsets = .init(top: 0, leading: 4, bottom: 0, trailing: 4)
-                section.boundarySupplementaryItems = [self.supplementaryHeaderItem()]
-                section.supplementariesFollowContentInsets = false
-                return section
-                
+     
             case .talent:
                 
                 let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.33), heightDimension: .absolute(50))
@@ -163,6 +135,26 @@ class StewardingTimeAndTalent: UIViewController,IndicatorInfoProvider {
                 section.boundarySupplementaryItems = [self.supplementaryHeaderItem()]
                 section.supplementariesFollowContentInsets = false
                 return section
+            case .interest:
+                
+                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.33), heightDimension: .absolute(50))
+                
+                let item = NSCollectionLayoutItem(layoutSize: itemSize)
+                item.contentInsets = .init(top: 0, leading: 0, bottom: 0, trailing: 4)
+                
+                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.99), heightDimension: .estimated(0.5))
+                
+                
+                let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+                group.contentInsets = .init(top: 0, leading: 0, bottom: 0, trailing: 0)
+                let section = NSCollectionLayoutSection(group: group)
+                
+                //                section.orthogonalScrollingBehavior = .continuous
+                section.contentInsets = .init(top: 0, leading: 4, bottom: 0, trailing: 4)
+                section.boundarySupplementaryItems = [self.supplementaryHeaderItem()]
+                section.supplementariesFollowContentInsets = false
+                return section
+                
             }
             
         }
@@ -174,7 +166,7 @@ class StewardingTimeAndTalent: UIViewController,IndicatorInfoProvider {
 
 extension StewardingTimeAndTalent:Storyboarded{
     static var storyboardName: StoryboardName = .main
-
+    
 }
 extension StewardingTimeAndTalent:UICollectionViewDelegate{}
 
@@ -188,9 +180,8 @@ extension StewardingTimeAndTalent:UICollectionViewDataSource,UICollectionViewDel
         switch sections[section]{
             
         case .talent: return  talent.count
-        case .interest : return interest.count
         case .Time:return time.count
-            
+        case .interest : return interest.count
         }
     }
     
@@ -204,18 +195,20 @@ extension StewardingTimeAndTalent:UICollectionViewDataSource,UICollectionViewDel
             
             return cell
             
+       
+            
+        case .Time:
+            
+            let cell:TimeCell = collectionView.dequeueReusableCell(for: indexPath)
+            cell.configureCell(data:  time[indexPath.row])
+            return cell
+            
         case .interest:
             
             let cell:HobbiesCell = collectionView.dequeueReusableCell(for: indexPath)
             cell.setupCustomCell(hobbyTitle: interest[indexPath.row])
             cell.hobbyView.backgroundColor = UIColor(named: "bg3")
             cell.hobbiesTitle.textColor = .black
-            return cell
-            
-        case .Time:
-            
-            let cell:TimeCell = collectionView.dequeueReusableCell(for: indexPath)
-            cell.configureCell(data:  time[indexPath.row])
             return cell
         }
         
@@ -241,7 +234,7 @@ extension StewardingTimeAndTalent:UICollectionViewDataSource,UICollectionViewDel
 extension StewardingTimeAndTalent{
     
     //MARK: - configuration
-
+    
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return itemInfo
     }
@@ -257,9 +250,16 @@ extension StewardingTimeAndTalent:DataTransfered{
 }
 
 extension StewardingTimeAndTalent:hobbiesTransfered{
-    func getHobbiesData(hobbies: [String]) {
-        
+    func getHobbiesData(hobbies: [String], hobbiesType: String) {
+        if hobbiesType == "talent" {
+            talent = hobbies
+        }else{
+            interest = hobbies
+        }
+        hobbiesCollectionview.reloadData()
     }
+    
+ 
     
     
 }

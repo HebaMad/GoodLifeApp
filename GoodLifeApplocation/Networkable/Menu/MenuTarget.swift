@@ -20,7 +20,9 @@ enum MenuApiTarget:TargetType{
     case stewardingMyResourse
     case updateStewardingTime(timePerHour:String,timePerMonth:String)
     case updateAvailableSupportMoney(availableSupport:String)
-    
+    case updateTalent(talent:[String])
+    case updateInterest(intrest:[String])
+
     var baseURL: URL {
         return URL(string: "\(AppConfig.apiBaseUrl)")!
     }
@@ -43,29 +45,31 @@ enum MenuApiTarget:TargetType{
         case .FundType:return "getFundTypes"
         case .stewardingMyResourse:return "getStewarding"
             
-        case .updateStewardingTime: return "updateStewarding"
+        case .updateStewardingTime,.updateInterest,.updateTalent: return "updateStewarding"
             
         case .updateAvailableSupportMoney:return "updateAvailableSupport"
+            
+            
             
         }
     }
     
     var method: Moya.Method {
         switch self{
-        case .VolunteerOppourtinity,.createIdea,.createFeedback,.makeDonation,.updateStewardingTime,.updateAvailableSupportMoney:
+        case .VolunteerOppourtinity,.createIdea,.createFeedback,.makeDonation,.updateStewardingTime,.updateAvailableSupportMoney,.updateInterest,.updateTalent:
             return .post
             
         case .getWorthyCauses,.getSubWorthyCauses,.FundType,.stewardingMyResourse:
             return .get
             
-            
+ 
         }
     }
     
     var task: Task{
         switch self{
             
-        case .VolunteerOppourtinity,.createIdea,.makeDonation,.updateStewardingTime,.updateAvailableSupportMoney:
+        case .VolunteerOppourtinity,.createIdea,.makeDonation,.updateStewardingTime,.updateAvailableSupportMoney,.updateInterest,.updateTalent:
             return .requestParameters(parameters: param, encoding: URLEncoding.httpBody)
             
         case .createFeedback(let opportunity_id,let review,let rate,let img):
@@ -88,7 +92,7 @@ enum MenuApiTarget:TargetType{
     }
     var headers: [String : String]?{
         switch self{
-        case .VolunteerOppourtinity,.createIdea,.createFeedback,.makeDonation,.FundType,.stewardingMyResourse,.updateStewardingTime,.updateAvailableSupportMoney:
+        case .VolunteerOppourtinity,.createIdea,.createFeedback,.makeDonation,.FundType,.stewardingMyResourse,.updateStewardingTime,.updateAvailableSupportMoney,.updateInterest,.updateTalent:
             
             do {
                 let token = try KeychainWrapper.get(key: AppData.mobile) ?? ""
@@ -120,6 +124,10 @@ enum MenuApiTarget:TargetType{
             return ["timePerHour":timePerHour,"timePerMonth":timePerMonth]
         case .updateAvailableSupportMoney(let availableSupport):
             return ["available_support":availableSupport]
+        case .updateTalent(let talent):
+            return ["talents":talent]
+        case .updateInterest(let intrest):
+            return ["interests":intrest]
 
         default : return [:]
         }
