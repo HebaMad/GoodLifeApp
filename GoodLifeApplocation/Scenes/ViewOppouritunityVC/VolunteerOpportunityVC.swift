@@ -21,20 +21,35 @@ class VolunteerOpportunityVC: UIViewController {
     //MARK: - Properties
     
     let presenter = MenuPresenter()
-    
+    var voluntaryRequest:VolunteerRequests?
+    var status=""
+    var VolunteerRequestID=0
+
+
     //MARK: - Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         bindBackButton()
         setupTimePicker()
+        setData()
+    }
+    
+    func setData(){
+        eventTitleText.text = voluntaryRequest?.title
+        eventTimeTxt.text = voluntaryRequest?.time
+        eventDayTxt.text = voluntaryRequest?.date
+        eventDescriptionTxt.text = voluntaryRequest?.details
+        locationOfEvent.text = voluntaryRequest?.location
+   
+
     }
     
     //MARK: - setup Date picker
     
     fileprivate func setupTimePicker() {
         
-        eventTimeTxt.setFormat(format: "HH:mm a")
+        eventTimeTxt.setFormat(format: "HH:mm:ss")
         eventTimeTxt.setDatePickerMode(mode: .time)
         
         eventDayTxt.setFormat(format: "YYYY/MM/dd")
@@ -60,7 +75,7 @@ private extension VolunteerOpportunityVC{
     @objc func buttonWasTapped(_ sender:UIButton){
         switch sender{
         case backBtn:
-            navigationController?.popViewController(animated: true)
+            navigationController?.popToRootViewController(animated: true)
             
         case nextBtn:
             
@@ -89,8 +104,15 @@ extension VolunteerOpportunityVC{
                 let time = try eventTimeTxt.validatedText(validationType: .requiredField(field: "Time of event required"))
                 let location = try locationOfEvent.validatedText(validationType: .requiredField(field: "Location required"))
             if eventDescriptionTxt.text.isEmpty != true {
-                presenter.VolunteerOppourtinity(title: title, location: location, date: date, time: time, details: eventDescriptionTxt.text)
-                presenter.delegate=self
+                
+                if status == "Add"{
+                    presenter.VolunteerOppourtinity(title: title, location: location, date: date, time: time, details: eventDescriptionTxt.text)
+                    presenter.delegate=self
+                }else{
+                    presenter.editVolunteerRequest(volunteerrequestId: String(describing: voluntaryRequest?.id), title: title, location: location, date: date, time: time, details: eventDescriptionTxt.text)
+                }
+                
+             
                 
             }else{
                 Alert.showErrorAlert(message: "Description of idea required")

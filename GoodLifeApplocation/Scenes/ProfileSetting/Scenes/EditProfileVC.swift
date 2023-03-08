@@ -119,6 +119,14 @@ extension EditProfileVC{
 }
 
 extension EditProfileVC:ProfileDelegate{
+    func getIdea(data: MinistryIdea) {
+        
+    }
+    
+    func getVolunteerRequest(data: VolunteerRequests) {
+        
+    }
+    
     func showAlerts(title: String, message: String) {
         Alert.showSuccessAlert(message: message)
 

@@ -42,7 +42,42 @@ class MenuPresenter:NSObject{
         }
     }
     
+    func updateMinistryIdea(ministryIdeaID:String,title:String,details:String,time_commitment:String,monthly_revenue:String,fund_type_id:String,location:String){
+        SettingManager.shared.editMinistryIdea(ministryIdeaID: ministryIdeaID, title: title, details: details, time_commitment: time_commitment, monthly_revenue: monthly_revenue, fund_type_id: fund_type_id, location: location) { Response in
+            
+            switch Response{
+                
+            case let .success(response):
+                if response.status == true{
+                    self.delegate?.showAlerts(title:"Success", message: response.message ?? "")
+
+                }else{
+                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
+                }
+            case  .failure(_):
+                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
+                
+            }
+        }
+    }
     
+    func editVolunteerRequest(volunteerrequestId:String,title:String,location:String,date:String,time:String,details:String){
+        SettingManager.shared.editVolunteerRequest(volunteerrequestId: volunteerrequestId, title: title, location: location, date: date, time: time, details: details) { Response in
+            switch Response{
+                
+            case let .success(response):
+                if response.status == true{
+                    self.delegate?.showAlerts(title:"Success", message: response.message ?? "")
+
+                }else{
+                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
+                }
+            case  .failure(_):
+                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
+                
+            }
+        }
+    }
     func createIdea(title:String,details:String,time_commitment:String,monthly_revenue:String,fund_type_id:String ,location:String ){
         MenuManager.shared.createIdea(title: title, details: details, time_commitment: time_commitment, monthly_revenue:monthly_revenue,fund_type_id:fund_type_id ,location:location ) { Response in
             switch Response{

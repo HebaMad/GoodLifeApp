@@ -171,8 +171,8 @@ struct userProfile: Decodable{
     let timePerMonth:String?
     let interests:[String]?
     let talents:[String]?
-    let ministry_ideas:[ministryIdea]?
-    let volunteer_requests:[volunteerRequests]?
+    let ministry_ideas:[MinistryIdea]?
+    let volunteer_requests:[VolunteerRequests]?
 
 }
 
@@ -470,7 +470,8 @@ struct Time:Codable{
 
 
 
-struct ministryIdea:Decodable{
+struct MinistryIdea:Decodable {
+    
     let id : Int?
     let user_id:String?
     let title:String?
@@ -481,12 +482,11 @@ struct ministryIdea:Decodable{
     let location:String?
     let read : String?
     let created_at:String?
-          
                
 }
-struct volunteerRequests:Decodable{
+struct VolunteerRequests:Decodable {
     
-    let id : String?
+    let id : Int?
     let user_id:String?
     let title:String?
     let details:String?

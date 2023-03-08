@@ -31,7 +31,10 @@ class HaveAnIdeaVC: UIViewController ,UITextFieldDelegate{
     var presenter = MenuPresenter()
     var fundTypeID=0
     var fundTypeData:[mainType]=[]
-    
+    var status=""
+    var ministryIdeaID=0
+    var ministryIDEA:MinistryIdea?
+
     //MARK: - Life cycle
     
     override func viewDidLoad() {
@@ -85,8 +88,8 @@ private extension HaveAnIdeaVC{
     @objc func buttonWasTapped(_ sender:UIButton){
         switch sender{
         case backBtn:
-            navigationController?.popViewController(animated: true)
-            
+            navigationController?.popToRootViewController(animated: true)
+
         case nextBtn:
             createIdea()
             
@@ -113,7 +116,14 @@ extension HaveAnIdeaVC{
                     let time = try weeklyTimeSelection.validatedText(validationType: .requiredField(field: "Time commitment required"))
                     let revenu = try monthlyRevenuTxt.validatedText(validationType: .requiredField(field: "Monthly revenu required"))
                     let loc = try locationTxt.validatedText(validationType: .requiredField(field: "location required"))
-                    presenter.createIdea(title: title, details: descriptionText.text, time_commitment: time, monthly_revenue: revenu,fund_type_id: "\(self.fundTypeID)",location:loc)
+                    
+                    if status == "Add"{
+                        
+                        presenter.createIdea(title: title, details: descriptionText.text, time_commitment: time, monthly_revenue: revenu,fund_type_id: "\(self.fundTypeID)",location:loc)
+                    }else{
+                        presenter.updateMinistryIdea(ministryIdeaID:"\(ministryIdeaID)" , title: title, details: descriptionText.text, time_commitment: time, monthly_revenue: revenu,fund_type_id: "\(self.fundTypeID)",location:loc)
+                    }
+               
                     presenter.delegate=self
                     
                 }else{
@@ -131,6 +141,7 @@ extension HaveAnIdeaVC{
 //MARK: - Confirm to Menu Delegate
 
 extension HaveAnIdeaVC:MenuDelegate{
+    
     func getMyResource(data: StewardingMyResource) {}
     
     func getFundTypeData(data: FundType) {
@@ -216,7 +227,6 @@ extension HaveAnIdeaVC:UITextFieldDataPickerDelegate,UITextFieldDataPickerDataSo
     func textFieldDataPicker(_ textField: UITextFieldDataPicker, didSelectRow row: Int, inComponent component: Int) {
         self.fundTypeID=fundTypeData[row].id ?? 0
         categoryTxt.setTextFieldTitle(title: fundTypeData[row].name ?? "")
-     
     }
     
     

@@ -119,3 +119,29 @@ extension String {
     }
 
 }
+
+extension UIView {
+    func convertDateFormaterName(_ dates: String) -> (String)
+        {
+            let dateFormatter = DateFormatter()
+            let dateFormatterr = DateFormatter()
+            let dateeFormatterr = DateFormatter()
+
+            dateFormatter.dateFormat = "yyyy/MM/dd "
+            let Month = dateFormatter.date(from: dates)
+            dateFormatter.dateFormat = "LLLL"
+            
+            dateFormatterr.dateFormat = "yyyy/MM/dd "
+            let day = dateFormatterr.date(from: dates)
+            dateFormatterr.dateFormat = "dd"
+            
+            dateeFormatterr.dateFormat = "yyyy/MM/dd "
+            let year = dateFormatterr.date(from: dates)
+            dateeFormatterr.dateFormat = "yyyy"
+            
+            let fullDate  = dateFormatterr.string(from: day ?? Date()) + "" + dateFormatter.string(from: Month ?? Date()) + "," + dateeFormatterr.string(from: year ?? Date())
+
+            return  fullDate
+
+        }
+}

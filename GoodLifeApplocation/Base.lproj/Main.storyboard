@@ -1710,7 +1710,7 @@ Night</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LMa-C9-L1L">
                                 <rect key="frame" x="0.0" y="304" width="414" height="592"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="63" estimatedRowHeight="50" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="kWG-Ki-ue4">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="84" estimatedRowHeight="50" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="kWG-Ki-ue4">
                                         <rect key="frame" x="24" y="12" width="366" height="568"/>
                                         <color key="backgroundColor" name="bg3"/>
                                         <view key="tableHeaderView" contentMode="scaleToFill" id="TQy-mc-fNL">
@@ -1729,12 +1729,12 @@ Night</string>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opportunities" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bcd-nx-Cb5">
                                                                             <rect key="frame" x="0.0" y="0.0" width="122" height="41"/>
                                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
-                                                                            <color key="textColor" red="0.26666666666666666" green="0.050999999046325684" blue="0.55699998140335083" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <color key="textColor" name="button"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nJC-gm-MBf">
                                                                             <rect key="frame" x="0.0" y="41" width="122" height="2"/>
-                                                                            <color key="backgroundColor" red="0.2669999897480011" green="0.050999999046325684" blue="0.55699998140335083" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <color key="backgroundColor" name="button"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="2" id="Mcd-h4-yQ3"/>
                                                                             </constraints>
@@ -1767,12 +1767,12 @@ Night</string>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volunteer requests" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9z-k5-7Cl">
                                                                             <rect key="frame" x="0.0" y="0.0" width="122" height="41"/>
                                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
-                                                                            <color key="textColor" name="button"/>
+                                                                            <color key="textColor" red="0.26666666666666666" green="0.050980392156862744" blue="0.55686274509803924" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3cb-gO-xbC">
                                                                             <rect key="frame" x="0.0" y="41" width="122" height="2"/>
-                                                                            <color key="backgroundColor" red="0.2669999897480011" green="0.050999999046325684" blue="0.55699998140335083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <color key="backgroundColor" name="unselectedTab"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="2" id="SWW-vA-Sb0"/>
                                                                             </constraints>
@@ -1782,6 +1782,9 @@ Night</string>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BDX-o2-fcS">
                                                                     <rect key="frame" x="0.0" y="0.0" width="122" height="43"/>
                                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                    <state key="normal">
+                                                                        <color key="titleColor" red="0.63137254901960782" green="0.34901960784313724" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </state>
                                                                 </button>
                                                             </subviews>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1847,11 +1850,11 @@ Night</string>
                                             </constraints>
                                         </view>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="63" id="lQ6-fD-YoB">
-                                                <rect key="frame" x="0.0" y="93" width="366" height="63"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="84" id="lQ6-fD-YoB">
+                                                <rect key="frame" x="0.0" y="93" width="366" height="84"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lQ6-fD-YoB" id="H4Z-6W-Zh2">
-                                                    <rect key="frame" x="0.0" y="0.0" width="366" height="63"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="366" height="84"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </tableViewCellContentView>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1965,8 +1968,17 @@ Night</string>
                     <connections>
                         <outlet property="accountDetails" destination="B4P-94-gUE" id="Y2r-1a-S23"/>
                         <outlet property="backBtn" destination="ZFw-UG-ko8" id="f7Z-2u-JYL"/>
+                        <outlet property="ministryIdeaBtn" destination="hwe-3k-jJf" id="t45-y0-hxS"/>
+                        <outlet property="ministryIdeaTitle" destination="iLz-Wp-GiW" id="yqF-Pi-fX4"/>
+                        <outlet property="ministryIdeaView" destination="mbe-mX-SJl" id="6Lg-4e-dV7"/>
                         <outlet property="userImg" destination="zig-0v-ERe" id="rxc-G1-sYm"/>
+                        <outlet property="ventureTitle" destination="Bcd-nx-Cb5" id="FaF-IX-UQM"/>
+                        <outlet property="ventureView" destination="nJC-gm-MBf" id="NjJ-bL-ZGH"/>
+                        <outlet property="venturesBtn" destination="MnP-hJ-Yoc" id="Z74-qH-M7W"/>
                         <outlet property="venturesTableview" destination="kWG-Ki-ue4" id="Klm-RB-Zo1"/>
+                        <outlet property="volunteerRequestBtn" destination="BDX-o2-fcS" id="5JM-0B-RGQ"/>
+                        <outlet property="volunteerRequestTitle" destination="f9z-k5-7Cl" id="NVc-GG-2fB"/>
+                        <outlet property="volunteerRequestView" destination="3cb-gO-xbC" id="sAQ-6M-ZVE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q7U-QQ-SEv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1997,7 +2009,7 @@ Night</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stewarding my resource" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mec-dN-zXO">
-                                        <rect key="frame" x="101.5" y="8" width="211.5" height="24"/>
+                                        <rect key="frame" x="101.5" y="8" width="211" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" name="button"/>
                                         <nil key="highlightedColor"/>
@@ -2327,6 +2339,9 @@ Night</string>
         </namedColor>
         <namedColor name="textcell">
             <color red="0.70599997043609619" green="0.70599997043609619" blue="0.70599997043609619" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="unselectedTab">
+            <color red="0.26666666666666666" green="0.050980392156862744" blue="0.55686274509803924" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

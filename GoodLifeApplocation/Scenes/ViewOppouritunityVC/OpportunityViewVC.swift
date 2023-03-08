@@ -81,11 +81,13 @@ extension OpportunityViewVC{
         case VolunteerOpportunityView.ViewBtn:
             
             let vc = VolunteerOpportunityVC()
+            vc.status="Add"
             navigationController?.pushViewController(vc, animated: true)
             
         case HaveIdeaView.ViewBtn:
             
             let vc = HaveAnIdeaVC()
+            vc.status="Add"
             navigationController?.pushViewController(vc, animated: true)
             
         case experienceView.ViewBtn:
@@ -140,6 +142,14 @@ extension OpportunityViewVC{
 }
 
 extension OpportunityViewVC:ProfileDelegate{
+    func getIdea(data: MinistryIdea) {
+        
+    }
+    
+    func getVolunteerRequest(data: VolunteerRequests) {
+        
+    }
+    
     func showAlerts(title: String, message: String) {
         
     }

@@ -12,6 +12,8 @@ import SVProgressHUD
 protocol ProfileDelegate{
     func showAlerts(title:String,message:String)
     func getUserData(data:userProfile)
+    func getIdea(data:MinistryIdea)
+    func getVolunteerRequest(data:VolunteerRequests)
     func getUrlForWebPages(data:termsAndConditions)
     
 }
@@ -115,7 +117,6 @@ class ProfilePresenter:NSObject{
     }
     
     func userProfile(){
-        //        SVProgressHUD.show()
         
         SettingManager.shared.getUserProfile { Response in
             switch Response{
@@ -131,11 +132,44 @@ class ProfilePresenter:NSObject{
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
                 
             }
-            //            SVProgressHUD.dismiss()
             
         }
     }
     
+    func getMinistryIdeaData(ministryIdeaId:String){
+        SettingManager.shared.getMinistryIdeaData(ministryIdeaId: ministryIdeaId) { Response in
+            switch Response{
+                
+            case let .success(response):
+                if response.status == true{
+                    self.delegate?.getIdea(data: response.data!)
+                    
+                }else{
+                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
+                }
+            case  .failure(_):
+                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
+                
+            }
+        }
+    }
     
+    func getVolunteerRequestsData(volunteerrequestId:String){
+        SettingManager.shared.getVolunteerRequestData(volunteerrequestId:volunteerrequestId ){ Response in
+            switch Response{
+                
+            case let .success(response):
+                if response.status == true{
+                    self.delegate?.getVolunteerRequest(data: response.data!)
+                    
+                }else{
+                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
+                }
+            case  .failure(_):
+                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
+                
+            }
+        }
+    }
     
 }

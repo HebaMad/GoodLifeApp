@@ -12,33 +12,33 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="69" id="KGk-i7-Jjw" customClass="menuItemCell" customModule="GoodLifeApplocation" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="KGk-i7-Jjw" customClass="MenuItemCell" customModule="GoodLifeApplocation" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ndd-ax-i9D" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                        <rect key="frame" x="4" y="4" width="312" height="61"/>
+                        <rect key="frame" x="4" y="8" width="312" height="64"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Zdg-8X-xFt">
-                                <rect key="frame" x="0.0" y="0.0" width="312" height="61"/>
+                                <rect key="frame" x="0.0" y="0.0" width="312" height="64"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ykR-aG-3cW">
-                                        <rect key="frame" x="8" y="8.0000000000000018" width="296" height="22.666666666666671"/>
+                                        <rect key="frame" x="8" y="8" width="296" height="24"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title of the Idea" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eou-hu-GJo">
-                                                <rect key="frame" x="0.0" y="0.0" width="266" height="22.666666666666668"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="266" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" name="button"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Syg-kZ-JDn">
-                                                <rect key="frame" x="266" y="0.0" width="30" height="22.666666666666668"/>
+                                                <rect key="frame" x="266" y="0.0" width="30" height="24"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YP3-EO-O9K" customClass="UIButtonDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                                        <rect key="frame" x="3" y="-0.66666666666666607" width="24" height="24"/>
+                                                        <rect key="frame" x="3" y="0.0" width="24" height="24"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="24" id="6Yj-Zy-3r2"/>
                                                             <constraint firstAttribute="width" constant="24" id="ERZ-vj-64R"/>
@@ -75,17 +75,17 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="LJb-6B-CIy">
-                                        <rect key="frame" x="8" y="30.666666666666664" width="296" height="22.333333333333336"/>
+                                        <rect key="frame" x="8" y="32" width="296" height="24"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4Gs-6g-eKP">
-                                                <rect key="frame" x="0.0" y="1.6666666666666643" width="20" height="19.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="1.6666666666666643" width="20" height="21.000000000000004"/>
                                                 <color key="tintColor" red="0.2669999897480011" green="0.050999999046325684" blue="0.55699998140335083" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="20" id="IOZ-Pg-7cI"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Voi-eB-gdb">
-                                                <rect key="frame" x="26" y="0.0" width="270" height="22.333333333333332"/>
+                                                <rect key="frame" x="26" y="0.0" width="270" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                 <color key="textColor" red="0.2669999897480011" green="0.050999999046325684" blue="0.55699998140335083" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -119,16 +119,27 @@
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="Ndd-ax-i9D" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="Cul-SI-YLy"/>
-                    <constraint firstAttribute="bottom" secondItem="Ndd-ax-i9D" secondAttribute="bottom" constant="4" id="a9T-e3-cur"/>
-                    <constraint firstItem="Ndd-ax-i9D" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="jb0-fO-ymL"/>
+                    <constraint firstAttribute="bottom" secondItem="Ndd-ax-i9D" secondAttribute="bottom" constant="8" id="a9T-e3-cur"/>
+                    <constraint firstItem="Ndd-ax-i9D" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="jb0-fO-ymL"/>
                     <constraint firstAttribute="trailing" secondItem="Ndd-ax-i9D" secondAttribute="trailing" constant="4" id="xus-4w-EFO"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-            <point key="canvasLocation" x="47" y="12"/>
+            <connections>
+                <outlet property="dateIcon" destination="4Gs-6g-eKP" id="kw4-Ch-Grv"/>
+                <outlet property="editListItem" destination="YP3-EO-O9K" id="CQp-lp-82J"/>
+                <outlet property="noteTxt" destination="Voi-eB-gdb" id="h6v-Qr-pZc"/>
+                <outlet property="titleTxt" destination="eou-hu-GJo" id="OKI-Dd-78Q"/>
+            </connections>
+            <point key="canvasLocation" x="45.801526717557252" y="15.492957746478874"/>
         </tableViewCell>
     </objects>
+    <designables>
+        <designable name="YP3-EO-O9K">
+            <size key="intrinsicContentSize" width="17.333333333333332" height="22"/>
+        </designable>
+    </designables>
     <resources>
         <image name="calendar" catalog="system" width="128" height="107"/>
         <image name="pencil" catalog="system" width="128" height="113"/>

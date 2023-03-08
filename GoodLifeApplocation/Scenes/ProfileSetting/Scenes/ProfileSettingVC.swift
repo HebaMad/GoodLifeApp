@@ -91,6 +91,14 @@ extension ProfileSettingVC{
 }
 
 extension ProfileSettingVC:ProfileDelegate{
+    func getIdea(data: MinistryIdea) {
+        
+    }
+    
+    func getVolunteerRequest(data: VolunteerRequests) {
+        
+    }
+    
     func showAlerts(title: String, message: String) {
         self.sceneDelegate.setRootVC(vc: SplashScreen())
         
