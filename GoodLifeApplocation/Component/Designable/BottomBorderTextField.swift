@@ -19,7 +19,8 @@ import UIKit
     @IBInspectable var borderWidth: CGFloat = 0
     @IBInspectable var borderColor: UIColor = UIColor.clear
     @IBInspectable var cornerRadius: CGFloat = 0
-    
+    @IBInspectable var icon: UIImage = UIImage()
+
     override func layoutSubviews() {
         super.layoutSubviews()
         
@@ -40,6 +41,8 @@ import UIKit
         layer.borderWidth = borderWidth
         layer.borderColor = borderColor.cgColor
         layer.cornerRadius = cornerRadius
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        imageView.image = icon
     }
     
     // Provides left padding for images
