@@ -81,10 +81,10 @@
                                                     <rect key="frame" x="0.0" y="52" width="414" height="492"/>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="NBZ-gm-2WM">
-                                                    <rect key="frame" x="16" y="30" width="382" height="279.5"/>
+                                                    <rect key="frame" x="16" y="30" width="382" height="278"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VsY-M7-Oof">
-                                                            <rect key="frame" x="0.0" y="0.0" width="382" height="57.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="382" height="56"/>
                                                             <string key="text">What is your 
 ministry idea??</string>
                                                             <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="24"/>
@@ -92,7 +92,7 @@ ministry idea??</string>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Idea" translatesAutoresizingMaskIntoConstraints="NO" id="lNS-eJ-Vrf" customClass="UIImageViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="82.5" width="382" height="131"/>
+                                                            <rect key="frame" x="0.0" y="81" width="382" height="131"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="131" id="qQg-de-pAZ"/>
                                                             </constraints>
@@ -109,7 +109,7 @@ ministry idea??</string>
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Once you complete the form, we will review your idea, and implement it into our system!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XRU-lA-6KV">
-                                                            <rect key="frame" x="0.0" y="238.5" width="382" height="41"/>
+                                                            <rect key="frame" x="0.0" y="237" width="382" height="41"/>
                                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -162,16 +162,16 @@ ministry idea??</string>
                                                             <rect key="frame" x="20" y="119" width="374" height="173.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description of work" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bVC-ek-ZP0">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="17"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="16.5"/>
                                                                     <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="14"/>
                                                                     <color key="textColor" name="button"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HnA-yy-7if" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="27" width="374" height="146.5"/>
+                                                                    <rect key="frame" x="0.0" y="26.5" width="374" height="147"/>
                                                                     <subviews>
                                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HdB-3z-HJ7">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="146.5"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="147"/>
                                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <color key="textColor" systemColor="labelColor"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -422,7 +422,7 @@ ministry idea??</string>
             <size key="intrinsicContentSize" width="12.5" height="22"/>
         </designable>
         <designable name="rTn-aA-lXH">
-            <size key="intrinsicContentSize" width="32" height="34"/>
+            <size key="intrinsicContentSize" width="53" height="34"/>
         </designable>
         <designable name="tHo-q8-ePB">
             <size key="intrinsicContentSize" width="107" height="24"/>

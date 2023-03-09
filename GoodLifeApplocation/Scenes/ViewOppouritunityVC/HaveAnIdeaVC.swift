@@ -39,6 +39,7 @@ class HaveAnIdeaVC: UIViewController ,UITextFieldDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setData()
         presenter.getFundType()
         presenter.delegate=self
         monthlyRevenuTxt.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
@@ -52,6 +53,17 @@ class HaveAnIdeaVC: UIViewController ,UITextFieldDelegate{
     func setupDataPicker(){
         categoryTxt.dataSource=self
         categoryTxt.pickerDelegate=self
+    }
+    
+    func setData(){
+        titleProjectText.text = ministryIDEA?.title
+        locationTxt.text = ministryIDEA?.location
+        descriptionText.text = ministryIDEA?.details
+        monthlyRevenuTxt.text = ministryIDEA?.monthly_revenue
+        weeklyTimeSelection.text = ministryIDEA?.time_commitment
+//        categoryTxt.text = ministryIDEA.
+        
+
     }
     
     //MARK: - setupTimePicker
