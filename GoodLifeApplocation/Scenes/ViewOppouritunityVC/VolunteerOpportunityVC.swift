@@ -49,7 +49,7 @@ class VolunteerOpportunityVC: UIViewController {
     
     fileprivate func setupTimePicker() {
         
-        eventTimeTxt.setFormat(format: "HH:mm:ss")
+        eventTimeTxt.setFormat(format: "HH:mm")
         eventTimeTxt.setDatePickerMode(mode: .time)
         
         eventDayTxt.setFormat(format: "YYYY/MM/dd")
