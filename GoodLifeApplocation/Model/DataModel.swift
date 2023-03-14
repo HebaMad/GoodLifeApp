@@ -482,6 +482,7 @@ struct MinistryIdea:Decodable {
     let location:String?
     let read : String?
     let created_at:String?
+    let fund_type:CategoryFundType?
                
 }
 struct VolunteerRequests:Decodable {
@@ -500,4 +501,16 @@ struct VolunteerRequests:Decodable {
           
 }
 
+struct CategoryFundType:Decodable{
+    
+    let id:Int?
+    let name:String?
+    let image:String?
+    let views:String?
+    let status:String?
+    let created_at:String?
+    let updated_at:String?
+    let deleted_at:String?
 
+
+}

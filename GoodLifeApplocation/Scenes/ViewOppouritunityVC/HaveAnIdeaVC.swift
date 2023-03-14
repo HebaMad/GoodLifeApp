@@ -61,7 +61,7 @@ class HaveAnIdeaVC: UIViewController ,UITextFieldDelegate{
         descriptionText.text = ministryIDEA?.details
         monthlyRevenuTxt.text = ministryIDEA?.monthly_revenue
         weeklyTimeSelection.text = ministryIDEA?.time_commitment
-//        categoryTxt.text = ministryIDEA.
+        categoryTxt.text = ministryIDEA?.fund_type?.name
         
 
     }

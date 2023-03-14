@@ -35,7 +35,7 @@ enum SettingApiTarget:TargetType{
         case .editProfile: return "editProfile"
         case .logout: return "logout"
         case .updateMinistryIdea:return "updateMinistryIdea"
-        case .updateVolunteerRequest:return "updateVolunteerRequest"
+        case .updateVolunteerRequest:return "updateVolunteer"
         case .getVolunteerRequestData: return "editVolunteerRequest"
         case .getMinistryIdeaData:return "editMinistryIdea"
             

@@ -28,8 +28,7 @@ class MenuItemCell: UITableViewCell , NibLoadableView{
     func configureCellOfMinistryIdea(object:MinistryIdea){
         dateIcon.isHidden=true
         titleTxt.text = object.title
-
-//        noteTxt.text = object.
+        noteTxt.text = object.fund_type?.name
         
     }
     func configureCellOfvolunteerRequest(object:VolunteerRequests){
