@@ -110,6 +110,14 @@
 		278882D829BC9D650025A6D0 /* OpportunitiesStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278882D629BC9D650025A6D0 /* OpportunitiesStatusCell.swift */; };
 		278882D929BC9D650025A6D0 /* OpportunitiesStatusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 278882D729BC9D650025A6D0 /* OpportunitiesStatusCell.xib */; };
 		278882DC29BCA2BD0025A6D0 /* OpportunityListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278882DB29BCA2BD0025A6D0 /* OpportunityListVC.swift */; };
+		278882DF29C0706B0025A6D0 /* OpportunitiesCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278882DD29C0706B0025A6D0 /* OpportunitiesCollectionCell.swift */; };
+		278882E029C0706B0025A6D0 /* OpportunitiesCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 278882DE29C0706B0025A6D0 /* OpportunitiesCollectionCell.xib */; };
+		278882E329C0786C0025A6D0 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278882E129C0786C0025A6D0 /* CategoryCell.swift */; };
+		278882E429C0786C0025A6D0 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 278882E229C0786C0025A6D0 /* CategoryCell.xib */; };
+		278882E729C07ED50025A6D0 /* BannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278882E529C07ED50025A6D0 /* BannerCell.swift */; };
+		278882E829C07ED50025A6D0 /* BannerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 278882E629C07ED50025A6D0 /* BannerCell.xib */; };
+		278882EA29C087DA0025A6D0 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278882E929C087DA0025A6D0 /* MainVC.swift */; };
+		278882EC29C0A1310025A6D0 /* MainCategoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278882EB29C0A1310025A6D0 /* MainCategoriesModel.swift */; };
 		279404C6299EAC8A00742AD9 /* EditHobbiesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279404C4299EAC8A00742AD9 /* EditHobbiesVC.swift */; };
 		279404C7299EAC8A00742AD9 /* EditHobbiesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 279404C5299EAC8A00742AD9 /* EditHobbiesVC.xib */; };
 		27985F3C29968F2F006C8FE9 /* FavouriteHobbiesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27985F3A29968F2F006C8FE9 /* FavouriteHobbiesVC.swift */; };
@@ -383,6 +391,14 @@
 		278882D629BC9D650025A6D0 /* OpportunitiesStatusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpportunitiesStatusCell.swift; sourceTree = "<group>"; };
 		278882D729BC9D650025A6D0 /* OpportunitiesStatusCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpportunitiesStatusCell.xib; sourceTree = "<group>"; };
 		278882DB29BCA2BD0025A6D0 /* OpportunityListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpportunityListVC.swift; sourceTree = "<group>"; };
+		278882DD29C0706B0025A6D0 /* OpportunitiesCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpportunitiesCollectionCell.swift; sourceTree = "<group>"; };
+		278882DE29C0706B0025A6D0 /* OpportunitiesCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpportunitiesCollectionCell.xib; sourceTree = "<group>"; };
+		278882E129C0786C0025A6D0 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		278882E229C0786C0025A6D0 /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
+		278882E529C07ED50025A6D0 /* BannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCell.swift; sourceTree = "<group>"; };
+		278882E629C07ED50025A6D0 /* BannerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerCell.xib; sourceTree = "<group>"; };
+		278882E929C087DA0025A6D0 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		278882EB29C0A1310025A6D0 /* MainCategoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCategoriesModel.swift; sourceTree = "<group>"; };
 		279404C4299EAC8A00742AD9 /* EditHobbiesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHobbiesVC.swift; sourceTree = "<group>"; };
 		279404C5299EAC8A00742AD9 /* EditHobbiesVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditHobbiesVC.xib; sourceTree = "<group>"; };
 		27985F3A29968F2F006C8FE9 /* FavouriteHobbiesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteHobbiesVC.swift; sourceTree = "<group>"; };
@@ -631,6 +647,12 @@
 			children = (
 				278882D629BC9D650025A6D0 /* OpportunitiesStatusCell.swift */,
 				278882D729BC9D650025A6D0 /* OpportunitiesStatusCell.xib */,
+				278882DD29C0706B0025A6D0 /* OpportunitiesCollectionCell.swift */,
+				278882DE29C0706B0025A6D0 /* OpportunitiesCollectionCell.xib */,
+				278882E129C0786C0025A6D0 /* CategoryCell.swift */,
+				278882E229C0786C0025A6D0 /* CategoryCell.xib */,
+				278882E529C07ED50025A6D0 /* BannerCell.swift */,
+				278882E629C07ED50025A6D0 /* BannerCell.xib */,
 			);
 			path = XIB;
 			sourceTree = "<group>";
@@ -639,6 +661,8 @@
 			isa = PBXGroup;
 			children = (
 				278882DB29BCA2BD0025A6D0 /* OpportunityListVC.swift */,
+				278882E929C087DA0025A6D0 /* MainVC.swift */,
+				278882EB29C0A1310025A6D0 /* MainCategoriesModel.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -1220,6 +1244,7 @@
 				27C9AE20288D38E900FA584A /* Frameworks */,
 				27C9AE21288D38E900FA584A /* Resources */,
 				37062CBD80447D9716DFAD37 /* [CP] Embed Pods Frameworks */,
+				279E359E5923AEBA31CA56EB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1305,6 +1330,7 @@
 				2767A276288F504A00DF34D1 /* DonationFourthFrame.xib in Resources */,
 				2764D6CC28E2E47000AC7F73 /* LessonDetails.xib in Resources */,
 				27C9AE5F288D3CB500FA584A /* Inter-Italic.ttf in Resources */,
+				278882E029C0706B0025A6D0 /* OpportunitiesCollectionCell.xib in Resources */,
 				27F4B14328B7F504003365A6 /* ContactUsVC.xib in Resources */,
 				27C9AE5E288D3CB500FA584A /* Inter-ExtraBoldItalic.ttf in Resources */,
 				27CB2083289D44C500E63694 /* SearchView.xib in Resources */,
@@ -1359,11 +1385,13 @@
 				277336F6290DBB0C002932B2 /* SpecificWebsiteCompetitorCell.xib in Resources */,
 				27C9AE8A288D51FD00FA584A /* OnBoardingFrame4.xib in Resources */,
 				2767A28828904DF800DF34D1 /* DonationFirstFrame.xib in Resources */,
+				278882E829C07ED50025A6D0 /* BannerCell.xib in Resources */,
 				27CB2095289FC6CC00E63694 /* GeneralPagerViewVC.xib in Resources */,
 				27A7377C2891D16100FD8AD9 /* SubscriptionCollectionViewCell.xib in Resources */,
 				27C9AE2E288D38E900FA584A /* Main.storyboard in Resources */,
 				27C9AE5A288D3CB500FA584A /* Inter-ThinItalic-BETA.ttf in Resources */,
 				27C9AE79288D470600FA584A /* OnBoardingVC.xib in Resources */,
+				278882E429C0786C0025A6D0 /* CategoryCell.xib in Resources */,
 				2767A2992890A48600DF34D1 /* FilterVC.xib in Resources */,
 				27C9AE62288D3CB500FA584A /* Inter-Light-BETA.ttf in Resources */,
 				270562CD28BFC3AF00B0124E /* TermsAndConditions.xib in Resources */,
@@ -1378,6 +1406,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		279E359E5923AEBA31CA56EB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoodLifeApplocation/Pods-GoodLifeApplocation-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoodLifeApplocation/Pods-GoodLifeApplocation-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GoodLifeApplocation/Pods-GoodLifeApplocation-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		37062CBD80447D9716DFAD37 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1434,11 +1479,14 @@
 				2710A299289AF485009BCE60 /* PastVentures.swift in Sources */,
 				27CBC5A92927CDA5000AE9A6 /* LayoutConstraintsExtension.swift in Sources */,
 				27CB209C289FFE9800E63694 /* GeneralFinicialPagerVC.swift in Sources */,
+				278882EC29C0A1310025A6D0 /* MainCategoriesModel.swift in Sources */,
 				27CB205F289B0FDC00E63694 /* ResourceDetailsCell.swift in Sources */,
 				2768159029904DD800084834 /* MenuItemCell.swift in Sources */,
 				27B8C8F528A16B5A0011B039 /* FilterHeaderReusableview.swift in Sources */,
+				278882E329C0786C0025A6D0 /* CategoryCell.swift in Sources */,
 				270562D128BFD1C400B0124E /* DashboardTarget.swift in Sources */,
 				27A737692891431000FD8AD9 /* OpportunityView.swift in Sources */,
+				278882DF29C0706B0025A6D0 /* OpportunitiesCollectionCell.swift in Sources */,
 				27CB207D289CFDFE00E63694 /* BottomBorderTextField.swift in Sources */,
 				27CB2054289B038800E63694 /* RatingControl.swift in Sources */,
 				2710A290289A6677009BCE60 /* TaskVC.swift in Sources */,
@@ -1453,6 +1501,7 @@
 				27C9AE2B288D38E900FA584A /* ViewController.swift in Sources */,
 				27CBC5AD2927CDA5000AE9A6 /* CDAlertView+Extension.swift in Sources */,
 				2798B9E5298EEA2A00BB18BF /* CategoryReviews.swift in Sources */,
+				278882EA29C087DA0025A6D0 /* MainVC.swift in Sources */,
 				27B8C90028A198BB0011B039 /* NibLoadableView.swift in Sources */,
 				27CB2098289FC79700E63694 /* SpecificPagerVC.swift in Sources */,
 				27C9AEBC288EFBA200FA584A /* DonationFrameTwoVC.swift in Sources */,
@@ -1463,6 +1512,7 @@
 				279D477B2996A5BB000A011E /* HobbiesItems.swift in Sources */,
 				2764D6CF28E2FA6600AC7F73 /* LessonDetailsCollectionCell.swift in Sources */,
 				27A737662891407200FD8AD9 /* TableViewHelper.swift in Sources */,
+				278882E729C07ED50025A6D0 /* BannerCell.swift in Sources */,
 				273D2FD529996730006D9CB0 /* StewardingMyResourcesVC.swift in Sources */,
 				27CB2075289C1CEF00E63694 /* AllResourceVC.swift in Sources */,
 				27CB2063289BBA1E00E63694 /* PastGoalsCell.swift in Sources */,

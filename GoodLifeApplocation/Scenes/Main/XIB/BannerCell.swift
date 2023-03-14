@@ -7,11 +7,20 @@
 
 import UIKit
 
-class BannerCell: UICollectionViewCell {
+class BannerCell: UICollectionViewCell,NibLoadableView {
 
+    
+    @IBOutlet weak var titleTxt: UILabel!
+    @IBOutlet weak var bannerImage: UIImageView!
+    @IBOutlet weak var shortDescriptionTxt: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
     }
 
+    
+    func configureCell(){
+        
+    }
 }

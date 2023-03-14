@@ -27,11 +27,14 @@ class CreateOppourtinityVC: UIViewController {
     }
 
     func textViewDidBeginEditing(_ textView: UITextView) {
+        
     if descriptionTxtView.textColor == .lightGray {
         descriptionTxtView.text = ""
         descriptionTxtView.textColor = .black
     }
+        
     }
+    
     @IBAction func backBtn(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }

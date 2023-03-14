@@ -135,3 +135,25 @@ enum StewardingResource{
     
     
 }
+
+enum MainCategory{
+    case Categories([listData])
+    case Banner([listData])
+    case Map([listData])
+    case Opportunities([listData])
+
+    var title: String {
+        switch self {
+        case .Categories:
+            return "Categories"
+        case .Banner:
+            return "Banner"
+        case .Map:
+            return "Map"
+        case .Opportunities:
+            return "Opportunities"
+
+        }
+    }
+    
+}

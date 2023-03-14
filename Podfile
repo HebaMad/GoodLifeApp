@@ -21,5 +21,6 @@ target 'GoodLifeApplocation' do
   pod 'Firebase/Messaging'
   pod 'Firebase/Firestore'
   pod 'Charts' 
-
+  pod 'GoogleMaps'
+  
 end

@@ -514,3 +514,49 @@ struct CategoryFundType:Decodable{
 
 
 }
+
+struct MainRequest:Decodable{
+    
+    let categories:[categoryData]?
+    let opportunities:[opportunitiesData]?
+
+}
+
+struct categoryData:Codable{
+    
+    let id:Int?
+    let name:String?
+    let logo:String?
+    let main_category_id:String?
+    let sub_category_id:String?
+    let latitude:String?
+    let longitude:String?
+    let city:String?
+    let default_need:String?
+
+}
+struct opportunitiesData:Codable{
+    
+    let id:Int?
+    let title:String?
+    let sub_title:String?
+    let category:String?
+    let work_type:String?
+    let level_of_difficulty:String?
+    let amount_of_technology:String?
+    let amount_raise:String?
+    let interest:String?
+    let image:String?
+    let opportunity_match:String?
+    let rate:Int?
+    let rate_count:Int?
+    let websites:String?
+    let status:String?
+    let created_at:String?
+    let models:String?
+    let plans:String?
+
+
+}
+
+

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OpportunitiesCollectionCell: UICollectionViewCell {
+class OpportunitiesCollectionCell: UICollectionViewCell,NibLoadableView {
 
     override func awakeFromNib() {
         super.awakeFromNib()
