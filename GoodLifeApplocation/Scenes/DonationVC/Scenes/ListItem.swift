@@ -14,6 +14,10 @@ struct listData{
     let title: String
 
 }
+
+struct EmptyList{
+    
+}
 struct BusinessPlanData{
     
     let title: String

@@ -75,6 +75,7 @@
             </constraints>
             <connections>
                 <outlet property="editBtn" destination="Dts-hT-eLx" id="nxQ-j6-InB"/>
+                <outlet property="editView" destination="2JF-8Q-bpd" id="a5B-z1-U4y"/>
                 <outlet property="headerTitleLabel" destination="aLb-JW-eI1" id="1bs-ke-pr9"/>
                 <outlet property="viewAllButton" destination="rlJ-6z-dxI" id="hRS-6J-xB7"/>
             </connections>
