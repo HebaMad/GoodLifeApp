@@ -25,7 +25,6 @@ class OpportunityListVC: UIViewController {
         setupTableView()
 
     }
-    
 
     func setupTableView(){
         opportunitiesTableview.register(OpportunitiesStatusCell.self)

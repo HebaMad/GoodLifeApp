@@ -11,30 +11,30 @@ struct MainCategoriesModel{
     //MARK: - Properties
 
     var AllCategories:[MainCategory]{
-        [categories,banner,map,opportunities]
+        [categories,map,banner,opportunities]
 
     }
     static let shared = MainCategoriesModel()
     
     private let categories: MainCategory = {
         
-        .Categories(.init())
+        .Categories([.init(title: "test")])
         
     }()
     private let banner: MainCategory = {
         
-        .Banner(.init())
+        .Banner([.init(title: "test")])
         
     }()
                 
     private let map : MainCategory = {
             
-            .Map(.init())
+            .Map([.init(title: "test")])
         }()
                     
     private let opportunities: MainCategory = {
             
-            .Opportunities(.init())
+            .Opportunities([.init(title: "test")])
         }()
               
 

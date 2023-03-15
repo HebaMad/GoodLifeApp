@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CreateOpportunitiesCell" customModule="GoodLifeApplocation" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="367" height="115"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="367" height="115"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pIV-hx-yWT">
+                        <rect key="frame" x="8" y="4" width="351" height="107"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="VIE-Bb-22H">
+                                <rect key="frame" x="0.0" y="0.0" width="351" height="107"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RTV-Y2-BiK">
+                                        <rect key="frame" x="8" y="10" width="335" height="45"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="eUJ-f8-ocC">
+                                                <rect key="frame" x="147.66666666666666" y="3.6666666666666643" width="40" height="38.666666666666671"/>
+                                                <color key="tintColor" name="BgColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="3aF-9g-Z1C"/>
+                                                    <constraint firstAttribute="height" constant="40" id="K6x-cN-lbu"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="eUJ-f8-ocC" firstAttribute="centerY" secondItem="RTV-Y2-BiK" secondAttribute="centerY" id="49M-FA-0Tw"/>
+                                            <constraint firstItem="eUJ-f8-ocC" firstAttribute="centerX" secondItem="RTV-Y2-BiK" secondAttribute="centerX" id="IPe-zB-pAO"/>
+                                            <constraint firstAttribute="height" constant="45" id="SD9-ZI-xDZ"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create your first opportunity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tr5-Pb-bsx">
+                                        <rect key="frame" x="8" y="55" width="335" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="BgColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="8" bottom="10" trailing="8"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="VIE-Bb-22H" secondAttribute="trailing" id="A1E-DF-utm"/>
+                            <constraint firstItem="VIE-Bb-22H" firstAttribute="leading" secondItem="pIV-hx-yWT" secondAttribute="leading" id="KVB-VL-3Mh"/>
+                            <constraint firstAttribute="bottom" secondItem="VIE-Bb-22H" secondAttribute="bottom" id="ZBs-Uh-mSV"/>
+                            <constraint firstItem="VIE-Bb-22H" firstAttribute="top" secondItem="pIV-hx-yWT" secondAttribute="top" id="zK4-vn-NFI"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="pIV-hx-yWT" secondAttribute="bottom" constant="4" id="As7-QH-1Bw"/>
+                <constraint firstItem="pIV-hx-yWT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="PCd-I3-Dox"/>
+                <constraint firstAttribute="trailing" secondItem="pIV-hx-yWT" secondAttribute="trailing" constant="8" id="paJ-gQ-PSL"/>
+                <constraint firstItem="pIV-hx-yWT" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="4" id="rdE-qA-8Mw"/>
+            </constraints>
+            <size key="customSize" width="367" height="115"/>
+            <point key="canvasLocation" x="63" y="44"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="plus.circle.fill" catalog="system" width="128" height="123"/>
+        <namedColor name="BgColor">
+            <color red="0.59200000762939453" green="0.27799999713897705" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
