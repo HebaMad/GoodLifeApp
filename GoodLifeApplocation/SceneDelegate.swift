@@ -39,7 +39,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 setRootVC(vc: SplashScreen())
             } else {
                 let nav1 = UINavigationController()
-                let mainView = MapVC()  
+                let mainView = TabBarVC.instantiate()
                 nav1.viewControllers = [mainView]
                 nav1.navigationBar.isHidden = true
                 setRootVC(vc: nav1)

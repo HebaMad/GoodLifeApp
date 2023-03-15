@@ -142,6 +142,22 @@ enum MainCategory{
     case Map([listData])
     case Opportunities([listData])
 
+    
+    var items: [listData] {
+        
+        switch self {
+            
+        case .Categories(let items),.Banner(let items),.Opportunities(let items),.Map(let items):
+               
+            return items
+     
+        }
+        
+    }
+    
+    var count: Int {
+        return items.count
+    }
     var title: String {
         switch self {
         case .Categories:

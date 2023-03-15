@@ -15,12 +15,13 @@ target 'GoodLifeApplocation' do
   pod 'SVProgressHUD'
   pod 'SDWebImage', '~> 5.0'
   pod 'MaterialComponents/Snackbar'
-  pod 'SkeletonView'
   pod 'DropDown'
   pod 'FirebaseCore'
   pod 'Firebase/Messaging'
   pod 'Firebase/Firestore'
   pod 'Charts' 
-  pod 'GoogleMaps'
+#  pod 'GoogleMaps'
+  pod 'SkeletonView'
+
   
 end

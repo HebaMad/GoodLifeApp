@@ -7,6 +7,7 @@
 
 import UIKit
 import SkeletonView
+
 class NotificationVC: UIViewController {
     //MARK: - Outlet
     @IBOutlet weak var notificationTableview: UITableView!
