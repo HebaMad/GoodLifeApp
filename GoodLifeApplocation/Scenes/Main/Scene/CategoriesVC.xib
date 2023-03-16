@@ -6,7 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -37,6 +36,9 @@
                             <color key="tintColor" red="0.78039215689999997" green="0.78039215689999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" image="chevron.backward" catalog="system"/>
+                            <connections>
+                                <action selector="backBtn:" destination="-1" eventType="touchUpInside" id="fwd-VB-4ru"/>
+                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pCp-l8-SOZ">
                             <rect key="frame" x="157" y="14" width="79" height="22"/>
@@ -56,9 +58,9 @@
                         <constraint firstItem="pCp-l8-SOZ" firstAttribute="centerX" secondItem="y7d-ya-Gxb" secondAttribute="centerX" id="zIe-fN-UMr"/>
                     </constraints>
                 </view>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Tnh-BR-UYF">
-                    <rect key="frame" x="0.0" y="113" width="393" height="705"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Tnh-BR-UYF">
+                    <rect key="frame" x="16" y="113" width="361" height="705"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bts-Nd-IqX">
                         <size key="itemSize" width="128" height="128"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -68,13 +70,13 @@
                 </collectionView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" name="bg3"/>
             <constraints>
                 <constraint firstItem="y7d-ya-Gxb" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="2ZS-wE-pdL"/>
-                <constraint firstItem="Tnh-BR-UYF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Oee-a0-IMy"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Tnh-BR-UYF" secondAttribute="trailing" constant="16" id="5id-gR-n7w"/>
+                <constraint firstItem="Tnh-BR-UYF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="HTe-2i-qrK"/>
                 <constraint firstItem="y7d-ya-Gxb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="QhU-zf-lQl"/>
                 <constraint firstAttribute="trailing" secondItem="y7d-ya-Gxb" secondAttribute="trailing" id="RqZ-Cf-IkG"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Tnh-BR-UYF" secondAttribute="trailing" id="YcE-ko-dr2"/>
                 <constraint firstItem="Tnh-BR-UYF" firstAttribute="top" secondItem="y7d-ya-Gxb" secondAttribute="bottom" constant="4" id="dkc-oD-ZZ4"/>
                 <constraint firstItem="Tnh-BR-UYF" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="zht-VT-nSo"/>
             </constraints>
@@ -83,11 +85,11 @@
     </objects>
     <resources>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
+        <namedColor name="bg3">
+            <color red="0.97299998998641968" green="0.9649999737739563" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="button">
             <color red="0.2669999897480011" green="0.050999999046325684" blue="0.55699998140335083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

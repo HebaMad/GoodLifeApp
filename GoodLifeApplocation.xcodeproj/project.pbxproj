@@ -125,6 +125,8 @@
 		278882F629C1FC880025A6D0 /* MapCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 278882F429C1FC880025A6D0 /* MapCell.xib */; };
 		278882F929C211500025A6D0 /* CreateOpportunitiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278882F729C211500025A6D0 /* CreateOpportunitiesCell.swift */; };
 		278882FA29C211500025A6D0 /* CreateOpportunitiesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 278882F829C211500025A6D0 /* CreateOpportunitiesCell.xib */; };
+		278882FD29C342D80025A6D0 /* searchviewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278882FB29C342D80025A6D0 /* searchviewHeader.swift */; };
+		278882FE29C342D80025A6D0 /* searchviewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 278882FC29C342D80025A6D0 /* searchviewHeader.xib */; };
 		279404C6299EAC8A00742AD9 /* EditHobbiesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279404C4299EAC8A00742AD9 /* EditHobbiesVC.swift */; };
 		279404C7299EAC8A00742AD9 /* EditHobbiesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 279404C5299EAC8A00742AD9 /* EditHobbiesVC.xib */; };
 		27985F3C29968F2F006C8FE9 /* FavouriteHobbiesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27985F3A29968F2F006C8FE9 /* FavouriteHobbiesVC.swift */; };
@@ -413,6 +415,8 @@
 		278882F429C1FC880025A6D0 /* MapCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapCell.xib; sourceTree = "<group>"; };
 		278882F729C211500025A6D0 /* CreateOpportunitiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOpportunitiesCell.swift; sourceTree = "<group>"; };
 		278882F829C211500025A6D0 /* CreateOpportunitiesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateOpportunitiesCell.xib; sourceTree = "<group>"; };
+		278882FB29C342D80025A6D0 /* searchviewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchviewHeader.swift; sourceTree = "<group>"; };
+		278882FC29C342D80025A6D0 /* searchviewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = searchviewHeader.xib; sourceTree = "<group>"; };
 		279404C4299EAC8A00742AD9 /* EditHobbiesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHobbiesVC.swift; sourceTree = "<group>"; };
 		279404C5299EAC8A00742AD9 /* EditHobbiesVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditHobbiesVC.xib; sourceTree = "<group>"; };
 		27985F3A29968F2F006C8FE9 /* FavouriteHobbiesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteHobbiesVC.swift; sourceTree = "<group>"; };
@@ -671,6 +675,8 @@
 				278882F429C1FC880025A6D0 /* MapCell.xib */,
 				278882F729C211500025A6D0 /* CreateOpportunitiesCell.swift */,
 				278882F829C211500025A6D0 /* CreateOpportunitiesCell.xib */,
+				278882FB29C342D80025A6D0 /* searchviewHeader.swift */,
+				278882FC29C342D80025A6D0 /* searchviewHeader.xib */,
 			);
 			path = XIB;
 			sourceTree = "<group>";
@@ -1357,6 +1363,7 @@
 				27C9AE58288D3CB500FA584A /* Inter-Thin-BETA.ttf in Resources */,
 				27CB2068289BBEA600E63694 /* BenchmarksCell.xib in Resources */,
 				2768DED828A3F473004C6A5B /* AddTaskVC.xib in Resources */,
+				278882FE29C342D80025A6D0 /* searchviewHeader.xib in Resources */,
 				27A7375E28913F0500FD8AD9 /* ProgressView.xib in Resources */,
 				278882F629C1FC880025A6D0 /* MapCell.xib in Resources */,
 				2710A29A289AF485009BCE60 /* PastVentures.xib in Resources */,
@@ -1608,6 +1615,7 @@
 				27C9AE27288D38E900FA584A /* AppDelegate.swift in Sources */,
 				270562DB28C0A32A00B0124E /* Validator.swift in Sources */,
 				2765D5FB28F4083C008835D9 /* GeneralFinancialCell.swift in Sources */,
+				278882FD29C342D80025A6D0 /* searchviewHeader.swift in Sources */,
 				27CBC5AB2927CDA5000AE9A6 /* CDAlertView.swift in Sources */,
 				270562D328BFD1EE00B0124E /* DashboardNetworkable.swift in Sources */,
 				27CBC5A72927CDA5000AE9A6 /* CDAlertHeaderView.swift in Sources */,

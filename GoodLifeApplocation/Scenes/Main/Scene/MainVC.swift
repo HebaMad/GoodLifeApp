@@ -43,7 +43,21 @@ class MainVC: UIViewController {
 extension MainVC{
     @objc func viewAllButton(_ sender:UIButton){
         
-        
+        switch sections[sender.tag]{
+            
+            
+        case .Categories:
+            let vc = CategoriesVC()
+            navigationController?.pushViewController(vc, animated: true)
+        case .Banner:
+            print("No Actions")
+        case .Map:
+            print("No Actions")
+
+        case .Opportunities:
+            print("No Actions")
+
+        }
     }
 }
 
