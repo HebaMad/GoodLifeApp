@@ -9,9 +9,13 @@ import UIKit
 
 class searchviewHeader: UICollectionReusableView {
 
+    @IBOutlet weak var searchView: SearchView!
+    
+    static let headerIdentifier = "searchviewHeader"
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
     }
     
 }
