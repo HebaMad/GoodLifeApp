@@ -45,9 +45,17 @@
                 <constraint firstItem="PvI-Za-99v" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="pV4-CO-gWd"/>
             </constraints>
             <size key="customSize" width="355" height="123"/>
+            <connections>
+                <outlet property="exploreOpportunitiesBtn" destination="PvI-Za-99v" id="sPZ-xl-xe0"/>
+            </connections>
             <point key="canvasLocation" x="146" y="30"/>
         </collectionViewCell>
     </objects>
+    <designables>
+        <designable name="PvI-Za-99v">
+            <size key="intrinsicContentSize" width="243" height="34"/>
+        </designable>
+    </designables>
     <resources>
         <image name="map" width="366" height="140"/>
     </resources>

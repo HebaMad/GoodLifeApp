@@ -9,6 +9,7 @@ import UIKit
 
 class MapCell: UICollectionViewCell,NibLoadableView {
 
+    @IBOutlet weak var exploreOpportunitiesBtn: UIButtonDesignable!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

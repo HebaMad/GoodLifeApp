@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="367" height="115"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pIV-hx-yWT">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pIV-hx-yWT" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
                         <rect key="frame" x="8" y="4" width="351" height="107"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="VIE-Bb-22H">
@@ -28,6 +28,10 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RTV-Y2-BiK">
                                         <rect key="frame" x="8" y="10" width="335" height="45"/>
                                         <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nio-Xw-XDa">
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="45"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="eUJ-f8-ocC">
                                                 <rect key="frame" x="147.66666666666666" y="3.6666666666666643" width="40" height="38.666666666666671"/>
                                                 <color key="tintColor" name="BgColor"/>
@@ -40,11 +44,15 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="eUJ-f8-ocC" firstAttribute="centerY" secondItem="RTV-Y2-BiK" secondAttribute="centerY" id="49M-FA-0Tw"/>
+                                            <constraint firstAttribute="bottom" secondItem="Nio-Xw-XDa" secondAttribute="bottom" id="7Dd-QO-wfp"/>
+                                            <constraint firstAttribute="trailing" secondItem="Nio-Xw-XDa" secondAttribute="trailing" id="DYc-al-Rdx"/>
                                             <constraint firstItem="eUJ-f8-ocC" firstAttribute="centerX" secondItem="RTV-Y2-BiK" secondAttribute="centerX" id="IPe-zB-pAO"/>
                                             <constraint firstAttribute="height" constant="45" id="SD9-ZI-xDZ"/>
+                                            <constraint firstItem="Nio-Xw-XDa" firstAttribute="leading" secondItem="RTV-Y2-BiK" secondAttribute="leading" id="VFW-h1-m2d"/>
+                                            <constraint firstItem="Nio-Xw-XDa" firstAttribute="top" secondItem="RTV-Y2-BiK" secondAttribute="top" id="msS-Nt-mZY"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create your first opportunity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tr5-Pb-bsx">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create your first opportunity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Tr5-Pb-bsx">
                                         <rect key="frame" x="8" y="55" width="335" height="42"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" name="BgColor"/>
@@ -61,6 +69,17 @@
                             <constraint firstAttribute="bottom" secondItem="VIE-Bb-22H" secondAttribute="bottom" id="ZBs-Uh-mSV"/>
                             <constraint firstItem="VIE-Bb-22H" firstAttribute="top" secondItem="pIV-hx-yWT" secondAttribute="top" id="zK4-vn-NFI"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
             </view>
@@ -72,7 +91,10 @@
                 <constraint firstItem="pIV-hx-yWT" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="4" id="rdE-qA-8Mw"/>
             </constraints>
             <size key="customSize" width="367" height="115"/>
-            <point key="canvasLocation" x="63" y="44"/>
+            <connections>
+                <outlet property="createOpportunitiesBtn" destination="Nio-Xw-XDa" id="WZq-Ve-cCi"/>
+            </connections>
+            <point key="canvasLocation" x="61.832061068702288" y="43.309859154929576"/>
         </collectionViewCell>
     </objects>
     <resources>

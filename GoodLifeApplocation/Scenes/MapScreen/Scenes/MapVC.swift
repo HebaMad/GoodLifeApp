@@ -354,6 +354,9 @@ extension MapVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollection
 }
 
 extension MapVC :HomeDelegate{
+
+    func getMainScreenData(data: MainScreenData) { }
+    
     func getOppourtinityDetails(categories: OppourtinityDetails) {}
     
     func getOppourtinity(categories: Oppourtinity) {}

@@ -109,7 +109,10 @@ extension VolunteerOpportunityVC{
                     presenter.VolunteerOppourtinity(title: title, location: location, date: date, time: time, details: eventDescriptionTxt.text)
                     presenter.delegate=self
                 }else{
-                    presenter.editVolunteerRequest(volunteerrequestId: String(describing: voluntaryRequest?.id), title: title, location: location, date: date, time: time, details: eventDescriptionTxt.text)
+                    print( String(describing: voluntaryRequest?.id ?? 0 ))
+                    presenter.editVolunteerRequest(volunteerrequestId: String(describing: voluntaryRequest?.id ?? 0 ), title: title, location: location, date: date, time: time, details: eventDescriptionTxt.text)
+                    presenter.delegate=self
+
                 }
                 
              

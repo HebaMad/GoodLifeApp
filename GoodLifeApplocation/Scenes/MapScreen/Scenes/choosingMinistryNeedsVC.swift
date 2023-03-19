@@ -10,10 +10,10 @@ import FittedSheets
 
 protocol DataFiltered {
     func filteredData(data:Oppourtinity)
-
+    
 }
 class choosingMinistryNeedsVC: UIViewController {
-
+    
     //MARK: - Outlet
     
     @IBOutlet weak var socialCommitmentsBtn: UIButtonDesignable!
@@ -32,36 +32,36 @@ class choosingMinistryNeedsVC: UIViewController {
     var oppourtinity:[OppourtinityDetails] = []
     var model:[SubscriptionCollectionViewCell.ViewModel]?
     var onFilterDissmissed : OnFilterDissmissed?
-
+    
     
     //MARK: - Life cycle
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupMinistryCollectionview()
     }
-
+    
     //MARK: - SetupCollectionview
-
+    
     private func setupMinistryCollectionview(){
         bindBackButton()
         MinistrySubscriptionCollectionview.register(SubscriptionCollectionViewCell.self)
-       
-
+        
+        
     }
     
     @objc func ministrySubscriptionDetails( _ sender:UIButton){
         print(oppourtinity[sender.tag].id ?? 0)
         presenter.oppourtinityDetails(opportunityID: oppourtinity[sender.tag].id ?? 0)
         presenter.delegate=self
-       
-
+        
+        
     }
-
+    
 }
 
-     //MARK: - Binding
+//MARK: - Binding
 
 private extension choosingMinistryNeedsVC {
     
@@ -70,18 +70,18 @@ private extension choosingMinistryNeedsVC {
         lifeBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
         movementLifeBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
         filterBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
-
-
+        
+        
     }
 }
 
 
-    //MARK: - PrivateHandler
+//MARK: - PrivateHandler
 
 private extension choosingMinistryNeedsVC{
-
+    
     @objc func buttonWasTapped( _ sender:UIButton){
-       
+        
         switch sender{
             
         case socialCommitmentsBtn:
@@ -92,13 +92,13 @@ private extension choosingMinistryNeedsVC{
             presenter.delegate = self
             
         case lifeBtn:
-         
+            
             recommendationView.isHidden = false
             interest = 2
             print( UserDefaults.standard.integer(forKey: "id"))
             presenter.getSmartRecommendation(interestId: interest, needTypeId: UserDefaults.standard.integer(forKey: "id"))
             presenter.delegate = self
-
+            
         case movementLifeBtn:
             
             recommendationView.isHidden = false
@@ -107,40 +107,40 @@ private extension choosingMinistryNeedsVC{
             presenter.delegate = self
             
         case filterBtn:
-
+            
             let vc = FilterVC()
             vc.onFilterDissmissed = self
             self.present(vc, animated: false, completion: nil)
-
+            
         default:
             print("")
         }
-}
+    }
 }
 
 
-      //MARK: - conform to UICollectionViewDelegate protocol
+//MARK: - conform to UICollectionViewDelegate protocol
 
 extension choosingMinistryNeedsVC:UICollectionViewDelegate{}
 
 
-     //MARK: - conform to UICollectionViewDataSource protocol
- 
+//MARK: - conform to UICollectionViewDataSource protocol
+
 extension choosingMinistryNeedsVC:UICollectionViewDataSource{
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-
+        
         return oppourtinity.count
     }
-        
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell:SubscriptionCollectionViewCell=collectionView.dequeueReusableCell(for: indexPath)
-
+        
         cell.configureCell(viewModel: oppourtinity[indexPath.row])
         
-//        cell.tag=indexPath.row
-//        cell.nextBtn.addTarget(self, action: #selector(ministrySubscriptionDetails), for: .touchUpInside)
+        //        cell.tag=indexPath.row
+        //        cell.nextBtn.addTarget(self, action: #selector(ministrySubscriptionDetails), for: .touchUpInside)
         return cell
     }
     
@@ -149,13 +149,13 @@ extension choosingMinistryNeedsVC:UICollectionViewDataSource{
         print(oppourtinity[indexPath.row].id ?? 0)
         presenter.oppourtinityDetails(opportunityID: oppourtinity[indexPath.row].id ?? 0)
         UserDefaults.standard.set(oppourtinity[indexPath.row].id, forKey: "oppourtinity")
-
+        
         presenter.delegate=self
     }
 }
-      //MARK: - conform to UICollectionViewDelegateFlowLayout protocol
+//MARK: - conform to UICollectionViewDelegateFlowLayout protocol
 
-    extension choosingMinistryNeedsVC:UICollectionViewDelegateFlowLayout{
+extension choosingMinistryNeedsVC:UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
@@ -168,38 +168,31 @@ extension choosingMinistryNeedsVC:UICollectionViewDataSource{
 //MARK: - conform to HomeDelegate protocol
 
 extension choosingMinistryNeedsVC:HomeDelegate{
+    
+    func showAlerts(title: String, message: String) {}
+    func getCategories(categories: Home) {}
+    func getStandardCategoriesFiltering(categories: MainHomeCategories) {}
+    func getsubCategoriesFiltering(categories: SubHomeCategories) {}
+    func getCategoriesFiltered(categories: Home) {}
+    func getMainScreenData(data: MainScreenData) {}
+    
     func getOppourtinityDetails(categories: OppourtinityDetails) {
         let data =  try! JSONEncoder().encode(categories)
-
+        
         UserDefaults.standard.set(data, forKey:"oppourtinityID")
-
+        
         self.dismiss(animated: true) {
             if let _delegate = self.onFilterDissmissed{
                 print(categories)
                 _delegate.filteredData(data:categories)
-            }
-        }
-
-    }
-    
-    func showAlerts(title: String, message: String) {}
-    
-    func getCategories(categories: Home) {}
-    
-    func getStandardCategoriesFiltering(categories: MainHomeCategories) {}
-    
-    func getsubCategoriesFiltering(categories: SubHomeCategories) {}
-    
-    func getCategoriesFiltered(categories: Home) {}
+            }}}
     
     func getOppourtinity(categories: Oppourtinity) {
         print(categories.items ?? [])
-            self.oppourtinity = categories.items ?? []
-            self.MinistrySubscriptionCollectionview.reloadData()
-
-       
+        self.oppourtinity = categories.items ?? []
+        self.MinistrySubscriptionCollectionview.reloadData()
+        
     }
-    
     
 }
 

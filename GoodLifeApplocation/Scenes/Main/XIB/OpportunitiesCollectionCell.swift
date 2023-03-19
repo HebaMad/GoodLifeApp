@@ -9,9 +9,21 @@ import UIKit
 
 class OpportunitiesCollectionCell: UICollectionViewCell,NibLoadableView {
 
+    @IBOutlet weak var opportunitiesProgressview: UIProgressView!
+    @IBOutlet weak var dateOfTitle: UILabel!
+    @IBOutlet weak var opportunitiesTitle: UILabel!
+    @IBOutlet weak var status: UILabelDesignable!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
     }
 
+    func configureCell(data:opportunitiesData){
+        opportunitiesTitle.text=data.title
+        dateOfTitle.text=convertDateFormaterName(data.created_at ?? "")
+        status.text = "  " + (data.status ?? "")
+//        opportunitiesProgressview.progress=CGFloat(data.)
+    }
+    
 }

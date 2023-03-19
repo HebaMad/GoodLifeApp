@@ -14,7 +14,10 @@ class MainVC: UIViewController {
     //MARK: - Properties
     
     private let sections = MainCategoriesModel.shared.AllCategories
-    
+    var categories:[mainType]=[]
+    var opportunities:[opportunitiesData]=[]
+    var sliders:[sliderData]=[]
+    let presenter=HomePresenter()
     
     //MARK: - Life cycle
     override func viewDidLoad() {
@@ -25,13 +28,14 @@ class MainVC: UIViewController {
     
     
     private func setupCollectionview(){
-        
+        presenter.getMainScreenData()
+        presenter.delegate=self
         HomeCollectionview.register(OpportunitiesCollectionCell.self)
         HomeCollectionview.register(CategoryCell.self)
         HomeCollectionview.register(BannerCell.self)
         HomeCollectionview.register(MapCell.self)
         HomeCollectionview.register(CreateOpportunitiesCell.self)
-
+        
         HomeCollectionview.register(UINib(nibName:"HeaderCollectionReusableView", bundle: nil), forSupplementaryViewOfKind:UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.headerIdentifier)
         HomeCollectionview.collectionViewLayout = createCompositionalLayout()
         HomeCollectionview.dataSource=self
@@ -48,15 +52,16 @@ extension MainVC{
             
         case .Categories:
             let vc = CategoriesVC()
+            vc.categories=categories
             navigationController?.pushViewController(vc, animated: true)
         case .Banner:
             print("No Actions")
         case .Map:
             print("No Actions")
-
+            
         case .Opportunities:
             print("No Actions")
-
+            
         }
     }
 }
@@ -70,7 +75,7 @@ extension MainVC {
             switch section{
                 
             case .Categories:
-                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.33), heightDimension: .absolute(90))
+                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .absolute(90))
                 
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
                 
@@ -83,7 +88,7 @@ extension MainVC {
                 group.contentInsets = .init(top: 0, leading: 0, bottom: 0, trailing: 0)
                 let section = NSCollectionLayoutSection(group: group)
                 section.orthogonalScrollingBehavior = .continuous
-
+                
                 section.contentInsets = .init(top: 0, leading: 4, bottom: 0, trailing: 4)
                 section.boundarySupplementaryItems = [self.supplementaryHeaderItem()]
                 section.supplementariesFollowContentInsets = false
@@ -102,7 +107,7 @@ extension MainVC {
                 group.contentInsets = .init(top: 0, leading: 0, bottom: 0, trailing: 0)
                 let section = NSCollectionLayoutSection(group: group)
                 section.orthogonalScrollingBehavior = .continuous
-
+                
                 section.contentInsets = .init(top: 0, leading: 4, bottom: 0, trailing: 4)
                 section.supplementariesFollowContentInsets = false
                 return section
@@ -120,12 +125,12 @@ extension MainVC {
                 group.contentInsets = .init(top: 0, leading: 0, bottom: 0, trailing: 0)
                 let section = NSCollectionLayoutSection(group: group)
                 section.orthogonalScrollingBehavior = .continuous
-
+                
                 section.contentInsets = .init(top: 0, leading: 4, bottom: 0, trailing: 4)
                 section.supplementariesFollowContentInsets = false
                 return section
             case .Opportunities:
-                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .absolute(130))
+                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .absolute(110))
                 
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
                 
@@ -138,7 +143,7 @@ extension MainVC {
                 group.contentInsets = .init(top: 0, leading: 0, bottom: 0, trailing: 0)
                 let section = NSCollectionLayoutSection(group: group)
                 section.orthogonalScrollingBehavior = .continuous
-
+                
                 section.contentInsets = .init(top: 0, leading: 4, bottom: 0, trailing: 4)
                 section.boundarySupplementaryItems = [self.supplementaryHeaderItem()]
                 section.supplementariesFollowContentInsets = false
@@ -165,10 +170,10 @@ extension MainVC:UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch sections[section]{
             
-        case .Categories:return 5
+        case .Categories:return categories.count
         case .Map:return 1
-        case .Banner:return 3
-        case .Opportunities:return 3
+        case .Banner:return sliders.count
+        case .Opportunities:return (opportunities.count)+1
         }
         
     }
@@ -178,16 +183,29 @@ extension MainVC:UICollectionViewDataSource{
             
         case .Categories:
             let cell:CategoryCell=collectionView.dequeueReusableCell(for: indexPath)
+            cell.configureCell(data: categories[indexPath.row])
             return cell
+            
         case .Map:
             let cell:MapCell=collectionView.dequeueReusableCell(for: indexPath)
+            cell.exploreOpportunitiesBtn.tag=indexPath.row
+
             return cell
         case .Banner:
             let cell:BannerCell=collectionView.dequeueReusableCell(for: indexPath)
+            cell.configureCell(data: sliders[indexPath.row])
             return cell
         case .Opportunities:
-            let cell:OpportunitiesCollectionCell=collectionView.dequeueReusableCell(for: indexPath)
-            return cell
+            if indexPath.row == opportunities.count{
+                let cell :CreateOpportunitiesCell = collectionView.dequeueReusableCell(for: indexPath)
+                cell.createOpportunitiesBtn.tag=indexPath.row
+                return cell
+            }else{
+                
+                let cell:OpportunitiesCollectionCell=collectionView.dequeueReusableCell(for: indexPath)
+                cell.configureCell(data: opportunities[indexPath.row])
+                return cell
+            }
             
             
         }
@@ -212,5 +230,29 @@ extension MainVC:UICollectionViewDelegateFlowLayout{
         header.setup(sections[indexPath.section].title)
         return header
     }
+    
+}
+extension MainVC:HomeDelegate{
+    func showAlerts(title: String, message: String) { }
+    
+    func getCategories(categories: Home) {}
+    
+    func getStandardCategoriesFiltering(categories: MainHomeCategories) {}
+    
+    func getsubCategoriesFiltering(categories: SubHomeCategories) {}
+    
+    func getCategoriesFiltered(categories: Home) {}
+    
+    func getOppourtinity(categories: Oppourtinity) { }
+    
+    func getOppourtinityDetails(categories: OppourtinityDetails) {}
+    
+    func getMainScreenData(data: MainScreenData) {
+        categories=data.categories ?? []
+        sliders=data.sliders ?? []
+        opportunities=data.opportunities ?? []
+        HomeCollectionview.reloadData()
+    }
+    
     
 }

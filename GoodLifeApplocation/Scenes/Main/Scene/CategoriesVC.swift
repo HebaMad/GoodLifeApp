@@ -11,16 +11,14 @@ class CategoriesVC: UIViewController {
     
     private let itemsPerRow: CGFloat = 2
     
-    private let sectionInsets = UIEdgeInsets(
-        top: 2.0,
-        left: 0.0,
-        bottom: 2.0,
-        right: 0.0)
+    private let sectionInsets = UIEdgeInsets(top: 2.0,left: 0.0,bottom: 2.0,right: 0.0)
     @IBOutlet weak var categoriesCollectionview: UICollectionView!
-    
+    var categories:[mainType]=[]
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupCollectionView()
     }
     
@@ -80,12 +78,13 @@ extension CategoriesVC:UICollectionViewDelegate{}
 
 extension CategoriesVC:UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        12
+        categories.count
         
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell:CategoryCell=collectionView.dequeueReusableCell(for: indexPath)
+        cell.configureCell(data: categories[indexPath.row])
         return cell
     }
 }

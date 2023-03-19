@@ -150,8 +150,8 @@ extension ReviewExperienceVC:MenuDelegate{
 }
 
 
-   extension ReviewExperienceVC : HomeDelegate {
-    
+extension ReviewExperienceVC : HomeDelegate {
+    func getMainScreenData(data: MainScreenData) {}
     func getCategories(categories: Home) {}
     func getStandardCategoriesFiltering(categories: MainHomeCategories) {}
     func getsubCategoriesFiltering(categories: SubHomeCategories) {}

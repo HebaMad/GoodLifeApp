@@ -161,16 +161,12 @@ extension FilterVC {
 
 extension FilterVC:HomeDelegate{
     
+    func getMainScreenData(data: MainScreenData) {}
     func showAlerts(title: String, message: String) {}
-    
     func getCategories(categories: Home) {}
-    
     func getStandardCategoriesFiltering(categories: MainHomeCategories) {}
-    
     func getsubCategoriesFiltering(categories: SubHomeCategories) {}
-    
     func getCategoriesFiltered(categories: Home) {}
-    
     func getOppourtinityDetails(categories: OppourtinityDetails) {}
     
     func getOppourtinity(categories: Oppourtinity) {
@@ -180,10 +176,7 @@ extension FilterVC:HomeDelegate{
                 _delegate.filteredData(data: categories)
             }
         }
-    }
-    
-   
-    
+    }  
 }
 
 extension FilterVC:RangeSeekSliderDelegate{

@@ -102,19 +102,16 @@ class GeneralPagerViewVC: ButtonBarPagerTabStripViewController {
     }
     
 }
-
-
 extension GeneralPagerViewVC:HomeDelegate{
     
+    func getMainScreenData(data: MainScreenData) {}
     func showAlerts(title: String, message: String) {}
     func getCategories(categories: Home) {}
     func getStandardCategoriesFiltering(categories: MainHomeCategories) {}
     func getsubCategoriesFiltering(categories: SubHomeCategories) {}
     func getCategoriesFiltered(categories: Home) {}
     func getOppourtinity(categories: Oppourtinity) {}
-    
     func getOppourtinityDetails(categories: OppourtinityDetails) {
-        
         oppourtinityDetails=categories
         setupPagerTab()
         

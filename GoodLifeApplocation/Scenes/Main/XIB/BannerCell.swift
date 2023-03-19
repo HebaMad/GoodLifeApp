@@ -20,7 +20,10 @@ class BannerCell: UICollectionViewCell,NibLoadableView {
     }
 
     
-    func configureCell(){
-        
+    func configureCell(data:sliderData){
+        titleTxt.text=data.title
+        shortDescriptionTxt.text=data.description
+        bannerImage.sd_setImage(with: URL(string: data.image ?? ""))
+
     }
 }

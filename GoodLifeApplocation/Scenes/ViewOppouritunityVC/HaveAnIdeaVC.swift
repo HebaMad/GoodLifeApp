@@ -63,7 +63,7 @@ class HaveAnIdeaVC: UIViewController ,UITextFieldDelegate{
         weeklyTimeSelection.text = ministryIDEA?.time_commitment
         categoryTxt.text = ministryIDEA?.fund_type?.name
         fundTypeID=ministryIDEA?.fund_type?.id ?? 0
-        
+        ministryIdeaID=ministryIDEA?.id ?? 0
 
     }
     

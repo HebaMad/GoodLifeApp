@@ -228,7 +228,7 @@ extension AddFundTypes:UITextFieldDataPickerDelegate,UITextFieldDataPickerDataSo
 
 
 extension AddFundTypes : HomeDelegate {
-    
+    func getMainScreenData(data: MainScreenData) {}
     func showAlerts(title: String, message: String) {
         Alert.showSuccessAlert(message:message)
         clearData()
