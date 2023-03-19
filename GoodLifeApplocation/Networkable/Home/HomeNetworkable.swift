@@ -19,6 +19,8 @@ protocol HomeNetworkable:Networkable  {
     
     func  AddFundType(name:String,main_category_id:String,sub_category_id:String,latitude:String,longitude:String,city:String,default_need:String,completion: @escaping (Result<BaseResponse<MainCategories>, Error>)-> ())
     
+    func homescreen(completion: @escaping (Result<BaseResponse<MainScreenData>, Error>)-> ())
+    
 }
 
 class HomeManager:HomeNetworkable{
@@ -61,6 +63,10 @@ class HomeManager:HomeNetworkable{
         request(target: .AddFundType(name: name, main_category_id: main_category_id, sub_category_id: sub_category_id, latitude: latitude, longitude: longitude, city: city, default_need: default_need), completion: completion)
     }
     
-  
+    func homescreen(completion: @escaping (Result<BaseResponse<MainScreenData>, Error>) -> ()) {
+        request(target: .homescreen, completion: completion)
+    }
+    
+
     
 }

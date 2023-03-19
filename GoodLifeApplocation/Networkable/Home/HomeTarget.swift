@@ -19,6 +19,7 @@ enum HomeApiTarget:TargetType{
     case Filter(investmentFrom:String,investmentTo:String,work_type:String,level_of_difficulty:String,amount_of_technology:String)
     case AddFundType(name:String,main_category_id:String,sub_category_id:String,latitude:String,longitude:String,city:String,default_need:String)
     
+    case homescreen
     var baseURL: URL {
         return URL(string: "\(AppConfig.apiBaseUrl)")!
     }
@@ -42,13 +43,15 @@ enum HomeApiTarget:TargetType{
             
         case .AddFundType:return "createFundType"
 
+        case .homescreen:return "homeScreen"
+            
         }
     }
     
     
     var method: Moya.Method {
         switch self{
-        case .Home,.getNeedMainCategory,.getNeedSubCategory,.categoriesFiltering,.getOpportunities,.oppourtinityDetails,.Filter:
+        case .Home,.getNeedMainCategory,.getNeedSubCategory,.categoriesFiltering,.getOpportunities,.oppourtinityDetails,.Filter,.homescreen:
             return .get
             
         case .AddFundType:
@@ -59,7 +62,8 @@ enum HomeApiTarget:TargetType{
     
     var task: Task{
         switch self{
-            
+        case .homescreen:
+            return .requestPlain
         case .AddFundType:
             return .requestParameters(parameters: param, encoding: URLEncoding.httpBody)
 
@@ -71,7 +75,7 @@ enum HomeApiTarget:TargetType{
     
     var headers: [String : String]?{
         switch self{
-        case .Home,.categoriesFiltering,.getOpportunities,.oppourtinityDetails,.Filter,.AddFundType:
+        case .Home,.categoriesFiltering,.getOpportunities,.oppourtinityDetails,.Filter,.AddFundType,.homescreen:
             
             do {
                 let token = try KeychainWrapper.get(key: AppData.mobile) ?? ""
