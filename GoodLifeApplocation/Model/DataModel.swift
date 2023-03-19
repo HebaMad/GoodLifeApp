@@ -555,8 +555,22 @@ struct opportunitiesData:Codable{
     let created_at:String?
     let models:String?
     let plans:String?
+}
 
+
+
+struct MainScreenData:Decodable{
+    let categories:[mainType]?
+    let opportunities:[opportunitiesData]?
+    let sliders:[sliderData]?
 
 }
 
 
+struct sliderData:Codable{
+    
+    let title:String?
+    let description:String?
+    let image:String?
+   
+}
