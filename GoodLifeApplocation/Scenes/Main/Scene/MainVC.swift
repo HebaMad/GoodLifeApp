@@ -47,24 +47,38 @@ class MainVC: UIViewController {
 extension MainVC{
     @objc func viewAllButton(_ sender:UIButton){
         
-        switch sections[sender.tag]{
-            
+        switch sections[sender.tag] {
             
         case .Categories:
+            
             let vc = CategoriesVC()
             vc.categories=categories
             navigationController?.pushViewController(vc, animated: true)
+            
         case .Banner:
+            
             print("No Actions")
+            
         case .Map:
-            print("No Actions")
             
+       print("")
         case .Opportunities:
-            let vc = OpportunityListVC.instantiate()
-            vc.hidesBottomBarWhenPushed = false
-            navigationController?.pushViewController(vc, animated: true)
             
+        
+            let vc = OpportunityListVC.instantiate()
+            vc.opportunities=opportunities
+            vc.hidesBottomBarWhenPushed = false
+            vc.tabBarController?.tabBar.isHidden=false
+            self.navigationController?.pushViewController(vc, animated: true)
+          
         }
+    }
+    
+    @objc func exploreMapBtn (){
+        let vc = ExploreMapVC.instantiate()
+        vc.categories=categories
+        navigationController?.pushViewController(vc, animated: true)
+        
     }
 }
 
@@ -130,6 +144,7 @@ extension MainVC {
                 
                 section.contentInsets = .init(top: 0, leading: 4, bottom: 0, trailing: 4)
                 section.supplementariesFollowContentInsets = false
+                
                 return section
             case .Opportunities:
                 let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .absolute(110))
@@ -191,34 +206,40 @@ extension MainVC:UICollectionViewDataSource{
         case .Map:
             let cell:MapCell=collectionView.dequeueReusableCell(for: indexPath)
             cell.exploreOpportunitiesBtn.tag=indexPath.row
-
+            cell.exploreOpportunitiesBtn.addTarget(self, action: #selector(exploreMapBtn), for: .touchUpInside)
             return cell
+            
         case .Banner:
             let cell:BannerCell=collectionView.dequeueReusableCell(for: indexPath)
+            cell.pageControlView.currentPage=indexPath.row
+            cell.pageControlView.numberOfPages=sliders.count
             cell.configureCell(data: sliders[indexPath.row])
             return cell
+            
         case .Opportunities:
+            
             if indexPath.row == opportunities.count{
+                
                 let cell :CreateOpportunitiesCell = collectionView.dequeueReusableCell(for: indexPath)
                 cell.createOpportunitiesBtn.tag=indexPath.row
                 return cell
+                
             }else{
                 
                 let cell:OpportunitiesCollectionCell=collectionView.dequeueReusableCell(for: indexPath)
                 cell.configureCell(data: opportunities[indexPath.row])
                 return cell
+                
             }
             
             
         }
     }
-    
-    
 }
 
 extension MainVC:UICollectionViewDelegateFlowLayout{
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        
         return UIEdgeInsets(top: 30, left: 0, bottom: 30, right: 0)
     }
     
@@ -255,6 +276,4 @@ extension MainVC:HomeDelegate{
         opportunities=data.opportunities ?? []
         HomeCollectionview.reloadData()
     }
-    
-    
 }

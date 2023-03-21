@@ -18,14 +18,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             _delegate.window = window
         }
         saveLogin()
-//        setRootVC(vc: AvailableSupportVC())
+//      setRootVC(vc: AvailableSupportVC())
         
     }
     
-    func setRootVC(vc:UIViewController){
+    func setRootVC (vc:UIViewController) {
+        
             self.window?.rootViewController = vc
             self.window?.makeKeyAndVisible()
-        
         }
     
  
@@ -39,7 +39,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 setRootVC(vc: SplashScreen())
             } else {
                 let nav1 = UINavigationController()
-                let mainView = MapVC()
+                let mainView = TabBarVC.instantiate()
                 nav1.viewControllers = [mainView]
                 nav1.navigationBar.isHidden = true
                 setRootVC(vc: nav1)
@@ -58,13 +58,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func sceneDidBecomeActive(_ scene: UIScene) {
-        // Called when the scene has moved from an inactive state to an active state.
-        // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
+       
+        
     }
 
     func sceneWillResignActive(_ scene: UIScene) {
-        // Called when the scene will move from an active state to an inactive state.
-        // This may occur due to temporary interruptions (ex. an incoming phone call).
+       
+        
     }
 
     func sceneWillEnterForeground(_ scene: UIScene) {

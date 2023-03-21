@@ -10,6 +10,7 @@ import UIKit
 class BannerCell: UICollectionViewCell,NibLoadableView {
 
     
+    @IBOutlet weak var pageControlView: UIPageControl!
     @IBOutlet weak var titleTxt: UILabel!
     @IBOutlet weak var bannerImage: UIImageView!
     @IBOutlet weak var shortDescriptionTxt: UILabel!

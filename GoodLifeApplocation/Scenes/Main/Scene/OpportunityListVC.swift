@@ -25,14 +25,15 @@ class OpportunityListVC: UIViewController {
         
         super.viewDidLoad()
         setupTableView()
-       
+        emptyView.isHidden=true
+        DataAvailability() 
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         self.hidesBottomBarWhenPushed = false
-
-
+        self.tabBarController?.tabBar.isHidden=false
     }
     
     @IBAction func AddOpportunitiesBtn(_ sender: Any) {
@@ -44,6 +45,15 @@ class OpportunityListVC: UIViewController {
         opportunitiesTableview.register(OpportunitiesStatusCell.self)
         opportunitiesTableview.delegate=self
         opportunitiesTableview.dataSource=self
+    }
+    
+    
+    func DataAvailability()  {
+        if  opportunities.count == 0 {
+            emptyView.isHidden = false
+        } else{
+            emptyView.isHidden = true
+        }
     }
 
 }
@@ -67,5 +77,4 @@ extension OpportunityListVC:UITableViewDataSource {
         cell.configureCell(data: opportunities[indexPath.row])
         return cell
     }
-    
 }

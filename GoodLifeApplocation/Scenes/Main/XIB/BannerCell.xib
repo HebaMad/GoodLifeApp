@@ -78,12 +78,18 @@ Donate Now  </string>
             <size key="customSize" width="314" height="122"/>
             <connections>
                 <outlet property="bannerImage" destination="irM-wq-9pR" id="1iS-dY-ARi"/>
+                <outlet property="pageControlView" destination="wlf-to-l3E" id="QMo-gm-lui"/>
                 <outlet property="shortDescriptionTxt" destination="yRp-gq-t4j" id="r2e-Ib-Hpg"/>
                 <outlet property="titleTxt" destination="jyh-jH-DaQ" id="zm8-kN-fVx"/>
             </connections>
             <point key="canvasLocation" x="116.03053435114504" y="45.070422535211272"/>
         </collectionViewCell>
     </objects>
+    <designables>
+        <designable name="irM-wq-9pR">
+            <size key="intrinsicContentSize" width="350" height="114"/>
+        </designable>
+    </designables>
     <resources>
         <image name="Banner" width="350" height="114"/>
         <systemColor name="systemBackgroundColor">

@@ -10,7 +10,6 @@ import SDWebImage
 import SVProgressHUD
 class ProfileVC: UIViewController {
 
-    @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var userImg: UIImageViewDesignable!
     @IBOutlet weak var accountDetails: UIButton!
     @IBOutlet weak var venturesTableview: UITableView!
@@ -77,7 +76,6 @@ private extension ProfileVC{
     
     func bindButtons() {
         accountDetails.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
-        backBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
         venturesBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
         volunteerRequestBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
         ministryIdeaBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
@@ -97,9 +95,7 @@ private extension ProfileVC{
             let vc = ProfileSettingVC()
             vc.privacyPolicyUrl = self.privacyPolicyUrl
             navigationController?.pushViewController(vc, animated: true)
-        case backBtn:
-            navigationController?.popViewController(animated: true)
-            
+   
         case venturesBtn:
             userList = "venture"
             ventureView.backgroundColor = UIColor(named:"button")
@@ -252,7 +248,6 @@ extension ProfileVC{
             presenter.getMinistryIdeaData(ministryIdeaId: "\(ministryIdea[sender.tag].id ?? 0)")
             presenter.delegate=self
         }else{
-   
             presenter.getVolunteerRequestsData(volunteerrequestId: "\(volunteerRequest[sender.tag].id ?? 0)")
             presenter.delegate=self
 
