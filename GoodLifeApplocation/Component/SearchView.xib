@@ -24,7 +24,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="462" height="103"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbE-kb-uZU">
-                            <rect key="frame" x="0.0" y="0.0" width="462" height="103"/>
+                            <rect key="frame" x="8" y="0.0" width="446" height="103"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4H-3O-NHX">
                                     <rect key="frame" x="4" y="10" width="25" height="83"/>
@@ -35,7 +35,7 @@
                                     <state key="normal" image="magnifyingglass" catalog="system"/>
                                 </button>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  What are you looking for?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ctf-1P-FCj" customClass="BottomBorderTextField" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                    <rect key="frame" x="29" y="10" width="429" height="83"/>
+                                    <rect key="frame" x="29" y="10" width="413" height="83"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
@@ -52,16 +52,16 @@
                             <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="4" bottom="10" trailing="4"/>
                         </stackView>
                     </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="rbE-kb-uZU" firstAttribute="top" secondItem="MSh-GG-j8G" secondAttribute="top" id="Jaz-ek-VXw"/>
-                        <constraint firstItem="rbE-kb-uZU" firstAttribute="leading" secondItem="MSh-GG-j8G" secondAttribute="leading" id="Oel-DR-X3A"/>
+                        <constraint firstItem="rbE-kb-uZU" firstAttribute="leading" secondItem="MSh-GG-j8G" secondAttribute="leading" constant="8" id="Oel-DR-X3A"/>
                         <constraint firstAttribute="bottom" secondItem="rbE-kb-uZU" secondAttribute="bottom" id="X02-dp-kfG"/>
-                        <constraint firstAttribute="trailing" secondItem="rbE-kb-uZU" secondAttribute="trailing" id="rIL-al-otz"/>
+                        <constraint firstAttribute="trailing" secondItem="rbE-kb-uZU" secondAttribute="trailing" constant="8" id="rIL-al-otz"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                            <real key="value" value="8"/>
+                            <real key="value" value="10"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="color" keyPath="endColor">
                             <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -86,7 +86,7 @@
     </objects>
     <designables>
         <designable name="Ctf-1P-FCj">
-            <size key="intrinsicContentSize" width="172.5" height="18.5"/>
+            <size key="intrinsicContentSize" width="169" height="19.5"/>
         </designable>
     </designables>
     <resources>

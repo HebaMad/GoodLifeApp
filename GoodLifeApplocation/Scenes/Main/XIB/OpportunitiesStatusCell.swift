@@ -10,7 +10,7 @@ import UIKit
 class OpportunitiesStatusCell: UITableViewCell,NibLoadableView {
 
     @IBOutlet weak var completeProgressView: UIProgressView!
-    @IBOutlet weak var titleBtn: UILabel!
+    @IBOutlet weak var dateTxt: UILabel!
     @IBOutlet weak var statusBtn: UIButtonDesignable!
     @IBOutlet weak var titleTxt: UILabel!
     override func awakeFromNib() {
@@ -24,7 +24,11 @@ class OpportunitiesStatusCell: UITableViewCell,NibLoadableView {
         // Configure the view for the selected state
     }
     
-    func configureCell(){
+    func configureCell(data:opportunitiesData){
+        titleTxt.text = data.title
+        dateTxt.text = data.created_at
+        statusBtn.setTitle(data.status, for: .normal)
+
         
     }
     

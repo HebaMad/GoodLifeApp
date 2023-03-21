@@ -8,10 +8,13 @@
 import UIKit
 
 class TagSelectionCollectionReusableView: UICollectionReusableView {
+    static let HeaderIdentifier = "TagSelectionCollectionReusableView"
 
+    
+    @IBOutlet weak var tagSelectionTitle: UITextField!
+    @IBOutlet weak var addBtn: UIButtonDesignable!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
 }

@@ -22,16 +22,16 @@
                         <rect key="frame" x="4" y="4" width="115" height="33"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxi-2g-W8V">
-                                <rect key="frame" x="40" y="8" width="35.333333333333343" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <rect key="frame" x="44.333333333333336" y="10.666666666666664" width="26.333333333333336" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qll-97-SYf">
-                                <rect key="frame" x="97" y="10" width="12" height="12"/>
+                                <rect key="frame" x="99" y="4" width="10" height="10"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="12" id="g5o-LD-X2O"/>
-                                    <constraint firstAttribute="width" constant="12" id="xCf-Ej-IIg"/>
+                                    <constraint firstAttribute="height" constant="10" id="g5o-LD-X2O"/>
+                                    <constraint firstAttribute="width" constant="10" id="xCf-Ej-IIg"/>
                                 </constraints>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -43,7 +43,7 @@
                             <constraint firstItem="gxi-2g-W8V" firstAttribute="centerX" secondItem="bet-bT-WDc" secondAttribute="centerX" id="4Jb-zM-H19"/>
                             <constraint firstItem="gxi-2g-W8V" firstAttribute="centerY" secondItem="bet-bT-WDc" secondAttribute="centerY" id="CwG-As-yLw"/>
                             <constraint firstAttribute="trailing" secondItem="Qll-97-SYf" secondAttribute="trailing" constant="6" id="Wjn-yJ-ptc"/>
-                            <constraint firstItem="Qll-97-SYf" firstAttribute="top" secondItem="bet-bT-WDc" secondAttribute="top" constant="10" id="rp1-SE-Nkx"/>
+                            <constraint firstItem="Qll-97-SYf" firstAttribute="top" secondItem="bet-bT-WDc" secondAttribute="top" constant="4" id="rp1-SE-Nkx"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">

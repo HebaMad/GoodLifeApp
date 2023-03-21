@@ -296,6 +296,8 @@
 		27F7363928C4FD4100E804B5 /* resourceSubTopicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F7363728C4FD4100E804B5 /* resourceSubTopicCell.swift */; };
 		27F7363A28C4FD4100E804B5 /* resourceSubTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27F7363828C4FD4100E804B5 /* resourceSubTopicCell.xib */; };
 		27F7363C28C5D7C800E804B5 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F7363B28C5D7C800E804B5 /* LocationManager.swift */; };
+		27FC430429C8727E00FB00B9 /* TagSelectionCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FC430229C8727E00FB00B9 /* TagSelectionCollectionReusableView.swift */; };
+		27FC430529C8727E00FB00B9 /* TagSelectionCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27FC430329C8727E00FB00B9 /* TagSelectionCollectionReusableView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -590,6 +592,8 @@
 		27F7363728C4FD4100E804B5 /* resourceSubTopicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resourceSubTopicCell.swift; sourceTree = "<group>"; };
 		27F7363828C4FD4100E804B5 /* resourceSubTopicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = resourceSubTopicCell.xib; sourceTree = "<group>"; };
 		27F7363B28C5D7C800E804B5 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		27FC430229C8727E00FB00B9 /* TagSelectionCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagSelectionCollectionReusableView.swift; sourceTree = "<group>"; };
+		27FC430329C8727E00FB00B9 /* TagSelectionCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagSelectionCollectionReusableView.xib; sourceTree = "<group>"; };
 		46608627E894627402509900 /* Pods-GoodLifeApplocation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodLifeApplocation.release.xcconfig"; path = "Target Support Files/Pods-GoodLifeApplocation/Pods-GoodLifeApplocation.release.xcconfig"; sourceTree = "<group>"; };
 		D1DB83CD4E289D2153C7D862 /* Pods-GoodLifeApplocation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodLifeApplocation.debug.xcconfig"; path = "Target Support Files/Pods-GoodLifeApplocation/Pods-GoodLifeApplocation.debug.xcconfig"; sourceTree = "<group>"; };
 		F0E5AE3CF2C1C421B86FEF65 /* Pods_GoodLifeApplocation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoodLifeApplocation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -677,6 +681,8 @@
 				278882F829C211500025A6D0 /* CreateOpportunitiesCell.xib */,
 				278882FB29C342D80025A6D0 /* searchviewHeader.swift */,
 				278882FC29C342D80025A6D0 /* searchviewHeader.xib */,
+				27FC430229C8727E00FB00B9 /* TagSelectionCollectionReusableView.swift */,
+				27FC430329C8727E00FB00B9 /* TagSelectionCollectionReusableView.xib */,
 			);
 			path = XIB;
 			sourceTree = "<group>";
@@ -1338,6 +1344,7 @@
 				27C9AE63288D3CB500FA584A /* Inter-MediumItalic.ttf in Resources */,
 				27C9AE61288D3CB500FA584A /* Inter-SemiBoldItalic.ttf in Resources */,
 				27CB2072289C1B3F00E63694 /* ResourceCell.xib in Resources */,
+				27FC430529C8727E00FB00B9 /* TagSelectionCollectionReusableView.xib in Resources */,
 				2704245128A8CED1002EF7B5 /* LoginProgressViews.xib in Resources */,
 				2767A272288F3CD600DF34D1 /* DonationThirdFrame.xib in Resources */,
 				27CB2052289B006100E63694 /* ReviewExperienceVC.xib in Resources */,
@@ -1561,6 +1568,7 @@
 				27985F4129969004006C8FE9 /* HobbiesCell.swift in Sources */,
 				27B54D8128BA62790074A6A1 /* SettingTarget.swift in Sources */,
 				27B8C8F228A1687F0011B039 /* MapFilterList.swift in Sources */,
+				27FC430429C8727E00FB00B9 /* TagSelectionCollectionReusableView.swift in Sources */,
 				2752CA8629B532A700AB35CD /* ButtonActionFooterCollectionview.swift in Sources */,
 				27C9AEAE288DB44600FA584A /* CategoriesCollectionViewCell.swift in Sources */,
 				27CB207A289CFC0400E63694 /* OnBoardingFrame1.swift in Sources */,

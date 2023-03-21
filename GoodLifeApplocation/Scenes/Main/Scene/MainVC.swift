@@ -60,7 +60,9 @@ extension MainVC{
             print("No Actions")
             
         case .Opportunities:
-            print("No Actions")
+            let vc = OpportunityListVC.instantiate()
+            vc.hidesBottomBarWhenPushed = false
+            navigationController?.pushViewController(vc, animated: true)
             
         }
     }

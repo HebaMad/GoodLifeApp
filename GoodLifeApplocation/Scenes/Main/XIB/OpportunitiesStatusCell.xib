@@ -132,8 +132,8 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="completeProgressView" destination="Ilc-md-S8x" id="2Ty-9c-Wln"/>
+                <outlet property="dateTxt" destination="caL-Cg-8bV" id="azR-CP-y9w"/>
                 <outlet property="statusBtn" destination="vtQ-wc-owJ" id="suQ-Xu-Mmx"/>
-                <outlet property="titleBtn" destination="caL-Cg-8bV" id="mqz-uC-mmu"/>
                 <outlet property="titleTxt" destination="d2g-Lv-dSd" id="Pdu-VP-Cha"/>
             </connections>
             <point key="canvasLocation" x="252.67175572519082" y="47.887323943661976"/>

@@ -12,8 +12,10 @@ class OpportunityListVC: UIViewController {
     //MARK: - Outlet
 
     @IBOutlet weak var opportunitiesTableview: UITableView!
+    @IBOutlet weak var emptyView: UIView!
     
-    
+    var opportunities:[opportunitiesData]=[]
+
     //MARK: - properties
 
     
@@ -23,9 +25,21 @@ class OpportunityListVC: UIViewController {
         
         super.viewDidLoad()
         setupTableView()
+       
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.hidesBottomBarWhenPushed = false
+
 
     }
-
+    
+    @IBAction func AddOpportunitiesBtn(_ sender: Any) {
+        let vc = CreateOppourtinityVC.instantiate()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     func setupTableView(){
         opportunitiesTableview.register(OpportunitiesStatusCell.self)
         opportunitiesTableview.delegate=self
@@ -43,14 +57,15 @@ extension OpportunityListVC:Storyboarded{
 extension OpportunityListVC:UITableViewDelegate{}
 
 extension OpportunityListVC:UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       return 5
+        return opportunities.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:OpportunitiesStatusCell = tableView.dequeueReusableCell(for: indexPath)
+        cell.configureCell(data: opportunities[indexPath.row])
         return cell
     }
-    
     
 }
