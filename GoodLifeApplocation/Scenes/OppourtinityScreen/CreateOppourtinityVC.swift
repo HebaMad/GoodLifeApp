@@ -26,25 +26,24 @@ class CreateOppourtinityVC: UIViewController , UITextViewDelegate{
         super.viewDidLoad()
         descriptionTxtviewCustomization()
         setupCollectionview()
-        
-        
+       
     }
     
     
     func descriptionTxtviewCustomization(){
         descriptionTxt.layer.cornerRadius = 8.0
+        descriptionTxt.layer.borderColor = UIColor(named: "bg5")?.cgColor
+        descriptionTxt.layer.borderWidth=0.5
         descriptionTxt.text = "Add a short description"
         descriptionTxt.textColor = UIColor.lightGray
         descriptionTxt.delegate=self
     }
     
-    
-    
-    
-    
     func setupCollectionview(){
         tagCollectionview.layer.cornerRadius = 8.0
-
+        tagCollectionview.layer.borderColor = UIColor(named: "bg5")?.cgColor
+        tagCollectionview.layer.borderWidth=0.5
+        
         tagCollectionview.register(HobbiesCell.self)
         tagCollectionview.register(UINib(nibName:"TagSelectionCollectionReusableView", bundle: nil), forSupplementaryViewOfKind:UICollectionView.elementKindSectionHeader, withReuseIdentifier: TagSelectionCollectionReusableView.HeaderIdentifier)
    

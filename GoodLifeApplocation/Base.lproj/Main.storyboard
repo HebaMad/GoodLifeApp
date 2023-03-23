@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -112,7 +111,7 @@
                                                         <segment title="Completed Tasks"/>
                                                     </segments>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="selectedSegmentTintColor" name="Color"/>
+                                                    <color key="selectedSegmentTintColor" red="0.59215686274509804" green="0.27843137254901962" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </segmentedControl>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mda-kh-wbR">
                                                     <rect key="frame" x="0.0" y="71" width="390" height="20"/>
@@ -279,7 +278,7 @@
                                                         <segment title="Benchmarks"/>
                                                     </segments>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="selectedSegmentTintColor" name="Color"/>
+                                                    <color key="selectedSegmentTintColor" red="0.22745098039215686" green="0.10196078431372549" blue="0.396078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </segmentedControl>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="80h-gu-JAx">
                                                     <rect key="frame" x="0.0" y="73" width="380" height="20"/>
@@ -1007,7 +1006,7 @@ Night</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fen-Ib-DbD">
-                                <rect key="frame" x="20" y="98" width="374" height="655"/>
+                                <rect key="frame" x="20" y="98" width="374" height="715"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="HYZ-df-VGG">
                                     <rect key="frame" x="0.0" y="0.0" width="374" height="46"/>
@@ -1038,10 +1037,10 @@ Night</string>
                                 </prototypes>
                             </tableView>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iev-LJ-lIk">
-                                <rect key="frame" x="20" y="98" width="374" height="655"/>
+                                <rect key="frame" x="20" y="98" width="374" height="565"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NoOpportunitiesData" translatesAutoresizingMaskIntoConstraints="NO" id="fji-mN-dlu">
-                                        <rect key="frame" x="12" y="60" width="350" height="415"/>
+                                        <rect key="frame" x="12" y="60" width="350" height="325"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1062,62 +1061,41 @@ Night</string>
                                         <color key="textColor" name="button"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Umv-Bd-YZ6">
+                                        <rect key="frame" x="333.5" y="9.5" width="64.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="+ Add">
+                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="14"/>
+                                            <color key="baseForegroundColor" name="button"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="AddOpportunitiesBtn:" destination="IyP-qt-jwn" eventType="touchUpInside" id="DYp-PU-Xky"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="Umv-Bd-YZ6" firstAttribute="centerY" secondItem="wOq-ng-8zg" secondAttribute="centerY" id="0H6-MZ-k6Q"/>
                                     <constraint firstItem="b3f-Fs-loT" firstAttribute="centerX" secondItem="wOq-ng-8zg" secondAttribute="centerX" id="6rg-xi-SLM"/>
                                     <constraint firstItem="b3f-Fs-loT" firstAttribute="centerY" secondItem="wOq-ng-8zg" secondAttribute="centerY" id="fBN-9T-k3m"/>
                                     <constraint firstAttribute="height" constant="50" id="ijF-SP-Lu0"/>
+                                    <constraint firstAttribute="trailing" secondItem="Umv-Bd-YZ6" secondAttribute="trailing" constant="16" id="uvh-67-TxP"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G1j-7g-Fb8" customClass="UIButtonDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                <rect key="frame" x="20" y="757" width="374" height="46"/>
-                                <color key="backgroundColor" red="0.26666666666666666" green="0.050999999046325684" blue="0.55699998140335083" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="J0V-j0-rBP"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title=" + Add an opportunity">
-                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="16"/>
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="12"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
-                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
-                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
-                                        <color key="value" red="0.2669999897480011" green="0.050999999046325684" blue="0.55699998140335083" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="AddOpportunitiesBtn:" destination="IyP-qt-jwn" eventType="touchUpInside" id="OJq-Ay-dSj"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5l0-gz-xNp"/>
                         <color key="backgroundColor" name="bg3"/>
                         <constraints>
-                            <constraint firstItem="G1j-7g-Fb8" firstAttribute="centerX" secondItem="lf3-7b-t2q" secondAttribute="centerX" id="2hR-dx-VJO"/>
-                            <constraint firstItem="G1j-7g-Fb8" firstAttribute="top" secondItem="Iev-LJ-lIk" secondAttribute="bottom" constant="4" id="7QI-Ir-Btt"/>
                             <constraint firstItem="fen-Ib-DbD" firstAttribute="leading" secondItem="5l0-gz-xNp" secondAttribute="leading" constant="20" id="AgL-aD-vIi"/>
-                            <constraint firstAttribute="trailing" secondItem="G1j-7g-Fb8" secondAttribute="trailing" constant="20" id="MP3-k8-Zh1"/>
                             <constraint firstItem="wOq-ng-8zg" firstAttribute="top" secondItem="5l0-gz-xNp" secondAttribute="top" id="TWT-te-7Qd"/>
+                            <constraint firstItem="fen-Ib-DbD" firstAttribute="bottom" secondItem="5l0-gz-xNp" secondAttribute="bottom" id="Wy1-5O-rhs"/>
                             <constraint firstItem="5l0-gz-xNp" firstAttribute="trailing" secondItem="Iev-LJ-lIk" secondAttribute="trailing" constant="20" id="XSF-PT-Gq2"/>
                             <constraint firstItem="wOq-ng-8zg" firstAttribute="leading" secondItem="5l0-gz-xNp" secondAttribute="leading" id="XcE-wS-a5y"/>
-                            <constraint firstItem="G1j-7g-Fb8" firstAttribute="top" secondItem="Iev-LJ-lIk" secondAttribute="bottom" constant="4" id="Yhg-4Y-bNq"/>
                             <constraint firstItem="wOq-ng-8zg" firstAttribute="trailing" secondItem="5l0-gz-xNp" secondAttribute="trailing" id="brF-8c-vPp"/>
                             <constraint firstItem="fen-Ib-DbD" firstAttribute="top" secondItem="wOq-ng-8zg" secondAttribute="bottom" id="brz-qE-AIi"/>
                             <constraint firstItem="Iev-LJ-lIk" firstAttribute="top" secondItem="wOq-ng-8zg" secondAttribute="bottom" id="cS4-Qo-fjY"/>
                             <constraint firstItem="Iev-LJ-lIk" firstAttribute="leading" secondItem="5l0-gz-xNp" secondAttribute="leading" constant="20" id="cUv-4E-brr"/>
-                            <constraint firstItem="G1j-7g-Fb8" firstAttribute="leading" secondItem="lf3-7b-t2q" secondAttribute="leading" constant="20" id="gxT-D6-Z6R"/>
-                            <constraint firstItem="5l0-gz-xNp" firstAttribute="bottom" secondItem="G1j-7g-Fb8" secondAttribute="bottom" constant="10" id="kFK-yD-XtX"/>
-                            <constraint firstItem="G1j-7g-Fb8" firstAttribute="top" secondItem="fen-Ib-DbD" secondAttribute="bottom" constant="4" id="wgL-p9-SYw"/>
+                            <constraint firstItem="5l0-gz-xNp" firstAttribute="bottom" secondItem="fen-Ib-DbD" secondAttribute="bottom" id="kUT-su-3oq"/>
                             <constraint firstItem="5l0-gz-xNp" firstAttribute="trailing" secondItem="fen-Ib-DbD" secondAttribute="trailing" constant="20" id="zQN-d3-ng6"/>
                         </constraints>
                     </view>
@@ -1129,7 +1107,7 @@ Night</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gBZ-Wx-Ef1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32" y="-1158"/>
+            <point key="canvasLocation" x="31.884057971014496" y="-1248.2142857142856"/>
         </scene>
         <!--MainVC-->
         <scene sceneID="qOd-XU-V1H">
@@ -1291,7 +1269,7 @@ Night</string>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="chevron.backward" catalog="system"/>
                                         <connections>
-                                            <action selector="backBtn:" destination="TX6-cu-SQV" eventType="touchUpInside" id="zH2-5V-wz5"/>
+                                            <action selector="backBtn:" destination="5dJ-yF-lIp" eventType="touchUpInside" id="n2m-Dc-b6i"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5x-gR-7yK">
@@ -1416,7 +1394,7 @@ Night</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JTR-ve-jbF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2214.4927536231885" y="-1123.6607142857142"/>
+            <point key="canvasLocation" x="-2200" y="-518"/>
         </scene>
         <!--Create OppourtinityVC-->
         <scene sceneID="bub-rt-rXG">
@@ -1581,6 +1559,12 @@ Night</string>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="endColor">
                                                                 <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" name="bg5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="0.5"/>
+                                                            </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                 </subviews>
@@ -1588,33 +1572,37 @@ Night</string>
                                                     <constraint firstAttribute="height" constant="110" id="z4n-gp-aJc"/>
                                                 </constraints>
                                             </stackView>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l1B-Ni-pOf" customClass="BottomBorderTextField" customModule="GoodLifeApplocation" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" Email (Optional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z2r-d2-GAm" customClass="BottomBorderTextField" customModule="GoodLifeApplocation" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="665.5" width="374" height="50"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="IFV-Yy-IVb"/>
+                                                    <constraint firstAttribute="height" constant="50" id="yBD-Gf-Bgh"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage">
-                                                        <imageReference key="value" image="envelope.fill" catalog="system" symbolScale="medium"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="LineColor">
+                                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="imagePadding">
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderTextColor">
+                                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" name="bg5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="envelope.fill" catalog="system"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="0.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                         <real key="value" value="8"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
                                                         <real key="value" value="8"/>
                                                     </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" systemColor="systemGray5Color"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="6"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="1"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="imagePadding">
+                                                        <real key="value" value="8"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
@@ -1748,7 +1736,6 @@ Night</string>
                         <outlet property="TitleTxt" destination="1o4-hR-g4z" id="278-p4-zee"/>
                         <outlet property="cityTxt" destination="7ZS-Y7-6QU" id="fAE-Av-gJu"/>
                         <outlet property="descriptionTxt" destination="2gw-xX-X95" id="W9z-JP-azG"/>
-                        <outlet property="emailTxt" destination="l1B-Ni-pOf" id="vx4-tW-lNq"/>
                         <outlet property="mobileNumber" destination="umm-WU-gla" id="Bnl-lD-eiI"/>
                         <outlet property="nameTxt" destination="0AH-C0-LNX" id="NFZ-yH-Th2"/>
                         <outlet property="tagCollectionview" destination="GpQ-on-QLo" id="d0W-gF-d8I"/>
@@ -1756,7 +1743,7 @@ Night</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YkZ-UN-Oh8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-878" y="-1125"/>
+            <point key="canvasLocation" x="32" y="-606"/>
         </scene>
         <!--Tab BarVC-->
         <scene sceneID="oxe-lG-f4O">
@@ -1766,7 +1753,9 @@ Night</string>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FbW-nY-Fyv">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" name="backgroundColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="brp-4x-IYn" kind="relationship" relationship="viewControllers" id="rv5-p5-ZbY"/>
@@ -3135,18 +3124,12 @@ Night</string>
             <size key="intrinsicContentSize" width="22.5" height="21.5"/>
         </designable>
         <designable name="Ads-Ue-rxg"/>
-        <designable name="G1j-7g-Fb8">
-            <size key="intrinsicContentSize" width="188" height="33.5"/>
-        </designable>
         <designable name="MpK-a6-Y8X"/>
         <designable name="Ugm-mz-eKi">
             <size key="intrinsicContentSize" width="17.5" height="22"/>
         </designable>
         <designable name="ZWE-gB-WFE">
             <size key="intrinsicContentSize" width="62.5" height="33.5"/>
-        </designable>
-        <designable name="l1B-Ni-pOf">
-            <size key="intrinsicContentSize" width="62.5" height="34"/>
         </designable>
         <designable name="umm-WU-gla">
             <size key="intrinsicContentSize" width="142.5" height="34"/>
@@ -3165,7 +3148,7 @@ Night</string>
         <image name="homekit" catalog="system" width="128" height="104"/>
         <image name="line.3.horizontal" catalog="system" width="128" height="65"/>
         <image name="mobileIntroduction" width="55" height="24"/>
-        <image name="noData" width="292" height="137.5"/>
+        <image name="noData" width="213" height="137.5"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="plus" catalog="system" width="128" height="113"/>

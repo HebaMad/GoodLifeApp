@@ -29,6 +29,11 @@ class ExploreMapVC: UIViewController {
 
     }
 
+    @IBAction func backBtn(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    
     @IBAction func SelectionMenuBtn(_ sender: Any) {
         let controller = choosingMinistryNeedsVC()
 

@@ -16,6 +16,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CategoriesVC" customModule="GoodLifeApplocation" customModuleProvider="target">
             <connections>
+                <outlet property="AddCategory" destination="Fti-4W-E7a" id="NAl-Er-oUy"/>
                 <outlet property="categoriesCollectionview" destination="Tnh-BR-UYF" id="slh-sN-p1j"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -28,33 +29,28 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y7d-ya-Gxb">
                     <rect key="frame" x="0.0" y="59" width="393" height="50"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5k-hL-pHe">
-                            <rect key="frame" x="8" y="0.0" width="40" height="50"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="40" id="Svl-YO-gYz"/>
-                            </constraints>
-                            <color key="tintColor" red="0.78039215689999997" green="0.78039215689999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" image="chevron.backward" catalog="system"/>
-                            <connections>
-                                <action selector="backBtn:" destination="-1" eventType="touchUpInside" id="fwd-VB-4ru"/>
-                            </connections>
-                        </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pCp-l8-SOZ">
-                            <rect key="frame" x="157" y="14" width="79" height="22"/>
+                            <rect key="frame" x="157" y="14.666666666666671" width="79" height="21"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="18"/>
                             <color key="textColor" name="button"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fti-4W-E7a">
+                            <rect key="frame" x="318.33333333333331" y="9.6666666666666714" width="64.666666666666686" height="31"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="+ Add">
+                                <fontDescription key="titleFontDescription" type="boldSystem" pointSize="14"/>
+                                <color key="baseForegroundColor" name="button"/>
+                            </buttonConfiguration>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="h5k-hL-pHe" firstAttribute="top" secondItem="y7d-ya-Gxb" secondAttribute="top" id="0t5-DR-aPa"/>
                         <constraint firstItem="pCp-l8-SOZ" firstAttribute="centerY" secondItem="y7d-ya-Gxb" secondAttribute="centerY" id="0z1-VG-y3q"/>
-                        <constraint firstItem="h5k-hL-pHe" firstAttribute="leading" secondItem="y7d-ya-Gxb" secondAttribute="leading" constant="8" id="7RF-zB-ZiF"/>
                         <constraint firstAttribute="height" constant="50" id="BI8-Ac-5ve"/>
-                        <constraint firstAttribute="bottom" secondItem="h5k-hL-pHe" secondAttribute="bottom" id="c78-lE-fSq"/>
+                        <constraint firstItem="Fti-4W-E7a" firstAttribute="centerY" secondItem="y7d-ya-Gxb" secondAttribute="centerY" id="WZ6-Mu-Tex"/>
+                        <constraint firstAttribute="trailing" secondItem="Fti-4W-E7a" secondAttribute="trailing" constant="10" id="Yp2-ZA-Ojm"/>
                         <constraint firstItem="pCp-l8-SOZ" firstAttribute="centerX" secondItem="y7d-ya-Gxb" secondAttribute="centerX" id="zIe-fN-UMr"/>
                     </constraints>
                 </view>
@@ -78,13 +74,12 @@
                 <constraint firstItem="y7d-ya-Gxb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="QhU-zf-lQl"/>
                 <constraint firstAttribute="trailing" secondItem="y7d-ya-Gxb" secondAttribute="trailing" id="RqZ-Cf-IkG"/>
                 <constraint firstItem="Tnh-BR-UYF" firstAttribute="top" secondItem="y7d-ya-Gxb" secondAttribute="bottom" constant="4" id="dkc-oD-ZZ4"/>
-                <constraint firstItem="Tnh-BR-UYF" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="zht-VT-nSo"/>
+                <constraint firstItem="Tnh-BR-UYF" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="x9C-UA-QTP"/>
             </constraints>
             <point key="canvasLocation" x="9.9236641221374047" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>
-        <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <namedColor name="bg3">
             <color red="0.97299998998641968" green="0.9649999737739563" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

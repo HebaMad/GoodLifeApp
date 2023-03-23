@@ -28,6 +28,7 @@ class MainVC: UIViewController {
     
     
     private func setupCollectionview(){
+        self.showLoading()
         presenter.getMainScreenData()
         presenter.delegate=self
         HomeCollectionview.register(OpportunitiesCollectionCell.self)
@@ -274,6 +275,8 @@ extension MainVC:HomeDelegate{
         categories=data.categories ?? []
         sliders=data.sliders ?? []
         opportunities=data.opportunities ?? []
+        self.hideLoading()
+
         HomeCollectionview.reloadData()
     }
 }

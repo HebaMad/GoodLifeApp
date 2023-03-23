@@ -90,7 +90,15 @@ private extension choosingMinistryNeedsVC{
             recommendationView.isHidden = false
             interest = 3
             presenter.getSmartRecommendation(interestId: interest, needTypeId: UserDefaults.standard.integer(forKey: "id"))
-            sender.setTitleColor(UIColor(named: "BgColor"), for: .normal)
+            if sender == socialCommitmentsBtn{
+                sender.setTitleColor(UIColor(named: "BgColor"), for: .normal)
+
+            }else{
+                sender.setTitleColor(.black, for: .normal)
+
+            }
+//            sender.layer.borderWidth=0.5
+//            sender.layer.borderColor = UIColor(named: "BgColor")?.cgColor
             presenter.delegate = self
             
         case lifeBtn:
@@ -99,8 +107,16 @@ private extension choosingMinistryNeedsVC{
             interest = 2
             print( UserDefaults.standard.integer(forKey: "id"))
             presenter.getSmartRecommendation(interestId: interest, needTypeId: UserDefaults.standard.integer(forKey: "id"))
-            sender.setTitleColor(UIColor(named: "BgColor"), for: .normal)
+            if sender == lifeBtn{
+                sender.setTitleColor(UIColor(named: "BgColor"), for: .normal)
+
+            }else{
+                sender.setTitleColor(.black, for: .normal)
+
+            }
+
             presenter.delegate = self
+            
             
         case movementLifeBtn:
 
@@ -108,7 +124,16 @@ private extension choosingMinistryNeedsVC{
             interest = 1
             presenter.getSmartRecommendation(interestId: interest, needTypeId: UserDefaults.standard.integer(forKey: "id"))
             presenter.delegate = self
-            sender.setTitleColor(UIColor(named: "BgColor"), for: .normal)
+            if sender == movementLifeBtn{
+                sender.setTitleColor(UIColor(named: "BgColor"), for: .normal)
+
+            }else{
+                sender.setTitleColor(.black, for: .normal)
+
+            }
+     
+            
+            
         case filterBtn:
             
             let vc = FilterVC()
@@ -191,7 +216,6 @@ extension choosingMinistryNeedsVC:HomeDelegate{
                 print(categories)
                 _delegate.filteredData(data:categories)
             }}
-        
     }
     
     func getOppourtinity(categories: Oppourtinity) {
