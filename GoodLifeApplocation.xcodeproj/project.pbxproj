@@ -431,6 +431,7 @@
 		279D477A2996A5BB000A011E /* HobbiesItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HobbiesItems.swift; sourceTree = "<group>"; };
 		279D4F2929B766B90008CC29 /* AddingItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingItemCell.swift; sourceTree = "<group>"; };
 		279D4F2A29B766B90008CC29 /* AddingItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddingItemCell.xib; sourceTree = "<group>"; };
+		27A03C5429CB0BE600661859 /* SkeletonView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SkeletonView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		27A32FD128BCA54100EF4AA2 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		27A7375D28913F0500FD8AD9 /* ProgressView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgressView.xib; sourceTree = "<group>"; };
 		27A7375F28913FFF00FD8AD9 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
@@ -1263,6 +1264,7 @@
 		CE579E479D56B849348B0B26 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				27A03C5429CB0BE600661859 /* SkeletonView.framework */,
 				F0E5AE3CF2C1C421B86FEF65 /* Pods_GoodLifeApplocation.framework */,
 			);
 			name = Frameworks;
@@ -1280,6 +1282,7 @@
 				27C9AE20288D38E900FA584A /* Frameworks */,
 				27C9AE21288D38E900FA584A /* Resources */,
 				37062CBD80447D9716DFAD37 /* [CP] Embed Pods Frameworks */,
+				ADBC8351AE7637EB7A176085 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1461,6 +1464,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GoodLifeApplocation/Pods-GoodLifeApplocation-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ADBC8351AE7637EB7A176085 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoodLifeApplocation/Pods-GoodLifeApplocation-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoodLifeApplocation/Pods-GoodLifeApplocation-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GoodLifeApplocation/Pods-GoodLifeApplocation-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BABDA1275312FBF17FBA3297 /* [CP] Check Pods Manifest.lock */ = {
@@ -1823,6 +1843,7 @@
 				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = H74677C27V;
 				EXCLUDED_ARCHS = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GoodLifeApplocation/Info.plist;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We want to use your location to see all activites linked to your site";
@@ -1832,12 +1853,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = ios.com.GoodLifeApplocations;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1860,6 +1882,7 @@
 				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = H74677C27V;
 				EXCLUDED_ARCHS = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GoodLifeApplocation/Info.plist;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We want to use your location to see all activites linked to your site";
@@ -1869,12 +1892,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = ios.com.GoodLifeApplocations;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
