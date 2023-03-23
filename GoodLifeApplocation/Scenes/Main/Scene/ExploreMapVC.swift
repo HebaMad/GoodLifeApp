@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FittedSheets
 
 class ExploreMapVC: UIViewController {
 
@@ -29,6 +30,16 @@ class ExploreMapVC: UIViewController {
     }
 
     @IBAction func SelectionMenuBtn(_ sender: Any) {
+        let controller = choosingMinistryNeedsVC()
+
+        let sheetController = SheetViewController(
+            
+            controller: controller,
+            // sizes: [ .intrinsic , .percent(0.80), .fixed(600), .intrinsic])
+            sizes: [ .marginFromTop(520), .percent(0.7), .intrinsic])
+//          controller.onFilterDissmissed = self
+        
+            self.present(sheetController, animated: false, completion: nil)
     }
     
    
@@ -37,7 +48,7 @@ class ExploreMapVC: UIViewController {
 
 extension ExploreMapVC{
     func createCompositionalLayout() -> UICollectionViewCompositionalLayout {
-        UICollectionViewCompositionalLayout { [weak self] sectionIndex, layoutEnviroment in
+        UICollectionViewCompositionalLayout { sectionIndex, layoutEnviroment in
 //            guard let self = self  else {return nil}
             let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.33), heightDimension: .absolute(50))
             
@@ -84,10 +95,17 @@ extension ExploreMapVC:UICollectionViewDataSource{
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell:HobbiesCell = collectionView.dequeueReusableCell(for: indexPath)
+        let cell = collectionView.cellForItem(at: indexPath) as! HobbiesCell
         cell.hobbyView.layer.borderColor = UIColor(named: "BgColor")?.cgColor
         cell.hobbiesTitle.textColor = UIColor(named: "BgColor")
+        categoriesLabel.text = categories[indexPath.row].name
 
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! HobbiesCell
+        cell.hobbyView.layer.borderColor = UIColor.clear.cgColor
+        cell.hobbiesTitle.textColor = .black
     }
  
 }

@@ -81,7 +81,8 @@ private extension choosingMinistryNeedsVC {
 private extension choosingMinistryNeedsVC{
     
     @objc func buttonWasTapped( _ sender:UIButton){
-        
+        sender.setTitleColor(.black, for: .normal)
+
         switch sender{
             
         case socialCommitmentsBtn:
@@ -89,6 +90,7 @@ private extension choosingMinistryNeedsVC{
             recommendationView.isHidden = false
             interest = 3
             presenter.getSmartRecommendation(interestId: interest, needTypeId: UserDefaults.standard.integer(forKey: "id"))
+            sender.setTitleColor(UIColor(named: "BgColor"), for: .normal)
             presenter.delegate = self
             
         case lifeBtn:
@@ -97,20 +99,23 @@ private extension choosingMinistryNeedsVC{
             interest = 2
             print( UserDefaults.standard.integer(forKey: "id"))
             presenter.getSmartRecommendation(interestId: interest, needTypeId: UserDefaults.standard.integer(forKey: "id"))
+            sender.setTitleColor(UIColor(named: "BgColor"), for: .normal)
             presenter.delegate = self
             
         case movementLifeBtn:
-            
+
             recommendationView.isHidden = false
             interest = 1
             presenter.getSmartRecommendation(interestId: interest, needTypeId: UserDefaults.standard.integer(forKey: "id"))
             presenter.delegate = self
-            
+            sender.setTitleColor(UIColor(named: "BgColor"), for: .normal)
         case filterBtn:
             
             let vc = FilterVC()
             vc.onFilterDissmissed = self
             self.present(vc, animated: false, completion: nil)
+            
+            
             
         default:
             print("")
@@ -159,7 +164,7 @@ extension choosingMinistryNeedsVC:UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: (self.view.frame.width - 20)/2.5, height: 220)
+        return CGSize(width: (self.view.frame.width - 10)/2.5, height: 220)
         
     }
 }
@@ -185,7 +190,9 @@ extension choosingMinistryNeedsVC:HomeDelegate{
             if let _delegate = self.onFilterDissmissed{
                 print(categories)
                 _delegate.filteredData(data:categories)
-            }}}
+            }}
+        
+    }
     
     func getOppourtinity(categories: Oppourtinity) {
         print(categories.items ?? [])

@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import SkeletonView
+//import SkeletonView
 
 class NotificationVC: UIViewController {
     //MARK: - Outlet

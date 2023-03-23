@@ -137,7 +137,7 @@ extension UIView {
     func convertDateFormaterFullString(_ dates: String) -> (String)
         {
             let formatter = DateFormatter()
-              formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+              formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssssssZ"
               guard let date = formatter.date(from: dates) else { return ""}
               formatter.dateFormat = "LLLL, dd, yyyy"
               return formatter.string(from: date)

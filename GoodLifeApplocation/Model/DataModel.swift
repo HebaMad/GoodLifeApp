@@ -5,8 +5,7 @@
 //  Created by heba isaa on 27/08/2022.
 //
 
-import Foundation
-
+import UIKit
 // MARK: - Empty Model
 struct Empty:Decodable{
 
@@ -37,6 +36,7 @@ struct mainType:Codable{
     let logo:String?
     let name:String?
     let default_need:String?
+    
 }
 
 struct FundType:Decodable{
