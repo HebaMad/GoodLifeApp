@@ -16,6 +16,7 @@ class choosingMinistryNeedsVC: UIViewController {
     
     //MARK: - Outlet
     
+    @IBOutlet weak var typeTitle: UILabel!
     @IBOutlet weak var socialCommitmentsBtn: UIButtonDesignable!
     @IBOutlet weak var lifeBtn: UIButtonDesignable!
     @IBOutlet weak var movementLifeBtn: UIButtonDesignable!
@@ -57,20 +58,19 @@ class choosingMinistryNeedsVC: UIViewController {
         presenter.delegate=self
         
         
-    }
-    
-}
+    }}
 
 //MARK: - Binding
 
 private extension choosingMinistryNeedsVC {
-    
     func bindBackButton(){
-        socialCommitmentsBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
-        lifeBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
-        movementLifeBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
+        socialCommitmentsBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchDown)
+        lifeBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchDown)
+        movementLifeBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchDown)
         filterBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
-        
+        socialCommitmentsBtn.setTitleColor(.black, for: .normal)
+        lifeBtn.setTitleColor(.black, for: .normal)
+        movementLifeBtn.setTitleColor(.black, for: .normal)
         
     }
 }
@@ -78,11 +78,13 @@ private extension choosingMinistryNeedsVC {
 
 //MARK: - PrivateHandler
 
-private extension choosingMinistryNeedsVC{
+private extension choosingMinistryNeedsVC {
     
     @objc func buttonWasTapped( _ sender:UIButton){
-        sender.setTitleColor(.black, for: .normal)
-
+        sender.setTitleColor(UIColor(named: "BgColor"), for: .selected)
+        sender.layer.borderWidth = sender.isSelected ? 1 : 0
+        sender.layer.borderColor = UIColor(named: "BgColor")?.cgColor
+        
         switch sender{
             
         case socialCommitmentsBtn:
@@ -90,16 +92,15 @@ private extension choosingMinistryNeedsVC{
             recommendationView.isHidden = false
             interest = 3
             presenter.getSmartRecommendation(interestId: interest, needTypeId: UserDefaults.standard.integer(forKey: "id"))
-            if sender == socialCommitmentsBtn{
-                sender.setTitleColor(UIColor(named: "BgColor"), for: .normal)
-
-            }else{
-                sender.setTitleColor(.black, for: .normal)
-
-            }
-//            sender.layer.borderWidth=0.5
-//            sender.layer.borderColor = UIColor(named: "BgColor")?.cgColor
             presenter.delegate = self
+            sender.tintColor = sender.backgroundColor
+            
+            sender.isSelected = true
+            
+            // reset other button colors and borders
+            lifeBtn.isSelected = false
+            
+            movementLifeBtn.isSelected = false
             
         case lifeBtn:
             
@@ -107,31 +108,28 @@ private extension choosingMinistryNeedsVC{
             interest = 2
             print( UserDefaults.standard.integer(forKey: "id"))
             presenter.getSmartRecommendation(interestId: interest, needTypeId: UserDefaults.standard.integer(forKey: "id"))
-            if sender == lifeBtn{
-                sender.setTitleColor(UIColor(named: "BgColor"), for: .normal)
-
-            }else{
-                sender.setTitleColor(.black, for: .normal)
-
-            }
-
             presenter.delegate = self
+            sender.tintColor = sender.backgroundColor
             
+            sender.isSelected = true
+            
+            // reset other button colors and borders
+            socialCommitmentsBtn.isSelected = false
+            
+            movementLifeBtn.isSelected = false
             
         case movementLifeBtn:
-
+            
             recommendationView.isHidden = false
             interest = 1
             presenter.getSmartRecommendation(interestId: interest, needTypeId: UserDefaults.standard.integer(forKey: "id"))
             presenter.delegate = self
-            if sender == movementLifeBtn{
-                sender.setTitleColor(UIColor(named: "BgColor"), for: .normal)
-
-            }else{
-                sender.setTitleColor(.black, for: .normal)
-
-            }
-     
+            sender.tintColor = sender.backgroundColor
+            
+            sender.isSelected = true
+            // reset other button colors and borders
+            socialCommitmentsBtn.isSelected = false
+            lifeBtn.isSelected = false
             
             
         case filterBtn:
@@ -143,7 +141,7 @@ private extension choosingMinistryNeedsVC{
             
             
         default:
-            print("")
+            break
         }
     }
 }
