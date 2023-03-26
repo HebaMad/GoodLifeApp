@@ -19,7 +19,7 @@ typealias mainDelegate = MainDelegate & UIViewController
 
 class MainPresenter:NSObject{
     
-    var delegate :homeDelegate?
+    var delegate :mainDelegate?
     
     func getMainScreenData(){
         
@@ -39,6 +39,24 @@ class MainPresenter:NSObject{
             }
         }
         }
+    
+    func deleteOpportunities(opportunity_id:String){
+        MainManager.shared.deleteOpportunities(opportunity_id: opportunity_id) { Response in
+            switch Response{
+                
+            case let .success(response):
+                if response.status == true{
+                    self.delegate?.showAlerts(title: "Success", message: response.message!)
+                }else{
+                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
+                }
+                
+            case .failure(_):
+                
+                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
+            }
+        }
+    }
     
     
     

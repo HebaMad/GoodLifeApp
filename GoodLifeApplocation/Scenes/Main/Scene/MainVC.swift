@@ -256,20 +256,10 @@ extension MainVC:UICollectionViewDelegateFlowLayout{
     }
     
 }
-extension MainVC:HomeDelegate{
+extension MainVC:MainDelegate{
     func showAlerts(title: String, message: String) { }
     
-    func getCategories(categories: Home) {}
-    
-    func getStandardCategoriesFiltering(categories: MainHomeCategories) {}
-    
-    func getsubCategoriesFiltering(categories: SubHomeCategories) {}
-    
-    func getCategoriesFiltered(categories: Home) {}
-    
-    func getOppourtinity(categories: Oppourtinity) { }
-    
-    func getOppourtinityDetails(categories: OppourtinityDetails) {}
+
     
     func getMainScreenData(data: MainScreenData) {
         categories=data.categories ?? []
