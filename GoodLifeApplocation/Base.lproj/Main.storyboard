@@ -1149,6 +1149,9 @@ Night</string>
                                         <color key="tintColor" name="button"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="line.3.horizontal" catalog="system"/>
+                                        <connections>
+                                            <action selector="menuBtn:" destination="xB5-NN-drJ" eventType="touchUpInside" id="q6P-VR-tex"/>
+                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uDt-GE-3Lr" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
                                         <rect key="frame" x="358" y="0.0" width="40" height="40"/>
@@ -3136,6 +3139,9 @@ Night</string>
         </designable>
         <designable name="ytq-pp-ACn">
             <size key="intrinsicContentSize" width="22.5" height="21.5"/>
+        </designable>
+        <designable name="z2r-d2-GAm">
+            <size key="intrinsicContentSize" width="135" height="34"/>
         </designable>
     </designables>
     <resources>

@@ -36,7 +36,7 @@ class ExploreMapVC: UIViewController {
     
     @IBAction func SelectionMenuBtn(_ sender: Any) {
         let controller = choosingMinistryNeedsVC()
-
+//        controller.typeTitle.text=categoriesLabel.text
         let sheetController = SheetViewController(
             
             controller: controller,

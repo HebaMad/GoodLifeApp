@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SideMenu
 
 class MainVC: UIViewController {
     
@@ -18,14 +19,22 @@ class MainVC: UIViewController {
     var opportunities:[opportunitiesData]=[]
     var sliders:[sliderData]=[]
     let presenter=MainPresenter()
-    
+    private var menu :SideMenuNavigationController?
+
     //MARK: - Life cycle
     override func viewDidLoad() {
         
         super.viewDidLoad()
         setupCollectionview()
+        setUpSideMenu()
+        changeSideMenuSide()
     }
     
+    
+    @IBAction func menuBtn(_ sender: Any) {
+        present(menu!, animated: true, completion: nil)
+
+    }
     
     private func setupCollectionview(){
         self.showLoading()
@@ -43,6 +52,33 @@ class MainVC: UIViewController {
         HomeCollectionview.delegate=self
         
     }
+    
+}
+
+
+extension MainVC {
+    private func changeSideMenuSide(){
+        
+        menu?.leftSide = true
+        SideMenuManager.default.rightMenuNavigationController = nil
+        SideMenuManager.default.leftMenuNavigationController = menu
+    }
+    
+    private func setUpSideMenu() {
+        let vc = OpportunityViewVC()
+        menu = SideMenuNavigationController(rootViewController: vc)
+        menu?.setNavigationBarHidden(true, animated: false)
+        menu?.presentationStyle = .menuSlideIn
+        menu?.presentationStyle.onTopShadowColor = .black
+        menu?.presentationStyle.onTopShadowRadius = 0
+        menu?.presentationStyle.onTopShadowOffset = .zero
+        menu?.presentationStyle.onTopShadowOpacity = 0
+        menu?.presentationStyle.presentingScaleFactor = 0.99
+        menu?.menuWidth = 280
+        SideMenuManager.default.addPanGestureToPresent(toView: self.view)
+    }
+    
+    
     
 }
 extension MainVC{
