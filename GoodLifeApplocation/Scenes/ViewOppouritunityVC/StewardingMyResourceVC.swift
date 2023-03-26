@@ -15,12 +15,11 @@ class StewardingMyResourceVC: ButtonBarPagerTabStripViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupPagerTab()
-        print(stewardingResourceData)
     }
     
 
     private func setupPagerTab(){
-        settings.style.buttonBarBackgroundColor = .blue
+        settings.style.buttonBarBackgroundColor = .clear
         settings.style.buttonBarItemBackgroundColor = .clear
         settings.style.buttonBarItemTitleColor = .white
         settings.style.buttonBarItemFont = .boldSystemFont(ofSize: 14)
@@ -30,7 +29,6 @@ class StewardingMyResourceVC: ButtonBarPagerTabStripViewController {
         settings.style.buttonBarItemsShouldFillAvailableWidth = true
         settings.style.buttonBarLeftContentInset = 0
         settings.style.buttonBarRightContentInset = 0
-//
         
         changeCurrentIndexProgressive = { [weak self] (oldCell: ButtonBarViewCell?, newCell: ButtonBarViewCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in
             guard changeCurrentIndex == true else { return }
