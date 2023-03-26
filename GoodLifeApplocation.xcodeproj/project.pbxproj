@@ -127,6 +127,9 @@
 		278882FA29C211500025A6D0 /* CreateOpportunitiesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 278882F829C211500025A6D0 /* CreateOpportunitiesCell.xib */; };
 		278882FD29C342D80025A6D0 /* searchviewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278882FB29C342D80025A6D0 /* searchviewHeader.swift */; };
 		278882FE29C342D80025A6D0 /* searchviewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 278882FC29C342D80025A6D0 /* searchviewHeader.xib */; };
+		2791D8E629D0390700B03A04 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2791D8E529D0390700B03A04 /* MainPresenter.swift */; };
+		2791D8E929D03A6200B03A04 /* MainTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2791D8E829D03A6200B03A04 /* MainTarget.swift */; };
+		2791D8EB29D03A6D00B03A04 /* MainNetworkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2791D8EA29D03A6D00B03A04 /* MainNetworkable.swift */; };
 		279404C6299EAC8A00742AD9 /* EditHobbiesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279404C4299EAC8A00742AD9 /* EditHobbiesVC.swift */; };
 		279404C7299EAC8A00742AD9 /* EditHobbiesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 279404C5299EAC8A00742AD9 /* EditHobbiesVC.xib */; };
 		27985F3C29968F2F006C8FE9 /* FavouriteHobbiesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27985F3A29968F2F006C8FE9 /* FavouriteHobbiesVC.swift */; };
@@ -420,6 +423,9 @@
 		278882F829C211500025A6D0 /* CreateOpportunitiesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateOpportunitiesCell.xib; sourceTree = "<group>"; };
 		278882FB29C342D80025A6D0 /* searchviewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchviewHeader.swift; sourceTree = "<group>"; };
 		278882FC29C342D80025A6D0 /* searchviewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = searchviewHeader.xib; sourceTree = "<group>"; };
+		2791D8E529D0390700B03A04 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		2791D8E829D03A6200B03A04 /* MainTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTarget.swift; sourceTree = "<group>"; };
+		2791D8EA29D03A6D00B03A04 /* MainNetworkable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNetworkable.swift; sourceTree = "<group>"; };
 		279404C4299EAC8A00742AD9 /* EditHobbiesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHobbiesVC.swift; sourceTree = "<group>"; };
 		279404C5299EAC8A00742AD9 /* EditHobbiesVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditHobbiesVC.xib; sourceTree = "<group>"; };
 		27985F3A29968F2F006C8FE9 /* FavouriteHobbiesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteHobbiesVC.swift; sourceTree = "<group>"; };
@@ -704,6 +710,15 @@
 			path = Scene;
 			sourceTree = "<group>";
 		};
+		2791D8E729D03A4E00B03A04 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				2791D8E829D03A6200B03A04 /* MainTarget.swift */,
+				2791D8EA29D03A6D00B03A04 /* MainNetworkable.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		27985F3E29968FE2006C8FE9 /* XIB */ = {
 			isa = PBXGroup;
 			children = (
@@ -736,6 +751,7 @@
 				277CF36928BD5DAF00F2874F /* ProfilePresenter.swift */,
 				270562D428C090D400B0124E /* DashboardPresenter.swift */,
 				27ECA33C28EB25C1003DCF53 /* HomePresenter.swift */,
+				2791D8E529D0390700B03A04 /* MainPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -787,6 +803,7 @@
 		27B54D8428BA635E0074A6A1 /* Networkable */ = {
 			isa = PBXGroup;
 			children = (
+				2791D8E729D03A4E00B03A04 /* Main */,
 				27ECA33628E982D0003DCF53 /* Home */,
 				270562CE28BFD18A00B0124E /* Dashboard */,
 				27B54D9928BAC0C30074A6A1 /* SignUp */,
@@ -1517,6 +1534,7 @@
 				2765FB3928FC6DFB00473198 /* NotificationVC.swift in Sources */,
 				27C9AE89288D51FD00FA584A /* OnBoardingFrame4.swift in Sources */,
 				27594D2228A017D600F4DDC3 /* GeneralLiturgicalPageVC.swift in Sources */,
+				2791D8EB29D03A6D00B03A04 /* MainNetworkable.swift in Sources */,
 				27F4B14B28B8AD4F003365A6 /* VenturesCell.swift in Sources */,
 				27F4B15328B8BD90003365A6 /* ProfileSettingVC.swift in Sources */,
 				27C9AE3D288D39B300FA584A /* SplashScreen.swift in Sources */,
@@ -1565,6 +1583,7 @@
 				27C9AEB3288EF14900FA584A /* MealMarkerTableViewCell.swift in Sources */,
 				27CB2085289D450000E63694 /* SearchView.swift in Sources */,
 				27A737702891435C00FD8AD9 /* UIButtonDesignable.swift in Sources */,
+				2791D8E929D03A6200B03A04 /* MainTarget.swift in Sources */,
 				2704244C28A84BF3002EF7B5 /* Extension.swift in Sources */,
 				27B54D7C28BA03C60074A6A1 /* EditProfileVC.swift in Sources */,
 				27CBC56F2926C005000AE9A6 /* CreateOppourtinityVC.swift in Sources */,
@@ -1687,6 +1706,7 @@
 				27CB208B289D4A9300E63694 /* HomeCategories.swift in Sources */,
 				270562D528C090D400B0124E /* DashboardPresenter.swift in Sources */,
 				274B65A22999558B008EA6D5 /* StewardingResource.swift in Sources */,
+				2791D8E629D0390700B03A04 /* MainPresenter.swift in Sources */,
 				27B54D9328BA6E170074A6A1 /* AppData.swift in Sources */,
 				2704243D28A6C828002EF7B5 /* BusinessPlanCell.swift in Sources */,
 				27F7363928C4FD4100E804B5 /* resourceSubTopicCell.swift in Sources */,

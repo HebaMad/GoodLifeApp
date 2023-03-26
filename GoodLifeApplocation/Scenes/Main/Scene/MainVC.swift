@@ -17,7 +17,7 @@ class MainVC: UIViewController {
     var categories:[mainType]=[]
     var opportunities:[opportunitiesData]=[]
     var sliders:[sliderData]=[]
-    let presenter=HomePresenter()
+    let presenter=MainPresenter()
     
     //MARK: - Life cycle
     override func viewDidLoad() {
