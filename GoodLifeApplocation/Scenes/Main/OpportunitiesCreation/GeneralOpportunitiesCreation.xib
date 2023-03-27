@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Bold.ttf">
+            <string>Inter-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GeneralOpportunitiesCreation" customModule="GoodLifeApplocation" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GYK-Rb-Sop">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="70m-AI-64Y">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="794.33333333333337"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E1w-59-Jrx">
+                                    <rect key="frame" x="12" y="7.9999999999999982" width="369" height="20.333333333333329"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="C3R-w2-fju">
+                                    <rect key="frame" x="12" y="36.333333333333329" width="369" height="91"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UTc-VD-RKN">
+                                            <rect key="frame" x="0.0" y="0.0" width="369" height="33"/>
+                                            <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="14"/>
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Category" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VP7-mj-VHX" customClass="UITextFieldDataPicker" customModule="GoodLifeApplocation" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="43.000000000000014" width="369" height="48"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="48" id="kun-Jb-TpA"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="91" id="eFs-jB-j07"/>
+                                    </constraints>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bkV-f1-eSx">
+                                    <rect key="frame" x="12" y="135.33333333333334" width="369" height="67"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount raise" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qgr-k8-APC">
+                                            <rect key="frame" x="0.0" y="0.0" width="369" height="17"/>
+                                            <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="$" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bH0-BV-Rga">
+                                            <rect key="frame" x="0.0" y="27" width="369" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="9hn-2O-qql"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        </textField>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BUT-Xw-Vuk">
+                                    <rect key="frame" x="12" y="210.33333333333331" width="369" height="91"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9s-Fr-Yhe">
+                                            <rect key="frame" x="0.0" y="0.0" width="369" height="33"/>
+                                            <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="14"/>
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select work Type" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jhc-xv-4DW" customClass="UITextFieldDataPicker" customModule="GoodLifeApplocation" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="43" width="369" height="48"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="48" id="R51-sG-UHj"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="91" id="w6E-G8-5CK"/>
+                                    </constraints>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HRU-NL-iTF">
+                                    <rect key="frame" x="12" y="309.33333333333331" width="369" height="91"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level of difficulty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t1p-Kf-Eso">
+                                            <rect key="frame" x="0.0" y="0.0" width="369" height="33"/>
+                                            <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="14"/>
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select level of difficulty" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Pi-Gq-JM8" customClass="UITextFieldDataPicker" customModule="GoodLifeApplocation" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="43" width="369" height="48"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="48" id="Jww-GY-Eu0"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="91" id="Dim-Xq-Bvt"/>
+                                    </constraints>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rG8-Nf-z1a">
+                                    <rect key="frame" x="12" y="408.33333333333331" width="369" height="91"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount of technology" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83S-AZ-hS4">
+                                            <rect key="frame" x="0.0" y="0.0" width="369" height="33"/>
+                                            <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="14"/>
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="select your range of amount" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xL2-nk-4Hw" customClass="UITextFieldDataPicker" customModule="GoodLifeApplocation" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="43" width="369" height="48"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="48" id="Ypa-RJ-g6d"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="91" id="KcJ-ad-40K"/>
+                                    </constraints>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PED-hW-ekd">
+                                    <rect key="frame" x="12" y="507.33333333333337" width="369" height="91"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fund Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0TK-27-Lzh">
+                                            <rect key="frame" x="0.0" y="0.0" width="369" height="33"/>
+                                            <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="14"/>
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Fund Type" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zaW-rF-8tJ" customClass="UITextFieldDataPicker" customModule="GoodLifeApplocation" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="43" width="369" height="48"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="48" id="rhl-N9-1Mf"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="91" id="YhE-PM-mra"/>
+                                    </constraints>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Puw-mg-DeE">
+                                    <rect key="frame" x="12" y="606.33333333333337" width="369" height="117"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Financial Model" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Z8-Tu-o46">
+                                            <rect key="frame" x="0.0" y="0.0" width="369" height="17"/>
+                                            <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="14"/>
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add Financial Model" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TPM-Sm-yoQ">
+                                            <rect key="frame" x="0.0" y="23" width="369" height="48"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="48" id="Pvf-v3-KCW"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HsU-vx-4KW">
+                                            <rect key="frame" x="0.0" y="77" width="369" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="rcU-HG-Vpy"/>
+                                            </constraints>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="Add more +">
+                                                <fontDescription key="titleFontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                                                <color key="baseForegroundColor" name="backgroundColor"/>
+                                            </buttonConfiguration>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="117" id="gPy-jo-4R0"/>
+                                    </constraints>
+                                </stackView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jr0-iG-CYx">
+                                    <rect key="frame" x="12" y="731.33333333333337" width="369" height="48"/>
+                                    <color key="backgroundColor" red="0.59215686270000001" green="0.2784313725" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="48" id="fh6-3H-ghd"/>
+                                    </constraints>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Next">
+                                        <fontDescription key="titleFontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </buttonConfiguration>
+                                </button>
+                            </subviews>
+                            <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="12" bottom="15" trailing="12"/>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="70m-AI-64Y" firstAttribute="height" secondItem="GYK-Rb-Sop" secondAttribute="height" priority="250" id="8ar-Ei-gBq"/>
+                        <constraint firstAttribute="trailing" secondItem="70m-AI-64Y" secondAttribute="trailing" id="ErZ-vS-jAk"/>
+                        <constraint firstItem="70m-AI-64Y" firstAttribute="width" secondItem="GYK-Rb-Sop" secondAttribute="width" id="Oke-Xr-Odd"/>
+                        <constraint firstItem="70m-AI-64Y" firstAttribute="top" secondItem="GYK-Rb-Sop" secondAttribute="top" id="fkx-vN-em6"/>
+                        <constraint firstItem="70m-AI-64Y" firstAttribute="leading" secondItem="GYK-Rb-Sop" secondAttribute="leading" id="hVz-3y-QWL"/>
+                        <constraint firstAttribute="bottom" secondItem="70m-AI-64Y" secondAttribute="bottom" id="kXS-4C-jxx"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="bg3"/>
+            <constraints>
+                <constraint firstItem="GYK-Rb-Sop" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="2AZ-us-KWZ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="GYK-Rb-Sop" secondAttribute="trailing" id="gLE-M7-DBD"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="GYK-Rb-Sop" secondAttribute="bottom" id="iay-Q3-UQy"/>
+                <constraint firstItem="GYK-Rb-Sop" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="zjs-ts-Q1x"/>
+            </constraints>
+            <point key="canvasLocation" x="140" y="20"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="2Pi-Gq-JM8">
+            <size key="intrinsicContentSize" width="179" height="34"/>
+        </designable>
+        <designable name="TPM-Sm-yoQ">
+            <size key="intrinsicContentSize" width="158" height="34"/>
+        </designable>
+        <designable name="VP7-mj-VHX">
+            <size key="intrinsicContentSize" width="132" height="34"/>
+        </designable>
+        <designable name="jhc-xv-4DW">
+            <size key="intrinsicContentSize" width="139" height="34"/>
+        </designable>
+        <designable name="xL2-nk-4Hw">
+            <size key="intrinsicContentSize" width="209.66666666666666" height="34"/>
+        </designable>
+        <designable name="zaW-rF-8tJ">
+            <size key="intrinsicContentSize" width="140.33333333333334" height="34"/>
+        </designable>
+    </designables>
+    <resources>
+        <namedColor name="backgroundColor">
+            <color red="0.63099998235702515" green="0.34900000691413879" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="bg3">
+            <color red="0.97299998998641968" green="0.9649999737739563" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
