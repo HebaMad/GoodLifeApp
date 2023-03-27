@@ -27,7 +27,7 @@ class OpportunitiesStatusCell: UITableViewCell,NibLoadableView {
     func configureCell(data:opportunitiesData){
         titleTxt.text = data.title
         statusBtn.setTitle(data.status, for: .normal)
-        dateTxt.text=convertDateFormaterFullString(data.created_at ?? "")
+        dateTxt.text=data.created_at
 
         
     }

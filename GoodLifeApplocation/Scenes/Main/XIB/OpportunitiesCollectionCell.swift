@@ -22,7 +22,7 @@ class OpportunitiesCollectionCell: UICollectionViewCell,NibLoadableView {
     func configureCell(data:opportunitiesData){
         opportunitiesTitle.text=data.title
         print(data.created_at ?? "")
-        dateOfTitle.text=convertDateFormaterFullString(data.created_at ?? "")
+        dateOfTitle.text=data.created_at
         status.text = "  " + (data.status ?? "")
 //        opportunitiesProgressview.progress=CGFloat(data.)
     }
