@@ -12,7 +12,7 @@ import Foundation
 import Moya
 enum MainApiTarget:TargetType{
     
-
+    case listOpportunities(search:String)
     case homescreen
     case deleteOpportunities(opportunity_id:String)
     
@@ -27,6 +27,7 @@ enum MainApiTarget:TargetType{
   
         case .deleteOpportunities:return "deleteOpportunity"
         case .homescreen:return "homeScreen"
+        case .listOpportunities:return "myOpportunities"
             
         }
     }
@@ -34,7 +35,7 @@ enum MainApiTarget:TargetType{
     
     var method: Moya.Method {
         switch self{
-        case .homescreen:
+        case .homescreen,.listOpportunities:
             return .get
             
         case .deleteOpportunities:
@@ -48,7 +49,7 @@ enum MainApiTarget:TargetType{
         case .homescreen:
             return .requestPlain
 
-        case .deleteOpportunities:
+        case .deleteOpportunities,.listOpportunities:
             return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
 
         }
@@ -57,7 +58,7 @@ enum MainApiTarget:TargetType{
     
     var headers: [String : String]?{
         switch self{
-        case .homescreen,.deleteOpportunities:
+        case .homescreen,.deleteOpportunities,.listOpportunities:
             
             do {
                 let token = try KeychainWrapper.get(key: AppData.mobile) ?? ""
@@ -78,6 +79,9 @@ enum MainApiTarget:TargetType{
             
         case .deleteOpportunities(let opportunity_id):
             return ["opportunity_id" :opportunity_id ]
+
+        case .listOpportunities(let search):
+            return ["search" :search ]
 
         default : return [:]
 
