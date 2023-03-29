@@ -37,6 +37,10 @@
 		2710A28E289A5C3C009BCE60 /* TaskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2710A28C289A5C3C009BCE60 /* TaskCell.xib */; };
 		2710A290289A6677009BCE60 /* TaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710A28F289A6677009BCE60 /* TaskVC.swift */; };
 		2710A296289ADA9E009BCE60 /* GoalAndBenchmarkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710A295289ADA9E009BCE60 /* GoalAndBenchmarkVC.swift */; };
+		2723C7E529D4362000E52288 /* BusinessPlanOpportunitiesCreation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2723C7E329D4362000E52288 /* BusinessPlanOpportunitiesCreation.swift */; };
+		2723C7E629D4362000E52288 /* BusinessPlanOpportunitiesCreation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2723C7E429D4362000E52288 /* BusinessPlanOpportunitiesCreation.xib */; };
+		2723C7E929D43D8000E52288 /* LiturgicalOpportunitiesCreation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2723C7E729D43D8000E52288 /* LiturgicalOpportunitiesCreation.swift */; };
+		2723C7EA29D43D8000E52288 /* LiturgicalOpportunitiesCreation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2723C7E829D43D8000E52288 /* LiturgicalOpportunitiesCreation.xib */; };
 		2734CD8528913E3A00E6964F /* GoodLifeApplocation.xcworkspace in Resources */ = {isa = PBXBuildFile; fileRef = 27C9AE68288D427600FA584A /* GoodLifeApplocation.xcworkspace */; };
 		273D2FD529996730006D9CB0 /* StewardingMyResourcesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273D2FD429996730006D9CB0 /* StewardingMyResourcesVC.swift */; };
 		273D2FD8299BD42B006D9CB0 /* AvailableSupportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273D2FD6299BD42B006D9CB0 /* AvailableSupportVC.swift */; };
@@ -342,6 +346,10 @@
 		2710A28C289A5C3C009BCE60 /* TaskCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskCell.xib; sourceTree = "<group>"; };
 		2710A28F289A6677009BCE60 /* TaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskVC.swift; sourceTree = "<group>"; };
 		2710A295289ADA9E009BCE60 /* GoalAndBenchmarkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalAndBenchmarkVC.swift; sourceTree = "<group>"; };
+		2723C7E329D4362000E52288 /* BusinessPlanOpportunitiesCreation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessPlanOpportunitiesCreation.swift; sourceTree = "<group>"; };
+		2723C7E429D4362000E52288 /* BusinessPlanOpportunitiesCreation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusinessPlanOpportunitiesCreation.xib; sourceTree = "<group>"; };
+		2723C7E729D43D8000E52288 /* LiturgicalOpportunitiesCreation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiturgicalOpportunitiesCreation.swift; sourceTree = "<group>"; };
+		2723C7E829D43D8000E52288 /* LiturgicalOpportunitiesCreation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiturgicalOpportunitiesCreation.xib; sourceTree = "<group>"; };
 		273D2FD429996730006D9CB0 /* StewardingMyResourcesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StewardingMyResourcesVC.swift; sourceTree = "<group>"; };
 		273D2FD6299BD42B006D9CB0 /* AvailableSupportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableSupportVC.swift; sourceTree = "<group>"; };
 		273D2FD7299BD42B006D9CB0 /* AvailableSupportVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AvailableSupportVC.xib; sourceTree = "<group>"; };
@@ -663,6 +671,14 @@
 			path = Dashboard;
 			sourceTree = "<group>";
 		};
+		2723C7EB29D4562E00E52288 /* OpportunitiesCreation */ = {
+			isa = PBXGroup;
+			children = (
+				2791D8EC29D18CC500B03A04 /* Scene */,
+			);
+			path = OpportunitiesCreation;
+			sourceTree = "<group>";
+		};
 		27876AB528A43F11003A012A /* XIB */ = {
 			isa = PBXGroup;
 			children = (
@@ -683,7 +699,6 @@
 		278882D429BC9D140025A6D0 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				2791D8EC29D18CC500B03A04 /* OpportunitiesCreation */,
 				278882DA29BCA27C0025A6D0 /* Scene */,
 				278882D529BC9D3E0025A6D0 /* XIB */,
 			);
@@ -736,7 +751,7 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		2791D8EC29D18CC500B03A04 /* OpportunitiesCreation */ = {
+		2791D8EC29D18CC500B03A04 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
 				2791D8ED29D18D0A00B03A04 /* MainOpportunitiesCreation.swift */,
@@ -749,8 +764,12 @@
 				2791D8FE29D1A57900B03A04 /* DigitalOpportunitiesCreation.xib */,
 				27912B2029D1B15100A9CE57 /* MarketingOpportunitiesCreation.swift */,
 				27912B2129D1B15100A9CE57 /* MarketingOpportunitiesCreation.xib */,
+				2723C7E329D4362000E52288 /* BusinessPlanOpportunitiesCreation.swift */,
+				2723C7E429D4362000E52288 /* BusinessPlanOpportunitiesCreation.xib */,
+				2723C7E729D43D8000E52288 /* LiturgicalOpportunitiesCreation.swift */,
+				2723C7E829D43D8000E52288 /* LiturgicalOpportunitiesCreation.xib */,
 			);
-			path = OpportunitiesCreation;
+			path = Scene;
 			sourceTree = "<group>";
 		};
 		27985F3E29968FE2006C8FE9 /* XIB */ = {
@@ -942,6 +961,7 @@
 		27C9AE3A288D399400FA584A /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				2723C7EB29D4562E00E52288 /* OpportunitiesCreation */,
 				278882D429BC9D140025A6D0 /* Main */,
 				27CBC55E292680A1000AE9A6 /* OppourtinityScreen */,
 				27F4B13E28B7F4B0003365A6 /* ProfileSetting */,
@@ -1398,6 +1418,7 @@
 				2710A28E289A5C3C009BCE60 /* TaskCell.xib in Resources */,
 				2756BB07290FB80300E0304C /* GoogleService-Info.plist in Resources */,
 				27C9AE63288D3CB500FA584A /* Inter-MediumItalic.ttf in Resources */,
+				2723C7EA29D43D8000E52288 /* LiturgicalOpportunitiesCreation.xib in Resources */,
 				27C9AE61288D3CB500FA584A /* Inter-SemiBoldItalic.ttf in Resources */,
 				27CB2072289C1B3F00E63694 /* ResourceCell.xib in Resources */,
 				27FC430529C8727E00FB00B9 /* TagSelectionCollectionReusableView.xib in Resources */,
@@ -1412,6 +1433,7 @@
 				2798B9E6298EEA2A00BB18BF /* CategoryReviews.xib in Resources */,
 				2734CD8528913E3A00E6964F /* GoodLifeApplocation.xcworkspace in Resources */,
 				27CB2090289FB1E100E63694 /* PackageDetailsVC.xib in Resources */,
+				2723C7E629D4362000E52288 /* BusinessPlanOpportunitiesCreation.xib in Resources */,
 				27F4B14E28B8B94E003365A6 /* SettingNib.xib in Resources */,
 				27F4B14C28B8AD4F003365A6 /* VenturesCell.xib in Resources */,
 				2767A294289087DF00DF34D1 /* HeaderCollectionReusableView.xib in Resources */,
@@ -1575,6 +1597,7 @@
 				27F4B15328B8BD90003365A6 /* ProfileSettingVC.swift in Sources */,
 				27C9AE3D288D39B300FA584A /* SplashScreen.swift in Sources */,
 				27CBC5A92927CDA5000AE9A6 /* LayoutConstraintsExtension.swift in Sources */,
+				2723C7E529D4362000E52288 /* BusinessPlanOpportunitiesCreation.swift in Sources */,
 				27CB209C289FFE9800E63694 /* GeneralFinicialPagerVC.swift in Sources */,
 				278882EC29C0A1310025A6D0 /* MainCategoriesModel.swift in Sources */,
 				27CB205F289B0FDC00E63694 /* ResourceDetailsCell.swift in Sources */,
@@ -1698,6 +1721,7 @@
 				2791D8F329D18D3A00B03A04 /* GeneralOpportunitiesCreation.swift in Sources */,
 				27B8C8E928A1106C0011B039 /* SpecificFilterCell.swift in Sources */,
 				2710A28228971D94009BCE60 /* MockData.swift in Sources */,
+				2723C7E929D43D8000E52288 /* LiturgicalOpportunitiesCreation.swift in Sources */,
 				2710A28828971E1F009BCE60 /* ListSection.swift in Sources */,
 				27B54D8328BA62870074A6A1 /* SettingNetworkable.swift in Sources */,
 				27C9AE27288D38E900FA584A /* AppDelegate.swift in Sources */,
