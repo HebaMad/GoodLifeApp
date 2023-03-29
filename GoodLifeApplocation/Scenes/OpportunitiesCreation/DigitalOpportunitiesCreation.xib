@@ -16,6 +16,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DigitalOpportunitiesCreation" customModule="GoodLifeApplocation" customModuleProvider="target">
             <connections>
+                <outlet property="addBtn" destination="XhB-pI-4Sx" id="y9A-O3-sG5"/>
+                <outlet property="competitorUrl" destination="tcU-aq-KTF" id="Lee-di-9y6"/>
+                <outlet property="nextBtn" destination="oCm-e3-Fph" id="zgr-zR-xGV"/>
+                <outlet property="opportunitiesUrl" destination="nqg-l1-AKj" id="v2f-oM-mCp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
