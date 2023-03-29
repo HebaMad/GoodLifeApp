@@ -11,6 +11,7 @@ protocol MainDelegate{
     
     func showAlerts(title:String,message:String)
     func getMainScreenData(data:MainScreenData)
+    func getOpportunitiesData(data:ListOpportunities)
     
 }
 
@@ -56,6 +57,25 @@ class MainPresenter:NSObject{
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
             }
         }
+    }
+    
+    func listOpportunties(search:String){
+        MainManager.shared.listOpportunities(search: search) { Response in
+            switch Response{
+                
+            case let .success(response):
+                if response.status == true{
+                    self.delegate?.getOpportunitiesData(data: response.data!)
+                }else{
+                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
+                }
+                
+            case .failure(_):
+                
+                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
+            }
+        }
+        
     }
     
     

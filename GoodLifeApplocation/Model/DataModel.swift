@@ -566,6 +566,11 @@ struct MainScreenData:Decodable{
 
 }
 
+struct ListOpportunities:Decodable{
+    let opportunities:[opportunitiesData]?
+
+}
+
 
 struct sliderData:Codable{
     

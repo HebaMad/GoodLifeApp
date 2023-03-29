@@ -293,6 +293,8 @@ extension MainVC:UICollectionViewDelegateFlowLayout{
     
 }
 extension MainVC:MainDelegate{
+    func getOpportunitiesData(data: ListOpportunities) {}
+    
     func showAlerts(title: String, message: String) { }
     
 

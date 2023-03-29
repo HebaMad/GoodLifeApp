@@ -24,9 +24,12 @@ class OpportunityListVC: UIViewController {
     override func viewDidLoad(){
         
         super.viewDidLoad()
+        self.showLoading()
+        presenter.listOpportunties(search: "")
+        presenter.delegate=self
         setupTableView()
         emptyView.isHidden=true
-        DataAvailability()
+//        DataAvailability()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -93,9 +96,17 @@ extension OpportunityListVC:UITableViewDataSource {
 
 
 extension OpportunityListVC:MainDelegate{
-    func showAlerts(title: String, message: String) {
+    
+    func getOpportunitiesData(data: ListOpportunities) {
         
+        opportunities=data.opportunities ?? []
+        DataAvailability()
+        opportunitiesTableview.reloadData()
+        self.hideLoading()
+
     }
+    
+    func showAlerts(title: String, message: String) {}
     
     func getMainScreenData(data: MainScreenData) {}
     

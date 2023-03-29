@@ -12,10 +12,11 @@ protocol MainNetworkable:Networkable  {
 
     func homescreen(completion: @escaping (Result<BaseResponse<MainScreenData>, Error>)-> ())
     func deleteOpportunities(opportunity_id:String,completion: @escaping (Result<BaseResponse<Empty>, Error>)-> ())
+    func listOpportunities(search:String,completion: @escaping (Result<BaseResponse<ListOpportunities>, Error>)-> ())
 }
 
 class MainManager:MainNetworkable {
-   
+ 
     
 
     typealias targetType = MainApiTarget
@@ -34,6 +35,10 @@ class MainManager:MainNetworkable {
     func deleteOpportunities(opportunity_id: String, completion: @escaping (Result<BaseResponse<Empty>, Error>) -> ()) {
         request(target: .deleteOpportunities(opportunity_id: opportunity_id), completion: completion)
     }
-
+ 
+    func listOpportunities(search: String, completion: @escaping (Result<BaseResponse<ListOpportunities>, Error>) -> ()) {
+        request(target: .listOpportunities(search: search), completion: completion)
+    }
     
+   
 }
