@@ -11,7 +11,8 @@ import Foundation
 import Foundation
 import Moya
 enum MainApiTarget:TargetType{
-    
+    case getNeedMainCategory
+    case getNeedSubCategory
     case listOpportunities(search:String)
     case homescreen
     case deleteOpportunities(opportunity_id:String)
@@ -24,7 +25,8 @@ enum MainApiTarget:TargetType{
     var path: String {
         switch self {
             
-  
+        case .getNeedMainCategory:return "getNeedMainCategory"
+        case .getNeedSubCategory:return "getNeedSubCategory"
         case .deleteOpportunities:return "deleteOpportunity"
         case .homescreen:return "homeScreen"
         case .listOpportunities:return "myOpportunities"
@@ -35,7 +37,7 @@ enum MainApiTarget:TargetType{
     
     var method: Moya.Method {
         switch self{
-        case .homescreen,.listOpportunities:
+        case .homescreen,.listOpportunities,.getNeedMainCategory,.getNeedSubCategory:
             return .get
             
         case .deleteOpportunities:
@@ -49,7 +51,7 @@ enum MainApiTarget:TargetType{
         case .homescreen:
             return .requestPlain
 
-        case .deleteOpportunities,.listOpportunities:
+        case .deleteOpportunities,.listOpportunities,.getNeedMainCategory,.getNeedSubCategory:
             return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
 
         }
@@ -68,8 +70,8 @@ enum MainApiTarget:TargetType{
                 return ["Accept":"application/json","Accept-Language":"en"]
             }
 
-//        case .getNeedMainCategory,.getNeedSubCategory:
-//          return ["Accept":"application/json","Accept-Language":"en"]
+        case .getNeedMainCategory,.getNeedSubCategory:
+          return ["Accept":"application/json","Accept-Language":"en"]
             
         }
     }

@@ -11,8 +11,6 @@ import Moya
 enum HomeApiTarget:TargetType{
     
     case Home(txt:String)
-    case getNeedMainCategory
-    case getNeedSubCategory
     case categoriesFiltering(mainCategoriesID:String,subCategoriesID:String,latitude:String,longitude:String,city:String)
     case getOpportunities(needTypeId:Int,intrest:Int)
     case oppourtinityDetails(opportunity_id:Int)
@@ -29,9 +27,7 @@ enum HomeApiTarget:TargetType{
             
         case .Home:return "userHomeScreenFilter"
             
-        case .getNeedMainCategory:return "getNeedMainCategory"
-            
-        case .getNeedSubCategory:return "getNeedSubCategory"
+
             
         case .categoriesFiltering:return "userHomeScreen"
             
@@ -51,7 +47,7 @@ enum HomeApiTarget:TargetType{
     
     var method: Moya.Method {
         switch self{
-        case .Home,.getNeedMainCategory,.getNeedSubCategory,.categoriesFiltering,.getOpportunities,.oppourtinityDetails,.Filter,.homescreen:
+        case .Home,.categoriesFiltering,.getOpportunities,.oppourtinityDetails,.Filter,.homescreen:
             return .get
             
         case .AddFundType:
@@ -67,7 +63,7 @@ enum HomeApiTarget:TargetType{
         case .AddFundType:
             return .requestParameters(parameters: param, encoding: URLEncoding.httpBody)
 
-        case .Home,.getNeedMainCategory,.getNeedSubCategory,.categoriesFiltering,.getOpportunities,.oppourtinityDetails,.Filter:
+        case .Home,.categoriesFiltering,.getOpportunities,.oppourtinityDetails,.Filter:
             return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
         }
     }
@@ -85,8 +81,7 @@ enum HomeApiTarget:TargetType{
                 return ["Accept":"application/json","Accept-Language":"en"]
             }
 
-        case .getNeedMainCategory,.getNeedSubCategory:
-          return ["Accept":"application/json","Accept-Language":"en"]
+
             
         }
     }

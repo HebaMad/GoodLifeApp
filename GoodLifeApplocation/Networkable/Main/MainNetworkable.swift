@@ -9,7 +9,8 @@
 import Foundation
 import Moya
 protocol MainNetworkable:Networkable  {
-
+    func MainCategory(completion: @escaping (Result<BaseResponse<MainHomeCategories>, Error>)-> ())
+    func subCategory(completion: @escaping (Result<BaseResponse<SubHomeCategories>, Error>)-> ())
     func homescreen(completion: @escaping (Result<BaseResponse<MainScreenData>, Error>)-> ())
     func deleteOpportunities(opportunity_id:String,completion: @escaping (Result<BaseResponse<Empty>, Error>)-> ())
     func listOpportunities(search:String,completion: @escaping (Result<BaseResponse<ListOpportunities>, Error>)-> ())
@@ -39,6 +40,11 @@ class MainManager:MainNetworkable {
     func listOpportunities(search: String, completion: @escaping (Result<BaseResponse<ListOpportunities>, Error>) -> ()) {
         request(target: .listOpportunities(search: search), completion: completion)
     }
-    
+    func MainCategory(completion: @escaping (Result<BaseResponse<MainHomeCategories>, Error>) -> ()) {
+        request(target: .getNeedMainCategory, completion: completion)
+    }
+    func subCategory(completion: @escaping (Result<BaseResponse<SubHomeCategories>, Error>) -> ()) {
+        request(target: .getNeedSubCategory, completion: completion)
+    }
    
 }
