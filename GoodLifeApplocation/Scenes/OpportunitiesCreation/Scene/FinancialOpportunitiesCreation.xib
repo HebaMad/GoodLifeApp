@@ -18,6 +18,7 @@
             <connections>
                 <outlet property="AverageAnnualRevenuTxt" destination="yy5-hd-2si" id="udW-yj-ooi"/>
                 <outlet property="avaregeMonthlyCost" destination="6iY-WT-mIZ" id="Mzg-sI-iad"/>
+                <outlet property="view" destination="Gxn-OG-81R" id="paZ-tr-kiH"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

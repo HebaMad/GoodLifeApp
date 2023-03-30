@@ -22,9 +22,6 @@ class MarketingOpportunitiesCreation: UIViewController {
     }
     
 
-
- 
-
 }
 
 extension MarketingOpportunitiesCreation {

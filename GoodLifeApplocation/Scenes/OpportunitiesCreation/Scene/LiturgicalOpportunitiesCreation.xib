@@ -27,6 +27,7 @@
                 <outlet property="marketRate" destination="TnA-Dy-rVa" id="CoG-pp-nBm"/>
                 <outlet property="marketSize" destination="vZX-aH-rOy" id="MlA-Sz-q3s"/>
                 <outlet property="nextBtn" destination="jWz-hV-sl3" id="QUG-cj-loF"/>
+                <outlet property="view" destination="QBi-gv-ReT" id="heA-6D-Pls"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
