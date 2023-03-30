@@ -96,6 +96,10 @@ extension OpportunityListVC:UITableViewDataSource {
 
 
 extension OpportunityListVC:MainDelegate{
+    func getStandardCategoriesFiltering(categories: MainHomeCategories) {}
+    
+    func getsubCategoriesFiltering(categories: SubHomeCategories) { }
+    
     
     func getOpportunitiesData(data: ListOpportunities) {
         

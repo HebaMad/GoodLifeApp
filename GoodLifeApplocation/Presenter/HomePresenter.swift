@@ -12,8 +12,7 @@ protocol HomeDelegate{
     
     func showAlerts(title:String,message:String)
     func getCategories(categories:Home)
-    func getStandardCategoriesFiltering(categories:MainHomeCategories)
-    func getsubCategoriesFiltering(categories:SubHomeCategories)
+
     func getCategoriesFiltered(categories:Home)
     func getOppourtinity(categories:Oppourtinity)
     func getOppourtinityDetails(categories:OppourtinityDetails)
@@ -48,42 +47,7 @@ class HomePresenter:NSObject{
         }
         
     }
-    
-    func mainStandardFilter(){
-        HomeManager.shared.MainCategory { Response in
-            switch Response{
-                
-            case let .success(response):
-                if response.status == true{
-                    self.delegate?.getStandardCategoriesFiltering(categories: response.data! )
-                    
-                }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
-                }
-                
-            case  .failure(_):
-                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
-            }
-        }
-    }
-    
-    
-    func subStandardFilter(){
-        HomeManager.shared.subCategory { Response in
-            switch Response{
-                
-            case let .success(response):
-                if response.status == true{
-                    self.delegate?.getsubCategoriesFiltering(categories: response.data! )
-                    
-                }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
-                }
-            case  .failure(_):
-                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
-            }
-        }
-    }
+
     
     func categriesFailtered(mainCategoriesID:String,subCategoriesID:String,latitude:String,longitude:String,city:String){
         HomeManager.shared.categoriesFiltering(mainCategoriesID: mainCategoriesID, subCategoriesID: subCategoriesID,latitude:latitude,longitude:longitude,city:city) { Response in
@@ -164,24 +128,7 @@ class HomePresenter:NSObject{
         }
     }
     
-    func createFundType(name: String, main_category_id: String, sub_category_id: String, latitude: String, longitude: String, city: String, default_need: String){
-        HomeManager.shared.AddFundType(name: name, main_category_id: main_category_id, sub_category_id: sub_category_id, latitude: latitude, longitude: longitude, city: city, default_need: default_need) { Response in
-            switch Response{
-                
-            case let .success(response):
-                if response.status == true{
-                    self.delegate?.showAlerts(title:"Success", message: response.message ?? "")
 
-                }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
-                }
-                
-            case .failure(_):
-                
-                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
-            }
-        }
-    }
     
 
    

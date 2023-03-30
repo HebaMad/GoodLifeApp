@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="20W-Bf-ysX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5dJ-yF-lIp">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -1322,7 +1323,68 @@ Night</string>
                                     </collectionView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TOP-EI-Ocq">
                                         <rect key="frame" x="16" y="86" width="382" height="610"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <subviews>
+                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cdp-AQ-gC6">
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="610"/>
+                                                <standardMapConfiguration key="preferredConfiguration"/>
+                                            </mapView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X8P-V8-dUA">
+                                                <rect key="frame" x="0.0" y="498" width="382" height="50"/>
+                                                <subviews>
+                                                    <collectionView clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UcE-8g-rag">
+                                                        <rect key="frame" x="24" y="0.0" width="354" height="50"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="Ezi-8b-k59"/>
+                                                        </constraints>
+                                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="364-Mj-xac">
+                                                            <size key="itemSize" width="128" height="128"/>
+                                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        </collectionViewFlowLayout>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isUserInteractionDisabledWhenSkeletonIsActive" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </collectionView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="7Zw-Wh-Qm4"/>
+                                                    <constraint firstItem="UcE-8g-rag" firstAttribute="top" secondItem="X8P-V8-dUA" secondAttribute="top" id="aGQ-Cf-Osw"/>
+                                                    <constraint firstAttribute="bottom" secondItem="UcE-8g-rag" secondAttribute="bottom" id="aih-15-KvZ"/>
+                                                    <constraint firstAttribute="height" constant="50" id="fLN-PW-dYQ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="UcE-8g-rag" secondAttribute="trailing" constant="4" id="tvJ-z9-s1d"/>
+                                                    <constraint firstItem="UcE-8g-rag" firstAttribute="leading" secondItem="X8P-V8-dUA" secondAttribute="leading" constant="24" id="wRO-yd-NeW"/>
+                                                </constraints>
+                                            </view>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gH0-r0-KsJ">
+                                                <rect key="frame" x="0.0" y="550" width="382" height="60"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="SmZ-wN-Ga0"/>
+                                                </constraints>
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7wd-HU-BQi">
+                                                    <size key="itemSize" width="128" height="128"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                            </collectionView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="cdp-AQ-gC6" secondAttribute="trailing" id="BS7-vm-AWN"/>
+                                            <constraint firstAttribute="bottom" secondItem="gH0-r0-KsJ" secondAttribute="bottom" id="CS7-tw-TMK"/>
+                                            <constraint firstItem="cdp-AQ-gC6" firstAttribute="leading" secondItem="TOP-EI-Ocq" secondAttribute="leading" id="HW7-oY-hyu"/>
+                                            <constraint firstItem="X8P-V8-dUA" firstAttribute="leading" secondItem="TOP-EI-Ocq" secondAttribute="leading" id="HtA-xv-mff"/>
+                                            <constraint firstAttribute="trailing" secondItem="X8P-V8-dUA" secondAttribute="trailing" id="NyN-Hv-zpG"/>
+                                            <constraint firstItem="gH0-r0-KsJ" firstAttribute="top" secondItem="X8P-V8-dUA" secondAttribute="bottom" constant="2" id="O5p-oj-AXW"/>
+                                            <constraint firstItem="gH0-r0-KsJ" firstAttribute="leading" secondItem="TOP-EI-Ocq" secondAttribute="leading" id="cBr-Ca-GbY"/>
+                                            <constraint firstAttribute="trailing" secondItem="gH0-r0-KsJ" secondAttribute="trailing" id="dEf-jq-Sh6"/>
+                                            <constraint firstItem="cdp-AQ-gC6" firstAttribute="top" secondItem="TOP-EI-Ocq" secondAttribute="top" id="y8Z-F7-cqv"/>
+                                            <constraint firstAttribute="bottom" secondItem="cdp-AQ-gC6" secondAttribute="bottom" id="zzg-VM-w6M"/>
+                                        </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g2S-Yn-OuG" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
                                         <rect key="frame" x="16" y="706" width="382" height="50"/>
@@ -1392,12 +1454,15 @@ Night</string>
                     <connections>
                         <outlet property="categoriesCollectionview" destination="9hd-k2-A9y" id="Nmv-g2-noU"/>
                         <outlet property="categoriesLabel" destination="8W4-Zr-Z7t" id="gFn-WC-19t"/>
+                        <outlet property="generalFilterCollectionview" destination="gH0-r0-KsJ" id="ynR-iw-FJ8"/>
+                        <outlet property="mapView" destination="cdp-AQ-gC6" id="EKh-fb-reI"/>
+                        <outlet property="specificFilterCollectionview" destination="UcE-8g-rag" id="BuZ-EA-tK9"/>
                         <outlet property="typeLabel" destination="hdO-09-Ugn" id="2Ln-Mb-Mvq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JTR-ve-jbF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2200" y="-518"/>
+            <point key="canvasLocation" x="-2200" y="-572"/>
         </scene>
         <!--Create OppourtinityVC-->
         <scene sceneID="bub-rt-rXG">

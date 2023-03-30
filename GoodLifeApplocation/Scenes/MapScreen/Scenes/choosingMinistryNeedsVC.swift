@@ -33,13 +33,13 @@ class choosingMinistryNeedsVC: UIViewController {
     var oppourtinity:[OppourtinityDetails] = []
     var model:[SubscriptionCollectionViewCell.ViewModel]?
     var onFilterDissmissed : OnFilterDissmissed?
-    
+    var categoryName=""
     
     //MARK: - Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        typeTitle.text=categoryName
         setupMinistryCollectionview()
     }
     
@@ -91,7 +91,7 @@ private extension choosingMinistryNeedsVC {
             
             recommendationView.isHidden = false
             interest = 3
-            presenter.getSmartRecommendation(interestId: interest, needTypeId: UserDefaults.standard.integer(forKey: "id"))
+            presenter.getSmartRecommendation(interestId: interest, needTypeId: needTypeID)
             presenter.delegate = self
             sender.tintColor = sender.backgroundColor
             
@@ -107,7 +107,7 @@ private extension choosingMinistryNeedsVC {
             recommendationView.isHidden = false
             interest = 2
             print( UserDefaults.standard.integer(forKey: "id"))
-            presenter.getSmartRecommendation(interestId: interest, needTypeId: UserDefaults.standard.integer(forKey: "id"))
+            presenter.getSmartRecommendation(interestId: interest, needTypeId: needTypeID)
             presenter.delegate = self
             sender.tintColor = sender.backgroundColor
             

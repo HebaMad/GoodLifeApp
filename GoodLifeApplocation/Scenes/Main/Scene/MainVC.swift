@@ -113,6 +113,7 @@ extension MainVC{
     
     @objc func exploreMapBtn (){
         let vc = ExploreMapVC.instantiate()
+        print(categories)
         vc.categories=categories
         navigationController?.pushViewController(vc, animated: true)
         
@@ -293,6 +294,10 @@ extension MainVC:UICollectionViewDelegateFlowLayout{
     
 }
 extension MainVC:MainDelegate{
+    func getStandardCategoriesFiltering(categories: MainHomeCategories) { }
+    
+    func getsubCategoriesFiltering(categories: SubHomeCategories) { }
+    
     func getOpportunitiesData(data: ListOpportunities) {}
     
     func showAlerts(title: String, message: String) { }

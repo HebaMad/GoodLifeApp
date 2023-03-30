@@ -116,13 +116,8 @@ class MapVC: UIViewController {
     private func setupCollectionview(){
         
         
-        generalFilterCollectionview.register(FilterCell.self)
-        generalFilterCollectionview.delegate = self
-        generalFilterCollectionview.dataSource = self
-        
-        specificFilterCollectionview.register(SpecificFilterCell.self)
-        specificFilterCollectionview.delegate = self
-        specificFilterCollectionview.dataSource = self
+  
+
         
         communityCollectionview.register(ActivityCell.self)
         communityCollectionview.register(UINib(nibName:"FilterHeaderReusableview", bundle: nil), forSupplementaryViewOfKind:UICollectionView.elementKindSectionHeader, withReuseIdentifier: FilterHeaderReusableview.headerIdentifier)
@@ -218,11 +213,11 @@ private extension MapVC {
         self.presenter.categriesFailtered(mainCategoriesID: "0", subCategoriesID:"0",latitude:"\(latitude)",longitude:"\(longitude)",city:self.city)
         self.presenter.delegate = self
         
-        presenter.mainStandardFilter()
-        presenter.delegate = self
-        
-        presenter.subStandardFilter()
-        presenter.delegate = self
+//        presenter.mainStandardFilter()
+//        presenter.delegate = self
+//        
+//        presenter.subStandardFilter()
+//        presenter.delegate = self
         
         
     }

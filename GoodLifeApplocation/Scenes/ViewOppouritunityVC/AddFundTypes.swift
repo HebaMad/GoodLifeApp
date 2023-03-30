@@ -28,7 +28,7 @@ class AddFundTypes: UIViewController {
     @IBOutlet weak var AddImg: UIButton!
     //MARK: - Properties
     
-    let presenter=HomePresenter()
+    let presenter=MainPresenter()
     var mainCategory:[MainCategories]=[]
     var subCategory:[MainCategories]=[]
     var mainCategoryID=0
@@ -226,18 +226,15 @@ extension AddFundTypes:UITextFieldDataPickerDelegate,UITextFieldDataPickerDataSo
  
 }
 
-
-extension AddFundTypes : HomeDelegate {
-    func getMainScreenData(data: MainScreenData) {}
+extension AddFundTypes:MainDelegate{
     func showAlerts(title: String, message: String) {
         Alert.showSuccessAlert(message:message)
         clearData()
     }
-    func getCategories(categories: Home) {}
-    func getCategoriesFiltered(categories: Home) {}
-    func getOppourtinity(categories: Oppourtinity) {}
-    func getOppourtinityDetails(categories: OppourtinityDetails) {}
     
+    func getMainScreenData(data: MainScreenData) { }
+    
+    func getOpportunitiesData(data: ListOpportunities) {}
     
     func getStandardCategoriesFiltering(categories: MainHomeCategories) {
         mainCategory=categories.categories ?? []
@@ -251,7 +248,8 @@ extension AddFundTypes : HomeDelegate {
         subCategoryTxt.dataSource=self
     }
     
- 
     
+  
     
 }
+
