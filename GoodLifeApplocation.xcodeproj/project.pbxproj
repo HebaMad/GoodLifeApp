@@ -1351,7 +1351,6 @@
 				27C9AE20288D38E900FA584A /* Frameworks */,
 				27C9AE21288D38E900FA584A /* Resources */,
 				37062CBD80447D9716DFAD37 /* [CP] Embed Pods Frameworks */,
-				ADBC8351AE7637EB7A176085 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1539,23 +1538,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GoodLifeApplocation/Pods-GoodLifeApplocation-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		ADBC8351AE7637EB7A176085 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GoodLifeApplocation/Pods-GoodLifeApplocation-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GoodLifeApplocation/Pods-GoodLifeApplocation-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GoodLifeApplocation/Pods-GoodLifeApplocation-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BABDA1275312FBF17FBA3297 /* [CP] Check Pods Manifest.lock */ = {
