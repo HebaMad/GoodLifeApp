@@ -11,7 +11,7 @@ import UIKit
 @IBDesignable
 class UILabelDesignable: UILabel {
     
-    @IBInspectable var bgColor: UIColor = UIColor.orange
+    @IBInspectable var bgColor: UIColor = .clear
     
     @IBInspectable var cornerRadius: CGFloat = 0
     

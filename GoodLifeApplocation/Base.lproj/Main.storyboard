@@ -1509,7 +1509,7 @@ Night</string>
                                 <rect key="frame" x="20" y="98" width="374" height="764"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="mTv-iK-MmC">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="888.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="954.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register an opportunity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4k4-Sr-PRL">
                                                 <rect key="frame" x="0.0" y="16" width="374" height="21.5"/>
@@ -1533,8 +1533,16 @@ Night</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1o4-hR-g4z">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="State" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zLQ-Rt-iht">
                                                 <rect key="frame" x="0.0" y="185.5" width="374" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="BY3-a8-fBe"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1o4-hR-g4z">
+                                                <rect key="frame" x="0.0" y="251.5" width="374" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="wjD-4f-dUJ"/>
                                                 </constraints>
@@ -1542,7 +1550,7 @@ Night</string>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2gw-xX-X95">
-                                                <rect key="frame" x="0.0" y="251.5" width="374" height="128"/>
+                                                <rect key="frame" x="0.0" y="317.5" width="374" height="128"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="128" id="l9B-w3-l1B"/>
@@ -1552,7 +1560,7 @@ Night</string>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GpQ-on-QLo">
-                                                <rect key="frame" x="0.0" y="395.5" width="374" height="128"/>
+                                                <rect key="frame" x="0.0" y="461.5" width="374" height="128"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="128" id="wga-ux-hUc"/>
@@ -1576,7 +1584,7 @@ Night</string>
                                                 </cells>
                                             </collectionView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="clH-kp-qOR">
-                                                <rect key="frame" x="0.0" y="539.5" width="374" height="110"/>
+                                                <rect key="frame" x="0.0" y="605.5" width="374" height="110"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgQ-Wo-lgK">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="21.5"/>
@@ -1641,7 +1649,7 @@ Night</string>
                                                 </constraints>
                                             </stackView>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" Email (Optional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z2r-d2-GAm" customClass="BottomBorderTextField" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="665.5" width="374" height="50"/>
+                                                <rect key="frame" x="0.0" y="731.5" width="374" height="50"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -1675,7 +1683,7 @@ Night</string>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="c9w-s8-z6J">
-                                                <rect key="frame" x="0.0" y="731.5" width="374" height="80"/>
+                                                <rect key="frame" x="0.0" y="797.5" width="374" height="80"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="My phone number" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wcp-d8-eh4">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="18"/>
@@ -1753,7 +1761,7 @@ Night</string>
                                                 </constraints>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZWE-gB-WFE" customClass="UIButtonDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="827.5" width="374" height="45"/>
+                                                <rect key="frame" x="0.0" y="893.5" width="374" height="45"/>
                                                 <color key="backgroundColor" red="0.2666666667" green="0.050980392159999999" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="bg4-fQ-a9p"/>
@@ -1771,6 +1779,9 @@ Night</string>
                                                         <color key="value" name="button"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="sendBtn:" destination="TX6-cu-SQV" eventType="touchUpInside" id="C1w-Gg-wab"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1804,14 +1815,18 @@ Night</string>
                         <outlet property="TitleTxt" destination="1o4-hR-g4z" id="278-p4-zee"/>
                         <outlet property="cityTxt" destination="7ZS-Y7-6QU" id="fAE-Av-gJu"/>
                         <outlet property="descriptionTxt" destination="2gw-xX-X95" id="W9z-JP-azG"/>
+                        <outlet property="emailTxt" destination="z2r-d2-GAm" id="vS8-wI-5W2"/>
                         <outlet property="mobileNumber" destination="umm-WU-gla" id="Bnl-lD-eiI"/>
                         <outlet property="nameTxt" destination="0AH-C0-LNX" id="NFZ-yH-Th2"/>
+                        <outlet property="phoneNumberTxt" destination="umm-WU-gla" id="Cv1-7o-BAP"/>
+                        <outlet property="ratingView" destination="OW1-ck-r5s" id="GBh-2r-23i"/>
+                        <outlet property="stateTxt" destination="zLQ-Rt-iht" id="ChP-pT-j2G"/>
                         <outlet property="tagCollectionview" destination="GpQ-on-QLo" id="d0W-gF-d8I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YkZ-UN-Oh8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32" y="-606"/>
+            <point key="canvasLocation" x="142" y="-607"/>
         </scene>
         <!--Tab BarVC-->
         <scene sceneID="oxe-lG-f4O">

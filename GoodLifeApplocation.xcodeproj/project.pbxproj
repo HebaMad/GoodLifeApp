@@ -754,6 +754,7 @@
 		2791D8EC29D18CC500B03A04 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				27CBC56D2926C005000AE9A6 /* CreateOppourtinityVC.swift */,
 				2791D8ED29D18D0A00B03A04 /* MainOpportunitiesCreation.swift */,
 				2791D8EE29D18D0A00B03A04 /* MainOpportunitiesCreation.xib */,
 				2791D8F129D18D3A00B03A04 /* GeneralOpportunitiesCreation.swift */,
@@ -963,7 +964,6 @@
 			children = (
 				2723C7EB29D4562E00E52288 /* OpportunitiesCreation */,
 				278882D429BC9D140025A6D0 /* Main */,
-				27CBC55E292680A1000AE9A6 /* OppourtinityScreen */,
 				27F4B13E28B7F4B0003365A6 /* ProfileSetting */,
 				2704244D28A8CE6F002EF7B5 /* LoginVC */,
 				27CB208C289FB1B700E63694 /* PackagesDetails */,
@@ -1259,14 +1259,6 @@
 				27DDE2E12965E96F001F938F /* GeneralsLiturgicalPageVC.swift */,
 			);
 			path = Scenes;
-			sourceTree = "<group>";
-		};
-		27CBC55E292680A1000AE9A6 /* OppourtinityScreen */ = {
-			isa = PBXGroup;
-			children = (
-				27CBC56D2926C005000AE9A6 /* CreateOppourtinityVC.swift */,
-			);
-			path = OppourtinityScreen;
 			sourceTree = "<group>";
 		};
 		27CBC59F2927CD95000AE9A6 /* CustomAlert */ = {

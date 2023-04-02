@@ -15,20 +15,70 @@ class CreateOppourtinityVC: UIViewController , UITextViewDelegate{
     @IBOutlet weak var TitleTxt: UITextField!
     @IBOutlet weak var cityTxt: UITextField!
     @IBOutlet weak var nameTxt: UITextField!
-    
-    
     @IBOutlet weak var descriptionTxt: UITextView!
+    
+    @IBOutlet weak var phoneNumberTxt: BottomBorderTextField!
+    @IBOutlet weak var stateTxt: UITextField!
+    @IBOutlet weak var ratingView: RatingControl!
+    
     
     var placeholder = "Please add a short description"
     var tagSelection:[String] = ["Investment","Donation"]
+    let presenter=MainPresenter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         descriptionTxtviewCustomization()
         setupCollectionview()
-       
+        
     }
     
+    
+    @IBAction func backBtn(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    
+    @IBAction func sendBtn(_ sender: Any) {
+        do{
+            let name = try nameTxt.validatedText(validationType: .requiredField(field: "Name  required"))
+            let title = try TitleTxt.validatedText(validationType: .requiredField(field: "Title required"))
+            let state = try stateTxt.validatedText(validationType: .requiredField(field: "State required"))
+            
+            let city = try cityTxt.validatedText(validationType: .requiredField(field: "City required"))
+            
+            if  descriptionTxt.text != "" {
+                
+                if ratingView.rating != 0 {
+                    
+                    if tagSelection.count != 0 {
+                        
+                        presenter.createOpportunities(title:title , sub_title: "kllm", city: city, state: state, description: descriptionTxt.text!, representative: ";lll", tags: tagSelection, rating: "\(ratingView.rating)", email: emailTxt.text ?? "", phone:phoneNumberTxt.text ?? "" )
+                        presenter.delegate=self
+                        
+                    }else{
+                        Alert.showErrorAlert(message: "Select your tag please")
+                        
+                    }
+                }else{
+                    Alert.showErrorAlert(message: "Rate your opportunities please")
+                }
+                
+            }else{
+                
+                Alert.showErrorAlert(message: "Fill the description please  ")
+            }
+            
+        }catch{
+            Alert.showErrorAlert(message: (error as! ValidationError).message)
+            
+        }
+        
+    }
+    
+}
+
+extension CreateOppourtinityVC{
     
     func descriptionTxtviewCustomization(){
         descriptionTxt.layer.cornerRadius = 8.0
@@ -46,15 +96,10 @@ class CreateOppourtinityVC: UIViewController , UITextViewDelegate{
         
         tagCollectionview.register(HobbiesCell.self)
         tagCollectionview.register(UINib(nibName:"TagSelectionCollectionReusableView", bundle: nil), forSupplementaryViewOfKind:UICollectionView.elementKindSectionHeader, withReuseIdentifier: TagSelectionCollectionReusableView.HeaderIdentifier)
-   
+        
         tagCollectionview.collectionViewLayout = createCompositionalLayout()
         tagCollectionview.delegate=self
         tagCollectionview.dataSource=self
-    }
-    
-    
-    @IBAction func backBtn(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
     }
     
     func createCompositionalLayout() -> UICollectionViewCompositionalLayout{
@@ -86,6 +131,9 @@ class CreateOppourtinityVC: UIViewController , UITextViewDelegate{
     }
     
 }
+
+
+
 //MARK: - confirm to Storyboarded protocol
 
 extension CreateOppourtinityVC:Storyboarded{
@@ -138,14 +186,28 @@ extension CreateOppourtinityVC{
     }
     
     @objc func AddTappedBtn(sender:UIButton){
-//        let indexPath = NSIndexPath(row: sender.tag, section: 1)
+        //        let indexPath = NSIndexPath(row: sender.tag, section: 1)
         let header:TagSelectionCollectionReusableView = tagCollectionview.supplementaryView(forElementKind: UICollectionView.elementKindSectionHeader, at: IndexPath(item: 0, section: sender.tag)) as! TagSelectionCollectionReusableView
-
+        
         if  header.tagSelectionTitle.text != ""{
             tagSelection.append(header.tagSelectionTitle.text ?? "")
             header.tagSelectionTitle.text = ""
             tagCollectionview.reloadData()
         }
+    }
+    
+    
+    func clearData(){
+        nameTxt.text = ""
+        tagSelection = ["Investment","Donation"]
+        tagCollectionview.reloadData()
+        cityTxt.text = ""
+        stateTxt.text=""
+        TitleTxt.text=""
+        descriptionTxt.text=""
+        phoneNumberTxt.text = ""
+        emailTxt.text = ""
+        ratingView.rating = 0
     }
 }
 
@@ -153,26 +215,45 @@ extension CreateOppourtinityVC{
 
 extension CreateOppourtinityVC{
     //MARK:- TextView Delegates
-     
-     func textViewDidBeginEditing(_ textView: UITextView) {
-         if textView.textColor == .lightGray {
-             textView.text = nil
-             textView.textColor = .black
-         }
-     }
-     
-     func textViewDidEndEditing(_ textView: UITextView) {
-         if textView.text.isEmpty {
-             textView.text = "Please add a short description"
-             textView.textColor = UIColor.lightGray
-             placeholder = ""
-         } else {
-             placeholder = textView.text
-         }
-     }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == .lightGray {
+            textView.text = nil
+            textView.textColor = .black
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = "Please add a short description"
+            textView.textColor = UIColor.lightGray
+            placeholder = ""
+        } else {
+            placeholder = textView.text
+        }
+    }
     
     func textViewDidChange(_ textView: UITextView) {
-           placeholder = textView.text
-       }
-       
+        placeholder = textView.text
+    }
+    
+}
+
+extension CreateOppourtinityVC:MainDelegate{
+    func showAlerts(title: String, message: String) {
+        Alert.showSuccessAlert(message:message)
+        clearData()
+    }
+    
+    func getMainScreenData(data: MainScreenData) {}
+    
+    func getOpportunitiesData(data: ListOpportunities) {}
+    
+    func getStandardCategoriesFiltering(categories: MainHomeCategories) { }
+    
+    func getsubCategoriesFiltering(categories: SubHomeCategories) { }
+    
+    
+    
+    
 }

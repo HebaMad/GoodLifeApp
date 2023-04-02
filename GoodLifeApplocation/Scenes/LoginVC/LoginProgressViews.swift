@@ -139,7 +139,7 @@ extension LoginProgressViews:AuthDelegate{
                 self.progressIndex=3
 
                 let nav1 = UINavigationController()
-                let mainView = MapVC()
+                let mainView = TabBarVC.instantiate()
            
                 nav1.viewControllers = [mainView]
                 nav1.navigationBar.isHidden = true
