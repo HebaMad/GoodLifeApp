@@ -16,7 +16,7 @@ enum MainApiTarget:TargetType{
     case listOpportunities(search:String)
     case homescreen
     case deleteOpportunities(opportunity_id:String)
-    
+    case createOpportunties(title:String,sub_title:String,city:String,state:String,description:String,representative:String,tags:[String],rating:String,email:String,phone:String)
     
     var baseURL: URL {
         return URL(string: "\(AppConfig.apiBaseUrl)")!
@@ -30,6 +30,7 @@ enum MainApiTarget:TargetType{
         case .deleteOpportunities:return "deleteOpportunity"
         case .homescreen:return "homeScreen"
         case .listOpportunities:return "myOpportunities"
+        case .createOpportunties: return "createOpportunity"
             
         }
     }
@@ -43,11 +44,17 @@ enum MainApiTarget:TargetType{
         case .deleteOpportunities:
             return .delete
             
+            
+        case .createOpportunties:
+            return .post
         }
     }
     
     var task: Task{
         switch self{
+        case .createOpportunties:
+            return .requestParameters(parameters: param, encoding: URLEncoding.httpBody)
+
         case .homescreen:
             return .requestPlain
 
@@ -60,7 +67,7 @@ enum MainApiTarget:TargetType{
     
     var headers: [String : String]?{
         switch self{
-        case .homescreen,.deleteOpportunities,.listOpportunities:
+        case .homescreen,.deleteOpportunities,.listOpportunities,.createOpportunties:
             
             do {
                 let token = try KeychainWrapper.get(key: AppData.mobile) ?? ""
@@ -78,6 +85,8 @@ enum MainApiTarget:TargetType{
     var param: [String : Any]{
         
         switch self {
+        case .createOpportunties(let title,let sub_title,let city,let state,let description,let representative,let tags,let rating, let email,let phone):
+            return ["title" :title,"sub_title":sub_title,"city":city,"state":state,"description":description,"representative":representative,"tags":tags,"rating":rating,"email":email,"phone":phone ]
             
         case .deleteOpportunities(let opportunity_id):
             return ["opportunity_id" :opportunity_id ]

@@ -205,7 +205,7 @@ struct startFundRaise:Decodable{
     let longitude:String?
     let work_type:String?
     let amount_raise:String?
-    let access_token:String?
+    let api_token:String?
 }
 struct contactUS:Decodable{
     
@@ -555,6 +555,16 @@ struct opportunitiesData:Codable{
     let created_at:String?
     let models:String?
     let plans:String?
+    let state:String?
+    let city:String?
+    let description:String?
+    let representative:String?
+    let tags:[String]?
+    let completion:String?
+    let rating:String?
+    let email:String?
+    let phone:String?
+
 }
 
 

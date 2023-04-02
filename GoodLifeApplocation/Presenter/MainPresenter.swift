@@ -33,12 +33,12 @@ class MainPresenter:NSObject{
                 if response.status == true{
                     self.delegate?.getMainScreenData(data: response.data!)
                 }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
+                    Alert.showErrorAlert(message: response.message ?? "")
                 }
                 
             case .failure(_):
                 
-                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
+                Alert.showErrorAlert(message: "something wrong try again")
             }
         }
         }
@@ -51,12 +51,12 @@ class MainPresenter:NSObject{
                 if response.status == true{
                     self.delegate?.showAlerts(title: "Success", message: response.message!)
                 }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
+                    Alert.showErrorAlert(message: response.message ?? "")
                 }
                 
             case .failure(_):
                 
-                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
+                Alert.showErrorAlert(message: "something wrong try again")
             }
         }
     }
@@ -69,12 +69,12 @@ class MainPresenter:NSObject{
                 if response.status == true{
                     self.delegate?.getOpportunitiesData(data: response.data!)
                 }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
+                    Alert.showErrorAlert(message: response.message ?? "")
                 }
                 
             case .failure(_):
                 
-                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
+                Alert.showErrorAlert(message: "something wrong try again")
             }
         }
         
@@ -89,11 +89,11 @@ class MainPresenter:NSObject{
                     self.delegate?.getStandardCategoriesFiltering(categories: response.data! )
                     
                 }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
+                    Alert.showErrorAlert(message: response.message ?? "")
                 }
                 
             case  .failure(_):
-                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
+                Alert.showErrorAlert(message: "something wrong try again")
             }
         }
     }
@@ -108,10 +108,10 @@ class MainPresenter:NSObject{
                     self.delegate?.getsubCategoriesFiltering(categories: response.data! )
                     
                 }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
+                    Alert.showErrorAlert(message: response.message ?? "")
                 }
             case  .failure(_):
-                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
+                Alert.showErrorAlert(message: "something wrong try again")
             }
         }
     }
@@ -125,12 +125,31 @@ class MainPresenter:NSObject{
                     self.delegate?.showAlerts(title:"Success", message: response.message ?? "")
 
                 }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
+                    Alert.showErrorAlert(message: response.message ?? "")
                 }
                 
             case .failure(_):
                 
-                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
+                Alert.showErrorAlert(message: "something wrong try again")
+            }
+        }
+    }
+    
+    func createOpportunities(title: String, sub_title: String, city: String, state: String, description: String, representative: String, tags: [String], rating: String, email: String, phone: String){
+        MainManager().createOpportunties(title: title, sub_title: sub_title, city: city, state: state, description: description, representative: representative, tags: tags, rating: rating, email: email, phone: phone) { Response in
+            switch Response{
+                
+            case let .success(response):
+                if response.status == true{
+                    self.delegate?.showAlerts(title:"Success", message: response.message ?? "")
+
+                }else{
+                    Alert.showErrorAlert(message: response.message ?? "")
+                }
+                
+            case .failure(_):
+                
+                Alert.showErrorAlert(message: "something wrong try again")
             }
         }
     }
