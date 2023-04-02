@@ -23,7 +23,7 @@ class BusinessPlanOpportunitiesCreation: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        bindButtons()
+//        bindButtons()
     }
 
 

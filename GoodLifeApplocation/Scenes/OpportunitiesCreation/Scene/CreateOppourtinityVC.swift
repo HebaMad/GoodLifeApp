@@ -33,7 +33,6 @@ class CreateOppourtinityVC: UIViewController , UITextViewDelegate{
         
     }
     
-    
     @IBAction func backBtn(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
@@ -41,10 +40,10 @@ class CreateOppourtinityVC: UIViewController , UITextViewDelegate{
     
     @IBAction func sendBtn(_ sender: Any) {
         do{
+            
             let name = try nameTxt.validatedText(validationType: .requiredField(field: "Name  required"))
             let title = try TitleTxt.validatedText(validationType: .requiredField(field: "Title required"))
             let state = try stateTxt.validatedText(validationType: .requiredField(field: "State required"))
-            
             let city = try cityTxt.validatedText(validationType: .requiredField(field: "City required"))
             
             if  descriptionTxt.text != "" {

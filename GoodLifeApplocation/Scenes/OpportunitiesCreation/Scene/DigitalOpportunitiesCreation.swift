@@ -17,7 +17,7 @@ class DigitalOpportunitiesCreation: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        bindButtons()
+//        bindButtons()
 
     }
 }

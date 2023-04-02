@@ -34,7 +34,7 @@
                             <rect key="frame" x="0.0" y="10" width="373" height="70"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cf9-nt-NIF" customClass="StepIndicatorView" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                    <rect key="frame" x="20" y="0.0" width="325" height="70"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="373" height="70"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="tintColor" name="progressView"/>
                                     <userDefinedRuntimeAttributes>
@@ -61,9 +61,9 @@
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstItem="Cf9-nt-NIF" firstAttribute="leading" secondItem="glZ-Za-zlZ" secondAttribute="leading" constant="20" id="7VD-rV-xSn"/>
+                                <constraint firstItem="Cf9-nt-NIF" firstAttribute="leading" secondItem="glZ-Za-zlZ" secondAttribute="leading" id="7VD-rV-xSn"/>
                                 <constraint firstAttribute="height" constant="70" id="CPf-ZS-HHe"/>
-                                <constraint firstAttribute="trailing" secondItem="Cf9-nt-NIF" secondAttribute="trailing" constant="28" id="FQR-VT-RFL"/>
+                                <constraint firstAttribute="trailing" secondItem="Cf9-nt-NIF" secondAttribute="trailing" id="FQR-VT-RFL"/>
                                 <constraint firstAttribute="bottom" secondItem="Cf9-nt-NIF" secondAttribute="bottom" id="HzK-ji-u8H"/>
                                 <constraint firstItem="Cf9-nt-NIF" firstAttribute="top" secondItem="glZ-Za-zlZ" secondAttribute="top" id="dMq-FX-Q8T"/>
                             </constraints>
@@ -73,12 +73,15 @@
                         </containerView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m0q-db-dMI">
                             <rect key="frame" x="0.0" y="657" width="373" height="40"/>
+                            <color key="backgroundColor" name="backgroundColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="wvn-p2-MiE"/>
                             </constraints>
                             <color key="tintColor" name="backgroundColor"/>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="filled" title="Next"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Next">
+                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
                             <connections>
                                 <action selector="continueBtn:" destination="-1" eventType="touchUpInside" id="ohe-Zd-mfe"/>
                             </connections>

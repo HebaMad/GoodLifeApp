@@ -24,7 +24,6 @@
                 <outlet property="addNewPlan" destination="Eb9-wN-tTb" id="wXk-5p-VBF"/>
                 <outlet property="marketRate" destination="rcq-m7-ANq" id="zh8-zG-vWP"/>
                 <outlet property="marketSize" destination="fAH-5u-MQA" id="7v6-K2-V0C"/>
-                <outlet property="nextBtn" destination="ttR-kF-DvM" id="3Ao-F6-Kho"/>
                 <outlet property="planCons" destination="Qzt-Vx-Q8W" id="67Y-MZ-9gd"/>
                 <outlet property="planNameTxt" destination="H6W-be-7AR" id="8Z2-fa-kUT"/>
                 <outlet property="planPros" destination="g4P-NK-jMW" id="eWt-Qy-5Lw"/>
@@ -41,7 +40,7 @@
                     <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Bci-iy-7Pp">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="781.66666666666663"/>
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="723.66666666666663"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Business Plan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBR-fD-Vcl">
                                     <rect key="frame" x="12" y="8.0000000000000018" width="369" height="28.666666666666671"/>
@@ -236,29 +235,6 @@
                                         <color key="baseForegroundColor" name="backgroundColor"/>
                                     </buttonConfiguration>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ttR-kF-DvM" customClass="UIButtonDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                    <rect key="frame" x="12" y="725.66666666666663" width="369" height="48"/>
-                                    <color key="backgroundColor" red="0.59215686270000001" green="0.2784313725" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="48" id="tzH-yy-ZDS"/>
-                                    </constraints>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="Next">
-                                        <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </buttonConfiguration>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="endColor">
-                                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="startColor">
-                                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                            <real key="value" value="12"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                </button>
                             </subviews>
                             <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="12" bottom="8" trailing="12"/>
                         </stackView>
@@ -274,7 +250,7 @@
                 </scrollView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" name="bg3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="p1a-Xd-9iI" secondAttribute="trailing" id="6QF-7r-Fo2"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="p1a-Xd-9iI" secondAttribute="bottom" id="Jyk-9j-wDt"/>
@@ -288,17 +264,11 @@
         <designable name="tKS-K2-nKJ">
             <size key="intrinsicContentSize" width="152" height="34"/>
         </designable>
-        <designable name="ttR-kF-DvM">
-            <size key="intrinsicContentSize" width="64" height="35.666666666666664"/>
-        </designable>
     </designables>
     <resources>
         <image name="link" catalog="system" width="128" height="124"/>
         <namedColor name="backgroundColor">
             <color red="0.63099998235702515" green="0.34900000691413879" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="bg3">
-            <color red="0.97299998998641968" green="0.9649999737739563" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="bg5">
             <color red="0.85100001096725464" green="0.85100001096725464" blue="0.85100001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

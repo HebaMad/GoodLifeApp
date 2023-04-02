@@ -24,7 +24,7 @@ class LiturgicalOpportunitiesCreation: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        bindButtons()
+//        bindButtons()
     }
 
 

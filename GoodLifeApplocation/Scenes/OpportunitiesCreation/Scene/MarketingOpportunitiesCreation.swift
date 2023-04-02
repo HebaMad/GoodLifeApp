@@ -18,7 +18,7 @@ class MarketingOpportunitiesCreation: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        bindButtons()
+//        bindButtons()
     }
     
 
@@ -27,7 +27,7 @@ class MarketingOpportunitiesCreation: UIViewController {
 extension MarketingOpportunitiesCreation {
     
     func bindButtons(){
-        nextBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
+//        nextBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
         addMarket.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
     }
     
