@@ -11,23 +11,31 @@ class OpportunitiesStatusCell: UITableViewCell,NibLoadableView {
 
     @IBOutlet weak var completeProgressView: UIProgressView!
     @IBOutlet weak var dateTxt: UILabel!
-    @IBOutlet weak var statusBtn: UIButtonDesignable!
     @IBOutlet weak var titleTxt: UILabel!
+    @IBOutlet weak var status: UILabelDesignable!
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+
     }
     
     func configureCell(data:opportunitiesData){
         titleTxt.text = data.title
-        statusBtn.setTitle(data.status, for: .normal)
         dateTxt.text=data.created_at
+        if  data.status == "pending" {
+
+            status.bgColor = UIColor(named: "unselectedTab") ?? .clear
+
+        }else{
+            status.bgColor = UIColor(named: "ButtonColor") ?? .clear
+        }
+        status.text = "  " + (data.status ?? "")
 
         
     }

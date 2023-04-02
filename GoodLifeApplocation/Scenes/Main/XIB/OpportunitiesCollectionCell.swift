@@ -24,7 +24,12 @@ class OpportunitiesCollectionCell: UICollectionViewCell,NibLoadableView {
         print(data.created_at ?? "")
         dateOfTitle.text=data.created_at
         status.text = "  " + (data.status ?? "")
-//        opportunitiesProgressview.progress=CGFloat(data.)
+        if  data.status == "pending" {
+            status.bgColor = UIColor(named: "unselectedTab") ?? .clear
+        }else{
+            status.bgColor = UIColor(named: "ButtonColor") ?? .clear
+
+        }
     }
     
 }
