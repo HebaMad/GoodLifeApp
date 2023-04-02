@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,7 +13,6 @@
             <connections>
                 <outlet property="continueAction" destination="SqR-rz-58q" id="Zx6-ux-Rgi"/>
                 <outlet property="contsinerView" destination="GCH-Co-F3z" id="Azy-OZ-RmT"/>
-                <outlet property="skipAction" destination="4BO-4F-nz0" id="p8V-ns-fIL"/>
                 <outlet property="stepsIndicator" destination="ZBr-Uc-oRK" id="EtH-2H-ZM2"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -23,7 +23,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="U8c-s6-ZEG">
-                    <rect key="frame" x="10" y="44" width="370" height="766"/>
+                    <rect key="frame" x="10" y="47" width="370" height="763"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MzP-Un-WKf">
                             <rect key="frame" x="0.0" y="10" width="370" height="84.666666666666671"/>
@@ -63,13 +63,13 @@
                             </constraints>
                         </view>
                         <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GCH-Co-F3z">
-                            <rect key="frame" x="0.0" y="104.66666666666663" width="370" height="557"/>
+                            <rect key="frame" x="0.0" y="104.66666666666663" width="370" height="591"/>
                         </containerView>
                         <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GKj-ea-25S">
-                            <rect key="frame" x="0.0" y="671.66666666666663" width="370" height="86.333333333333371"/>
+                            <rect key="frame" x="0.0" y="705.66666666666663" width="370" height="49.333333333333371"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SqR-rz-58q" customClass="UIButtonDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                    <rect key="frame" x="28" y="0.0" width="314" height="46"/>
+                                    <rect key="frame" x="28" y="0.0" width="314" height="49.333333333333336"/>
                                     <color key="backgroundColor" name="ButtonColor"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" title="Continue">
@@ -100,27 +100,7 @@
                                         <action selector="continueBtn:" destination="-1" eventType="touchUpInside" id="AWI-V7-x0k"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4BO-4F-nz0">
-                                    <rect key="frame" x="28" y="54" width="314" height="32.333333333333343"/>
-                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                    <state key="normal">
-                                        <attributedString key="attributedTitle">
-                                            <fragment content="Skip">
-                                                <attributes>
-                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <font key="NSFont" metaFont="system" size="15"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                    </state>
-                                    <buttonConfiguration key="configuration" style="plain"/>
-                                </button>
                             </subviews>
-                            <constraints>
-                                <constraint firstItem="4BO-4F-nz0" firstAttribute="height" secondItem="SqR-rz-58q" secondAttribute="height" multiplier="0.7" id="rGp-Ws-ss9"/>
-                            </constraints>
                             <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="28" bottom="0.0" trailing="28"/>
                         </stackView>
                     </subviews>
@@ -132,12 +112,12 @@
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="U8c-s6-ZEG" secondAttribute="trailing" constant="10" id="1TU-p3-EHN"/>
                 <constraint firstItem="U8c-s6-ZEG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="7GM-DX-j6z"/>
-                <constraint firstItem="GCH-Co-F3z" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.66" id="DXc-C5-GOr"/>
+                <constraint firstItem="GCH-Co-F3z" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.7" id="DXc-C5-GOr"/>
                 <constraint firstItem="MzP-Un-WKf" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.100446" id="RGC-60-Jw6"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="U8c-s6-ZEG" secondAttribute="bottom" id="Zhb-x3-ke9"/>
                 <constraint firstItem="U8c-s6-ZEG" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="dyr-Sf-u9R"/>
             </constraints>
-            <point key="canvasLocation" x="139" y="127"/>
+            <point key="canvasLocation" x="286" y="151"/>
         </view>
     </objects>
     <designables>

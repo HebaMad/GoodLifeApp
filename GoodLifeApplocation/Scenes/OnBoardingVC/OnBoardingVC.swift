@@ -55,11 +55,14 @@ class OnBoardingVC: UIViewController {
             
         }
     }
+    
     var timeOfInvestment : String = ""{
         didSet{
             
         }
     }
+    
+    
     var onBoardingScreen = 0
     //MARK: - Life cycle
     
@@ -233,7 +236,7 @@ class OnBoardingVC: UIViewController {
             break
         case 7:
             let nav1 = UINavigationController()
-            let mainView = MapVC()
+            let mainView = TabBarVC.instantiate()
  
 
             nav1.viewControllers = [mainView]
@@ -249,22 +252,14 @@ class OnBoardingVC: UIViewController {
     }
 }
 
-//extension OnBoardingVC{
-//    func showSnackBar(message:String){
-//        let answerMessage = MDCSnackbarMessage()
-//        answerMessage.text =  message
-//        
-//        MDCSnackbarManager.default.show(answerMessage)
-//    }
-//}
 
 extension OnBoardingVC:AuthDelegate{
     func getLoginToken(data: userProfile) {}
     
     func getuserToken(data: startFundRaise) {
-        print("Bearer"+" "+data.access_token!)
+        print("Bearer"+" "+data.api_token!)
         do{
-            try KeychainWrapper.set(value: "Bearer"+" "+data.access_token! , key: data.mobile ?? "")
+            try KeychainWrapper.set(value: "Bearer"+" "+data.api_token! , key: data.mobile ?? "")
             AppData.mobile = data.mobile ?? ""
             lat = Double(data.latitude ?? "") ?? 0.0
             long = Double(data.longitude ?? "") ?? 0.0
