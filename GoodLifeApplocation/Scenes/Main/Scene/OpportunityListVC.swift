@@ -44,12 +44,16 @@ class OpportunityListVC: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
+
+    
+}
+
+extension OpportunityListVC{
     func setupTableView(){
         opportunitiesTableview.register(OpportunitiesStatusCell.self)
         opportunitiesTableview.delegate=self
         opportunitiesTableview.dataSource=self
     }
-    
     
     func DataAvailability()  {
         if  opportunities.count == 0 {
@@ -59,6 +63,11 @@ class OpportunityListVC: UIViewController {
         }
     }
     
+    @objc func completeButtonTapped(){
+        
+        let vc = MainOpportunitiesCreation()
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 extension OpportunityListVC:Storyboarded{
@@ -78,6 +87,8 @@ extension OpportunityListVC:UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:OpportunitiesStatusCell = tableView.dequeueReusableCell(for: indexPath)
         cell.configureCell(data: opportunities[indexPath.row])
+        cell.completeInformationBtn.tag=indexPath.row
+        cell.completeInformationBtn.addTarget(self, action: #selector(completeButtonTapped), for: .touchUpInside)
         return cell
     }
     

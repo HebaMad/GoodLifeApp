@@ -14,6 +14,7 @@ class OpportunitiesStatusCell: UITableViewCell,NibLoadableView {
     @IBOutlet weak var titleTxt: UILabel!
     @IBOutlet weak var status: UILabelDesignable!
 
+    @IBOutlet weak var completeInformationBtn: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
 

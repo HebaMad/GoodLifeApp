@@ -68,17 +68,17 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="57B-3K-Pxd">
-                                        <rect key="frame" x="8" y="45" width="321" height="12.666666666666664"/>
+                                        <rect key="frame" x="8" y="45" width="321" height="12"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="p1y-Zd-84B">
-                                                <rect key="frame" x="0.0" y="1.6666666666666643" width="20" height="9.6666666666666679"/>
+                                                <rect key="frame" x="0.0" y="1.6666666666666643" width="20" height="9.0000000000000036"/>
                                                 <color key="tintColor" systemColor="systemGray2Color"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="20" id="m3g-5U-cB7"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22 Feb, 2023" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caL-Cg-8bV">
-                                                <rect key="frame" x="26" y="0.0" width="295" height="12.666666666666666"/>
+                                                <rect key="frame" x="26" y="0.0" width="295" height="12"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -86,18 +86,20 @@
                                         </subviews>
                                     </stackView>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ilc-md-S8x">
-                                        <rect key="frame" x="8" y="69.666666666666671" width="321" height="4"/>
+                                        <rect key="frame" x="8" y="69" width="321" height="4"/>
                                         <color key="tintColor" red="0.0" green="0.851000011" blue="0.44299998880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="4" id="o61-zT-RXg"/>
                                         </constraints>
                                     </progressView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="complete information -&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdi-Vz-SA3">
-                                        <rect key="frame" x="8" y="85.666666666666671" width="321" height="14.333333333333329"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
-                                        <color key="textColor" name="unselectedTab"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkt-JR-c0S">
+                                        <rect key="frame" x="8" y="85" width="321" height="15"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Complete Information -&gt;">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="8"/>
+                                            <color key="baseForegroundColor" name="BgColor"/>
+                                        </buttonConfiguration>
+                                    </button>
                                 </subviews>
                                 <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
                             </stackView>
@@ -133,6 +135,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
+                <outlet property="completeInformationBtn" destination="bkt-JR-c0S" id="QIy-Zk-sma"/>
                 <outlet property="completeProgressView" destination="Ilc-md-S8x" id="2Ty-9c-Wln"/>
                 <outlet property="dateTxt" destination="caL-Cg-8bV" id="azR-CP-y9w"/>
                 <outlet property="status" destination="Ypu-ec-jdu" id="tg7-Bd-OUq"/>
@@ -148,8 +151,8 @@
     </designables>
     <resources>
         <image name="calendar" catalog="system" width="128" height="107"/>
-        <namedColor name="unselectedTab">
-            <color red="0.2669999897480011" green="0.050999999046325684" blue="0.55699998140335083" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="BgColor">
+            <color red="0.59200000762939453" green="0.27799999713897705" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
