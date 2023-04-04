@@ -194,6 +194,9 @@
 		27B8C8F928A1825D0011B039 /* ActivityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B8C8F728A1825D0011B039 /* ActivityCell.swift */; };
 		27B8C8FA28A1825D0011B039 /* ActivityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27B8C8F828A1825D0011B039 /* ActivityCell.xib */; };
 		27B8C90028A198BB0011B039 /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B8C8FF28A198BB0011B039 /* NibLoadableView.swift */; };
+		27BD779329DADFCC002C329A /* OpportuntiesTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BD779229DADFCC002C329A /* OpportuntiesTarget.swift */; };
+		27BD779529DADFE4002C329A /* OpportuntiesNetworkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BD779429DADFE4002C329A /* OpportuntiesNetworkable.swift */; };
+		27BD779729DAE192002C329A /* OpportunitiesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BD779629DAE192002C329A /* OpportunitiesPresenter.swift */; };
 		27C9AE27288D38E900FA584A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AE26288D38E900FA584A /* AppDelegate.swift */; };
 		27C9AE29288D38E900FA584A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AE28288D38E900FA584A /* SceneDelegate.swift */; };
 		27C9AE2B288D38E900FA584A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C9AE2A288D38E900FA584A /* ViewController.swift */; };
@@ -503,6 +506,9 @@
 		27B8C8F728A1825D0011B039 /* ActivityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCell.swift; sourceTree = "<group>"; };
 		27B8C8F828A1825D0011B039 /* ActivityCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityCell.xib; sourceTree = "<group>"; };
 		27B8C8FF28A198BB0011B039 /* NibLoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
+		27BD779229DADFCC002C329A /* OpportuntiesTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpportuntiesTarget.swift; sourceTree = "<group>"; };
+		27BD779429DADFE4002C329A /* OpportuntiesNetworkable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpportuntiesNetworkable.swift; sourceTree = "<group>"; };
+		27BD779629DAE192002C329A /* OpportunitiesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpportunitiesPresenter.swift; sourceTree = "<group>"; };
 		27C9AE23288D38E900FA584A /* GoodLifeApplocation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodLifeApplocation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27C9AE26288D38E900FA584A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27C9AE28288D38E900FA584A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -806,6 +812,7 @@
 				270562D428C090D400B0124E /* DashboardPresenter.swift */,
 				27ECA33C28EB25C1003DCF53 /* HomePresenter.swift */,
 				2791D8E529D0390700B03A04 /* MainPresenter.swift */,
+				27BD779629DAE192002C329A /* OpportunitiesPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -857,6 +864,7 @@
 		27B54D8428BA635E0074A6A1 /* Networkable */ = {
 			isa = PBXGroup;
 			children = (
+				27BD779129DADFA8002C329A /* OpportuntitesCreation */,
 				2791D8E729D03A4E00B03A04 /* Main */,
 				27ECA33628E982D0003DCF53 /* Home */,
 				270562CE28BFD18A00B0124E /* Dashboard */,
@@ -915,6 +923,15 @@
 				273D3A9D28B0CED000860702 /* choosingMinistryNeedsVC.xib */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		27BD779129DADFA8002C329A /* OpportuntitesCreation */ = {
+			isa = PBXGroup;
+			children = (
+				27BD779229DADFCC002C329A /* OpportuntiesTarget.swift */,
+				27BD779429DADFE4002C329A /* OpportuntiesNetworkable.swift */,
+			);
+			path = OpportuntitesCreation;
 			sourceTree = "<group>";
 		};
 		27C9AE1A288D38E900FA584A = {
@@ -1572,6 +1589,7 @@
 				27C9AE3D288D39B300FA584A /* SplashScreen.swift in Sources */,
 				27CBC5A92927CDA5000AE9A6 /* LayoutConstraintsExtension.swift in Sources */,
 				2723C7E529D4362000E52288 /* BusinessPlanOpportunitiesCreation.swift in Sources */,
+				27BD779729DAE192002C329A /* OpportunitiesPresenter.swift in Sources */,
 				27CB209C289FFE9800E63694 /* GeneralFinicialPagerVC.swift in Sources */,
 				278882EC29C0A1310025A6D0 /* MainCategoriesModel.swift in Sources */,
 				27CB205F289B0FDC00E63694 /* ResourceDetailsCell.swift in Sources */,
@@ -1655,6 +1673,7 @@
 				2768DED728A3F473004C6A5B /* AddTaskVC.swift in Sources */,
 				2706D21328913D4500546425 /* ProgressBar.swift in Sources */,
 				2710A28A28971E3B009BCE60 /* ListItem.swift in Sources */,
+				27BD779529DADFE4002C329A /* OpportuntiesNetworkable.swift in Sources */,
 				278882F529C1FC880025A6D0 /* MapCell.swift in Sources */,
 				2704245028A8CED1002EF7B5 /* LoginProgressViews.swift in Sources */,
 				279D4F2B29B766B90008CC29 /* AddingItemCell.swift in Sources */,
@@ -1745,6 +1764,7 @@
 				270562D528C090D400B0124E /* DashboardPresenter.swift in Sources */,
 				274B65A22999558B008EA6D5 /* StewardingResource.swift in Sources */,
 				2791D8E629D0390700B03A04 /* MainPresenter.swift in Sources */,
+				27BD779329DADFCC002C329A /* OpportuntiesTarget.swift in Sources */,
 				27B54D9328BA6E170074A6A1 /* AppData.swift in Sources */,
 				2704243D28A6C828002EF7B5 /* BusinessPlanCell.swift in Sources */,
 				27F7363928C4FD4100E804B5 /* resourceSubTopicCell.swift in Sources */,

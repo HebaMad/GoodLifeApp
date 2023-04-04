@@ -157,25 +157,13 @@
                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aVI-UT-j3e" customClass="BottomBorderTextField" customModule="GoodLifeApplocation" customModuleProvider="target">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aVI-UT-j3e">
                                             <rect key="frame" x="0.0" y="28" width="369" height="40"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="0e7-ZP-vMh"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="link" catalog="system"/>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
-                                                    <real key="value" value="8"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="rightPadding">
-                                                    <real key="value" value="8"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="LineColor">
-                                                    <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
                                         </textField>
                                     </subviews>
                                     <constraints>
@@ -228,7 +216,6 @@
         </designable>
     </designables>
     <resources>
-        <image name="link" catalog="system" width="128" height="124"/>
         <namedColor name="backgroundColor">
             <color red="0.63099998235702515" green="0.34900000691413879" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

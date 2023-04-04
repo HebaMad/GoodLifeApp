@@ -2011,7 +2011,7 @@ Night</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TM3-Bp-xFv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3427" y="-777"/>
+            <point key="canvasLocation" x="3461" y="-693"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="A8B-iA-RQ5">
@@ -3136,7 +3136,7 @@ Night</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DZ5-x1-Sd7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7267" y="-626"/>
+            <point key="canvasLocation" x="7272" y="-693"/>
         </scene>
         <!--Home-->
         <scene sceneID="u3k-nD-6H7">

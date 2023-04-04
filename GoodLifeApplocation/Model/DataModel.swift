@@ -560,7 +560,7 @@ struct opportunitiesData:Codable{
     let description:String?
     let representative:String?
     let tags:[String]?
-    let completion:String?
+    let completion:Int?
     let rating:String?
     let email:String?
     let phone:String?
