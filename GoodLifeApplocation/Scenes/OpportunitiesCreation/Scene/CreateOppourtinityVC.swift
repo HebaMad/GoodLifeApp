@@ -52,7 +52,7 @@ class CreateOppourtinityVC: UIViewController , UITextViewDelegate{
                     
                     if tagSelection.count != 0 {
                         
-                        presenter.createOpportunities(title:title , sub_title: "kllm", city: city, state: state, description: descriptionTxt.text!, representative: ";lll", tags: tagSelection, rating: "\(ratingView.rating)", email: emailTxt.text ?? "", phone:phoneNumberTxt.text ?? "" )
+                        presenter.createOpportunities(title:title, city: city, state: state, description: descriptionTxt.text!, name: name, tags: tagSelection, rating: "\(ratingView.rating)", email: emailTxt.text ?? "", phone:phoneNumberTxt.text ?? "" )
                         presenter.delegate=self
                         
                     }else{

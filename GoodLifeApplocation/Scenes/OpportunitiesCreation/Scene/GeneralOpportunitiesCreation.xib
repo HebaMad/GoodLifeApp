@@ -76,7 +76,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="369" height="48"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                     <connections>
-                                                        <action selector="categoryBtn:" destination="-1" eventType="touchUpInside" id="m3r-5t-xZK"/>
+                                                        <action selector="categoryAction:" destination="-1" eventType="touchUpInside" id="zhm-FJ-hgK"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -378,7 +378,7 @@
                 </scrollView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" name="bg3"/>
             <constraints>
                 <constraint firstItem="GYK-Rb-Sop" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="2AZ-us-KWZ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="GYK-Rb-Sop" secondAttribute="trailing" id="gLE-M7-DBD"/>
@@ -395,6 +395,9 @@
         </namedColor>
         <namedColor name="backgroundColor">
             <color red="0.63099998235702515" green="0.34900000691413879" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="bg3">
+            <color red="0.97299998998641968" green="0.9649999737739563" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

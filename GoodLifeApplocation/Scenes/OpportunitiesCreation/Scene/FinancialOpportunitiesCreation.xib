@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -83,7 +84,7 @@
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="G9w-Kh-AdN"/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" name="bg3"/>
             <constraints>
                 <constraint firstItem="RyN-TX-9U6" firstAttribute="trailing" secondItem="G9w-Kh-AdN" secondAttribute="trailing" id="A3Q-Le-21p"/>
                 <constraint firstItem="RyN-TX-9U6" firstAttribute="leading" secondItem="G9w-Kh-AdN" secondAttribute="leading" id="Zhw-bl-5nG"/>
@@ -92,4 +93,9 @@
             <point key="canvasLocation" x="316.79389312977099" y="-82.394366197183103"/>
         </view>
     </objects>
+    <resources>
+        <namedColor name="bg3">
+            <color red="0.97299998998641968" green="0.9649999737739563" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

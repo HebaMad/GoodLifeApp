@@ -49,32 +49,37 @@ class GeneralOpportunitiesCreation: UIViewController {
     }
     
     
-    @IBAction func categoryBtn(_ sender: Any) {
-        
-        self.dropDown.anchorView = self.categoriesBtn
-        self.dropDown.dataSource = self.categories
-        self.dropDown.cellNib = UINib(nibName: "DropDownCell", bundle: Bundle(for: DropDownCell.self))
-        
-        self.dropDown.customCellConfiguration = { (index: Index, item: String, cell: DropDownCell) -> Void in
-        }
-        self.dropDown.multiSelectionAction = { [self] (index: [Int], item: [String]) in
-            print("Selected item: \(item) at index: \(index)")
-            
-            self.categoriesTxt.textColor = UIColor.black
-            
-            for i in 0 ... item.count-1{
-                categoriesSelected.append(item[i])
-                allCategories += ",\(item[i])"
-            }
-        }
-            print(categoriesSelected)
-      
-            self.dropDown.width = self.categoriesTxt.frame.size.width
-            self.dropDown.bottomOffset = CGPoint(x: 0, y:(self.dropDown.anchorView?.plainView.bounds.height)!)
-            self.dropDown.show()
-            
-       
-    }
+    
+
+    
+    
+    //    @IBAction func categoryBtn(_ sender: Any) {
+    //
+    //        self.dropDown.anchorView = self.categoriesBtn
+    //        self.dropDown.dataSource = self.categories
+    //        self.dropDown.cellNib = UINib(nibName: "DropDownCell", bundle: Bundle(for: DropDownCell.self))
+    //
+    //        self.dropDown.customCellConfiguration = { (index: Index, item: String, cell: DropDownCell) -> Void in
+    //        }
+    //        self.dropDown.multiSelectionAction = { [self] (index: [Int], item: [String]) in
+    //            print("Selected item: \(item) at index: \(index)")
+    //            allCategories=""
+    //            self.categoriesTxt.textColor = UIColor.black
+    //            categoriesSelected = item
+    //            for i in 0 ... item.count-1{
+    //                allCategories += "\(item[i]),"
+    //            }
+    //            self.categoriesTxt.text = allCategories
+    //
+    //        }
+    //            print(categoriesSelected)
+    //
+    //            self.dropDown.width = self.categoriesTxt.frame.size.width
+    //            self.dropDown.bottomOffset = CGPoint(x: 0, y:(self.dropDown.anchorView?.plainView.bounds.height)!)
+    //            self.dropDown.show()
+    //
+    //
+    //    }
     
     @IBAction func difficuiltyBtn(_ sender: Any) {
         
@@ -136,6 +141,37 @@ class GeneralOpportunitiesCreation: UIViewController {
         self.dropDown.show()
         
     }
+    
+    
+    @IBAction func categoryAction(_ sender: Any) {
+    
+        
+        self.dropDown.anchorView = self.categoriesBtn
+        self.dropDown.dataSource = self.categories
+        self.dropDown.cellNib = UINib(nibName: "DropDownCell", bundle: Bundle(for: DropDownCell.self))
+        
+        self.dropDown.customCellConfiguration = { (index: Index, item: String, cell: DropDownCell) -> Void in
+        }
+        
+        self.dropDown.multiSelectionAction = { [self] (index: [Int], item: [String]) in
+            print("Selected item: \(item) at index: \(index)")
+            allCategories=""
+            self.categoriesTxt.textColor = UIColor.black
+            categoriesSelected = item
+            for i in 0 ... item.count-1{
+                allCategories += "\(item[i]),"
+            }
+            self.categoriesTxt.text = allCategories
+            
+        }
+        
+        self.dropDown.width = self.categoriesTxt.frame.size.width
+        self.dropDown.bottomOffset = CGPoint(x: 0, y:(self.dropDown.anchorView?.plainView.bounds.height)!)
+        self.dropDown.show()
+        
+        
+    }
+    
     
 }
 extension GeneralOpportunitiesCreation:OpportunitiesDelegate{

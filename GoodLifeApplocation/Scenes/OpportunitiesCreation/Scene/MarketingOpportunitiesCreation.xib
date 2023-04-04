@@ -300,7 +300,7 @@
                 </scrollView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" name="bg3"/>
             <constraints>
                 <constraint firstItem="iiQ-fV-Yyj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="53B-LI-jdY"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iiQ-fV-Yyj" secondAttribute="trailing" id="btX-Qe-pjv"/>
@@ -317,6 +317,9 @@
         </namedColor>
         <namedColor name="backgroundColor">
             <color red="0.63099998235702515" green="0.34900000691413879" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="bg3">
+            <color red="0.97299998998641968" green="0.9649999737739563" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="bg5">
             <color red="0.85100001096725464" green="0.85100001096725464" blue="0.85100001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
