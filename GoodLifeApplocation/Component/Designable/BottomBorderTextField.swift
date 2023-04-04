@@ -14,7 +14,7 @@ import UIKit
     @IBInspectable var LineHeight: CGFloat = 1.0
     @IBInspectable var LineSpace: CGFloat = 0.0
     
-    @IBInspectable var placeholderTextColor: UIColor = UIColor.white
+    @IBInspectable var placeholderTextColor: UIColor = UIColor.systemGray4
     
     @IBInspectable var borderWidth: CGFloat = 0
     @IBInspectable var borderColor: UIColor = UIColor.clear
