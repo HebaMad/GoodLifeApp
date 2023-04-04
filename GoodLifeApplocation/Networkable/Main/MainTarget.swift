@@ -14,7 +14,7 @@ enum MainApiTarget:TargetType{
     case listOpportunities(search:String)
     case homescreen
     case deleteOpportunities(opportunity_id:String)
-    case createOpportunties(title:String,sub_title:String,city:String,state:String,description:String,representative:String,tags:[String],rating:String,email:String,phone:String)
+    case createOpportunties(title:String,city:String,state:String,description:String,name:String,tags:[String],rating:String,email:String,phone:String)
     
     var baseURL: URL {
         return URL(string: "\(AppConfig.apiBaseUrl)")!
@@ -83,8 +83,8 @@ enum MainApiTarget:TargetType{
     var param: [String : Any]{
         
         switch self {
-        case .createOpportunties(let title,let sub_title,let city,let state,let description,let representative,let tags,let rating, let email,let phone):
-            return ["title" :title,"sub_title":sub_title,"city":city,"state":state,"description":description,"representative":representative,"tags":tags,"rating":rating,"email":email,"phone":phone ]
+        case .createOpportunties(let title,let city,let state,let description,let name,let tags,let rating, let email,let phone):
+            return ["title" :title,"city":city,"state":state,"description":description,"name":name,"tags":tags,"rating":rating,"email":email,"phone":phone ]
             
         case .deleteOpportunities(let opportunity_id):
             return ["opportunity_id" :opportunity_id ]
