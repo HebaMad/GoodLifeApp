@@ -42,8 +42,10 @@ class GeneralOpportunitiesCreation: UIViewController {
     
     
     func getCategories(){
+        
         presenter.getFundType()
         presenter.delegate=self
+        
     }
     
     

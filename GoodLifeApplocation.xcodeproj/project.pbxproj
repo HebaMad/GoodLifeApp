@@ -107,7 +107,6 @@
 		277CF36628BD52A900F2874F /* AuthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277CF36528BD52A900F2874F /* AuthPresenter.swift */; };
 		277CF36828BD5AD700F2874F /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277CF36728BD5AD700F2874F /* MenuPresenter.swift */; };
 		277CF36A28BD5DAF00F2874F /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277CF36928BD5DAF00F2874F /* ProfilePresenter.swift */; };
-		27876ABB28A4484B003A012A /* SpecificWebsiteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27876ABA28A4484B003A012A /* SpecificWebsiteVC.swift */; };
 		27876ABD28A4DB64003A012A /* NSUIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27876ABC28A4DB64003A012A /* NSUIColor+Hex.swift */; };
 		278882D829BC9D650025A6D0 /* OpportunitiesStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278882D629BC9D650025A6D0 /* OpportunitiesStatusCell.swift */; };
 		278882D929BC9D650025A6D0 /* OpportunitiesStatusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 278882D729BC9D650025A6D0 /* OpportunitiesStatusCell.xib */; };
@@ -276,8 +275,6 @@
 		27CB2087289D467500E63694 /* DashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CB2086289D467500E63694 /* DashboardVC.swift */; };
 		27CB2089289D48BD00E63694 /* CategoriesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CB2088289D48BD00E63694 /* CategoriesList.swift */; };
 		27CB208B289D4A9300E63694 /* HomeCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CB208A289D4A9300E63694 /* HomeCategories.swift */; };
-		27CB208F289FB1E100E63694 /* PackageDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CB208D289FB1E100E63694 /* PackageDetailsVC.swift */; };
-		27CB2090289FB1E100E63694 /* PackageDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27CB208E289FB1E100E63694 /* PackageDetailsVC.xib */; };
 		27CB2094289FC6CC00E63694 /* GeneralPagerViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CB2092289FC6CC00E63694 /* GeneralPagerViewVC.swift */; };
 		27CB2095289FC6CC00E63694 /* GeneralPagerViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27CB2093289FC6CC00E63694 /* GeneralPagerViewVC.xib */; };
 		27CB2098289FC79700E63694 /* SpecificPagerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CB2096289FC79700E63694 /* SpecificPagerVC.swift */; };
@@ -418,7 +415,6 @@
 		277CF36528BD52A900F2874F /* AuthPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPresenter.swift; sourceTree = "<group>"; };
 		277CF36728BD5AD700F2874F /* MenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
 		277CF36928BD5DAF00F2874F /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
-		27876ABA28A4484B003A012A /* SpecificWebsiteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificWebsiteVC.swift; sourceTree = "<group>"; };
 		27876ABC28A4DB64003A012A /* NSUIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSUIColor+Hex.swift"; sourceTree = "<group>"; };
 		278882D629BC9D650025A6D0 /* OpportunitiesStatusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpportunitiesStatusCell.swift; sourceTree = "<group>"; };
 		278882D729BC9D650025A6D0 /* OpportunitiesStatusCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpportunitiesStatusCell.xib; sourceTree = "<group>"; };
@@ -591,8 +587,6 @@
 		27CB2086289D467500E63694 /* DashboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardVC.swift; sourceTree = "<group>"; };
 		27CB2088289D48BD00E63694 /* CategoriesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesList.swift; sourceTree = "<group>"; };
 		27CB208A289D4A9300E63694 /* HomeCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCategories.swift; sourceTree = "<group>"; };
-		27CB208D289FB1E100E63694 /* PackageDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageDetailsVC.swift; sourceTree = "<group>"; };
-		27CB208E289FB1E100E63694 /* PackageDetailsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PackageDetailsVC.xib; sourceTree = "<group>"; };
 		27CB2092289FC6CC00E63694 /* GeneralPagerViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPagerViewVC.swift; sourceTree = "<group>"; };
 		27CB2093289FC6CC00E63694 /* GeneralPagerViewVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeneralPagerViewVC.xib; sourceTree = "<group>"; };
 		27CB2096289FC79700E63694 /* SpecificPagerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificPagerVC.swift; sourceTree = "<group>"; };
@@ -1256,8 +1250,6 @@
 		27CB2091289FC6AD00E63694 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				27CB208D289FB1E100E63694 /* PackageDetailsVC.swift */,
-				27CB208E289FB1E100E63694 /* PackageDetailsVC.xib */,
 				27CB2092289FC6CC00E63694 /* GeneralPagerViewVC.swift */,
 				27CB2093289FC6CC00E63694 /* GeneralPagerViewVC.xib */,
 				27CB209A289FFE9800E63694 /* GeneralFinicialPagerVC.swift */,
@@ -1266,7 +1258,6 @@
 				27594D2028A017D600F4DDC3 /* GeneralLiturgicalPageVC.swift */,
 				27CB2096289FC79700E63694 /* SpecificPagerVC.swift */,
 				27CB2097289FC79700E63694 /* SpecificPagerVC.xib */,
-				27876ABA28A4484B003A012A /* SpecificWebsiteVC.swift */,
 				2704243F28A6CA13002EF7B5 /* SpeificBusinessPlanVC.swift */,
 				2704244028A6CA13002EF7B5 /* SpeificBusinessPlanVC.xib */,
 				2704244328A6DF16002EF7B5 /* SpecificList.swift */,
@@ -1440,7 +1431,6 @@
 				27C9AE54288D3CB500FA584A /* Inter-BoldItalic.ttf in Resources */,
 				2798B9E6298EEA2A00BB18BF /* CategoryReviews.xib in Resources */,
 				2734CD8528913E3A00E6964F /* GoodLifeApplocation.xcworkspace in Resources */,
-				27CB2090289FB1E100E63694 /* PackageDetailsVC.xib in Resources */,
 				2723C7E629D4362000E52288 /* BusinessPlanOpportunitiesCreation.xib in Resources */,
 				27F4B14E28B8B94E003365A6 /* SettingNib.xib in Resources */,
 				27F4B14C28B8AD4F003365A6 /* VenturesCell.xib in Resources */,
@@ -1740,7 +1730,6 @@
 				278882DC29BCA2BD0025A6D0 /* OpportunityListVC.swift in Sources */,
 				2767A28328904A3800DF34D1 /* OtherFundsCollectionViewCell.swift in Sources */,
 				27CB205B289B0C6B00E63694 /* ResourceDetailsVC.swift in Sources */,
-				27876ABB28A4484B003A012A /* SpecificWebsiteVC.swift in Sources */,
 				274B659E2998EA94008EA6D5 /* StewardingMyMoney.swift in Sources */,
 				2791D8FF29D1A57900B03A04 /* DigitalOpportunitiesCreation.swift in Sources */,
 				27B54D9628BA99940074A6A1 /* MenuTarget.swift in Sources */,
@@ -1748,7 +1737,6 @@
 				27CB2080289D017D00E63694 /* VerificationVC.swift in Sources */,
 				2704244128A6CA13002EF7B5 /* SpeificBusinessPlanVC.swift in Sources */,
 				27F7363C28C5D7C800E804B5 /* LocationManager.swift in Sources */,
-				27CB208F289FB1E100E63694 /* PackageDetailsVC.swift in Sources */,
 				2710A296289ADA9E009BCE60 /* GoalAndBenchmarkVC.swift in Sources */,
 				27B54D9128BA6DA50074A6A1 /* KeychainOperations.swift in Sources */,
 				27C9AE83288D4F0600FA584A /* OnBoardingFrame3.swift in Sources */,
@@ -1921,7 +1909,6 @@
 				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = H74677C27V;
 				EXCLUDED_ARCHS = "";
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GoodLifeApplocation/Info.plist;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We want to use your location to see all activites linked to your site";
@@ -1960,7 +1947,6 @@
 				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = H74677C27V;
 				EXCLUDED_ARCHS = "";
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GoodLifeApplocation/Info.plist;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We want to use your location to see all activites linked to your site";
