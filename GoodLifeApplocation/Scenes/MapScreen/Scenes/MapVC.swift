@@ -416,9 +416,9 @@ extension MapVC :HomeDelegate{
 extension MapVC: OnFilterDissmissed {
     func filteredData(data: OppourtinityDetails) {
         print(data)
-        let vc = PackageDetailsVC()
-        vc.oppourtinityDetails = data
-        navigationController?.pushViewController(vc, animated: true)
+//        let vc = PackageDetailsVC()
+//        vc.oppourtinityDetails = data
+//        navigationController?.pushViewController(vc, animated: true)
     }
     
     

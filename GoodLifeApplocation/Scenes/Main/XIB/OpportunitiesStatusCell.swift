@@ -29,6 +29,7 @@ class OpportunitiesStatusCell: UITableViewCell,NibLoadableView {
     func configureCell(data:opportunitiesData){
         titleTxt.text = data.title
         dateTxt.text=data.created_at
+        completeProgressView.progress=Float(data.completion ?? 0)
         if  data.status == "pending" {
 
             status.bgColor = UIColor(named: "unselectedTab") ?? .clear

@@ -21,6 +21,8 @@ class OpportunitiesCollectionCell: UICollectionViewCell,NibLoadableView {
 
     func configureCell(data:opportunitiesData){
         opportunitiesTitle.text=data.title
+        opportunitiesProgressview.progress=Float(data.completion ?? 0)
+
         print(data.created_at ?? "")
         dateOfTitle.text=data.created_at
         status.text = "  " + (data.status ?? "")
