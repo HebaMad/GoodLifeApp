@@ -64,8 +64,8 @@ class GeneralFinicialPagerVC: UIViewController, IndicatorInfoProvider {
         super.viewDidLoad()
         print(item)
         
-        setupData()
-        setupLineChart()
+//        setupData()
+//        setupLineChart()
         
     }
     

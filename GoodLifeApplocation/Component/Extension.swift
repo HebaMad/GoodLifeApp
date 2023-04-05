@@ -10,6 +10,8 @@ import UIKit
 import MaterialComponents.MaterialSnackbar
 
 extension UIViewController{
+  
+
     var sceneDelegate:SceneDelegate{
         return (self.view.window?.windowScene?.delegate)! as! SceneDelegate
     }
@@ -20,7 +22,14 @@ extension UIViewController{
 
         MDCSnackbarManager.default.show(answerMessage)
     }
+    
+ 
+
 }
+
+
+                                
+                                
 extension UILabel{
     func addLeading(image: UIImage, text:String) {
         let attachment = NSTextAttachment()
@@ -35,6 +44,10 @@ extension UILabel{
         mutableAttributedString.append(string)
         self.attributedText = mutableAttributedString
     }
+    
+
+    
+    
 }
 
 extension String {

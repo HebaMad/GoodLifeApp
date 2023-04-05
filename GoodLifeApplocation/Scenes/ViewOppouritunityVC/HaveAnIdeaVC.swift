@@ -34,6 +34,7 @@ class HaveAnIdeaVC: UIViewController ,UITextFieldDelegate{
     var status=""
     var ministryIdeaID=0
     var ministryIDEA:MinistryIdea?
+    let prefixToRemove = "$ "
 
     //MARK: - Life cycle
     
@@ -132,9 +133,9 @@ extension HaveAnIdeaVC{
                     
                     if status == "Add"{
                         
-                        presenter.createIdea(title: title, details: descriptionText.text, time_commitment: time, monthly_revenue: revenu,fund_type_id: "\(self.fundTypeID)",location:loc)
+                        presenter.createIdea(title: title, details: descriptionText.text, time_commitment: time, monthly_revenue: revenu.replacingOccurrences(of: prefixToRemove, with: ""),fund_type_id: "\(self.fundTypeID)",location:loc)
                     }else{
-                        presenter.updateMinistryIdea(ministryIdeaID:"\(ministryIdeaID)" , title: title, details: descriptionText.text, time_commitment: time, monthly_revenue: revenu,fund_type_id: "\(self.fundTypeID)",location:loc)
+                        presenter.updateMinistryIdea(ministryIdeaID:"\(ministryIdeaID)" , title: title, details: descriptionText.text, time_commitment: time, monthly_revenue: revenu.replacingOccurrences(of: prefixToRemove, with: ""),fund_type_id: "\(self.fundTypeID)",location:loc)
                     }
                
                     presenter.delegate=self

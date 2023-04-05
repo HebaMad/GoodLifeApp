@@ -421,6 +421,9 @@
         </view>
     </objects>
     <designables>
+        <designable name="X5K-D9-mcK">
+            <size key="intrinsicContentSize" width="-1" height="65"/>
+        </designable>
         <designable name="aF5-DQ-pYJ">
             <size key="intrinsicContentSize" width="38" height="32"/>
         </designable>
