@@ -88,6 +88,12 @@
                                 <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
                                     <color key="value" name="backgroundColor"/>
                                 </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                    <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                    <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="continueBtn:" destination="-1" eventType="touchUpInside" id="ohe-Zd-mfe"/>
@@ -107,6 +113,9 @@
                             <color key="tintColor" name="backgroundColor"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" image="chevron.backward" catalog="system"/>
+                            <connections>
+                                <action selector="backBtn:" destination="-1" eventType="touchUpInside" id="QGT-O1-y0Q"/>
+                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opportunity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jxy-pc-Uqo">
                             <rect key="frame" x="145.33333333333334" y="14.33333333333333" width="102.33333333333334" height="21.666666666666671"/>
@@ -141,6 +150,11 @@
             <point key="canvasLocation" x="368.70229007633588" y="94.366197183098592"/>
         </view>
     </objects>
+    <designables>
+        <designable name="m0q-db-dMI">
+            <size key="intrinsicContentSize" width="59.666666666666664" height="34.333333333333336"/>
+        </designable>
+    </designables>
     <resources>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <namedColor name="ButtonColor">

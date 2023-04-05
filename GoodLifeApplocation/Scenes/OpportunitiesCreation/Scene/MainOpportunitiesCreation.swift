@@ -29,6 +29,11 @@ class MainOpportunitiesCreation: UIViewController {
         checkstepNumber()
         
     }
+    
+    
+    @IBAction func backBtn(_ sender: Any){
+        navigationController?.popViewController(animated: true)
+    }
 
 }
 

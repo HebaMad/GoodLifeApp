@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CreateOppourtinityVC: UIViewController , UITextViewDelegate{
+class CreateOppourtinityVC: UIViewController{
     
     @IBOutlet weak var tagCollectionview: UICollectionView!
     @IBOutlet weak var mobileNumber: BottomBorderTextField!
@@ -212,7 +212,7 @@ extension CreateOppourtinityVC{
 
 
 
-extension CreateOppourtinityVC{
+extension CreateOppourtinityVC:UITextViewDelegate{
     //MARK:- TextView Delegates
     
     func textViewDidBeginEditing(_ textView: UITextView) {
