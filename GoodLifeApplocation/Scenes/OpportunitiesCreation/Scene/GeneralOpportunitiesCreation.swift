@@ -23,8 +23,9 @@ class GeneralOpportunitiesCreation: UIViewController {
     
     //MARK: - Properties
     
-    let dropDown = DropDown()
-    
+    let dropdown = DropDown()
+    let categoryActionDropdown = DropDown()
+
     let levelOfDifficulty:[String] = ["Easy","Medium","Hard"]
     let timeCommitment:[String] = ["Daily","Weekly","BiWeekly"]
     let AmountOfTechnology:[String] = ["Minimal","Maximal"]
@@ -49,96 +50,66 @@ class GeneralOpportunitiesCreation: UIViewController {
     }
     
     
-    
 
-    
-    
-    //    @IBAction func categoryBtn(_ sender: Any) {
-    //
-    //        self.dropDown.anchorView = self.categoriesBtn
-    //        self.dropDown.dataSource = self.categories
-    //        self.dropDown.cellNib = UINib(nibName: "DropDownCell", bundle: Bundle(for: DropDownCell.self))
-    //
-    //        self.dropDown.customCellConfiguration = { (index: Index, item: String, cell: DropDownCell) -> Void in
-    //        }
-    //        self.dropDown.multiSelectionAction = { [self] (index: [Int], item: [String]) in
-    //            print("Selected item: \(item) at index: \(index)")
-    //            allCategories=""
-    //            self.categoriesTxt.textColor = UIColor.black
-    //            categoriesSelected = item
-    //            for i in 0 ... item.count-1{
-    //                allCategories += "\(item[i]),"
-    //            }
-    //            self.categoriesTxt.text = allCategories
-    //
-    //        }
-    //            print(categoriesSelected)
-    //
-    //            self.dropDown.width = self.categoriesTxt.frame.size.width
-    //            self.dropDown.bottomOffset = CGPoint(x: 0, y:(self.dropDown.anchorView?.plainView.bounds.height)!)
-    //            self.dropDown.show()
-    //
-    //
-    //    }
     
     @IBAction func difficuiltyBtn(_ sender: Any) {
         
-        self.dropDown.anchorView = self.LevelOfDifficultyBtn
-        self.dropDown.dataSource = self.levelOfDifficulty
-        self.dropDown.cellNib = UINib(nibName: "DropDownCell", bundle: Bundle(for: DropDownCell.self))
+        self.dropdown.anchorView = self.LevelOfDifficultyBtn
+        self.dropdown.dataSource = self.levelOfDifficulty
+        self.dropdown.cellNib = UINib(nibName: "DropDownCell", bundle: Bundle(for: DropDownCell.self))
         
-        self.dropDown.customCellConfiguration = { (index: Index, item: String, cell: DropDownCell) -> Void in
+        self.dropdown.customCellConfiguration = { (index: Index, item: String, cell: DropDownCell) -> Void in
         }
-        self.dropDown.selectionAction = { [self] (index: Int, item: String) in
+        self.dropdown.selectionAction = { [self] (index: Int, item: String) in
             print("Selected item: \(item) at index: \(index)")
             self.LevelOfDifficultyTxt.text = item
             
             self.LevelOfDifficultyTxt.textColor = UIColor.black
             
         }
-        self.dropDown.width = self.LevelOfDifficultyTxt.frame.size.width
-        self.dropDown.bottomOffset = CGPoint(x: 0, y:(self.dropDown.anchorView?.plainView.bounds.height)!)
-        self.dropDown.show()
+        self.dropdown.width = self.LevelOfDifficultyTxt.frame.size.width
+        self.dropdown.bottomOffset = CGPoint(x: 0, y:(self.dropdown.anchorView?.plainView.bounds.height)!)
+        self.dropdown.show()
         
     }
     @IBAction func timeOfCommitmentBtn(_ sender: Any) {
         
-        self.dropDown.anchorView = self.timeCommitmentBtn
-        self.dropDown.dataSource = self.timeCommitment
-        self.dropDown.cellNib = UINib(nibName: "DropDownCell", bundle: Bundle(for: DropDownCell.self))
+        self.dropdown.anchorView = self.timeCommitmentBtn
+        self.dropdown.dataSource = self.timeCommitment
+        self.dropdown.cellNib = UINib(nibName: "DropDownCell", bundle: Bundle(for: DropDownCell.self))
         
-        self.dropDown.customCellConfiguration = { (index: Index, item: String, cell: DropDownCell) -> Void in
+        self.dropdown.customCellConfiguration = { (index: Index, item: String, cell: DropDownCell) -> Void in
         }
-        self.dropDown.selectionAction = { [self] (index: Int, item: String) in
+        self.dropdown.selectionAction = { [self] (index: Int, item: String) in
             print("Selected item: \(item) at index: \(index)")
             self.timeCommitmentTxt.text = item
             
             self.timeCommitmentTxt.textColor = UIColor.black
             
         }
-        self.dropDown.width = self.timeCommitmentTxt.frame.size.width
-        self.dropDown.bottomOffset = CGPoint(x: 0, y:(self.dropDown.anchorView?.plainView.bounds.height)!)
-        self.dropDown.show()
+        self.dropdown.width = self.timeCommitmentTxt.frame.size.width
+        self.dropdown.bottomOffset = CGPoint(x: 0, y:(self.dropdown.anchorView?.plainView.bounds.height)!)
+        self.dropdown.show()
         
     }
     
     @IBAction func TechnologyBtn(_ sender: Any) {
         
-        self.dropDown.anchorView = self.AmountOfTechnologyBtn
-        self.dropDown.dataSource = self.AmountOfTechnology
-        self.dropDown.cellNib = UINib(nibName: "DropDownCell", bundle: Bundle(for: DropDownCell.self))
+        self.dropdown.anchorView = self.AmountOfTechnologyBtn
+        self.dropdown.dataSource = self.AmountOfTechnology
+        self.dropdown.cellNib = UINib(nibName: "DropDownCell", bundle: Bundle(for: DropDownCell.self))
         
-        self.dropDown.customCellConfiguration = { (index: Index, item: String, cell: DropDownCell) -> Void in
+        self.dropdown.customCellConfiguration = { (index: Index, item: String, cell: DropDownCell) -> Void in
         }
-        self.dropDown.selectionAction = { [self] (index: Int, item: String) in
+        self.dropdown.selectionAction = { [self] (index: Int, item: String) in
             print("Selected item: \(item) at index: \(index)")
             self.AmountOfTechnologyTxt.text = item
             self.AmountOfTechnologyTxt.textColor = UIColor.black
             
         }
-        self.dropDown.width = self.AmountOfTechnologyTxt.frame.size.width
-        self.dropDown.bottomOffset = CGPoint(x: 0, y:(self.dropDown.anchorView?.plainView.bounds.height)!)
-        self.dropDown.show()
+        self.dropdown.width = self.AmountOfTechnologyTxt.frame.size.width
+        self.dropdown.bottomOffset = CGPoint(x: 0, y:(self.dropdown.anchorView?.plainView.bounds.height)!)
+        self.dropdown.show()
         
     }
     
@@ -146,28 +117,26 @@ class GeneralOpportunitiesCreation: UIViewController {
     @IBAction func categoryAction(_ sender: Any) {
     
         
-        self.dropDown.anchorView = self.categoriesBtn
-        self.dropDown.dataSource = self.categories
-        self.dropDown.cellNib = UINib(nibName: "DropDownCell", bundle: Bundle(for: DropDownCell.self))
+        self.categoryActionDropdown.anchorView = self.categoriesBtn
+        self.categoryActionDropdown.dataSource = self.categories
+        self.categoryActionDropdown.cellNib = UINib(nibName: "DropDownCell", bundle: Bundle(for: DropDownCell.self))
         
-        self.dropDown.customCellConfiguration = { (index: Index, item: String, cell: DropDownCell) -> Void in
+        self.categoryActionDropdown.customCellConfiguration = { (index: Index, item: String, cell: DropDownCell) -> Void in
         }
         
-        self.dropDown.multiSelectionAction = { [self] (index: [Int], item: [String]) in
+        self.categoryActionDropdown.multiSelectionAction = { [self] (index: [Int], item: [String]) in
             print("Selected item: \(item) at index: \(index)")
             allCategories=""
             self.categoriesTxt.textColor = UIColor.black
             categoriesSelected = item
-            for i in 0 ... item.count-1{
-                allCategories += "\(item[i]),"
-            }
-            self.categoriesTxt.text = allCategories
+            let selectedCategories = categoriesSelected.joined(separator: ",")
+            self.categoriesTxt.text = selectedCategories
             
         }
         
-        self.dropDown.width = self.categoriesTxt.frame.size.width
-        self.dropDown.bottomOffset = CGPoint(x: 0, y:(self.dropDown.anchorView?.plainView.bounds.height)!)
-        self.dropDown.show()
+        self.categoryActionDropdown.width = self.categoriesTxt.frame.size.width
+        self.categoryActionDropdown.bottomOffset = CGPoint(x: 0, y:(self.categoryActionDropdown.anchorView?.plainView.bounds.height)!)
+        self.categoryActionDropdown.show()
         
         
     }
