@@ -1266,7 +1266,7 @@ Night</string>
                                 <rect key="frame" x="0.0" y="48" width="414" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opportunity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3f-Fs-loT">
-                                        <rect key="frame" x="155.5" y="14" width="103" height="22"/>
+                                        <rect key="frame" x="156" y="14" width="102.5" height="22"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="18"/>
                                         <color key="textColor" name="button"/>

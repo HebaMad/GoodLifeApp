@@ -15,6 +15,7 @@ enum MainApiTarget:TargetType{
     case homescreen
     case deleteOpportunities(opportunity_id:String)
     case createOpportunties(title:String,city:String,state:String,description:String,name:String,tags:[String],rating:String,email:String,phone:String)
+    case mapScreenData(fundTypeId:[String],mainCategoryId:String,subCategoryId:String,interest:String)
     
     var baseURL: URL {
         return URL(string: "\(AppConfig.apiBaseUrl)")!
@@ -29,6 +30,7 @@ enum MainApiTarget:TargetType{
         case .homescreen:return "homeScreen"
         case .listOpportunities:return "myOpportunities"
         case .createOpportunties: return "createOpportunity"
+        case .mapScreenData:return "userHomeScreen"
             
         }
     }
@@ -36,7 +38,7 @@ enum MainApiTarget:TargetType{
     
     var method: Moya.Method {
         switch self{
-        case .homescreen,.listOpportunities,.getNeedMainCategory,.getNeedSubCategory:
+        case .homescreen,.listOpportunities,.getNeedMainCategory,.getNeedSubCategory,.mapScreenData:
             return .get
             
         case .deleteOpportunities:
@@ -56,7 +58,7 @@ enum MainApiTarget:TargetType{
         case .homescreen:
             return .requestPlain
 
-        case .deleteOpportunities,.listOpportunities,.getNeedMainCategory,.getNeedSubCategory:
+        case .deleteOpportunities,.listOpportunities,.getNeedMainCategory,.getNeedSubCategory,.mapScreenData:
             return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
 
         }
@@ -65,7 +67,7 @@ enum MainApiTarget:TargetType{
     
     var headers: [String : String]?{
         switch self{
-        case .homescreen,.deleteOpportunities,.listOpportunities,.createOpportunties:
+        case .homescreen,.deleteOpportunities,.listOpportunities,.createOpportunties,.mapScreenData:
             
             do {
                 let token = try KeychainWrapper.get(key: AppData.mobile) ?? ""
@@ -91,7 +93,9 @@ enum MainApiTarget:TargetType{
 
         case .listOpportunities(let search):
             return ["search" :search ]
-
+        
+        case .mapScreenData(let fundTypeId,let mainCategoryId,let subCategoryId,let interest):
+            return  ["fund_type_id" :fundTypeId ,"main_category_id":mainCategoryId,"sub_category_id":subCategoryId,"interest":interest ]
         default : return [:]
 
             

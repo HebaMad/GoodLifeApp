@@ -41,7 +41,7 @@ class MainPresenter:NSObject{
                 Alert.showErrorAlert(message: "something wrong try again")
             }
         }
-        }
+    }
     
     func deleteOpportunities(opportunity_id:String){
         MainManager.shared.deleteOpportunities(opportunity_id: opportunity_id) { Response in
@@ -123,7 +123,7 @@ class MainPresenter:NSObject{
             case let .success(response):
                 if response.status == true{
                     self.delegate?.showAlerts(title:"Success", message: response.message ?? "")
-
+                    
                 }else{
                     Alert.showErrorAlert(message: response.message ?? "")
                 }
@@ -137,13 +137,33 @@ class MainPresenter:NSObject{
     
     func createOpportunities(title: String, city: String, state: String, description: String, name:String,tags: [String], rating: String, email: String, phone: String){
         MainManager.shared.createOpportunties(title: title, city: city, state: state, description: description, name: name, tags: tags, rating: rating, email: email, phone: phone) { Response in
-  
+            
             switch Response{
                 
             case let .success(response):
                 if response.status == true{
                     self.delegate?.showAlerts(title:"Success", message: response.message ?? "")
-
+                    
+                }else{
+                    Alert.showErrorAlert(message: response.message ?? "")
+                }
+                
+            case .failure(_):
+                
+                Alert.showErrorAlert(message: "something wrong try again")
+            }
+        }
+    }
+    
+    func mapScreenData(fundTypeId:[String],mainCategoryId:String,subCategoryId:String,interest:String){
+        MainManager.shared.mapScreenData(fundTypeId: fundTypeId, mainCategoryId: mainCategoryId, subCategoryId: subCategoryId, interest: interest){ Response in
+            
+            switch Response{
+                
+            case let .success(response):
+                if response.status == true{
+                    self.delegate?.showAlerts(title:"Success", message: response.message ?? "")
+                    
                 }else{
                     Alert.showErrorAlert(message: response.message ?? "")
                 }
