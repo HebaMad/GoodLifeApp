@@ -589,3 +589,8 @@ struct sliderData:Codable{
     let image:String?
    
 }
+
+struct ExploreMap : Decodable{
+    let opportunities:[opportunitiesData]?
+    
+}
