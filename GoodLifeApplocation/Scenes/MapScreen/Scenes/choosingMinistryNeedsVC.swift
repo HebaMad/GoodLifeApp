@@ -9,7 +9,7 @@ import UIKit
 import FittedSheets
 
 protocol DataFiltered {
-    func filteredData(data:Oppourtinity)
+    func filteredData(data:[opportunitiesData])
     
 }
 class choosingMinistryNeedsVC: UIViewController {
@@ -30,11 +30,13 @@ class choosingMinistryNeedsVC: UIViewController {
     var interest = 0
     var needTypeID = 0
     let presenter = HomePresenter()
-    var oppourtinity:[OppourtinityDetails] = []
+    var oppourtinity:[opportunitiesData] = []
     var model:[SubscriptionCollectionViewCell.ViewModel]?
     var onFilterDissmissed : OnFilterDissmissed?
     var categoryName=""
-    
+    var generalFilteringId=0
+    var specificFilteringId=0
+    var specificPresenter=MainPresenter()
     //MARK: - Life cycle
     
     override func viewDidLoad() {
@@ -91,7 +93,7 @@ private extension choosingMinistryNeedsVC {
             
             recommendationView.isHidden = false
             interest = 3
-            presenter.getSmartRecommendation(interestId: interest, needTypeId: needTypeID)
+//            presenter.getSmartRecommendation(interestId: interest, needTypeId: needTypeID)
             presenter.delegate = self
             sender.tintColor = sender.backgroundColor
             
@@ -107,7 +109,7 @@ private extension choosingMinistryNeedsVC {
             recommendationView.isHidden = false
             interest = 2
             print( UserDefaults.standard.integer(forKey: "id"))
-            presenter.getSmartRecommendation(interestId: interest, needTypeId: needTypeID)
+//            presenter.getSmartRecommendation(interestId: interest, needTypeId: needTypeID)
             presenter.delegate = self
             sender.tintColor = sender.backgroundColor
             
@@ -122,7 +124,7 @@ private extension choosingMinistryNeedsVC {
             
             recommendationView.isHidden = false
             interest = 1
-            presenter.getSmartRecommendation(interestId: interest, needTypeId: UserDefaults.standard.integer(forKey: "id"))
+//            presenter.getSmartRecommendation(interestId: interest, needTypeId: UserDefaults.standard.integer(forKey: "id"))
             presenter.delegate = self
             sender.tintColor = sender.backgroundColor
             
@@ -165,7 +167,7 @@ extension choosingMinistryNeedsVC:UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell:SubscriptionCollectionViewCell=collectionView.dequeueReusableCell(for: indexPath)
         
-        cell.configureCell(viewModel: oppourtinity[indexPath.row])
+//        cell.configureCell(viewModel: oppourtinity[indexPath.row])
         
         //        cell.tag=indexPath.row
         //        cell.nextBtn.addTarget(self, action: #selector(ministrySubscriptionDetails), for: .touchUpInside)
@@ -212,13 +214,13 @@ extension choosingMinistryNeedsVC:HomeDelegate{
         self.dismiss(animated: true) {
             if let _delegate = self.onFilterDissmissed{
                 print(categories)
-                _delegate.filteredData(data:categories)
+//                _delegate.filteredData(data:categories)
             }}
     }
     
-    func getOppourtinity(categories: Oppourtinity) {
-        print(categories.items ?? [])
-        self.oppourtinity = categories.items ?? []
+    func getOppourtinity(categories: [opportunitiesData]) {
+//        print(categories.items ?? [])
+        self.oppourtinity = categories
         self.MinistrySubscriptionCollectionview.reloadData()
         
     }
@@ -227,10 +229,28 @@ extension choosingMinistryNeedsVC:HomeDelegate{
 
 extension choosingMinistryNeedsVC:DataFiltered{
     
-    func filteredData(data: Oppourtinity) {
-        oppourtinity=data.items ?? []
+    func filteredData(data: [opportunitiesData]) {
+        oppourtinity=data
         MinistrySubscriptionCollectionview.reloadData()
         
     }
+}
+
+extension choosingMinistryNeedsVC:MainDelegate{
+    func getOpportunitiesData(data: ListOpportunities) {}
+    
+    func getExploreMapData(data: ExploreMap) {
+        oppourtinity=data.opportunities ?? []
+        let data =  try! JSONEncoder().encode(data.opportunities)
+        
+        UserDefaults.standard.set(data, forKey:"oppourtinityID")
+        
+        self.dismiss(animated: true) {
+            if let _delegate = self.onFilterDissmissed{
+//                _delegate.filteredData(data:data)
+            }}
+    }
+    
+    
 }
 

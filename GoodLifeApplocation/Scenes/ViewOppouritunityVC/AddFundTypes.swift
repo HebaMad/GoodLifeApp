@@ -227,6 +227,10 @@ extension AddFundTypes:UITextFieldDataPickerDelegate,UITextFieldDataPickerDataSo
 }
 
 extension AddFundTypes:MainDelegate{
+    func getExploreMapData(data: ExploreMap) {
+        
+    }
+    
     func showAlerts(title: String, message: String) {
         Alert.showSuccessAlert(message:message)
         clearData()

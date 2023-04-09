@@ -239,6 +239,8 @@ extension CreateOppourtinityVC:UITextViewDelegate{
 }
 
 extension CreateOppourtinityVC:MainDelegate{
+    func getExploreMapData(data: ExploreMap) {}
+    
     func showAlerts(title: String, message: String) {
         Alert.showSuccessAlert(message:message)
         clearData()
@@ -251,8 +253,5 @@ extension CreateOppourtinityVC:MainDelegate{
     func getStandardCategoriesFiltering(categories: MainHomeCategories) { }
     
     func getsubCategoriesFiltering(categories: SubHomeCategories) { }
-    
-    
-    
-    
+
 }

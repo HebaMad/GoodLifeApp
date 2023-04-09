@@ -14,6 +14,7 @@ protocol MainDelegate{
     func getOpportunitiesData(data:ListOpportunities)
     func getStandardCategoriesFiltering(categories:MainHomeCategories)
     func getsubCategoriesFiltering(categories:SubHomeCategories)
+    func getExploreMapData(data:ExploreMap)
     
 }
 
@@ -77,7 +78,6 @@ class MainPresenter:NSObject{
                 Alert.showErrorAlert(message: "something wrong try again")
             }
         }
-        
     }
     
     func mainStandardFilter(){
@@ -155,14 +155,14 @@ class MainPresenter:NSObject{
         }
     }
     
-    func mapScreenData(fundTypeId:[String],mainCategoryId:String,subCategoryId:String,interest:String){
+    func mapScreenData(fundTypeId:String,mainCategoryId:String,subCategoryId:String,interest:String){
         MainManager.shared.mapScreenData(fundTypeId: fundTypeId, mainCategoryId: mainCategoryId, subCategoryId: subCategoryId, interest: interest){ Response in
             
             switch Response{
                 
             case let .success(response):
                 if response.status == true{
-                    self.delegate?.showAlerts(title:"Success", message: response.message ?? "")
+                    self.delegate?.getExploreMapData(data: response.data!)
                     
                 }else{
                     Alert.showErrorAlert(message: response.message ?? "")

@@ -15,7 +15,7 @@ enum MainApiTarget:TargetType{
     case homescreen
     case deleteOpportunities(opportunity_id:String)
     case createOpportunties(title:String,city:String,state:String,description:String,name:String,tags:[String],rating:String,email:String,phone:String)
-    case mapScreenData(fundTypeId:[String],mainCategoryId:String,subCategoryId:String,interest:String)
+    case mapScreenData(fundTypeId:String,mainCategoryId:String,subCategoryId:String,interest:String)
     
     var baseURL: URL {
         return URL(string: "\(AppConfig.apiBaseUrl)")!

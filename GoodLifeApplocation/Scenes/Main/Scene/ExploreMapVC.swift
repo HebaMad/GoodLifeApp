@@ -23,8 +23,9 @@ class ExploreMapVC: UIViewController {
 
     var generalFiltering:[MainCategories]=[]
     var specificFiltering:[MainCategories]=[]
-    
-    
+    var opportuntites:[opportunitiesData]=[]
+    var generalFilteringId=0
+    var specificFilteringId=0
     override func viewDidLoad() {
         super.viewDidLoad()
         print(categories)
@@ -65,6 +66,8 @@ class ExploreMapVC: UIViewController {
         let controller = choosingMinistryNeedsVC()
         controller.categoryName=categoriesLabel.text ?? ""
         controller.needTypeID=needTypeID
+        controller.generalFilteringId=generalFilteringId
+        controller.specificFilteringId=specificFilteringId
         let sheetController = SheetViewController(
             
             controller: controller,
@@ -174,8 +177,20 @@ extension ExploreMapVC:UICollectionViewDataSource{
             let cell = collectionView.cellForItem(at: indexPath) as! HobbiesCell
             cell.hobbyView.layer.borderColor = UIColor(named: "BgColor")?.cgColor
             cell.hobbiesTitle.textColor = UIColor(named: "BgColor")
+            presenter.mapScreenData(fundTypeId: "\(categories[indexPath.row].id ?? 0)", mainCategoryId: "", subCategoryId: "", interest: "")
+            presenter.delegate=self
             categoriesLabel.text = categories[indexPath.row].name
             needTypeID=categories[indexPath.row].id ?? 0
+            
+        }else if collectionView == generalFilterCollectionview {
+            generalFilteringId=generalFiltering[indexPath.row].id ?? 0
+            presenter.mapScreenData(fundTypeId: "", mainCategoryId: String(describing:generalFilteringId), subCategoryId:"", interest: "")
+            presenter.delegate=self
+            
+        }else{
+            specificFilteringId=specificFiltering[indexPath.row].id ?? 0
+            presenter.mapScreenData(fundTypeId: "", mainCategoryId: String(describing:generalFilteringId), subCategoryId: String(describing: specificFilteringId), interest: "")
+            presenter.delegate=self
         }
         
     }
@@ -202,6 +217,10 @@ extension ExploreMapVC:UICollectionViewDataSource{
 }
 
 extension ExploreMapVC:MainDelegate{
+    func getExploreMapData(data: ExploreMap) {
+        opportuntites=data.opportunities ?? []
+    }
+    
     func showAlerts(title: String, message: String) { }
     
     func getMainScreenData(data: MainScreenData) { }

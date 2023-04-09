@@ -16,10 +16,11 @@ class MainVC: UIViewController {
     
     private let sections = MainCategoriesModel.shared.AllCategories
     var categories:[mainType]=[]
-    var opportunities:[opportunitiesData]=[]
+    var myOpportunities:[opportunitiesData]=[]
     var sliders:[sliderData]=[]
     let presenter=MainPresenter()
     private var menu :SideMenuNavigationController?
+    var opportuntites:[opportunitiesData]=[]
 
     //MARK: - Life cycle
     override func viewDidLoad() {
@@ -37,6 +38,7 @@ class MainVC: UIViewController {
     }
     
     private func setupCollectionview(){
+        
         self.showLoading()
         presenter.getMainScreenData()
         presenter.delegate=self
@@ -50,7 +52,8 @@ class MainVC: UIViewController {
         HomeCollectionview.collectionViewLayout = createCompositionalLayout()
         HomeCollectionview.dataSource=self
         HomeCollectionview.delegate=self
-        
+        presenter.mapScreenData(fundTypeId:"", mainCategoryId: "", subCategoryId: "", interest: "")
+        presenter.delegate=self
     }
     
 }
@@ -101,9 +104,8 @@ extension MainVC{
        print("")
         case .Opportunities:
             
-        
             let vc = OpportunityListVC.instantiate()
-            vc.opportunities=opportunities
+            vc.opportunities=myOpportunities
             vc.hidesBottomBarWhenPushed = false
             vc.tabBarController?.tabBar.isHidden=false
             self.navigationController?.pushViewController(vc, animated: true)
@@ -111,10 +113,11 @@ extension MainVC{
         }
     }
     
-    @objc func exploreMapBtn (){
+    @objc func exploreMapBtn () {
         let vc = ExploreMapVC.instantiate()
-        print(categories)
+        print(opportuntites)
         vc.categories=categories
+        vc.opportuntites=opportuntites
         navigationController?.pushViewController(vc, animated: true)
         
     }
@@ -129,6 +132,7 @@ extension MainVC {
             switch section{
                 
             case .Categories:
+                
                 let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .absolute(90))
                 
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
@@ -228,7 +232,7 @@ extension MainVC:UICollectionViewDataSource{
         case .Categories:return categories.count
         case .Map:return 1
         case .Banner:return sliders.count
-        case .Opportunities:return (opportunities.count)+1
+        case .Opportunities:return (myOpportunities.count)+1
         }
         
     }
@@ -256,7 +260,7 @@ extension MainVC:UICollectionViewDataSource{
             
         case .Opportunities:
             
-            if indexPath.row == opportunities.count{
+            if indexPath.row == myOpportunities.count{
                 
                 let cell :CreateOpportunitiesCell = collectionView.dequeueReusableCell(for: indexPath)
                 cell.createOpportunitiesBtn.tag=indexPath.row
@@ -265,11 +269,10 @@ extension MainVC:UICollectionViewDataSource{
             }else{
                 
                 let cell:OpportunitiesCollectionCell=collectionView.dequeueReusableCell(for: indexPath)
-                cell.configureCell(data: opportunities[indexPath.row])
+                cell.configureCell(data: myOpportunities[indexPath.row])
                 return cell
                 
             }
-            
             
         }
     }
@@ -294,6 +297,10 @@ extension MainVC:UICollectionViewDelegateFlowLayout{
     
 }
 extension MainVC:MainDelegate{
+    func getExploreMapData(data: ExploreMap) {
+        opportuntites=data.opportunities ?? []
+    }
+    
     func getStandardCategoriesFiltering(categories: MainHomeCategories) { }
     
     func getsubCategoriesFiltering(categories: SubHomeCategories) { }
@@ -307,7 +314,7 @@ extension MainVC:MainDelegate{
     func getMainScreenData(data: MainScreenData) {
         categories=data.categories ?? []
         sliders=data.sliders ?? []
-        opportunities=data.opportunities ?? []
+        myOpportunities=data.opportunities ?? []
         self.hideLoading()
 
         HomeCollectionview.reloadData()

@@ -147,7 +147,7 @@ extension FilterVC {
                 let AmountOfTechnology = try AmountOfTechnologyTxt.validatedText(validationType: .requiredField(field: "Select Amount Of Technology options"))
                 let LevelOfDifficulty = try LevelOfDifficultyTxt.validatedText(validationType: .requiredField(field: "Select monthly revenu options"))
                 let timeCommitment = try timeCommitmentTxt.validatedText(validationType: .requiredField(field: "Select time of commitment options"))
-            presenter.filterPackages(investmentFrom: "\(minInvestmentValue*1000)", investmentTo: "\(maxInvestmentValue*1000)", work_type: timeCommitment.lowercased(), level_of_difficulty: LevelOfDifficulty.lowercased(), amount_of_technology: AmountOfTechnology.lowercased())
+//            presenter.filterPackages(investmentFrom: "\(minInvestmentValue*1000)", investmentTo: "\(maxInvestmentValue*1000)", work_type: timeCommitment.lowercased(), level_of_difficulty: LevelOfDifficulty.lowercased(), amount_of_technology: AmountOfTechnology.lowercased())
                 presenter.delegate=self
               
         }catch{
@@ -160,6 +160,10 @@ extension FilterVC {
 }
 
 extension FilterVC:HomeDelegate{
+    func getOppourtinity(categories: [opportunitiesData]) {
+        
+    }
+    
     
     func getMainScreenData(data: MainScreenData) {}
     func showAlerts(title: String, message: String) {}
@@ -173,7 +177,7 @@ extension FilterVC:HomeDelegate{
         self.dismiss(animated: true) {
             if let _delegate = self.onFilterDissmissed {
                 print(categories)
-                _delegate.filteredData(data: categories)
+//                _delegate.filteredData(data: categories)
             }
         }
     }  

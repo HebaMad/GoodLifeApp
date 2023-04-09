@@ -35,7 +35,7 @@ class ReviewExperienceVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         categoryTxt.isEnabled = false
-        categoryPresenter.getSmartRecommendation(interestId: 0, needTypeId: 0)
+//        categoryPresenter.getSmartRecommendation(interestId: 0, needTypeId: 0)
         categoryPresenter.delegate = self
         bindBackButton()
         categoryRateSetupTable()
@@ -151,6 +151,10 @@ extension ReviewExperienceVC:MenuDelegate{
 
 
 extension ReviewExperienceVC : HomeDelegate {
+    func getOppourtinity(categories: [opportunitiesData]) {
+        
+    }
+    
     func getMainScreenData(data: MainScreenData) {}
     func getCategories(categories: Home) {}
     func getStandardCategoriesFiltering(categories: MainHomeCategories) {}

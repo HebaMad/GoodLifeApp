@@ -150,7 +150,8 @@ class OnBoardingVC: UIViewController {
         case 3:
             latitude = (vc as! OnBoardingFrame2).lat
             longitude = (vc as! OnBoardingFrame2).long
-            city  =  (vc as! OnBoardingFrame2).city
+//            city  =  (vc as! OnBoardingFrame2).city
+            
             print(latitude)
             print(longitude)
             print(city)
@@ -221,7 +222,7 @@ class OnBoardingVC: UIViewController {
                 showSnackBar(message: "Please select your Interests & Talents ")
 
             }else{
-                self.presnter.startInvestiment(mobile: mobileNumber, latitude: self.latitude, longitude: self.longitude, city: city, work_type: self.timeOfInvestment.lowercased(), amount_raise: self.maxValueInvestment-self.minValueInvestment,interest: listIntrest,talent: ListTalent)
+                self.presnter.startInvestiment(mobile: mobileNumber, latitude: self.latitude, longitude: self.longitude, city: "palestine", work_type: self.timeOfInvestment.lowercased(), amount_raise: self.maxValueInvestment-self.minValueInvestment,interest: listIntrest,talent: ListTalent)
                 self.presnter.delegate=self
                 self.contsinerView.subviews.first?.removeFromSuperview()
                 self.stepsIndicator.currentStep = 5

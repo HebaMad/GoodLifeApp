@@ -14,7 +14,7 @@ protocol HomeDelegate{
     func getCategories(categories:Home)
 
     func getCategoriesFiltered(categories:Home)
-    func getOppourtinity(categories:Oppourtinity)
+    func getOppourtinity(categories:[opportunitiesData])
     func getOppourtinityDetails(categories:OppourtinityDetails)
     func getMainScreenData(data:MainScreenData)
     
@@ -66,24 +66,7 @@ class HomePresenter:NSObject{
             }
         }
     }
-    func getSmartRecommendation(interestId:Int,needTypeId:Int){
-        HomeManager.shared.getOpportunities(needTypeId: needTypeId, interestId: interestId) { Response in
-            switch Response{
-                
-            case let .success(response):
-                if response.code == 200{
-                    self.delegate?.getOppourtinity(categories: response.data!)
-                }else if response.code == 401{
-                    SceneDelegate.init().setRootVC(vc: SplashScreen())
-                }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
-                }
-                
-            case  .failure(_):
-                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
-            }
-        }
-    }
+
     
     func oppourtinityDetails(opportunityID:Int){
         
@@ -107,26 +90,26 @@ class HomePresenter:NSObject{
         }
         
     }
-    
-    func filterPackages(investmentFrom:String,investmentTo:String,work_type:String,level_of_difficulty:String,amount_of_technology:String){
-        HomeManager.shared.Filter(investmentFrom: investmentFrom, investmentTo: investmentTo, work_type: work_type, level_of_difficulty: level_of_difficulty, amount_of_technology: amount_of_technology) { Response in
-            
-            switch Response{
-                
-            case let .success(response):
-                if response.status == true{
-                    self.delegate?.getOppourtinity(categories: response.data!)
-                    
-                }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
-                }
-            case  .failure(_):
-                
-                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
-            }
-            
-        }
-    }
+//    
+//    func filterPackages(investmentFrom:String,investmentTo:String,work_type:String,level_of_difficulty:String,amount_of_technology:String){
+//        HomeManager.shared.Filter(investmentFrom: investmentFrom, investmentTo: investmentTo, work_type: work_type, level_of_difficulty: level_of_difficulty, amount_of_technology: amount_of_technology) { Response in
+//            
+//            switch Response{
+//                
+//            case let .success(response):
+//                if response.status == true{
+//                    self.delegate?.getOppourtinity(categories: response.data!)
+//                    
+//                }else{
+//                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
+//                }
+//            case  .failure(_):
+//                
+//                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
+//            }
+//            
+//        }
+//    }
     
 
     

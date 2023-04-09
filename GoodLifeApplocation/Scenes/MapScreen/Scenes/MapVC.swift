@@ -12,7 +12,7 @@ import FittedSheets
 import MapKit
 
 protocol OnFilterDissmissed{
-    func filteredData(data:OppourtinityDetails)
+    func filteredData(data:[opportunitiesData])
 }
 
 class MapVC: UIViewController {
@@ -349,6 +349,10 @@ extension MapVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollection
 }
 
 extension MapVC :HomeDelegate{
+    func getOppourtinity(categories: [opportunitiesData]) {
+        
+    }
+    
 
     func getMainScreenData(data: MainScreenData) { }
     
@@ -414,7 +418,9 @@ extension MapVC :HomeDelegate{
     
 }
 extension MapVC: OnFilterDissmissed {
-    func filteredData(data: OppourtinityDetails) {
+
+    
+    func filteredData(data: [opportunitiesData]) {
         print(data)
 //        let vc = PackageDetailsVC()
 //        vc.oppourtinityDetails = data
