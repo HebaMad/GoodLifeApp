@@ -11,6 +11,7 @@ import Moya
 enum OpportuntiesApiTarget:TargetType{
 
     case fundType
+    case getChannels
 
     
     var baseURL: URL {
@@ -21,6 +22,7 @@ enum OpportuntiesApiTarget:TargetType{
         switch self {
 
         case .fundType:return "getFundTypes"
+        case .getChannels:return "getChannels"
             
         }
     }
@@ -28,7 +30,7 @@ enum OpportuntiesApiTarget:TargetType{
     
     var method: Moya.Method {
         switch self{
-        case .fundType:
+        case .fundType,.getChannels:
             return .get
 
         }
@@ -37,7 +39,7 @@ enum OpportuntiesApiTarget:TargetType{
     var task: Task{
         switch self{
 
-        case .fundType:
+        case .fundType,.getChannels:
             return .requestPlain
 
         }
@@ -46,7 +48,7 @@ enum OpportuntiesApiTarget:TargetType{
     
     var headers: [String : String]?{
         switch self{
-        case .fundType:
+        case .fundType,.getChannels:
             
             do {
                 let token = try KeychainWrapper.get(key: AppData.mobile) ?? ""

@@ -50,6 +50,7 @@ class GeneralOpportunitiesCreation: UIViewController {
         
     }
     
+
     @IBAction func addMoreFinancialModel(_ sender: Any) {
         if financialModelTxt.text != ""{
             financialModelData.append(financialModelTxt.text!)
@@ -153,6 +154,10 @@ class GeneralOpportunitiesCreation: UIViewController {
     
 }
 extension GeneralOpportunitiesCreation:OpportunitiesDelegate{
+    func getChannels(data: RecommendedChannel) {
+        
+    }
+    
     func showAlerts(title: String, message: String) {}
     
     func getFundTypeData(data: FundType) {

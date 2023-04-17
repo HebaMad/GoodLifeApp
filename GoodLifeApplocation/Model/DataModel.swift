@@ -50,6 +50,10 @@ struct SubHomeCategories:Decodable{
 
 }
 
+struct RecommendedChannel:Decodable{
+    let channels:[String]?
+}
+
 
 struct Oppourtinity:Decodable{
     let items :[OppourtinityDetails]?
@@ -173,6 +177,7 @@ struct userProfile: Decodable{
     let talents:[String]?
     let ministry_ideas:[MinistryIdea]?
     let volunteer_requests:[VolunteerRequests]?
+    let noOfMeals:Int?
 
 }
 

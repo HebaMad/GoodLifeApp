@@ -8,13 +8,14 @@
 import Foundation
 import Moya
 protocol OpportuntiesNetworkable:Networkable  {
+    
     func fundType(completion: @escaping (Result<BaseResponse<FundType>, Error>)-> ())
+    func getChannels(completion: @escaping (Result<BaseResponse<RecommendedChannel>, Error>)-> ())
 
 }
 
 class OpportuntiesManager:OpportuntiesNetworkable {
-
-
+ 
     typealias targetType = OpportuntiesApiTarget
 
     var provider: MoyaProvider<OpportuntiesApiTarget> = MoyaProvider<OpportuntiesApiTarget>(plugins: [NetworkLoggerPlugin()])
@@ -29,6 +30,8 @@ class OpportuntiesManager:OpportuntiesNetworkable {
         request(target: .fundType, completion: completion)
     }
     
-    
+    func getChannels(completion: @escaping (Result<BaseResponse<RecommendedChannel>, Error>) -> ()) {
+        request(target: .getChannels, completion: completion)
+    }
 
 }

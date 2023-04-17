@@ -56,6 +56,13 @@ class MainVC: UIViewController {
         presenter.delegate=self
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.showLoading()
+        presenter.getMainScreenData()
+        presenter.delegate=self
+    }
+    
 }
 
 
@@ -299,6 +306,8 @@ extension MainVC:UICollectionViewDelegateFlowLayout{
 extension MainVC:MainDelegate{
     func getExploreMapData(data: ExploreMap) {
         opportuntites=data.opportunities ?? []
+        self.hideLoading()
+
     }
     
     func getStandardCategoriesFiltering(categories: MainHomeCategories) { }

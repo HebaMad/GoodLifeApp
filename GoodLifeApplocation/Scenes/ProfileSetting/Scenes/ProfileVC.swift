@@ -26,6 +26,11 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var ministryIdeaView: UIView!
     @IBOutlet weak var ministryIdeaBtn: UIButton!
     
+    @IBOutlet weak var noOfMealTxt: UILabel!
+    @IBOutlet weak var badgeTxt: UILabel!
+    
+    @IBOutlet weak var emptyView: UIView!
+
     var privacyPolicyUrl = ""
     var venture:[Ventures]=[]
     var ministryIdea:[MinistryIdea]=[]
@@ -48,14 +53,14 @@ class ProfileVC: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         SVProgressHUD.show()
+        DataAvailability()
         bindButtons()
         presenter.userProfile()
         presenter.PrivacyPolicy()
         presenter.delegate = self
         setupTableView()
-
- 
         
     }
 
@@ -98,6 +103,7 @@ private extension ProfileVC{
    
         case venturesBtn:
             userList = "venture"
+            DataAvailability()
             ventureView.backgroundColor = UIColor(named:"button")
             ventureTitle.textColor = UIColor(named:"button")
 
@@ -111,6 +117,7 @@ private extension ProfileVC{
             
         case volunteerRequestBtn:
             userList = "volunteerRequest"
+            DataAvailability()
             venturesTableview.reloadData()
 
             ventureView.backgroundColor = UIColor(named:"unselectedTab")
@@ -124,6 +131,7 @@ private extension ProfileVC{
             
         case ministryIdeaBtn:
             userList = "ministryIdea"
+            DataAvailability()
             venturesTableview.reloadData()
             
             ventureView.backgroundColor = UIColor(named:"unselectedTab")
@@ -231,6 +239,7 @@ extension ProfileVC:ProfileDelegate{
         self.volunteerRequest = data.volunteer_requests ?? []
         userImg.sd_setImage(with: URL(string:data.image_profile ?? "" ))
         print( self.venture.count)
+        noOfMealTxt.text="\(data.noOfMeals ?? 0)"
         SVProgressHUD.dismiss()
         venturesTableview.reloadData()
 
@@ -253,5 +262,28 @@ extension ProfileVC{
 
         }
         
+    }
+    
+    func DataAvailability()  {
+        if userList == "venture" {
+            if  venture.count == 0 {
+                emptyView.isHidden = false
+            } else{
+                emptyView.isHidden = true
+            }
+        }else if userList == "volunteerRequest"{
+            if  volunteerRequest.count == 0 {
+                emptyView.isHidden = false
+            } else{
+                emptyView.isHidden = true
+            }
+        }else{
+            if  ministryIdea.count == 0 {
+                emptyView.isHidden = false
+            } else{
+                emptyView.isHidden = true
+            }
+        }
+     
     }
 }

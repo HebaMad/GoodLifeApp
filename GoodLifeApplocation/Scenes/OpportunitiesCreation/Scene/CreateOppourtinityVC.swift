@@ -205,6 +205,7 @@ extension CreateOppourtinityVC{
         descriptionTxt.text=""
         phoneNumberTxt.text = ""
         emailTxt.text = ""
+        representativeTxt.text=""
         ratingView.rating = 0
     }
 }
