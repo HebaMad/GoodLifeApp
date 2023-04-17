@@ -17,6 +17,7 @@ class CreateOppourtinityVC: UIViewController{
     @IBOutlet weak var nameTxt: UITextField!
     @IBOutlet weak var descriptionTxt: UITextView!
     
+    @IBOutlet weak var representativeTxt: UITextField!
     @IBOutlet weak var phoneNumberTxt: BottomBorderTextField!
     @IBOutlet weak var stateTxt: UITextField!
     @IBOutlet weak var ratingView: RatingControl!
@@ -45,14 +46,14 @@ class CreateOppourtinityVC: UIViewController{
             let title = try TitleTxt.validatedText(validationType: .requiredField(field: "Title required"))
             let state = try stateTxt.validatedText(validationType: .requiredField(field: "State required"))
             let city = try cityTxt.validatedText(validationType: .requiredField(field: "City required"))
-            
+            let representative = try representativeTxt.validatedText(validationType: .requiredField(field: "representative required"))
             if  descriptionTxt.text != "" {
                 
                 if ratingView.rating != 0 {
                     
                     if tagSelection.count != 0 {
                         
-                        presenter.createOpportunities(title:title, city: city, state: state, description: descriptionTxt.text!, name: name, tags: tagSelection, rating: "\(ratingView.rating)", email: emailTxt.text ?? "", phone:phoneNumberTxt.text ?? "" )
+                        presenter.createOpportunities(title:title, city: city, state: state, description: descriptionTxt.text!, name: name, tags: tagSelection, rating: "\(ratingView.rating)", email: emailTxt.text ?? "", phone:phoneNumberTxt.text ?? "", representative: representative )
                         presenter.delegate=self
                         
                     }else{
@@ -130,8 +131,6 @@ extension CreateOppourtinityVC{
     }
     
 }
-
-
 
 //MARK: - confirm to Storyboarded protocol
 
@@ -253,5 +252,5 @@ extension CreateOppourtinityVC:MainDelegate{
     func getStandardCategoriesFiltering(categories: MainHomeCategories) { }
     
     func getsubCategoriesFiltering(categories: SubHomeCategories) { }
-
+    
 }

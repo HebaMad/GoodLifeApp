@@ -21,6 +21,7 @@ class GeneralOpportunitiesCreation: UIViewController {
     @IBOutlet weak var categoriesTxt: UITextField!
     @IBOutlet weak var categoriesBtn: UIButton!
     
+    @IBOutlet weak var financialModelTxt: UITextField!
     //MARK: - Properties
     
     let dropdown = DropDown()
@@ -33,7 +34,7 @@ class GeneralOpportunitiesCreation: UIViewController {
     var categories:[String]=[]
     var categoriesSelected:[String]=[]
     var allCategories = ""
-    
+    var financialModelData:[String]=[]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +50,14 @@ class GeneralOpportunitiesCreation: UIViewController {
         
     }
     
+    @IBAction func addMoreFinancialModel(_ sender: Any) {
+        if financialModelTxt.text != ""{
+            financialModelData.append(financialModelTxt.text!)
+            financialModelTxt.text=""
+        }else{
+            Alert.showErrorAlert(message: "Add your Financial Model ")
+        }
+    }
     
 
     

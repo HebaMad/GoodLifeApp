@@ -15,7 +15,7 @@ protocol MainNetworkable:Networkable  {
     func homescreen(completion: @escaping (Result<BaseResponse<MainScreenData>, Error>)-> ())
     func deleteOpportunities(opportunity_id:String,completion: @escaping (Result<BaseResponse<Empty>, Error>)-> ())
     func listOpportunities(search:String,completion: @escaping (Result<BaseResponse<ListOpportunities>, Error>)-> ())
-    func createOpportunties(title:String,city:String,state:String,description:String,name:String,tags:[String],rating:String,email:String,phone:String,completion: @escaping (Result<BaseResponse<opportunitiesData>, Error>)-> ())
+    func createOpportunties(title:String,city:String,state:String,description:String,name:String,tags:[String],rating:String,email:String,phone:String,representative:String,completion: @escaping (Result<BaseResponse<opportunitiesData>, Error>)-> ())
     func mapScreenData(fundTypeId:String,mainCategoryId:String,subCategoryId:String,interest:String,completion:@escaping (Result<BaseResponse<ExploreMap>, Error>)-> ())
     
 }
@@ -49,8 +49,8 @@ class MainManager:MainNetworkable {
     func subCategory(completion: @escaping (Result<BaseResponse<SubHomeCategories>, Error>) -> ()) {
         request(target: .getNeedSubCategory, completion: completion)
     }
-    func createOpportunties(title: String, city: String, state: String, description: String, name: String, tags: [String], rating: String, email: String, phone: String, completion: @escaping (Result<BaseResponse<opportunitiesData>, Error>) -> ()) {
-        request(target: .createOpportunties(title: title, city: city, state: state, description: description, name: name, tags: tags, rating: rating, email: email, phone: phone), completion: completion)
+    func createOpportunties(title: String, city: String, state: String, description: String, name: String, tags: [String], rating: String, email: String, phone: String,representative:String, completion: @escaping (Result<BaseResponse<opportunitiesData>, Error>) -> ()) {
+        request(target: .createOpportunties(title: title, city: city, state: state, description: description, name: name, tags: tags, rating: rating, email: email, phone: phone,representative:representative), completion: completion)
     }
  
     func mapScreenData(fundTypeId: String, mainCategoryId: String, subCategoryId: String, interest: String, completion: @escaping (Result<BaseResponse<ExploreMap>, Error>) -> ()) {

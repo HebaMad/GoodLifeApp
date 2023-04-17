@@ -14,7 +14,7 @@ enum MainApiTarget:TargetType{
     case listOpportunities(search:String)
     case homescreen
     case deleteOpportunities(opportunity_id:String)
-    case createOpportunties(title:String,city:String,state:String,description:String,name:String,tags:[String],rating:String,email:String,phone:String)
+    case createOpportunties(title:String,city:String,state:String,description:String,name:String,tags:[String],rating:String,email:String,phone:String,representative:String)
     case mapScreenData(fundTypeId:String,mainCategoryId:String,subCategoryId:String,interest:String)
     
     var baseURL: URL {
@@ -85,8 +85,8 @@ enum MainApiTarget:TargetType{
     var param: [String : Any]{
         
         switch self {
-        case .createOpportunties(let title,let city,let state,let description,let name,let tags,let rating, let email,let phone):
-            return ["title" :title,"city":city,"state":state,"description":description,"name":name,"tags":tags,"rating":rating,"email":email,"phone":phone ]
+        case .createOpportunties(let title,let city,let state,let description,let name,let tags,let rating, let email,let phone,let representative):
+            return ["title" :title,"city":city,"state":state,"description":description,"name":name,"tags":tags,"rating":rating,"email":email,"phone":phone,"representative":representative ]
             
         case .deleteOpportunities(let opportunity_id):
             return ["opportunity_id" :opportunity_id ]

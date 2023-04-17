@@ -29,13 +29,14 @@ class choosingMinistryNeedsVC: UIViewController {
     
     var interest = 0
     var needTypeID = 0
-    let presenter = HomePresenter()
+    let presenter = MainPresenter()
     var oppourtinity:[opportunitiesData] = []
     var model:[SubscriptionCollectionViewCell.ViewModel]?
     var onFilterDissmissed : OnFilterDissmissed?
     var categoryName=""
     var generalFilteringId=0
     var specificFilteringId=0
+
     var specificPresenter=MainPresenter()
     //MARK: - Life cycle
     
@@ -55,9 +56,9 @@ class choosingMinistryNeedsVC: UIViewController {
     }
     
     @objc func ministrySubscriptionDetails( _ sender:UIButton){
-        print(oppourtinity[sender.tag].id ?? 0)
-        presenter.oppourtinityDetails(opportunityID: oppourtinity[sender.tag].id ?? 0)
-        presenter.delegate=self
+//        print(oppourtinity[sender.tag].id ?? 0)
+//        presenter.oppourtinityDetails(opportunityID: oppourtinity[sender.tag].id ?? 0)
+//        presenter.delegate=self
         
         
     }}
@@ -93,7 +94,7 @@ private extension choosingMinistryNeedsVC {
             
             recommendationView.isHidden = false
             interest = 3
-//            presenter.getSmartRecommendation(interestId: interest, needTypeId: needTypeID)
+            presenter.mapScreenData(fundTypeId: "\(needTypeID)", mainCategoryId: "\(generalFilteringId)", subCategoryId: "\(specificFilteringId)", interest: "\(interest)")
             presenter.delegate = self
             sender.tintColor = sender.backgroundColor
             
@@ -109,7 +110,7 @@ private extension choosingMinistryNeedsVC {
             recommendationView.isHidden = false
             interest = 2
             print( UserDefaults.standard.integer(forKey: "id"))
-//            presenter.getSmartRecommendation(interestId: interest, needTypeId: needTypeID)
+            presenter.mapScreenData(fundTypeId: "\(needTypeID)", mainCategoryId: "\(generalFilteringId)", subCategoryId: "\(specificFilteringId)", interest: "\(interest)")
             presenter.delegate = self
             sender.tintColor = sender.backgroundColor
             
@@ -124,7 +125,7 @@ private extension choosingMinistryNeedsVC {
             
             recommendationView.isHidden = false
             interest = 1
-//            presenter.getSmartRecommendation(interestId: interest, needTypeId: UserDefaults.standard.integer(forKey: "id"))
+            presenter.mapScreenData(fundTypeId: "\(needTypeID)", mainCategoryId: "\(generalFilteringId)", subCategoryId: "\(specificFilteringId)", interest: "\(interest)")
             presenter.delegate = self
             sender.tintColor = sender.backgroundColor
             
@@ -177,8 +178,8 @@ extension choosingMinistryNeedsVC:UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         print(oppourtinity[indexPath.row].id ?? 0)
-        presenter.oppourtinityDetails(opportunityID: oppourtinity[indexPath.row].id ?? 0)
-        UserDefaults.standard.set(oppourtinity[indexPath.row].id, forKey: "oppourtinity")
+//        presenter.oppourtinityDetails(opportunityID: oppourtinity[indexPath.row].id ?? 0)
+//        UserDefaults.standard.set(oppourtinity[indexPath.row].id, forKey: "oppourtinity")
         
         presenter.delegate=self
     }
@@ -197,35 +198,35 @@ extension choosingMinistryNeedsVC:UICollectionViewDelegateFlowLayout{
 
 //MARK: - conform to HomeDelegate protocol
 
-extension choosingMinistryNeedsVC:HomeDelegate{
-    
-    func showAlerts(title: String, message: String) {}
-    func getCategories(categories: Home) {}
-    func getStandardCategoriesFiltering(categories: MainHomeCategories) {}
-    func getsubCategoriesFiltering(categories: SubHomeCategories) {}
-    func getCategoriesFiltered(categories: Home) {}
-    func getMainScreenData(data: MainScreenData) {}
-    
-    func getOppourtinityDetails(categories: OppourtinityDetails) {
-        let data =  try! JSONEncoder().encode(categories)
-        
-        UserDefaults.standard.set(data, forKey:"oppourtinityID")
-        
-        self.dismiss(animated: true) {
-            if let _delegate = self.onFilterDissmissed{
-                print(categories)
-//                _delegate.filteredData(data:categories)
-            }}
-    }
-    
-    func getOppourtinity(categories: [opportunitiesData]) {
-//        print(categories.items ?? [])
-        self.oppourtinity = categories
-        self.MinistrySubscriptionCollectionview.reloadData()
-        
-    }
-    
-}
+//extension choosingMinistryNeedsVC:HomeDelegate{
+//
+//    func showAlerts(title: String, message: String) {}
+//    func getCategories(categories: Home) {}
+//    func getStandardCategoriesFiltering(categories: MainHomeCategories) {}
+//    func getsubCategoriesFiltering(categories: SubHomeCategories) {}
+//    func getCategoriesFiltered(categories: Home) {}
+//    func getMainScreenData(data: MainScreenData) {}
+//
+//    func getOppourtinityDetails(categories: OppourtinityDetails) {
+//        let data =  try! JSONEncoder().encode(categories)
+//
+//        UserDefaults.standard.set(data, forKey:"oppourtinityID")
+//
+//        self.dismiss(animated: true) {
+//            if let _delegate = self.onFilterDissmissed{
+//                print(categories)
+////                _delegate.filteredData(data:categories)
+//            }}
+//    }
+//
+//    func getOppourtinity(categories: [opportunitiesData]) {
+////        print(categories.items ?? [])
+//        self.oppourtinity = categories
+//        self.MinistrySubscriptionCollectionview.reloadData()
+//
+//    }
+//
+//}
 
 extension choosingMinistryNeedsVC:DataFiltered{
     
@@ -237,10 +238,27 @@ extension choosingMinistryNeedsVC:DataFiltered{
 }
 
 extension choosingMinistryNeedsVC:MainDelegate{
+    func showAlerts(title: String, message: String) {
+        
+    }
+    
+    func getMainScreenData(data: MainScreenData) {
+        
+    }
+    
+    func getStandardCategoriesFiltering(categories: MainHomeCategories) {
+        
+    }
+    
+    func getsubCategoriesFiltering(categories: SubHomeCategories) {
+        
+    }
+    
     func getOpportunitiesData(data: ListOpportunities) {}
     
     func getExploreMapData(data: ExploreMap) {
         oppourtinity=data.opportunities ?? []
+        MinistrySubscriptionCollectionview.reloadData()
         let data =  try! JSONEncoder().encode(data.opportunities)
         
         UserDefaults.standard.set(data, forKey:"oppourtinityID")

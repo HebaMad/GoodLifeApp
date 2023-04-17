@@ -135,8 +135,8 @@ class MainPresenter:NSObject{
         }
     }
     
-    func createOpportunities(title: String, city: String, state: String, description: String, name:String,tags: [String], rating: String, email: String, phone: String){
-        MainManager.shared.createOpportunties(title: title, city: city, state: state, description: description, name: name, tags: tags, rating: rating, email: email, phone: phone) { Response in
+    func createOpportunities(title: String, city: String, state: String, description: String, name:String,tags: [String], rating: String, email: String, phone: String,representative:String){
+        MainManager.shared.createOpportunties(title: title, city: city, state: state, description: description, name: name, tags: tags, rating: rating, email: email, phone: phone,representative:representative) { Response in
             
             switch Response{
                 
