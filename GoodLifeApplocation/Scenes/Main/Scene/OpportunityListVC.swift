@@ -58,7 +58,7 @@ extension OpportunityListVC{
     func DataAvailability()  {
         if  opportunities.count == 0 {
             emptyView.isHidden = false
-        } else{
+        }else{
             emptyView.isHidden = true
         }
     }

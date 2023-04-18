@@ -157,6 +157,7 @@ extension FavouriteHobbiesVC:UICollectionViewDataSource,UICollectionViewDelegate
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.headerIdentifier, for: indexPath) as! HeaderCollectionReusableView
         header.setup(sections[indexPath.section].title)
         header.viewAllButton.isHidden = true
+        header.editBtn.isHidden = true
         header.headerTitleLabel.textAlignment = .left
         header.headerTitleLabel.textColor = .white
         header.headerTitleLabel.font = UIFont.boldSystemFont(ofSize: 24.0)
