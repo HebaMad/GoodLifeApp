@@ -1811,22 +1811,22 @@ Night</string>
                                                 <rect key="frame" x="0.0" y="671.5" width="374" height="110"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgQ-Wo-lgK">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="27"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="21.5"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How would you rate this opportunity?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cg-yZ-jr5">
-                                                        <rect key="frame" x="0.0" y="37" width="374" height="17"/>
+                                                        <rect key="frame" x="0.0" y="31.5" width="374" height="17"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zhh-8p-m0I" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="64" width="374" height="46"/>
+                                                        <rect key="frame" x="0.0" y="58.5" width="374" height="51.5"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OW1-ck-r5s" customClass="RatingControl" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                                                <rect key="frame" x="4" y="4" width="366" height="38"/>
+                                                                <rect key="frame" x="4" y="4" width="366" height="43.5"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <color key="tintColor" name="review star"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -3180,6 +3180,7 @@ Night</string>
                     <navigationItem key="navigationItem" id="eHX-IR-fqG"/>
                     <connections>
                         <outlet property="accountDetails" destination="B4P-94-gUE" id="Y2r-1a-S23"/>
+                        <outlet property="badgeIcon" destination="rpt-aF-Lyj" id="vR0-6j-pH7"/>
                         <outlet property="badgeTxt" destination="15B-a7-ES3" id="HHP-GR-lX6"/>
                         <outlet property="emptyView" destination="Q2E-g3-Qax" id="eaA-IG-30S"/>
                         <outlet property="ministryIdeaBtn" destination="hwe-3k-jJf" id="t45-y0-hxS"/>
@@ -3592,13 +3593,13 @@ Night</string>
             <size key="intrinsicContentSize" width="22" height="22"/>
         </designable>
         <designable name="umm-WU-gla">
-            <size key="intrinsicContentSize" width="106" height="19.5"/>
+            <size key="intrinsicContentSize" width="142.5" height="34"/>
         </designable>
         <designable name="ytq-pp-ACn">
             <size key="intrinsicContentSize" width="22.5" height="21.5"/>
         </designable>
         <designable name="z2r-d2-GAm">
-            <size key="intrinsicContentSize" width="134.5" height="19.5"/>
+            <size key="intrinsicContentSize" width="135" height="34"/>
         </designable>
     </designables>
     <resources>

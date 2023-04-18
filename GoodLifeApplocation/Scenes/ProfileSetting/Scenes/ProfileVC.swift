@@ -27,6 +27,7 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var ministryIdeaBtn: UIButton!
     
     @IBOutlet weak var noOfMealTxt: UILabel!
+    @IBOutlet weak var badgeIcon: UIImageView!
     @IBOutlet weak var badgeTxt: UILabel!
     
     @IBOutlet weak var emptyView: UIView!
@@ -238,6 +239,8 @@ extension ProfileVC:ProfileDelegate{
         self.ministryIdea = data.ministry_ideas ?? []
         self.volunteerRequest = data.volunteer_requests ?? []
         userImg.sd_setImage(with: URL(string:data.image_profile ?? "" ))
+        badgeIcon.sd_setImage(with: URL(string:data.badges_icons ?? "" ))
+        badgeTxt.text = data.badges ?? ""
         print( self.venture.count)
         noOfMealTxt.text="\(data.noOfMeals ?? 0)"
         SVProgressHUD.dismiss()

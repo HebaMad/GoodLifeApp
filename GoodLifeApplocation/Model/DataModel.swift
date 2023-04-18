@@ -182,6 +182,8 @@ struct userProfile: Decodable{
     let ministry_ideas:[MinistryIdea]?
     let volunteer_requests:[VolunteerRequests]?
     let noOfMeals:Int?
+    let badges_icons:String?
+    let badges:String?
 
 }
 
