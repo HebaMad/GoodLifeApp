@@ -11,6 +11,7 @@ class ProfileSettingVC: UIViewController {
     
     
     //MARK: - Outlet
+    
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var profileEditView: SettingNib!
     @IBOutlet weak var contactusView: SettingNib!

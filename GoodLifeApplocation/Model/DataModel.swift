@@ -39,25 +39,27 @@ struct mainType:Codable{
     
 }
 
-struct FundType:Decodable{
+struct FundType : Decodable{
     let fund_types:[mainType]?
 }
-struct MainHomeCategories:Decodable{
+struct MainHomeCategories : Decodable{
     let categories:[MainCategories]?
 }
-struct SubHomeCategories:Decodable{
+struct SubHomeCategories : Decodable{
     let categories:[MainCategories]?
 
 }
 
-struct RecommendedChannel:Decodable{
-    let channels:[String]?
+struct RecommendedChannel : Decodable {
+    
+    let top_advertising_platforms:[String]?
+    let social_channels:[String]?
+
 }
 
 
 struct Oppourtinity:Decodable{
     let items :[OppourtinityDetails]?
-    
 }
 
 struct OppourtinityDetails : Codable {
@@ -91,6 +93,7 @@ struct OppourtinityDetails : Codable {
 
 
 struct GeneralOppourtinity:Codable{
+    
     let type:String?
     let title:String?
     let footer_title:String?
@@ -100,6 +103,7 @@ struct GeneralOppourtinity:Codable{
 
 }
 struct Graph: Codable {
+    
     let name:String?
     let percent:String?
 }

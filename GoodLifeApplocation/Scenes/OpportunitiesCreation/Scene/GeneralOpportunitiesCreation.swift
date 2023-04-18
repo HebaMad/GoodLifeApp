@@ -9,6 +9,7 @@ import UIKit
 import DropDown
 class GeneralOpportunitiesCreation: UIViewController {
     
+    @IBOutlet weak var amountraiseTxt: UITextField!
     @IBOutlet weak var timeCommitmentTxt: UITextField!
     @IBOutlet weak var timeCommitmentBtn: UIButton!
     
@@ -136,7 +137,6 @@ class GeneralOpportunitiesCreation: UIViewController {
         
         self.categoryActionDropdown.multiSelectionAction = { [self] (index: [Int], item: [String]) in
             print("Selected item: \(item) at index: \(index)")
-            allCategories=""
             self.categoriesTxt.textColor = UIColor.black
             categoriesSelected = item
             let selectedCategories = categoriesSelected.joined(separator: ",")

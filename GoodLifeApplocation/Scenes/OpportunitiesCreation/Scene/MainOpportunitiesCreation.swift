@@ -8,21 +8,31 @@
 import UIKit
 
 class MainOpportunitiesCreation: UIViewController {
-
+    
     @IBOutlet weak var stepperView: StepIndicatorView!
     
     @IBOutlet weak var containerview: UIView!
     
+    var financialModelData:[String]=[]
+    var levelOfDifficulty=""
+    var timeOfCommitment=""
+    var amountOfTechnology=""
+    var amountRaise = ""
+    var avgAnnualRevenu = ""
+    var avgMonthlyCost = ""
+    var opportunitiesUrl = ""
+    var competitorsUrl:[String]=[]
     
+    var categoriesSelected:[String]=[]
     var stepNumber = 0
     var vc:UIViewController?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         stepNumber = 0
         checkstepNumber()
-
+        
     }
     @IBAction func continueBtn(_ sender: Any) {
         
@@ -34,7 +44,7 @@ class MainOpportunitiesCreation: UIViewController {
     @IBAction func backBtn(_ sender: Any){
         navigationController?.popViewController(animated: true)
     }
-
+    
 }
 
 extension MainOpportunitiesCreation{
@@ -57,31 +67,93 @@ extension MainOpportunitiesCreation{
             
             
         case 1:
-            self.stepNumber=2
             
-            self.containerview.subviews.first?.removeFromSuperview()
+            financialModelData = (vc as! GeneralOpportunitiesCreation).financialModelData
+            levelOfDifficulty =  (vc as! GeneralOpportunitiesCreation).LevelOfDifficultyTxt.text ?? ""
+            timeOfCommitment =   (vc as! GeneralOpportunitiesCreation).timeCommitmentTxt.text ?? ""
+            amountOfTechnology = (vc as! GeneralOpportunitiesCreation).AmountOfTechnologyTxt.text ?? ""
+            categoriesSelected = (vc as! GeneralOpportunitiesCreation).categoriesSelected
+            amountRaise = (vc as! GeneralOpportunitiesCreation).amountraiseTxt.text ?? ""
             
-            self.stepperView.currentStep = 1
-            vc=FinancialOpportunitiesCreation()
+            if categoriesSelected.count != 0 {
+                
+                if financialModelData.count != 0 {
+                    
+                    if timeOfCommitment != "" {
+                        
+                        if levelOfDifficulty != "" {
+                            
+                            if amountOfTechnology != "" {
+                                
+                                if amountRaise != "" {
+                                    self.stepNumber=2
+                                    
+                                    self.containerview.subviews.first?.removeFromSuperview()
+                                    
+                                    self.stepperView.currentStep = 1
+                                    vc=FinancialOpportunitiesCreation()
+                                    
+                                    self.addChild(vc!)
+                                    self.containerview.addSubview(vc!.view)
+                                    vc!.didMove(toParent: self)
+                                    vc!.view.frame = self.containerview.bounds
+                                }else{
+                                    showSnackBar(message: "Add your amount raise")
+                                    
+                                }
+                            }else{
+                                showSnackBar(message: "Select your amount of technology")
+                            }
+                            
+                        }else{
+                            showSnackBar(message: "Select your level of Difficuilty")
+                        }
+                        
+                    }else{
+                        showSnackBar(message: "Select your time of commitment")
+                        
+                    }
+                }else{
+                    showSnackBar(message: "Add your financial Model")
+                    
+                }
+            }else{
+                showSnackBar(message: "Select your Categories")
+            }
             
-            self.addChild(vc!)
-            self.containerview.addSubview(vc!.view)
-            vc!.didMove(toParent: self)
-            vc!.view.frame = self.containerview.bounds
+            
+            
+            
             
             
         case 2:
-            self.stepNumber=3
+            avgAnnualRevenu = (vc as! FinancialOpportunitiesCreation).AverageAnnualRevenuTxt.text ?? ""
+            avgMonthlyCost = (vc as! FinancialOpportunitiesCreation).avaregeMonthlyCost.text ?? ""
             
-            self.containerview.subviews.first?.removeFromSuperview()
+            if avgAnnualRevenu != "" && avgAnnualRevenu != "$" {
+                if avgMonthlyCost != "" && avgMonthlyCost != "$" {
+                    
+                    
+                    self.stepNumber=3
+                    
+                    self.containerview.subviews.first?.removeFromSuperview()
+                    
+                    self.stepperView.currentStep = 2
+                    vc=MarketingOpportunitiesCreation()
+                    
+                    self.addChild(vc!)
+                    self.containerview.addSubview(vc!.view)
+                    vc!.didMove(toParent: self)
+                    vc!.view.frame = self.containerview.bounds
+                    
+                }else{
+                    showSnackBar(message: "Add your Avarege monthly cost")
+                    
+                }
+            }else{
+                showSnackBar(message: "Add your Avarege Annual Revenu")
+            }
             
-            self.stepperView.currentStep = 2
-            vc=MarketingOpportunitiesCreation()
-            
-            self.addChild(vc!)
-            self.containerview.addSubview(vc!.view)
-            vc!.didMove(toParent: self)
-            vc!.view.frame = self.containerview.bounds
             
         case 3:
             self.stepNumber=4
@@ -109,17 +181,35 @@ extension MainOpportunitiesCreation{
             vc!.didMove(toParent: self)
             vc!.view.frame = self.containerview.bounds
         case 5:
-            self.stepNumber=6
+            opportunitiesUrl = (vc as! DigitalOpportunitiesCreation).opportunitiesUrl.text ?? ""
+            competitorsUrl = (vc as! DigitalOpportunitiesCreation).competitorsUrl
             
-            self.containerview.subviews.first?.removeFromSuperview()
+            if opportunitiesUrl != "" {
+                if competitorsUrl.count != 0 {
+                    
+                    self.stepNumber=6
+                    
+                    self.containerview.subviews.first?.removeFromSuperview()
+                    
+                    self.stepperView.currentStep = 5
+                    vc=BusinessPlanOpportunitiesCreation()
+                    
+                    self.addChild(vc!)
+                    self.containerview.addSubview(vc!.view)
+                    vc!.didMove(toParent: self)
+                    vc!.view.frame = self.containerview.bounds
+                    
+                    
+                }else{
+                    showSnackBar(message: "Add your Competitors Url")
+                    
+                }
+                
+            }else{
+                showSnackBar(message: "Add your Avarege Monthly cost")
+                
+            }
             
-            self.stepperView.currentStep = 5
-            vc=BusinessPlanOpportunitiesCreation()
-            
-            self.addChild(vc!)
-            self.containerview.addSubview(vc!.view)
-            vc!.didMove(toParent: self)
-            vc!.view.frame = self.containerview.bounds
             
         default:
             print("test")

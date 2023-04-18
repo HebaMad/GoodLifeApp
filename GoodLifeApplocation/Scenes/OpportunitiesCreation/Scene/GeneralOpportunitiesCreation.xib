@@ -21,6 +21,7 @@
                 <outlet property="AmountOfTechnologyTxt" destination="7f8-aP-iD9" id="mvh-gN-DgL"/>
                 <outlet property="LevelOfDifficultyBtn" destination="JJi-SF-a5a" id="cpf-sc-56W"/>
                 <outlet property="LevelOfDifficultyTxt" destination="h2c-yK-izK" id="DBa-TA-h5D"/>
+                <outlet property="amountraiseTxt" destination="bH0-BV-Rga" id="Ioy-xp-jhh"/>
                 <outlet property="categoriesBtn" destination="xJy-pj-VQQ" id="QCg-Dd-E5s"/>
                 <outlet property="categoriesTxt" destination="iMd-js-MF7" id="4j3-zN-cL9"/>
                 <outlet property="financialModelTxt" destination="TPM-Sm-yoQ" id="wDN-2m-ZWz"/>
@@ -38,7 +39,7 @@
                     <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="70m-AI-64Y">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="551.66666666666663"/>
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="650.66666666666663"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="General Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vw0-JG-ZTa">
                                     <rect key="frame" x="12" y="8.0000000000000018" width="369" height="28.666666666666671"/>
@@ -131,8 +132,8 @@
                                         </textField>
                                     </subviews>
                                 </stackView>
-                                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BUT-Xw-Vuk">
-                                    <rect key="frame" x="12" y="214.66666666666669" width="369" height="91"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BUT-Xw-Vuk">
+                                    <rect key="frame" x="12" y="218.66666666666669" width="369" height="91"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Commitment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9s-Fr-Yhe">
                                             <rect key="frame" x="0.0" y="0.0" width="369" height="33"/>
@@ -198,7 +199,7 @@
                                     </constraints>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HRU-NL-iTF">
-                                    <rect key="frame" x="12" y="218.66666666666669" width="369" height="91"/>
+                                    <rect key="frame" x="12" y="317.66666666666669" width="369" height="91"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level of difficulty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t1p-Kf-Eso">
                                             <rect key="frame" x="0.0" y="0.0" width="369" height="33"/>
@@ -264,7 +265,7 @@
                                     </constraints>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rG8-Nf-z1a">
-                                    <rect key="frame" x="12" y="317.66666666666669" width="369" height="91"/>
+                                    <rect key="frame" x="12" y="416.66666666666669" width="369" height="91"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount of technology" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83S-AZ-hS4">
                                             <rect key="frame" x="0.0" y="0.0" width="369" height="33"/>
@@ -273,7 +274,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S4l-Vb-hFi" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="43" width="369" height="48"/>
+                                            <rect key="frame" x="0.0" y="42.999999999999943" width="369" height="48"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="select your range of amount" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7f8-aP-iD9">
                                                     <rect key="frame" x="0.0" y="0.0" width="369" height="48"/>
@@ -330,7 +331,7 @@
                                     </constraints>
                                 </stackView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WGc-tc-dEy" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                    <rect key="frame" x="12" y="416.66666666666669" width="369" height="120.00000000000006"/>
+                                    <rect key="frame" x="12" y="515.66666666666663" width="369" height="120"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Puw-mg-DeE">
                                             <rect key="frame" x="1" y="1" width="367" height="118"/>
@@ -349,7 +350,7 @@
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HsU-vx-4KW">
-                                                    <rect key="frame" x="4" y="73.999999999999943" width="359" height="40"/>
+                                                    <rect key="frame" x="4" y="74" width="359" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="rcU-HG-Vpy"/>
                                                     </constraints>

@@ -74,7 +74,7 @@ class UIViewDesignable: UIView {
         let maskLayer = CAShapeLayer()
         maskLayer.path = path.cgPath
         self.layer.mask = maskLayer
-    } 
+    }
     override public class var layerClass: AnyClass { CAGradientLayer.self }
     
     var gradientLayer: CAGradientLayer { layer as! CAGradientLayer }

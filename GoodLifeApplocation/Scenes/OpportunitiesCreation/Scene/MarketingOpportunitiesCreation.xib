@@ -19,6 +19,10 @@
                 <outlet property="addMarket" destination="fgd-td-0yq" id="7C2-xm-Nuu"/>
                 <outlet property="marketName" destination="7ze-Vw-PEQ" id="8LI-SS-VJZ"/>
                 <outlet property="marketSize" destination="mc5-vF-VFO" id="3E1-Y4-Ohk"/>
+                <outlet property="socialChannelAction" destination="8RZ-Xo-Z9S" id="eX7-a7-DCm"/>
+                <outlet property="socialChannelTxt" destination="XdD-A0-Psl" id="plT-O6-SjO"/>
+                <outlet property="topAdvertisingAction" destination="QjT-9q-L8E" id="gEc-vT-mpg"/>
+                <outlet property="topAdvertisingTxt" destination="5X3-2X-jnc" id="p0m-BA-aAf"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -172,6 +176,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QjT-9q-L8E">
                                                     <rect key="frame" x="0.0" y="0.0" width="369" height="45"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <connections>
+                                                        <action selector="topAdvertisingBtn:" destination="-1" eventType="touchUpInside" id="fIf-9U-N0b"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -241,6 +248,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8RZ-Xo-Z9S">
                                                     <rect key="frame" x="0.0" y="0.0" width="369" height="45"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <connections>
+                                                        <action selector="socialChannelBtn:" destination="-1" eventType="touchUpInside" id="gml-49-yNo"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
