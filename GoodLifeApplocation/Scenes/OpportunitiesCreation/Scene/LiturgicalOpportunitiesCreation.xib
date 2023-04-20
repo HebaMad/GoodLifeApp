@@ -20,6 +20,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LiturgicalOpportunitiesCreation" customModule="GoodLifeApplocation" customModuleProvider="target">
             <connections>
                 <outlet property="addMoreMarket" destination="mrM-z8-EhL" id="Zd5-Qa-hIh"/>
+                <outlet property="addMoreWays" destination="nes-j6-NIX" id="fro-HB-KHe"/>
                 <outlet property="commonWayValueTxt" destination="aVI-UT-j3e" id="7bA-aY-Wh0"/>
                 <outlet property="marketName" destination="KqI-4p-REu" id="zs5-Qx-uKU"/>
                 <outlet property="marketRate" destination="TnA-Dy-rVa" id="CoG-pp-nBm"/>
@@ -129,7 +130,7 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mrM-z8-EhL">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mrM-z8-EhL">
                                     <rect key="frame" x="12" y="226.66666666666669" width="369" height="30"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="Sju-ct-Jwe"/>
@@ -169,7 +170,7 @@
                                         <constraint firstAttribute="height" constant="68" id="Ad3-X8-7fO"/>
                                     </constraints>
                                 </stackView>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nes-j6-NIX">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nes-j6-NIX">
                                     <rect key="frame" x="12" y="355.66666666666669" width="369" height="30"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="MGE-bL-SeV"/>

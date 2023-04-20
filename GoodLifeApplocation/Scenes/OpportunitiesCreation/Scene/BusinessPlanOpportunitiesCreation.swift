@@ -8,7 +8,7 @@
 import UIKit
 
 class BusinessPlanOpportunitiesCreation: UIViewController {
-
+    
     @IBOutlet weak var planNameTxt: UITextField!
     @IBOutlet weak var marketSize: UISlider!
     @IBOutlet weak var marketRate: UILabel!
@@ -22,39 +22,36 @@ class BusinessPlanOpportunitiesCreation: UIViewController {
     
     
     var placeholder = " Add your description please ... "
-    
-
+    var businessplan:[String:String]=[:]
+    var index = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         bindButtons()
         txtviewCustomization()
     }
-
-
-
-
+    
+    
+    
+    
 }
 extension BusinessPlanOpportunitiesCreation {
     
     func bindButtons(){
         
-        addMoreMarket.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
         addNewPlan.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
         
     }
     
     @objc func buttonWasTapped(_ sender:UIButton){
         switch sender{
-        case addMoreMarket:
-            print("")
-        case addNewPlan:
-            print("")
-
             
+        case addNewPlan:
+            makeParameter()
+            clearData()
         default:
             print("")
-
+            
         }
     }
     
@@ -106,6 +103,28 @@ extension BusinessPlanOpportunitiesCreation:UITextViewDelegate{
     
     func textViewDidChange(_ textView: UITextView) {
         placeholder = textView.text
+    }
+}
+
+
+extension BusinessPlanOpportunitiesCreation {
+    
+    func makeParameter(){
+        
+        businessplan["business_plans[\(index)][name]"] = planNameTxt.text
+        businessplan["business_plans[\(index)][url]"] = planUrl.text
+        businessplan["business_plans[\(index)][market_size]"] = "\(marketSize.value)"
+        businessplan["business_plans[\(index)][pros]"] = planPros.text
+        businessplan["business_plans[\(index)][cons]"] = planCons.text
+        index += 1
+    }
+    
+    func clearData(){
+        planNameTxt.text=""
+        planUrl.text=""
+        planCons.text=""
+        planPros.text=""
+        marketSize.value=0.0
     }
     
 }

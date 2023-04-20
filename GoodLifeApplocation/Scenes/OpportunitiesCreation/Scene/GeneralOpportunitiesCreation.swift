@@ -22,6 +22,7 @@ class GeneralOpportunitiesCreation: UIViewController {
     @IBOutlet weak var categoriesTxt: UITextField!
     @IBOutlet weak var categoriesBtn: UIButton!
     
+    @IBOutlet weak var intrestSelection: UISegmentedControl!
     @IBOutlet weak var financialModelTxt: UITextField!
     //MARK: - Properties
     

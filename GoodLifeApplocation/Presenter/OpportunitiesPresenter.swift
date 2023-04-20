@@ -58,4 +58,25 @@ class OpportunitiesPresenter:NSObject{
             }
         }
     }
+    
+    
+    func completeOpportunity(interest:String,id:Int,financialModel:[String],workType:String,levelOfDifficulty:String,AmountOfTechnology:String,amountRasise:String,opportuntiesUrl:String,competitorsUrl:[String],commomWays:[String],topAdvertisingChannel:[String],socialChannels:[String],avgAnnualRevenu:String,avgMonthlyCost:String,categories:[String],marketGraph:[String:String]=[:]){
+        OpportuntiesManager.shared.completeOpportunities(interest:interest,id: id, financialModel: financialModel, workType: workType, levelOfDifficulty: levelOfDifficulty, AmountOfTechnology: AmountOfTechnology, amountRasise: amountRasise, opportuntiesUrl: opportuntiesUrl, competitorsUrl: competitorsUrl, commomWays: commomWays, topAdvertisingChannel: topAdvertisingChannel, socialChannels: socialChannels, avgAnnualRevenu: avgAnnualRevenu, avgMonthlyCost: avgMonthlyCost, categories: categories, marketGraph: marketGraph)  { Response in
+            switch Response{
+
+                
+            case let .success(response):
+                if response.status == true{
+
+                }else{
+                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
+                }
+                
+            case .failure(_):
+                
+                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
+            
+        }
+        }
+    }
 }

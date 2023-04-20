@@ -29,12 +29,27 @@ class MarketingOpportunitiesCreation: UIViewController {
 
     var socialChannelSelected:[String]=[]
     var topAdvertisingSelected:[String]=[]
+    
+    var marketGraph:[String:String]=[:]
+    var marketGraphName:[String]=[]
+    var marketGraphSize:[String]=[]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.getChannels()
         presenter.delegate=self
-        bindButtons()
+//        bindButtons()
+    }
+    
+
+    @IBAction func addMoreBtn(_ sender: Any) {
+        if marketName.text != "" && marketSize.value != 0.0{
+            marketGraphName.append(marketName.text!)
+            marketGraphSize.append("\(marketSize.value)")
+            makeParameter(key: marketGraphName, value: marketGraphSize)
+        }else{
+            showSnackBar(message: "Add your Market Size")
+        }
     }
     
     @IBAction func socialChannelBtn(_ sender: Any) {
@@ -99,11 +114,35 @@ extension MarketingOpportunitiesCreation {
         switch sender{
 
         case addMarket:
-            print("")
+            if marketName.text != "" && marketSize.value != 0.0{
+                marketGraphName.append(marketName.text!)
+                marketGraphSize.append("\(marketSize.value)")
+                cleardata()
+                makeParameter(key: marketGraphName, value: marketGraphSize)
+            }else{
+                showSnackBar(message: "Add your Market Size")
+            }
         default:
             print("")
 
         }
+    }
+}
+
+
+extension MarketingOpportunitiesCreation{
+    func makeParameter(key:[String],value:[String]){
+        marketGraph=[:]
+        for indx in 0 ..< key.count{
+            marketGraph["marketing_graphs[\(indx)][title]"]=key[indx]
+            marketGraph["marketing_graphs[\(indx)][percentage]"]=value[indx]
+
+        }
+    }
+    
+    func cleardata(){
+        marketSize.value=0.0
+        marketName.text=""
     }
 }
 

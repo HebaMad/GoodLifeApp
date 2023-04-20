@@ -63,9 +63,10 @@ extension OpportunityListVC{
         }
     }
     
-    @objc func completeButtonTapped(){
+    @objc func completeButtonTapped(_ sender:UIButton){
         
         let vc = MainOpportunitiesCreation()
+        vc.id=opportunities[sender.tag].id ?? 0
         navigationController?.pushViewController(vc, animated: true)
     }
 }

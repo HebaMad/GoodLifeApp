@@ -25,6 +25,7 @@
                 <outlet property="categoriesBtn" destination="xJy-pj-VQQ" id="QCg-Dd-E5s"/>
                 <outlet property="categoriesTxt" destination="iMd-js-MF7" id="4j3-zN-cL9"/>
                 <outlet property="financialModelTxt" destination="TPM-Sm-yoQ" id="wDN-2m-ZWz"/>
+                <outlet property="intrestSelection" destination="VvZ-rk-rz4" id="yVm-2Z-hGU"/>
                 <outlet property="timeCommitmentBtn" destination="FUB-cQ-kej" id="ecw-8n-s6z"/>
                 <outlet property="timeCommitmentTxt" destination="jhc-xv-4DW" id="fCZ-i7-OqL"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -39,7 +40,7 @@
                     <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="70m-AI-64Y">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="650.66666666666663"/>
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="749.66666666666663"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="General Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vw0-JG-ZTa">
                                     <rect key="frame" x="12" y="8.0000000000000018" width="369" height="28.666666666666671"/>
@@ -198,8 +199,35 @@
                                         <constraint firstAttribute="height" constant="91" id="w6E-G8-5CK"/>
                                     </constraints>
                                 </stackView>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HRU-NL-iTF">
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qFr-Ub-iAU">
                                     <rect key="frame" x="12" y="317.66666666666669" width="369" height="91"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oWL-Hh-t0F">
+                                            <rect key="frame" x="0.0" y="0.0" width="369" height="33"/>
+                                            <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="14"/>
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="VvZ-rk-rz4">
+                                            <rect key="frame" x="0.0" y="43" width="369" height="49"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="48" id="tTC-XE-0wO"/>
+                                            </constraints>
+                                            <segments>
+                                                <segment title="Movement&amp;Motion"/>
+                                                <segment title="Life"/>
+                                                <segment title="social commitment"/>
+                                            </segments>
+                                            <color key="selectedSegmentTintColor" name="BgColor"/>
+                                        </segmentedControl>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="91" id="oLc-CV-9Lo"/>
+                                    </constraints>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HRU-NL-iTF">
+                                    <rect key="frame" x="12" y="416.66666666666669" width="369" height="91"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level of difficulty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t1p-Kf-Eso">
                                             <rect key="frame" x="0.0" y="0.0" width="369" height="33"/>
@@ -208,7 +236,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mLv-xh-3lk" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="43" width="369" height="48"/>
+                                            <rect key="frame" x="0.0" y="42.999999999999943" width="369" height="48"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select level of difficulty" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h2c-yK-izK">
                                                     <rect key="frame" x="0.0" y="0.0" width="369" height="48"/>
@@ -265,7 +293,7 @@
                                     </constraints>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rG8-Nf-z1a">
-                                    <rect key="frame" x="12" y="416.66666666666669" width="369" height="91"/>
+                                    <rect key="frame" x="12" y="515.66666666666663" width="369" height="91"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount of technology" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83S-AZ-hS4">
                                             <rect key="frame" x="0.0" y="0.0" width="369" height="33"/>
@@ -274,7 +302,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S4l-Vb-hFi" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="42.999999999999943" width="369" height="48"/>
+                                            <rect key="frame" x="0.0" y="43" width="369" height="48"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="select your range of amount" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7f8-aP-iD9">
                                                     <rect key="frame" x="0.0" y="0.0" width="369" height="48"/>
@@ -331,7 +359,7 @@
                                     </constraints>
                                 </stackView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WGc-tc-dEy" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                    <rect key="frame" x="12" y="515.66666666666663" width="369" height="120"/>
+                                    <rect key="frame" x="12" y="614.66666666666663" width="369" height="120"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Puw-mg-DeE">
                                             <rect key="frame" x="1" y="1" width="367" height="118"/>
@@ -420,6 +448,9 @@
     </objects>
     <resources>
         <image name="chevron.down" catalog="system" width="128" height="70"/>
+        <namedColor name="BgColor">
+            <color red="0.59200000762939453" green="0.27799999713897705" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="TXT">
             <color red="0.37999999523162842" green="0.37999999523162842" blue="0.37999999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

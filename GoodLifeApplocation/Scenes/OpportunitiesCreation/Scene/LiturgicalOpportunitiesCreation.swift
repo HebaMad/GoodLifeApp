@@ -19,15 +19,15 @@ class LiturgicalOpportunitiesCreation: UIViewController {
     
     @IBOutlet weak var addMoreWays: UIButton!
     
-    @IBOutlet weak var nextBtn: UIButtonDesignable!
-    
+    var commomWaysWorship:[String]=[]
+    var marketGraph:[String:String]=[:]
+    var marketGraphName:[String]=[]
+    var marketGraphSize:[String]=[]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        bindButtons()
+        bindButtons()
     }
-
-
 
 
 }
@@ -37,18 +37,29 @@ extension LiturgicalOpportunitiesCreation {
         
         addMoreMarket.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
         addMoreWays.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
-        nextBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
         
     }
     
     @objc func buttonWasTapped(_ sender:UIButton){
         switch sender{
         case addMoreMarket:
-            print("")
+            if marketName.text != "" && marketSize.value != 0.0{
+                marketGraphName.append(marketName.text!)
+                marketGraphSize.append("\(marketSize.value)")
+                clearData()
+                makeParameter(key: marketGraphName, value: marketGraphSize)
+
+            }else{
+                showSnackBar(message: "Add your Market Size")
+            }
         case addMoreWays:
-            print("")
-        case nextBtn:
-            print("")
+            if commonWayValueTxt.text != ""{
+                commomWaysWorship.append(commonWayValueTxt.text!)
+                commonWayValueTxt.text=""
+            }else{
+                showSnackBar(message: "Add Common ways to worship ")
+            }
+
         default:
             print("")
 
@@ -56,4 +67,21 @@ extension LiturgicalOpportunitiesCreation {
     }
     
     
+}
+
+
+extension LiturgicalOpportunitiesCreation{
+        func makeParameter(key:[String],value:[String]) {
+            marketGraph=[:]
+            for indx in 0 ..< key.count{
+                marketGraph["liturgical_graphs[\(indx)][title]"]=key[indx]
+                marketGraph["liturgical_graphs[\(indx)][percentage]"]=value[indx]
+
+            }
+        }
+    
+    func clearData(){
+        marketName.text=""
+        marketSize.value=0.0
+    }
 }

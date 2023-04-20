@@ -20,7 +20,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BusinessPlanOpportunitiesCreation" customModule="GoodLifeApplocation" customModuleProvider="target">
             <connections>
-                <outlet property="addMoreMarket" destination="nhi-OF-WF7" id="K0a-Z3-bbP"/>
                 <outlet property="addNewPlan" destination="Eb9-wN-tTb" id="wXk-5p-VBF"/>
                 <outlet property="marketRate" destination="rcq-m7-ANq" id="zh8-zG-vWP"/>
                 <outlet property="marketSize" destination="fAH-5u-MQA" id="7v6-K2-V0C"/>
@@ -40,7 +39,7 @@
                     <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Bci-iy-7Pp">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="723.66666666666663"/>
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="672.66666666666663"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Business Plan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBR-fD-Vcl">
                                     <rect key="frame" x="12" y="8.0000000000000018" width="369" height="28.666666666666671"/>
@@ -125,34 +124,10 @@
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                             <real key="value" value="12"/>
                                         </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                            <color key="value" name="bg5"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                            <real key="value" value="0.5"/>
-                                        </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhi-OF-WF7">
-                                    <rect key="frame" x="12" y="226.66666666666669" width="369" height="30"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="30" id="qTC-ev-tS6"/>
-                                    </constraints>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="Add more +">
-                                        <fontDescription key="titleFontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
-                                        <color key="baseForegroundColor" name="backgroundColor"/>
-                                    </buttonConfiguration>
-                                </button>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QUq-Dl-dUT">
-                                    <rect key="frame" x="12" y="266.66666666666669" width="369" height="1"/>
-                                    <color key="backgroundColor" name="bg5"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="1" id="Su6-9a-bHu"/>
-                                    </constraints>
-                                </view>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cpJ-Ej-646">
-                                    <rect key="frame" x="12" y="277.66666666666669" width="369" height="68"/>
+                                    <rect key="frame" x="12" y="226.66666666666669" width="369" height="68"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your URL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYG-4o-ZLj">
                                             <rect key="frame" x="0.0" y="0.0" width="369" height="18"/>
@@ -195,7 +170,7 @@
                                     </constraints>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sPi-8m-njt">
-                                    <rect key="frame" x="12" y="355.66666666666669" width="369" height="155"/>
+                                    <rect key="frame" x="12" y="304.66666666666669" width="369" height="155"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plan pros" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bb1-mS-LsW">
                                             <rect key="frame" x="0.0" y="0.0" width="369" height="17"/>
@@ -216,7 +191,7 @@
                                     </constraints>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cdu-nC-b6E">
-                                    <rect key="frame" x="12" y="520.66666666666663" width="369" height="155"/>
+                                    <rect key="frame" x="12" y="469.66666666666663" width="369" height="155"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plan cons" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0sl-Sa-pqf">
                                             <rect key="frame" x="0.0" y="0.0" width="369" height="17"/>
@@ -236,8 +211,8 @@
                                         <constraint firstAttribute="height" constant="155" id="a7J-jr-pIO"/>
                                     </constraints>
                                 </stackView>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eb9-wN-tTb">
-                                    <rect key="frame" x="12" y="685.66666666666663" width="369" height="30"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eb9-wN-tTb">
+                                    <rect key="frame" x="12" y="634.66666666666663" width="369" height="30"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="0bE-bj-Pen"/>
                                     </constraints>

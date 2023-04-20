@@ -18,6 +18,8 @@ extension Networkable{
 
     func request<T: Decodable>(target: targetType, completion: @escaping (Result<T, Error>) -> ()) {
         provider.request(target) { result in
+            print(target.sampleData)
+
               switch result {
              case let .success(response):
                 if  response.statusCode == 401 {

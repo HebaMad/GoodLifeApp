@@ -22,11 +22,19 @@ class MainOpportunitiesCreation: UIViewController {
     var avgMonthlyCost = ""
     var opportunitiesUrl = ""
     var competitorsUrl:[String]=[]
-    
     var categoriesSelected:[String]=[]
+    var socialChannelSelected:[String]=[]
+    var topAdvertisingSelected:[String]=[]
+    var commomWaysWorship:[String]=[]
+    var litrugicalMarketGraph:[String:String]=[:]
+    var businessplan:[String:String]=[:]
+    var marketGraph:[String:String]=[:]
+    var id = 0
     var stepNumber = 0
     var vc:UIViewController?
-    
+    let presenter=OpportunitiesPresenter()
+    let prefixToRemove = "$"
+    var intrest = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -74,7 +82,10 @@ extension MainOpportunitiesCreation{
             amountOfTechnology = (vc as! GeneralOpportunitiesCreation).AmountOfTechnologyTxt.text ?? ""
             categoriesSelected = (vc as! GeneralOpportunitiesCreation).categoriesSelected
             amountRaise = (vc as! GeneralOpportunitiesCreation).amountraiseTxt.text ?? ""
-            
+            intrest=(vc as! GeneralOpportunitiesCreation).intrestSelection.selectedSegmentIndex+1
+            print(amountOfTechnology)
+            print(levelOfDifficulty)
+
             if categoriesSelected.count != 0 {
                 
                 if financialModelData.count != 0 {
@@ -86,6 +97,7 @@ extension MainOpportunitiesCreation{
                             if amountOfTechnology != "" {
                                 
                                 if amountRaise != "" {
+                                    
                                     self.stepNumber=2
                                     
                                     self.containerview.subviews.first?.removeFromSuperview()
@@ -97,6 +109,7 @@ extension MainOpportunitiesCreation{
                                     self.containerview.addSubview(vc!.view)
                                     vc!.didMove(toParent: self)
                                     vc!.view.frame = self.containerview.bounds
+                                    
                                 }else{
                                     showSnackBar(message: "Add your amount raise")
                                     
@@ -127,8 +140,8 @@ extension MainOpportunitiesCreation{
             
             
         case 2:
-            avgAnnualRevenu = (vc as! FinancialOpportunitiesCreation).AverageAnnualRevenuTxt.text ?? ""
-            avgMonthlyCost = (vc as! FinancialOpportunitiesCreation).avaregeMonthlyCost.text ?? ""
+            avgAnnualRevenu = (vc as! FinancialOpportunitiesCreation).AverageAnnualRevenuTxt.text ?? "".replacingOccurrences(of: prefixToRemove, with: "")
+            avgMonthlyCost = (vc as! FinancialOpportunitiesCreation).avaregeMonthlyCost.text ?? "".replacingOccurrences(of: prefixToRemove, with: "")
             
             if avgAnnualRevenu != "" && avgAnnualRevenu != "$" {
                 if avgMonthlyCost != "" && avgMonthlyCost != "$" {
@@ -156,30 +169,70 @@ extension MainOpportunitiesCreation{
             
             
         case 3:
-            self.stepNumber=4
             
-            self.containerview.subviews.first?.removeFromSuperview()
+            topAdvertisingSelected = (vc as! MarketingOpportunitiesCreation).topAdvertisingSelected
+            socialChannelSelected = (vc as! MarketingOpportunitiesCreation).socialChannelSelected
+            marketGraph=(vc as! MarketingOpportunitiesCreation).marketGraph
             
-            self.stepperView.currentStep = 3
-            vc=LiturgicalOpportunitiesCreation()
+            if !marketGraph.isEmpty {
+                
+                if topAdvertisingSelected.count != 0 {
+                    if socialChannelSelected.count != 0 {
+                        
+                        self.stepNumber=4
+                        self.containerview.subviews.first?.removeFromSuperview()
+                        self.stepperView.currentStep = 3
+                        vc=LiturgicalOpportunitiesCreation()
+                        
+                        self.addChild(vc!)
+                        self.containerview.addSubview(vc!.view)
+                        vc!.didMove(toParent: self)
+                        vc!.view.frame = self.containerview.bounds
+                        
+                    }else{
+                        showSnackBar(message: "Select recommended social channel")
+                    }
+                }else{
+                    showSnackBar(message: "Select top advertising channel")
+                }
+                
+            }else{
+                showSnackBar(message: "Add your market size")
+            }
             
-            self.addChild(vc!)
-            self.containerview.addSubview(vc!.view)
-            vc!.didMove(toParent: self)
-            vc!.view.frame = self.containerview.bounds
             
         case 4:
-            self.stepNumber=5
             
-            self.containerview.subviews.first?.removeFromSuperview()
             
-            self.stepperView.currentStep = 4
-            vc=DigitalOpportunitiesCreation()
             
-            self.addChild(vc!)
-            self.containerview.addSubview(vc!.view)
-            vc!.didMove(toParent: self)
-            vc!.view.frame = self.containerview.bounds
+            commomWaysWorship = (vc as! LiturgicalOpportunitiesCreation).commomWaysWorship
+            
+            litrugicalMarketGraph=(vc as! LiturgicalOpportunitiesCreation).marketGraph
+            
+            if commomWaysWorship.count != 0 {
+                if !litrugicalMarketGraph.isEmpty {
+                    
+                    self.stepNumber=5
+                    
+                    self.containerview.subviews.first?.removeFromSuperview()
+                    
+                    self.stepperView.currentStep = 4
+                    vc=DigitalOpportunitiesCreation()
+                    
+                    self.addChild(vc!)
+                    self.containerview.addSubview(vc!.view)
+                    vc!.didMove(toParent: self)
+                    vc!.view.frame = self.containerview.bounds
+                }else{
+                    showSnackBar(message: "Add your Market Size")
+                    
+                }
+            }else{
+                showSnackBar(message: "Add Common ways to worship ")
+            }
+            
+            
+            
         case 5:
             opportunitiesUrl = (vc as! DigitalOpportunitiesCreation).opportunitiesUrl.text ?? ""
             competitorsUrl = (vc as! DigitalOpportunitiesCreation).competitorsUrl
@@ -202,14 +255,28 @@ extension MainOpportunitiesCreation{
                     
                 }else{
                     showSnackBar(message: "Add your Competitors Url")
-                    
                 }
                 
             }else{
                 showSnackBar(message: "Add your Avarege Monthly cost")
-                
             }
             
+        case 6:
+            print(businessplan)
+
+            businessplan = (vc as! BusinessPlanOpportunitiesCreation).businessplan
+            
+            businessplan.merge(marketGraph){(_, new) in new}
+            businessplan.merge(litrugicalMarketGraph){(_, new) in new}
+            print(businessplan)
+            if !businessplan.isEmpty {
+                presenter.completeOpportunity(interest:"\(intrest)",id: id, financialModel: financialModelData, workType: timeOfCommitment.lowercased(), levelOfDifficulty: levelOfDifficulty.lowercased(), AmountOfTechnology: amountOfTechnology.lowercased(), amountRasise: amountRaise.replacingOccurrences(of: prefixToRemove, with: ""), opportuntiesUrl: opportunitiesUrl, competitorsUrl: competitorsUrl, commomWays: commomWaysWorship, topAdvertisingChannel: topAdvertisingSelected, socialChannels: socialChannelSelected, avgAnnualRevenu: avgAnnualRevenu.replacingOccurrences(of: prefixToRemove, with: ""), avgMonthlyCost: avgMonthlyCost.replacingOccurrences(of: prefixToRemove, with: ""), categories:categoriesSelected ,marketGraph:businessplan)
+            
+                
+            }else{
+                showSnackBar(message: "Add your Business plan")
+                
+            }
             
         default:
             print("test")

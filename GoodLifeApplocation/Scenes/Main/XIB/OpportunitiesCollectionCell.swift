@@ -33,5 +33,4 @@ class OpportunitiesCollectionCell: UICollectionViewCell,NibLoadableView {
 
         }
     }
-    
 }
