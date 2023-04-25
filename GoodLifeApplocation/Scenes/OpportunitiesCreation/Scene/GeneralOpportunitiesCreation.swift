@@ -37,11 +37,14 @@ class GeneralOpportunitiesCreation: UIViewController {
     var categoriesSelected:[String]=[]
     var allCategories = ""
     var financialModelData:[String]=[]
+    var categoriesIdSelection:[String]=[]
+    var categoriesId:[String]=[]
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         getCategories()
-        
+        intrestSelection.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 10)], for: .normal)
     }
     
     
@@ -139,9 +142,11 @@ class GeneralOpportunitiesCreation: UIViewController {
         self.categoryActionDropdown.multiSelectionAction = { [self] (index: [Int], item: [String]) in
             print("Selected item: \(item) at index: \(index)")
             self.categoriesTxt.textColor = UIColor.black
+            categoriesSelection(selectionId: index.map { String($0) })
             categoriesSelected = item
             let selectedCategories = categoriesSelected.joined(separator: ",")
             self.categoriesTxt.text = selectedCategories
+            
             
         }
         
@@ -165,6 +170,8 @@ extension GeneralOpportunitiesCreation:OpportunitiesDelegate{
         
         getName(data: data.fund_types ?? [])
         
+        
+        
     }
 }
 
@@ -172,9 +179,19 @@ extension GeneralOpportunitiesCreation:OpportunitiesDelegate{
 extension GeneralOpportunitiesCreation {
     
     func getName(data:[mainType]){
+        categoriesId=[]
         for index in 0 ..< data.count{
             categories.append(data[index].name ?? "")
+            categoriesId.append("\(data[index].id ?? 0)")
+        }
+    }
+    
+    func categoriesSelection(selectionId:[String]){
+        categoriesIdSelection=[]
+        for indx in 0 ..< categoriesId.count{
+            categoriesIdSelection.append(categoriesId[indx])
         }
     }
     
 }
+

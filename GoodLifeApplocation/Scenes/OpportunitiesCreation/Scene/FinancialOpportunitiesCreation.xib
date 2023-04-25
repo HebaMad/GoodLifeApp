@@ -39,15 +39,15 @@
                             <rect key="frame" x="12" y="52.666666666666657" width="369" height="68"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average Annual Revenue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ha-bh-cGD">
-                                    <rect key="frame" x="0.0" y="0.0" width="369" height="18"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="369" height="13"/>
                                     <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="14"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="$" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yy5-hd-2si">
-                                    <rect key="frame" x="0.0" y="28.000000000000007" width="369" height="39.999999999999993"/>
+                                    <rect key="frame" x="0.0" y="23.000000000000007" width="369" height="44.999999999999993"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="40" id="m02-FL-iUH"/>
+                                        <constraint firstAttribute="height" constant="45" id="m02-FL-iUH"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -61,15 +61,15 @@
                             <rect key="frame" x="12" y="132.66666666666666" width="369" height="68"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average Monthly Cost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIT-o7-Sle">
-                                    <rect key="frame" x="0.0" y="0.0" width="369" height="18"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="369" height="13"/>
                                     <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="14"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="$" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6iY-WT-mIZ">
-                                    <rect key="frame" x="0.0" y="28" width="369" height="40"/>
+                                    <rect key="frame" x="0.0" y="23" width="369" height="45"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="40" id="9LO-be-g86"/>
+                                        <constraint firstAttribute="height" constant="45" id="9LO-be-g86"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>

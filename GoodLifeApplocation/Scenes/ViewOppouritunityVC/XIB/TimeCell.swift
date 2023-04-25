@@ -14,7 +14,7 @@ class TimeCell: UICollectionViewCell , NibLoadableView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
     }
     
     func configureCell(data:Time){

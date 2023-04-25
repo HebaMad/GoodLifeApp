@@ -59,10 +59,10 @@ class HomePresenter:NSObject{
                     self.delegate?.getCategoriesFiltered(categories: response.data! )
                     
                 }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
+                    Alert.showErrorAlert(message: "something wrong try again")
                 }
             case  .failure(_):
-                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
+                Alert.showErrorAlert(message: "something wrong try again")
             }
         }
     }
@@ -80,12 +80,12 @@ class HomePresenter:NSObject{
                 }else if response.code == 401{
                     SceneDelegate.init().setRootVC(vc: SplashScreen())
                 }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
+                    Alert.showErrorAlert(message: "something wrong try again")
                 }
                 
             case  .failure(_):
                 
-                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
+                Alert.showErrorAlert(message: "something wrong try again")
             }
         }
         

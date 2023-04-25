@@ -27,6 +27,7 @@ class LiturgicalOpportunitiesCreation: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         bindButtons()
+        bindUISliderValue()
     }
 
 
@@ -39,6 +40,11 @@ extension LiturgicalOpportunitiesCreation {
         addMoreWays.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
         
     }
+    
+    func bindUISliderValue(){
+        marketSize.addTarget(self, action: #selector(sliderValueChanged(_:)), for: .valueChanged)
+    }
+    
     
     @objc func buttonWasTapped(_ sender:UIButton){
         switch sender{
@@ -83,5 +89,10 @@ extension LiturgicalOpportunitiesCreation{
     func clearData(){
         marketName.text=""
         marketSize.value=0.0
+        marketRate.text="0%"
+    }
+    
+    @objc func sliderValueChanged(_ sender: UISlider) {
+        marketRate.text="\(Int(sender.value))%"
     }
 }

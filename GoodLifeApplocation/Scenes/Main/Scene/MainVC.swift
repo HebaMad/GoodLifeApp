@@ -89,6 +89,11 @@ extension MainVC {
     }
     
     
+    @objc func  AddOpportunitiesForm(_ sender:UIButton){
+        let vc = CreateOppourtinityVC.instantiate()
+        navigationController?.pushViewController(vc, animated: true)
+        
+    }
     
 }
 extension MainVC{
@@ -271,6 +276,8 @@ extension MainVC:UICollectionViewDataSource{
                 
                 let cell :CreateOpportunitiesCell = collectionView.dequeueReusableCell(for: indexPath)
                 cell.createOpportunitiesBtn.tag=indexPath.row
+                cell.createOpportunitiesBtn.addTarget(self, action: #selector(AddOpportunitiesForm), for: .touchUpInside)
+
                 return cell
                 
             }else{

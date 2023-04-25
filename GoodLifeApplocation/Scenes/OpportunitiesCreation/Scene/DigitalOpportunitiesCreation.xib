@@ -49,15 +49,15 @@
                                     <rect key="frame" x="12" y="76.333333333333343" width="369" height="68"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your URL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q0V-zQ-vcH">
-                                            <rect key="frame" x="0.0" y="0.0" width="369" height="18"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="369" height="13"/>
                                             <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="www.business.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nqg-l1-AKj" customClass="BottomBorderTextField" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="28" width="369" height="40"/>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="https://" borderStyle="roundedRect" placeholder="www.business.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nqg-l1-AKj" customClass="BottomBorderTextField" customModule="GoodLifeApplocation" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="23" width="369" height="45"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="40" id="2Ps-mI-5Uk"/>
+                                                <constraint firstAttribute="height" constant="45" id="2Ps-mI-5Uk"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
@@ -98,15 +98,15 @@
                                     <rect key="frame" x="12" y="185.33333333333334" width="369" height="107.00000000000003"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="competitor URL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZnN-T1-auy">
-                                            <rect key="frame" x="0.0" y="0.0" width="369" height="21"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="369" height="16"/>
                                             <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="www.business.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tcU-aq-KTF" customClass="BottomBorderTextField" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="28.999999999999972" width="369" height="40"/>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="https://" borderStyle="roundedRect" placeholder="www.business.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tcU-aq-KTF" customClass="BottomBorderTextField" customModule="GoodLifeApplocation" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="23.999999999999972" width="369" height="45"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="40" id="6Ca-3o-k8Q"/>
+                                                <constraint firstAttribute="height" constant="45" id="6Ca-3o-k8Q"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>

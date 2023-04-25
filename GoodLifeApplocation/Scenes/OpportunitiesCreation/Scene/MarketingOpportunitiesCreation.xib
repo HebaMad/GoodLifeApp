@@ -16,7 +16,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MarketingOpportunitiesCreation" customModule="GoodLifeApplocation" customModuleProvider="target">
             <connections>
+                <outlet property="addMarket" destination="2b1-CY-MkN" id="VAy-w1-8bo"/>
                 <outlet property="marketName" destination="7ze-Vw-PEQ" id="8LI-SS-VJZ"/>
+                <outlet property="marketRateTxt" destination="9c4-Hu-ekr" id="6eb-Q8-IS1"/>
                 <outlet property="marketSize" destination="mc5-vF-VFO" id="3E1-Y4-Ohk"/>
                 <outlet property="socialChannelAction" destination="8RZ-Xo-Z9S" id="eX7-a7-DCm"/>
                 <outlet property="socialChannelTxt" destination="XdD-A0-Psl" id="plT-O6-SjO"/>
@@ -58,17 +60,17 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7ze-Vw-PEQ">
-                                                    <rect key="frame" x="4" y="44.999999999999986" width="361" height="48"/>
+                                                    <rect key="frame" x="4" y="44.999999999999986" width="361" height="45"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="48" id="daI-8v-irC"/>
+                                                        <constraint firstAttribute="height" constant="45" id="daI-8v-irC"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DXy-Ll-w65">
-                                                    <rect key="frame" x="4" y="102.99999999999999" width="361" height="20"/>
+                                                    <rect key="frame" x="4" y="99.999999999999986" width="361" height="20"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Market size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1T-1h-YjB">
                                                             <rect key="frame" x="0.0" y="0.0" width="321" height="20"/>
@@ -79,7 +81,7 @@
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="40%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9c4-Hu-ekr">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9c4-Hu-ekr">
                                                             <rect key="frame" x="321" y="0.0" width="40" height="20"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="40" id="l9K-UA-0hk"/>
@@ -94,7 +96,7 @@
                                                     </constraints>
                                                 </stackView>
                                                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="mc5-vF-VFO">
-                                                    <rect key="frame" x="2" y="133" width="365" height="28"/>
+                                                    <rect key="frame" x="2" y="130" width="365" height="31"/>
                                                     <color key="tintColor" name="backgroundColor"/>
                                                 </slider>
                                             </subviews>

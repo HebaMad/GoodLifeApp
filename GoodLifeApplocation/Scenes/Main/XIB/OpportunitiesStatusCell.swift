@@ -27,9 +27,16 @@ class OpportunitiesStatusCell: UITableViewCell,NibLoadableView {
     }
     
     func configureCell(data:opportunitiesData){
+
         titleTxt.text = data.title
         dateTxt.text=data.created_at
-        completeProgressView.progress=Float(data.completion ?? 0)
+        if data.completion == 100 {
+            completeInformationBtn.setTitleColor(.darkGray, for: .normal)
+            completeInformationBtn.isEnabled=false
+        }else{
+            completeInformationBtn.setTitleColor( UIColor(named: "button") ?? .clear, for: .normal)
+            completeInformationBtn.isEnabled=true
+        }
         if  data.status == "pending" {
 
             status.bgColor = UIColor(named: "unselectedTab") ?? .clear
@@ -37,6 +44,8 @@ class OpportunitiesStatusCell: UITableViewCell,NibLoadableView {
         }else{
             status.bgColor = UIColor(named: "ButtonColor") ?? .clear
         }
+        completeProgressView.progress=Float(data.completion ?? 0)/100.0
+
         status.text = "  " + (data.status ?? "")
 
         

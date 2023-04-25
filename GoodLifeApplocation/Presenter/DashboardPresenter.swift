@@ -34,10 +34,10 @@ class DashboardPresenter:NSObject{
                     self.delegate?.getCategories(data: response.data!)
                     
                 }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
+                    Alert.showErrorAlert(message: "something wrong try again")
                 }
             case  .failure(_):
-                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
+                Alert.showErrorAlert(message: "something wrong try again")
             }
         }
         
@@ -52,10 +52,10 @@ class DashboardPresenter:NSObject{
                     self.delegate?.getResource(data: response.data?.resources ?? [])
                     
                 }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
+                    Alert.showErrorAlert(message: "something wrong try again")
                 }
             case  .failure(_):
-                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
+                Alert.showErrorAlert(message: "something wrong try again")
             }
         }
         
@@ -70,10 +70,10 @@ class DashboardPresenter:NSObject{
                     self.delegate?.showAlerts(title:"Success", message: response.message ?? "")
                     
                 }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
+                    Alert.showErrorAlert(message: "something wrong try again")
                 }
             case  .failure(_):
-                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
+                Alert.showErrorAlert(message: "something wrong try again")
             }
         }
         
@@ -88,10 +88,10 @@ class DashboardPresenter:NSObject{
                     self.delegate?.showAlerts(title:"Success", message: response.message ?? "")
                     
                 }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
+                    Alert.showErrorAlert(message: "something wrong try again")
                 }
             case  .failure(_):
-                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
+                Alert.showErrorAlert(message: "something wrong try again")
             }
         }
         
@@ -106,10 +106,10 @@ class DashboardPresenter:NSObject{
                     self.delegate?.getMyTask(data: response.data!)
                     
                 }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
+                    Alert.showErrorAlert(message: "something wrong try again")
                 }
             case  .failure(_):
-                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
+                Alert.showErrorAlert(message: "something wrong try again")
             }
         }
     }
@@ -124,10 +124,10 @@ class DashboardPresenter:NSObject{
                     self.delegate?.showAlerts(title:"Success", message: "completed successfully")
                     
                 }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
+                    Alert.showErrorAlert(message: "something wrong try again")
                 }
             case  .failure(_):
-                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
+                Alert.showErrorAlert(message: "something wrong try again")
             }}}
     
     func getMyGoalAndBenchmarks(categoryID: Int){
@@ -139,10 +139,10 @@ class DashboardPresenter:NSObject{
                     self.delegate?.getMyGoalAndBenchmark(data: response.data!)
                     
                 }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
+                    Alert.showErrorAlert(message: "something wrong try again")
                 }
             case  .failure(_):
-                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
+                Alert.showErrorAlert(message: "something wrong try again")
             }
         }
     }
@@ -156,10 +156,10 @@ class DashboardPresenter:NSObject{
                     self.delegate?.getResourceDetails(data: response.data!)
                     
                 }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
+                    Alert.showErrorAlert(message: "something wrong try again")
                 }
             case  .failure(_):
-                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
+                Alert.showErrorAlert(message: "something wrong try again")
             }
             
             
@@ -177,10 +177,10 @@ class DashboardPresenter:NSObject{
                     self.delegate?.showAlerts(title:"Success", message: "completed successfully")
                     
                 }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
+                    Alert.showErrorAlert(message: "something wrong try again")
                 }
             case  .failure(_):
-                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
+                Alert.showErrorAlert(message: "something wrong try again")
             }
             
         }
@@ -196,10 +196,10 @@ class DashboardPresenter:NSObject{
                     self.delegate?.getNotification(data: response.data!)
                     self.delegate?.showAlerts(title:"Success", message: "completed successfully")
                 }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
+                    Alert.showErrorAlert(message: "something wrong try again")
                 }
             case  .failure(_):
-                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
+                Alert.showErrorAlert(message: "something wrong try again")
             }
             
         }

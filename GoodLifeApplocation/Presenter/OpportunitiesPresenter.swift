@@ -31,12 +31,12 @@ class OpportunitiesPresenter:NSObject{
                 if response.status == true{
                     self.delegate?.getFundTypeData(data: response.data!)
                 }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
+                    Alert.showErrorAlert(message: response.message ?? "")
                 }
                 
             case .failure(_):
                 
-                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
+                Alert.showErrorAlert(message: "something wrong try again")
             }
         }
     }
@@ -49,12 +49,12 @@ class OpportunitiesPresenter:NSObject{
                 if response.status == true{
                     self.delegate?.getChannels(data: response.data!)
                 }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
+                    Alert.showErrorAlert(message: response.message ?? "")
                 }
                 
             case .failure(_):
                 
-                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
+                Alert.showErrorAlert(message: "something wrong try again")
             }
         }
     }
@@ -67,15 +67,17 @@ class OpportunitiesPresenter:NSObject{
                 
             case let .success(response):
                 if response.status == true{
+                    Alert.showSuccessAlert(message: response.message ?? "")
 
+                    self.delegate?.showAlerts(title:"Success", message: response.message ?? "")
                 }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
+                    Alert.showErrorAlert(message: response.message ?? "")
                 }
                 
             case .failure(_):
                 
-                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
-            
+                Alert.showErrorAlert(message: "something wrong try again")
+
         }
         }
     }

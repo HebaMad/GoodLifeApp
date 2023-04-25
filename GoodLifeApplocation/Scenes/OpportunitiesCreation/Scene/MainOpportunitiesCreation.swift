@@ -80,14 +80,14 @@ extension MainOpportunitiesCreation{
             levelOfDifficulty =  (vc as! GeneralOpportunitiesCreation).LevelOfDifficultyTxt.text ?? ""
             timeOfCommitment =   (vc as! GeneralOpportunitiesCreation).timeCommitmentTxt.text ?? ""
             amountOfTechnology = (vc as! GeneralOpportunitiesCreation).AmountOfTechnologyTxt.text ?? ""
-            categoriesSelected = (vc as! GeneralOpportunitiesCreation).categoriesSelected
+            categoriesSelected = (vc as! GeneralOpportunitiesCreation).categoriesIdSelection
             amountRaise = (vc as! GeneralOpportunitiesCreation).amountraiseTxt.text ?? ""
             intrest=(vc as! GeneralOpportunitiesCreation).intrestSelection.selectedSegmentIndex+1
             print(amountOfTechnology)
             print(levelOfDifficulty)
 
             if categoriesSelected.count != 0 {
-                
+                print(categoriesSelected)
                 if financialModelData.count != 0 {
                     
                     if timeOfCommitment != "" {
@@ -234,7 +234,7 @@ extension MainOpportunitiesCreation{
             
             
         case 5:
-            opportunitiesUrl = (vc as! DigitalOpportunitiesCreation).opportunitiesUrl.text ?? ""
+            opportunitiesUrl = "https://" + ((vc as! DigitalOpportunitiesCreation).opportunitiesUrl.text ?? "")
             competitorsUrl = (vc as! DigitalOpportunitiesCreation).competitorsUrl
             
             if opportunitiesUrl != "" {
@@ -270,7 +270,9 @@ extension MainOpportunitiesCreation{
             businessplan.merge(litrugicalMarketGraph){(_, new) in new}
             print(businessplan)
             if !businessplan.isEmpty {
+                print(categoriesSelected)
                 presenter.completeOpportunity(interest:"\(intrest)",id: id, financialModel: financialModelData, workType: timeOfCommitment.lowercased(), levelOfDifficulty: levelOfDifficulty.lowercased(), AmountOfTechnology: amountOfTechnology.lowercased(), amountRasise: amountRaise.replacingOccurrences(of: prefixToRemove, with: ""), opportuntiesUrl: opportunitiesUrl, competitorsUrl: competitorsUrl, commomWays: commomWaysWorship, topAdvertisingChannel: topAdvertisingSelected, socialChannels: socialChannelSelected, avgAnnualRevenu: avgAnnualRevenu.replacingOccurrences(of: prefixToRemove, with: ""), avgMonthlyCost: avgMonthlyCost.replacingOccurrences(of: prefixToRemove, with: ""), categories:categoriesSelected ,marketGraph:businessplan)
+                presenter.delegate=self
             
                 
             }else{
@@ -283,4 +285,18 @@ extension MainOpportunitiesCreation{
             
         }
     }
+}
+
+
+extension MainOpportunitiesCreation:OpportunitiesDelegate {
+    func showAlerts(title: String, message: String) {
+        navigationController?.popViewController(animated: true)
+
+    }
+    
+    func getFundTypeData(data: FundType) {}
+    
+    func getChannels(data: RecommendedChannel) {}
+    
+    
 }

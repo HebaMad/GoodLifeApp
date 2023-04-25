@@ -26,13 +26,12 @@ class BusinessPlanOpportunitiesCreation: UIViewController {
     var index = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        bindUISliderValue()
         bindButtons()
+        bindTxtFields()
         txtviewCustomization()
     }
-    
-    
-    
+   
     
 }
 extension BusinessPlanOpportunitiesCreation {
@@ -41,6 +40,15 @@ extension BusinessPlanOpportunitiesCreation {
         
         addNewPlan.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
         
+    }
+    
+    func bindTxtFields(){
+        planUrl.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+
+    }
+    
+    func bindUISliderValue(){
+        marketSize.addTarget(self, action: #selector(sliderValueChanged(_:)), for: .valueChanged)
     }
     
     @objc func buttonWasTapped(_ sender:UIButton){
@@ -112,7 +120,7 @@ extension BusinessPlanOpportunitiesCreation {
     func makeParameter(){
         
         businessplan["business_plans[\(index)][name]"] = planNameTxt.text
-        businessplan["business_plans[\(index)][url]"] = planUrl.text
+        businessplan["business_plans[\(index)][url]"] =  (planUrl.text ?? "")
         businessplan["business_plans[\(index)][market_size]"] = "\(marketSize.value)"
         businessplan["business_plans[\(index)][pros]"] = planPros.text
         businessplan["business_plans[\(index)][cons]"] = planCons.text
@@ -121,10 +129,27 @@ extension BusinessPlanOpportunitiesCreation {
     
     func clearData(){
         planNameTxt.text=""
-        planUrl.text=""
+        planUrl.text="https://"
         planCons.text=""
         planPros.text=""
         marketSize.value=0.0
+        marketRate.text="0%"
+
+    }
+    
+    @objc func textFieldDidChange(textField: UITextField){
+        
+        guard let text = textField.text else { return }
+        
+        
+        if !text.hasPrefix("https://") {
+            textField.text = "https://" + " " + text
+        }
+    }
+    
+    
+    @objc func sliderValueChanged(_ sender: UISlider) {
+        marketRate.text="\(Int(sender.value))%"
     }
     
 }

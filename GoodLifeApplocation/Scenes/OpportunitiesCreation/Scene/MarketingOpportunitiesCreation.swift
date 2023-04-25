@@ -15,6 +15,7 @@ class MarketingOpportunitiesCreation: UIViewController {
     
     
     
+    @IBOutlet weak var marketRateTxt: UILabel!
     @IBOutlet weak var socialChannelTxt: UITextField!
     @IBOutlet weak var socialChannelAction: UIButton!
     
@@ -36,16 +37,19 @@ class MarketingOpportunitiesCreation: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        bindUISliderValue()
         presenter.getChannels()
         presenter.delegate=self
-//        bindButtons()
     }
     
-
+    func bindUISliderValue(){
+        marketSize.addTarget(self, action: #selector(sliderValueChanged(_:)), for: .valueChanged)
+    }
     @IBAction func addMoreBtn(_ sender: Any) {
         if marketName.text != "" && marketSize.value != 0.0{
             marketGraphName.append(marketName.text!)
             marketGraphSize.append("\(marketSize.value)")
+            cleardata()
             makeParameter(key: marketGraphName, value: marketGraphSize)
         }else{
             showSnackBar(message: "Add your Market Size")
@@ -104,30 +108,7 @@ class MarketingOpportunitiesCreation: UIViewController {
 
 }
 
-extension MarketingOpportunitiesCreation {
-    
-    func bindButtons(){
-        addMarket.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
-    }
 
-    @objc func buttonWasTapped(_ sender:UIButton){
-        switch sender{
-
-        case addMarket:
-            if marketName.text != "" && marketSize.value != 0.0{
-                marketGraphName.append(marketName.text!)
-                marketGraphSize.append("\(marketSize.value)")
-                cleardata()
-                makeParameter(key: marketGraphName, value: marketGraphSize)
-            }else{
-                showSnackBar(message: "Add your Market Size")
-            }
-        default:
-            print("")
-
-        }
-    }
-}
 
 
 extension MarketingOpportunitiesCreation{
@@ -143,6 +124,11 @@ extension MarketingOpportunitiesCreation{
     func cleardata(){
         marketSize.value=0.0
         marketName.text=""
+        marketRateTxt.text="0%"
+    }
+    
+    @objc func sliderValueChanged(_ sender: UISlider) {
+        marketRateTxt.text="\(Int(sender.value))%"
     }
 }
 
