@@ -14,6 +14,8 @@ enum OpportuntiesApiTarget:TargetType{
     case getChannels
     case completeOpportunities(id:Int,financialModel:[String],workType:String,levelOfDifficulty:String,AmountOfTechnology:String,amountRasise:String,opportuntiesUrl:String,competitorsUrl:[String],commomWays:[String],topAdvertisingChannel:[String],socialChannels:[String],avgAnnualRevenu:String,avgMonthlyCost:String,categories:[String],marketGraph:[String:String],intrest:String)
     
+    case opportunitiesDetails(id:String)
+    
     var baseURL: URL {
         return URL(string: "\(AppConfig.apiBaseUrl)")!
     }
@@ -24,13 +26,16 @@ enum OpportuntiesApiTarget:TargetType{
         case .fundType:return "getFundTypes"
         case .getChannels:return "getChannels"
         case .completeOpportunities:return "completeOpportunity"
+            
+        case .opportunitiesDetails:return "completeOpportunity"
+            
         }
     }
     
     
     var method: Moya.Method {
         switch self{
-        case .fundType,.getChannels:
+        case .fundType,.getChannels,.opportunitiesDetails:
             return .get
             
         case .completeOpportunities:
@@ -42,7 +47,7 @@ enum OpportuntiesApiTarget:TargetType{
     var task: Task{
         switch self{
 
-        case .fundType,.getChannels:
+        case .fundType,.getChannels,.opportunitiesDetails:
             return .requestPlain
 
         case .completeOpportunities:
@@ -54,7 +59,7 @@ enum OpportuntiesApiTarget:TargetType{
     
     var headers: [String : String]?{
         switch self{
-        case .fundType,.getChannels,.completeOpportunities:
+        case .fundType,.getChannels,.completeOpportunities,.opportunitiesDetails:
             
             do {
                 let token = try KeychainWrapper.get(key: AppData.mobile) ?? ""
@@ -76,7 +81,8 @@ enum OpportuntiesApiTarget:TargetType{
             
             return ["opportunity_id":id,"financial_models":financialModel ,"work_type":workType,"level_of_difficulty":levelOfDifficulty,"amount_of_technology":AmountOfTechnology,"amount_raise":amountRasise,"url":opportuntiesUrl,"competitors":competitorsUrl,"common_ways":commomWays,"top_advertising_platforms":topAdvertisingChannel,"recommended_social_channels":socialChannels,"average_annual_revenue":avgAnnualRevenu,"average_monthly_cost":avgMonthlyCost,"category":categories,"interest":intrest].merging(marketGraph){(_, new) in new}
             
-            
+        case .opportunitiesDetails(let id):
+            return ["id":id]
         default : return [:]
 
             

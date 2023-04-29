@@ -251,25 +251,21 @@ extension MainVC:UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch sections[indexPath.section]{
-            
         case .Categories:
             let cell:CategoryCell=collectionView.dequeueReusableCell(for: indexPath)
             cell.configureCell(data: categories[indexPath.row])
             return cell
-            
         case .Map:
             let cell:MapCell=collectionView.dequeueReusableCell(for: indexPath)
             cell.exploreOpportunitiesBtn.tag=indexPath.row
             cell.exploreOpportunitiesBtn.addTarget(self, action: #selector(exploreMapBtn), for: .touchUpInside)
             return cell
-            
         case .Banner:
             let cell:BannerCell=collectionView.dequeueReusableCell(for: indexPath)
             cell.pageControlView.currentPage=indexPath.row
             cell.pageControlView.numberOfPages=sliders.count
             cell.configureCell(data: sliders[indexPath.row])
             return cell
-            
         case .Opportunities:
             
             if indexPath.row == myOpportunities.count{
@@ -287,6 +283,18 @@ extension MainVC:UICollectionViewDataSource{
                 return cell
                 
             }
+            
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch sections[indexPath.section]{
+        case .Opportunities:
+            let vc = MainOpportuntiesTab.instantiate()
+            navigationController?.pushViewController(vc, animated: true)
+            
+        default:
+            print("")
             
         }
     }

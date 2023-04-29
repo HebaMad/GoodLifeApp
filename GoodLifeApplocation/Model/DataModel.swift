@@ -575,10 +575,62 @@ struct opportunitiesData:Codable{
     let rating:String?
     let email:String?
     let phone:String?
+    let general:GeneralInfo?
+    let marketing:MarketingInfo?
+    let liturgical:LiturgicalInfo?
+    let digital:DigitalInfo?
+    let business_plan:BusinessPlanInfo?
 
 }
 
+struct BusinessPlanInfo:Codable{
+    let id:Int?
+    let opportunity_id:String?
+    let business_plans:[BusinessPlanDetails]?
+}
 
+struct BusinessPlanDetails:Codable{
+    let url:String?
+    let cons:String?
+    let name:String?
+    let pros:String?
+    let market_size:String?
+    
+}
+
+struct DigitalInfo:Codable{
+    let id:Int?
+    let opportunity_id:String?
+    let url:String?
+    let competitors:[String]?
+}
+struct LiturgicalInfo:Codable{
+    let id:Int?
+    let opportunity_id:String?
+    let graphs:[Graph]?
+
+}
+struct MarketingInfo:Codable{
+    let id:Int?
+    let opportunity_id:String?
+    let graphs:[Graph]?
+    let top_advertising_platforms:String?
+    let recommended_social_channels:String?
+    
+}
+
+struct GeneralInfo:Codable{
+    let id:Int?
+    let opportunity_id:String?
+    let amount_raise:String?
+    let work_type:String?
+    let level_of_difficulty:String?
+    let amount_of_technology:String?
+    let interest:String?
+    let financial_models:String?
+    let average_annual_revenue:String?
+    let average_monthly_cost:String?
+}
 
 struct MainScreenData:Decodable{
     let categories:[mainType]?

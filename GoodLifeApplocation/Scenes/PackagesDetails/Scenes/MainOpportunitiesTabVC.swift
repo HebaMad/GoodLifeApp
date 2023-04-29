@@ -62,3 +62,7 @@ class MainOpportunitiesTabVC: ButtonBarPagerTabStripViewController {
         }
 
 }
+extension MainOpportunitiesTabVC:Storyboarded{
+    static var storyboardName: StoryboardName = .main
+
+}

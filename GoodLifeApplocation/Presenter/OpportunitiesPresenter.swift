@@ -13,6 +13,8 @@ protocol OpportunitiesDelegate{
     func showAlerts(title:String,message:String)
     func getFundTypeData(data:FundType)
     func getChannels(data:RecommendedChannel)
+    func opportunitiesDetails(data:opportunitiesData)
+    
 
     
 }
@@ -48,6 +50,24 @@ class OpportunitiesPresenter:NSObject{
             case let .success(response):
                 if response.status == true{
                     self.delegate?.getChannels(data: response.data!)
+                }else{
+                    Alert.showErrorAlert(message: response.message ?? "")
+                }
+                
+            case .failure(_):
+                
+                Alert.showErrorAlert(message: "something wrong try again")
+            }
+        }
+    }
+    
+    func getOpportunitiesDetails(opportunitiesId:String){
+        OpportuntiesManager.shared.opportunitiesDetails(id: opportunitiesId) { Response in
+            switch Response{
+                
+            case let .success(response):
+                if response.status == true{
+                    self.delegate?.opportunitiesDetails(data: response.data!)
                 }else{
                     Alert.showErrorAlert(message: response.message ?? "")
                 }
