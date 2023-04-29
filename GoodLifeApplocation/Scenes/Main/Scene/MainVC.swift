@@ -21,7 +21,7 @@ class MainVC: UIViewController {
     let presenter=MainPresenter()
     private var menu :SideMenuNavigationController?
     var opportuntites:[opportunitiesData]=[]
-
+    
     //MARK: - Life cycle
     override func viewDidLoad() {
         
@@ -33,8 +33,9 @@ class MainVC: UIViewController {
     
     
     @IBAction func menuBtn(_ sender: Any) {
+        
         present(menu!, animated: true, completion: nil)
-
+        
     }
     
     private func setupCollectionview(){
@@ -113,15 +114,14 @@ extension MainVC{
             
         case .Map:
             
-       print("")
+            print("")
         case .Opportunities:
             print("")
-//            let vc = OpportunityListVC.instantiate()
-//            vc.opportunities=myOpportunities
-//            vc.hidesBottomBarWhenPushed = false
-//            vc.tabBarController?.tabBar.isHidden=false
-//            self.navigationController?.pushViewController(vc, animated: true)
-          
+            //            let vc = OpportunityListVC.instantiate()
+            //            vc.opportunities=myOpportunities
+            //            vc.hidesBottomBarWhenPushed = false
+            //            vc.tabBarController?.tabBar.isHidden=false
+            //            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     
@@ -273,7 +273,7 @@ extension MainVC:UICollectionViewDataSource{
                 let cell :CreateOpportunitiesCell = collectionView.dequeueReusableCell(for: indexPath)
                 cell.createOpportunitiesBtn.tag=indexPath.row
                 cell.createOpportunitiesBtn.addTarget(self, action: #selector(AddOpportunitiesForm), for: .touchUpInside)
-
+                
                 return cell
                 
             }else{
@@ -322,7 +322,7 @@ extension MainVC:MainDelegate{
     func getExploreMapData(data: ExploreMap) {
         opportuntites=data.opportunities ?? []
         self.hideLoading()
-
+        
     }
     
     func getStandardCategoriesFiltering(categories: MainHomeCategories) { }
@@ -333,14 +333,14 @@ extension MainVC:MainDelegate{
     
     func showAlerts(title: String, message: String) { }
     
-
+    
     
     func getMainScreenData(data: MainScreenData) {
         categories=data.categories ?? []
         sliders=data.sliders ?? []
         myOpportunities=data.opportunities ?? []
         self.hideLoading()
-
+        
         HomeCollectionview.reloadData()
     }
 }

@@ -36,7 +36,7 @@ class ReviewExperienceVC: UIViewController {
         super.viewDidLoad()
         categoryTxt.isEnabled = false
 //        categoryPresenter.getSmartRecommendation(interestId: 0, needTypeId: 0)
-        categoryPresenter.delegate = self
+//        categoryPresenter.delegate = self
         bindBackButton()
         categoryRateSetupTable()
    
@@ -117,13 +117,11 @@ private extension ReviewExperienceVC{
                 
             }else{
                 Alert.showErrorAlert(message: "Review text required ")
-//                self.showAlert(title: "Warning", message:" Review text required ",hideCancelBtn: true)
                 
             }
        
         }catch{
             Alert.showErrorAlert(message: (error as! ValidationError).message)
-//            self.showAlert(title: "Warning", message: (error as! ValidationError).message,hideCancelBtn: true)
             
         }
     }
@@ -141,7 +139,6 @@ extension ReviewExperienceVC:MenuDelegate{
     
     
     func showAlerts(title: String, message: String) {
-//        self.showAlert(title: title, message: message,hideCancelBtn: true)
         Alert.showSuccessAlert(message:message)
         clearData()
         
