@@ -134,6 +134,10 @@ extension MarketingOpportunitiesCreation{
 
 
 extension MarketingOpportunitiesCreation:OpportunitiesDelegate{
+    func opportunitiesDetails(data: opportunitiesData) {
+        
+    }
+    
     
     func showAlerts(title: String, message: String) {}
     

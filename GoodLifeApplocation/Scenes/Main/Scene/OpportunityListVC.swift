@@ -99,7 +99,8 @@ extension OpportunityListVC:UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == .delete) {
-            presenter.deleteOpportunities(opportunity_id: String(describing: opportunities[indexPath.row].id))
+            print(String(describing: opportunities[indexPath.row].id!))
+            presenter.deleteOpportunities(opportunity_id: String(describing: opportunities[indexPath.row].id!))
             presenter.delegate=self
         }
     }
@@ -126,7 +127,10 @@ extension OpportunityListVC:MainDelegate{
 
     }
     
-    func showAlerts(title: String, message: String) {}
+    func showAlerts(title: String, message: String) {
+        presenter.listOpportunties(search: "")
+        presenter.delegate=self
+    }
     
     func getMainScreenData(data: MainScreenData) {}
     

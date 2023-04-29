@@ -289,6 +289,10 @@ extension MainOpportunitiesCreation{
 
 
 extension MainOpportunitiesCreation:OpportunitiesDelegate {
+    func opportunitiesDetails(data: opportunitiesData) {
+        
+    }
+    
     func showAlerts(title: String, message: String) {
         navigationController?.popViewController(animated: true)
 

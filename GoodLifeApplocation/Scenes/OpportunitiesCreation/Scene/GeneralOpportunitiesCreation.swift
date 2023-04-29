@@ -160,6 +160,10 @@ class GeneralOpportunitiesCreation: UIViewController {
     
 }
 extension GeneralOpportunitiesCreation:OpportunitiesDelegate{
+    func opportunitiesDetails(data: opportunitiesData) {
+        
+    }
+    
     func getChannels(data: RecommendedChannel) {
         
     }
