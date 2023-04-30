@@ -112,7 +112,7 @@ private extension ReviewExperienceVC{
            
             if projectReview.text.isEmpty != true{
                 
-//                presenter.createFeedback(id:"\(itemID)", review: projectReview.text, rate: reviewRate.rating, img: selectedImage ?? Data())
+//                presenter.createFeedback(id:"\(itemID)", review: projectReview.text)
                 presenter.delegate=self
                 
             }else{

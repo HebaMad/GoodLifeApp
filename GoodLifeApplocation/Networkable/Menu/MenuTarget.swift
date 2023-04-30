@@ -12,7 +12,7 @@ enum MenuApiTarget:TargetType{
     
     case VolunteerOppourtinity(title:String,location:String,date:String,time:String,details:String)
     case createIdea(title:String,details:String,time_commitment:String,monthly_revenue:String,fund_type_id:String,location:String)
-    case createFeedback(opportunity_id:String,review:String,rate:Int,img:Data)
+    case createFeedback(opportunity_id:String,review:String,ratings:[String:String])
     case getWorthyCauses
     case getSubWorthyCauses(worthycauseId:Int)
     case makeDonation(worthycauseId:Int,amount:String)
@@ -43,13 +43,12 @@ enum MenuApiTarget:TargetType{
         case .makeDonation:return "makeDonation"
             
         case .FundType:return "getFundTypes"
+            
         case .stewardingMyResourse:return "getStewarding"
             
         case .updateStewardingTime,.updateInterest,.updateTalent: return "updateStewarding"
             
         case .updateAvailableSupportMoney:return "updateAvailableSupport"
-            
-            
             
         }
     }
@@ -69,18 +68,8 @@ enum MenuApiTarget:TargetType{
     var task: Task{
         switch self{
             
-        case .VolunteerOppourtinity,.createIdea,.makeDonation,.updateStewardingTime,.updateAvailableSupportMoney,.updateInterest,.updateTalent:
+        case .VolunteerOppourtinity,.createIdea,.makeDonation,.updateStewardingTime,.updateAvailableSupportMoney,.updateInterest,.updateTalent,.createFeedback:
             return .requestParameters(parameters: param, encoding: URLEncoding.httpBody)
-            
-        case .createFeedback(let opportunity_id,let review,let rate,let img):
-            
-            let pngData = MultipartFormData(provider: .data(img), name: "file", fileName: "files", mimeType: "image.jpg")
-            let feedbackTitle = MultipartFormData(provider: .data(opportunity_id.data(using: .utf8)!), name: "opportunity_id")
-            let feedbackReview = MultipartFormData(provider: .data(review.data(using: .utf8)!), name: "review")
-            let feedbackRate = MultipartFormData(provider: .data("\(rate)".data(using: .utf8)!), name: "rate")
-            
-            let multipartData = [pngData,feedbackTitle,feedbackReview,feedbackRate]
-            return .uploadMultipart(multipartData)
             
         case .getWorthyCauses,.FundType,.stewardingMyResourse:
             return .requestPlain
@@ -128,6 +117,10 @@ enum MenuApiTarget:TargetType{
             return ["talents":talent]
         case .updateInterest(let intrest):
             return ["interests":intrest]
+            
+        case.createFeedback(let opportunity_id,let review,let ratings):
+            return ["opportunity_id":opportunity_id,"review":review].merging(ratings){(_, new) in new}
+
 
         default : return [:]
         }
