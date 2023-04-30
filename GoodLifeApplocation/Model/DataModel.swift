@@ -580,7 +580,23 @@ struct opportunitiesData:Codable{
     let liturgical:LiturgicalInfo?
     let digital:DigitalInfo?
     let business_plan:BusinessPlanInfo?
+    let feedbacks:[FeedbackInfo]?
 
+}
+
+struct FeedbackInfo:Codable{
+    let id:Int?
+    let user_id:String?
+    let opportunity_id:String?
+    let review:String?
+    let file:String?
+    let rate:String?
+    let ratings:[RatingInfo]?
+    
+}
+struct RatingInfo:Codable{
+    let type:String?
+    let value:String?
 }
 
 struct BusinessPlanInfo:Codable{
