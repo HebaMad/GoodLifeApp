@@ -27,7 +27,7 @@ enum OpportuntiesApiTarget:TargetType{
         case .getChannels:return "getChannels"
         case .completeOpportunities:return "completeOpportunity"
             
-        case .opportunitiesDetails:return "completeOpportunity"
+        case .opportunitiesDetails:return "opportunityDetails"
             
         }
     }
@@ -82,7 +82,7 @@ enum OpportuntiesApiTarget:TargetType{
             return ["opportunity_id":id,"financial_models":financialModel ,"work_type":workType,"level_of_difficulty":levelOfDifficulty,"amount_of_technology":AmountOfTechnology,"amount_raise":amountRasise,"url":opportuntiesUrl,"competitors":competitorsUrl,"common_ways":commomWays,"top_advertising_platforms":topAdvertisingChannel,"recommended_social_channels":socialChannels,"average_annual_revenue":avgAnnualRevenu,"average_monthly_cost":avgMonthlyCost,"category":categories,"interest":intrest].merging(marketGraph){(_, new) in new}
             
         case .opportunitiesDetails(let id):
-            return ["id":id]
+            return ["opportunity_id":id]
         default : return [:]
 
             

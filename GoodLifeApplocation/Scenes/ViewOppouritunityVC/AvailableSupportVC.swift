@@ -63,6 +63,10 @@ extension AvailableSupportVC {
 }
 
 extension AvailableSupportVC:MenuDelegate{
+    func getCategories(data: FundTyps) {
+        
+    }
+    
     func showAlerts(title: String, message: String) {
         Alert.showErrorAlert(message: message)
 

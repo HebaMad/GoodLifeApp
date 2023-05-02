@@ -24,20 +24,16 @@ class SubscriptionCollectionViewCell: UICollectionViewCell,NibLoadableView   {
         // Initialization code
     }
     
-    func configureCell(viewModel:OppourtinityDetails){
-        print(viewModel.models?.html2Attributed?.string)
-        print(viewModel.websites?.html2Attributed?.string)
-        print(viewModel.plans?.html2Attributed?.string)
+    func configureCell(viewModel:opportunitiesData){
 
         titleTxt.text = viewModel.title?.html2Attributed?.string
-        financialModelTxt.text = viewModel.models?.html2Attributed?.string
-        matchesPercentageTxt.text = String(describing: viewModel.opportunity_match ?? "")+"%" + " " + "Match"
-        review.text = String(describing: viewModel.reviews_count ?? 0)
+        financialModelTxt.text = viewModel.general?.financial_models?.html2Attributed?.string
+        matchesPercentageTxt.text = String(describing: viewModel.match ?? "") + " " + "Match"
+        review.text = String(describing: viewModel.rate_count ?? 0)
 
         
     }
     
-
 }
 
 

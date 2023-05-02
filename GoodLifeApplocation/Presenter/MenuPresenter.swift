@@ -14,6 +14,7 @@ protocol MenuDelegate{
     func getFunderData(data:WorthyCauses)
     func getFundTypeData(data:FundType)
     func getMyResource(data:StewardingMyResource)
+    func getCategories(data:FundTyps)
 }
 
 typealias menuDelegate = MenuDelegate & UIViewController
@@ -271,6 +272,24 @@ class MenuPresenter:NSObject{
             case .failure(_):
                 
                 self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
+            }
+        }
+    }
+    
+    func  getCategories(opportunitiyID:String){
+        MenuManager.shared.getFundType(opportunitiesid: opportunitiyID) { Response in
+            switch Response{
+                
+            case let .success(response):
+                if response.status == true{
+                    self.delegate?.getCategories(data: response.data!)
+                }else{
+                    Alert.showErrorAlert(message:response.message ?? "")
+
+                }
+                
+            case .failure(_):
+                Alert.showErrorAlert(message: "something wrong try again")
             }
         }
     }

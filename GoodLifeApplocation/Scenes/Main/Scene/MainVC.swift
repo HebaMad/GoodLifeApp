@@ -16,7 +16,7 @@ class MainVC: UIViewController {
     
     private let sections = MainCategoriesModel.shared.AllCategories
     var categories:[mainType]=[]
-    var myOpportunities:[opportunitiesData]=[]
+    var allOpportunities:[opportunitiesData]=[]
     var sliders:[sliderData]=[]
     let presenter=MainPresenter()
     private var menu :SideMenuNavigationController?
@@ -43,7 +43,7 @@ class MainVC: UIViewController {
         self.showLoading()
         presenter.getMainScreenData()
         presenter.delegate=self
-        HomeCollectionview.register(OpportunitiesCollectionCell.self)
+        HomeCollectionview.register(SubscriptionCollectionViewCell.self)
         HomeCollectionview.register(CategoryCell.self)
         HomeCollectionview.register(BannerCell.self)
         HomeCollectionview.register(MapCell.self)
@@ -201,7 +201,7 @@ extension MainVC {
                 
                 return section
             case .Opportunities:
-                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .absolute(110))
+                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.33), heightDimension: .absolute(200))
                 
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
                 
@@ -244,7 +244,7 @@ extension MainVC:UICollectionViewDataSource{
         case .Categories:return categories.count
         case .Map:return 1
         case .Banner:return sliders.count
-        case .Opportunities:return (myOpportunities.count)+1
+        case .Opportunities:return (allOpportunities.count)+1
         }
         
     }
@@ -268,7 +268,7 @@ extension MainVC:UICollectionViewDataSource{
             return cell
         case .Opportunities:
             
-            if indexPath.row == myOpportunities.count{
+            if indexPath.row == allOpportunities.count{
                 
                 let cell :CreateOpportunitiesCell = collectionView.dequeueReusableCell(for: indexPath)
                 cell.createOpportunitiesBtn.tag=indexPath.row
@@ -278,8 +278,8 @@ extension MainVC:UICollectionViewDataSource{
                 
             }else{
                 
-                let cell:OpportunitiesCollectionCell=collectionView.dequeueReusableCell(for: indexPath)
-                cell.configureCell(data: myOpportunities[indexPath.row])
+                let cell:SubscriptionCollectionViewCell=collectionView.dequeueReusableCell(for: indexPath)
+                cell.configureCell(viewModel: allOpportunities[indexPath.row])
                 return cell
                 
             }
@@ -338,7 +338,7 @@ extension MainVC:MainDelegate{
     func getMainScreenData(data: MainScreenData) {
         categories=data.categories ?? []
         sliders=data.sliders ?? []
-        myOpportunities=data.opportunities ?? []
+        allOpportunities=data.opportunities ?? []
         self.hideLoading()
         
         HomeCollectionview.reloadData()

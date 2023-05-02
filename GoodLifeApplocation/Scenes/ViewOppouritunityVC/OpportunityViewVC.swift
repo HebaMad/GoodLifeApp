@@ -140,6 +140,9 @@ extension OpportunityViewVC:ProfileDelegate{
 }
 
 extension OpportunityViewVC:MenuDelegate{
+    func getCategories(data: FundTyps) {
+    }
+    
     
     func getFunderData(data: WorthyCauses) {}
     

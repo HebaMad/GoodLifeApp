@@ -23,6 +23,7 @@ protocol MenuNetworkable:Networkable  {
     func  updateAvailableSupportMoney(availableSupport:String,completion: @escaping (Result<BaseResponse<userProfile>, Error>)-> ())
     func updateTalent(talent:[String],completion: @escaping (Result<BaseResponse<userProfile>, Error>)-> ())
     func updateInterest(intrest:[String],completion: @escaping (Result<BaseResponse<userProfile>, Error>)-> ())
+    func getFundType(opportunitiesid:String,completion: @escaping (Result<BaseResponse<FundTyps>, Error>)-> ())
 
 }
 
@@ -79,7 +80,9 @@ class MenuManager:MenuNetworkable{
         request(target: .updateInterest(intrest: intrest), completion: completion)
     }
     
-
-    
+    func getFundType(opportunitiesid: String, completion: @escaping (Result<BaseResponse<FundTyps>, Error>) -> ()) {
+        request(target: .getFundType(opportunitiesid: opportunitiesid), completion: completion)
+    }
+     
  
 }

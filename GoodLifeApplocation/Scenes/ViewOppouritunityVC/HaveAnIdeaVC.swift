@@ -155,6 +155,10 @@ extension HaveAnIdeaVC{
 //MARK: - Confirm to Menu Delegate
 
 extension HaveAnIdeaVC:MenuDelegate{
+    func getCategories(data: FundTyps) {
+        
+    }
+    
     
     func getMyResource(data: StewardingMyResource) {}
     

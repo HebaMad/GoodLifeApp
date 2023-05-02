@@ -8,7 +8,7 @@
 import UIKit
 // MARK: - Empty Model
 struct Empty:Decodable{
-
+    
 }
 
 struct Home:Decodable{
@@ -47,14 +47,14 @@ struct MainHomeCategories : Decodable{
 }
 struct SubHomeCategories : Decodable{
     let categories:[MainCategories]?
-
+    
 }
 
 struct RecommendedChannel : Decodable {
     
     let top_advertising_platforms:[String]?
     let social_channels:[String]?
-
+    
 }
 
 
@@ -86,7 +86,7 @@ struct OppourtinityDetails : Codable {
     let reviews_count:Int?
     let generals:[GeneralOppourtinity]?
     let specifics:[SpecificOppourtinity]?
-
+    
 }
 
 
@@ -100,7 +100,7 @@ struct GeneralOppourtinity:Codable{
     let details:String?
     let items:[GeneralOppourtinityDetails]?
     let graph:[Graph]?
-
+    
 }
 struct Graph: Codable {
     
@@ -136,7 +136,7 @@ struct SpecificOppourtinity : Codable {
     let details:String?
     let items:[SpecificOppourtinityDetails]?
     let graph:[Graph]?
-
+    
     
 }
 struct SpecificOppourtinityDetails: Codable {
@@ -184,7 +184,7 @@ struct userProfile: Decodable{
     let noOfMeals:Int?
     let badges_icons:String?
     let badges:String?
-
+    
 }
 
 struct goalCreation:Decodable{
@@ -194,8 +194,8 @@ struct goalCreation:Decodable{
     let deadline:String?
     let created_at:String?
     let id:Int?
-
- 
+    
+    
 }
 
 struct termsAndConditions: Decodable{
@@ -204,7 +204,7 @@ struct termsAndConditions: Decodable{
     let image:String?
     let title:String?
     let description:String?
-
+    
 }
 
 struct startFundRaise:Decodable{
@@ -224,7 +224,7 @@ struct contactUS:Decodable{
     let message:String?
     let created_at:String?
     let id:Int?
-      
+    
 }
 
 struct volunteerOppourtinity:Decodable{
@@ -238,7 +238,7 @@ struct volunteerOppourtinity:Decodable{
     let details:String?
     let created_at:String?
     let id:Int?
-  
+    
 }
 
 
@@ -251,7 +251,7 @@ struct IdeaCreation:Decodable{
     let monthly_revenue:String?
     let created_at:String?
     let id:Int?
-
+    
     
 }
 
@@ -285,8 +285,8 @@ struct Ventures:Codable{
     let rate:Int?
     let rate_count:Int?
     let reviews_count:Int?
-
-
+    
+    
 }
 
 
@@ -298,6 +298,7 @@ struct Categories:Codable{
     let title:String?
     let details:String?
     let complete_percent:Int?
+    let opportunity:[opportunitiesData]?
     
 }
 
@@ -323,7 +324,7 @@ struct DashboardTask:Decodable{
     
     let currentTasks :[Tasks]?
     let completedTasks :[Tasks]?
-
+    
 }
 struct Tasks:Codable{
     
@@ -337,7 +338,7 @@ struct Tasks:Codable{
     let completed:String?
     let created_at:String?
     let category:Categories?
-
+    
 }
 
 
@@ -346,7 +347,7 @@ struct GoalsAndBenchmark:Decodable{
     let activeGoals:[Goals]?
     let pastGoals:[Goals]?
     let benchmarks:[Benchmark]?
-
+    
 }
 
 struct Goals:Codable{
@@ -401,7 +402,7 @@ struct Lessons:Codable{
     let file:String?
     let status:String?
     let created_at:String?
-
+    
     
 }
 
@@ -416,7 +417,7 @@ struct questionAndAnswers:Codable{
     let ads_manager:String?
     let details:String?
     let category:String?
-
+    
 }
 
 
@@ -424,7 +425,7 @@ struct  WorthyCauses:Decodable{
     let donation_details:DonationDetails?
     let featuredFunds:[Founder]?
     let otherFunds:[Founder]?
-
+    
 }
 struct DonationDetails:Codable{
     let title:String?
@@ -453,8 +454,8 @@ struct notificationsDetails:Codable{
     let message:String?
     let created_at:String?
     let noti_since:String?
-
-        
+    
+    
 }
 
 
@@ -472,7 +473,7 @@ struct TimeAndTalent:Codable {
     let talents:[String]?
     let interests:[String]?
     let time:[Time]?
-
+    
 }
 struct Time:Codable{
     let title:String?
@@ -494,7 +495,7 @@ struct MinistryIdea:Decodable {
     let read : String?
     let created_at:String?
     let fund_type:CategoryFundType?
-               
+    
 }
 struct VolunteerRequests:Decodable {
     
@@ -509,7 +510,7 @@ struct VolunteerRequests:Decodable {
     let location:String?
     let read : String?
     let created_at:String?
-          
+    
 }
 
 struct CategoryFundType:Decodable{
@@ -522,15 +523,15 @@ struct CategoryFundType:Decodable{
     let created_at:String?
     let updated_at:String?
     let deleted_at:String?
-
-
+    
+    
 }
 
 struct MainRequest:Decodable{
     
     let categories:[categoryData]?
     let opportunities:[opportunitiesData]?
-
+    
 }
 
 struct categoryData:Codable{
@@ -544,7 +545,7 @@ struct categoryData:Codable{
     let longitude:String?
     let city:String?
     let default_need:String?
-
+    
 }
 struct opportunitiesData:Codable{
     
@@ -558,7 +559,7 @@ struct opportunitiesData:Codable{
     let amount_raise:String?
     let interest:String?
     let image:String?
-    let opportunity_match:String?
+    let match:String?
     let rate:Int?
     let rate_count:Int?
     let websites:String?
@@ -581,7 +582,7 @@ struct opportunitiesData:Codable{
     let digital:DigitalInfo?
     let business_plan:BusinessPlanInfo?
     let feedbacks:[FeedbackInfo]?
-
+    
 }
 
 struct FeedbackInfo:Codable{
@@ -624,7 +625,7 @@ struct LiturgicalInfo:Codable{
     let id:Int?
     let opportunity_id:String?
     let graphs:[Graph]?
-
+    
 }
 struct MarketingInfo:Codable{
     let id:Int?
@@ -652,12 +653,12 @@ struct MainScreenData:Decodable{
     let categories:[mainType]?
     let opportunities:[opportunitiesData]?
     let sliders:[sliderData]?
-
+    
 }
 
 struct ListOpportunities:Decodable{
     let opportunities:[opportunitiesData]?
-
+    
 }
 
 
@@ -666,10 +667,26 @@ struct sliderData:Codable{
     let title:String?
     let description:String?
     let image:String?
-   
+    
 }
 
 struct ExploreMap : Decodable{
     let opportunities:[opportunitiesData]?
     
+}
+
+struct FundTyps:Decodable{
+    let fund_types:[fund_typess]?
+}
+struct fund_typess:Codable{
+    let id:Int?
+    let name:String?
+    let image:String?
+    let pivot:Pivot?
+    
+}
+
+struct Pivot:Codable{
+    let opportunity_id:String?
+    let fund_type_id:String?
 }

@@ -22,6 +22,7 @@ enum MenuApiTarget:TargetType{
     case updateAvailableSupportMoney(availableSupport:String)
     case updateTalent(talent:[String])
     case updateInterest(intrest:[String])
+    case getFundType(opportunitiesid:String)
 
     var baseURL: URL {
         return URL(string: "\(AppConfig.apiBaseUrl)")!
@@ -50,6 +51,8 @@ enum MenuApiTarget:TargetType{
             
         case .updateAvailableSupportMoney:return "updateAvailableSupport"
             
+        case .getFundType:return "getFundTypes"
+            
         }
     }
     
@@ -58,7 +61,7 @@ enum MenuApiTarget:TargetType{
         case .VolunteerOppourtinity,.createIdea,.createFeedback,.makeDonation,.updateStewardingTime,.updateAvailableSupportMoney,.updateInterest,.updateTalent:
             return .post
             
-        case .getWorthyCauses,.getSubWorthyCauses,.FundType,.stewardingMyResourse:
+        case .getWorthyCauses,.getSubWorthyCauses,.FundType,.stewardingMyResourse,.getFundType:
             return .get
             
  
@@ -74,14 +77,14 @@ enum MenuApiTarget:TargetType{
         case .getWorthyCauses,.FundType,.stewardingMyResourse:
             return .requestPlain
             
-        case .getSubWorthyCauses:
+        case .getSubWorthyCauses,.getFundType:
             return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
             
         }
     }
     var headers: [String : String]?{
         switch self{
-        case .VolunteerOppourtinity,.createIdea,.createFeedback,.makeDonation,.FundType,.stewardingMyResourse,.updateStewardingTime,.updateAvailableSupportMoney,.updateInterest,.updateTalent:
+        case .VolunteerOppourtinity,.createIdea,.createFeedback,.makeDonation,.FundType,.stewardingMyResourse,.updateStewardingTime,.updateAvailableSupportMoney,.updateInterest,.updateTalent,.getFundType:
             
             do {
                 let token = try KeychainWrapper.get(key: AppData.mobile) ?? ""
@@ -121,7 +124,8 @@ enum MenuApiTarget:TargetType{
         case.createFeedback(let opportunity_id,let review,let ratings):
             return ["opportunity_id":opportunity_id,"review":review].merging(ratings){(_, new) in new}
 
-
+        case .getFundType(let opportunitiesid ):
+            return ["opportunity_id":opportunitiesid]
         default : return [:]
         }
         

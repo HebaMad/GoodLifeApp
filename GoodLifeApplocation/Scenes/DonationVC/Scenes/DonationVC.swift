@@ -101,6 +101,10 @@ class DonationVC: UIViewController {
 
 
 extension DonationVC:MenuDelegate{
+    func getCategories(data: FundTyps) {
+        
+    }
+    
     func getMyResource(data: StewardingMyResource) {}
     
     func getFundTypeData(data: FundType) {

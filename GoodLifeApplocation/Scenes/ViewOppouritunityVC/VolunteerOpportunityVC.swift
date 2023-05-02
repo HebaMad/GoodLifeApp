@@ -136,6 +136,9 @@ extension VolunteerOpportunityVC{
 //MARK: - Confirm to Menu Delegate
 
 extension VolunteerOpportunityVC:MenuDelegate{
+    func getCategories(data: FundTyps) {
+    }
+    
     
     func getMyResource(data: StewardingMyResource) {}
     
