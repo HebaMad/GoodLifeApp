@@ -20,7 +20,6 @@ class ReviewExperienceVC: UIViewController {
     @IBOutlet weak var categoryTableHeight: NSLayoutConstraint!
     @IBOutlet weak var categoryRateTable: UITableView!
     @IBOutlet weak var nextBtn: UIButton!
-    @IBOutlet weak var addDocumentBtn: UIButton!
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var categoryTxt: UITextFieldDataPicker!
     
@@ -62,7 +61,6 @@ private extension ReviewExperienceVC{
     func bindBackButton(){
         backBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
         nextBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
-        addDocumentBtn.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
         
     }
 }
@@ -76,9 +74,7 @@ private extension ReviewExperienceVC{
             
         case nextBtn:
             reviewExperience()
-            
-        case addDocumentBtn:
-            addPhotoAndVideo()
+
         default: break
             
         }
@@ -118,9 +114,17 @@ private extension ReviewExperienceVC{
             let title = try categoryTxt.validatedText(validationType: .requiredField(field: "category required"))
            
             if projectReview.text.isEmpty != true{
-                print(parameter)
-                presenter.createFeedback(id: "\(self.itemID)", review:projectReview.text , ratings: parameter)
-                presenter.delegate=self
+                
+                if parameter.keys.count == fundType.count{
+                    print(parameter)
+                    presenter.createFeedback(id: "\(self.itemID)", review:projectReview.text , ratings: parameter)
+                    presenter.delegate=self
+                    
+                }else{
+                    Alert.showErrorAlert(message: "please review All categories connected with opportunities")
+
+                }
+               
                 
             }else{
                 Alert.showErrorAlert(message: "Review text required ")
@@ -142,6 +146,10 @@ private extension ReviewExperienceVC{
 extension ReviewExperienceVC:MenuDelegate{
     func getCategories(data: FundTyps) {
         fundType=data.fund_types ?? []
+        
+        print(fundType)
+        self.categoryTableHeight.constant=CGFloat(40*fundType.count)
+
         categoryRateTable.reloadData()
         
     }
@@ -186,6 +194,8 @@ extension ReviewExperienceVC : HomeDelegate {
     func clearData() {
         categoryTxt.text = ""
         projectReview.text = ""
+        categoryRateTable.reloadData()
+
     }
         
 }
@@ -212,6 +222,7 @@ extension ReviewExperienceVC : HomeDelegate {
         categoryTxt.setTextFieldTitle(title: " " + (oppourtinity[row].title ?? ""))
         self.itemID=oppourtinity[row].id ?? 0
         presenter.getCategories(opportunitiyID: "\(self.itemID)")
+        presenter.delegate=self
     }
  
 }
@@ -250,12 +261,19 @@ extension ReviewExperienceVC:RatingControlDelegate{
 
 extension ReviewExperienceVC{
     func makeParameter(key:[String],value:[String]){
-        
         parameter=[:]
-        for indx in 0 ..< key.count{
-            parameter["ratings[\(key[indx])][value]"]=value[indx]
+
+        if key.count == value.count{
+            for indx in 0 ..< key.count{
+                parameter["ratings[\(key[indx])][value]"]=value[indx]
+
+            }
+        }else{
+            Alert.showErrorAlert(message: "please review All categories connected with opportunity")
 
         }
+
+     
         
     }
     
