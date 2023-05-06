@@ -47,9 +47,12 @@ enum OpportuntiesApiTarget:TargetType{
     var task: Task{
         switch self{
 
-        case .fundType,.getChannels,.opportunitiesDetails:
+        case .fundType,.getChannels:
             return .requestPlain
 
+        case .opportunitiesDetails:
+            return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
+            
         case .completeOpportunities:
             return .requestParameters(parameters: param, encoding: URLEncoding.httpBody)
 

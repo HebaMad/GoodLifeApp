@@ -8,6 +8,7 @@
 import UIKit
 
 class ReviewExperienceVC: UIViewController {
+
     
     //MARK: - Outlet
     
@@ -27,16 +28,21 @@ class ReviewExperienceVC: UIViewController {
     //MARK: - Properties
     var presenter = MenuPresenter()
     var selectedImage:Data?
-    var oppourtinity:[OppourtinityDetails] = []
+    var oppourtinity:[opportunitiesData] = []
     var categoryPresenter = HomePresenter()
     var itemID:Int=0
+    var fundType:[fund_typess]=[]
+    var parameter:[String:String]=[:]
+    var categoryID:[String]=[]
+    var categoriesRating:[String]=[]
+    
     //MARK: - Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         categoryTxt.isEnabled = false
-//        categoryPresenter.getSmartRecommendation(interestId: 0, needTypeId: 0)
-//        categoryPresenter.delegate = self
+        categoryPresenter.AllOpportunities()
+        categoryPresenter.delegate = self
         bindBackButton()
         categoryRateSetupTable()
    
@@ -106,13 +112,14 @@ private extension ReviewExperienceVC{
    extension ReviewExperienceVC{
     
     func reviewExperience(){
+        makeParameter(key: categoryID, value: categoriesRating)
         do{
             
             let title = try categoryTxt.validatedText(validationType: .requiredField(field: "category required"))
            
             if projectReview.text.isEmpty != true{
-                
-//                presenter.createFeedback(id:"\(itemID)", review: projectReview.text)
+                print(parameter)
+                presenter.createFeedback(id: "\(self.itemID)", review:projectReview.text , ratings: parameter)
                 presenter.delegate=self
                 
             }else{
@@ -134,6 +141,8 @@ private extension ReviewExperienceVC{
 
 extension ReviewExperienceVC:MenuDelegate{
     func getCategories(data: FundTyps) {
+        fundType=data.fund_types ?? []
+        categoryRateTable.reloadData()
         
     }
     
@@ -152,25 +161,23 @@ extension ReviewExperienceVC:MenuDelegate{
 
 
 extension ReviewExperienceVC : HomeDelegate {
-    func getOppourtinity(categories: [opportunitiesData]) {
-        
-    }
+    func getCategoriesFiltered(categories: Home) { }
     
-    func getMainScreenData(data: MainScreenData) {}
-    func getCategories(categories: Home) {}
-    func getStandardCategoriesFiltering(categories: MainHomeCategories) {}
-    func getsubCategoriesFiltering(categories: SubHomeCategories) {}
-    func getCategoriesFiltered(categories: Home) {}
-    func getOppourtinityDetails(categories: OppourtinityDetails) {}
+    func getMainScreenData(data: MainScreenData) { }
     
-    func getOppourtinity(categories: Oppourtinity) {
-        
-        self.oppourtinity = categories.items ?? []
+
+    func getOpportunities(categories: Opportuntiesss) {
+        self.oppourtinity = categories.opportunities ?? []
+        print(self.oppourtinity)
+
         categoryTxt.isEnabled = true
 
         categoryTxt.pickerDelegate=self
         categoryTxt.dataSource=self
     }
+
+    func getOppourtinityDetails(categories: OppourtinityDetails) {}
+
     
 }
 
@@ -200,9 +207,11 @@ extension ReviewExperienceVC : HomeDelegate {
     }
     
     func textFieldDataPicker(_ textField: UITextFieldDataPicker, didSelectRow row: Int, inComponent component: Int) {
-        
+        print(self.oppourtinity)
+
         categoryTxt.setTextFieldTitle(title: " " + (oppourtinity[row].title ?? ""))
         self.itemID=oppourtinity[row].id ?? 0
+        presenter.getCategories(opportunitiyID: "\(self.itemID)")
     }
  
 }
@@ -211,13 +220,48 @@ extension ReviewExperienceVC : HomeDelegate {
 extension ReviewExperienceVC:UITableViewDelegate{}
 extension ReviewExperienceVC:UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        2
+        fundType.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:CategoryReviews = tableView.dequeueReusableCell(for: indexPath)
+        cell.categoryName.text = fundType[indexPath.row].name ?? ""
+        categoryID.append("\(fundType[indexPath.row].id ?? 0)")
+        cell.categoryRate.delegate = self
+
+
+
         return cell
     }
     
     
+}
+
+extension ReviewExperienceVC:RatingControlDelegate{
+    func categoryReviewsDidChangeRating(_ ratingControl: RatingControl, rating: Int) {
+        categoriesRating.append("\(rating)")
+    }
+    
+    
+}
+
+
+
+
+extension ReviewExperienceVC{
+    func makeParameter(key:[String],value:[String]){
+        
+        parameter=[:]
+        for indx in 0 ..< key.count{
+            parameter["ratings[\(key[indx])][value]"]=value[indx]
+
+        }
+        
+    }
+    
+    @objc func categoryRateDidChange(_ ratingControl: RatingControl) {
+        // Handle the rating change event here
+        let rating = ratingControl.rating
+        print("Rating changed to \(rating)")
+    }
 }

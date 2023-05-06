@@ -12,7 +12,7 @@ protocol OpportuntiesNetworkable:Networkable  {
     func fundType(completion: @escaping (Result<BaseResponse<FundType>, Error>)-> ())
     func getChannels(completion: @escaping (Result<BaseResponse<RecommendedChannel>, Error>)-> ())
     func completeOpportunities(interest:String,id:Int,financialModel:[String],workType:String,levelOfDifficulty:String,AmountOfTechnology:String,amountRasise:String,opportuntiesUrl:String,competitorsUrl:[String],commomWays:[String],topAdvertisingChannel:[String],socialChannels:[String],avgAnnualRevenu:String,avgMonthlyCost:String,categories:[String],marketGraph:[String:String],completion: @escaping (Result<BaseResponse<Empty>, Error>)-> ())
-    func opportunitiesDetails(id:String,completion: @escaping (Result<BaseResponse<opportunitiesData>, Error>)-> ())
+    func opportunitiesDetails(id:String,completion: @escaping (Result<BaseResponse<opportunitiesDetails>, Error>)-> ())
 }
 
 class OpportuntiesManager:OpportuntiesNetworkable {
@@ -40,7 +40,7 @@ class OpportuntiesManager:OpportuntiesNetworkable {
         request(target: .completeOpportunities(id:id ,financialModel: financialModel, workType: workType, levelOfDifficulty: levelOfDifficulty, AmountOfTechnology: AmountOfTechnology, amountRasise: amountRasise, opportuntiesUrl: opportuntiesUrl, competitorsUrl: competitorsUrl, commomWays: commomWays, topAdvertisingChannel: topAdvertisingChannel, socialChannels: socialChannels, avgAnnualRevenu: avgAnnualRevenu, avgMonthlyCost: avgMonthlyCost, categories: categories, marketGraph: marketGraph,intrest:interest), completion: completion)
     }
     
-    func opportunitiesDetails(id: String, completion: @escaping (Result<BaseResponse<opportunitiesData>, Error>) -> ()) {
+    func opportunitiesDetails(id: String, completion: @escaping (Result<BaseResponse<opportunitiesDetails>, Error>) -> ()) {
         request(target: .opportunitiesDetails(id: id), completion: completion)
 
     }

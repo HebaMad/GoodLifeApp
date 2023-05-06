@@ -7,10 +7,17 @@
 
 import UIKit
 
+protocol CategoryReviewsDelegate: AnyObject {
+    func categoryReviewsDidChangeRating(_ cell: CategoryReviews, rating: Int)
+}
+
 class CategoryReviews: UITableViewCell , NibLoadableView {
 
     @IBOutlet weak var categoryRate: RatingControl!
     @IBOutlet weak var categoryName: UILabel!
+    
+    weak var delegate: CategoryReviewsDelegate?
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

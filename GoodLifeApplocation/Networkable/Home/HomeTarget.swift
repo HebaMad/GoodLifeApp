@@ -10,7 +10,7 @@ import Foundation
 import Moya
 enum HomeApiTarget:TargetType{
     
-    case Home(txt:String)
+    case Home
     case categoriesFiltering(mainCategoriesID:String,subCategoriesID:String,latitude:String,longitude:String,city:String)
     case getOpportunities(needTypeId:Int,intrest:Int)
     case oppourtinityDetails(opportunity_id:Int)
@@ -25,9 +25,7 @@ enum HomeApiTarget:TargetType{
     var path: String {
         switch self {
             
-        case .Home:return "userHomeScreenFilter"
-            
-
+        case .Home:return "userHomeScreen"
             
         case .categoriesFiltering:return "userHomeScreen"
             
@@ -58,12 +56,12 @@ enum HomeApiTarget:TargetType{
     
     var task: Task{
         switch self{
-        case .homescreen:
+        case .homescreen,.Home:
             return .requestPlain
         case .AddFundType:
             return .requestParameters(parameters: param, encoding: URLEncoding.httpBody)
 
-        case .Home,.categoriesFiltering,.getOpportunities,.oppourtinityDetails,.Filter:
+        case .categoriesFiltering,.getOpportunities,.oppourtinityDetails,.Filter:
             return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
         }
     }
@@ -89,8 +87,7 @@ enum HomeApiTarget:TargetType{
         
         switch self {
             
-        case .Home(let txt):
-            return ["txt" :txt ]
+ 
             
         case .categoriesFiltering(let mainCategoriesID,let subCategoriesID,let latitude,let longitude,let city):
             return ["main_category_id" : mainCategoriesID ,"sub_category_id":subCategoriesID,"latitude":latitude,"longitude":longitude,"city":city]

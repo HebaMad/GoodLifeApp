@@ -349,16 +349,13 @@ extension MapVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollection
 }
 
 extension MapVC :HomeDelegate{
-    func getOppourtinity(categories: [opportunitiesData]) {
-        
-    }
-    
-
-    func getMainScreenData(data: MainScreenData) { }
+    func getOpportunities(categories: Opportuntiesss) { }
     
     func getOppourtinityDetails(categories: OppourtinityDetails) {}
     
-    func getOppourtinity(categories: Oppourtinity) {}
+    func getMainScreenData(data: MainScreenData) {}
+    
+
     
     func getCategoriesFiltered(categories: Home) {
         latitudeList=[]

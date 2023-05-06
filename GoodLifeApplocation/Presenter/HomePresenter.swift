@@ -11,10 +11,9 @@ import Moya
 protocol HomeDelegate{
     
     func showAlerts(title:String,message:String)
-    func getCategories(categories:Home)
+    func getOpportunities(categories:Opportuntiesss)
 
     func getCategoriesFiltered(categories:Home)
-    func getOppourtinity(categories:[opportunitiesData])
     func getOppourtinityDetails(categories:OppourtinityDetails)
     func getMainScreenData(data:MainScreenData)
     
@@ -28,25 +27,25 @@ class HomePresenter:NSObject{
     
     var delegate :homeDelegate?
     
-    func getCategoriesData(searchTxt:String){
-        
-        HomeManager.shared.Home(txt: searchTxt) {  Response in
-            switch Response{
-                
-            case let .success(response):
-                if response.status == true{
-                    self.delegate?.getCategories(categories: response.data!)
-                    
-                    
-                }else{
-                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
-                }
-            case  .failure(_):
-                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
-            }
-        }
-        
-    }
+//    func getCategoriesData(searchTxt:String){
+//        
+//        HomeManager.shared.Home(txt: searchTxt) {  Response in
+//            switch Response{
+//                
+//            case let .success(response):
+//                if response.status == true{
+//                    self.delegate?.getCategories(categories: response.data!)
+//                    
+//                    
+//                }else{
+//                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
+//                }
+//            case  .failure(_):
+//                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
+//            }
+//        }
+//        
+//    }
 
     
     func categriesFailtered(mainCategoriesID:String,subCategoriesID:String,latitude:String,longitude:String,city:String){
@@ -89,6 +88,24 @@ class HomePresenter:NSObject{
             }
         }
         
+    }
+    
+    
+    func AllOpportunities(){
+        HomeManager.shared.Home { Response in
+            switch Response{
+                
+            case let .success(response):
+                if response.status == true{
+                    self.delegate?.getOpportunities(categories: response.data! )
+                    
+                }else{
+                    Alert.showErrorAlert(message: response.message!)
+                }
+            case  .failure(_):
+                Alert.showErrorAlert(message: "something wrong try again")
+            }
+        }
     }
 //    
 //    func filterPackages(investmentFrom:String,investmentTo:String,work_type:String,level_of_difficulty:String,amount_of_technology:String){

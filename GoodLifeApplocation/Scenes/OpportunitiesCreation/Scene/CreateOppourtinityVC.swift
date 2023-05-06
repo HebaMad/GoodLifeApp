@@ -239,6 +239,10 @@ extension CreateOppourtinityVC:UITextViewDelegate{
 }
 
 extension CreateOppourtinityVC:MainDelegate{
+    func opportunitiesDetails(data: opportunitiesDetails) {
+        
+    }
+    
     func getExploreMapData(data: ExploreMap) {}
     
     func showAlerts(title: String, message: String) {

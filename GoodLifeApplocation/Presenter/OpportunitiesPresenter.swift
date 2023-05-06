@@ -13,7 +13,6 @@ protocol OpportunitiesDelegate{
     func showAlerts(title:String,message:String)
     func getFundTypeData(data:FundType)
     func getChannels(data:RecommendedChannel)
-    func opportunitiesDetails(data:opportunitiesData)
     
 
     
@@ -61,23 +60,7 @@ class OpportunitiesPresenter:NSObject{
         }
     }
     
-    func getOpportunitiesDetails(opportunitiesId:String){
-        OpportuntiesManager.shared.opportunitiesDetails(id: opportunitiesId) { Response in
-            switch Response{
-                
-            case let .success(response):
-                if response.status == true{
-                    self.delegate?.opportunitiesDetails(data: response.data!)
-                }else{
-                    Alert.showErrorAlert(message: response.message ?? "")
-                }
-                
-            case .failure(_):
-                
-                Alert.showErrorAlert(message: "something wrong try again")
-            }
-        }
-    }
+
     
     
     func completeOpportunity(interest:String,id:Int,financialModel:[String],workType:String,levelOfDifficulty:String,AmountOfTechnology:String,amountRasise:String,opportuntiesUrl:String,competitorsUrl:[String],commomWays:[String],topAdvertisingChannel:[String],socialChannels:[String],avgAnnualRevenu:String,avgMonthlyCost:String,categories:[String],marketGraph:[String:String]=[:]){

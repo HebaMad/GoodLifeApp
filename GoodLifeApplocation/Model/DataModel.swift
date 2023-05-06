@@ -256,13 +256,15 @@ struct IdeaCreation:Decodable{
 }
 
 struct FeedbackCreation:Decodable{
-    let user_id:Int?
-    let title:String?
     let review:String?
-    let rate:String?
-    let created_at:String?
+    let opportunity_id:String?
+    let ratings:[RatingInfo]?
+    let user_id:Int?
     let id:Int?
+    let rate:String?
+
 }
+
 
 struct Ventures:Codable{
     let id:Int?
@@ -548,41 +550,39 @@ struct categoryData:Codable{
     
 }
 struct opportunitiesData:Codable{
-    
     let id:Int?
-    let title:String?
-    let sub_title:String?
-    let category:String?
-    let work_type:String?
-    let level_of_difficulty:String?
-    let amount_of_technology:String?
-    let amount_raise:String?
-    let interest:String?
-    let image:String?
-    let match:String?
-    let rate:Int?
-    let rate_count:Int?
-    let websites:String?
-    let status:String?
-    let created_at:String?
-    let models:String?
-    let plans:String?
-    let state:String?
+    let user_id:String?
+    let name:String?
     let city:String?
+    let state:String?
+    let title:String?
     let description:String?
     let representative:String?
     let tags:[String]?
-    let completion:Int?
     let rating:String?
     let email:String?
     let phone:String?
+    let status:String?
+    let completion:Int?
+    let created_at:String?
+    let rate:Int?
+    let rate_count:Int?
     let general:GeneralInfo?
     let marketing:MarketingInfo?
     let liturgical:LiturgicalInfo?
     let digital:DigitalInfo?
     let business_plan:BusinessPlanInfo?
     let feedbacks:[FeedbackInfo]?
+    let fund_types:[fund_typess]?
+    let match:String?
+
+}
+
+struct OpportunitiiiesD:Codable{
     
+    let opportunity:opportunitiesData?
+    let  matchingResult:Int?
+
 }
 
 struct FeedbackInfo:Codable{
@@ -689,4 +689,26 @@ struct fund_typess:Codable{
 struct Pivot:Codable{
     let opportunity_id:String?
     let fund_type_id:String?
+}
+
+struct Opportuntiesss:Decodable{
+    let opportunities:[opportunitiesData]?
+}
+
+struct opportunitiesDetails:Decodable{
+    let data:OpportunityDetails?
+    
+}
+struct OpportunityDetails:Codable{
+    let financial:financialInfo?
+    let marketing:MarketingInfo?
+    let liturgical:LiturgicalInfo?
+    let digital:DigitalInfo?
+    let businessPlan:BusinessPlanInfo?
+}
+
+
+struct financialInfo:Codable{
+    let average_annual_revenue:String?
+    let average_monthly_cost:String?
 }

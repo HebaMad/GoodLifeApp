@@ -21,6 +21,7 @@
                 <outlet property="addDocumentBtn" destination="TFc-1X-HUd" id="KKe-qj-uW8"/>
                 <outlet property="backBtn" destination="r2Y-nG-92E" id="1CP-Xf-3Ci"/>
                 <outlet property="categoryRateTable" destination="Nk5-Rp-yiQ" id="XLk-oY-eww"/>
+                <outlet property="categoryTableHeight" destination="0x9-rr-T0Z" id="6Y0-yn-hiT"/>
                 <outlet property="categoryTxt" destination="Gho-wA-NQy" id="KEC-Tg-wfA"/>
                 <outlet property="coverImage" destination="5e2-82-xG1" id="tEX-TU-1Cb"/>
                 <outlet property="nextBtn" destination="Zvb-sP-y1F" id="eCd-27-eUT"/>

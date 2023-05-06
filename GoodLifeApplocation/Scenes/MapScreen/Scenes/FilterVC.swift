@@ -160,27 +160,29 @@ extension FilterVC {
 }
 
 extension FilterVC:HomeDelegate{
-    func getOppourtinity(categories: [opportunitiesData]) {
-        
-    }
+
     
-    
-    func getMainScreenData(data: MainScreenData) {}
     func showAlerts(title: String, message: String) {}
-    func getCategories(categories: Home) {}
-    func getStandardCategoriesFiltering(categories: MainHomeCategories) {}
-    func getsubCategoriesFiltering(categories: SubHomeCategories) {}
+    
+    func getOpportunities(categories: Opportuntiesss) {}
+    
     func getCategoriesFiltered(categories: Home) {}
+    
     func getOppourtinityDetails(categories: OppourtinityDetails) {}
     
-    func getOppourtinity(categories: Oppourtinity) {
-        self.dismiss(animated: true) {
-            if let _delegate = self.onFilterDissmissed {
-                print(categories)
-//                _delegate.filteredData(data: categories)
-            }
-        }
-    }  
+    func getMainScreenData(data: MainScreenData) {}
+    
+
+    
+
+//    func getOppourtinity(categories: Oppourtinity) {
+//        self.dismiss(animated: true) {
+//            if let _delegate = self.onFilterDissmissed {
+//                print(categories)
+////                _delegate.filteredData(data: categories)
+//            }
+//        }
+//    }
 }
 
 extension FilterVC:RangeSeekSliderDelegate{

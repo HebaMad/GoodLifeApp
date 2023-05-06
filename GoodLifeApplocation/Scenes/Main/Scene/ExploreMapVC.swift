@@ -217,6 +217,10 @@ extension ExploreMapVC:UICollectionViewDataSource{
 }
 
 extension ExploreMapVC:MainDelegate{
+    func opportunitiesDetails(data: opportunitiesDetails) {
+        
+    }
+    
     func getExploreMapData(data: ExploreMap) {
         opportuntites=data.opportunities ?? []
     }

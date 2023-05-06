@@ -109,6 +109,10 @@ extension OpportunityListVC:UITableViewDataSource {
 
 
 extension OpportunityListVC:MainDelegate{
+    func opportunitiesDetails(data: opportunitiesDetails) {
+        
+    }
+    
     func getExploreMapData(data: ExploreMap) {
         
     }

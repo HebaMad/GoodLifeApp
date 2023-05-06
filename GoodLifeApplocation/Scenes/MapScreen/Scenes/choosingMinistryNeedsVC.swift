@@ -238,6 +238,10 @@ extension choosingMinistryNeedsVC:DataFiltered{
 }
 
 extension choosingMinistryNeedsVC:MainDelegate{
+    func opportunitiesDetails(data: opportunitiesDetails) {
+        
+    }
+    
     func showAlerts(title: String, message: String) {
         
     }

@@ -21,14 +21,14 @@ class SubscriptionCollectionViewCell: UICollectionViewCell,NibLoadableView   {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
     }
     
     func configureCell(viewModel:opportunitiesData){
 
-        titleTxt.text = viewModel.title?.html2Attributed?.string
+        titleTxt.text = viewModel.name
         financialModelTxt.text = viewModel.general?.financial_models?.html2Attributed?.string
-        matchesPercentageTxt.text = String(describing: viewModel.match ?? "") + " " + "Match"
+        matchesPercentageTxt.text = "\((viewModel.match?.replacingOccurrences(of: "%", with: "") ?? ""))" + "%" + " " + "Match"
         review.text = String(describing: viewModel.rate_count ?? 0)
 
         

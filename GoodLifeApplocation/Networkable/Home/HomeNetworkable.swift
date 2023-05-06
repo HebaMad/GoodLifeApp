@@ -9,7 +9,7 @@ import Foundation
 import Moya
 protocol HomeNetworkable:Networkable  {
 
-    func Home(txt:String,completion: @escaping (Result<BaseResponse<Home>, Error>)-> ())
+    func Home(completion: @escaping (Result<BaseResponse<Opportuntiesss>, Error>)-> ())
    
     func categoriesFiltering(mainCategoriesID:String,subCategoriesID:String,latitude:String,longitude:String,city:String,completion: @escaping (Result<BaseResponse<Home>, Error>)-> ())
     func getOpportunities(needTypeId:Int,interestId:Int,completion: @escaping (Result<BaseResponse<Oppourtinity>, Error>)-> ())
@@ -35,8 +35,8 @@ class HomeManager:HomeNetworkable{
         return generalActions
     }()
     
-    func Home(txt: String, completion: @escaping (Result<BaseResponse<Home>, Error>) -> ()) {
-        request(target: .Home(txt: txt), completion: completion)
+    func Home(completion: @escaping (Result<BaseResponse<Opportuntiesss>, Error>) -> ()) {
+        request(target: .Home, completion: completion)
     }
 
     func categoriesFiltering(mainCategoriesID: String, subCategoriesID: String,latitude:String,longitude:String,city:String, completion: @escaping (Result<BaseResponse<Home>, Error>) -> ()) {

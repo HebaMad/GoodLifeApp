@@ -162,7 +162,7 @@ Movie Night</string>
                                                             <constraint firstAttribute="width" constant="1" id="Kds-JI-cot"/>
                                                         </constraints>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   93% Match" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mI5-ri-enx">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   93% Match" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mI5-ri-enx">
                                                         <rect key="frame" x="84.5" y="2" width="71.5" height="17"/>
                                                         <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="10"/>
                                                         <color key="textColor" name="ButtonColor"/>
@@ -206,7 +206,7 @@ Movie Night</string>
                                     <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BaC-tD-s01">
                                         <rect key="frame" x="0.0" y="206" width="160" height="32"/>
                                         <subviews>
-                                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVg-fT-6eB" customClass="UIButtonDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVg-fT-6eB" customClass="UIButtonDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
                                                 <rect key="frame" x="10" y="3" width="140" height="26"/>
                                                 <color key="backgroundColor" name="ButtonColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>

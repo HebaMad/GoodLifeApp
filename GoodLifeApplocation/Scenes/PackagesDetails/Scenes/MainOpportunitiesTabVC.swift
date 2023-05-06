@@ -9,12 +9,14 @@ import UIKit
 import XLPagerTabStrip
 
 class MainOpportunitiesTabVC: ButtonBarPagerTabStripViewController {
+    var opportunityDetails:OpportunityDetails?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupPagerTab()
-        
+//        print(opportunityDetails)
+
     }
     
 

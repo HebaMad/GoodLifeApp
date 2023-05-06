@@ -7,16 +7,30 @@
 
 import UIKit
 class MainOpportuntiesTab:UIViewController {
-
+    var opportunityDetails:OpportunityDetails?
+    
+    @IBOutlet weak var DetailsContainer: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
+        setContainerVC()
+//        print(opportunityDetails)
     }
 
     @IBAction func backBtn(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
+    
+    func  setContainerVC(){
+        
+        self.DetailsContainer.subviews.first?.removeFromSuperview()
+        
+       let  vc=MainOpportunitiesTabVC()
+        vc.opportunityDetails=opportunityDetails
+        self.addChild(vc)
+        self.DetailsContainer.addSubview(vc.view)
+        vc.didMove(toParent: self)
+        vc.view.frame = self.DetailsContainer.bounds
+     }
     
 
 }

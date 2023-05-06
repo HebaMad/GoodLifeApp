@@ -8,7 +8,7 @@ import Foundation
 
 struct AppConfig {
      
-    static  let apiBaseUrl = "http://www.kenos.ventures/api/"
+    static  let apiBaseUrl = "http://kenos.ventures/api/"
     static let service="GoodLifeApp"
    
 }

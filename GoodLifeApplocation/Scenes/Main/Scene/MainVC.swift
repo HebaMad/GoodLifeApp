@@ -96,8 +96,20 @@ extension MainVC {
         
     }
     
+    @objc func moreDetailsBtnTapped(_ sender:UIButton){
+//      print(allOpportunities[sender.tag].id!)
+        print([sender.tag])
+        print(allOpportunities)
+        print(allOpportunities[sender.tag])
+
+        presenter.getOpportunitiesDetails(opportunitiesId: "\(allOpportunities[sender.tag].id)")
+        presenter.delegate=self
+
+      
+    }
+    
 }
-extension MainVC{
+extension MainVC {
     @objc func viewAllButton(_ sender:UIButton){
         
         switch sections[sender.tag] {
@@ -280,6 +292,8 @@ extension MainVC:UICollectionViewDataSource{
                 
                 let cell:SubscriptionCollectionViewCell=collectionView.dequeueReusableCell(for: indexPath)
                 cell.configureCell(viewModel: allOpportunities[indexPath.row])
+                cell.nextBtn.tag=indexPath.row
+                cell.nextBtn.addTarget(self, action: #selector(moreDetailsBtnTapped), for: .touchUpInside)
                 return cell
                 
             }
@@ -287,17 +301,7 @@ extension MainVC:UICollectionViewDataSource{
         }
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        switch sections[indexPath.section]{
-        case .Opportunities:
-            let vc = MainOpportuntiesTab.instantiate()
-            navigationController?.pushViewController(vc, animated: true)
-            
-        default:
-            print("")
-            
-        }
-    }
+
 }
 
 extension MainVC:UICollectionViewDelegateFlowLayout{
@@ -319,6 +323,15 @@ extension MainVC:UICollectionViewDelegateFlowLayout{
     
 }
 extension MainVC:MainDelegate{
+    func opportunitiesDetails(data: opportunitiesDetails) {
+        let vc = MainOpportuntiesTab.instantiate()
+        print(data.data)
+//        vc.opportunityDetails=data.data
+//        navigationController?.pushViewController(vc, animated: true)
+//        print(data.data)
+
+    }
+    
     func getExploreMapData(data: ExploreMap) {
         opportuntites=data.opportunities ?? []
         self.hideLoading()

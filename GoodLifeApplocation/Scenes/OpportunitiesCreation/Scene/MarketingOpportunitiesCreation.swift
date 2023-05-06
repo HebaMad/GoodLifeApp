@@ -108,17 +108,17 @@ class MarketingOpportunitiesCreation: UIViewController {
 
 }
 
-
-
-
 extension MarketingOpportunitiesCreation{
+    
     func makeParameter(key:[String],value:[String]){
+        
         marketGraph=[:]
         for indx in 0 ..< key.count{
             marketGraph["marketing_graphs[\(indx)][title]"]=key[indx]
             marketGraph["marketing_graphs[\(indx)][percentage]"]=value[indx]
 
         }
+        
     }
     
     func cleardata(){
