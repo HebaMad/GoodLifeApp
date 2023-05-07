@@ -9,7 +9,7 @@ import UIKit
 
 class websiteCompetitor: UITableViewCell,NibLoadableView {
 
-    
+    @IBOutlet weak var urlTxt: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,6 +19,10 @@ class websiteCompetitor: UITableViewCell,NibLoadableView {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
+    }
+    
+    func configureCell(url:String){
+        urlTxt.text = url
     }
     
 }

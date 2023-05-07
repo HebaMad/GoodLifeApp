@@ -100,9 +100,9 @@ extension MainVC {
 //      print(allOpportunities[sender.tag].id!)
         print([sender.tag])
         print(allOpportunities)
-        print(allOpportunities[sender.tag])
+        print(allOpportunities[sender.tag].id ?? 0)
 
-        presenter.getOpportunitiesDetails(opportunitiesId: "\(allOpportunities[sender.tag].id)")
+        presenter.getOpportunitiesDetails(opportunitiesId: String(describing: allOpportunities[sender.tag].id ?? 0))
         presenter.delegate=self
 
       
@@ -325,10 +325,9 @@ extension MainVC:UICollectionViewDelegateFlowLayout{
 extension MainVC:MainDelegate{
     func opportunitiesDetails(data: opportunitiesDetails) {
         let vc = MainOpportuntiesTab.instantiate()
-        print(data.data)
-//        vc.opportunityDetails=data.data
-//        navigationController?.pushViewController(vc, animated: true)
-//        print(data.data)
+        print(data)
+        vc.opportunityDetails=data
+        navigationController?.pushViewController(vc, animated: true)
 
     }
     

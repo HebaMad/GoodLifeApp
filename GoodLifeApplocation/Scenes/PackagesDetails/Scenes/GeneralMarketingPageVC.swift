@@ -17,7 +17,7 @@ class GeneralMarketingPageVC: UIViewController, IndicatorInfoProvider {
     @IBOutlet weak var marketingTable: UITableView!
     @IBOutlet weak var levelOfDifficuilty: UILabel!
     @IBOutlet weak var footerTitleTxt: UILabel!
-    
+    var marketing:MarketingInfo?
     //MARK: - Properties
     
     var itemInfo: IndicatorInfo = "Marketing"
@@ -34,8 +34,9 @@ class GeneralMarketingPageVC: UIViewController, IndicatorInfoProvider {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        graph=marketing?.graphs ?? []
         setupGrphData()
-  
+
         
     }
     
@@ -56,13 +57,13 @@ class GeneralMarketingPageVC: UIViewController, IndicatorInfoProvider {
     func setupGrphData(){
         for x in 0 ..< graph.count{
             
-            targetMarkets.append(graph[x].name ?? "")
-            unitsSold.append(Double(graph[x].percent ?? "") ?? 0.0)
+            targetMarkets.append(graph[x].title ?? "")
+            unitsSold.append(Double(graph[x].percentage ?? "") ?? 0.0)
 
         }
         setupPieChart(dataPoints: targetMarkets, values: unitsSold)
         setupTableview()
-        levelOfDifficuilty.text = "       " + footerValue
+        levelOfDifficuilty.text = "       "
         footerTitleTxt.text = footerTitle
     }
     //MARK: - setup pie Chart

@@ -7,13 +7,13 @@
 
 import UIKit
 class MainOpportuntiesTab:UIViewController {
-    var opportunityDetails:OpportunityDetails?
+    var opportunityDetails:opportunitiesDetails?
     
     @IBOutlet weak var DetailsContainer: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         setContainerVC()
-//        print(opportunityDetails)
+        print(opportunityDetails)
     }
 
     @IBAction func backBtn(_ sender: Any) {

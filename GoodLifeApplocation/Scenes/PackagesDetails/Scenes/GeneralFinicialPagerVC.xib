@@ -17,6 +17,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GeneralFinicialPagerVC" customModule="GoodLifeApplocation" customModuleProvider="target">
             <connections>
+                <outlet property="expectedEarningTxt" destination="zcv-Hp-UZT" id="ik0-j6-k7g"/>
                 <outlet property="firstTopicCost" destination="3M4-K5-6jC" id="3FT-8T-vnM"/>
                 <outlet property="firstTopicTitle" destination="Vhp-XR-6Kt" id="836-P7-BWd"/>
                 <outlet property="secondTopicCost" destination="XEy-cJ-OeS" id="t97-TC-xnz"/>

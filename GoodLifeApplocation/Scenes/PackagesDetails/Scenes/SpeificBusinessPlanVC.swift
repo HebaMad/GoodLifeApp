@@ -30,7 +30,7 @@ class SpeificBusinessPlanVC: UIViewController {
     var dataEntries: [ChartDataEntry] = []
     var itemNumber = 0
     var itemInfo: IndicatorInfo = "BusinessPlan"
-    
+    var businessPlan:BusinessPlanInfo?
     //MARK: - Life cycle
 
     override func viewDidLoad() {
@@ -44,8 +44,8 @@ class SpeificBusinessPlanVC: UIViewController {
     func setupGrphData(){
         for x in 0 ..< graph.count{
             
-            targetMarkets.append(graph[x].name ?? "")
-            unitsSold.append(Double(graph[x].percent ?? "") ?? 0.0)
+            targetMarkets.append(graph[x].title ?? "")
+            unitsSold.append(Double(graph[x].percentage ?? "") ?? 0.0)
 
         }
         setupPieChart(dataPoints: targetMarkets, values: unitsSold)

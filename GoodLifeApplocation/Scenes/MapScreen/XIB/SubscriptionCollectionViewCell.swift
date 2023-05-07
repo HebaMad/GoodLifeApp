@@ -25,10 +25,10 @@ class SubscriptionCollectionViewCell: UICollectionViewCell,NibLoadableView   {
     }
     
     func configureCell(viewModel:opportunitiesData){
-
+        print((Int((viewModel.match?.replacingOccurrences(of: "%", with: "").replacingOccurrences(of: ".", with: "")) ?? "") ?? 0)/100)
         titleTxt.text = viewModel.name
         financialModelTxt.text = viewModel.general?.financial_models?.html2Attributed?.string
-        matchesPercentageTxt.text = "\((viewModel.match?.replacingOccurrences(of: "%", with: "") ?? ""))" + "%" + " " + "Match"
+        matchesPercentageTxt.text = String(describing:(Int((viewModel.match?.replacingOccurrences(of: "%", with: "").replacingOccurrences(of: ".", with: "")) ?? "") ?? 0)/100) + "%" + " " + "Match"
         review.text = String(describing: viewModel.rate_count ?? 0)
 
         

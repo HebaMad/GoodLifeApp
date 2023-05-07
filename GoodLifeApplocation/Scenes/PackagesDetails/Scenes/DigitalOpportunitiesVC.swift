@@ -10,13 +10,16 @@ import XLPagerTabStrip
 class DigitalOpportunitiesVC: UIViewController  {
     
     
+    @IBOutlet weak var opportunityUrl: UILabel!
     
     @IBOutlet weak var competitorWebsitesTableview: UITableView!
     var itemInfo: IndicatorInfo = "Digital"
-
+    var digital:DigitalInfo?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableview()
+        opportunityUrl.text=digital?.url ?? ""
 
     }
     
@@ -39,11 +42,12 @@ extension DigitalOpportunitiesVC:UITableViewDelegate{}
 
 extension DigitalOpportunitiesVC:UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        5
+        return digital?.competitors?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:websiteCompetitor=tableView.dequeueReusableCell(for: indexPath)
+        cell.configureCell(url: digital?.competitors?[indexPath.row] ?? "")
         return cell
     }
     

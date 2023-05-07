@@ -932,6 +932,7 @@ Night</string>
                     </view>
                     <connections>
                         <outlet property="competitorWebsitesTableview" destination="fHZ-xD-eKU" id="Dlr-PG-jSR"/>
+                        <outlet property="opportunityUrl" destination="IlP-xH-ipU" id="9zP-r1-MGD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uEd-Dm-Zc1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1814,22 +1815,22 @@ Night</string>
                                                 <rect key="frame" x="0.0" y="671.5" width="374" height="110"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgQ-Wo-lgK">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="21.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="27"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How would you rate this opportunity?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cg-yZ-jr5">
-                                                        <rect key="frame" x="0.0" y="31.5" width="374" height="17"/>
+                                                        <rect key="frame" x="0.0" y="37" width="374" height="17"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zhh-8p-m0I" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="58.5" width="374" height="51.5"/>
+                                                        <rect key="frame" x="0.0" y="64" width="374" height="46"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OW1-ck-r5s" customClass="RatingControl" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                                                <rect key="frame" x="4" y="4" width="366" height="43.5"/>
+                                                                <rect key="frame" x="4" y="4" width="366" height="38"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <color key="tintColor" name="review star"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -2178,6 +2179,7 @@ Night</string>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="eyz-Dv-p6h" secondAttribute="trailing" id="KM6-xP-p4I"/>
                                                     <constraint firstAttribute="bottom" secondItem="eyz-Dv-p6h" secondAttribute="bottom" id="QBf-w0-DAm"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="bgY-bF-iKQ"/>
                                                     <constraint firstItem="eyz-Dv-p6h" firstAttribute="leading" secondItem="Y1b-CH-50I" secondAttribute="leading" id="emI-mM-zf5"/>
                                                     <constraint firstItem="eyz-Dv-p6h" firstAttribute="top" secondItem="Y1b-CH-50I" secondAttribute="top" id="sSf-LG-vQX"/>
                                                     <constraint firstAttribute="height" constant="150" id="zp9-EQ-Byh"/>
@@ -2451,17 +2453,14 @@ Night</string>
                                 <rect key="frame" x="0.0" y="48" width="414" height="814"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="xQk-DZ-Rrl">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="880"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="830"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xsg-nA-9d8" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                                <rect key="frame" x="12" y="12" width="390" height="200"/>
+                                                <rect key="frame" x="12" y="12" width="390" height="150"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AZl-Lf-lzI" customClass="PieChartView" customModule="Charts">
-                                                        <rect key="frame" x="0.0" y="0.0" width="390" height="200"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="390" height="150"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="200" id="u2w-qK-1fg"/>
-                                                        </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <real key="value" value="10"/>
@@ -2480,8 +2479,8 @@ Night</string>
                                                     <constraint firstAttribute="trailing" secondItem="AZl-Lf-lzI" secondAttribute="trailing" id="UQN-8u-bbp"/>
                                                     <constraint firstItem="AZl-Lf-lzI" firstAttribute="top" secondItem="xsg-nA-9d8" secondAttribute="top" id="Z4a-7L-Q8v"/>
                                                     <constraint firstAttribute="bottom" secondItem="AZl-Lf-lzI" secondAttribute="bottom" id="h55-eT-kx8"/>
-                                                    <constraint firstAttribute="height" constant="200" id="r2Z-rB-4sm"/>
                                                     <constraint firstItem="AZl-Lf-lzI" firstAttribute="leading" secondItem="xsg-nA-9d8" secondAttribute="leading" id="yu6-Ug-Rz4"/>
+                                                    <constraint firstAttribute="height" constant="150" id="z0W-Y4-hxS"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="startColor">
@@ -2502,7 +2501,7 @@ Night</string>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="150" estimatedRowHeight="150" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OgR-Ws-3Qb">
-                                                <rect key="frame" x="12" y="224" width="390" height="648"/>
+                                                <rect key="frame" x="12" y="174" width="390" height="648"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="648" id="50f-bu-pQA"/>
@@ -2626,17 +2625,14 @@ Night</string>
                                 <rect key="frame" x="0.0" y="48" width="414" height="814"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="7dB-79-1P6">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="880"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="830"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ok8-Cm-HNp" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                                <rect key="frame" x="12" y="12" width="390" height="200"/>
+                                                <rect key="frame" x="12" y="12" width="390" height="150"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e1p-nl-CPF" customClass="PieChartView" customModule="Charts">
-                                                        <rect key="frame" x="0.0" y="0.0" width="390" height="200"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="390" height="150"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="200" id="Ias-Va-ohl"/>
-                                                        </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <real key="value" value="10"/>
@@ -2647,9 +2643,9 @@ Night</string>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstItem="e1p-nl-CPF" firstAttribute="top" secondItem="ok8-Cm-HNp" secondAttribute="top" id="5a1-I0-ypK"/>
-                                                    <constraint firstAttribute="height" constant="200" id="8zw-wc-7L7"/>
                                                     <constraint firstAttribute="bottom" secondItem="e1p-nl-CPF" secondAttribute="bottom" id="PfU-CU-RAg"/>
                                                     <constraint firstAttribute="trailing" secondItem="e1p-nl-CPF" secondAttribute="trailing" id="Q6G-ay-i47"/>
+                                                    <constraint firstAttribute="height" constant="150" id="lck-Lw-PrO"/>
                                                     <constraint firstItem="e1p-nl-CPF" firstAttribute="leading" secondItem="ok8-Cm-HNp" secondAttribute="leading" id="mLD-Sv-Qib"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
@@ -2671,7 +2667,7 @@ Night</string>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="140" estimatedRowHeight="140" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IXg-GT-Pxw">
-                                                <rect key="frame" x="12" y="224" width="390" height="648"/>
+                                                <rect key="frame" x="12" y="174" width="390" height="648"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="648" id="XB0-zR-sy1"/>
@@ -3596,13 +3592,13 @@ Night</string>
             <size key="intrinsicContentSize" width="22" height="22"/>
         </designable>
         <designable name="umm-WU-gla">
-            <size key="intrinsicContentSize" width="142.5" height="34"/>
+            <size key="intrinsicContentSize" width="106" height="19.5"/>
         </designable>
         <designable name="ytq-pp-ACn">
             <size key="intrinsicContentSize" width="22.5" height="21.5"/>
         </designable>
         <designable name="z2r-d2-GAm">
-            <size key="intrinsicContentSize" width="135" height="34"/>
+            <size key="intrinsicContentSize" width="134.5" height="19.5"/>
         </designable>
     </designables>
     <resources>

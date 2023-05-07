@@ -9,13 +9,13 @@ import UIKit
 import XLPagerTabStrip
 
 class MainOpportunitiesTabVC: ButtonBarPagerTabStripViewController {
-    var opportunityDetails:OpportunityDetails?
+    var opportunityDetails:opportunitiesDetails?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupPagerTab()
-//        print(opportunityDetails)
+        print(opportunityDetails)
 
     }
     
@@ -44,20 +44,25 @@ class MainOpportunitiesTabVC: ButtonBarPagerTabStripViewController {
     
     
             let first = GeneralFinicialPagerVC()
+            first.data=opportunityDetails?.financial
                  first.itemInfo = "Financial Model"
     
     
             let second = GeneralMarketingPageVC.instantiate()
+            second.marketing=opportunityDetails?.marketing
                 second.itemInfo = "Marketing"
     
             let third = GeneralLiturgicalPageVC.instantiate()
+            third.ligutrical=opportunityDetails?.liturgical
             third.itemInfo = "Liturgical"
     
     
             let fourth = DigitalOpportunitiesVC.instantiate()
+            fourth.digital=opportunityDetails?.digital
                 fourth.itemInfo = "Digital"
     
             let fifth = SpeificBusinessPlanVC()
+            fifth.businessPlan=opportunityDetails?.businessPlan
                 fifth.itemInfo = "Business Plans"
     
             return [first,second,third,fourth,fifth]

@@ -104,8 +104,8 @@ struct GeneralOppourtinity:Codable{
 }
 struct Graph: Codable {
     
-    let name:String?
-    let percent:String?
+    let title:String?
+    let percentage:String?
 }
 
 struct GeneralOppourtinityDetails: Codable {
@@ -695,11 +695,8 @@ struct Opportuntiesss:Decodable{
     let opportunities:[opportunitiesData]?
 }
 
+
 struct opportunitiesDetails:Decodable{
-    let data:OpportunityDetails?
-    
-}
-struct OpportunityDetails:Codable{
     let financial:financialInfo?
     let marketing:MarketingInfo?
     let liturgical:LiturgicalInfo?

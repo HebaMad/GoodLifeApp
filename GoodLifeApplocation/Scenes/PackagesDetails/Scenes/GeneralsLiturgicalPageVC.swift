@@ -45,8 +45,8 @@ class GeneralsLiturgicalPageVC: UIViewController ,IndicatorInfoProvider {
     func setupGrphData(){
         for x in 0 ..< graph.count{
             
-            targetMarkets.append(graph[x].name ?? "")
-            unitsSold.append(Double(graph[x].percent ?? "") ?? 0.0)
+            targetMarkets.append(graph[x].title ?? "")
+            unitsSold.append(Double(graph[x].percentage ?? "") ?? 0.0)
             
         }
         setupPieChart(dataPoints:targetMarkets , values:unitsSold )
