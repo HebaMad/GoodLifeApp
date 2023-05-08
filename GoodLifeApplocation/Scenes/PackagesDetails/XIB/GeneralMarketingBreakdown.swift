@@ -22,10 +22,9 @@ class GeneralMarketingBreakdown: UITableViewCell,NibLoadableView {
 
     }
     
-    func configureCell(item:GeneralOppourtinityDetails,id:Int){
-        
-        titleTxt.text = item.title ?? ""
-        Description.text = item.details ?? ""
+    func configureCell(description:String){
+                Description.text = description
+        Description.textColor = .black
         
     }
     

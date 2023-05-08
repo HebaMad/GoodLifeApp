@@ -267,10 +267,10 @@ extension choosingMinistryNeedsVC:MainDelegate{
         
         UserDefaults.standard.set(data, forKey:"oppourtinityID")
         
-        self.dismiss(animated: true) {
-            if let _delegate = self.onFilterDissmissed{
-//                _delegate.filteredData(data:data)
-            }}
+//        self.dismiss(animated: true) {
+//            if let _delegate = self.onFilterDissmissed{
+////                _delegate.filteredData(data:data)
+//            }}
     }
     
     

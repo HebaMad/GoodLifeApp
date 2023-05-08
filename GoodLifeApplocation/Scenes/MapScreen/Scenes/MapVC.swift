@@ -349,6 +349,10 @@ extension MapVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollection
 }
 
 extension MapVC :HomeDelegate{
+    func getOpportunitiesFiltering(Opportunities: Opportuntiesss) {
+        
+    }
+    
     func getOpportunities(categories: Opportuntiesss) { }
     
     func getOppourtinityDetails(categories: OppourtinityDetails) {}

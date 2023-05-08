@@ -26,6 +26,11 @@ class ExploreMapVC: UIViewController {
     var opportuntites:[opportunitiesData]=[]
     var generalFilteringId=0
     var specificFilteringId=0
+    var latitude:Double = UserDefaults.standard.double(forKey: "lat")
+    var longitude:Double = UserDefaults.standard.double(forKey: "long")
+    var city = ""
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print(categories)
@@ -89,6 +94,32 @@ class ExploreMapVC: UIViewController {
         
     }
     
+    
+    func setupMap(){
+
+        
+        mapView.delegate=self
+                LocationManager.shared.getLocation { [self] location, error in
+                let center = CLLocationCoordinate2DMake((location?.coordinate.latitude) ?? latitude , (location?.coordinate.longitude) ?? longitude)
+                    latitude=location?.coordinate.latitude ?? 0.0
+                    longitude=location?.coordinate.longitude ?? 0.0
+                UserDefaults.standard.set(location?.coordinate.latitude,forKey: "lat")
+                UserDefaults.standard.set(location?.coordinate.longitude,forKey: "long")
+                    LocationManager.shared.getAddressFromLatLon(pdblLatitude: "\(self.latitude)", withLongitude: "\(self.longitude)") { status, mapaddress, mapcountry in
+                     
+                        self.city = mapcountry ?? ""
+
+                    }
+                
+                    
+                let span = MKCoordinateSpan(latitudeDelta:20, longitudeDelta: 20)
+                let region = MKCoordinateRegion(center: center, span: span)
+                self.mapView.region = region
+            }
+//                specificFilterCollectionview.isHidden = true
+
+    }
+    
 }
 
 extension ExploreMapVC{
@@ -134,7 +165,7 @@ extension ExploreMapVC:UICollectionViewDataSource{
             
             return generalFiltering.count
             
-        } else if collectionView == specificFilterCollectionview{
+        } else if collectionView == specificFilterCollectionview {
             
             return specificFiltering.count
             
@@ -172,8 +203,11 @@ extension ExploreMapVC:UICollectionViewDataSource{
         }
     }
     
+    
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if collectionView == categoriesCollectionview{
+        if collectionView == categoriesCollectionview {
+            
             let cell = collectionView.cellForItem(at: indexPath) as! HobbiesCell
             cell.hobbyView.layer.borderColor = UIColor(named: "BgColor")?.cgColor
             cell.hobbiesTitle.textColor = UIColor(named: "BgColor")
@@ -183,11 +217,13 @@ extension ExploreMapVC:UICollectionViewDataSource{
             needTypeID=categories[indexPath.row].id ?? 0
             
         }else if collectionView == generalFilterCollectionview {
+            
             generalFilteringId=generalFiltering[indexPath.row].id ?? 0
             presenter.mapScreenData(fundTypeId: "", mainCategoryId: String(describing:generalFilteringId), subCategoryId:"", interest: "")
             presenter.delegate=self
             
         }else{
+            
             specificFilteringId=specificFiltering[indexPath.row].id ?? 0
             presenter.mapScreenData(fundTypeId: "", mainCategoryId: String(describing:generalFilteringId), subCategoryId: String(describing: specificFilteringId), interest: "")
             presenter.delegate=self
@@ -216,18 +252,51 @@ extension ExploreMapVC:UICollectionViewDataSource{
 //    }
 }
 
-extension ExploreMapVC:MainDelegate{
-    func opportunitiesDetails(data: opportunitiesDetails) {
+
+
+
+extension ExploreMapVC:MKMapViewDelegate{
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        print(view.annotation!.title!!)
+//        getAnnotationId(title:view.annotation!.title!!)
+        let controller = choosingMinistryNeedsVC()
+        controller.needTypeID = categoryMainId
         
+        let sheetController = SheetViewController(
+            controller: controller,
+            //                sizes: [ .intrinsic , .percent(0.80), .fixed(600), .intrinsic])
+            sizes: [ .marginFromTop(480), .percent(0.75), .intrinsic])
+//        controller.onFilterDissmissed = self
+        
+        self.present(sheetController, animated: false, completion: nil)
     }
+    
+    
+}
+
+
+extension ExploreMapVC {
+//    func getAnnotationId(title:String){
+//        for indx in 0 ..< mainNeedType.count{
+//            if mainNeedType[indx].name == title {
+//                UserDefaults.standard.set(mainNeedType[indx].id, forKey: "id")
+//                break
+//            }
+//        }
+//    }
+}
+
+extension ExploreMapVC:MainDelegate{
+    
+    func opportunitiesDetails(data: opportunitiesDetails) {}
     
     func getExploreMapData(data: ExploreMap) {
         opportuntites=data.opportunities ?? []
     }
     
-    func showAlerts(title: String, message: String) { }
+    func showAlerts(title: String, message: String) {}
     
-    func getMainScreenData(data: MainScreenData) { }
+    func getMainScreenData(data: MainScreenData) {}
     
     func getOpportunitiesData(data: ListOpportunities) {}
     
@@ -241,7 +310,6 @@ extension ExploreMapVC:MainDelegate{
         print(generalFiltering)
         generalFilterCollectionview.reloadData()
     }
-    
     
     
 }

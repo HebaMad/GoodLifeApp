@@ -147,7 +147,9 @@ extension FilterVC {
                 let AmountOfTechnology = try AmountOfTechnologyTxt.validatedText(validationType: .requiredField(field: "Select Amount Of Technology options"))
                 let LevelOfDifficulty = try LevelOfDifficultyTxt.validatedText(validationType: .requiredField(field: "Select monthly revenu options"))
                 let timeCommitment = try timeCommitmentTxt.validatedText(validationType: .requiredField(field: "Select time of commitment options"))
-//            presenter.filterPackages(investmentFrom: "\(minInvestmentValue*1000)", investmentTo: "\(maxInvestmentValue*1000)", work_type: timeCommitment.lowercased(), level_of_difficulty: LevelOfDifficulty.lowercased(), amount_of_technology: AmountOfTechnology.lowercased())
+            
+            presenter.opportunityFiltering(invest_from:"\(minInvestmentValue*1000)",invest_to: "\(maxInvestmentValue*1000)" , time_commitment: timeCommitment.lowercased(), level_of_difficulty: LevelOfDifficulty.lowercased(), amount_of_technology: AmountOfTechnology.lowercased())
+
                 presenter.delegate=self
               
         }catch{
@@ -160,6 +162,15 @@ extension FilterVC {
 }
 
 extension FilterVC:HomeDelegate{
+    func getOpportunitiesFiltering(Opportunities: Opportuntiesss) {
+        self.dismiss(animated: true) {
+            if let _delegate = self.onFilterDissmissed {
+                _delegate.filteredData(data: Opportunities.opportunities ?? [])
+            }
+        }
+        
+    }
+    
 
     
     func showAlerts(title: String, message: String) {}
@@ -175,14 +186,9 @@ extension FilterVC:HomeDelegate{
 
     
 
-//    func getOppourtinity(categories: Oppourtinity) {
-//        self.dismiss(animated: true) {
-//            if let _delegate = self.onFilterDissmissed {
-//                print(categories)
-////                _delegate.filteredData(data: categories)
-//            }
-//        }
-//    }
+    func getOppourtinity(categories: Oppourtinity) {
+
+    }
 }
 
 extension FilterVC:RangeSeekSliderDelegate{

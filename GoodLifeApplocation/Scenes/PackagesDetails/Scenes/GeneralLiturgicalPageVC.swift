@@ -20,7 +20,6 @@ class GeneralLiturgicalPageVC: UIViewController, IndicatorInfoProvider{
     var targetMarkets:[String] = []
     var unitsSold:[Double] = []
     var dataEntries: [ChartDataEntry] = []
-    var item:[GeneralOppourtinityDetails]=[]
     var graph:[Graph]=[]
     var ligutrical:LiturgicalInfo?
 
@@ -118,13 +117,13 @@ extension GeneralLiturgicalPageVC:Storyboarded{
 extension GeneralLiturgicalPageVC:UITableViewDelegate{}
 extension GeneralLiturgicalPageVC:UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        item.count
+        ligutrical?.common_ways?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:GeneralMarketingBreakdown = tableView.dequeueReusableCell(for: indexPath)
 //        cell.approachStackview.isHidden = true
-        cell.configureCell(item: item[indexPath.row],id:indexPath.row)
+        cell.configureCell(description: ligutrical?.common_ways?[indexPath.row] ?? "")
         return cell
     }
     
