@@ -60,7 +60,7 @@ extension GeneralFinicialPagerVC{
         
         firstTopicCost.text =  fmt.string(from: (Float((data?.average_annual_revenue ?? ""))!/1000) as NSNumber)!  + " " + "K"
         secondTopicCost.text = fmt.string(from: Float((data?.average_monthly_cost ?? ""))!/1000 as NSNumber)!  + " " + "K"
-
+        expectedEarningTxt.text = fmt.string(from: Float((data?.expected_earning ?? ""))!/1000 as NSNumber)!  + " " + "K"
         
         let earning = (Float(data?.average_annual_revenue ?? "") ?? 0.0)  + (Float((data?.average_monthly_cost ?? "")) ?? 0.0)
         

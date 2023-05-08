@@ -169,6 +169,10 @@ extension ReviewExperienceVC:MenuDelegate{
 
 
 extension ReviewExperienceVC : HomeDelegate {
+    func getOpportunitiesFiltering(Opportunities: Opportuntiesss) {
+        
+    }
+    
     func getCategoriesFiltered(categories: Home) { }
     
     func getMainScreenData(data: MainScreenData) { }
