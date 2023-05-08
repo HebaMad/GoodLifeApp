@@ -11,8 +11,7 @@ import Moya
 protocol HomeDelegate{
     
     func showAlerts(title:String,message:String)
-    func getOpportunities(categories:Opportuntiesss)
-
+    func getOpportunitiesFiltering(Opportunities:Opportuntiesss)
     func getCategoriesFiltered(categories:Home)
     func getOppourtinityDetails(categories:OppourtinityDetails)
     func getMainScreenData(data:MainScreenData)
@@ -97,7 +96,7 @@ class HomePresenter:NSObject{
                 
             case let .success(response):
                 if response.status == true{
-                    self.delegate?.getOpportunities(categories: response.data! )
+                    self.delegate?.getOpportunitiesFiltering(Opportunities: response.data! )
                     
                 }else{
                     Alert.showErrorAlert(message: response.message!)
@@ -107,26 +106,27 @@ class HomePresenter:NSObject{
             }
         }
     }
-//    
-//    func filterPackages(investmentFrom:String,investmentTo:String,work_type:String,level_of_difficulty:String,amount_of_technology:String){
-//        HomeManager.shared.Filter(investmentFrom: investmentFrom, investmentTo: investmentTo, work_type: work_type, level_of_difficulty: level_of_difficulty, amount_of_technology: amount_of_technology) { Response in
-//            
-//            switch Response{
-//                
-//            case let .success(response):
-//                if response.status == true{
-//                    self.delegate?.getOppourtinity(categories: response.data!)
-//                    
-//                }else{
-//                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
-//                }
-//            case  .failure(_):
-//                
-//                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
-//            }
-//            
-//        }
-//    }
+    
+    
+    func opportunityFiltering(invest_from:String,invest_to:String,time_commitment:String,level_of_difficulty:String,amount_of_technology:String){
+        HomeManager.shared.opportunityfiltering(invest_from:invest_from,invest_to:invest_to, time_commitment: time_commitment, level_of_difficulty: level_of_difficulty, amount_of_technology: amount_of_technology) { Response in
+            
+            switch Response{
+                
+            case let .success(response):
+                if response.status == true{
+                    self.delegate?.getOpportunitiesFiltering(Opportunities: response.data!)
+                    
+                }else{
+                    self.delegate?.showAlerts(title:"Failure", message: response.message ?? "")
+                }
+            case  .failure(_):
+                
+                self.delegate?.showAlerts(title:"Failure", message: "something wrong try again")
+            }
+            
+        }
+    }
     
 
     

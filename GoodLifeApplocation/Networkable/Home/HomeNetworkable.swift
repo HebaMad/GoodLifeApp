@@ -17,6 +17,7 @@ protocol HomeNetworkable:Networkable  {
     func Filter(investmentFrom:String,investmentTo:String,work_type:String,level_of_difficulty:String,amount_of_technology:String,completion: @escaping (Result<BaseResponse<Oppourtinity>, Error>)-> ())
     
     func  AddFundType(name:String,main_category_id:String,sub_category_id:String,latitude:String,longitude:String,city:String,default_need:String,completion: @escaping (Result<BaseResponse<MainCategories>, Error>)-> ())
+    func opportunityfiltering(invest_from:String,invest_to:String,time_commitment:String,level_of_difficulty:String,amount_of_technology:String,completion: @escaping (Result<BaseResponse<Opportuntiesss>, Error>)-> ())
     
     func homescreen(completion: @escaping (Result<BaseResponse<MainScreenData>, Error>)-> ())
     
@@ -24,7 +25,6 @@ protocol HomeNetworkable:Networkable  {
 
 class HomeManager:HomeNetworkable{
 
-    
  
     typealias targetType = HomeApiTarget
 
@@ -60,6 +60,11 @@ class HomeManager:HomeNetworkable{
     func homescreen(completion: @escaping (Result<BaseResponse<MainScreenData>, Error>) -> ()) {
         request(target: .homescreen, completion: completion)
     }
+    func opportunityfiltering(invest_from:String,invest_to:String, time_commitment: String, level_of_difficulty: String, amount_of_technology: String, completion: @escaping (Result<BaseResponse<Opportuntiesss>, Error>) -> ()) {
+        request(target: .opportunityfiltering(invest_from:invest_from,invest_to:invest_to, time_commitment: time_commitment, level_of_difficulty: level_of_difficulty, amount_of_technology: amount_of_technology), completion: completion)
+    }
+    
+
     
 
     
