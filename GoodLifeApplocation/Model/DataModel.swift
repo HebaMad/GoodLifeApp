@@ -625,6 +625,7 @@ struct LiturgicalInfo:Codable{
     let id:Int?
     let opportunity_id:String?
     let graphs:[Graph]?
+    let common_ways:[String]?
     
 }
 struct MarketingInfo:Codable{
@@ -708,4 +709,5 @@ struct opportunitiesDetails:Decodable{
 struct financialInfo:Codable{
     let average_annual_revenue:String?
     let average_monthly_cost:String?
+    let expected_earning:String?
 }
