@@ -632,9 +632,13 @@ struct MarketingInfo:Codable{
     let id:Int?
     let opportunity_id:String?
     let graphs:[Graph]?
-    let top_advertising_platforms:String?
-    let recommended_social_channels:String?
+    let marketing_breakdown:[MarketingBreakdown]?
+
     
+}
+struct MarketingBreakdown:Codable{
+    let title:String?
+    let value:String?
 }
 
 struct GeneralInfo:Codable{
@@ -671,15 +675,15 @@ struct sliderData:Codable{
     
 }
 
-struct ExploreMap : Decodable{
+struct ExploreMap : Decodable {
     let opportunities:[opportunitiesData]?
     
 }
 
-struct FundTyps:Decodable{
+struct FundTyps:Decodable {
     let fund_types:[fund_typess]?
 }
-struct fund_typess:Codable{
+struct fund_typess:Codable {
     let id:Int?
     let name:String?
     let image:String?
@@ -692,12 +696,13 @@ struct Pivot:Codable{
     let fund_type_id:String?
 }
 
-struct Opportuntiesss:Decodable{
+struct Opportuntiesss:Decodable {
     let opportunities:[opportunitiesData]?
 }
 
 
-struct opportunitiesDetails:Decodable{
+struct opportunitiesDetails:Decodable {
+    let header:HeaderInfo?
     let financial:financialInfo?
     let marketing:MarketingInfo?
     let liturgical:LiturgicalInfo?
@@ -706,8 +711,16 @@ struct opportunitiesDetails:Decodable{
 }
 
 
-struct financialInfo:Codable{
+struct financialInfo:Codable {
     let average_annual_revenue:String?
     let average_monthly_cost:String?
     let expected_earning:String?
 }
+
+struct HeaderInfo:Decodable {
+    let name:String?
+    let rate:Int?
+    let rate_count:Int?
+}
+
+
