@@ -192,14 +192,14 @@ extension SpeificBusinessPlanVC:UICollectionViewDelegate, UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
-       return item[section].childs?.count ?? 0
+        return businessPlan?.business_plans?[section].details?.count ?? 0
     }
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
              
                let cell:BusinessPlanCell = collectionView.dequeueReusableCell(for: indexPath)
-           cell.setupCell(items: (item[indexPath.section].childs?[indexPath.row])!)
+           cell.setupCell(items: (businessPlan?.business_plans?[indexPath.section].details?[indexPath.row])!)
                return cell
      
           

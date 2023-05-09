@@ -18,9 +18,9 @@ class BusinessPlanCell: UICollectionViewCell, NibLoadableView {
     }
 
     
-    func setupCell(items:OppurtinityDetails){
-        titleTxt.text = items.title?.html2Attributed?.string
-        informationTxt.text = items.details?.html2Attributed?.string
+    func setupCell(items:MarketingBreakdown){
+        titleTxt.text = items.title ?? ""
+        informationTxt.text = items.value?.html2Attributed?.string
 
     }
 }

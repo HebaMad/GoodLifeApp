@@ -75,7 +75,9 @@ class GeneralLiturgicalPageVC: UIViewController, IndicatorInfoProvider{
         pieChartDataSet.drawValuesEnabled = false
         pieChartview.data = PieChartData(dataSet: pieChartDataSet)
         pieChartview.bounds = CGRect(x: -20, y:0, width: 150, height: 150)
-        
+        pieChartview.layer.cornerRadius = 8
+        pieChartview.layer.borderColor =  CGColor(red: 219/255, green: 219/255, blue: 219/255, alpha: 1)
+        pieChartview.layer.borderWidth = 1
         // add chart legend
         
         let legendChart = pieChartview.legend

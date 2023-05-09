@@ -84,7 +84,9 @@ class GeneralMarketingPageVC: UIViewController, IndicatorInfoProvider {
         pieChartDataSet.drawValuesEnabled = false
         pieChartView.data = PieChartData(dataSet: pieChartDataSet)
         pieChartView.bounds = CGRect(x: -20, y:0, width: 150, height: 150)
-        
+        pieChartView.layer.cornerRadius = 8
+        pieChartView.layer.borderColor =  CGColor(red: 219/255, green: 219/255, blue: 219/255, alpha: 1)
+        pieChartView.layer.borderWidth = 1
         // add legend
          
          let legendChart = pieChartView.legend
