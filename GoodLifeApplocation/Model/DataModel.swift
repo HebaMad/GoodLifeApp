@@ -608,11 +608,9 @@ struct BusinessPlanInfo:Codable{
 
 struct BusinessPlanDetails:Codable{
     let url:String?
-    let cons:String?
     let name:String?
-    let pros:String?
     let market_size:String?
-    
+    let details:[MarketingBreakdown]?
 }
 
 struct DigitalInfo:Codable{
