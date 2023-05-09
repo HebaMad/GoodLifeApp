@@ -38,6 +38,11 @@ class MainVC: UIViewController {
         
     }
     
+    @IBAction func notificationBtn(_ sender:Any){
+        let vc = NotificationVC()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     private func setupCollectionview(){
         
         self.showLoading()

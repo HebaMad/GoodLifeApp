@@ -32,6 +32,8 @@ class ProfileVC: UIViewController {
     
     @IBOutlet weak var emptyView: UIView!
 
+    @IBOutlet weak var MealsNumProgressView: UIProgressView!
+    
     var privacyPolicyUrl = ""
     var venture:[Ventures]=[]
     var ministryIdea:[MinistryIdea]=[]
@@ -242,7 +244,15 @@ extension ProfileVC:ProfileDelegate{
         badgeIcon.sd_setImage(with: URL(string:data.badges_icons ?? "" ))
         badgeTxt.text = data.badges ?? ""
         print( self.venture.count)
-        noOfMealTxt.text="\(data.noOfMeals ?? 0)"
+        DataAvailability()
+        if let noOfMeals = data.noOfMeals, noOfMeals > 500 {
+            noOfMealTxt.text = "+ 500"
+        } else {
+            noOfMealTxt.text = "\(data.noOfMeals ?? 0) meals fed"
+        }
+        noOfMealTxt.text="\(data.noOfMeals ?? 0) meals fed"
+        
+        MealsNumProgressView.progress = Float(data.noOfMeals ?? 0/100)
         SVProgressHUD.dismiss()
         venturesTableview.reloadData()
 

@@ -1084,6 +1084,9 @@ Night</string>
                     </view>
                     <connections>
                         <outlet property="DetailsContainer" destination="zox-RC-7eN" id="swV-aA-N1G"/>
+                        <outlet property="OpportunitiesTitle" destination="14b-8N-4mL" id="3E3-mw-jtR"/>
+                        <outlet property="rate" destination="Bpe-Ua-0SN" id="zVp-NJ-ZiQ"/>
+                        <outlet property="ratingMemberCount" destination="p48-NT-6GI" id="xHk-OS-R5J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IkJ-6a-IkG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1318,6 +1321,7 @@ Night</string>
                     <connections>
                         <outlet property="emptyView" destination="Iev-LJ-lIk" id="f0h-8Q-QIx"/>
                         <outlet property="opportunitiesTableview" destination="fen-Ib-DbD" id="YKB-hK-iTB"/>
+                        <outlet property="searchview" destination="s19-dC-5cw" id="YLl-Qj-psl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gBZ-Wx-Ef1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1401,6 +1405,9 @@ Night</string>
                                                 <color key="tintColor" name="button"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="bell.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="notificationBtn:" destination="xB5-NN-drJ" eventType="touchUpInside" id="a04-Wm-GIt"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2453,13 +2460,13 @@ Night</string>
                                 <rect key="frame" x="0.0" y="48" width="414" height="814"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="xQk-DZ-Rrl">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="830"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="810"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xsg-nA-9d8" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                                <rect key="frame" x="12" y="12" width="390" height="150"/>
+                                                <rect key="frame" x="12" y="12" width="390" height="130"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AZl-Lf-lzI" customClass="PieChartView" customModule="Charts">
-                                                        <rect key="frame" x="0.0" y="0.0" width="390" height="150"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="390" height="130"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -2480,7 +2487,7 @@ Night</string>
                                                     <constraint firstItem="AZl-Lf-lzI" firstAttribute="top" secondItem="xsg-nA-9d8" secondAttribute="top" id="Z4a-7L-Q8v"/>
                                                     <constraint firstAttribute="bottom" secondItem="AZl-Lf-lzI" secondAttribute="bottom" id="h55-eT-kx8"/>
                                                     <constraint firstItem="AZl-Lf-lzI" firstAttribute="leading" secondItem="xsg-nA-9d8" secondAttribute="leading" id="yu6-Ug-Rz4"/>
-                                                    <constraint firstAttribute="height" constant="150" id="z0W-Y4-hxS"/>
+                                                    <constraint firstAttribute="height" constant="130" id="z0W-Y4-hxS"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="startColor">
@@ -2500,8 +2507,8 @@ Night</string>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="150" estimatedRowHeight="150" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OgR-Ws-3Qb">
-                                                <rect key="frame" x="12" y="174" width="390" height="648"/>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="120" estimatedRowHeight="120" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OgR-Ws-3Qb">
+                                                <rect key="frame" x="12" y="154" width="390" height="648"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="648" id="50f-bu-pQA"/>
@@ -2526,43 +2533,12 @@ Night</string>
                                                         <constraint firstItem="LxH-Wb-s3q" firstAttribute="leading" secondItem="sKC-H1-FP6" secondAttribute="leading" constant="16" id="odH-V4-jzq"/>
                                                     </constraints>
                                                 </view>
-                                                <view key="tableFooterView" contentMode="scaleToFill" id="cqy-Qm-2i5">
-                                                    <rect key="frame" x="0.0" y="292" width="390" height="72"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="NZO-u8-sQs">
-                                                            <rect key="frame" x="0.0" y="0.0" width="390" height="72"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Overall Level of Difficulty:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mr2-BX-PN4">
-                                                                    <rect key="frame" x="16" y="-25" width="366" height="61"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medium" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQW-z9-RGz">
-                                                                    <rect key="frame" x="16" y="36" width="366" height="16"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                    <color key="textColor" red="0.70588235294117641" green="0.70588235294117641" blue="0.70588235294117641" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                            <directionalEdgeInsets key="directionalLayoutMargins" top="-25" leading="16" bottom="20" trailing="8"/>
-                                                        </stackView>
-                                                    </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="NZO-u8-sQs" secondAttribute="trailing" id="979-IT-G92"/>
-                                                        <constraint firstItem="NZO-u8-sQs" firstAttribute="top" secondItem="cqy-Qm-2i5" secondAttribute="top" id="ILN-VZ-taj"/>
-                                                        <constraint firstAttribute="bottom" secondItem="NZO-u8-sQs" secondAttribute="bottom" id="ng7-dB-CmT"/>
-                                                        <constraint firstItem="NZO-u8-sQs" firstAttribute="leading" secondItem="cqy-Qm-2i5" secondAttribute="leading" id="yIh-AS-18o"/>
-                                                    </constraints>
-                                                </view>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="CZU-Y1-Fnu">
-                                                        <rect key="frame" x="0.0" y="114" width="390" height="150"/>
+                                                        <rect key="frame" x="0.0" y="114" width="390" height="120"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CZU-Y1-Fnu" id="Wec-0h-cqU">
-                                                            <rect key="frame" x="0.0" y="0.0" width="390" height="150"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="390" height="120"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </tableViewCellContentView>
                                                     </tableViewCell>
@@ -2603,8 +2579,6 @@ Night</string>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="footerTitleTxt" destination="Mr2-BX-PN4" id="LHi-Hd-dB5"/>
-                        <outlet property="levelOfDifficuilty" destination="eQW-z9-RGz" id="qjF-sQ-U5V"/>
                         <outlet property="marketingTable" destination="OgR-Ws-3Qb" id="0dp-eS-IZj"/>
                         <outlet property="pieChartView" destination="AZl-Lf-lzI" id="YEY-IT-qZ7"/>
                     </connections>
@@ -2666,7 +2640,7 @@ Night</string>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="140" estimatedRowHeight="140" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IXg-GT-Pxw">
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="40" estimatedRowHeight="40" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IXg-GT-Pxw">
                                                 <rect key="frame" x="12" y="174" width="390" height="648"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -2676,20 +2650,36 @@ Night</string>
                                                     <rect key="frame" x="0.0" y="0.0" width="390" height="64"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Liturgical Breakdown" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ntd-9E-vBQ">
-                                                            <rect key="frame" x="16" y="8" width="374" height="56"/>
-                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="20"/>
-                                                            <color key="textColor" name="backgroundColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Muo-Qd-Zdz">
+                                                            <rect key="frame" x="0.0" y="0.0" width="390" height="64"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Liturgical Breakdown" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ntd-9E-vBQ">
+                                                                    <rect key="frame" x="8" y="4" width="374" height="30"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="30" id="z8T-ZT-0H8"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="20"/>
+                                                                    <color key="textColor" name="backgroundColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Common ways to worship" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0t-jm-O1j">
+                                                                    <rect key="frame" x="8" y="42" width="374" height="22"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="16"/>
+                                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <directionalEdgeInsets key="directionalLayoutMargins" top="4" leading="8" bottom="0.0" trailing="8"/>
+                                                        </stackView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstItem="Ntd-9E-vBQ" firstAttribute="leading" secondItem="9cZ-Ek-03w" secondAttribute="leading" constant="16" id="FO8-y7-N7Z"/>
-                                                        <constraint firstAttribute="bottom" secondItem="Ntd-9E-vBQ" secondAttribute="bottom" id="mAZ-RD-PTI"/>
-                                                        <constraint firstItem="Ntd-9E-vBQ" firstAttribute="top" secondItem="9cZ-Ek-03w" secondAttribute="top" constant="8" id="nBP-Fr-Djc"/>
-                                                        <constraint firstAttribute="trailing" secondItem="Ntd-9E-vBQ" secondAttribute="trailing" id="vSU-C1-giI"/>
+                                                        <constraint firstItem="Muo-Qd-Zdz" firstAttribute="top" secondItem="9cZ-Ek-03w" secondAttribute="top" id="LXT-mq-RYA"/>
+                                                        <constraint firstItem="Muo-Qd-Zdz" firstAttribute="leading" secondItem="9cZ-Ek-03w" secondAttribute="leading" id="YxP-qX-Okw"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Muo-Qd-Zdz" secondAttribute="bottom" id="b1n-dp-5q6"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Muo-Qd-Zdz" secondAttribute="trailing" id="nqR-de-0EN"/>
                                                     </constraints>
                                                 </view>
                                                 <prototypes>
@@ -3178,6 +3168,7 @@ Night</string>
                     </view>
                     <navigationItem key="navigationItem" id="eHX-IR-fqG"/>
                     <connections>
+                        <outlet property="MealsNumProgressView" destination="gpT-GW-bUx" id="5CK-Ji-9ix"/>
                         <outlet property="accountDetails" destination="B4P-94-gUE" id="Y2r-1a-S23"/>
                         <outlet property="badgeIcon" destination="rpt-aF-Lyj" id="vR0-6j-pH7"/>
                         <outlet property="badgeTxt" destination="15B-a7-ES3" id="HHP-GR-lX6"/>

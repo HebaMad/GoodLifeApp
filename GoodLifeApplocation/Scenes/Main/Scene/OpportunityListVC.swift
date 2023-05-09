@@ -14,6 +14,7 @@ class OpportunityListVC: UIViewController {
     @IBOutlet weak var opportunitiesTableview: UITableView!
     @IBOutlet weak var emptyView: UIView!
     
+    @IBOutlet weak var searchview: SearchView!
     var opportunities:[opportunitiesData]=[]
     let presenter=MainPresenter()
     //MARK: - properties
@@ -29,6 +30,7 @@ class OpportunityListVC: UIViewController {
         presenter.delegate=self
         setupTableView()
         emptyView.isHidden=true
+        setupSearchProperties()
 //        DataAvailability()
     }
     
@@ -44,6 +46,35 @@ class OpportunityListVC: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
+    func  setupSearchProperties(){
+        searchview.btnSearch.addTarget(self, action: #selector(searchActioon), for: .touchUpInside)
+
+        searchview.startHandler {
+     }
+
+        searchview.endEditingHandler {
+            self.opportunitiesSearch()
+     }
+
+     }
+     
+     @objc func searchActioon(_ sender : UIButton ) {
+         opportunitiesSearch()
+      
+ }
+    
+    
+    func opportunitiesSearch(){
+        if (self.searchview.txtSearch.text)?.count != 0 {
+            
+            presenter.listOpportunties(search: self.searchview.txtSearch.text ?? "")
+
+        }else{
+            presenter.listOpportunties(search: "")
+
+        }
+        presenter.delegate=self
+    }
 
     
 }
