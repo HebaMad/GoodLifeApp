@@ -15,19 +15,17 @@ class GeneralMarketingPageVC: UIViewController, IndicatorInfoProvider {
     
     @IBOutlet weak var pieChartView: PieChartView!
     @IBOutlet weak var marketingTable: UITableView!
-    @IBOutlet weak var levelOfDifficuilty: UILabel!
-    @IBOutlet weak var footerTitleTxt: UILabel!
-    var marketing:MarketingInfo?
+
     //MARK: - Properties
     
     var itemInfo: IndicatorInfo = "Marketing"
     var targetMarkets:[String] = []
     var unitsSold:[Double] = []
     var dataEntries: [ChartDataEntry] = []
-    var item:[GeneralOppourtinityDetails]=[]
     var footerTitle: String = ""
     var footerValue: String = ""
     var graph:[Graph]=[]
+    var marketing:MarketingInfo?
 
     
     //MARK: - Life cycle
@@ -63,8 +61,7 @@ class GeneralMarketingPageVC: UIViewController, IndicatorInfoProvider {
         }
         setupPieChart(dataPoints: targetMarkets, values: unitsSold)
         setupTableview()
-        levelOfDifficuilty.text = "       "
-        footerTitleTxt.text = footerTitle
+
     }
     //MARK: - setup pie Chart
 
@@ -127,12 +124,12 @@ extension GeneralMarketingPageVC:Storyboarded{
 extension GeneralMarketingPageVC:UITableViewDelegate{}
 extension GeneralMarketingPageVC:UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        item.count
+        return marketing?.marketing_breakdown?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:GeneralMarketingBreakdown = tableView.dequeueReusableCell(for: indexPath)
-        cell.configureMarketingCell(item: item[indexPath.row])
+        cell.configureMarketingCell(item: (marketing?.marketing_breakdown?[indexPath.row])!)
         return cell
     }
     

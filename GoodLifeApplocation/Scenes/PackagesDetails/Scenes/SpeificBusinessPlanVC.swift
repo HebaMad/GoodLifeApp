@@ -26,7 +26,7 @@ class SpeificBusinessPlanVC: UIViewController {
     var targetMarkets:[String] = []
     var unitsSold:[Double] = []
     var item:[SpecificOppourtinityDetails]=[]
-    var graph:[Graph]=[]
+    var graph:[BusinessPlanDetails]=[]
     var dataEntries: [ChartDataEntry] = []
     var itemNumber = 0
     var itemInfo: IndicatorInfo = "BusinessPlan"
@@ -42,10 +42,11 @@ class SpeificBusinessPlanVC: UIViewController {
     
     
     func setupGrphData(){
+        graph=businessPlan?.business_plans ?? []
         for x in 0 ..< graph.count{
             
-            targetMarkets.append(graph[x].title ?? "")
-            unitsSold.append(Double(graph[x].percentage ?? "") ?? 0.0)
+            targetMarkets.append(graph[x].name ?? "")
+            unitsSold.append(Double(graph[x].market_size ?? "") ?? 0.0)
 
         }
         setupPieChart(dataPoints: targetMarkets, values: unitsSold)
@@ -186,7 +187,7 @@ class SpeificBusinessPlanVC: UIViewController {
 extension SpeificBusinessPlanVC:UICollectionViewDelegate, UICollectionViewDataSource{
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         
-        return item.count
+        return businessPlan?.business_plans?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -210,7 +211,7 @@ extension SpeificBusinessPlanVC:UICollectionViewDelegate, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.headerIdentifier, for: indexPath) as! HeaderCollectionReusableView
-        header.setup(item[indexPath.section].title ?? "")
+        header.setup(businessPlan?.business_plans?[indexPath.section].name ?? "")
         header.viewAllButton.isHidden = true
         header.editBtn.isHidden=true
 

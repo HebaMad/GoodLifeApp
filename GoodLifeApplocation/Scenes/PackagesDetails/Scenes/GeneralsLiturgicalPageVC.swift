@@ -60,11 +60,11 @@ class GeneralsLiturgicalPageVC: UIViewController ,IndicatorInfoProvider {
         liturgicalTable.layer.borderColor =  CGColor(red: 219/255, green: 219/255, blue: 219/255, alpha: 1)
         liturgicalTable.layer.borderWidth = 1
         liturgicalTable.backgroundColor = .white
-        liturgicalTable.register(GeneralLiturgicalCell.self)
+//        liturgicalTable.register(GeneralLiturgicalCell.self)
         liturgicalTable.register(UINib(nibName:"HeaderCollectionReusableView", bundle: nil), forSupplementaryViewOfKind:UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.headerIdentifier)
         liturgicalTable.collectionViewLayout = createCompositionalLayout()
-        liturgicalTable.delegate = self
-        liturgicalTable.dataSource = self
+//        liturgicalTable.delegate = self
+//        liturgicalTable.dataSource = self
         NotificationCenter.default.post(name: .init(rawValue: "containerHeight"), object: liturgicalTable.bounds.height+300)
 
 
@@ -180,42 +180,42 @@ extension GeneralsLiturgicalPageVC{
     }
     
 }
-
-extension GeneralsLiturgicalPageVC:UICollectionViewDelegate, UICollectionViewDataSource{
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        
-        return item.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-
-        return item[section].childs?.count ?? 0
-
-    }
-    
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-     
-            let cell:GeneralLiturgicalCell = collectionView.dequeueReusableCell(for: indexPath)
-        cell.configureCell(item: (item[indexPath.section].childs?[indexPath.row])!)
-            return cell
-  
-       
-        
-    }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-    }
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        
-        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.headerIdentifier, for: indexPath) as! HeaderCollectionReusableView
-        header.setup(item[indexPath.section].title ?? "")
-        header.viewAllButton.isHidden = true
-        header.editBtn.isHidden=true
-
-        return header
-    }
-    
-    
-}
-
+//
+//extension GeneralsLiturgicalPageVC:UICollectionViewDelegate, UICollectionViewDataSource{
+//    func numberOfSections(in collectionView: UICollectionView) -> Int {
+//
+//        return item.count
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//
+//        return item[section].childs?.count ?? 0
+//
+//    }
+//
+//
+////    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+////
+////            let cell:GeneralLiturgicalCell = collectionView.dequeueReusableCell(for: indexPath)
+////        cell.configureCell(item: (item[indexPath.section].childs?[indexPath.row])!)
+////            return cell
+////
+////
+////
+////    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+//        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+//    }
+//    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+//
+//        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.headerIdentifier, for: indexPath) as! HeaderCollectionReusableView
+//        header.setup(item[indexPath.section].title ?? "")
+//        header.viewAllButton.isHidden = true
+//        header.editBtn.isHidden=true
+//
+//        return header
+//    }
+//
+//
+//}
+//

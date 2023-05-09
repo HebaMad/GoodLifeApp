@@ -7,11 +7,9 @@
 
 import UIKit
 
-class GeneralLiturgicalCell: UICollectionViewCell , NibLoadableView{
+class GeneralLiturgicalCell: UITableViewCell , NibLoadableView{
 
-    
-    @IBOutlet weak var titleTxt: UILabel!
-    @IBOutlet weak var urlTxt: UILabel!
+
     @IBOutlet weak var Description: UILabel!
 
     
@@ -19,10 +17,5 @@ class GeneralLiturgicalCell: UICollectionViewCell , NibLoadableView{
         super.awakeFromNib()
         // Initialization code
     }
-    func configureCell(item:OppurtinityDetails){
-        
-        titleTxt.text = item.title ?? ""
-        Description.text = item.details ?? ""
-        urlTxt.text=item.url ?? ""
-    }
+
 }

@@ -1,9 +1,6 @@
-//
 //  GeneralMarketingBreakdown.swift
 //  GoodLifeApplocation
-//
 //  Created by heba isaa on 10/10/2022.
-//
 
 import UIKit
 
@@ -23,15 +20,15 @@ class GeneralMarketingBreakdown: UITableViewCell,NibLoadableView {
     }
     
     func configureCell(description:String){
-                Description.text = description
+        Description.text = description
         Description.textColor = .black
         
     }
     
-    func configureMarketingCell(item:GeneralOppourtinityDetails){
+    func configureMarketingCell(item:MarketingBreakdown){
         
         titleTxt.text = item.title ?? ""
-        Description.text = item.details?.html2Attributed?.string
+        Description.text = item.value ?? ""
 
     }
     
