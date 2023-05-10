@@ -151,12 +151,12 @@ struct SpecificOppourtinityDetails: Codable {
 
 
 struct MainCategories: Decodable {
+    
     let id:Int?
+    let name:String?
     let type:String?
-    let status:String?
     let icon:String?
     let created_at:String?
-    let name:String?
     
 }
 
