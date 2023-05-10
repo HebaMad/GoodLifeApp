@@ -26,7 +26,6 @@
                 <outlet property="descriptionTxt" destination="VHW-3M-cWh" id="UKk-vo-Nok"/>
                 <outlet property="matchPercent" destination="Q4v-uU-QrZ" id="U44-FX-K5o"/>
                 <outlet property="nameTxt" destination="1Y0-Dk-WYo" id="g9r-66-qLw"/>
-                <outlet property="opportunityImg" destination="ucU-HN-4hr" id="eDn-LO-8Rq"/>
                 <outlet property="rateTxt" destination="Cst-Bf-bb4" id="31o-58-kjB"/>
                 <outlet property="titleTxt" destination="Xfv-MS-y4C" id="7qv-lT-UCv"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -43,40 +42,17 @@
                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AEJ-FR-TVa">
                             <rect key="frame" x="0.0" y="0.0" width="369" height="80"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EBK-9x-Mnj">
-                                    <rect key="frame" x="0.0" y="0.0" width="120" height="80"/>
-                                    <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ucU-HN-4hr" customClass="UIImageViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                            <rect key="frame" x="25" y="5" width="70" height="70"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="70" id="1MV-cf-1Nw"/>
-                                                <constraint firstAttribute="height" constant="70" id="Pod-Vn-40C"/>
-                                            </constraints>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                    <real key="value" value="35"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                        </imageView>
-                                    </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    <constraints>
-                                        <constraint firstItem="ucU-HN-4hr" firstAttribute="centerY" secondItem="EBK-9x-Mnj" secondAttribute="centerY" id="6my-cB-7Wv"/>
-                                        <constraint firstAttribute="width" constant="120" id="ciu-vw-n0o"/>
-                                        <constraint firstItem="ucU-HN-4hr" firstAttribute="centerX" secondItem="EBK-9x-Mnj" secondAttribute="centerX" id="zKo-wy-6dg"/>
-                                    </constraints>
-                                </view>
                                 <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="FnT-h3-X3L">
-                                    <rect key="frame" x="120" y="0.0" width="249" height="80"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="369" height="80"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xfv-MS-y4C">
-                                            <rect key="frame" x="8" y="0.0" width="233" height="45"/>
+                                            <rect key="frame" x="8" y="0.0" width="353" height="45"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Y0-Dk-WYo">
-                                            <rect key="frame" x="8" y="45" width="233" height="20"/>
+                                            <rect key="frame" x="8" y="45" width="353" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20" id="px0-Du-ArG"/>
                                             </constraints>
@@ -160,7 +136,7 @@
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.25" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cst-Bf-bb4">
                                                             <rect key="frame" x="57" y="0.0" width="92" height="17"/>
-                                                            <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="10"/>
+                                                            <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="13"/>
                                                             <color key="textColor" systemColor="systemYellowColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -225,7 +201,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="M7b-Qv-kUR"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="More Details &gt;"/>
@@ -255,23 +231,11 @@
                         </stackView>
                     </subviews>
                 </stackView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yvd-9M-7j0">
-                    <rect key="frame" x="323.66666666666669" y="16" width="64.333333333333314" height="35"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="35" id="qPB-Bj-C0H"/>
-                    </constraints>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Done">
-                        <color key="baseForegroundColor" name="button"/>
-                    </buttonConfiguration>
-                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="Yvd-9M-7j0" secondAttribute="trailing" constant="5" id="93m-E2-Uux"/>
                 <constraint firstItem="paA-dG-zye" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Tff-Yr-qqz"/>
-                <constraint firstItem="Yvd-9M-7j0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="16" id="lSC-Re-ECU"/>
                 <constraint firstItem="paA-dG-zye" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" constant="-12" id="qfS-DC-vIf"/>
                 <constraint firstItem="paA-dG-zye" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="wLy-Ke-7Gc"/>
             </constraints>
@@ -280,16 +244,13 @@
     </objects>
     <designables>
         <designable name="aDF-TF-Y8k">
-            <size key="intrinsicContentSize" width="70" height="24"/>
+            <size key="intrinsicContentSize" width="110" height="32"/>
         </designable>
     </designables>
     <resources>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <namedColor name="ButtonColor">
             <color red="0.0" green="0.85100001096725464" blue="0.44299998879432678" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="button">
-            <color red="0.2669999897480011" green="0.050999999046325684" blue="0.55699998140335083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

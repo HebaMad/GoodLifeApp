@@ -13,6 +13,7 @@ class TagSelectionCollectionReusableView: UICollectionReusableView {
     
     @IBOutlet weak var tagSelectionTitle: UITextField!
     @IBOutlet weak var addBtn: UIButtonDesignable!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

@@ -717,8 +717,11 @@ struct financialInfo:Codable {
 
 struct HeaderInfo:Decodable {
     let name:String?
+    let title:String?
     let rate:Int?
     let rate_count:Int?
+    let match:String?
+    let financial_models:String?
 }
 
 

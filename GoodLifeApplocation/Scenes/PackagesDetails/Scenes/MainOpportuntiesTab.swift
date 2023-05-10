@@ -40,7 +40,7 @@ class MainOpportuntiesTab:UIViewController {
     func setupData(){
         OpportunitiesTitle.text=opportunityDetails?.header?.name ?? ""
         rate.text=String(describing: opportunityDetails?.header?.rate ?? 0 )
-        ratingMemberCount.text="(\(opportunityDetails?.header?.rate_count ?? 0)from community)"
+        ratingMemberCount.text="(\(opportunityDetails?.header?.rate_count ?? 0)) from community"
     }
     
 

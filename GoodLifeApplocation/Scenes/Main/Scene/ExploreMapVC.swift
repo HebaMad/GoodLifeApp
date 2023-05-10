@@ -6,6 +6,7 @@ import UIKit
 import FittedSheets
 import MapKit
 
+
 protocol OnFilterDissmissed{
     func filteredData(data:opportunitiesDetails)
 }
@@ -278,18 +279,7 @@ extension ExploreMapVC:UICollectionViewDataSource{
         cell.hobbiesTitle.textColor = .black
     }
     
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        if collectionView == generalFilterCollectionview{
-//            return  CGSize(width:((self.view.frame.width/3)-12), height: 68)
-//
-//
-//        }else if collectionView == specificFilterCollectionview {
-//            return  CGSize(width:((self.view.frame.width / 4)-12), height:68)
-//        }else{
-//            return  CGSize(width:(self.view.frame.width), height:30)
-//        }
-//
-//    }
+
 }
 
 
@@ -298,17 +288,8 @@ extension ExploreMapVC:UICollectionViewDataSource{
 extension ExploreMapVC:MKMapViewDelegate{
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         print(view.annotation!.title!!)
-        
-        let controller = DetailsVC()
-//        controller.needTypeID = categoryMainId
-        
-        let sheetController = SheetViewController(
-            controller: controller,
-            //                sizes: [ .intrinsic , .percent(0.80), .fixed(600), .intrinsic])
-            sizes: [ .marginFromTop(480), .percent(0.75), .intrinsic])
-//        controller.onFilterDissmissed = self
-        
-        self.present(sheetController, animated: false, completion: nil)
+        checkOpportunity(name:view.annotation!.title!!)
+
     }
     
     
@@ -328,7 +309,16 @@ extension ExploreMapVC {
 
 extension ExploreMapVC:MainDelegate{
     
-    func opportunitiesDetails(data: opportunitiesDetails) {}
+    func opportunitiesDetails(data: opportunitiesDetails) {
+        let controller = DetailsVC()
+        controller.opportunitiesDetails=data
+        
+        let sheetController = SheetViewController(
+            controller: controller,
+            sizes: [ .marginFromTop(480), .percent(0.75), .intrinsic])
+        controller.onFilterDissmissed=self
+        self.present(sheetController, animated: false, completion: nil)
+    }
     
     func getExploreMapData(data: ExploreMap) {
         latitudeList=[]
@@ -422,15 +412,22 @@ extension ExploreMapVC {
                 point.coordinate = CLLocationCoordinate2D(latitude: innerKey, longitude:innerValue )
             }
             mapView.addAnnotation(point)
-
             
         }
         
-        
-
-        
-        
         mapView.delegate=self
+    }
+    
+    func checkOpportunity(name:String){
+        for  index in 0 ..< opportuntites.count{
+            if name == opportuntites[index].name{
+                presenter.getOpportunitiesDetails(opportunitiesId: String(describing:opportuntites[index].id!))
+                presenter.delegate=self
+                break
+            }
+        }
+        
+        
     }
     
 }
