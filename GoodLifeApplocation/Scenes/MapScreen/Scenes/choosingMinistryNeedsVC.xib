@@ -41,17 +41,17 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n1g-yl-AZe">
                                     <rect key="frame" x="16" y="0.0" width="366" height="22"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Community Life" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3or-bn-Gfy">
-                                            <rect key="frame" x="0.0" y="0.0" width="120" height="22"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3or-bn-Gfy">
+                                            <rect key="frame" x="0.0" y="0.0" width="129.5" height="22"/>
                                             <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="17"/>
                                             <color key="textColor" red="0.16470588235294117" green="0.039215686274509803" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7fH-HW-FF9">
-                                            <rect key="frame" x="120" y="0.0" width="246" height="22"/>
+                                            <rect key="frame" x="129.5" y="0.0" width="236.5" height="22"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="slD-Me-UB4" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                                    <rect key="frame" x="203" y="-6.5" width="35" height="35"/>
+                                                    <rect key="frame" x="193.5" y="-6.5" width="35" height="35"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qHh-sk-Vxl">
                                                             <rect key="frame" x="7.5" y="7.5" width="20" height="20"/>
@@ -231,13 +231,13 @@
     </objects>
     <designables>
         <designable name="OTO-cd-VPU">
-            <size key="intrinsicContentSize" width="156" height="30.5"/>
+            <size key="intrinsicContentSize" width="161.5" height="31"/>
         </designable>
         <designable name="SjE-2C-4bb">
-            <size key="intrinsicContentSize" width="154.5" height="30.5"/>
+            <size key="intrinsicContentSize" width="160.5" height="31"/>
         </designable>
         <designable name="YRR-vL-UZj">
-            <size key="intrinsicContentSize" width="47" height="30.5"/>
+            <size key="intrinsicContentSize" width="48.5" height="31"/>
         </designable>
     </designables>
     <resources>

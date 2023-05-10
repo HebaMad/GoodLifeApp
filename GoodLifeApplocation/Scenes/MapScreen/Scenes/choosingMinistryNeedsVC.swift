@@ -36,7 +36,7 @@ class choosingMinistryNeedsVC: UIViewController {
     var categoryName=""
     var generalFilteringId=0
     var specificFilteringId=0
-
+    
     var specificPresenter=MainPresenter()
     //MARK: - Life cycle
     
@@ -56,9 +56,8 @@ class choosingMinistryNeedsVC: UIViewController {
     }
     
     @objc func ministrySubscriptionDetails( _ sender:UIButton){
-//        print(oppourtinity[sender.tag].id ?? 0)
-//        presenter.oppourtinityDetails(opportunityID: oppourtinity[sender.tag].id ?? 0)
-//        presenter.delegate=self
+        presenter.getOpportunitiesDetails(opportunitiesId:String(describing: oppourtinity[sender.tag].id ?? 0))
+        presenter.delegate=self
         
         
     }}
@@ -168,20 +167,18 @@ extension choosingMinistryNeedsVC:UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell:SubscriptionCollectionViewCell=collectionView.dequeueReusableCell(for: indexPath)
         
-//        cell.configureCell(viewModel: oppourtinity[indexPath.row])
-        
-        //        cell.tag=indexPath.row
-        //        cell.nextBtn.addTarget(self, action: #selector(ministrySubscriptionDetails), for: .touchUpInside)
+        cell.configureCell(viewModel: oppourtinity[indexPath.row])
+        cell.nextBtn.tag=indexPath.row
+        cell.nextBtn.addTarget(self, action: #selector(ministrySubscriptionDetails), for: .touchUpInside)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        print(oppourtinity[indexPath.row].id ?? 0)
-//        presenter.oppourtinityDetails(opportunityID: oppourtinity[indexPath.row].id ?? 0)
-//        UserDefaults.standard.set(oppourtinity[indexPath.row].id, forKey: "oppourtinity")
-        
+        presenter.getOpportunitiesDetails(opportunitiesId:String(describing: oppourtinity[indexPath.row].id ?? 0))
         presenter.delegate=self
+        
+        //        UserDefaults.standard.set(oppourtinity[indexPath.row].id, forKey: "oppourtinity")
+        
     }
 }
 //MARK: - conform to UICollectionViewDelegateFlowLayout protocol
@@ -240,7 +237,12 @@ extension choosingMinistryNeedsVC:DataFiltered{
 extension choosingMinistryNeedsVC:MainDelegate{
     func opportunitiesDetails(data: opportunitiesDetails) {
         
+        self.dismiss(animated: true) {
+            if let _delegate = self.onFilterDissmissed{
+                _delegate.filteredData(data:data)
+            }}
     }
+    
     
     func showAlerts(title: String, message: String) {
         
@@ -267,10 +269,10 @@ extension choosingMinistryNeedsVC:MainDelegate{
         
         UserDefaults.standard.set(data, forKey:"oppourtinityID")
         
-//        self.dismiss(animated: true) {
-//            if let _delegate = self.onFilterDissmissed{
-////                _delegate.filteredData(data:data)
-//            }}
+        //        self.dismiss(animated: true) {
+        //            if let _delegate = self.onFilterDissmissed{
+        ////                _delegate.filteredData(data:data)
+        //            }}
     }
     
     

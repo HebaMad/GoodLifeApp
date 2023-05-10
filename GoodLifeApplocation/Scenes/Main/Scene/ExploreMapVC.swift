@@ -6,6 +6,10 @@ import UIKit
 import FittedSheets
 import MapKit
 
+protocol OnFilterDissmissed{
+    func filteredData(data:opportunitiesDetails)
+}
+
 class ExploreMapVC: UIViewController {
     
     @IBOutlet weak var typeLabel: UILabel!
@@ -20,7 +24,9 @@ class ExploreMapVC: UIViewController {
     var categoriesName = ""
     let presenter=MainPresenter()
     var categoryMainId = 0
-
+    var locationCoordinate:[Double:Double]=[:]
+    var latitudeList:[Double]=[]
+    var longitudeList:[Double]=[]
     var generalFiltering:[MainCategories]=[]
     var specificFiltering:[MainCategories]=[]
     var opportuntites:[opportunitiesData]=[]
@@ -29,12 +35,16 @@ class ExploreMapVC: UIViewController {
     var latitude:Double = UserDefaults.standard.double(forKey: "lat")
     var longitude:Double = UserDefaults.standard.double(forKey: "long")
     var city = ""
+    var mainOpportunities:[String:[Double:Double]] = [:]
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(categories)
+        setupMap()
         setupCollectionview()
+        getCategoryData()
+        specificFilterCollectionview.isHidden=true
+
     }
     
     func setupCollectionview(){
@@ -44,13 +54,15 @@ class ExploreMapVC: UIViewController {
         categoriesCollectionview.dataSource=self
         
         generalFilterCollectionview.register(FilterCell.self)
+        generalFilterCollectionview.collectionViewLayout=createCompositionalLayoutFilter()
         generalFilterCollectionview.delegate = self
         generalFilterCollectionview.dataSource = self
         
         specificFilterCollectionview.register(FilterCell.self)
+        specificFilterCollectionview.collectionViewLayout=createCompositionalLayoutFilter()
         specificFilterCollectionview.delegate = self
         specificFilterCollectionview.dataSource = self
-       
+        
     }
     
     func getCategoryData(){
@@ -78,46 +90,52 @@ class ExploreMapVC: UIViewController {
             controller: controller,
             // sizes: [ .intrinsic , .percent(0.80), .fixed(600), .intrinsic])
             sizes: [ .marginFromTop(520), .percent(0.7), .intrinsic])
-        //          controller.onFilterDissmissed = self
+        controller.onFilterDissmissed = self
         
         self.present(sheetController, animated: false, completion: nil)
     }
     
     @objc func generalFilterPressed(_ sender:UIButton){
-        specificFilterCollectionview.isHidden = false
         categoryMainId = generalFiltering[sender.tag].id ?? 0
+        
+        presenter.mapScreenData(fundTypeId: "\(needTypeID)", mainCategoryId: String(describing:categoryMainId), subCategoryId:"", interest: "")
+        presenter.delegate=self
+        specificFilterCollectionview.isHidden=false
         
     }
     
     @objc func specificFilterPressed(_ sender:UIButton){
-       
+        specificFilteringId=specificFiltering[sender.tag].id ?? 0
+
+        presenter.mapScreenData(fundTypeId:"\(needTypeID)" , mainCategoryId: String(describing:generalFilteringId), subCategoryId: String(describing: specificFilteringId), interest: "")
+        presenter.delegate=self
         
     }
     
     
     func setupMap(){
-
+        
         
         mapView.delegate=self
-                LocationManager.shared.getLocation { [self] location, error in
-                let center = CLLocationCoordinate2DMake((location?.coordinate.latitude) ?? latitude , (location?.coordinate.longitude) ?? longitude)
-                    latitude=location?.coordinate.latitude ?? 0.0
-                    longitude=location?.coordinate.longitude ?? 0.0
-                UserDefaults.standard.set(location?.coordinate.latitude,forKey: "lat")
-                UserDefaults.standard.set(location?.coordinate.longitude,forKey: "long")
-                    LocationManager.shared.getAddressFromLatLon(pdblLatitude: "\(self.latitude)", withLongitude: "\(self.longitude)") { status, mapaddress, mapcountry in
-                     
-                        self.city = mapcountry ?? ""
-
-                    }
+        LocationManager.shared.getLocation { [self] location, error in
+            let center = CLLocationCoordinate2DMake((location?.coordinate.latitude) ?? latitude , (location?.coordinate.longitude) ?? longitude)
+            latitude=location?.coordinate.latitude ?? 0.0
+            longitude=location?.coordinate.longitude ?? 0.0
+            UserDefaults.standard.set(location?.coordinate.latitude,forKey: "lat")
+            UserDefaults.standard.set(location?.coordinate.longitude,forKey: "long")
+            LocationManager.shared.getAddressFromLatLon(pdblLatitude: "\(self.latitude)", withLongitude: "\(self.longitude)") { status, mapaddress, mapcountry in
                 
-                    
-                let span = MKCoordinateSpan(latitudeDelta:20, longitudeDelta: 20)
-                let region = MKCoordinateRegion(center: center, span: span)
-                self.mapView.region = region
+                self.city = mapcountry ?? ""
+                
             }
-//                specificFilterCollectionview.isHidden = true
-
+            
+            
+            let span = MKCoordinateSpan(latitudeDelta:10, longitudeDelta: 10)
+            let region = MKCoordinateRegion(center: center, span: span)
+            self.mapView.region = region
+        }
+        //                specificFilterCollectionview.isHidden = true
+        
     }
     
 }
@@ -148,7 +166,28 @@ extension ExploreMapVC{
     }
     
     
-    
+    func createCompositionalLayoutFilter() -> UICollectionViewCompositionalLayout {
+        UICollectionViewCompositionalLayout { sectionIndex, layoutEnviroment in
+            //            guard let self = self  else {return nil}
+            let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.2), heightDimension: .absolute(60))
+            
+            let item = NSCollectionLayoutItem(layoutSize: itemSize)
+            
+            // item.contentInsets = .init(top: 0, leading: 0, bottom: 0, trailing: 4)
+            
+            let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.98), heightDimension: .estimated(1))
+            
+            let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+            group.contentInsets = .init(top: 0, leading: 0, bottom: 0, trailing: 0)
+            let section = NSCollectionLayoutSection(group: group)
+            section.orthogonalScrollingBehavior = .continuous
+            
+            section.contentInsets = .init(top: 0, leading: 4, bottom: 0, trailing: 4)
+            
+            section.supplementariesFollowContentInsets = false
+            return section
+        }
+    }
     
 }
 extension ExploreMapVC:Storyboarded{
@@ -217,15 +256,16 @@ extension ExploreMapVC:UICollectionViewDataSource{
             needTypeID=categories[indexPath.row].id ?? 0
             
         }else if collectionView == generalFilterCollectionview {
-            
+            specificFilterCollectionview.isHidden=false
+
             generalFilteringId=generalFiltering[indexPath.row].id ?? 0
-            presenter.mapScreenData(fundTypeId: "", mainCategoryId: String(describing:generalFilteringId), subCategoryId:"", interest: "")
+            presenter.mapScreenData(fundTypeId: "\(needTypeID)", mainCategoryId: String(describing:generalFilteringId), subCategoryId:"", interest: "")
             presenter.delegate=self
             
         }else{
             
             specificFilteringId=specificFiltering[indexPath.row].id ?? 0
-            presenter.mapScreenData(fundTypeId: "", mainCategoryId: String(describing:generalFilteringId), subCategoryId: String(describing: specificFilteringId), interest: "")
+            presenter.mapScreenData(fundTypeId:"\(needTypeID)" , mainCategoryId: String(describing:generalFilteringId), subCategoryId: String(describing: specificFilteringId), interest: "")
             presenter.delegate=self
         }
         
@@ -240,13 +280,13 @@ extension ExploreMapVC:UICollectionViewDataSource{
     
 //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 //        if collectionView == generalFilterCollectionview{
-//            return  CGSize(width:((self.view.frame.width/5)-12), height: 45)
+//            return  CGSize(width:((self.view.frame.width/3)-12), height: 68)
 //
 //
-//        }else if collectionView == specificFilterCollectionview{
-//            return  CGSize(width:((self.view.frame.width / 4)-12), height:66)
+//        }else if collectionView == specificFilterCollectionview {
+//            return  CGSize(width:((self.view.frame.width / 4)-12), height:68)
 //        }else{
-//            return CGSize()
+//            return  CGSize(width:(self.view.frame.width), height:30)
 //        }
 //
 //    }
@@ -258,9 +298,9 @@ extension ExploreMapVC:UICollectionViewDataSource{
 extension ExploreMapVC:MKMapViewDelegate{
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         print(view.annotation!.title!!)
-//        getAnnotationId(title:view.annotation!.title!!)
-        let controller = choosingMinistryNeedsVC()
-        controller.needTypeID = categoryMainId
+        
+        let controller = DetailsVC()
+//        controller.needTypeID = categoryMainId
         
         let sheetController = SheetViewController(
             controller: controller,
@@ -276,14 +316,14 @@ extension ExploreMapVC:MKMapViewDelegate{
 
 
 extension ExploreMapVC {
-//    func getAnnotationId(title:String){
-//        for indx in 0 ..< mainNeedType.count{
-//            if mainNeedType[indx].name == title {
-//                UserDefaults.standard.set(mainNeedType[indx].id, forKey: "id")
-//                break
-//            }
-//        }
-//    }
+    //    func getAnnotationId(title:String){
+    //        for indx in 0 ..< mainNeedType.count{
+    //            if mainNeedType[indx].name == title {
+    //                UserDefaults.standard.set(mainNeedType[indx].id, forKey: "id")
+    //                break
+    //            }
+    //        }
+    //    }
 }
 
 extension ExploreMapVC:MainDelegate{
@@ -291,7 +331,14 @@ extension ExploreMapVC:MainDelegate{
     func opportunitiesDetails(data: opportunitiesDetails) {}
     
     func getExploreMapData(data: ExploreMap) {
+        latitudeList=[]
+        longitudeList=[]
+        
         opportuntites=data.opportunities ?? []
+        
+        latitudeList = makeLatitudeRandomList(opportuntites.count, lat:UserDefaults.standard.double(forKey: "lat"))
+        longitudeList = makeLongtiudeRandomList(opportuntites.count, long:UserDefaults.standard.double(forKey: "long"))
+        createLocationCoordinateRandomPoints(latList: latitudeList, longList: longitudeList)
     }
     
     func showAlerts(title: String, message: String) {}
@@ -309,7 +356,81 @@ extension ExploreMapVC:MainDelegate{
         generalFiltering = categories.categories ?? []
         print(generalFiltering)
         generalFilterCollectionview.reloadData()
+        
     }
     
+    
+}
+
+
+extension ExploreMapVC:OnFilterDissmissed {
+    
+    func filteredData(data: opportunitiesDetails) {
+        print("data")
+        let vc = MainOpportuntiesTab.instantiate()
+        vc.opportunityDetails=data
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    
+}
+
+
+extension ExploreMapVC {
+    
+    func makeLatitudeRandomList(_ n: Int,lat:Double) -> [Double] {
+        return (0..<n).map { _ in Double.random(in: lat...lat+1.1) }
+    }
+    func makeLongtiudeRandomList(_ n: Int,long:Double) -> [Double] {
+        
+        return (0..<n).map { _ in Double.random(in: long...long+1.1) }
+        
+    }
+    
+    func createLocationCoordinateRandomPoints(latList:[Double],longList:[Double]){
+        for index in 0 ..< latList.count{
+            locationCoordinate[latList[index]]=longList[index]
+        }
+        createAnnotation(location: locationCoordinate)
+        
+        func createAnnotation(location:[Double:Double]){
+            mainOpportunities = [:]
+            for indx in 0 ..< opportuntites.count{
+                mainOpportunities[opportuntites[indx].name ?? ""] = [Array(location.keys)[indx] : Array(location.values)[indx]]
+            }
+            
+        }
+        print(mainOpportunities)
+        
+        setupAnnotation(points: mainOpportunities)
+    }
+    
+    
+    
+    func setupAnnotation(points:[String:[Double:Double]]){
+        
+        let allAnnotations = self.mapView.annotations
+        self.mapView.removeAnnotations(allAnnotations)
+        
+        
+        for (key, innerDictionary) in points {
+            let point = MKPointAnnotation()
+            
+            point.title = key
+            
+            for (innerKey, innerValue) in innerDictionary {
+                point.coordinate = CLLocationCoordinate2D(latitude: innerKey, longitude:innerValue )
+            }
+            mapView.addAnnotation(point)
+
+            
+        }
+        
+        
+
+        
+        
+        mapView.delegate=self
+    }
     
 }

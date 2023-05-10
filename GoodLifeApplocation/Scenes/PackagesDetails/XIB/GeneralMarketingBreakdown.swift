@@ -28,7 +28,7 @@ class GeneralMarketingBreakdown: UITableViewCell,NibLoadableView {
     func configureMarketingCell(item:MarketingBreakdown){
         
         titleTxt.text = item.title ?? ""
-        Description.text = item.value ?? ""
+        Description.text = item.value?.html2Attributed?.string
 
     }
     

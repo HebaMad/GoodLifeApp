@@ -11,9 +11,9 @@ import SkeletonView
 import FittedSheets
 import MapKit
 
-protocol OnFilterDissmissed{
-    func filteredData(data:[opportunitiesData])
-}
+//protocol OnFilterDissmissed{
+//    func filteredData(data:[opportunitiesData])
+//}
 
 class MapVC: UIViewController {
     
@@ -47,6 +47,8 @@ class MapVC: UIViewController {
     var categoryMainId = 0
     var latitude:Double = UserDefaults.standard.double(forKey: "lat")
     var longitude:Double = UserDefaults.standard.double(forKey: "long")
+    
+    
     private var isSkeleton: Bool = true {
         didSet {
             self.communityCollectionview.reloadData()
@@ -114,10 +116,6 @@ class MapVC: UIViewController {
     
     //MARK: - SETUP Collection
     private func setupCollectionview(){
-        
-        
-  
-
         
         communityCollectionview.register(ActivityCell.self)
         communityCollectionview.register(UINib(nibName:"FilterHeaderReusableview", bundle: nil), forSupplementaryViewOfKind:UICollectionView.elementKindSectionHeader, withReuseIdentifier: FilterHeaderReusableview.headerIdentifier)
@@ -418,18 +416,18 @@ extension MapVC :HomeDelegate{
     
     
 }
-extension MapVC: OnFilterDissmissed {
-
-    
-    func filteredData(data: [opportunitiesData]) {
-        print(data)
-//        let vc = PackageDetailsVC()
-//        vc.oppourtinityDetails = data
-//        navigationController?.pushViewController(vc, animated: true)
-    }
-    
-    
-}
+//extension MapVC: OnFilterDissmissed {
+//
+//    
+//    func filteredData(data: [opportunitiesData]) {
+//        print(data)
+////        let vc = PackageDetailsVC()
+////        vc.oppourtinityDetails = data
+////        navigationController?.pushViewController(vc, animated: true)
+//    }
+//    
+//    
+//}
 
 
 
@@ -471,7 +469,6 @@ extension MapVC{
             mapview.addAnnotation(point)
         }
         mapview.delegate=self
-        
     }
     
 }
@@ -487,7 +484,7 @@ extension MapVC:MKMapViewDelegate{
             controller: controller,
             //                sizes: [ .intrinsic , .percent(0.80), .fixed(600), .intrinsic])
             sizes: [ .marginFromTop(480), .percent(0.75), .intrinsic])
-        controller.onFilterDissmissed = self
+//        controller.onFilterDissmissed = self
         
         self.present(sheetController, animated: false, completion: nil)
     }

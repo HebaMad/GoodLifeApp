@@ -13,7 +13,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SpeificBusinessPlanVC" customModule="GoodLifeApplocation" customModuleProvider="target">
             <connections>
                 <outlet property="businessPlanCollectionview" destination="4AN-on-PNB" id="dYf-Ud-KRC"/>
-                <outlet property="collectionviewHeight" destination="EZC-PX-WK1" id="iq8-9w-qNg"/>
                 <outlet property="pieChartview" destination="jfd-er-eGa" id="pYH-K0-AAs"/>
                 <outlet property="scrollviewHeight" destination="rpM-Qm-vSJ" id="WLA-8y-mEh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -40,9 +39,6 @@
                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="4AN-on-PNB">
                                     <rect key="frame" x="12" y="154" width="390" height="648"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="648" id="EZC-PX-WK1"/>
-                                    </constraints>
                                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xPx-bL-BfB">
                                         <size key="itemSize" width="128" height="128"/>
                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>

@@ -12,7 +12,7 @@ class CategoriesVC: UIViewController {
 
     @IBOutlet weak var AddCategory: UIButton!
     @IBOutlet weak var categoriesCollectionview: UICollectionView!
-    
+
     
     //MARK: - Properties
 
@@ -45,6 +45,21 @@ class CategoriesVC: UIViewController {
         categoriesCollectionview.delegate=self
         categoriesCollectionview.dataSource=self
         
+    }
+    
+
+     
+     @objc func searchActioon(_ sender : UIButton ) {
+
+//        if (self.searchview.txtSearch.text)?.count != 0 {
+//
+//            presenter.listOpportunties(search: self.searchview.txtSearch.text ?? "")
+//
+//        }else{
+//            presenter.listOpportunties(search: "")
+//
+//        }
+//        presenter.delegate=self
     }
 }
 
@@ -117,6 +132,10 @@ extension CategoriesVC:UICollectionViewDelegateFlowLayout{
         
         
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: searchviewHeader.headerIdentifier, for: indexPath) as! searchviewHeader
+        header.tag=indexPath.row
+        header.searchView.btnSearch.addTarget(self, action: #selector(searchActioon), for: .touchUpInside)
+
+        
         return header
     }
     

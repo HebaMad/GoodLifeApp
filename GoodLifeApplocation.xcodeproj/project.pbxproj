@@ -67,6 +67,8 @@
 		2764D6CF28E2FA6600AC7F73 /* LessonDetailsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2764D6CD28E2FA6600AC7F73 /* LessonDetailsCollectionCell.swift */; };
 		2764D6D028E2FA6600AC7F73 /* LessonDetailsCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2764D6CE28E2FA6600AC7F73 /* LessonDetailsCollectionCell.xib */; };
 		2764D6D228E4304E00AC7F73 /* LessonTopicDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2764D6D128E4304E00AC7F73 /* LessonTopicDetails.swift */; };
+		2765275A2A0BC9EA00E4EABF /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276527582A0BC9EA00E4EABF /* DetailsVC.swift */; };
+		2765275B2A0BC9EA00E4EABF /* DetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 276527592A0BC9EA00E4EABF /* DetailsVC.xib */; };
 		2765D5FB28F4083C008835D9 /* GeneralFinancialCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2765D5F928F4083C008835D9 /* GeneralFinancialCell.swift */; };
 		2765D5FC28F4083C008835D9 /* GeneralFinancialCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2765D5FA28F4083C008835D9 /* GeneralFinancialCell.xib */; };
 		2765D5FF28F40D66008835D9 /* GeneralMarketingBreakdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2765D5FD28F40D66008835D9 /* GeneralMarketingBreakdown.swift */; };
@@ -374,6 +376,8 @@
 		2764D6CD28E2FA6600AC7F73 /* LessonDetailsCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDetailsCollectionCell.swift; sourceTree = "<group>"; };
 		2764D6CE28E2FA6600AC7F73 /* LessonDetailsCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LessonDetailsCollectionCell.xib; sourceTree = "<group>"; };
 		2764D6D128E4304E00AC7F73 /* LessonTopicDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonTopicDetails.swift; sourceTree = "<group>"; };
+		276527582A0BC9EA00E4EABF /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
+		276527592A0BC9EA00E4EABF /* DetailsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsVC.xib; sourceTree = "<group>"; };
 		2765D5F928F4083C008835D9 /* GeneralFinancialCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralFinancialCell.swift; sourceTree = "<group>"; };
 		2765D5FA28F4083C008835D9 /* GeneralFinancialCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeneralFinancialCell.xib; sourceTree = "<group>"; };
 		2765D5FD28F40D66008835D9 /* GeneralMarketingBreakdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralMarketingBreakdown.swift; sourceTree = "<group>"; };
@@ -737,6 +741,8 @@
 				278882EF29C1D19E0025A6D0 /* CategoriesVC.swift */,
 				278882F029C1D19E0025A6D0 /* CategoriesVC.xib */,
 				27FC430629C9FFDC00FB00B9 /* ExploreMapVC.swift */,
+				276527582A0BC9EA00E4EABF /* DetailsVC.swift */,
+				276527592A0BC9EA00E4EABF /* DetailsVC.xib */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -1437,6 +1443,7 @@
 				2798B9E6298EEA2A00BB18BF /* CategoryReviews.xib in Resources */,
 				2734CD8528913E3A00E6964F /* GoodLifeApplocation.xcworkspace in Resources */,
 				2723C7E629D4362000E52288 /* BusinessPlanOpportunitiesCreation.xib in Resources */,
+				2765275B2A0BC9EA00E4EABF /* DetailsVC.xib in Resources */,
 				27F4B14E28B8B94E003365A6 /* SettingNib.xib in Resources */,
 				27F4B14C28B8AD4F003365A6 /* VenturesCell.xib in Resources */,
 				2767A294289087DF00DF34D1 /* HeaderCollectionReusableView.xib in Resources */,
@@ -1720,6 +1727,7 @@
 				27A7376E2891435C00FD8AD9 /* UIImageViewDesignable.swift in Sources */,
 				278882D829BC9D650025A6D0 /* OpportunitiesStatusCell.swift in Sources */,
 				27C9AE29288D38E900FA584A /* SceneDelegate.swift in Sources */,
+				2765275A2A0BC9EA00E4EABF /* DetailsVC.swift in Sources */,
 				27CB2051289B006100E63694 /* ReviewExperienceVC.swift in Sources */,
 				27DDE2E32965E96F001F938F /* GeneralsLiturgicalPageVC.swift in Sources */,
 				27ECA33F28EB2FE0003DCF53 /* UIViewExtension.swift in Sources */,
