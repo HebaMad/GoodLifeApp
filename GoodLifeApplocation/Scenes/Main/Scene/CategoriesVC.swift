@@ -19,13 +19,16 @@ class CategoriesVC: UIViewController {
     var categories:[mainType]=[]
     private let itemsPerRow: CGFloat = 2
     private let sectionInsets = UIEdgeInsets(top: 2.0,left: 0.0,bottom: 2.0,right: 0.0)
+    var presenter:OpportunitiesPresenter?
 
     //MARK: - Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         bindButtons()
         setupCollectionView()
+        
       }
     
     //MARK: - Binding
@@ -39,7 +42,7 @@ class CategoriesVC: UIViewController {
     func setupCollectionView(){
         
         categoriesCollectionview.register(CategoryCell.self)
-        categoriesCollectionview.register(UINib(nibName:"searchviewHeader", bundle: nil), forSupplementaryViewOfKind:UICollectionView.elementKindSectionHeader, withReuseIdentifier: searchviewHeader.headerIdentifier)
+//        categoriesCollectionview.register(UINib(nibName:"searchviewHeader", bundle: nil), forSupplementaryViewOfKind:UICollectionView.elementKindSectionHeader, withReuseIdentifier: searchviewHeader.headerIdentifier)
         
         categoriesCollectionview.collectionViewLayout = createCompositionalLayout()
         categoriesCollectionview.delegate=self
@@ -49,18 +52,7 @@ class CategoriesVC: UIViewController {
     
 
      
-     @objc func searchActioon(_ sender : UIButton ) {
 
-//        if (self.searchview.txtSearch.text)?.count != 0 {
-//
-//            presenter.listOpportunties(search: self.searchview.txtSearch.text ?? "")
-//
-//        }else{
-//            presenter.listOpportunties(search: "")
-//
-//        }
-//        presenter.delegate=self
-    }
 }
 
 
@@ -82,6 +74,7 @@ private extension CategoriesVC {
 //MARK: - compsitional layout creation
 
 extension CategoriesVC {
+    
     func createCompositionalLayout() -> UICollectionViewCompositionalLayout{
         UICollectionViewCompositionalLayout { [weak self] sectionIndex, layoutEnviroment in
             guard let self = self  else {return nil}
@@ -98,6 +91,7 @@ extension CategoriesVC {
             section.supplementariesFollowContentInsets = false
             return section
         }
+        
     }
     
     private func supplementaryHeaderItem() -> NSCollectionLayoutBoundarySupplementaryItem {
@@ -105,6 +99,7 @@ extension CategoriesVC {
     }
     
 }
+
 //MARK: - confirm to UICollectionviewDelegate
 
 extension CategoriesVC:UICollectionViewDelegate{}
@@ -128,19 +123,18 @@ extension CategoriesVC:UICollectionViewDataSource{
 
 extension CategoriesVC:UICollectionViewDelegateFlowLayout{
     
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        
-        
-        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: searchviewHeader.headerIdentifier, for: indexPath) as! searchviewHeader
-        header.tag=indexPath.row
-        header.searchView.btnSearch.addTarget(self, action: #selector(searchActioon), for: .touchUpInside)
-
-        
-        return header
-    }
+//    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+//        
+//        
+//        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: searchviewHeader.headerIdentifier, for: indexPath) as! searchviewHeader
+//        header.tag=indexPath.row
+////        header.searchView.btnSearch.addTarget(self, action: #selector(searchActioon), for: .touchUpInside)
+//        
+//        return header
+//    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 120) //add your height here
+        return CGSize(width: collectionView.frame.width, height: 120) //  add your height here
     }
     
     

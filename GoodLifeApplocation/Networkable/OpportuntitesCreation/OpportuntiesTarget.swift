@@ -8,9 +8,9 @@
 import Foundation
 
 import Moya
-enum OpportuntiesApiTarget:TargetType{
+enum OpportuntiesApiTarget : TargetType {
 
-    case fundType
+    case fundType(search:String)
     case getChannels
     case completeOpportunities(id:Int,financialModel:[String],workType:String,levelOfDifficulty:String,AmountOfTechnology:String,amountRasise:String,opportuntiesUrl:String,competitorsUrl:[String],commomWays:[String],topAdvertisingChannel:[String],socialChannels:[String],avgAnnualRevenu:String,avgMonthlyCost:String,categories:[String],marketGraph:[String:String],intrest:String)
     
@@ -47,10 +47,10 @@ enum OpportuntiesApiTarget:TargetType{
     var task: Task{
         switch self{
 
-        case .fundType,.getChannels:
+        case .getChannels:
             return .requestPlain
 
-        case .opportunitiesDetails:
+        case .opportunitiesDetails,.fundType:
             return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
             
         case .completeOpportunities:
@@ -86,6 +86,10 @@ enum OpportuntiesApiTarget:TargetType{
             
         case .opportunitiesDetails(let id):
             return ["opportunity_id":id]
+            
+        case .fundType(let search):
+            return ["search":search]
+            
         default : return [:]
 
             

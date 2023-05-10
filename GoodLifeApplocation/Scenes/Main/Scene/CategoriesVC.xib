@@ -55,7 +55,7 @@
                     </constraints>
                 </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Tnh-BR-UYF">
-                    <rect key="frame" x="16" y="113" width="361" height="705"/>
+                    <rect key="frame" x="16" y="117" width="361" height="701"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bts-Nd-IqX">
                         <size key="itemSize" width="128" height="128"/>
@@ -73,7 +73,7 @@
                 <constraint firstItem="Tnh-BR-UYF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="HTe-2i-qrK"/>
                 <constraint firstItem="y7d-ya-Gxb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="QhU-zf-lQl"/>
                 <constraint firstAttribute="trailing" secondItem="y7d-ya-Gxb" secondAttribute="trailing" id="RqZ-Cf-IkG"/>
-                <constraint firstItem="Tnh-BR-UYF" firstAttribute="top" secondItem="y7d-ya-Gxb" secondAttribute="bottom" constant="4" id="dkc-oD-ZZ4"/>
+                <constraint firstItem="Tnh-BR-UYF" firstAttribute="top" secondItem="y7d-ya-Gxb" secondAttribute="bottom" constant="8" symbolic="YES" id="pli-1u-1hL"/>
                 <constraint firstItem="Tnh-BR-UYF" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="x9C-UA-QTP"/>
             </constraints>
             <point key="canvasLocation" x="9.9236641221374047" y="19.718309859154932"/>

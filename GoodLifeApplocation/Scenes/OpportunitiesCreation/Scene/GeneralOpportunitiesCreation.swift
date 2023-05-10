@@ -50,7 +50,7 @@ class GeneralOpportunitiesCreation: UIViewController {
     
     func getCategories(){
         
-        presenter.getFundType()
+        presenter.getFundType(search: "")
         presenter.delegate=self
         
     }

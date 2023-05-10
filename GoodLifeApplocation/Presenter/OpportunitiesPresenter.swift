@@ -24,8 +24,8 @@ class OpportunitiesPresenter:NSObject{
     
     var delegate :opportunitiesDelegate?
     
-    func getFundType(){
-        OpportuntiesManager.shared.fundType { Response in
+    func getFundType(search:String){
+        OpportuntiesManager.shared.fundType(search:search) { Response in
             switch Response{
                 
             case let .success(response):

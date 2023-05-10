@@ -25,18 +25,18 @@ class OpportunityListVC: UIViewController {
     override func viewDidLoad(){
         
         super.viewDidLoad()
+
+//        DataAvailability()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.showLoading()
         presenter.listOpportunties(search: "")
         presenter.delegate=self
         setupTableView()
         emptyView.isHidden=true
         setupSearchProperties()
-//        DataAvailability()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
         self.hidesBottomBarWhenPushed = false
         self.tabBarController?.tabBar.isHidden=false
     }
