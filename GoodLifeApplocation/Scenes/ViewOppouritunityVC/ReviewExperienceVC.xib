@@ -78,10 +78,10 @@
                                                     <rect key="frame" x="0.0" y="52" width="414" height="492"/>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="2yP-MC-MHh">
-                                                    <rect key="frame" x="16" y="30" width="382" height="293.5"/>
+                                                    <rect key="frame" x="16" y="30" width="382" height="292"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WiC-qg-XrO">
-                                                            <rect key="frame" x="0.0" y="0.0" width="382" height="57.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="382" height="56"/>
                                                             <string key="text">We value your 
 feedback!</string>
                                                             <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="24"/>
@@ -89,7 +89,7 @@ feedback!</string>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image3" translatesAutoresizingMaskIntoConstraints="NO" id="5e2-82-xG1" customClass="UIImageViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="79.5" width="382" height="131"/>
+                                                            <rect key="frame" x="0.0" y="78" width="382" height="131"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                     <real key="value" value="15"/>
@@ -103,7 +103,7 @@ feedback!</string>
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a brief review via text or image , All feedback from every project helps make us better!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZD-st-neS">
-                                                            <rect key="frame" x="0.0" y="232.5" width="382" height="61"/>
+                                                            <rect key="frame" x="0.0" y="231" width="382" height="61"/>
                                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -157,16 +157,16 @@ feedback!</string>
                                                             <rect key="frame" x="20" y="126" width="374" height="173.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review of project?*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Bd-Yp-5jU">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="17"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="16.5"/>
                                                                     <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="14"/>
                                                                     <color key="textColor" name="button"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5qg-kG-HDn" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="27" width="374" height="146.5"/>
+                                                                    <rect key="frame" x="0.0" y="26.5" width="374" height="147"/>
                                                                     <subviews>
                                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="T99-p0-Rch">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="146.5"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="147"/>
                                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <color key="textColor" systemColor="labelColor"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>

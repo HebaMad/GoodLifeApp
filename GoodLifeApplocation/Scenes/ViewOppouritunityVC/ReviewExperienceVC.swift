@@ -170,16 +170,7 @@ extension ReviewExperienceVC:MenuDelegate{
 
 extension ReviewExperienceVC : HomeDelegate {
     func getOpportunitiesFiltering(Opportunities: Opportuntiesss) {
-        
-    }
-    
-    func getCategoriesFiltered(categories: Home) { }
-    
-    func getMainScreenData(data: MainScreenData) { }
-    
-
-    func getOpportunities(categories: Opportuntiesss) {
-        self.oppourtinity = categories.opportunities ?? []
+        self.oppourtinity = Opportunities.opportunities ?? []
         print(self.oppourtinity)
 
         categoryTxt.isEnabled = true
@@ -187,7 +178,11 @@ extension ReviewExperienceVC : HomeDelegate {
         categoryTxt.pickerDelegate=self
         categoryTxt.dataSource=self
     }
-
+    
+    func getCategoriesFiltered(categories: Home) { }
+    
+    func getMainScreenData(data: MainScreenData) { }
+    
     func getOppourtinityDetails(categories: OppourtinityDetails) {}
 
     

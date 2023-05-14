@@ -102,15 +102,15 @@ extension MainVC {
     }
     
     @objc func moreDetailsBtnTapped(_ sender:UIButton){
-//      print(allOpportunities[sender.tag].id!)
+        //      print(allOpportunities[sender.tag].id!)
         print([sender.tag])
         print(allOpportunities)
         print(allOpportunities[sender.tag].id ?? 0)
-
+        
         presenter.getOpportunitiesDetails(opportunitiesId: String(describing: allOpportunities[sender.tag].id ?? 0))
         presenter.delegate=self
-
-      
+        
+        
     }
     
 }
@@ -134,11 +134,9 @@ extension MainVC {
             print("")
         case .Opportunities:
             print("")
-            //            let vc = OpportunityListVC.instantiate()
-            //            vc.opportunities=myOpportunities
-            //            vc.hidesBottomBarWhenPushed = false
-            //            vc.tabBarController?.tabBar.isHidden=false
-            //            self.navigationController?.pushViewController(vc, animated: true)
+            let vc = AllOpportunitiesVC()
+            vc.allOpportunities=allOpportunities
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     
@@ -306,7 +304,7 @@ extension MainVC:UICollectionViewDataSource{
         }
     }
     
-
+    
 }
 
 extension MainVC:UICollectionViewDelegateFlowLayout{
@@ -333,7 +331,7 @@ extension MainVC:MainDelegate{
         print(data)
         vc.opportunityDetails=data
         navigationController?.pushViewController(vc, animated: true)
-
+        
     }
     
     func getExploreMapData(data: ExploreMap) {

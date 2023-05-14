@@ -18,6 +18,7 @@
             <connections>
                 <outlet property="AddCategory" destination="Fti-4W-E7a" id="NAl-Er-oUy"/>
                 <outlet property="categoriesCollectionview" destination="Tnh-BR-UYF" id="slh-sN-p1j"/>
+                <outlet property="searchview" destination="gUd-Ct-T1d" id="yfa-wE-Y1h"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -55,7 +56,7 @@
                     </constraints>
                 </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Tnh-BR-UYF">
-                    <rect key="frame" x="16" y="117" width="361" height="701"/>
+                    <rect key="frame" x="16" y="181" width="361" height="637"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bts-Nd-IqX">
                         <size key="itemSize" width="128" height="128"/>
@@ -64,6 +65,13 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gUd-Ct-T1d" customClass="SearchView" customModule="GoodLifeApplocation" customModuleProvider="target">
+                    <rect key="frame" x="20" y="125" width="353" height="40"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="fSK-9O-spu"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="bg3"/>
@@ -71,12 +79,15 @@
                 <constraint firstItem="y7d-ya-Gxb" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="2ZS-wE-pdL"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Tnh-BR-UYF" secondAttribute="trailing" constant="16" id="5id-gR-n7w"/>
                 <constraint firstItem="Tnh-BR-UYF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="HTe-2i-qrK"/>
+                <constraint firstItem="gUd-Ct-T1d" firstAttribute="top" secondItem="y7d-ya-Gxb" secondAttribute="bottom" constant="16" id="MaJ-GX-XxQ"/>
+                <constraint firstItem="gUd-Ct-T1d" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="OuW-op-2Q5"/>
                 <constraint firstItem="y7d-ya-Gxb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="QhU-zf-lQl"/>
+                <constraint firstItem="Tnh-BR-UYF" firstAttribute="top" secondItem="gUd-Ct-T1d" secondAttribute="bottom" constant="16" id="RIx-Hr-yNS"/>
                 <constraint firstAttribute="trailing" secondItem="y7d-ya-Gxb" secondAttribute="trailing" id="RqZ-Cf-IkG"/>
-                <constraint firstItem="Tnh-BR-UYF" firstAttribute="top" secondItem="y7d-ya-Gxb" secondAttribute="bottom" constant="8" symbolic="YES" id="pli-1u-1hL"/>
+                <constraint firstAttribute="trailing" secondItem="gUd-Ct-T1d" secondAttribute="trailing" constant="20" id="Xve-Co-ZoN"/>
                 <constraint firstItem="Tnh-BR-UYF" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="x9C-UA-QTP"/>
             </constraints>
-            <point key="canvasLocation" x="9.9236641221374047" y="19.718309859154932"/>
+            <point key="canvasLocation" x="-127" y="-19"/>
         </view>
     </objects>
     <resources>

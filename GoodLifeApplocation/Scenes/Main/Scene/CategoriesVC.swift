@@ -13,13 +13,14 @@ class CategoriesVC: UIViewController {
     @IBOutlet weak var AddCategory: UIButton!
     @IBOutlet weak var categoriesCollectionview: UICollectionView!
 
+    @IBOutlet weak var searchview: SearchView!
     
     //MARK: - Properties
 
     var categories:[mainType]=[]
     private let itemsPerRow: CGFloat = 2
     private let sectionInsets = UIEdgeInsets(top: 2.0,left: 0.0,bottom: 2.0,right: 0.0)
-    var presenter:OpportunitiesPresenter?
+    let presenter=OpportunitiesPresenter()
 
     //MARK: - Life cycle
     
@@ -28,6 +29,7 @@ class CategoriesVC: UIViewController {
         
         bindButtons()
         setupCollectionView()
+        setupSearchProperties()
         
       }
     
@@ -42,12 +44,42 @@ class CategoriesVC: UIViewController {
     func setupCollectionView(){
         
         categoriesCollectionview.register(CategoryCell.self)
-//        categoriesCollectionview.register(UINib(nibName:"searchviewHeader", bundle: nil), forSupplementaryViewOfKind:UICollectionView.elementKindSectionHeader, withReuseIdentifier: searchviewHeader.headerIdentifier)
         
         categoriesCollectionview.collectionViewLayout = createCompositionalLayout()
         categoriesCollectionview.delegate=self
         categoriesCollectionview.dataSource=self
         
+    }
+    
+    func  setupSearchProperties(){
+        searchview.btnSearch.addTarget(self, action: #selector(searchActioon), for: .touchUpInside)
+
+        searchview.startHandler {
+     }
+
+        searchview.endEditingHandler {
+            self.opportunitiesSearch()
+     }
+
+     }
+     
+     @objc func searchActioon(_ sender : UIButton ) {
+         opportunitiesSearch()
+      
+ }
+    
+    func opportunitiesSearch(){
+        if (self.searchview.txtSearch.text)?.count != 0 {
+            print("test")
+            presenter.getFundType(search:  self.searchview.txtSearch.text ?? "")
+            presenter.delegate=self
+
+        }else{
+            presenter.getFundType(search:  "")
+            presenter.delegate=self
+
+
+        }
     }
     
 
@@ -87,16 +119,13 @@ extension CategoriesVC {
             let section = NSCollectionLayoutSection(group: group)
             //            section.orthogonalScrollingBehavior = .continuous
             section.contentInsets = .init(top: 0, leading: 4, bottom: 0, trailing: 4)
-            section.boundarySupplementaryItems = [self.supplementaryHeaderItem()]
+//            section.boundarySupplementaryItems = [self.supplementaryHeaderItem()]
             section.supplementariesFollowContentInsets = false
             return section
         }
         
     }
-    
-    private func supplementaryHeaderItem() -> NSCollectionLayoutBoundarySupplementaryItem {
-        .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .estimated(150)), elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
-    }
+
     
 }
 
@@ -123,21 +152,7 @@ extension CategoriesVC:UICollectionViewDataSource{
 
 extension CategoriesVC:UICollectionViewDelegateFlowLayout{
     
-//    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-//        
-//        
-//        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: searchviewHeader.headerIdentifier, for: indexPath) as! searchviewHeader
-//        header.tag=indexPath.row
-////        header.searchView.btnSearch.addTarget(self, action: #selector(searchActioon), for: .touchUpInside)
-//        
-//        return header
-//    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 120) //  add your height here
-    }
-    
-    
+
     func collectionView(_ collectionView: UICollectionView,layout collectionViewLayout: UICollectionViewLayout,sizeForItemAt indexPath: IndexPath) -> CGSize {
         let paddingSpace = sectionInsets.left * (itemsPerRow + 2)
         let availableWidth = view.frame.width - 16
@@ -147,5 +162,19 @@ extension CategoriesVC:UICollectionViewDelegateFlowLayout{
     }
 }
 
-
+extension CategoriesVC:OpportunitiesDelegate{
+    func showAlerts(title: String, message: String) {}
+    
+    func getFundTypeData(data: FundType) {
+        print("3")
+        categories=data.fund_types ?? []
+        categoriesCollectionview.reloadData()
+        
+        
+    }
+    
+    func getChannels(data: RecommendedChannel) { }
+    
+    
+}
 

@@ -988,9 +988,9 @@ Night</string>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rf1-ug-s5D">
                                                 <rect key="frame" x="8" y="0.0" width="362" height="100"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="       Community Movie Night" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="14b-8N-4mL">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="          Community Movie Night" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="14b-8N-4mL">
                                                         <rect key="frame" x="0.0" y="0.0" width="362" height="75"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -1273,7 +1273,7 @@ Night</string>
                                 <rect key="frame" x="0.0" y="48" width="414" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opportunity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3f-Fs-loT">
-                                        <rect key="frame" x="155.5" y="14" width="103" height="22"/>
+                                        <rect key="frame" x="156" y="14" width="102.5" height="22"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="18"/>
                                         <color key="textColor" name="button"/>
@@ -1818,22 +1818,22 @@ Night</string>
                                                 <rect key="frame" x="0.0" y="671.5" width="374" height="110"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgQ-Wo-lgK">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="21.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="27"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How would you rate this opportunity?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cg-yZ-jr5">
-                                                        <rect key="frame" x="0.0" y="31.5" width="374" height="17"/>
+                                                        <rect key="frame" x="0.0" y="37" width="374" height="17"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zhh-8p-m0I" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="58.5" width="374" height="51.5"/>
+                                                        <rect key="frame" x="0.0" y="64" width="374" height="46"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OW1-ck-r5s" customClass="RatingControl" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                                                <rect key="frame" x="4" y="4" width="366" height="43.5"/>
+                                                                <rect key="frame" x="4" y="4" width="366" height="38"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <color key="tintColor" name="review star"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -2915,17 +2915,17 @@ Night</string>
                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q2E-g3-Qax">
                                         <rect key="frame" x="16" y="54" width="382" height="497"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noData" translatesAutoresizingMaskIntoConstraints="NO" id="jVE-cU-cYP">
-                                                <rect key="frame" x="12" y="110" width="358" height="197"/>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noData" translatesAutoresizingMaskIntoConstraints="NO" id="jVE-cU-cYP">
+                                                <rect key="frame" x="16" y="110" width="350" height="197"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="jVE-cU-cYP" secondAttribute="trailing" constant="12" id="1I4-Q1-u5S"/>
-                                            <constraint firstAttribute="trailing" secondItem="jVE-cU-cYP" secondAttribute="trailing" constant="12" id="9qU-Vh-dBg"/>
+                                            <constraint firstAttribute="trailing" secondItem="jVE-cU-cYP" secondAttribute="trailing" constant="16" id="1I4-Q1-u5S"/>
+                                            <constraint firstAttribute="trailing" secondItem="jVE-cU-cYP" secondAttribute="trailing" constant="16" id="9qU-Vh-dBg"/>
                                             <constraint firstAttribute="bottom" secondItem="jVE-cU-cYP" secondAttribute="bottom" constant="190" id="Fpf-gc-3dM"/>
-                                            <constraint firstItem="jVE-cU-cYP" firstAttribute="leading" secondItem="Q2E-g3-Qax" secondAttribute="leading" constant="12" id="JKK-jN-SzF"/>
-                                            <constraint firstItem="jVE-cU-cYP" firstAttribute="leading" secondItem="Q2E-g3-Qax" secondAttribute="leading" constant="12" id="L7t-hS-uvV"/>
+                                            <constraint firstItem="jVE-cU-cYP" firstAttribute="leading" secondItem="Q2E-g3-Qax" secondAttribute="leading" constant="16" id="JKK-jN-SzF"/>
+                                            <constraint firstItem="jVE-cU-cYP" firstAttribute="leading" secondItem="Q2E-g3-Qax" secondAttribute="leading" constant="16" id="L7t-hS-uvV"/>
                                             <constraint firstItem="jVE-cU-cYP" firstAttribute="top" secondItem="Q2E-g3-Qax" secondAttribute="top" constant="110" id="v2f-qN-Jga"/>
                                         </constraints>
                                     </view>
@@ -3579,13 +3579,13 @@ Night</string>
             <size key="intrinsicContentSize" width="22" height="22"/>
         </designable>
         <designable name="umm-WU-gla">
-            <size key="intrinsicContentSize" width="142.5" height="34"/>
+            <size key="intrinsicContentSize" width="106" height="19.5"/>
         </designable>
         <designable name="ytq-pp-ACn">
             <size key="intrinsicContentSize" width="22.5" height="21.5"/>
         </designable>
         <designable name="z2r-d2-GAm">
-            <size key="intrinsicContentSize" width="135" height="34"/>
+            <size key="intrinsicContentSize" width="134.5" height="19.5"/>
         </designable>
     </designables>
     <resources>

@@ -107,6 +107,8 @@
 		277CF36628BD52A900F2874F /* AuthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277CF36528BD52A900F2874F /* AuthPresenter.swift */; };
 		277CF36828BD5AD700F2874F /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277CF36728BD5AD700F2874F /* MenuPresenter.swift */; };
 		277CF36A28BD5DAF00F2874F /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277CF36928BD5DAF00F2874F /* ProfilePresenter.swift */; };
+		278337DB2A10C667006B3F95 /* AllOpportunitiesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278337D92A10C667006B3F95 /* AllOpportunitiesVC.swift */; };
+		278337DC2A10C667006B3F95 /* AllOpportunitiesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 278337DA2A10C667006B3F95 /* AllOpportunitiesVC.xib */; };
 		27876ABD28A4DB64003A012A /* NSUIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27876ABC28A4DB64003A012A /* NSUIColor+Hex.swift */; };
 		278882D829BC9D650025A6D0 /* OpportunitiesStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278882D629BC9D650025A6D0 /* OpportunitiesStatusCell.swift */; };
 		278882D929BC9D650025A6D0 /* OpportunitiesStatusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 278882D729BC9D650025A6D0 /* OpportunitiesStatusCell.xib */; };
@@ -416,6 +418,8 @@
 		277CF36528BD52A900F2874F /* AuthPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPresenter.swift; sourceTree = "<group>"; };
 		277CF36728BD5AD700F2874F /* MenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
 		277CF36928BD5DAF00F2874F /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		278337D92A10C667006B3F95 /* AllOpportunitiesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllOpportunitiesVC.swift; sourceTree = "<group>"; };
+		278337DA2A10C667006B3F95 /* AllOpportunitiesVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllOpportunitiesVC.xib; sourceTree = "<group>"; };
 		27876ABC28A4DB64003A012A /* NSUIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSUIColor+Hex.swift"; sourceTree = "<group>"; };
 		278882D629BC9D650025A6D0 /* OpportunitiesStatusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpportunitiesStatusCell.swift; sourceTree = "<group>"; };
 		278882D729BC9D650025A6D0 /* OpportunitiesStatusCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpportunitiesStatusCell.xib; sourceTree = "<group>"; };
@@ -743,6 +747,8 @@
 				27FC430629C9FFDC00FB00B9 /* ExploreMapVC.swift */,
 				276527582A0BC9EA00E4EABF /* DetailsVC.swift */,
 				276527592A0BC9EA00E4EABF /* DetailsVC.xib */,
+				278337D92A10C667006B3F95 /* AllOpportunitiesVC.swift */,
+				278337DA2A10C667006B3F95 /* AllOpportunitiesVC.xib */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -1490,6 +1496,7 @@
 				27CB206E289C1AA000E63694 /* AllCategoriesCell.xib in Resources */,
 				27C9AE9F288D8BEC00FA584A /* OpportunityViewVC.xib in Resources */,
 				27985F4229969004006C8FE9 /* HobbiesCell.xib in Resources */,
+				278337DC2A10C667006B3F95 /* AllOpportunitiesVC.xib in Resources */,
 				2765D60028F40D66008835D9 /* GeneralMarketingBreakdown.xib in Resources */,
 				27B8C8F628A16B5A0011B039 /* FilterHeaderReusableview.xib in Resources */,
 				27C9AE52288D3CA000FA584A /* Inter-Black.ttf in Resources */,
@@ -1721,6 +1728,7 @@
 				270562DB28C0A32A00B0124E /* Validator.swift in Sources */,
 				2765D5FB28F4083C008835D9 /* GeneralFinancialCell.swift in Sources */,
 				278882FD29C342D80025A6D0 /* searchviewHeader.swift in Sources */,
+				278337DB2A10C667006B3F95 /* AllOpportunitiesVC.swift in Sources */,
 				27CBC5AB2927CDA5000AE9A6 /* CDAlertView.swift in Sources */,
 				270562D328BFD1EE00B0124E /* DashboardNetworkable.swift in Sources */,
 				27CBC5A72927CDA5000AE9A6 /* CDAlertHeaderView.swift in Sources */,
