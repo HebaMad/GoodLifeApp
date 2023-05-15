@@ -46,7 +46,7 @@ class MainVC: UIViewController {
     private func setupCollectionview(){
         
         self.showLoading()
-        presenter.getMainScreenData()
+        presenter.getMainScreenData(search: "")
         presenter.delegate=self
         HomeCollectionview.register(SubscriptionCollectionViewCell.self)
         HomeCollectionview.register(CategoryCell.self)
@@ -65,7 +65,7 @@ class MainVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.showLoading()
-        presenter.getMainScreenData()
+        presenter.getMainScreenData(search: "")
         presenter.delegate=self
     }
     

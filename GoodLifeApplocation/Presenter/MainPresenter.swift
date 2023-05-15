@@ -26,9 +26,9 @@ class MainPresenter:NSObject{
     
     var delegate :mainDelegate?
     
-    func getMainScreenData(){
+    func getMainScreenData(search:String){
         
-        HomeManager.shared.homescreen { Response in
+        HomeManager.shared.homescreen(search:search ) { Response in
             switch Response{
                 
             case let .success(response):

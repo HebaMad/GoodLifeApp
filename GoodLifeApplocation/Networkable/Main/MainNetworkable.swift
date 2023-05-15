@@ -12,7 +12,7 @@ protocol MainNetworkable:Networkable  {
     
     func MainCategory(completion: @escaping (Result<BaseResponse<MainHomeCategories>, Error>)-> ())
     func subCategory(completion: @escaping (Result<BaseResponse<SubHomeCategories>, Error>)-> ())
-    func homescreen(completion: @escaping (Result<BaseResponse<MainScreenData>, Error>)-> ())
+    func homescreen(search:String,completion: @escaping (Result<BaseResponse<MainScreenData>, Error>)-> ())
     func deleteOpportunities(opportunity_id:String,completion: @escaping (Result<BaseResponse<Empty>, Error>)-> ())
     func listOpportunities(search:String,completion: @escaping (Result<BaseResponse<ListOpportunities>, Error>)-> ())
     func createOpportunties(title:String,city:String,state:String,description:String,name:String,tags:[String],rating:String,email:String,phone:String,representative:String,completion: @escaping (Result<BaseResponse<opportunitiesData>, Error>)-> ())
@@ -33,8 +33,8 @@ class MainManager:MainNetworkable {
         
     }()
     
-    func homescreen(completion: @escaping (Result<BaseResponse<MainScreenData>, Error>) -> ()) {
-        request(target: .homescreen, completion: completion)
+    func homescreen(search:String,completion: @escaping (Result<BaseResponse<MainScreenData>, Error>) -> ()) {
+        request(target: .homescreen(search: search), completion: completion)
     }
     func deleteOpportunities(opportunity_id: String, completion: @escaping (Result<BaseResponse<Empty>, Error>) -> ()) {
         request(target: .deleteOpportunities(opportunity_id: opportunity_id), completion: completion)

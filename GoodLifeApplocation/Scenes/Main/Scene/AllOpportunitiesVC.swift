@@ -13,12 +13,11 @@ class AllOpportunitiesVC: UIViewController {
     @IBOutlet weak var searchview: SearchView!
     
     let presenter=MainPresenter()
-
     var allOpportunities:[opportunitiesData]=[]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupSearchProperties()
         setupCollectionview()
     }
 
@@ -30,7 +29,6 @@ class AllOpportunitiesVC: UIViewController {
     func setupCollectionview(){
         
         opportunitiesCollectionview.register(SubscriptionCollectionViewCell.self)
-        
         opportunitiesCollectionview.collectionViewLayout = createCompositionalLayout()
         opportunitiesCollectionview.delegate=self
         opportunitiesCollectionview.dataSource=self
@@ -38,6 +36,38 @@ class AllOpportunitiesVC: UIViewController {
     
     
 
+}
+
+extension AllOpportunitiesVC{
+    func  setupSearchProperties(){
+        searchview.btnSearch.addTarget(self, action: #selector(searchActioon), for: .touchUpInside)
+
+        searchview.startHandler {
+     }
+
+        searchview.endEditingHandler {
+            self.opportunitiesSearch()
+     }
+
+     }
+     
+     @objc func searchActioon(_ sender : UIButton ) {
+         opportunitiesSearch()
+      
+ }
+    
+    func opportunitiesSearch(){
+        if (self.searchview.txtSearch.text)?.count != 0 {
+            presenter.getMainScreenData(search:  self.searchview.txtSearch.text ?? "")
+            presenter.delegate=self
+
+        }else{
+            presenter.getMainScreenData(search:  "")
+            presenter.delegate=self
+
+
+        }
+    }
 }
 
 
@@ -91,7 +121,11 @@ extension AllOpportunitiesVC:UICollectionViewDataSource {
 extension AllOpportunitiesVC:MainDelegate{
     func showAlerts(title: String, message: String) {}
     
-    func getMainScreenData(data: MainScreenData) {}
+    func getMainScreenData(data: MainScreenData) {
+
+        allOpportunities=data.opportunities ?? []
+        opportunitiesCollectionview.reloadData()
+    }
     
     func getOpportunitiesData(data: ListOpportunities) {}
     

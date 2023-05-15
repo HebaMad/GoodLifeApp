@@ -12,7 +12,7 @@ enum MainApiTarget:TargetType{
     case getNeedMainCategory
     case getNeedSubCategory
     case listOpportunities(search:String)
-    case homescreen
+    case homescreen(search:String)
     case deleteOpportunities(opportunity_id:String)
     case createOpportunties(title:String,city:String,state:String,description:String,name:String,tags:[String],rating:String,email:String,phone:String,representative:String)
     case mapScreenData(fundTypeId:String,mainCategoryId:String,subCategoryId:String,interest:String)
@@ -55,10 +55,8 @@ enum MainApiTarget:TargetType{
         case .createOpportunties:
             return .requestParameters(parameters: param, encoding: URLEncoding.httpBody)
 
-        case .homescreen:
-            return .requestPlain
 
-        case .deleteOpportunities,.listOpportunities,.getNeedMainCategory,.getNeedSubCategory,.mapScreenData:
+        case .deleteOpportunities,.listOpportunities,.getNeedMainCategory,.getNeedSubCategory,.mapScreenData,.homescreen:
             return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
 
         }
@@ -96,6 +94,9 @@ enum MainApiTarget:TargetType{
         
         case .mapScreenData(let fundTypeId,let mainCategoryId,let subCategoryId,let interest):
             return  ["fund_type_id" :fundTypeId ,"main_category_id":mainCategoryId,"sub_category_id":subCategoryId,"interest":interest ]
+            
+        case .homescreen(let search):
+            return ["search":search]
         default : return [:]
 
             

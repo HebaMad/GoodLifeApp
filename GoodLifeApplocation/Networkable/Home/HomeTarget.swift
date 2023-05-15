@@ -17,7 +17,7 @@ enum HomeApiTarget:TargetType{
     case Filter(investmentFrom:String,investmentTo:String,work_type:String,level_of_difficulty:String,amount_of_technology:String)
     case AddFundType(name:String,main_category_id:String,sub_category_id:String,latitude:String,longitude:String,city:String,default_need:String)
     
-    case homescreen
+    case homescreen(search:String)
     case opportunityfiltering(invest_from:String,invest_to:String,time_commitment:String,level_of_difficulty:String,amount_of_technology:String)
     
     var baseURL: URL {
@@ -60,12 +60,12 @@ enum HomeApiTarget:TargetType{
     
     var task: Task{
         switch self{
-        case .homescreen,.Home:
+        case .Home:
             return .requestPlain
         case .AddFundType:
             return .requestParameters(parameters: param, encoding: URLEncoding.httpBody)
 
-        case .categoriesFiltering,.getOpportunities,.oppourtinityDetails,.opportunityfiltering,.Filter:
+        case .categoriesFiltering,.getOpportunities,.oppourtinityDetails,.opportunityfiltering,.Filter,.homescreen:
             return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
         }
     }
@@ -110,6 +110,9 @@ enum HomeApiTarget:TargetType{
             
         case .opportunityfiltering(let invest_from,let invest_to,let time_commitment,let level_of_difficulty,let amount_of_technology):
             return ["invest_from":invest_from,"invest_to":invest_to,"time_commitment":time_commitment,"level_of_difficulty":level_of_difficulty,"amount_of_technology":amount_of_technology]
+            
+        case .homescreen(let search):
+            return ["search":search]
         default : return [:]
 
             
