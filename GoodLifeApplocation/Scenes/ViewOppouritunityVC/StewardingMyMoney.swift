@@ -19,7 +19,6 @@ class StewardingMyMoney: UIViewController ,IndicatorInfoProvider{
     @IBOutlet weak var availableSupportTxt: UILabel!
     
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -43,7 +42,6 @@ class StewardingMyMoney: UIViewController ,IndicatorInfoProvider{
     
     func getMoneyData(){
         
-        print(money?.revenue)
         revenuMoneyTxt.text = money?.revenue
         investmentMoney.text = money?.investments
         availableSupportTxt.text = money?.available_support
