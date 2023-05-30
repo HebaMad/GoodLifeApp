@@ -167,15 +167,15 @@ extension AddFundTypes{
     
     func clearData(){
         if defaultPointSwitch.isOn != true {
-            mainCategoryTxt.text = ""
-            subCategoryTxt.text = ""
-            categoryImage.image = nil
-            pointName.text = ""
+            latitudetxt.text = ""
+            longitudeTxt.text = ""
+            cityTxt.text = ""
         }
        
-        latitudetxt.text = ""
-        longitudeTxt.text = ""
-        cityTxt.text = ""
+        mainCategoryTxt.text = ""
+        subCategoryTxt.text = ""
+        categoryImage.image = nil
+        pointName.text = ""
  
     }
 }

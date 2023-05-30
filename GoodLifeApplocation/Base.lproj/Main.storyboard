@@ -848,6 +848,9 @@ Night</string>
                                                                                     <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 </userDefinedRuntimeAttribute>
                                                                             </userDefinedRuntimeAttributes>
+                                                                            <connections>
+                                                                                <action selector="copyUrlBtn:" destination="4s6-eA-XkX" eventType="touchUpInside" id="7lS-bK-qnB"/>
+                                                                            </connections>
                                                                         </button>
                                                                     </subviews>
                                                                     <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="8" bottom="10" trailing="8"/>

@@ -208,7 +208,7 @@ extension ReviewExperienceVC : HomeDelegate {
     
     func textFieldDataPicker(_ textField: UITextFieldDataPicker, titleForRow row: Int, forComponent component: Int) -> String? {
         print("\(title ?? "")")
-        return " " + (oppourtinity[row].title ?? "")
+        return " " + (oppourtinity[row].name ?? "")
     }
     
     func numberOfComponents(in textField: UITextFieldDataPicker) -> Int {
@@ -218,7 +218,7 @@ extension ReviewExperienceVC : HomeDelegate {
     func textFieldDataPicker(_ textField: UITextFieldDataPicker, didSelectRow row: Int, inComponent component: Int) {
         print(self.oppourtinity)
 
-        categoryTxt.setTextFieldTitle(title: " " + (oppourtinity[row].title ?? ""))
+        categoryTxt.setTextFieldTitle(title: " " + (oppourtinity[row].name ?? ""))
         self.itemID=oppourtinity[row].id ?? 0
         presenter.getCategories(opportunitiyID: "\(self.itemID)")
         presenter.delegate=self
