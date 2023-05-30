@@ -46,7 +46,7 @@ class StewardingMyMoney: UIViewController ,IndicatorInfoProvider{
         print(money?.revenue)
         revenuMoneyTxt.text = money?.revenue
         investmentMoney.text = money?.investments
-//        availableSupportTxt.text = money.
+        availableSupportTxt.text = money?.available_support
         
     }
 

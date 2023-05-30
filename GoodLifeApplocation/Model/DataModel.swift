@@ -7,6 +7,7 @@
 
 import UIKit
 // MARK: - Empty Model
+
 struct Empty:Decodable{
     
 }
