@@ -31,7 +31,16 @@ class DigitalOpportunitiesVC: UIViewController  {
 
     }
 
-
+    @IBAction func copyUrlBtn(_ sender: Any) {
+        UIPasteboard.general.string = digital?.url ?? ""
+      
+    }
+    
+    @objc func copyLinkBtn(_ Sender:UIButton){
+        UIPasteboard.general.string = digital?.competitors?[Sender.tag]
+        
+    }
+    
 }
 extension DigitalOpportunitiesVC:Storyboarded{
     
@@ -48,6 +57,8 @@ extension DigitalOpportunitiesVC:UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:websiteCompetitor=tableView.dequeueReusableCell(for: indexPath)
         cell.configureCell(url: digital?.competitors?[indexPath.row] ?? "")
+        cell.copyLink.tag = indexPath.row
+        cell.copyLink.addTarget(self, action: #selector(copyLinkBtn), for: .touchUpInside)
         return cell
     }
     
