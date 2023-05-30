@@ -35,8 +35,7 @@ class OpportunityViewVC: UIViewController {
         presenter.userProfile()
         presenter.delegate=self
         
-//        stewardingResourcePresenter.getStewardingMyResource()
-//        stewardingResourcePresenter.delegate=self
+
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
