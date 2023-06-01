@@ -27,11 +27,15 @@ class CategoriesVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+
+        
+      }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         bindButtons()
         setupCollectionView()
         setupSearchProperties()
-        
-      }
+    }
     
     //MARK: - Binding
 
