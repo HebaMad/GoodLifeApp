@@ -32,15 +32,17 @@ class StewardingTimeAndTalent: UIViewController,IndicatorInfoProvider {
         super.viewDidLoad()
         
         getData()
-        setupCollectionview()
         hobbiesCollectionview.layer.cornerRadius = 16
         
     }
+    
+    
     
     func  getData(){
         talent = hobbies?.talents ?? []
         interest = hobbies?.interests ?? []
         time=hobbies?.time ?? []
+        setupCollectionview()
         
     }
     
@@ -187,6 +189,7 @@ extension StewardingTimeAndTalent:UICollectionViewDataSource,UICollectionViewDel
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch sections[indexPath.section]{
+            
         case .talent:
             let cell:HobbiesCell = collectionView.dequeueReusableCell(for: indexPath)
             cell.setupCustomCell(hobbyTitle: talent[indexPath.row])
@@ -194,8 +197,6 @@ extension StewardingTimeAndTalent:UICollectionViewDataSource,UICollectionViewDel
             cell.hobbiesTitle.textColor = .black
             
             return cell
-            
-            
             
         case .Time:
             
@@ -210,6 +211,7 @@ extension StewardingTimeAndTalent:UICollectionViewDataSource,UICollectionViewDel
             cell.hobbyView.backgroundColor = UIColor(named: "bg3")
             cell.hobbiesTitle.textColor = .black
             return cell
+            
         }
         
     }
@@ -231,13 +233,13 @@ extension StewardingTimeAndTalent:UICollectionViewDataSource,UICollectionViewDel
 }
 
 
-extension StewardingTimeAndTalent{
-    
+extension StewardingTimeAndTalent {
     //MARK: - configuration
-    
+
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return itemInfo
     }
+    
 }
 
 extension StewardingTimeAndTalent:DataTransfered{
@@ -245,21 +247,22 @@ extension StewardingTimeAndTalent:DataTransfered{
         self.time=time
         hobbiesCollectionview.reloadData()
     }
-    
-    
 }
 
 extension StewardingTimeAndTalent:hobbiesTransfered{
     func getHobbiesData(hobbies: [String], hobbiesType: String) {
+        
         if hobbiesType == "talent" {
             talent = hobbies
+            print(talent)
+            print(interest)
+
         }else{
             interest = hobbies
+            print(talent)
+            print(interest)
         }
+        
         hobbiesCollectionview.reloadData()
     }
-    
-    
-    
-    
 }
