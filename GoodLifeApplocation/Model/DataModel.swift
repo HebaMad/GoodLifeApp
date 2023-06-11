@@ -473,8 +473,8 @@ struct Money:Codable{
     let available_support:String?
 }
 struct TimeAndTalent:Codable {
-    let talents:[String]?
-    let interests:[String]?
+    let talents:[String?]?
+    let interests:[String?]?
     let time:[Time]?
     
 }
