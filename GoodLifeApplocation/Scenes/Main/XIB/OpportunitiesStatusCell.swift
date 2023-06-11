@@ -31,7 +31,10 @@ class OpportunitiesStatusCell: UITableViewCell,NibLoadableView {
         titleTxt.text = data.title
         dateTxt.text=data.created_at
         if data.completion == 100 {
+            print("ttttttttttt")
             completeInformationBtn.setTitleColor(.darkGray, for: .normal)
+            completeInformationBtn.setTitle("Application Completed Successfully", for: .normal)
+
             completeInformationBtn.isEnabled=false
         }else{
             completeInformationBtn.setTitleColor( UIColor(named: "button") ?? .clear, for: .normal)
@@ -40,9 +43,14 @@ class OpportunitiesStatusCell: UITableViewCell,NibLoadableView {
         if  data.status == "pending" {
 
             status.bgColor = UIColor(named: "unselectedTab") ?? .clear
+            completeInformationBtn.setTitle("please wait until your request is accepted", for: .normal)
+            completeInformationBtn.isEnabled=false
+
 
         }else{
             status.bgColor = UIColor(named: "ButtonColor") ?? .clear
+            completeInformationBtn.setTitle("Complete information", for: .normal)
+
         }
         completeProgressView.progress=Float(data.completion ?? 0)/100.0
 
