@@ -234,7 +234,7 @@ extension MainOpportunitiesCreation{
             
             
         case 5:
-            opportunitiesUrl = "https://" + ((vc as! DigitalOpportunitiesCreation).opportunitiesUrl.text ?? "")
+            opportunitiesUrl =  ((vc as! DigitalOpportunitiesCreation).opportunitiesUrl.text ?? "")
             competitorsUrl = (vc as! DigitalOpportunitiesCreation).competitorsUrl
             
             if opportunitiesUrl != "" {
@@ -276,7 +276,7 @@ extension MainOpportunitiesCreation{
             
                 
             }else{
-                showSnackBar(message: "Add your Business plan")
+                showSnackBar(message: "At least one Business plan must be added")
                 
             }
             

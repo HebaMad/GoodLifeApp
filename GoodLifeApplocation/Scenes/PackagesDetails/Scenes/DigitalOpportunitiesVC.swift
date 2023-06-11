@@ -33,11 +33,14 @@ class DigitalOpportunitiesVC: UIViewController  {
 
     @IBAction func copyUrlBtn(_ sender: Any) {
         UIPasteboard.general.string = digital?.url ?? ""
+        showSnackBar(message: " link copied successfully")
+
       
     }
     
     @objc func copyLinkBtn(_ Sender:UIButton){
         UIPasteboard.general.string = digital?.competitors?[Sender.tag]
+        showSnackBar(message: " link copied successfully")
         
     }
     

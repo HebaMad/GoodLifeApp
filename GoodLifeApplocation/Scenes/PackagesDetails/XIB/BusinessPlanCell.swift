@@ -20,7 +20,7 @@ class BusinessPlanCell: UICollectionViewCell, NibLoadableView {
     
     func setupCell(items:MarketingBreakdown){
         titleTxt.text = items.title ?? ""
-        informationTxt.text = items.value?.html2Attributed?.string
+        informationTxt.text = items.value ?? ""
 
     }
 }

@@ -39,8 +39,8 @@ class StewardingTimeAndTalent: UIViewController,IndicatorInfoProvider {
     
     
     func  getData(){
-        talent = hobbies?.talents ?? []
-        interest = hobbies?.interests ?? []
+        talent = hobbies?.talents as? [String] ?? []
+        interest = hobbies?.interests as? [String] ?? []
         time=hobbies?.time ?? []
         setupCollectionview()
         

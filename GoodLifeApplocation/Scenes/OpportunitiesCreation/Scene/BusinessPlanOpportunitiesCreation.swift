@@ -31,7 +31,7 @@ class BusinessPlanOpportunitiesCreation: UIViewController {
         bindTxtFields()
         txtviewCustomization()
     }
-   
+    
     
 }
 extension BusinessPlanOpportunitiesCreation {
@@ -44,7 +44,7 @@ extension BusinessPlanOpportunitiesCreation {
     
     func bindTxtFields(){
         planUrl.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
-
+        
     }
     
     func bindUISliderValue(){
@@ -55,8 +55,7 @@ extension BusinessPlanOpportunitiesCreation {
         switch sender{
             
         case addNewPlan:
-            makeParameter()
-            clearData()
+            checkData()
         default:
             print("")
             
@@ -85,6 +84,53 @@ extension BusinessPlanOpportunitiesCreation{
         
         
         
+    }
+    
+    func checkData(){
+        if  planNameTxt.text != "" {
+            
+            if planUrl.text != "" &&  planUrl.text != "https://" {
+                
+                if planPros.text != "" && planPros.text != "Please add your plan pros"{
+                    
+                    if planCons.text != "" && planCons.text != "Please add your plan cons"{
+                        
+                        if marketSize.value != 0 {
+                            makeParameter()
+                            clearData()
+                        }else{
+                            showSnackBar(message: "select your Business plan market size")
+
+                            
+                        }
+                        
+                        
+                    }else{
+                        showSnackBar(message: "Add your Business plan Cons")
+
+                    }
+                    
+                    
+                }else{
+                    showSnackBar(message: "Add your Business plan Pros")
+
+                    
+                }
+                
+                
+            }else{
+                
+                showSnackBar(message: "Add your Business plan Url")
+
+                
+            }
+            
+        }else{
+            
+            showSnackBar(message: "Add your Business plan Name")
+
+            
+        }
     }
     
 }
@@ -134,7 +180,7 @@ extension BusinessPlanOpportunitiesCreation {
         planPros.text=""
         marketSize.value=0.0
         marketRate.text="0%"
-
+        
     }
     
     @objc func textFieldDidChange(textField: UITextField){

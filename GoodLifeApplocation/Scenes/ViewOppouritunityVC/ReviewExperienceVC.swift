@@ -119,9 +119,13 @@ private extension ReviewExperienceVC{
                     print(parameter)
                     presenter.createFeedback(id: "\(self.itemID)", review:projectReview.text , ratings: parameter)
                     presenter.delegate=self
+                    categoryID=[]
+                    categoriesRating=[]
+                    categoryRateSetupTable()
+                    
                     
                 }else{
-                    Alert.showErrorAlert(message: "please review All categories connected with opportunities")
+//                    Alert.showErrorAlert(message: "please review All categories connected with opportunities")
 
                 }
                
@@ -145,9 +149,13 @@ private extension ReviewExperienceVC{
 
 extension ReviewExperienceVC:MenuDelegate{
     func getCategories(data: FundTyps) {
+        fundType=[]
+        categoryID=[]
+        categoriesRating=[]
+        
         fundType=data.fund_types ?? []
         
-        print(fundType)
+        print(fundType.count)
         self.categoryTableHeight.constant=CGFloat(40*fundType.count)
 
         categoryRateTable.reloadData()
@@ -261,6 +269,8 @@ extension ReviewExperienceVC:RatingControlDelegate{
 extension ReviewExperienceVC{
     func makeParameter(key:[String],value:[String]){
         parameter=[:]
+print(key)
+        print(value)
 
         if key.count == value.count{
             for indx in 0 ..< key.count{
