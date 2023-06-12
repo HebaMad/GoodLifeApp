@@ -3,7 +3,6 @@
 //  GoodLifeApplocation
 //
 //  Created by heba isaa on 03/08/2022.
-//
 
 import UIKit
 
@@ -34,7 +33,8 @@ class ReviewExperienceVC: UIViewController {
     var parameter:[String:String]=[:]
     var categoryID:[String]=[]
     var categoriesRating:[String]=[]
-    
+    var dic:[String:String]=[:]
+
     //MARK: - Life cycle
     
     override func viewDidLoad() {
@@ -73,6 +73,8 @@ private extension ReviewExperienceVC{
             navigationController?.popViewController(animated: true)
             
         case nextBtn:
+            print(dic)
+
             reviewExperience()
 
         default: break
@@ -108,7 +110,7 @@ private extension ReviewExperienceVC{
    extension ReviewExperienceVC{
     
     func reviewExperience(){
-        makeParameter(key: categoryID, value: categoriesRating)
+        makeParameter(key:dic.keys.map { $0 }, value: dic.values.map { $0 })
         do{
             
             let title = try categoryTxt.validatedText(validationType: .requiredField(field: "category required"))
@@ -119,8 +121,11 @@ private extension ReviewExperienceVC{
                     print(parameter)
                     presenter.createFeedback(id: "\(self.itemID)", review:projectReview.text , ratings: parameter)
                     presenter.delegate=self
-                    categoryID=[]
-                    categoriesRating=[]
+//                    categoryID=[]
+//                    categoriesRating=[]
+                    dic = [:]
+                    fundType=[]
+
                     categoryRateSetupTable()
                     
                     
@@ -246,6 +251,8 @@ extension ReviewExperienceVC:UITableViewDataSource{
         cell.categoryName.text = fundType[indexPath.row].name ?? ""
         categoryID.append("\(fundType[indexPath.row].id ?? 0)")
         cell.categoryRate.delegate = self
+        cell.categoryRate.index=indexPath.row
+//        cell.delegate=self
 
 
 
@@ -256,12 +263,24 @@ extension ReviewExperienceVC:UITableViewDataSource{
 }
 
 extension ReviewExperienceVC:RatingControlDelegate{
+    
     func categoryReviewsDidChangeRating(_ ratingControl: RatingControl, rating: Int) {
-        categoriesRating.append("\(rating)")
+        dic["\(fundType[ratingControl.index].id ?? 0)"]="\(rating)"
+        print(dic)
     }
-    
-    
+
+
 }
+//extension ReviewExperienceVC:CategoryReviewsDelegate{
+//    func categoryReviewsDidChangeRating(_ cell: CategoryReviews, _ ratingControl: RatingControl, rating: Int) {
+//        print(cell.categoryRate.rating)
+//
+//    }
+//
+//
+//
+//
+//}
 
 
 

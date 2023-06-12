@@ -8,7 +8,7 @@
 import UIKit
 
 protocol CategoryReviewsDelegate: AnyObject {
-    func categoryReviewsDidChangeRating(_ cell: CategoryReviews, rating: Int)
+    func categoryReviewsDidChangeRating(_ cell: CategoryReviews,_ ratingControl: RatingControl, rating: Int)
 }
 
 class CategoryReviews: UITableViewCell , NibLoadableView {
@@ -16,7 +16,7 @@ class CategoryReviews: UITableViewCell , NibLoadableView {
     @IBOutlet weak var categoryRate: RatingControl!
     @IBOutlet weak var categoryName: UILabel!
     
-    weak var delegate: CategoryReviewsDelegate?
+//    weak var delegate: ratingViewDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()

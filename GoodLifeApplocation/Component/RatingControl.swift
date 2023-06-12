@@ -14,7 +14,7 @@ protocol RatingControlDelegate: AnyObject {
 @IBDesignable final  class RatingControl: UIStackView {
    
    //MARK: Properties
-   
+    var index:Int=0
    private var ratingButtons = [UIButton]()
     weak var delegate: RatingControlDelegate?
 
