@@ -34,7 +34,6 @@ class DigitalOpportunitiesVC: UIViewController  {
     @IBAction func copyUrlBtn(_ sender: Any) {
         UIPasteboard.general.string = digital?.url ?? ""
         showSnackBar(message: " link copied successfully")
-
       
     }
     
@@ -64,8 +63,6 @@ extension DigitalOpportunitiesVC:UITableViewDataSource{
         cell.copyLink.addTarget(self, action: #selector(copyLinkBtn), for: .touchUpInside)
         return cell
     }
-    
-    
     
 }
 

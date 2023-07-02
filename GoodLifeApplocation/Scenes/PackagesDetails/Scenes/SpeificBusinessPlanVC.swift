@@ -11,7 +11,6 @@ import XLPagerTabStrip
 
 class SpeificBusinessPlanVC: UIViewController {
     
-  
     
     //MARK: - Outlet
 
@@ -51,6 +50,12 @@ class SpeificBusinessPlanVC: UIViewController {
         }
         setupPieChart(dataPoints: targetMarkets, values: unitsSold)
         setupCollectionview()
+    }
+    
+    @objc  func linkCopiedTappedBtn(_ Sender:UIButton){
+        UIPasteboard.general.string = businessPlan?.business_plans?[Sender.tag].url
+        showSnackBar(message: " link copied successfully")
+        
     }
     
     //MARK: - Collectionview
@@ -213,12 +218,14 @@ extension SpeificBusinessPlanVC:UICollectionViewDelegate, UICollectionViewDataSo
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.headerIdentifier, for: indexPath) as! HeaderCollectionReusableView
         header.setup(businessPlan?.business_plans?[indexPath.section].name ?? "")
         header.viewAllButton.isHidden = true
-        header.editBtn.isHidden=true
+//      header.editBtn.isHidden=true
+        header.editBtn.setBackgroundImage(UIImage(systemName: "link.circle.fill"), for: .normal)
+        header.editBtn.tag = indexPath.row
+        header.editBtn.addTarget(self, action: #selector(linkCopiedTappedBtn), for: .touchUpInside)
 
         return header
+        
     }
-    
-    
 }
 
 
