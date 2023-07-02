@@ -278,6 +278,7 @@ struct Ventures:Codable{
     let need_type_id:Int?
     let interest:String?
     let title:String?
+    let name:String?
     let sub_title:String?
     let websites:String?
     let models:String?

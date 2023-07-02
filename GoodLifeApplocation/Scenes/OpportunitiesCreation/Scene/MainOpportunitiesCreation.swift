@@ -238,6 +238,7 @@ extension MainOpportunitiesCreation{
             competitorsUrl = (vc as! DigitalOpportunitiesCreation).competitorsUrl
             
             if opportunitiesUrl != "" {
+                
                 if competitorsUrl.count != 0 {
                     
                     self.stepNumber=6

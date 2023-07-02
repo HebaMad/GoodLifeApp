@@ -13,7 +13,8 @@ class DigitalOpportunitiesCreation: UIViewController {
     @IBOutlet weak var opportunitiesUrl: BottomBorderTextField!
     
     @IBOutlet weak var competitorUrl: BottomBorderTextField!
-    
+    @IBOutlet weak var tableConstant: NSLayoutConstraint!
+    @IBOutlet weak var competitorLinksTableview: UITableView!
     
     var competitorsUrl:[String]=[]
     
@@ -22,6 +23,19 @@ class DigitalOpportunitiesCreation: UIViewController {
         super.viewDidLoad()
         bindButtons()
         bindTextField()
+        setupTableview()
+    }
+    
+    func setupTableview(){
+        competitorLinksTableview.register(websiteCompetitor.self)
+        competitorLinksTableview.delegate=self
+        competitorLinksTableview.dataSource=self
+    }
+
+    @objc func deleteBtnWasTapped(_ sender:UIButton){
+        competitorsUrl.remove(at: sender.tag)
+        competitorLinksTableview.reloadData()
+        
     }
     
     
@@ -46,6 +60,9 @@ extension DigitalOpportunitiesCreation{
             if competitorUrl.text != "" && competitorUrl.text != "https://"{
                 competitorsUrl.append(competitorUrl.text!)
                 competitorUrl.text="https://"
+                competitorLinksTableview.isHidden=false
+                competitorLinksTableview.reloadData()
+                tableConstant.constant=CGFloat(competitorsUrl.count * 50)
             }else{
                 showSnackBar(message: "Add your Financial Model ")
             }
@@ -65,4 +82,25 @@ extension DigitalOpportunitiesCreation{
             textField.text = "https://" + " " + text
         }
     }
+}
+
+
+extension DigitalOpportunitiesCreation:UITableViewDelegate{}
+extension DigitalOpportunitiesCreation:UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return competitorsUrl.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell:websiteCompetitor = tableView.dequeueReusableCell(for: indexPath)
+        cell.copyLink.isHidden = true
+        cell.deleteBtn.isHidden = false
+        cell.deleteBtn.tag = indexPath.row
+        cell.deleteBtn.addTarget(self, action: #selector(deleteBtnWasTapped), for: .touchUpInside)
+        cell.urlTxt.text=competitorsUrl[indexPath.row]
+
+        return cell
+    }
+    
+    
 }

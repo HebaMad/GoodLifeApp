@@ -8,6 +8,7 @@
 import UIKit
 
 class LiturgicalOpportunitiesCreation: UIViewController {
+    // MARK: - Outlets
 
     @IBOutlet weak var marketSize: UISlider!
     @IBOutlet weak var marketName: UITextField!
@@ -19,6 +20,11 @@ class LiturgicalOpportunitiesCreation: UIViewController {
     
     @IBOutlet weak var addMoreWays: UIButton!
     
+    @IBOutlet weak var commonWaysTableview: UITableView!
+    @IBOutlet weak var tableConstant: NSLayoutConstraint!
+
+    
+    // MARK: - Properties
     var commomWaysWorship:[String]=[]
     var marketGraph:[String:String]=[:]
     var marketGraphName:[String]=[]
@@ -28,6 +34,18 @@ class LiturgicalOpportunitiesCreation: UIViewController {
         super.viewDidLoad()
         bindButtons()
         bindUISliderValue()
+        setupTableview()
+    }
+    
+    func setupTableview(){
+        commonWaysTableview.register(websiteCompetitor.self)
+        commonWaysTableview.delegate=self
+        commonWaysTableview.dataSource=self
+    }
+    @objc func deleteBtnWasTapped(_ sender:UIButton){
+        commomWaysWorship.remove(at: sender.tag)
+        commonWaysTableview.reloadData()
+
     }
 
 
@@ -61,7 +79,10 @@ extension LiturgicalOpportunitiesCreation {
         case addMoreWays:
             if commonWayValueTxt.text != ""{
                 commomWaysWorship.append(commonWayValueTxt.text!)
+                commonWaysTableview.isHidden=false
                 commonWayValueTxt.text=""
+                commonWaysTableview.reloadData()
+                tableConstant.constant=CGFloat(commomWaysWorship.count * 50)
             }else{
                 showSnackBar(message: "Add Common ways to worship ")
             }
@@ -95,4 +116,24 @@ extension LiturgicalOpportunitiesCreation{
     @objc func sliderValueChanged(_ sender: UISlider) {
         marketRate.text="\(Int(sender.value))%"
     }
+}
+
+extension LiturgicalOpportunitiesCreation:UITableViewDelegate{}
+extension LiturgicalOpportunitiesCreation:UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return commomWaysWorship.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell:websiteCompetitor = tableView.dequeueReusableCell(for: indexPath)
+        cell.copyLink.isHidden = true
+        cell.deleteBtn.isHidden = false
+        cell.deleteBtn.tag = indexPath.row
+        cell.deleteBtn.addTarget(self, action: #selector(deleteBtnWasTapped), for: .touchUpInside)
+        cell.urlTxt.text=commomWaysWorship[indexPath.row]
+
+        return cell
+    }
+    
+    
 }

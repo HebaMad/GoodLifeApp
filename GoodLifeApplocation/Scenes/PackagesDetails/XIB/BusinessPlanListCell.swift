@@ -7,8 +7,10 @@
 
 import UIKit
 
-class BusinessPlanListCell: UITableViewCell {
+class BusinessPlanListCell: UITableViewCell,NibLoadableView {
 
+    @IBOutlet weak var businessplanTitle: UILabel!
+    @IBOutlet weak var editBtn: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

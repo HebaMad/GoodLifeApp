@@ -13,29 +13,29 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="50" id="KGk-i7-Jjw" customClass="websiteCompetitor" customModule="GoodLifeApplocation" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yqi-4u-dAJ" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="2.6666666666666679" width="320" height="45"/>
+                        <rect key="frame" x="4" y="4" width="312" height="48"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEB-bI-eDw">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
+                                <rect key="frame" x="4" y="0.0" width="304" height="48"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1n-EQ-qUl">
-                                        <rect key="frame" x="8" y="6" width="271" height="33"/>
+                                        <rect key="frame" x="8" y="6" width="257" height="36"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZW-JU-KeQ" customClass="UIButtonDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
-                                        <rect key="frame" x="279" y="6" width="33" height="33"/>
+                                        <rect key="frame" x="265" y="6" width="31" height="36"/>
                                         <color key="backgroundColor" name="backgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="33" id="qSI-Yp-NDK"/>
+                                            <constraint firstAttribute="width" constant="31" id="qSI-Yp-NDK"/>
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -44,10 +44,36 @@
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="16.5"/>
+                                                <real key="value" value="16"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
                                                 <color key="value" name="backgroundColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ncd-m8-sgQ" customClass="UIButtonDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
+                                        <rect key="frame" x="296" y="6" width="31" height="36"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="31" id="SYs-Vv-i3E"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="trash.fill" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                                <color key="value" systemColor="systemRedColor"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="startColor">
                                                 <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -64,11 +90,10 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="dEB-bI-eDw" firstAttribute="top" secondItem="Yqi-4u-dAJ" secondAttribute="top" id="ImW-p6-4Wx"/>
-                            <constraint firstItem="dEB-bI-eDw" firstAttribute="leading" secondItem="Yqi-4u-dAJ" secondAttribute="leading" id="OMb-TI-up2"/>
-                            <constraint firstAttribute="height" constant="45" id="SMt-fz-FA2"/>
-                            <constraint firstAttribute="bottom" secondItem="dEB-bI-eDw" secondAttribute="bottom" id="jnp-zq-gJI"/>
-                            <constraint firstAttribute="trailing" secondItem="dEB-bI-eDw" secondAttribute="trailing" id="nFu-fL-coR"/>
+                            <constraint firstAttribute="bottom" secondItem="dEB-bI-eDw" secondAttribute="bottom" id="8Bd-87-HRX"/>
+                            <constraint firstItem="dEB-bI-eDw" firstAttribute="top" secondItem="Yqi-4u-dAJ" secondAttribute="top" id="EKX-KJ-gfP"/>
+                            <constraint firstItem="dEB-bI-eDw" firstAttribute="leading" secondItem="Yqi-4u-dAJ" secondAttribute="leading" constant="4" id="qA3-hW-Idj"/>
+                            <constraint firstAttribute="trailing" secondItem="dEB-bI-eDw" secondAttribute="trailing" constant="4" id="tip-3N-SSt"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="endColor">
@@ -85,33 +110,41 @@
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="Yqi-4u-dAJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="2W3-7g-098"/>
-                    <constraint firstAttribute="trailing" secondItem="Yqi-4u-dAJ" secondAttribute="trailing" id="Ksr-vD-Tjp"/>
-                    <constraint firstItem="Yqi-4u-dAJ" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="doL-x8-4VH"/>
-                    <constraint firstItem="Yqi-4u-dAJ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="fwb-Xt-UZJ"/>
+                    <constraint firstItem="Yqi-4u-dAJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="5c4-Ao-vUG"/>
+                    <constraint firstAttribute="bottom" secondItem="Yqi-4u-dAJ" secondAttribute="bottom" constant="4" id="an0-S3-QZh"/>
+                    <constraint firstItem="Yqi-4u-dAJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="cMe-Ec-24z"/>
+                    <constraint firstAttribute="trailing" secondItem="Yqi-4u-dAJ" secondAttribute="trailing" constant="4" id="cZ8-bP-UM1"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="copyLink" destination="VZW-JU-KeQ" id="gkf-jx-bva"/>
+                <outlet property="deleteBtn" destination="Ncd-m8-sgQ" id="daG-MD-TPY"/>
                 <outlet property="urlTxt" destination="T1n-EQ-qUl" id="tDy-oa-prY"/>
             </connections>
-            <point key="canvasLocation" x="100.76335877862596" y="13.380281690140846"/>
+            <point key="canvasLocation" x="100.76335877862596" y="15.492957746478874"/>
         </tableViewCell>
     </objects>
     <designables>
+        <designable name="Ncd-m8-sgQ">
+            <size key="intrinsicContentSize" width="15" height="22"/>
+        </designable>
         <designable name="VZW-JU-KeQ">
             <size key="intrinsicContentSize" width="17" height="22"/>
         </designable>
     </designables>
     <resources>
         <image name="link" catalog="system" width="128" height="124"/>
+        <image name="trash.fill" catalog="system" width="119" height="128"/>
         <namedColor name="backgroundColor">
             <color red="0.63099998235702515" green="0.34900000691413879" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

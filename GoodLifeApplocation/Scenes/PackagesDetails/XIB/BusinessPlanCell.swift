@@ -23,4 +23,6 @@ class BusinessPlanCell: UICollectionViewCell, NibLoadableView {
         informationTxt.text = items.value ?? ""
 
     }
+    
+    
 }

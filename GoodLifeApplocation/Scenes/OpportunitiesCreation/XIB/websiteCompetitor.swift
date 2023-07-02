@@ -11,7 +11,9 @@ class websiteCompetitor: UITableViewCell,NibLoadableView {
 
     @IBOutlet weak var urlTxt: UILabel!
     
+    @IBOutlet weak var deleteBtn: UIButtonDesignable!
     @IBOutlet weak var copyLink: UIButtonDesignable!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
 

@@ -177,7 +177,7 @@ extension ProfileVC:UITableViewDelegate,UITableViewDataSource{
         case "venture":
             
             let cell:VenturesCell = tableView.dequeueReusableCell(for: indexPath)
-            cell.ventureTitle.text = venture[indexPath.row].title
+            cell.ventureTitle.text = venture[indexPath.row].name
             return cell
 
         case "volunteerRequest":

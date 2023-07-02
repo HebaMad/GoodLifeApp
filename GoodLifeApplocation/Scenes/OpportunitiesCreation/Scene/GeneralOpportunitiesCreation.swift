@@ -24,6 +24,10 @@ class GeneralOpportunitiesCreation: UIViewController {
     
     @IBOutlet weak var intrestSelection: UISegmentedControl!
     @IBOutlet weak var financialModelTxt: UITextField!
+    
+    
+    @IBOutlet weak var tableConstant: NSLayoutConstraint!
+    @IBOutlet weak var financialModelsTableview: UITableView!
     //MARK: - Properties
     
     let dropdown = DropDown()
@@ -43,8 +47,10 @@ class GeneralOpportunitiesCreation: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         getCategories()
         intrestSelection.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 10)], for: .normal)
+        setupTableview()
     }
     
     
@@ -55,17 +61,30 @@ class GeneralOpportunitiesCreation: UIViewController {
         
     }
     
+    @objc func deleteBtnWasTapped(_ sender:UIButton){
+        financialModelData.remove(at: sender.tag)
+        financialModelsTableview.reloadData()
+
+    }
+    
 
     @IBAction func addMoreFinancialModel(_ sender: Any) {
         if financialModelTxt.text != ""{
             financialModelData.append(financialModelTxt.text!)
+            financialModelsTableview.isHidden=false
             financialModelTxt.text=""
+            financialModelsTableview.reloadData()
+            tableConstant.constant=CGFloat(financialModelData.count * 50)
         }else{
             Alert.showErrorAlert(message: "Add your Financial Model ")
         }
     }
     
-
+    func setupTableview(){
+        financialModelsTableview.register(websiteCompetitor.self)
+        financialModelsTableview.delegate=self
+        financialModelsTableview.dataSource=self
+    }
     
     @IBAction func difficuiltyBtn(_ sender: Any) {
         
@@ -196,6 +215,26 @@ extension GeneralOpportunitiesCreation {
             categoriesIdSelection.append(categoriesId[indx])
         }
     }
+    
+}
+
+
+extension GeneralOpportunitiesCreation:UITableViewDelegate{}
+extension GeneralOpportunitiesCreation:UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return financialModelData.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell:websiteCompetitor = tableView.dequeueReusableCell(for: indexPath)
+        cell.copyLink.isHidden = true
+        cell.deleteBtn.isHidden = false
+        cell.deleteBtn.tag = indexPath.row
+        cell.deleteBtn.addTarget(self, action: #selector(deleteBtnWasTapped), for: .touchUpInside)
+        cell.urlTxt.text=financialModelData[indexPath.row]
+        return cell
+    }
+    
     
 }
 
