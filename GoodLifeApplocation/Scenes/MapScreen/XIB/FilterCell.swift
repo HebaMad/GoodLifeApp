@@ -13,7 +13,6 @@ class FilterCell: UICollectionViewCell,NibLoadableView   {
     
     @IBOutlet weak var categoriesFilterBtn: UIButtonDesignable!
     
-    
     //MARK: - Initializer
 
     override func awakeFromNib() {

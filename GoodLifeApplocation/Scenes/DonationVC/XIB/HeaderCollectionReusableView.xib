@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,17 +21,17 @@
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u56-iz-ZVL">
-                    <rect key="frame" x="12" y="4" width="335" height="72"/>
+                    <rect key="frame" x="12" y="4" width="335" height="38"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEST" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLb-JW-eI1">
-                            <rect key="frame" x="0.0" y="8" width="205" height="56"/>
+                            <rect key="frame" x="0.0" y="8" width="205" height="22"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="19"/>
                             <color key="textColor" name="Color"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rlJ-6z-dxI">
-                            <rect key="frame" x="205" y="8" width="100" height="56"/>
+                            <rect key="frame" x="205" y="8" width="100" height="22"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="100" id="lB1-57-fEQ"/>
                             </constraints>
@@ -42,12 +42,12 @@
                             </buttonConfiguration>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2JF-8Q-bpd">
-                            <rect key="frame" x="305" y="8" width="30" height="56"/>
+                            <rect key="frame" x="305" y="8" width="30" height="22"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dts-hT-eLx">
-                                    <rect key="frame" x="2.5" y="16" width="25" height="24"/>
+                                    <rect key="frame" x="0.0" y="-3.5" width="30" height="29"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="25" id="82c-Wi-I0B"/>
+                                        <constraint firstAttribute="width" constant="30" id="82c-Wi-I0B"/>
                                         <constraint firstAttribute="width" secondItem="Dts-hT-eLx" secondAttribute="height" multiplier="1:1" id="W2Q-Xx-QUu"/>
                                     </constraints>
                                     <color key="tintColor" name="backgroundColor"/>
@@ -79,7 +79,7 @@
                 <outlet property="headerTitleLabel" destination="aLb-JW-eI1" id="1bs-ke-pr9"/>
                 <outlet property="viewAllButton" destination="rlJ-6z-dxI" id="hRS-6J-xB7"/>
             </connections>
-            <point key="canvasLocation" x="165.94202898550725" y="133.25892857142856"/>
+            <point key="canvasLocation" x="14" y="71"/>
         </collectionReusableView>
     </objects>
     <resources>
