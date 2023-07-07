@@ -22,6 +22,10 @@ class MarketingOpportunitiesCreation: UIViewController {
     @IBOutlet weak var topAdvertisingAction: UIButton!
     @IBOutlet weak var topAdvertisingTxt: UITextField!
     
+    @IBOutlet weak var marketDetailsTableview: UITableView!
+    
+    @IBOutlet weak var tableviewHeight: NSLayoutConstraint!
+    
     let dropdown = DropDown()
     let presenter=OpportunitiesPresenter()
     
@@ -38,17 +42,38 @@ class MarketingOpportunitiesCreation: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         bindUISliderValue()
+        marketDetailsTableview.isHidden=true
         presenter.getChannels()
         presenter.delegate=self
+        setupTableview()
+    }
+    
+    
+    func setupTableview(){
+        marketDetailsTableview.register(GraphMarketSizeCell.self)
+        marketDetailsTableview.delegate=self
+        marketDetailsTableview.dataSource=self
+        
+    }
+    
+    @objc func deleteBtnWasTapped(_ sender:UIButton){
+        marketGraphName.remove(at: sender.tag)
+        marketGraphSize.remove(at: sender.tag)
+        marketDetailsTableview.reloadData()
+        tableviewHeight.constant = CGFloat(marketGraphName.count * 50)
+
     }
     
     func bindUISliderValue(){
         marketSize.addTarget(self, action: #selector(sliderValueChanged(_:)), for: .valueChanged)
     }
     @IBAction func addMoreBtn(_ sender: Any) {
-        if marketName.text != "" && marketSize.value != 0.0{
+        if marketName.text != "" && marketSize.value != 0.0 {
             marketGraphName.append(marketName.text!)
-            marketGraphSize.append("\(marketSize.value)")
+            marketGraphSize.append("\(Int(marketSize.value))")
+            marketDetailsTableview.isHidden=false
+            marketDetailsTableview.reloadData()
+            tableviewHeight.constant = CGFloat(marketGraphName.count * 50)
             cleardata()
             makeParameter(key: marketGraphName, value: marketGraphSize)
         }else{
@@ -148,4 +173,22 @@ extension MarketingOpportunitiesCreation:OpportunitiesDelegate{
         topAdvertising=data.top_advertising_platforms ?? []
         
     }
+}
+
+
+extension MarketingOpportunitiesCreation:UITableViewDelegate,UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        marketGraphName.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell:GraphMarketSizeCell=tableView.dequeueReusableCell(for: indexPath)
+        cell.configureCell(MarketName: marketGraphName[indexPath.row], MarketSize: marketGraphSize[indexPath.row])
+        cell.deleteBtn.tag=indexPath.row
+        cell.deleteBtn.addTarget(self, action: #selector(deleteBtnWasTapped), for: .touchUpInside)
+        return cell
+    }
+    
+    
+    
 }

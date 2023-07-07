@@ -7,17 +7,29 @@
 
 import UIKit
 
-class GraphMarketSizeCell: UITableViewCell {
+class GraphMarketSizeCell: UITableViewCell,NibLoadableView {
 
+    @IBOutlet weak var valueTxt: UILabel!
+    @IBOutlet weak var marketTxt: UILabel!
+    
+    @IBOutlet weak var deleteBtn: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+
     }
+    
+    func configureCell(MarketName:String,MarketSize:String){
+        
+        marketTxt.text=MarketName
+        valueTxt.text = MarketSize + "%"
+        
+    }
+    
     
 }

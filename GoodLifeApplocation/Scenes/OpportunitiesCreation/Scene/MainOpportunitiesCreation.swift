@@ -35,9 +35,11 @@ class MainOpportunitiesCreation: UIViewController {
     let presenter=OpportunitiesPresenter()
     let prefixToRemove = "$"
     var intrest = 0
+    var oppDetailsObj:opportunitiesDetails?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print(oppDetailsObj)
         stepNumber = 0
         checkstepNumber()
         

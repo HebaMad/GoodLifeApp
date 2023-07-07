@@ -113,6 +113,10 @@
 		2785766C2A515909009AC981 /* EditBusinessPlanVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2785766A2A515909009AC981 /* EditBusinessPlanVC.xib */; };
 		2785766F2A516074009AC981 /* BusinessPlanListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2785766D2A516074009AC981 /* BusinessPlanListCell.swift */; };
 		278576702A516074009AC981 /* BusinessPlanListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2785766E2A516074009AC981 /* BusinessPlanListCell.xib */; };
+		278576732A556430009AC981 /* EditBusinessplanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278576712A556430009AC981 /* EditBusinessplanCell.swift */; };
+		278576742A556430009AC981 /* EditBusinessplanCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 278576722A556430009AC981 /* EditBusinessplanCell.xib */; };
+		278576772A58007F009AC981 /* GraphMarketSizeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278576752A58007F009AC981 /* GraphMarketSizeCell.swift */; };
+		278576782A58007F009AC981 /* GraphMarketSizeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 278576762A58007F009AC981 /* GraphMarketSizeCell.xib */; };
 		27876ABD28A4DB64003A012A /* NSUIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27876ABC28A4DB64003A012A /* NSUIColor+Hex.swift */; };
 		278882D829BC9D650025A6D0 /* OpportunitiesStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278882D629BC9D650025A6D0 /* OpportunitiesStatusCell.swift */; };
 		278882D929BC9D650025A6D0 /* OpportunitiesStatusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 278882D729BC9D650025A6D0 /* OpportunitiesStatusCell.xib */; };
@@ -428,6 +432,10 @@
 		2785766A2A515909009AC981 /* EditBusinessPlanVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditBusinessPlanVC.xib; sourceTree = "<group>"; };
 		2785766D2A516074009AC981 /* BusinessPlanListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessPlanListCell.swift; sourceTree = "<group>"; };
 		2785766E2A516074009AC981 /* BusinessPlanListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusinessPlanListCell.xib; sourceTree = "<group>"; };
+		278576712A556430009AC981 /* EditBusinessplanCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBusinessplanCell.swift; sourceTree = "<group>"; };
+		278576722A556430009AC981 /* EditBusinessplanCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditBusinessplanCell.xib; sourceTree = "<group>"; };
+		278576752A58007F009AC981 /* GraphMarketSizeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphMarketSizeCell.swift; sourceTree = "<group>"; };
+		278576762A58007F009AC981 /* GraphMarketSizeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GraphMarketSizeCell.xib; sourceTree = "<group>"; };
 		27876ABC28A4DB64003A012A /* NSUIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSUIColor+Hex.swift"; sourceTree = "<group>"; };
 		278882D629BC9D650025A6D0 /* OpportunitiesStatusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpportunitiesStatusCell.swift; sourceTree = "<group>"; };
 		278882D729BC9D650025A6D0 /* OpportunitiesStatusCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpportunitiesStatusCell.xib; sourceTree = "<group>"; };
@@ -1355,6 +1363,10 @@
 			children = (
 				27FD57EB29DD9B2D00BE5592 /* websiteCompetitor.swift */,
 				27FD57EC29DD9B2D00BE5592 /* websiteCompetitor.xib */,
+				278576712A556430009AC981 /* EditBusinessplanCell.swift */,
+				278576722A556430009AC981 /* EditBusinessplanCell.xib */,
+				278576752A58007F009AC981 /* GraphMarketSizeCell.swift */,
+				278576762A58007F009AC981 /* GraphMarketSizeCell.xib */,
 			);
 			path = XIB;
 			sourceTree = "<group>";
@@ -1434,6 +1446,7 @@
 				27C9AE59288D3CB500FA584A /* Inter-SemiBold.ttf in Resources */,
 				27C9AE5C288D3CB500FA584A /* Inter-Regular.ttf in Resources */,
 				273D2FD9299BD42B006D9CB0 /* AvailableSupportVC.xib in Resources */,
+				278576742A556430009AC981 /* EditBusinessplanCell.xib in Resources */,
 				27C9AE60288D3CB500FA584A /* Inter-UI-BlackItalic.ttf in Resources */,
 				27CB207B289CFC0400E63694 /* OnBoardingFrame1.xib in Resources */,
 				27C9AEAB288DA8E300FA584A /* TaskCollectionViewCell.xib in Resources */,
@@ -1469,6 +1482,7 @@
 				2767A276288F504A00DF34D1 /* DonationFourthFrame.xib in Resources */,
 				2764D6CC28E2E47000AC7F73 /* LessonDetails.xib in Resources */,
 				27C9AE5F288D3CB500FA584A /* Inter-Italic.ttf in Resources */,
+				278576782A58007F009AC981 /* GraphMarketSizeCell.xib in Resources */,
 				278882E029C0706B0025A6D0 /* OpportunitiesCollectionCell.xib in Resources */,
 				27F4B14328B7F504003365A6 /* ContactUsVC.xib in Resources */,
 				27C9AE5E288D3CB500FA584A /* Inter-ExtraBoldItalic.ttf in Resources */,
@@ -1656,6 +1670,7 @@
 				27CB2085289D450000E63694 /* SearchView.swift in Sources */,
 				27A737702891435C00FD8AD9 /* UIButtonDesignable.swift in Sources */,
 				2791D8E929D03A6200B03A04 /* MainTarget.swift in Sources */,
+				278576732A556430009AC981 /* EditBusinessplanCell.swift in Sources */,
 				2785766B2A515909009AC981 /* EditBusinessPlanVC.swift in Sources */,
 				2704244C28A84BF3002EF7B5 /* Extension.swift in Sources */,
 				27B54D7C28BA03C60074A6A1 /* EditProfileVC.swift in Sources */,
@@ -1735,6 +1750,7 @@
 				27EE4C812965F53500A7A3B1 /* GeneralLiturgicalCell.swift in Sources */,
 				27C9AEB9288EF61200FA584A /* DonationVC.swift in Sources */,
 				2791D8F329D18D3A00B03A04 /* GeneralOpportunitiesCreation.swift in Sources */,
+				278576772A58007F009AC981 /* GraphMarketSizeCell.swift in Sources */,
 				27B8C8E928A1106C0011B039 /* SpecificFilterCell.swift in Sources */,
 				2710A28228971D94009BCE60 /* MockData.swift in Sources */,
 				2723C7E929D43D8000E52288 /* LiturgicalOpportunitiesCreation.swift in Sources */,

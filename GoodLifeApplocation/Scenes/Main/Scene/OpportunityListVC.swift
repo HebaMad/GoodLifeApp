@@ -17,6 +17,7 @@ class OpportunityListVC: UIViewController {
     @IBOutlet weak var searchview: SearchView!
     var opportunities:[opportunitiesData]=[]
     let presenter=MainPresenter()
+    
     //MARK: - properties
     
     
@@ -128,20 +129,44 @@ extension OpportunityListVC:UITableViewDataSource {
         return true
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if (editingStyle == .delete) {
-            print(String(describing: opportunities[indexPath.row].id!))
-            presenter.deleteOpportunities(opportunity_id: String(describing: opportunities[indexPath.row].id!))
-            presenter.delegate=self
+//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//        if (editingStyle == .delete) {
+//
+//        } else if editingStyle == .insert {
+//            }
+//    }
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let editAction = UITableViewRowAction(style: .normal, title: "Edit") { (action, indexPath) in
+            let opportunityID = self.opportunities[indexPath.row].id
+            print("Edit opportunity with ID: \(opportunityID)")
+            self.presenter.getOpportunitiesDetails(opportunitiesId:String(describing: opportunityID!))
+            self.presenter.delegate=self
+            
         }
+        
+        editAction.backgroundColor = UIColor.blue
+        
+        let deleteAction = UITableViewRowAction(style: .normal, title: "delete") { (action, indexPath) in
+            let opportunityID = self.opportunities[indexPath.row].id
+            self.presenter.deleteOpportunities(opportunity_id: String(describing:opportunityID!))
+            self.presenter.delegate=self
+         
+        }
+        deleteAction.backgroundColor = UIColor.red
+
+        return [deleteAction,editAction]
     }
+    
+    
 }
 
 
 
 extension OpportunityListVC:MainDelegate{
     func opportunitiesDetails(data: opportunitiesDetails) {
-        
+        let vc = MainOpportunitiesCreation()
+        vc.oppDetailsObj=data
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func getExploreMapData(data: ExploreMap) {
@@ -164,6 +189,7 @@ extension OpportunityListVC:MainDelegate{
     
     func showAlerts(title: String, message: String) {
         presenter.listOpportunties(search: "")
+        self.showSnackBar(message: message)
         presenter.delegate=self
     }
     

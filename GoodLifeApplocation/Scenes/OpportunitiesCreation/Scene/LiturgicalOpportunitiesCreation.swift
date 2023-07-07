@@ -23,6 +23,9 @@ class LiturgicalOpportunitiesCreation: UIViewController {
     @IBOutlet weak var commonWaysTableview: UITableView!
     @IBOutlet weak var tableConstant: NSLayoutConstraint!
 
+    @IBOutlet weak var marketSizeTable: UITableView!
+    @IBOutlet weak var tableviewHeight: NSLayoutConstraint!
+
     
     // MARK: - Properties
     var commomWaysWorship:[String]=[]
@@ -35,17 +38,31 @@ class LiturgicalOpportunitiesCreation: UIViewController {
         bindButtons()
         bindUISliderValue()
         setupTableview()
+        marketSizeTable.isHidden=true
     }
     
     func setupTableview(){
         commonWaysTableview.register(websiteCompetitor.self)
         commonWaysTableview.delegate=self
         commonWaysTableview.dataSource=self
+        
+        marketSizeTable.register(GraphMarketSizeCell.self)
+        marketSizeTable.delegate=self
+        marketSizeTable.dataSource=self
+        
+        
     }
     @objc func deleteBtnWasTapped(_ sender:UIButton){
         commomWaysWorship.remove(at: sender.tag)
         commonWaysTableview.reloadData()
 
+    }
+    
+    @objc func deleteMarketBtnWasTapped(_ sender:UIButton){
+        marketGraphName.remove(at: sender.tag)
+        marketGraphSize.remove(at: sender.tag)
+        marketSizeTable.reloadData()
+        tableviewHeight.constant = CGFloat(marketGraphName.count * 50)
     }
 
 
@@ -69,7 +86,10 @@ extension LiturgicalOpportunitiesCreation {
         case addMoreMarket:
             if marketName.text != "" && marketSize.value != 0.0{
                 marketGraphName.append(marketName.text!)
-                marketGraphSize.append("\(marketSize.value)")
+                marketGraphSize.append("\(Int(marketSize.value))")
+                marketSizeTable.isHidden=false
+                marketSizeTable.reloadData()
+                tableviewHeight.constant = CGFloat(marketGraphName.count * 50)
                 clearData()
                 makeParameter(key: marketGraphName, value: marketGraphSize)
 
@@ -121,18 +141,35 @@ extension LiturgicalOpportunitiesCreation{
 extension LiturgicalOpportunitiesCreation:UITableViewDelegate{}
 extension LiturgicalOpportunitiesCreation:UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return commomWaysWorship.count
+        if tableView == commonWaysTableview{
+            return commomWaysWorship.count
+
+        }else{
+            return marketGraphName.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell:websiteCompetitor = tableView.dequeueReusableCell(for: indexPath)
-        cell.copyLink.isHidden = true
-        cell.deleteBtn.isHidden = false
-        cell.deleteBtn.tag = indexPath.row
-        cell.deleteBtn.addTarget(self, action: #selector(deleteBtnWasTapped), for: .touchUpInside)
-        cell.urlTxt.text=commomWaysWorship[indexPath.row]
-
-        return cell
+        if tableView == commonWaysTableview{
+            
+            let cell:websiteCompetitor = tableView.dequeueReusableCell(for: indexPath)
+            cell.copyLink.isHidden = true
+            cell.deleteBtn.isHidden = false
+            cell.deleteBtn.tag = indexPath.row
+            cell.deleteBtn.addTarget(self, action: #selector(deleteBtnWasTapped), for: .touchUpInside)
+            cell.urlTxt.text=commomWaysWorship[indexPath.row]
+            
+            return cell
+            
+        }else{
+            
+            let cell:GraphMarketSizeCell=tableView.dequeueReusableCell(for: indexPath)
+            cell.configureCell(MarketName: marketGraphName[indexPath.row], MarketSize: marketGraphSize[indexPath.row])
+            cell.deleteBtn.tag = indexPath.row
+            cell.deleteBtn.addTarget(self, action: #selector(deleteMarketBtnWasTapped), for: .touchUpInside)
+            return cell
+            
+        }
     }
     
     

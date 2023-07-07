@@ -138,6 +138,3 @@ extension ResourceDetailsVC:Storyboarded{
 
 }
 
-extension ResourceDetailsVC{
-
-}

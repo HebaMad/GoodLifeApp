@@ -92,7 +92,8 @@ extension OpportunityViewVC{
             
         case createOppourtinity.ViewBtn:
             print("")
-            let vc =  CreateOppourtinityVC.instantiate()
+//            let vc =  CreateOppourtinityVC.instantiate()
+            let vc = EditBusinessPlanVC()
             navigationController?.pushViewController(vc, animated: true)
 
             
