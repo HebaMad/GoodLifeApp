@@ -13,6 +13,8 @@ protocol OpportuntiesNetworkable:Networkable  {
     func getChannels(completion: @escaping (Result<BaseResponse<RecommendedChannel>, Error>)-> ())
     func completeOpportunities(interest:String,id:Int,financialModel:[String],workType:String,levelOfDifficulty:String,AmountOfTechnology:String,amountRasise:String,opportuntiesUrl:String,competitorsUrl:[String],commomWays:[String],topAdvertisingChannel:[String],socialChannels:[String],avgAnnualRevenu:String,avgMonthlyCost:String,categories:[String],marketGraph:[String:String],completion: @escaping (Result<BaseResponse<Empty>, Error>)-> ())
     func opportunitiesDetails(id:String,completion: @escaping (Result<BaseResponse<opportunitiesDetails>, Error>)-> ())
+    func  opportunitiesFullDetails(opportunity_id:String,completion:@escaping (Result<BaseResponse<OpportunityData>, Error>)-> ())
+    
 }
 
 class OpportuntiesManager:OpportuntiesNetworkable {
@@ -45,7 +47,9 @@ class OpportuntiesManager:OpportuntiesNetworkable {
 
     }
     
-
+    func opportunitiesFullDetails(opportunity_id: String, completion: @escaping (Result<BaseResponse<OpportunityData>, Error>) -> ()) {
+        request(target: .opportunitiesFullDetails(opportunity_id: opportunity_id), completion: completion)
+    }
     
 
 }

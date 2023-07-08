@@ -16,6 +16,7 @@ protocol MainDelegate{
     func getsubCategoriesFiltering(categories:SubHomeCategories)
     func getExploreMapData(data:ExploreMap)
     func opportunitiesDetails(data:opportunitiesDetails)
+    func opportunitiesFullDetails(data:OpportunityData)
 
 }
 
@@ -194,4 +195,21 @@ class MainPresenter:NSObject{
         }
     }
     
+    func getOpportunitiesFullDetails(opportunitiesId:String){
+        OpportuntiesManager.shared.opportunitiesFullDetails(opportunity_id: opportunitiesId) { Response in
+            switch Response{
+                
+            case let .success(response):
+                if response.status == true{
+                    self.delegate?.opportunitiesFullDetails(data: response.data!)
+                }else{
+                    Alert.showErrorAlert(message: response.message ?? "")
+                }
+                
+            case .failure(_):
+                
+                Alert.showErrorAlert(message: "something wrong try again")
+            }
+        }
+    }
 }

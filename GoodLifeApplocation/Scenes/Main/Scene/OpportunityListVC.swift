@@ -163,11 +163,13 @@ extension OpportunityListVC:UITableViewDataSource {
 
 
 extension OpportunityListVC:MainDelegate{
-    func opportunitiesDetails(data: opportunitiesDetails) {
+    func opportunitiesFullDetails(data: OpportunityData) {
         let vc = MainOpportunitiesCreation()
         vc.oppDetailsObj=data
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    func opportunitiesDetails(data: opportunitiesDetails) {}
     
     func getExploreMapData(data: ExploreMap) {
         

@@ -326,6 +326,8 @@ extension MainVC:UICollectionViewDelegateFlowLayout{
     
 }
 extension MainVC:MainDelegate{
+    func opportunitiesFullDetails(data: OpportunityData) {}
+    
     func opportunitiesDetails(data: opportunitiesDetails) {
         let vc = MainOpportuntiesTab.instantiate()
         print(data)

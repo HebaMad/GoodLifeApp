@@ -235,6 +235,8 @@ extension choosingMinistryNeedsVC:DataFiltered{
 }
 
 extension choosingMinistryNeedsVC:MainDelegate{
+    func opportunitiesFullDetails(data: OpportunityData) { }
+    
     func opportunitiesDetails(data: opportunitiesDetails) {
         
         self.dismiss(animated: true) {
@@ -244,21 +246,13 @@ extension choosingMinistryNeedsVC:MainDelegate{
     }
     
     
-    func showAlerts(title: String, message: String) {
-        
-    }
+    func showAlerts(title: String, message: String) {}
     
-    func getMainScreenData(data: MainScreenData) {
-        
-    }
+    func getMainScreenData(data: MainScreenData) {}
     
-    func getStandardCategoriesFiltering(categories: MainHomeCategories) {
-        
-    }
+    func getStandardCategoriesFiltering(categories: MainHomeCategories) {}
     
-    func getsubCategoriesFiltering(categories: SubHomeCategories) {
-        
-    }
+    func getsubCategoriesFiltering(categories: SubHomeCategories) {}
     
     func getOpportunitiesData(data: ListOpportunities) {}
     

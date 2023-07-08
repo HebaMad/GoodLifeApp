@@ -308,6 +308,8 @@ extension ExploreMapVC {
 }
 
 extension ExploreMapVC:MainDelegate{
+    func opportunitiesFullDetails(data: OpportunityData) {}
+    
     
     func opportunitiesDetails(data: opportunitiesDetails) {
         let controller = DetailsVC()

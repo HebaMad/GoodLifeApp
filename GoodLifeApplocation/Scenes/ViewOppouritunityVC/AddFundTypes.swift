@@ -227,13 +227,11 @@ extension AddFundTypes:UITextFieldDataPickerDelegate,UITextFieldDataPickerDataSo
 }
 
 extension AddFundTypes:MainDelegate{
-    func opportunitiesDetails(data: opportunitiesDetails) {
-        
-    }
+    func opportunitiesFullDetails(data: OpportunityData) {}
+
+    func opportunitiesDetails(data: opportunitiesDetails) { }
     
-    func getExploreMapData(data: ExploreMap) {
-        
-    }
+    func getExploreMapData(data: ExploreMap) {}
     
     func showAlerts(title: String, message: String) {
         Alert.showSuccessAlert(message:message)

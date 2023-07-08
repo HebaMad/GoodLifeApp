@@ -17,6 +17,7 @@ protocol MainNetworkable:Networkable  {
     func listOpportunities(search:String,completion: @escaping (Result<BaseResponse<ListOpportunities>, Error>)-> ())
     func createOpportunties(title:String,city:String,state:String,description:String,name:String,tags:[String],rating:String,email:String,phone:String,representative:String,completion: @escaping (Result<BaseResponse<opportunitiesData>, Error>)-> ())
     func mapScreenData(fundTypeId:String,mainCategoryId:String,subCategoryId:String,interest:String,completion:@escaping (Result<BaseResponse<ExploreMap>, Error>)-> ())
+
     
 }
 
@@ -57,7 +58,8 @@ class MainManager:MainNetworkable {
         request(target: .mapScreenData(fundTypeId: fundTypeId, mainCategoryId: mainCategoryId, subCategoryId: subCategoryId, interest: interest), completion: completion)
     }
     
- 
+
+    
     
 
 }

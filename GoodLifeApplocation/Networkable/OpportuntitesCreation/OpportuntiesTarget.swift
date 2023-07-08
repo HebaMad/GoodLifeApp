@@ -15,6 +15,8 @@ enum OpportuntiesApiTarget : TargetType {
     case completeOpportunities(id:Int,financialModel:[String],workType:String,levelOfDifficulty:String,AmountOfTechnology:String,amountRasise:String,opportuntiesUrl:String,competitorsUrl:[String],commomWays:[String],topAdvertisingChannel:[String],socialChannels:[String],avgAnnualRevenu:String,avgMonthlyCost:String,categories:[String],marketGraph:[String:String],intrest:String)
     
     case opportunitiesDetails(id:String)
+    case opportunitiesFullDetails(opportunity_id:String)
+
     
     var baseURL: URL {
         return URL(string: "\(AppConfig.apiBaseUrl)")!
@@ -26,7 +28,7 @@ enum OpportuntiesApiTarget : TargetType {
         case .fundType:return "getFundTypes"
         case .getChannels:return "getChannels"
         case .completeOpportunities:return "completeOpportunity"
-            
+        case .opportunitiesFullDetails:return "editOpportunity"
         case .opportunitiesDetails:return "opportunityDetails"
             
         }
@@ -35,7 +37,7 @@ enum OpportuntiesApiTarget : TargetType {
     
     var method: Moya.Method {
         switch self{
-        case .fundType,.getChannels,.opportunitiesDetails:
+        case .fundType,.getChannels,.opportunitiesDetails,.opportunitiesFullDetails:
             return .get
             
         case .completeOpportunities:
@@ -50,7 +52,7 @@ enum OpportuntiesApiTarget : TargetType {
         case .getChannels:
             return .requestPlain
 
-        case .opportunitiesDetails,.fundType:
+        case .opportunitiesDetails,.fundType,.opportunitiesFullDetails:
             return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
             
         case .completeOpportunities:
@@ -62,7 +64,7 @@ enum OpportuntiesApiTarget : TargetType {
     
     var headers: [String : String]?{
         switch self{
-        case .fundType,.getChannels,.completeOpportunities,.opportunitiesDetails:
+        case .fundType,.getChannels,.completeOpportunities,.opportunitiesDetails,.opportunitiesFullDetails:
             
             do {
                 let token = try KeychainWrapper.get(key: AppData.mobile) ?? ""
@@ -89,6 +91,9 @@ enum OpportuntiesApiTarget : TargetType {
             
         case .fundType(let search):
             return ["search":search]
+            
+        case .opportunitiesFullDetails(let opportunity_id):
+            return ["opportunity_id":opportunity_id]
             
         default : return [:]
 

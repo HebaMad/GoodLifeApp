@@ -718,12 +718,57 @@ struct financialInfo:Codable {
 }
 
 struct HeaderInfo:Decodable {
+    
     let name:String?
     let title:String?
     let rate:Int?
     let rate_count:Int?
     let match:String?
     let financial_models:String?
+    
 }
 
+struct OpportunityData:Decodable{
+    
+    let general:GeneralInfos?
+    let financial:financialInfo?
+    let marketing:MarketingInfos?
+    let liturgical:LiturgicalInfo?
+    let digital:DigitalInfo?
+    let businessPlan:businessplanDetails?
+    
+}
+
+struct GeneralInfos:Codable{
+    let category:[categoriesData]?
+    let amount_raise:String?
+    let work_type:String?
+    let level_of_difficulty:String?
+    let financial_models:[String]?
+    let interest:String?
+    let amount_of_technology:String?
+    
+}
+
+struct categoriesData:Codable {
+    let id:String?
+    let name:String
+    
+}
+
+struct MarketingInfos:Codable {
+    
+    let top_advertising_platforms:[String]?
+    let recommended_social_channels:[String]?
+    let graphs:[Graph]?
+    
+}
+
+struct businessplanDetails:Codable{
+    let name:String?
+    let url:String?
+    let market_size:String?
+    let pros:String?
+    let cons:String?
+}
 

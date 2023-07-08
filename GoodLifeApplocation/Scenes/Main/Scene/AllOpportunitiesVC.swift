@@ -119,6 +119,7 @@ extension AllOpportunitiesVC:UICollectionViewDataSource {
 
 
 extension AllOpportunitiesVC:MainDelegate{
+    
     func showAlerts(title: String, message: String) {}
     
     func getMainScreenData(data: MainScreenData) {
@@ -129,6 +130,8 @@ extension AllOpportunitiesVC:MainDelegate{
     
     func getOpportunitiesData(data: ListOpportunities) {}
     
+    func opportunitiesFullDetails(data: OpportunityData) {}
+
     func getStandardCategoriesFiltering(categories: MainHomeCategories) {}
     
     func getsubCategoriesFiltering(categories: SubHomeCategories) {}
