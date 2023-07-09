@@ -33,8 +33,6 @@ class AllOpportunitiesVC: UIViewController {
         opportunitiesCollectionview.delegate=self
         opportunitiesCollectionview.dataSource=self
     }
-    
-    
 
 }
 

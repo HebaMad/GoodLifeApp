@@ -139,7 +139,7 @@ extension OpportunityListVC:UITableViewDataSource {
         let editAction = UITableViewRowAction(style: .normal, title: "Edit") { (action, indexPath) in
             let opportunityID = self.opportunities[indexPath.row].id
             print("Edit opportunity with ID: \(opportunityID)")
-            self.presenter.getOpportunitiesDetails(opportunitiesId:String(describing: opportunityID!))
+            self.presenter.getOpportunitiesFullDetails(opportunitiesId:String(describing: opportunityID!))
             self.presenter.delegate=self
             
         }

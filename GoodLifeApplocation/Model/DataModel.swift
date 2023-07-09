@@ -735,7 +735,7 @@ struct OpportunityData:Decodable{
     let marketing:MarketingInfos?
     let liturgical:LiturgicalInfo?
     let digital:DigitalInfo?
-    let businessPlan:businessplanDetails?
+    let businessPlan:[businessplanDetails]?
     
 }
 
@@ -751,8 +751,8 @@ struct GeneralInfos:Codable{
 }
 
 struct categoriesData:Codable {
-    let id:String?
-    let name:String
+    let id:Int?
+    let name:String?
     
 }
 

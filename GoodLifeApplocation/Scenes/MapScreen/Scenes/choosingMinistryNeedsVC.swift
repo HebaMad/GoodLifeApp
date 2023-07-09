@@ -269,6 +269,5 @@ extension choosingMinistryNeedsVC:MainDelegate{
         //            }}
     }
     
-    
 }
 
