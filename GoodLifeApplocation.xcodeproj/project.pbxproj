@@ -784,8 +784,8 @@
 			isa = PBXGroup;
 			children = (
 				27CBC56D2926C005000AE9A6 /* CreateOppourtinityVC.swift */,
-				2791D8ED29D18D0A00B03A04 /* MainOpportunitiesCreation.swift */,
 				2791D8EE29D18D0A00B03A04 /* MainOpportunitiesCreation.xib */,
+				2791D8ED29D18D0A00B03A04 /* MainOpportunitiesCreation.swift */,
 				2791D8F129D18D3A00B03A04 /* GeneralOpportunitiesCreation.swift */,
 				2791D8F229D18D3A00B03A04 /* GeneralOpportunitiesCreation.xib */,
 				2791D8F929D1984B00B03A04 /* FinancialOpportunitiesCreation.swift */,

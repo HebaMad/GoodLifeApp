@@ -36,14 +36,16 @@ class MainOpportunitiesCreation: UIViewController {
     let prefixToRemove = "$"
     var intrest = 0
     var oppDetailsObj:OpportunityData?
-
+    var status="Add"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(oppDetailsObj)
+        print(oppDetailsObj!)
         stepNumber = 0
         checkstepNumber()
         
     }
+    
     @IBAction func continueBtn(_ sender: Any) {
         
         checkstepNumber()
@@ -70,6 +72,9 @@ extension MainOpportunitiesCreation{
             self.stepperView.currentStep = 0
             vc=GeneralOpportunitiesCreation()
             
+            if status == "Edit"{
+                (vc as! GeneralOpportunitiesCreation).generalInfo = oppDetailsObj?.general
+            }
             self.addChild(vc!)
             self.containerview.addSubview(vc!.view)
             vc!.didMove(toParent: self)
@@ -106,6 +111,12 @@ extension MainOpportunitiesCreation{
                                     
                                     self.stepperView.currentStep = 1
                                     vc=FinancialOpportunitiesCreation()
+                                    
+                                    if status == "Edit" {
+                                        
+                                        (vc as! FinancialOpportunitiesCreation).financialData = oppDetailsObj?.financial
+                                        
+                                    }
                                     
                                     self.addChild(vc!)
                                     self.containerview.addSubview(vc!.view)
@@ -155,7 +166,11 @@ extension MainOpportunitiesCreation{
                     
                     self.stepperView.currentStep = 2
                     vc=MarketingOpportunitiesCreation()
-                    
+                    if status == "Edit" {
+                        
+                        (vc as! MarketingOpportunitiesCreation).marketingInfo = oppDetailsObj?.marketing
+                        
+                    }
                     self.addChild(vc!)
                     self.containerview.addSubview(vc!.view)
                     vc!.didMove(toParent: self)
@@ -185,7 +200,11 @@ extension MainOpportunitiesCreation{
                         self.containerview.subviews.first?.removeFromSuperview()
                         self.stepperView.currentStep = 3
                         vc=LiturgicalOpportunitiesCreation()
-                        
+                        if status == "Edit" {
+                            
+                            (vc as! LiturgicalOpportunitiesCreation).liturgicalInfos = oppDetailsObj?.liturgical
+                            
+                        }
                         self.addChild(vc!)
                         self.containerview.addSubview(vc!.view)
                         vc!.didMove(toParent: self)
@@ -220,7 +239,11 @@ extension MainOpportunitiesCreation{
                     
                     self.stepperView.currentStep = 4
                     vc=DigitalOpportunitiesCreation()
-                    
+                    if status == "Edit" {
+                        
+                        (vc as! DigitalOpportunitiesCreation).digitalInfos = oppDetailsObj?.digital
+                        
+                    }
                     self.addChild(vc!)
                     self.containerview.addSubview(vc!.view)
                     vc!.didMove(toParent: self)
@@ -248,7 +271,16 @@ extension MainOpportunitiesCreation{
                     self.containerview.subviews.first?.removeFromSuperview()
                     
                     self.stepperView.currentStep = 5
-                    vc=BusinessPlanOpportunitiesCreation()
+
+                    if status == "Edit" {
+                        vc=EditBusinessPlanVC()
+
+                        (vc as! EditBusinessPlanVC).businessplanList = oppDetailsObj?.businessPlan
+                        
+                    }else{
+                        vc=BusinessPlanOpportunitiesCreation()
+
+                    }
                     
                     self.addChild(vc!)
                     self.containerview.addSubview(vc!.view)

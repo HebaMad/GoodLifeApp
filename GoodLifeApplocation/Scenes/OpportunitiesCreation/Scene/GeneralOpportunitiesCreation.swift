@@ -43,16 +43,46 @@ class GeneralOpportunitiesCreation: UIViewController {
     var financialModelData:[String]=[]
     var categoriesIdSelection:[String]=[]
     var categoriesId:[String]=[]
-
+    var generalInfo:GeneralInfos?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("test")
+        print(generalInfo!)
+        setUpdata()
         getCategories()
         intrestSelection.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 10)], for: .normal)
         setupTableview()
     }
     
+    
+    func setUpdata() {
+        
+        amountraiseTxt.text = generalInfo?.amount_raise ?? ""
+        LevelOfDifficultyTxt.text = generalInfo?.level_of_difficulty ?? ""
+        AmountOfTechnologyTxt.text = generalInfo?.amount_of_technology ?? ""
+        timeCommitmentTxt.text = generalInfo?.work_type ?? ""
+        financialModelData = generalInfo?.financial_models ?? []
+        financialModelsTableview.isHidden=false
+        financialModelsTableview.reloadData()
+        tableConstant.constant=CGFloat(financialModelData.count * 50)
+        if let categories = generalInfo?.category {
+            categoriesSelected = categories.map { $0.name ?? "" }
+            categoriesTxt.text=categoriesSelected.joined(separator: ",")
+            categoriesIdSelection=categories.map { "\($0.id)" }
+
+//            categoriesSelection(selectionId:categories.map { String($0.id ?? 0) })
+
+
+        }
+        
+        intrestSelection.selectedSegmentIndex=1
+
+        
+        
+    }
+
     
     func getCategories(){
         

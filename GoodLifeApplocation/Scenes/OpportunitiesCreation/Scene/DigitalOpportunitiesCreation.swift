@@ -16,6 +16,8 @@ class DigitalOpportunitiesCreation: UIViewController {
     @IBOutlet weak var tableConstant: NSLayoutConstraint!
     @IBOutlet weak var competitorLinksTableview: UITableView!
     
+    var digitalInfos:DigitalInfo?
+    
     var competitorsUrl:[String]=[]
     
     
@@ -24,12 +26,21 @@ class DigitalOpportunitiesCreation: UIViewController {
         bindButtons()
         bindTextField()
         setupTableview()
+        setupInitialData()
     }
     
     func setupTableview(){
         competitorLinksTableview.register(websiteCompetitor.self)
         competitorLinksTableview.delegate=self
         competitorLinksTableview.dataSource=self
+    }
+    
+    func setupInitialData(){
+        opportunitiesUrl.text=digitalInfos?.url ?? ""
+        competitorsUrl = digitalInfos?.competitors ?? []
+        competitorLinksTableview.isHidden=false
+        competitorLinksTableview.reloadData()
+        tableConstant.constant=CGFloat(competitorsUrl.count * 50)
     }
 
     @objc func deleteBtnWasTapped(_ sender:UIButton){

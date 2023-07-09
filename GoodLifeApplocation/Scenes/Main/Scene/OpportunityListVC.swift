@@ -165,6 +165,7 @@ extension OpportunityListVC:UITableViewDataSource {
 extension OpportunityListVC:MainDelegate{
     func opportunitiesFullDetails(data: OpportunityData) {
         let vc = MainOpportunitiesCreation()
+        vc.status="Edit"
         vc.oppDetailsObj=data
         self.navigationController?.pushViewController(vc, animated: true)
     }

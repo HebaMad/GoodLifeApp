@@ -32,6 +32,7 @@ class LiturgicalOpportunitiesCreation: UIViewController {
     var marketGraph:[String:String]=[:]
     var marketGraphName:[String]=[]
     var marketGraphSize:[String]=[]
+    var liturgicalInfos:LiturgicalInfo?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +40,7 @@ class LiturgicalOpportunitiesCreation: UIViewController {
         bindUISliderValue()
         setupTableview()
         marketSizeTable.isHidden=true
+        setupdata()
     }
     
     func setupTableview(){
@@ -52,6 +54,24 @@ class LiturgicalOpportunitiesCreation: UIViewController {
         
         
     }
+    
+    func setupdata(){
+        commonWaysTableview.isHidden=false
+        commomWaysWorship=liturgicalInfos?.common_ways ?? []
+        commonWaysTableview.reloadData()
+        if let graph = liturgicalInfos?.graphs {
+            marketGraphName = graph.map { $0.title ?? "" }
+            marketGraphSize = graph.map{ $0.percentage ?? ""}
+            marketSizeTable.isHidden=false
+            marketSizeTable.reloadData()
+            tableviewHeight.constant = CGFloat(marketGraphName.count * 50)
+
+        }
+        makeParameter(key: marketGraphName, value: marketGraphSize)
+
+      
+    }
+    
     @objc func deleteBtnWasTapped(_ sender:UIButton){
         commomWaysWorship.remove(at: sender.tag)
         commonWaysTableview.reloadData()

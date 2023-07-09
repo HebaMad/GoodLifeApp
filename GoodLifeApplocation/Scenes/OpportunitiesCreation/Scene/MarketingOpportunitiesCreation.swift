@@ -38,7 +38,8 @@ class MarketingOpportunitiesCreation: UIViewController {
     var marketGraph:[String:String]=[:]
     var marketGraphName:[String]=[]
     var marketGraphSize:[String]=[]
-
+    var marketingInfo:MarketingInfos?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         bindUISliderValue()
@@ -46,6 +47,26 @@ class MarketingOpportunitiesCreation: UIViewController {
         presenter.getChannels()
         presenter.delegate=self
         setupTableview()
+        setupdata()
+    }
+    
+    func setupdata(){
+        socialChannelTxt.text=marketingInfo?.recommended_social_channels?.joined(separator: ",")
+        socialChannelSelected=marketingInfo?.recommended_social_channels ?? []
+        topAdvertisingTxt.text=marketingInfo?.top_advertising_platforms?.joined(separator: ",")
+        topAdvertisingSelected=marketingInfo?.top_advertising_platforms ?? []
+        
+        if let graph = marketingInfo?.graphs {
+            marketGraphName = graph.map { $0.title ?? "" }
+            marketGraphSize = graph.map{ $0.percentage ?? ""}
+            marketDetailsTableview.isHidden=false
+            marketDetailsTableview.reloadData()
+            tableviewHeight.constant = CGFloat(marketGraphName.count * 50)
+
+        }
+        makeParameter(key: marketGraphName, value: marketGraphSize)
+
+      
     }
     
     
@@ -67,6 +88,7 @@ class MarketingOpportunitiesCreation: UIViewController {
     func bindUISliderValue(){
         marketSize.addTarget(self, action: #selector(sliderValueChanged(_:)), for: .valueChanged)
     }
+    
     @IBAction func addMoreBtn(_ sender: Any) {
         if marketName.text != "" && marketSize.value != 0.0 {
             marketGraphName.append(marketName.text!)
@@ -80,6 +102,7 @@ class MarketingOpportunitiesCreation: UIViewController {
             showSnackBar(message: "Add your Market Size")
         }
     }
+    
     
     @IBAction func socialChannelBtn(_ sender: Any) {
         

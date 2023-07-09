@@ -16,7 +16,7 @@ class EditBusinessPlanVC: UIViewController {
     //MARK: - Properties
     
     private var selectedIndex = -1
-
+    var businessplanList:[businessplanDetails]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
