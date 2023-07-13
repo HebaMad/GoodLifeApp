@@ -18,7 +18,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="354" height="61"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PO8-AV-00R" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PO8-AV-00R" customClass="UIViewDesignable" customModule="GoodLifeApplocation" customModuleProvider="target">
                         <rect key="frame" x="4" y="4" width="346" height="53"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcP-bi-aab">
@@ -75,9 +75,10 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="businessplanTitle" destination="vWR-bD-TR5" id="ORk-I3-Eci"/>
+                <outlet property="cellView" destination="PO8-AV-00R" id="c4c-32-UUS"/>
                 <outlet property="editBtn" destination="wXf-JX-jia" id="qd0-Aj-1fT"/>
             </connections>
-            <point key="canvasLocation" x="190.83969465648855" y="-24.295774647887324"/>
+            <point key="canvasLocation" x="240" y="10"/>
         </tableViewCell>
     </objects>
     <resources>

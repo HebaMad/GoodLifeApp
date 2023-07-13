@@ -40,7 +40,9 @@ class MainOpportunitiesCreation: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(oppDetailsObj!)
+        print("test")
+        print(status)
+
         stepNumber = 0
         checkstepNumber()
         
@@ -65,6 +67,7 @@ extension MainOpportunitiesCreation{
         switch self.stepNumber{
             
         case 0:
+            print("121222")
             self.stepNumber=1
             
             self.containerview.subviews.first?.removeFromSuperview()
@@ -72,9 +75,12 @@ extension MainOpportunitiesCreation{
             self.stepperView.currentStep = 0
             vc=GeneralOpportunitiesCreation()
             
-            if status == "Edit"{
+            if status == "Edit" {
+                
                 (vc as! GeneralOpportunitiesCreation).generalInfo = oppDetailsObj?.general
+                
             }
+            
             self.addChild(vc!)
             self.containerview.addSubview(vc!.view)
             vc!.didMove(toParent: self)
@@ -275,7 +281,7 @@ extension MainOpportunitiesCreation{
                     if status == "Edit" {
                         vc=EditBusinessPlanVC()
 
-                        (vc as! EditBusinessPlanVC).businessplanList = oppDetailsObj?.businessPlan
+                        (vc as! EditBusinessPlanVC).businessplanList = oppDetailsObj?.businessPlan ?? []
                         
                     }else{
                         vc=BusinessPlanOpportunitiesCreation()

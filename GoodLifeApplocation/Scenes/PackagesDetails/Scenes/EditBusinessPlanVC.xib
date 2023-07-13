@@ -34,16 +34,16 @@
                     </constraints>
                 </stackView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cKT-lO-Bp7">
-                    <rect key="frame" x="16" y="107" width="361" height="711"/>
+                    <rect key="frame" x="10" y="107" width="373" height="711"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cKT-lO-Bp7" secondAttribute="trailing" constant="16" id="GXT-EK-3IQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cKT-lO-Bp7" secondAttribute="trailing" constant="10" id="GXT-EK-3IQ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="H38-Si-ETt" secondAttribute="trailing" constant="16" id="GnM-Xy-ku7"/>
-                <constraint firstItem="cKT-lO-Bp7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="SOl-6d-mxP"/>
+                <constraint firstItem="cKT-lO-Bp7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="SOl-6d-mxP"/>
                 <constraint firstItem="cKT-lO-Bp7" firstAttribute="top" secondItem="H38-Si-ETt" secondAttribute="bottom" constant="8" id="TkT-UT-Fsd"/>
                 <constraint firstItem="H38-Si-ETt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="nyK-1K-8NK"/>
                 <constraint firstItem="H38-Si-ETt" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="rf1-RE-6AR"/>

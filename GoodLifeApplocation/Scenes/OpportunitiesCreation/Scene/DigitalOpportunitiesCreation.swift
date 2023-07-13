@@ -46,7 +46,8 @@ class DigitalOpportunitiesCreation: UIViewController {
     @objc func deleteBtnWasTapped(_ sender:UIButton){
         competitorsUrl.remove(at: sender.tag)
         competitorLinksTableview.reloadData()
-        
+        tableConstant.constant=CGFloat(competitorsUrl.count * 50)
+
     }
     
     
@@ -75,7 +76,7 @@ extension DigitalOpportunitiesCreation{
                 competitorLinksTableview.reloadData()
                 tableConstant.constant=CGFloat(competitorsUrl.count * 50)
             }else{
-                showSnackBar(message: "Add your Financial Model ")
+                showSnackBar(message: "Add your Financial Model")
             }
 
         default:

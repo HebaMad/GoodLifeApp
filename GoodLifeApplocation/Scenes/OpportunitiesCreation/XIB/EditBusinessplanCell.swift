@@ -21,9 +21,23 @@ class EditBusinessplanCell: UITableViewCell,NibLoadableView {
     @IBOutlet weak var planConsTxt: UITextView!
     @IBOutlet weak var showHideButton: UIButton!
 
+    @IBOutlet weak var nameTxt: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
 
+        setupBorder()
+
+        
+    }
+    
+    func setupBorder(){
+        
+        planProsTxt.layer.borderColor = UIColor(named: "bg5")?.cgColor
+        planProsTxt.layer.borderWidth =  0.5
+        planConsTxt.layer.borderColor = UIColor(named: "bg5")?.cgColor
+        planConsTxt.layer.borderWidth =  0.5
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -33,12 +47,14 @@ class EditBusinessplanCell: UITableViewCell,NibLoadableView {
     }
     
     
-    func configureCell(){
-        planNameTxt.text=""
-        planProsTxt.text=""
-        planConsTxt.text=""
-        urlTxt.text=""
-        progressTxt.text=""
+    func configureCell(businessplanData:businessplanDetails){
+        nameTxt.text = businessplanData.name ?? ""
+        planNameTxt.text=businessplanData.name ?? ""
+        planProsTxt.text=businessplanData.pros ?? ""
+        planConsTxt.text=businessplanData.cons ?? ""
+        urlTxt.text=businessplanData.url ?? ""
+        progressTxt.text=String(describing: Int(Float(businessplanData.market_size ?? "") ?? 0.0) )
+        marketSizeProgress.value=Float(businessplanData.market_size ?? "") ?? 0.0
     }
     
 }

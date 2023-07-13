@@ -173,7 +173,7 @@ extension BusinessPlanOpportunitiesCreation {
         index += 1
     }
     
-    func clearData(){
+    func clearData() {
         planNameTxt.text=""
         planUrl.text="https://"
         planCons.text=""

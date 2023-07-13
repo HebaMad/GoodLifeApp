@@ -89,6 +89,7 @@ extension OpportunityListVC{
     
     func DataAvailability()  {
         if  opportunities.count == 0 {
+            
             emptyView.isHidden = false
         }else{
             emptyView.isHidden = true
@@ -96,9 +97,13 @@ extension OpportunityListVC{
     }
     
     @objc func completeButtonTapped(_ sender:UIButton){
-        
+
         let vc = MainOpportunitiesCreation()
+        vc.status="Add"
         vc.id=opportunities[sender.tag].id ?? 0
+        print("899989")
+        print(vc)
+
         navigationController?.pushViewController(vc, animated: true)
     }
 }
@@ -120,7 +125,7 @@ extension OpportunityListVC:UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:OpportunitiesStatusCell = tableView.dequeueReusableCell(for: indexPath)
         cell.configureCell(data: opportunities[indexPath.row])
-        cell.completeInformationBtn.tag=indexPath.row
+        cell.completeInformationBtn.tag = indexPath.row
         cell.completeInformationBtn.addTarget(self, action: #selector(completeButtonTapped), for: .touchUpInside)
         return cell
     }
@@ -129,12 +134,7 @@ extension OpportunityListVC:UITableViewDataSource {
         return true
     }
     
-//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-//        if (editingStyle == .delete) {
-//
-//        } else if editingStyle == .insert {
-//            }
-//    }
+
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let editAction = UITableViewRowAction(style: .normal, title: "Edit") { (action, indexPath) in
             let opportunityID = self.opportunities[indexPath.row].id
@@ -196,6 +196,8 @@ extension OpportunityListVC:MainDelegate{
         presenter.delegate=self
     }
     
-    func getMainScreenData(data: MainScreenData) {}
+    func getMainScreenData(data: MainScreenData) {
+        
+    }
     
 }

@@ -59,6 +59,8 @@ class LiturgicalOpportunitiesCreation: UIViewController {
         commonWaysTableview.isHidden=false
         commomWaysWorship=liturgicalInfos?.common_ways ?? []
         commonWaysTableview.reloadData()
+        tableConstant.constant=CGFloat(commomWaysWorship.count * 50)
+
         if let graph = liturgicalInfos?.graphs {
             marketGraphName = graph.map { $0.title ?? "" }
             marketGraphSize = graph.map{ $0.percentage ?? ""}
@@ -75,6 +77,8 @@ class LiturgicalOpportunitiesCreation: UIViewController {
     @objc func deleteBtnWasTapped(_ sender:UIButton){
         commomWaysWorship.remove(at: sender.tag)
         commonWaysTableview.reloadData()
+        tableConstant.constant=CGFloat(commomWaysWorship.count * 50)
+
 
     }
     

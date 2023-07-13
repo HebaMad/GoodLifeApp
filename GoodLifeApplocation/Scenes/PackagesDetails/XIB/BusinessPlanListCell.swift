@@ -11,9 +11,13 @@ class BusinessPlanListCell: UITableViewCell,NibLoadableView {
 
     @IBOutlet weak var businessplanTitle: UILabel!
     @IBOutlet weak var editBtn: UIButton!
+    
+//    @IBOutlet weak var cellView: UIViewDesignable!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+//        cellView.layer.borderWidth=4
+//        cellView.layer.borderColor = UIColor.darkGray.cgColor
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -73,8 +73,6 @@ class GeneralOpportunitiesCreation: UIViewController {
             categoriesIdSelection=categories.map { "\($0.id)" }
 
 //            categoriesSelection(selectionId:categories.map { String($0.id ?? 0) })
-
-
         }
         
         intrestSelection.selectedSegmentIndex=1
@@ -94,6 +92,8 @@ class GeneralOpportunitiesCreation: UIViewController {
     @objc func deleteBtnWasTapped(_ sender:UIButton){
         financialModelData.remove(at: sender.tag)
         financialModelsTableview.reloadData()
+        tableConstant.constant=CGFloat(financialModelData.count * 50)
+
 
     }
     
